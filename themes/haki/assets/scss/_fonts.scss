@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: "Gandhi", "Awesome";
+}
+
+code {
+    font-family: "Victor";
+    padding: 7px;
+}
+
+tags {
+    font-family: "Fairy";
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Comic';
+}
+
+article h1 {
+    font-weight: 600;
+    color: #eb9;
+    text-align: center;
+    font-size: 45px;
+    font-family: 'Happy';
+    letter-spacing: 5px;
+    padding: 40px;
+}
+
+article h2 {
+    font-weight: 550;
+    font-style: bold;
+    color: #bf94fe;
+    // background-color: #12121275;
+    padding: 30px;
+    font-size: 38px;
+    letter-spacing: 1px;
+}
+
+article h3 {
+    font-weight: 550;
+    font-style: bold;
+    color: #338fff;
+    // background-color: #1d223540;
+    padding: 25px;
+    font-size: 34px;    
+}
+
+
+.slim-description {
+    font-family: "Impress";
+    font-size: 1.4rem;
+}
+
+code[class*="language-"]{
+    font-family: "Victor";
+    font-style: normal;
+    font-weight: 400;
+    border-radius: 20px;
+    color: #ffffff;
+}
+
+.blog-list{
+    font-family: 'Comic';
+    font-size: 1.2rem;
+}
+
+nav{
+    font-family: 'Astro';
+    font-size: 2rem;
+}
+

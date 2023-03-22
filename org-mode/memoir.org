@@ -1,0 +1,19 @@
+#+hugo_base_dir: ../
+#+hugo_section: memoir
+#+OPTIONS: toc:2
+
+
+* Memoir
+** Journey Begins :log:memoir:first:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: blogging journey
+   :EXPORT_DATE: <2023-03-21 Tue>
+   :END:
+
+I have almost set my first static website.
+From here my creativity goes public to the world.
+
+Its just a small thing, but my passion thanks me for this.
+
+Its time.. time to begin the chapter!
+

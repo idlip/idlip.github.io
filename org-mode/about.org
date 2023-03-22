@@ -1,0 +1,20 @@
+#+hugo_base_dir: ../
+#+hugo_section: about
+
+* About
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: _index
+   :EXPORT_HUGO_LAYOUT: single
+   :END:
+
+
+*The Journey Begins*
+
+#+begin_center
+Time to unlock my creativity
+#+end_center
+
+---------
+
+
+/This site is almost based on [[https://rudra.dev]]/

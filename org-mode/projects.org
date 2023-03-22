@@ -1,0 +1,7 @@
+#+hugo_base_dir: ../
+#+export_file_name: _index
+#+hugo_layout:  projects
+#+hugo_section: projects
+#+title: projects
+
+** A place where some of my interests are treasured.

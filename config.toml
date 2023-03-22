@@ -1,0 +1,82 @@
+baseURL = "https://example.org"
+languageCode = "en-us"
+DefaultContentLanguage = "en"
+
+pygmentsCodefences = true
+paginate = 30
+
+title = "I'm Dilip"
+theme = "haki"
+[markup.goldmark.renderer]
+unsafe = true
+
+enableEmoji = true
+enableGitInfo = true
+enableRobotsTXT = true
+canonifyURLs = true
+
+publishDir = "docs"
+
+
+[menu]
+
+  [[menu.main]]
+    identifier = "posts"
+    name = "posts"
+    url = "/posts/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "projects"
+    name = "projects"
+    url = "/projects/"
+    weight = 11
+
+
+  [[menu.secondary]]
+    identifier = "about"
+    name = "about"
+    url = "/about/"
+    weight = 10
+
+  [[menu.secondary]]
+    identifier = "memoir"
+    name = "memoir"
+    url = "/memoir/"
+    weight = 12
+
+    [[menu.secondary]]
+    identifier= "rss"
+    url = "index.xml"
+    name = " "
+    title = "Rss feeds"
+    weight = 12
+
+[params]
+  author = "Dilip"
+  description = "The Thinker"
+  sitename = "Dilip Nirvana"
+  github = "https://github.com/idlip"
+  # twitter = "@"
+  favicon = "/images/favicon.ico"
+  mainSections = "posts"
+
+
+[[params.projects]]
+  name = "Nix Config"
+  description = "Nixos config in literate org-mode"
+  sourceLink = "https://github.com/idlip/d-nix.git"
+
+
+[[params.projects]]
+  name = "Flakes"
+  description = "Flake setup into Modules (Deprecated)"
+  sourceLink = "https://github.com/idlip/d-flake.git"
+
+
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    languageCode = "en-us"
+    weight = 1
