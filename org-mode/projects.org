@@ -4,4 +4,4 @@
 #+hugo_section: projects
 #+title: projects
 
-** A place where some of my interests are treasured.
+

@@ -15,8 +15,11 @@
   text-decoration: none;
   $border-width: 3px;
   border-radius: $border-width;
-  border: 1px solid $post-link-color;
-  border-radius: 20px;
+  border: 3px solid $post-link-color;
+  border-radius: 30px;
+  align-items: center;
+  justify-content: center;
+  border-image: linear-gradient(90deg, #bcd2ee 28%, #fff0f5 85%, #ffe4e1 )1;
 }
 
 .card article {
