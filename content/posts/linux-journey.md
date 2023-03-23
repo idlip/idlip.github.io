@@ -36,6 +36,7 @@ Tbh I loved LM and Arch alot, I was a devotee to Arch too, and I hated Nix when 
     I did leave Nix and install Arch few times back and forth, I was debating with myself and id my own research all over Internet.
 
     That is when I thought nix lacked Documentation or good YouTuber to speak of, I really wish one of them could explain and make it their distro to explain timely on things.
+
 
     Fine, somehow forced myself and came a long way of setting up Good working nixos config, now I'm on flake
 

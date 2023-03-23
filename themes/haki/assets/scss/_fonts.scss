@@ -7,16 +7,16 @@ body {
 }
 
 code {
-    font-family: "Victor";
+    font-family: "Victor", "Awesome";
     padding: 7px;
 }
 
 tags {
-    font-family: "Fairy";
+    font-family: "Fairy", "Awesome";
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Comic';
+    font-family: 'Comic', "Awesome";
 }
 
 article h1 {
@@ -24,7 +24,7 @@ article h1 {
     color: #eb9;
     text-align: center;
     font-size: 45px;
-    font-family: 'Happy';
+    font-family: 'Happy', "Awesome";
     letter-spacing: 5px;
     padding: 40px;
 }
@@ -50,12 +50,12 @@ article h3 {
 
 
 .slim-description {
-    font-family: "Impress";
+    font-family: "Impress", "Awesome";
     font-size: 1.4rem;
 }
 
 code[class*="language-"]{
-    font-family: "Victor";
+    font-family: "Victor", "Awesome";
     font-style: normal;
     font-weight: 400;
     border-radius: 20px;
@@ -63,7 +63,7 @@ code[class*="language-"]{
 }
 
 .blog-list{
-    font-family: 'Comic';
+    font-family: 'Comic', "Awesome";
     font-size: 1.2rem;
 }
 

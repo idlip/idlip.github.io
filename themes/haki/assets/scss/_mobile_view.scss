@@ -40,7 +40,7 @@ h1 {
         display: block;
         font-size: 2.5rem;
         font-weight: bold;
-	font-family: 'Stone';
+	font-family: 'Stone', "Awesome";
 	letter-spacing: 3px;
         margin: 0;
     }
@@ -119,14 +119,14 @@ nav {
         flex-direction: column-reverse;
         align-items: baseline;
 	color: $toc-border;
-	font-family: 'Victor';
+	font-family: 'Victor', "Awesome";
         padding: 0.5rem 0.5rem 0.5rem 0;
     }
     .post-title {
         a {
             text-decoration: none;
             color: $post-title-color;
-	    font-family: 'Comic';
+	    font-family: 'Comic', "Awesome";
             //font-weight: 600;
             border-bottom: none;
             //transition: border-bottom .3s;
