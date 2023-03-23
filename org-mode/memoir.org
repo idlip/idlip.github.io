@@ -20,7 +20,7 @@ Its time.. time to begin the chapter!
    :PROPERTIES:
    :EXPORT_FILE_NAME: emacs-goat
    :EXPORT_DATE: 2022-03-25
-   :EXPORT_HUGO_DRAFT: true
+   :EXPORT_HUGO_DRAFT: false
    :END:
 
 Before anyone shouts vim, let me ~:q!~
@@ -31,3 +31,5 @@ But When I learnt Emacs, the experience was immense, it defines how things are m
 I cannot just rant to make people ditch vim for emacs, But once you understand you will realize, that is my friend people went and made ~evil~ mode to emulate Vi layer (vim 100%).
 
 Now they get the *Best* of both the World!
+
+Nonetheless, Emacs is the *GOAT* !

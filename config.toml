@@ -48,7 +48,7 @@ publishDir = "docs"
     [[menu.secondary]]
     identifier= "rss"
     url = "index.xml"
-    name = " "
+    name = "Rss"
     title = "Rss feeds"
     weight = 12
 
@@ -67,12 +67,17 @@ publishDir = "docs"
   description = "Nixos config in literate org-mode"
   sourceLink = "https://github.com/idlip/d-nix.git"
 
+[[params.projects]]
+  name = "Shell Scripts"
+  description = "Some cool shell scripts which are useful"
+  sourceLink = "https://github.com/idlip/d-bin.git"
+
 
 [[params.projects]]
   name = "Flakes"
   description = "Flake setup into Modules (Deprecated)"
   sourceLink = "https://github.com/idlip/d-flake.git"
-
+  
 
 
 [languages]
