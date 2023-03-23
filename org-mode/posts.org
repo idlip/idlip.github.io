@@ -7,7 +7,7 @@
 ** Tools that are Best! :cli:linux:minimal:tools:
    :PROPERTIES:
    :EXPORT_FILE_NAME: tools-readme
-   :EXPORT_DATE: 2022-03-28
+   :EXPORT_DATE: 2023-03-17
    :EXPORT_HUGO_DRAFT: false
    :END:
 
@@ -45,7 +45,7 @@ Feel free to comment down and ask me doubts or about some improvements, you wann
 ** My Linux Journey :distro:linux:
    :PROPERTIES:
    :EXPORT_FILE_NAME: linux-journey
-   :EXPORT_DATE: 2022-03-28
+   :EXPORT_DATE: 2023-03-10
    :EXPORT_HUGO_DRAFT: false
    :END:
 

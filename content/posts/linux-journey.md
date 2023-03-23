@@ -1,6 +1,6 @@
 +++
 title = "My Linux Journey"
-date = 2022-03-28
+date = 2023-03-10
 tags = ["distro", "linux"]
 draft = false
 +++

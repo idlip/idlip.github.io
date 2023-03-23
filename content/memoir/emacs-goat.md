@@ -1,6 +1,6 @@
 +++
 title = "Emacs is OP"
-date = 2022-03-25
+date = 2023-03-22
 tags = ["editors", "emacs", "neovim"]
 draft = false
 +++

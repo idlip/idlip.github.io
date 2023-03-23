@@ -19,7 +19,7 @@ Its time.. time to begin the chapter!
 ** Emacs is OP :editors:emacs:neovim:
    :PROPERTIES:
    :EXPORT_FILE_NAME: emacs-goat
-   :EXPORT_DATE: 2022-03-25
+   :EXPORT_DATE: 2023-03-22
    :EXPORT_HUGO_DRAFT: false
    :END:
 
