@@ -1,10 +1,10 @@
 #+hugo_base_dir: ../
-#+hugo_section: memoir
+#+hugo_section: snippets
 #+OPTIONS: toc:2
 
 
-* Memoir
-** Journey Begins :log:memoir:first:
+* Snippets
+** Journey Begins :log:snippets:first:
    :PROPERTIES:
    :EXPORT_FILE_NAME: blogging journey
    :EXPORT_DATE: <2023-03-21 Tue>

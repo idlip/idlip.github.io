@@ -40,9 +40,9 @@ publishDir = "docs"
     weight = 10
 
   [[menu.secondary]]
-    identifier = "memoir"
-    name = "memoir"
-    url = "/memoir/"
+    identifier = "snippets"
+    name = "snippets"
+    url = "/snippets/"
     weight = 12
 
     [[menu.secondary]]
