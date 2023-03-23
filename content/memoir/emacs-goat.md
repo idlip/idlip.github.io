@@ -1,8 +1,8 @@
 +++
 title = "Emacs is OP"
-date = 2023-03-22
+date = 2022-03-25
 tags = ["editors", "emacs", "neovim"]
-draft = true
+draft = false
 +++
 
 Before anyone shouts vim, let me `:q!`
@@ -14,4 +14,4 @@ I cannot just rant to make people ditch vim for emacs, But once you understand y
 
 Now they get the **Best** of both the World!
 
-none the less, Emacs is **GOAT**
+Nonetheless, Emacs is the **GOAT** !
