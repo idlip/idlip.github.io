@@ -22,33 +22,33 @@ publishDir = "docs"
 
   [[menu.main]]
     identifier = "posts"
-    name = "posts"
+    name = "Posts"
     url = "/posts/"
     weight = 10
 
   [[menu.main]]
     identifier = "projects"
-    name = "projects"
+    name = "Projects"
     url = "/projects/"
     weight = 11
 
 
   [[menu.secondary]]
     identifier = "about"
-    name = "about"
+    name = "About"
     url = "/about/"
     weight = 10
 
   [[menu.secondary]]
     identifier = "snippets"
-    name = "snippets"
+    name = "Snippets"
     url = "/snippets/"
     weight = 12
 
     [[menu.secondary]]
     identifier= "rss"
     url = "index.xml"
-    name = "Rss"
+    name = " Rss"
     title = "Rss feeds"
     weight = 12
 

@@ -65,7 +65,7 @@ nav {
                 display: inline-block;
                 padding-top: 0.5rem;
                 padding-bottom: 0.5rem;
-                border-bottom: 1px solid $background-color;
+                border-bottom: 1px solid $subscript-color;
             }
             a:hover {
                 color: $link-color;
@@ -118,12 +118,15 @@ nav {
         display: flex;
         flex-direction: column-reverse;
         align-items: baseline;
+	color: $toc-border;
+	font-family: 'Victor';
         padding: 0.5rem 0.5rem 0.5rem 0;
     }
     .post-title {
         a {
             text-decoration: none;
             color: $post-title-color;
+	    font-family: 'Comic';
             //font-weight: 600;
             border-bottom: none;
             //transition: border-bottom .3s;
@@ -197,12 +200,12 @@ nav {
                 border-radius: 3px;
                 background: $background-color;
                 padding: 0.2em;
-                color: $link-color;
+                color: $tags-color;
                 margin: 10px 2px 10px 0;
                 line-height: 1em;
             }
             a:hover {
-                background: $link-color;
+                background: $tags-color;
                 color: $background-color;
             }
         }
