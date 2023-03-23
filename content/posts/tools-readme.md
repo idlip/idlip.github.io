@@ -2,7 +2,7 @@
 title = "Tools that are Best!"
 date = 2022-03-28
 tags = ["cli", "linux", "minimal", "tools"]
-draft = true
+draft = false
 +++
 
 <div class="ox-hugo-toc toc">

@@ -8,7 +8,7 @@
    :PROPERTIES:
    :EXPORT_FILE_NAME: tools-readme
    :EXPORT_DATE: 2022-03-28
-   :EXPORT_HUGO_DRAFT: true
+   :EXPORT_HUGO_DRAFT: false
    :END:
 
 --------------
@@ -46,7 +46,7 @@ Feel free to comment down and ask me doubts or about some improvements, you wann
    :PROPERTIES:
    :EXPORT_FILE_NAME: linux-journey
    :EXPORT_DATE: 2022-03-28
-   :EXPORT_HUGO_DRAFT: true
+   :EXPORT_HUGO_DRAFT: false
    :END:
 
 

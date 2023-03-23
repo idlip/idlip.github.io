@@ -2,7 +2,7 @@
 title = "My Linux Journey"
 date = 2022-03-28
 tags = ["distro", "linux"]
-draft = true
+draft = false
 +++
 
 <div class="ox-hugo-toc toc">
