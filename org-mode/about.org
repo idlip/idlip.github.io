@@ -8,13 +8,17 @@
    :END:
 
 
-*The Journey Begins*
+   + A FOSS Linux Enthusiast, who's willing to learn new unknown (atleast for me) knowledge.
+
+   + True Loyal OnePiece fan.
+
+   + Emacs User - Life's Organized
+
+
+   Contact : [[https://github.com/idlip][GitHub]]
+
+   ------
 
 #+begin_center
-Time to unlock my creativity
+/Time to unlock some Creativity/
 #+end_center
-
----------
-
-
-/This site is almost based on [[https://rudra.dev]]/
