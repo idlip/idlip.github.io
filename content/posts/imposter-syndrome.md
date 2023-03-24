@@ -1,0 +1,81 @@
++++
+title = "Imposter Syndrome : Formula for Success"
+date = 2023-03-24
+tags = ["phenomenon", "success", "skill", "imposter", "psychology"]
+draft = false
++++
+
+<div class="ox-hugo-toc toc">
+
+<div class="heading">Table of Contents</div>
+
+- [Ways to stop Imposter Syndrome](#ways-to-stop-imposter-syndrome)
+    - [Trust the Process](#trust-the-process)
+    - [Look for Evidence](#look-for-evidence)
+    - [Remember the Journey](#remember-the-journey)
+    - [Turn the Tables](#turn-the-tables)
+    - [Suggested Reads](#suggested-reads)
+
+</div>
+<!--endtoc-->
+
+-   Have you ever felt a fear of losing or doubt your own ability?
+-   Have you felt unworthy, lost your self esteem due to a mistake?
+-   Are you feeling constant fear of being discovered rather than being proud?
+
+The matter is, is these sound true or happening at some moment, let me condition it as **"Imposted Syndrome"**.
+
+You might remember the word "Imposter" from the most popular mobile game during lockdown, **Among us** ([site](https://www.innersloth.com/games/among-us/)), yeah as the name suggests it means one who deceives.
+
+But imposter syndrome is seriously for real, a condition, which people do experience in their life. They don't usually realize or find its symptoms as it is in itself a <span class="underline">negative feeling</span>, provoking [anxiety](https://www.psychologytoday.com/intl/basics/anxiety) and [fear](https://www.psychologytoday.com/intl/basics/fear).
+
+-   People with imposter syndrome feel inauthentic, question their own ability to be
+
+successful, and are convinced that they do not belong in the roles they stand, even
+when they experience success.
+
+I myself have felt this, when I was starting out journey to learn new course (say programming language), I felt it was oceanic knowledge where I only had a boat.
+
+
+## Ways to stop Imposter Syndrome {#ways-to-stop-imposter-syndrome}
+
+> _Where there is a will, there is a way._
+
+
+### Trust the Process {#trust-the-process}
+
+Reflect on your actions, see the world praising you. Instead of listening to the negative feeling from your head, listen to the feedback from others.
+
+-   Others believe in you
+-   You don't believe in yourself
+-   Yet you believe yourself instead of them
+
+If you doubt yourself, shouldn't you also doubt your judgment of yourself?
+
+
+### Look for Evidence {#look-for-evidence}
+
+Fine you feel it that way, see if you can find evidence and measures. Think of some example where you have made some positive impact on others, how much change have you brought them.
+
+
+### Remember the Journey {#remember-the-journey}
+
+Look back at the steps you have taken, how was the process of learning from scratch, rock-bottom.
+
+_'It will get better and you'll be more proud of yourself.'_
+
+
+### Turn the Tables {#turn-the-tables}
+
+Make it a strenth, refrain from doubts. Those with imposter syndrome are more likely to say "I don't know" when they don't know. This is an advantage. Overconfident people assume they have all the answers, even when they don't.
+
+Humility, uncertainty, and self-doubt are part of the learning process. The key is to believe in your ability to learn.
+
+
+### Suggested Reads {#suggested-reads}
+
+If you want to explore more on this concepts :
+
+1.  [The Power of Belonging](https://www.psychologytoday.com/intl/blog/all-kids-thriving/202302/the-power-of-belonging)
+
+2.  [Connection between ADHD and Imposter Syndrome](https://www.psychologytoday.com/intl/blog/on-your-way-with-adhd/202302/the-connection-between-adhd-and-imposter-syndrome)
