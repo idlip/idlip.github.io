@@ -17,6 +17,7 @@ tags {
 
 h1, h2, h3, h4 {
     font-family: 'Comic', "Awesome";
+    line-height: 3rem;    
 }
 
 article h1 {
@@ -38,7 +39,7 @@ article h2 {
     padding: 30px;
     font-size: 38px;
     letter-spacing: 1px;
-    line-height: 4rem;
+    line-height: 3rem;
 }
 
 article h3 {
@@ -47,7 +48,8 @@ article h3 {
     color: #338fff;
     // background-color: #1d223540;
     padding: 25px;
-    font-size: 34px;    
+    font-size: 34px;
+    line-height: 3rem;    
 }
 
 

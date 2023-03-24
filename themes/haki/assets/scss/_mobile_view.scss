@@ -200,15 +200,17 @@ nav {
             list-style-type: none;
             text-align: center;
             a {
-                border: 1px solid;
-                border-radius: 3px;
-                background: $background-color;
                 padding: 0.5em;
                 color: $tags-color;
 		font-family: 'Comic';
                 margin: 10px 2px 10px 0;
                 line-height: 1em;
-		border-image: linear-gradient(90deg, #bcd2ee 28%, #fff0f5 85%, #ffe4e1 )1;
+		background: 
+		    linear-gradient(#161616 0 0) padding-box,
+		    linear-gradient(90deg, #bcd2ee 28%, #fff0f5 85%, #ffe4e1 ) border-box;
+		padding: 10px;
+		border: 2px solid transparent;
+		border-radius: 10px;		
             }
             a:hover {
                 background: $tags-color;
