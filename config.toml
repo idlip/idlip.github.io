@@ -58,7 +58,7 @@ publishDir = "docs"
   sitename = "Dilip Nirvana"
   github = "https://github.com/idlip"
   # twitter = "@"
-  favicon = "/images/favicon.ico"
+  favicon = "/images/op-roger.jpg"
   mainSections = "posts"
 
 
