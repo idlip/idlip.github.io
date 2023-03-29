@@ -130,6 +130,7 @@ nav {
             //font-weight: 600;
             border-bottom: none;
             //transition: border-bottom .3s;
+
         }
         a:hover {
             color: $post-link-color;
@@ -137,7 +138,6 @@ nav {
             font-weight: 600;
 	    -webkit-background-clip: text;
 	    -webkit-text-fill-color: transparent;
-	    
         }
     }
     .date-label {
@@ -261,13 +261,16 @@ blockquote {
     quotes: "\201C""\201D""\2018""\2019";
 }
 
-blockquote:before {
+blockquote:before, blockquote:after {
     color: $primary-color;
-    content: open-quote;
-    font-size: 4em;
+    content: "“";
+    font-size: 3em;
     line-height: 0.1em;
     margin-right: 0.25em;
     vertical-align: -0.4em;
+}
+blockquote:after {
+    content: "”";
 }
 
 blockquote p {
