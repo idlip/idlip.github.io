@@ -2,7 +2,7 @@
 	<!-- title wrapper -->
 	<div class="title-wrapper">
 		<a href="/">
-            {{ if (and (eq .IsPage true) (or (eq .Section "posts") (eq .Section "logs"))) }}
+            {{ if (and (eq .IsPage true) (or (eq .Section "posts") (eq .Section "snippets"))) }}
 			    <h2 class="single-page-title">{{ .Site.Title }}</h2>
             {{ else }}
 			    <h2 class="title">{{ .Site.Title }}</h2>
