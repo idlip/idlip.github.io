@@ -9,3 +9,5 @@ I have forked the theme from [[https://rudra.dev]] , and adjusted colors to my l
 
 I hope its a soothing experience for you to read!
 
+**** TODO Ideas [0/1]
+ - [ ] On Window Manager
