@@ -10,16 +10,13 @@ I have forked the theme from [[https://rudra.dev]] , and adjusted colors to my l
 
 I hope its a soothing experience for you to read!
 
-*** Ideas
- - [X] Emacs key/cheatsheet
- - [ ] On Window Manager
- - [ ] Fdroid and fossdroid
-
+*** Ideas - TODO
 **** TODO On Window manager
   SCHEDULED: <2023-03-30 Thu 13:01>
 + Maybe about advantages
 + Uses and how it is efficient
 + Bad side
 
-**** DONE On other way
-SCHEDULED: <2023-03-27 Mon>
+**** TODO Fdroid & Fossdroid
+  SCHEDULED:<2023-03-29 Wed 17:12>
+
