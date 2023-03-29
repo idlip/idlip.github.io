@@ -134,7 +134,7 @@ nav {
         }
         a:hover {
             color: $post-link-color;
-	    background: linear-gradient(90deg, #bcd2ee 28%, #fff0f5 85%, #ffe4e1 100%);
+	    background: $gradient-background;
             font-weight: 600;
 	    -webkit-background-clip: text;
 	    -webkit-text-fill-color: transparent;
@@ -188,6 +188,21 @@ nav {
     text-align: center;
 }
 
+ul li {
+     list-style-type: "❖ ";
+}
+
+
+
+// ul li:before {
+//     color: $list-unorder-color;
+//     float: left;
+//     margin: 0 0 0 -1em;
+//     width: 1em;
+//     content: '❖ ';
+// }
+
+
 .tags {
     font-size: .9em;
     text-align: left;
@@ -215,7 +230,7 @@ nav {
             }
             a:hover {
                 background: $tags-color;
-		background: linear-gradient(90deg, #bcd2ee 28%, #fff0f5 85%, #ffe4e1 100%);
+		background: $gradient-background;
                 color: $background-color;
             }
         }
