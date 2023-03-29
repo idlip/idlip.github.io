@@ -1,3 +1,4 @@
+
 The Journey begins..
 
 You know its fascinating to have a personal static website which is rich and valuable for others.
@@ -9,7 +10,16 @@ I have forked the theme from [[https://rudra.dev]] , and adjusted colors to my l
 
 I hope its a soothing experience for you to read!
 
-**** TODO Ideas [1/3]
+*** Ideas
  - [X] Emacs key/cheatsheet
  - [ ] On Window Manager
  - [ ] Fdroid and fossdroid
+
+**** TODO On Window manager
+  SCHEDULED: <2023-03-30 Thu 13:01>
++ Maybe about advantages
++ Uses and how it is efficient
++ Bad side
+
+**** DONE On other way
+SCHEDULED: <2023-03-27 Mon>
