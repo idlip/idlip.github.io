@@ -189,3 +189,224 @@ If you want to explore more on this concepts :
 1. [[https://www.psychologytoday.com/intl/blog/all-kids-thriving/202302/the-power-of-belonging][The Power of Belonging]]
 
 2. [[https://www.psychologytoday.com/intl/blog/on-your-way-with-adhd/202302/the-connection-between-adhd-and-imposter-syndrome][Connection between ADHD and Imposter Syndrome]]
+** Emacs Efficiency :minimal:cheatsheet:keybindings:emacs:
+:PROPERTIES:
+:EXPORT_FILE_NAME: emacs-keys
+:EXPORT_DATE: 2023-03-29
+:EXPORT_HUGO_DRAFT: false
+:END:
+
+
+This is straight away from [[https://github.com/VernonGrant/discovering-emacs][VernonGrant]] who hosts a podcast for Emacs called "[[https://www.discovering-emacs.com/][Discovering-Emacs]]".
+It's a great and has very much professional vibes, the explanations are Crisp and Clear!
+I suggest you to check out, he even has made [[https://www.youtube.com/@discoveringemacs][YouTube channel]] for it.
+
+I have removed some of the common bindings from this table, I have retained some unique one's which isn't discovered generally. I guess that is why the name is made (lol)
+
+I just wanted to have a cheatsheet for it, so I decided to leave it as a post here.
+
+You can checkout the source here ⟾ [[https://github.com/VernonGrant/emacs-keyboard-shortcuts]]
+
+*** General Shortcuts
+
+| Shortcut            | Command Invoked                | Description                                                       |
+|---------------------+--------------------------------+-------------------------------------------------------------------|
+| =C-x Esc Esc=         | =repeat-complex-command=         | Edit and re-evaluate last complex command.                        |
+| =C-h f=               | =describe-function=              | Help information for a function.                                  |
+| =C-h x=               | =describe-command=               | Help information for a command (a function available using =M-x=).  |
+| =C-h l=               | =view-lossage=                   | Show log for key presses and commands.                            |
+| =M--=                 | =negative-argument=              | Prefix to perform negative meta commands.                         |
+| =C--=                 | =negative-argument=              | Prefix to perform negative commands.                              |
+| =M-l=                 | =downcase-word=                  | Lowercase word forward.                                           |
+| =M-c=                 | =capitalize-word=                | Capitalize word forward.                                          |
+| =M-u=                 | =upcase-word=                    | Uppercase word forward.                                           |
+| =C-<space> C-<space>= | =set-mark-command=               | Add mark to mark ring.                                            |
+| =C-u C-<space>=       | =set-mark-command=               | Jump to previous mark.                                            |
+| =M-q=                 | =fill-paragraph=                 | Wrap/reformat to fill column.                                     |
+| =M-^=                 | =delete-indentation=             | Join previous line.                                               |
+| =M-- M-^=             | =delete-indentation=             | Join following line.                                              |
+| =M-{=                 | =backward-paragraph=             | Previous paragraph.                                               |
+| =M-}=                 | =forward-paragraph=              | Next paragraph.                                                   |
+| =C-x C-v=             | =find-alternate-file=            | Find alternative file.                                            |
+| =C-x i=               | =insert-file=                    | Insert file contents into the current file.                       |
+| =C-x h=               | =mark-whole-buffer=              | Highlight entire buffer.                                          |
+| =C-M-\=               | =indent-region=                  | Re-indent code region in region or from previous mark point.      |
+| =C-x C-x=             | =exchange-point-and-mark=        | Put the mark where point is now, and point where the mark is now. |
+| =C-x C-j=             | =dired-jump=                     | Open Dired jump.                                                  |
+| =C-x SPC=             | =rectangle-mark-mode=            | Rectangle edit mode, can use string-insert-rectangle.             |
+| =C-x +=               | =balance-windows=                | Resize all splits to equal sizes.                                 |
+| =C-x 5 2=             | =make-frame-command=             | Open in new frame.                                                |
+| =C-x r SPC=           | =point-to-register=              | Point-to-register.                                                |
+| =C-x r j=             | =jump-to-register=               | Jump-to-register.                                                 |
+| =M-s o=               | =occur=                          | List lines using regex.                                           |
+| =M-s h r=             | =highlight-regexp=               | Highlights regex expression (useful for presentations).           |
+| =M-r=                 | =move-to-window-line-top-bottom= | Move cursor to top, middle and bottom.                            |
+| =C-l=                 | =recenter-top-bottom=            | Move text in relation to the cursor, to top, middle and bottom.   |
+| =M-!=                 | =shell-command=                  | Run a shell command.                                              |
+| =M-&=                 | =async-shell-command=            | Async shell command.                                              |
+| =C-u 0=               | =universal-argument=             | Infinite count prefix.                                            |
+| =C-u {count}=         | =universal-argument=             | Repeat operation x amount of times.                               |
+| =C-x z=               | =repeat=                         | Repeat command.                                                   |
+| =C-x backspace=       | =backward-kill-sentence=         | Clear mini-buffer.                                                |
+| =M-g M-g=             | =goto-line=                      | Go to line.                                                       |
+| =C-x 1=               | =delete-other-windows=           | Kill other windows.                                               |
+| =M-z (char)=          | =zap-to-char=                    | Zap up to char.                                                   |
+| =C-x * g=             | =calc-dispatch=                  | Eval in new buffer.                                               |
+| =C-u M-x=             | =universal-argument=             | Run command with additional options.                              |
+
+*** Macros
+:PROPERTIES:
+:CUSTOM_ID: macros
+:END:
+| Shortcut        | Command Invoked           | Description                                                          |
+|-----------------+---------------------------+----------------------------------------------------------------------|
+| =C-x (=           | =kmacro-start-macro=        | Define keyboard macro.                                               |
+| =C-x )=           | =kmacro-end-macro=          | End keyboard macro definition.                                       |
+| =C-x e=           | =kmacro-end-and-call-macro= | Playback keyboard macro, can just keep pressing =e= after first press. |
+| =C-x C-k <space>= | =kmacro-step-edit-macro=    | Open keyboard macro debugger.                                        |
+| =C-x C-k e=       | =edit-kbd-macro=            | Enter macro editor, (C-c C-c) to finish editing.                     |
+| =C-x C-k n=       | =kmacro-name-last-macro=    | Save the keyboard macro for later use.                               |
+|                 | =insert-kbd-macro=          | Insert a saved macro into the file, in Emacs lisp.                   |
+
+*** Project
+:PROPERTIES:
+:CUSTOM_ID: project
+:END:
+| Shortcut  | Command Invoked                    | Description                                                                           |
+|-----------+------------------------------------+---------------------------------------------------------------------------------------|
+| =C-x p != | =project-shell-command=            | Run =shell-command= in the current project's root directory.                          |
+| =C-x p &= | =project-async-shell-command=      | Run =async-shell-command= in the current project's root directory.                    |
+| =C-x p f= | =project-find-file=                | Visit a file (with completion) in the current project.                                |
+| =C-x p F= | =project-or-external-find-file=    | Visit a file (with completion) in the current project or external roots.              |
+| =C-x p b= | =project-switch-to-buffer=         | Display buffer in the selected window, for a buffer belonging to the current project. |
+| =C-x p s= | =project-shell=                    | Start an inferior shell in the current project's root directory.                      |
+| =C-x p d= | =project-find-dir=                 | Start Dired in a directory inside the current project.                                |
+| =C-x p D= | =project-dired=                    | Start Dired in the current project's root.                                            |
+| =C-x p v= | =project-vc-dir=                   | Run VC-Dir in the current project's root.                                             |
+| =C-x p c= | =project-compile=                  | Run =compile= in the project root.                                                    |
+| =C-x p e= | =project-eshell=                   | Start Eshell in the current project's root directory.                                 |
+| =C-x p k= | =project-kill-buffers=             | Kill the buffers belonging to the current project.                                    |
+| =C-x p p= | =project-switch-project=           | Switch to another project by running an Emacs command.                                |
+| =C-x p g= | =project-find-regexp=              | Find all matches for REGEXP in the current project's roots.                           |
+| =C-x p G= | =project-or-external-find-regexp=  | Find all matches for REGEXP in the project roots or external roots.                   |
+| =C-x p r= | =project-query-replace-regexp=     | Query-replace REGEXP in all the files of the project.                                 |
+| =C-x p x= | =project-execute-extended-command= | Execute an extended command in project root.                                          |
+
+*** Balanced Expressions
+:PROPERTIES:
+:CUSTOM_ID: balanced-expressions
+:END:
+| Shortcut | Command Invoked      | Description                          |
+|----------+----------------------+--------------------------------------|
+| =C-M-f=  | =forward-sexp=       | Forward over an sexps.               |
+| =C-M-b=  | =backward-sexp=      | Backward over a sexps.               |
+| =C-M-d=  | =down-list=          | Move down into a sexps.              |
+| =C-M-u=  | =backward-up-list=   | Move up out of a sexps.              |
+| =C-M-n=  | =forward-list=       | Move forward to the sexps.           |
+| =C-M-p=  | =backward-list=      | Move backward to the previous sexps. |
+| =C-M-k=  | =kill-sexp=          | Kill down into sexps.                |
+| =M-(=    | =insert-parentheses= | Wraps region in parenthesis.         |
+
+*** Query Replace
+:PROPERTIES:
+:CUSTOM_ID: query-replace
+:END:
+| Shortcut | Command Invoked | Description                                                          |
+|----------+-----------------+----------------------------------------------------------------------|
+| =M-%=    | =query-replace= | Start a query replace operation.                                     |
+| =!=      |                 | Replace all remaining matches in this buffer with no more questions. |
+| =^=      |                 | Move point back to previous match.                                   |
+| =u=      |                 | Undo previous replacement.                                           |
+| =U=      |                 | undo all replacements.                                               |
+| =E=      |                 | Edit the replacement string.                                         |
+
+*** Xref
+:PROPERTIES:
+:CUSTOM_ID: xref
+:END:
+| Shortcut | Command Invoked         | Description                         |
+|----------+-------------------------+-------------------------------------|
+| =M-.=    | =xref-find-definitions= | Find definitions at point.          |
+| =M-,=    | =xref-go-back=          | Pop marker and return.              |
+| =M-?=    | =xref-find-references=  | Find references matching a pattern. |
+| =C-M-.=  | =xref-find-apropos=     | Find symbols matching a pattern.    |
+
+*** Bookmarks
+:PROPERTIES:
+:CUSTOM_ID: bookmarks
+:END:
+| Shortcut  | Command Invoked       | Description            |
+|-----------+-----------------------+------------------------|
+| =C-x r m= | =bookmark-set=        | Create / set bookmark. |
+| =C-x r b= | =bookmark-jump=       | Open bookmark.         |
+| =C-x r l= | =bookmark-bmenu-list= | List bookmarks.        |
+
+*** Dired Buffer
+:PROPERTIES:
+:CUSTOM_ID: dired-buffer
+:END:
+| Shortcut | Command Invoked                    | Description                                                                        |
+|----------+------------------------------------+------------------------------------------------------------------------------------|
+| =C-o=    | =dired-display-file=               | Preview file but stay in Dired buffer.                                             |
+| =C-u k=  | =dired-do-kill-lines=              | Remove section.                                                                    |
+| =X=      | =dired-do-shell-command=           | Execute shell command on file.                                                     |
+| =Q=      | =dired-do-find-regexp-and-replace= | Query replace marked files, =<space>= accept, =n= decline and =C-x s= to save all. |
+| =+=      | =dired-create-directory=           | Create directory.                                                                  |
+| =^=      | =dired-up-directory=               | Go up one directory.                                                               |
+|          | =find-name-dired=                  | Recursively find a file.                                                           |
+
+*** Interface To Spell (Ispell) and On The Fly Spell (Flyspell)
+:PROPERTIES:
+:CUSTOM_ID: interface-to-spell-ispell-and-on-the-fly-spell-flyspell
+:END:
+| Shortcut | Command Invoked                      | Description                                                                       |
+|----------+--------------------------------------+-----------------------------------------------------------------------------------|
+| =M $=    | =ispell-word=                        | Check and correct spelling of the word at point.                                  |
+| =C-M i=  | =completion-at-point=                | Complete the word before point based on the spelling dictionary.                  |
+| =M-TAB=  | =flyspell-auto-correct-word=         | Automatically corrects the current word at point, will also cycle between option. |
+| =C-c $=  | =flyspell-correct-word-before-point= | Correct word before point.                                                        |
+
+*** Org Buffer
+:PROPERTIES:
+:CUSTOM_ID: org-buffer
+:END:
+| Shortcut      | Command Invoked            | Description                                    |
+|---------------+----------------------------+------------------------------------------------|
+| =S-M-RET=     | =org-insert-todo-heading=  | Insert a new TODO entry below the current one. |
+| =C-c / t=     | =org-match-sparse-tree=    | View todo items in a sparse tree.              |
+| =C-c C-t=     | =org-todo=                 | Toggle todo item state.                        |
+| =C-c C-s=     | =org-schedule=             | Schedule todo item.                            |
+| =C-c C-d=     | =org-deadline=             | Add deadline to todo item.                     |
+| =C-c [=       | =org-agenda-file-to-front= | Add file to agenda.                            |
+| =C-c ]=       | =org-remove-file=          | Remove file to agenda.                         |
+| =C-c .=       | =org-timestamp=            | Insert current date.                           |
+| =C-c C-e=     | =org-export-dispatch=      | Open exporter.                                 |
+| =C-c C-e #=   | =org-export-dispatch=      | Insert template.                               |
+| =C-c C-e P x= | =org-export-dispatch=      | Export specific project.                       |
+
+*** EWW
+:PROPERTIES:
+:CUSTOM_ID: eww
+:END:
+| Shortcut | Command Invoked      | Description                          |
+|----------+----------------------+--------------------------------------|
+| =B=      | =eww-list-bookmarks= | Display your bookmarks.              |
+| =b=      | =eww-add-bookmark=   | Add the current page as a bookmark.  |
+| =l=      | =eww-back-url=       | Go to the previously displayed page. |
+| =r=      | =eww-forward-url=    | Go to the next displayed page.       |
+| =g=      | =eww-reload=         | Reload the current page.             |
+| =G=      | =eww=                | Go to a new address.                 |
+| =H=      | =eww-list-histories= | Shows a list of your histories.      |
+| =TAB=    | =shr-next-link=      | Skip to the next link.               |
+
+*** Useful Commands
+:PROPERTIES:
+:CUSTOM_ID: useful-commands
+:END:
+| Command                  | Description                                                   |
+|--------------------------+---------------------------------------------------------------|
+| =keep-lines=             | Delete all lines not matching the provided regex.             |
+| =flush-lines=            | Delete all lines matching the provided regex.                 |
+| =sort-lines=             | Sort lines in region alphabetically.                          |
+| =delete-duplicate-lines= | Delete all but one copy of any identical lines in the region. |
+| =ff-find-other-file=     | Find the header or source file corresponding to this file.    |
