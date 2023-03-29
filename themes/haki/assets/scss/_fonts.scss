@@ -20,6 +20,11 @@ h1, h2, h3, h4 {
     line-height: 3rem;    
 }
 
+h1:before, h1:after {
+    content: " ❉ ";
+    color: #ffd700;
+}
+
 article h1 {
     font-weight: 600;
     color: #ffdab9;
@@ -31,6 +36,10 @@ article h1 {
     line-height: 3rem;
 }
 
+article h2:before {
+    content: "◉ ";
+    color: #82b0ec;
+}
 article h2 {
     font-weight: 550;
     font-style: bold;
@@ -42,6 +51,11 @@ article h2 {
     line-height: 3rem;
 }
 
+
+article h3:before{
+    content: "◈ ";
+    color: #6ae4b9;
+}
 article h3 {
     font-weight: 550;
     font-style: bold;
@@ -65,6 +79,7 @@ code[class*="language-"]{
     border-radius: 20px;
     color: #ffffff;
 }
+
 
 .blog-list{
     font-family: 'Comic', "Awesome";
