@@ -37,7 +37,7 @@
     <body>
         <div class="layout">
             <!-- Only list and post pages should have Nav -->
-            {{ if (and (eq .IsPage true) (or (eq .Section "posts") (eq .Section "logs"))) }}
+            {{ if (and (eq .IsPage true) (or (eq .Section "posts") (eq .Section "snippets"))) }}
                 <a class="active-link" href="/">← home</a>
             {{ else }}
                 {{ partial "header" . }}
