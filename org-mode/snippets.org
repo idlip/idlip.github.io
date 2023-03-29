@@ -60,3 +60,80 @@ On Linux you get *newsboat* (terminal lovers), I use *elfeed* (Emacs way).
 Actually elfeed integrates so well with Emacs, I dont have to learn new stuffs for another application or keyboard shortcuts.
 
 That's one of the reason to call *Emacs as the GOAT-E (Editor)*.
+** Insightful Quotes :read:snippets:quotes:
+:PROPERTIES:
+:EXPORT_FILE_NAME: insigh-quotes
+:EXPORT_DATE: 2023-03-29
+:EXPORT_HUGO_DRAFT: false
+:END:
+
+I will be making few snippets on few quotes which impressed me or made me laugh for the day!
+
+Hope so, it is insightful enough for you also.
+
+-------------------
+
+
++ Self quote
+
+  #+begin_quote
+ Don't just read, Think and Understand!
+#+end_quote
+
++ Walt Kelly
+
+  #+begin_quote
+  Every burden is a blessing.
+#+end_quote
+
++ Gustave Flaubert
+
+  #+begin_quote
+  The art of writing is the art of discovering what you believe.
+#+end_quote
+
++ Samuel Butlet
+
+  #+begin_quote
+  Let us be grateful to the mirror for revealing to us our appearance only.
+#+end_quote
+
++ Joseph Cossman
+
+  #+begin_quote
+  Obstacles are things a person sees when he takes his eyes off his goal.
+#+end_quote
+
++ Henny Youngman
+
+  #+begin_quote
+  I told the doctor I broke my leg in two places. He told me to quit going to those places.
+#+end_quote
+
++ Barabara Tober
+
+  #+begin_quote
+  Traditions are group efforts to keep the unexpected from happening.
+#+end_quote
+
++ Frank Wilczek
+
+  #+begin_quote
+In physics, you don't have to go around making trouble for yourself - nature does it for you.
+  #+end_quote
+
++ David Coblitz
+
+  #+begin_quote
+  A committee can make a decision that is dumber than any of its members.
+#+end_quote
+
+
+-------------------
+
+
+#+begin_center
+With that *"quoted"*, I hope you have a great day!
+
+Visit the snippets again!
+#+end_center
