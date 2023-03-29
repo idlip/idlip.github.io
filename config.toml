@@ -39,7 +39,7 @@ publishDir = "docs"
     url = "/about/"
     weight = 10
 
-  [[menu.secondary]]
+  [[menu.main]]
     identifier = "snippets"
     name = "Snippets"
     url = "/snippets/"
