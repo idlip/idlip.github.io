@@ -30,6 +30,12 @@ publishDir = "docs"
     identifier = "projects"
     name = "Projects"
     url = "/projects/"
+    weight = 12
+
+  [[menu.main]]
+    identifier = "snippets"
+    name = "Snippets"
+    url = "/snippets/"
     weight = 11
 
 
@@ -39,13 +45,7 @@ publishDir = "docs"
     url = "/about/"
     weight = 10
 
-  [[menu.main]]
-    identifier = "snippets"
-    name = "Snippets"
-    url = "/snippets/"
-    weight = 12
-
-    [[menu.secondary]]
+  [[menu.secondary]]
     identifier= "rss"
     url = "index.xml"
     name = " Rss"
