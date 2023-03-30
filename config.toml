@@ -6,7 +6,7 @@ pygmentsCodefences = true
 paginate = 30
 
 title = "I'm Dilip"
-theme = "haki"
+# theme = "haki"
 [markup.goldmark.renderer]
 unsafe = true
 
