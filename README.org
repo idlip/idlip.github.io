@@ -18,5 +18,8 @@ I hope its a soothing experience for you to read!
 + Bad side
 
 **** TODO Fdroid & Fossdroid
-  SCHEDULED:<2023-03-29 Wed 17:12>
+  SCHEDULED: <2023-03-31 Fri 17:12>
+
+**** TODO Use org file for scss too
+  SCHEDULED: <2023-03-30 Thu 13:38>
 
