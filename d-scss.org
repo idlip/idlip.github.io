@@ -520,7 +520,7 @@ Added fonts which i like and are unique across whole web.
   }
 
   h1:before, h1:after {
-      content: " ❄️ ";
+      content: " ⩮ ";
       color: #ffd700;
   }
 
