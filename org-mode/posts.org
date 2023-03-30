@@ -56,7 +56,7 @@ Feel free to comment down and ask me doubts or about some improvements, you wann
 
 -----
 
-*** My Linux Journey
+*** The Embark
 
 My linux journey was from Linux Mint > EndeavourOS > Arch Linux > and now NixOS.
 
@@ -71,12 +71,12 @@ Tbh I loved LM and Arch alot, I was a devotee to Arch too, and I hated Nix when 
 
   That is when I thought nix lacked Documentation or good YouTuber to speak of, I really wish one of them could explain and make it their distro to explain timely on things.
 
-  Fine, somehow forced myself and came a long way of setting up Good working nixos config, now I'm on flake
+  Fine, somehow forced myself and came a long way of setting up Good working nixos config, now I'm on flakes.
 
   Nix is great if it works as expected or if we make it work, but, if I get stuck or the issue goes for days that is when I really hate Nix, because it ain't easy to solve some unique issues. Most of these apply for HomeManager actually, it adds more trouble.
 
   It is adviced to learn how Nix works or Nix as Functional Programming Language.
-** Should you try Nixos? :emacs:distro:linux:nixos:
+** NixOS : Reproducible - Immutable :emacs:distro:linux:nixos:
    :PROPERTIES:
    :EXPORT_FILE_NAME: try-nixos
    :EXPORT_DATE: <2023-03-23 Thu>
@@ -85,11 +85,13 @@ Tbh I loved LM and Arch alot, I was a devotee to Arch too, and I hated Nix when 
 
 --------------
 
-*** Now if you get doubt of, "Should I try NixOS?" ❄️
+Introduction part, you would better have read it on official nixos site ([[https://nixos.org]])
 
-Here is an answer from a non-programmer, who just browses and watches media.
-Just don't, if you are looking for small benefit. Don't!
-You will regret having hard time to figure out petty things, again forget about error, you cannot even search in web.
+*** "Should you try NixOS?" ❄️
+
+Here answer from a non-programmer, who just browses and watches media.
+Just don't, if you are looking for small benefit. *Don't!*
+ regret having hard time to figure out petty things, again forget about error, you cannot even search in web.
 
 But, if you have decided, go with it. According to me (non-programmer), these points are good to consider NixOS
  + You use Emacs (lol), *Emacs* ❤️  *Nix* is Match made in Heaven.

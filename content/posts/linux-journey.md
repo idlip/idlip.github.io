@@ -9,7 +9,7 @@ draft = false
 
 <div class="heading">Table of Contents</div>
 
-- [My Linux Journey](#my-linux-journey)
+- [The Embark](#the-embark)
 
 </div>
 <!--endtoc-->
@@ -21,7 +21,7 @@ _If you are reading this, I encourage you to write blogs like this and have it i
 ---
 
 
-## My Linux Journey {#my-linux-journey}
+## The Embark {#the-embark}
 
 My linux journey was from Linux Mint &gt; EndeavourOS &gt; Arch Linux &gt; and now NixOS.
 
@@ -36,9 +36,8 @@ Tbh I loved LM and Arch alot, I was a devotee to Arch too, and I hated Nix when 
     I did leave Nix and install Arch few times back and forth, I was debating with myself and id my own research all over Internet.
 
     That is when I thought nix lacked Documentation or good YouTuber to speak of, I really wish one of them could explain and make it their distro to explain timely on things.
-
 
-    Fine, somehow forced myself and came a long way of setting up Good working nixos config, now I'm on flake
+    Fine, somehow forced myself and came a long way of setting up Good working nixos config, now I'm on flakes.
 
     Nix is great if it works as expected or if we make it work, but, if I get stuck or the issue goes for days that is when I really hate Nix, because it ain't easy to solve some unique issues. Most of these apply for HomeManager actually, it adds more trouble.
 

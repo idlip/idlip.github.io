@@ -1,5 +1,5 @@
 +++
-title = "Should you try Nixos?"
+title = "NixOS : Reproducible - Immutable"
 date = 2023-03-23T00:00:00+05:30
 tags = ["emacs", "distro", "linux", "nixos"]
 draft = false
@@ -9,7 +9,7 @@ draft = false
 
 <div class="heading">Table of Contents</div>
 
-- [Now if you get doubt of, "Should I try NixOS?" ❄️](#now-if-you-get-doubt-of-should-i-try-nixos-️)
+- ["Should you try NixOS?" ❄️](#should-you-try-nixos-️)
 - [How I manage my system 🌲](#how-i-manage-my-system)
     - [Credits 🎖️](#credits-️)
 
@@ -18,12 +18,14 @@ draft = false
 
 ---
 
+Introduction part, you would better have read it on official nixos site (<https://nixos.org>)
 
-## Now if you get doubt of, "Should I try NixOS?" ❄️ {#now-if-you-get-doubt-of-should-i-try-nixos-️}
 
-Here is an answer from a non-programmer, who just browses and watches media.
-Just don't, if you are looking for small benefit. Don't!
-You will regret having hard time to figure out petty things, again forget about error, you cannot even search in web.
+## "Should you try NixOS?" ❄️ {#should-you-try-nixos-️}
+
+Here answer from a non-programmer, who just browses and watches media.
+Just don't, if you are looking for small benefit. **Don't!**
+ regret having hard time to figure out petty things, again forget about error, you cannot even search in web.
 
 But, if you have decided, go with it. According to me (non-programmer), these points are good to consider NixOS
 
