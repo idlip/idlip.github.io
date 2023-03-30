@@ -61,8 +61,21 @@ article h3 {
     font-style: bold;
     color: #338fff;
     // background-color: #1d223540;
-    padding: 25px;
-    font-size: 34px;
+    padding: 4px;
+    font-size: 32px;
+    line-height: 3rem;    
+}
+
+article h4:before{
+    content: "✥ ";
+    color: #00d3d0;
+}
+article h4 {
+    font-weight: 550;
+    font-style: bold;
+    color: #ffa9bf;
+    padding: 4px;
+    font-size: 26px;
     line-height: 3rem;    
 }
 
