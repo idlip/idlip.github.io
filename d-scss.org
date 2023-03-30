@@ -1,0 +1,936 @@
+#+title: Scss for my site
+#+author: iDlip
+#+language: English
+#+STARTUP: overview hideblocks
+#+OPTIONS: num:nil author:nil
+#+auto_tangle: t
+#+PROPERTY: :tangle-mode (identity #o444) :mkdirp yes
+-------------------
+
+Searching folders are pain, i have tangle everything from here so its easy to navigate and also *Document* for me to understand.
+
+* Main scss
+Main file which calls every child (lol)
+#+begin_src scss :tangle ./assets/scss/main.scss
+  @import "_custom_font";
+  @import "_fonts";
+  @import "_variables";
+  @import "_mixins";
+  @import "_projects";
+  @import "_keyboards";
+   @import "_web_view";
+ 
+#+end_src
+
+* Web view
+All about design and view.
+#+begin_src scss :tangle ./assets/scss/_web_view.scss
+  html {
+      font-size: $global-font-size-mobile;
+  }
+
+  .active-link {
+      color: $active-link-color;
+
+  }
+
+  .disabled-link {
+      cursor: not-allowed;
+      opacity: 0.5;
+      text-decoration: none;
+      pointer-events: none;
+  }
+
+
+
+
+  body {
+      line-height: 1.8em;
+      color: $primary-color;
+      background: $background-color;
+      background: linear-gradient(30deg, #121212 90%, #131313 87%, #151515 99%);
+  }
+
+  .post-title, .date-label {
+      letter-spacing: 0.025rem;
+  }
+
+  p, sub, nav{
+      letter-spacing: 0.05rem;
+  }
+
+  .title-wrapper, .title {
+      letter-spacing: 0.075rem;
+  }
+
+  a {
+      text-decoration: none;
+  }
+
+  h1 {
+      font-size: $title-font-size;
+  }
+
+  .layout {
+      .title-wrapper {
+          @include flex-column;
+          margin-bottom: 0.5rem;
+      }
+      .title {
+          color: $primary-color;
+          text-align: left;
+          display: block;
+          font-size: 2.5rem;
+          font-weight: bold;
+          font-family: 'Stone', "Awesome";
+          letter-spacing: 3px;
+          margin: 0;
+      }
+      max-width: $layout-max-width;
+      margin-left: auto;
+      margin-right: auto;
+      padding: $vertical-layout-padding $horizontal-layout-padding;
+  }
+
+  nav {
+      font-size: $nav-font-size;
+      text-align: center;
+      ul {
+          display: block;
+          padding: 0;
+          //margin: 0.5rem;
+          li {
+              display: inline;
+              list-style-type: none;
+              a {
+                  color: $primary-color;
+                  display: inline-block;
+                  padding-top: 0.5rem;
+                  padding-bottom: 0.5rem;
+                  border-bottom: 1px solid $subscript-color;
+              }
+              a:hover {
+                  color: $link-color;
+                  border-bottom: 1px solid;
+              }
+          }
+          li:not(:last-child) {
+              padding: 0 1rem 0 0;
+          }
+      }
+  }
+
+  .slim-description {
+      margin-bottom: calc(#{$global-font-size} * 2);
+      color: $subscript-color;
+      p {
+          letter-spacing: normal;
+      }
+
+      a {
+          color: $link-color
+      }
+
+      a:hover {
+          // border-bottom: 1px solid;
+          font-weight: 600;
+      }
+
+  }
+
+
+  .blog-post-content {
+      a {
+          color: $link-color;
+          text-decoration: none;
+          border-bottom: 1px solid;
+      }
+      a:hover {
+          border-bottom: none;
+      }
+
+      // Add some spaces before a sub-heading
+      h2 {
+          margin-top: 2rem;
+      }
+  }
+
+  .blog-list {
+      .list-item {
+          display: flex;
+          flex-direction: column-reverse;
+          align-items: baseline;
+          color: $toc-border;
+          font-family: 'Victor', "Awesome";
+          padding: 0.5rem 0.5rem 0.5rem 0;
+      }
+      .post-title {
+          a {
+              text-decoration: none;
+              color: $post-title-color;
+              font-family: 'Comic', "Awesome";
+              //font-weight: 600;
+              border-bottom: none;
+              //transition: border-bottom .3s;
+
+          }
+          a:hover {
+              color: $post-link-color;
+              background: $gradient-background;
+              font-weight: 600;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+          }
+      }
+      .date-label {
+          font-size: 80%;
+          margin-right: 1rem;
+      }
+  }
+
+  .content {
+      .title {
+          font-size: $content-title-font-size;
+      }
+  }
+
+  .blog-post-content {
+      a {
+          color: $post-link-color;
+          text-decoration: none;
+          border-bottom: 1px solid;
+      }
+      a:hover {
+          border-bottom: none;
+      }
+
+      img {
+          width:100%;
+          max-width: 100% ;
+      }
+
+      p {
+          code {
+              background: $code-background;
+              color: $code-color;
+          }
+      }
+
+  }
+
+  .post-image {
+      @include full-width-mobile
+      img {
+          width:100%;
+          box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      }
+      .img-description {
+          color: $subscript-color;
+      }
+      text-align: center;
+  }
+
+  ul li {
+      list-style-type: "❖ ";
+  }
+
+
+
+  // ul li:before {
+  //     color: $list-unorder-color;
+  //     float: left;
+  //     margin: 0 0 0 -1em;
+  //     width: 1em;
+  //     content: '❖ ';
+  // }
+
+
+  .tags {
+      font-size: .9em;
+      text-align: left;
+      ul {
+          display: block;
+          padding: 0;
+          //margin: 0.5rem;
+          li {
+              display: inline;
+              list-style-type: none;
+              text-align: center;
+              a {
+                  padding: 0.5em;
+                  color: $tags-color;
+                  font-family: 'Comic';
+                  margin: 10px 2px 10px 0;
+                  line-height: 4em;
+                  background: 
+                      linear-gradient(#161616 0 0) padding-box,
+                      linear-gradient(90deg, #bcd2ee 28%, #fff0f5 85%, #ffe4e1 ) border-box;
+                  padding: 10px;
+                  border: 2px solid transparent;
+                  border-radius: 10px;
+
+              }
+              a:hover {
+                  background: $tags-color;
+                  background: $gradient-background;
+                  color: $background-color;
+              }
+          }
+          li:not(:last-child) {
+              padding: 0 0.1rem 0 0;
+          }
+      }
+  }
+
+  .highlight {
+      @include full-width-mobile
+      pre {
+          line-height: 1.2rem;
+          border: 1.2px solid #ddd;
+          border-radius: 30px;
+          overflow: auto;
+          padding: $horizontal-layout-padding;
+          margin: 0;
+          code[class*=language-] {
+              font-size: 0.9em;
+          }
+
+          .token.comment {
+              font-style: italic;
+          }
+      }
+  }
+
+  // Add margin to the image after a code-block.
+  .highlight + .post-image {
+      margin-top: 1rem;
+  }
+
+  // Style blockquotes
+  // https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/
+  // Worth looking at
+  // https://codepen.io/frxnz/pen/IvBCr
+  blockquote {
+      background: $blockquote-background-color;
+      border-left: 5px solid $primary-color;
+      margin: 1.5em 10px;
+      padding: 0.5em 10px;
+      quotes: "\201C""\201D""\2018""\2019";
+  }
+
+  blockquote:before, blockquote:after {
+      color: $primary-color;
+      content: "“";
+      font-size: 3em;
+      line-height: 0.1em;
+      margin-right: 0.25em;
+      vertical-align: -0.4em;
+  }
+  blockquote:after {
+      content: "”";
+  }
+
+  blockquote p {
+      display: inline;
+
+  }
+
+  time {
+      font-size: 80%;
+      margin-right: 1rem;
+  }
+
+
+  // TOC
+  .ox-hugo-toc {
+      color: $link-color;
+      background: $toc-background;
+      border-radius: 20px;
+      padding: 1rem;
+
+
+      a {
+          color: $subscript-color;
+          text-decoration: none;
+      }
+
+      .heading {
+          color: $subscript-color;
+      }
+  }
+
+
+  @media (prefers-color-scheme: dark) {
+      // Automatically switch to dark mode, a good thing??
+  }
+
+
+  @media only screen and (min-width: 600px) {
+
+      html {
+          font-size: $global-font-size;
+      }
+
+      .layout {
+          .title-wrapper {
+              @include flexify;
+              flex-direction: row;
+          }
+          .title {
+              margin-block-start: 0.83em;
+              margin-block-end: 0.83em;
+              margin-inline-start: 0px;
+              margin-inline-end: 0px;
+          }
+      }
+
+
+      .blog-list {
+          .list-item {
+              @include flexify;
+              flex-direction: unset;
+              padding: 0;
+              margin-bottom: 0.5rem;
+          }
+          .date-label {
+              font-size: 100%;
+              margin-right: 0;
+          }
+      }
+      .project-board {
+          grid-template-columns: 1fr 1fr;
+      }
+
+      .highlight {
+          @include full-width-web;
+      }
+
+      .post-image {
+          @include full-width-web;
+      }
+
+      .collection-card {
+          flex: 0 1 48%;
+          margin-bottom: 1rem;
+      }
+
+
+  }
+
+#+end_src
+
+* Fonts
+Added fonts which i like and are unique across whole web.
+** Define custom font
+#+begin_src scss :tangle ./assets/scss/_custom_font.scss
+  @font-face{
+      font-family: 'Victor';
+      src: url('../font/victor.woff2') format('woff2');
+      font-weight:400;
+      font-style:normal;
+  }
+
+  @font-face{
+      font-family: 'Happy';
+      src: url('../font/happy.woff2') format('woff2');
+      font-weight:400;
+      font-style:normal;
+  }
+
+  @font-face{
+      font-family: 'Impress';
+      src: url('../font/impress.woff2') format('woff2');
+      font-weight:400;
+      font-style:normal;
+  }
+
+  @font-face{
+      font-family: 'Comic';
+      src: url('../font/comic.woff2') format('woff2');
+      font-weight:400;
+      font-style:normal;
+  }
+
+  @font-face{
+      font-family: 'Stone';
+      src: url('../font/stone.woff2') format('woff2');
+      font-weight:400;
+      font-style:normal;
+  }
+
+  @font-face{
+      font-family: 'Gandhi';
+      src: url('../font/gandhi.woff2') format('woff2');
+      font-weight:400;
+      font-style:normal;
+  }
+
+  @font-face{
+      font-family: 'Fairy';
+      src: url('../font/fairy.woff2') format('woff2');
+      font-weight:400;
+      font-style:normal;
+  }
+
+  @font-face{
+      font-family: 'Astro';
+      src: url('../font/astro.woff2') format('woff2');
+      font-weight:400;
+      font-style:normal;
+  }
+
+  @font-face{
+      font-family: 'Symbols';
+      src: url('../font/symbols.woff2') format('woff2');
+      font-weight:900;
+      font-style:normal;
+  }
+
+  @font-face {
+      font-family: 'Awesome';
+      font-style: normal;
+      font-weight: 900;
+      font-display: block;
+      src: url("../font/fa-so.woff2") format("woff2"), url("../font/fa-rg.woff2") format("woff2"), url("../font/fa-co.woff2") format("woff2"), url("../font/fa-br.woff2") format("woff2");
+  }
+
+ #+end_src
+** Apply Fonts
+#+begin_src scss :tangle ./assets/scss/_fonts.scss
+  * {
+      box-sizing: border-box;
+  }
+  body {
+      margin: 0;
+      font-family: "Gandhi", "Symbols", "Awesome";
+  }
+
+  code {
+      font-family: "Victor", "Symbols", "Awesome";
+      padding: 7px;
+  }
+
+  tags {
+      font-family: "Fairy", "Symbols", "Awesome";
+  }
+
+  h1, h2, h3, h4 {
+      font-family: 'Comic', "Symbols", "Awesome";
+      line-height: 3rem;    
+  }
+
+  h1:before, h1:after {
+      content: " ❉ ";
+      color: #ffd700;
+  }
+
+  article h1 {
+      font-weight: 600;
+      color: #ffdab9;
+      text-align: center;
+      font-size: 45px;
+      font-family: 'Happy', "Symbols", "Awesome";
+      letter-spacing: 3px;
+      padding: 15px;
+      line-height: 3rem;
+  }
+
+  article h2:before {
+      content: "◉ ";
+      color: #82b0ec;
+  }
+  article h2 {
+      font-weight: 550;
+      font-style: bold;
+      color: #bf94fe;
+      // background-color: #12121275;
+      padding: 6px;
+      font-size: 38px;
+      letter-spacing: 1px;
+      line-height: 3rem;
+  }
+
+
+  article h3:before{
+      content: "◈ ";
+      color: #6ae4b9;
+  }
+  article h3 {
+      font-weight: 550;
+      font-style: bold;
+      color: #338fff;
+      // background-color: #1d223540;
+      padding: 25px;
+      font-size: 34px;
+      line-height: 3rem;    
+  }
+
+
+  .slim-description {
+      font-family: "Impress", "Symbols", "Awesome";
+      font-size: 1.4rem;
+  }
+
+  code[class*="language-"]{
+      font-family: "Victor", "Symbols", "Awesome";
+      font-style: normal;
+      font-weight: 400;
+      border-radius: 20px;
+      color: #ffffff;
+  }
+
+
+  .blog-list{
+      font-family: 'Comic', "Symbols", "Awesome";
+      font-size: 1.2rem;
+  }
+
+  nav{
+      font-family: 'Astro', 'Awesome';
+      font-size: 2rem;
+  }
+
+
+#+end_src
+
+* Variables
+Ease to call and apply for all.
+
+#+begin_src scss :tangle ./assets/scss/_variables.scss
+
+  // Variables
+  $global-font-size: 18px;
+  $global-font-size-mobile: 16px;
+  $title-font-size: 1.875rem;
+
+  $content-title-font-size: 1.275rem;
+  $layout-max-width: 48rem;
+  $nav-font-size: 1.025rem;
+
+  $primary-color: #ffffff;
+  $subscript-color: #cccccc;
+  $background-color: #101010;
+  $blockquote-background-color: #222222;
+
+  $border-color: #c6daff;
+  $link-color: #ffd700;
+  $tags-color: #7fffd4;
+  $post-title-color: #00eff0;
+  $post-link-color: $link-color;
+  $active-link-color: #79a8ff;
+
+  $toc-border: #f78fe7;
+  $toc-background: linear-gradient(40deg, #212121 78%, #232323 85%, #202020 100%);
+
+  $code-background: $blockquote-background-color;
+  $code-color: #9aff9a;
+
+  $horizontal-layout-padding: 1.3125rem;
+  $vertical-layout-padding: 2.625rem;
+
+  $list-unorder-color: #ee9a00;
+
+  $gradient-background: linear-gradient(90deg, #bcd2ee 28%, #fff0f5 85%, #ffe4e1 100%);
+
+#+end_src
+
+* Project
+Design for projects card, elegant!
+#+begin_src scss :tangle ./assets/scss/_projects.scss
+  .project-board {
+    margin-top: calc(#{$global-font-size} * 2);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 40px;
+    max-width: $layout-max-width;
+  }
+
+  .card {
+    min-height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    $border-width: 3px;
+    align-items: center;
+    justify-content: center;
+    background: 
+      linear-gradient(#161616 0 0) padding-box,
+      linear-gradient(90deg, #bcd2ee 28%, #fff0f5 85%, #ffe4e1 ) border-box;
+    padding: 10px;
+    border: 3px solid transparent;
+    border-radius: 30px;
+  }
+
+  .card article {
+    padding: 20px;
+  }
+
+  .card h4 {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .card p {
+    color: $subscript-color;
+    line-height: 1.4;
+  }
+
+  .custom-card-footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .custom-button {
+      font-size: $global-font-size;
+      font-weight: 400;
+      margin: 0 calc(#{$global-font-size} * 0.5);
+      padding: calc(#{$global-font-size} * 0.2) calc(#{$global-font-size} * 0.5);
+      $border-width: 3px;
+      border-radius: 15px;
+      border: 1px solid $subscript-color;
+      color: $post-link-color;
+      background-color: transparent;
+      cursor: pointer;
+      //transition: border .3s;
+      transition: color .3s;
+  }
+
+  .custom-button-disabled {
+    cursor: no-drop;
+  }
+
+  .custom-button:hover {
+      border: 1px solid $post-link-color;
+      //background-color: $post-link-color;
+      color: $background-color;
+      background: $gradient-background;
+  }
+
+#+end_src
+
+* Keyboard
+Config for another page (WIP)
+#+begin_src scss :tangle ./assets/scss/_keyboards.scss
+  .collection-board {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  }
+
+  .collection-card img {
+      display: block;
+      border: 0;
+      width: 100%;
+      height: auto;
+  }
+
+  .collection-card {
+
+      flex: 0 1 96%;
+      margin-bottom: 1rem;
+      padding: 1rem;
+
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      // background: #fffff9;
+      transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  }
+
+
+  .collection-card .post-title {
+      text-align: center;
+  }
+
+
+  .collection-card:hover {
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+      padding: 0;
+  }
+
+#+end_src
+
+* Syntax
+#+begin_src scss :tangle ./assets/scss/_syntax.scss
+  code.language-css,
+  code.language-scss,
+  .token.boolean,
+  .token.string,
+  .token.entity,
+  .token.url,
+  .language-css .token.string,
+  .language-scss .token.string,
+  .style .token.string,
+  .token.attr-value,
+  .token.keyword,
+  .token.control,
+  .token.directive,
+  .token.statement,
+  .token.regex,
+  .token.atrule,
+  .token.number,
+  .token.inserted,
+  .token.important {
+    color: $accent !important;
+  }
+
+  .token.tag-id,
+  .token.atrule-id,
+  .token.operator,
+  .token.unit,
+  .token.placeholder,
+  .token.variable,
+  .token.tag,
+  .token.attr-name,
+  .token.namespace,
+  .token.deleted,
+  .token.property,
+  .token.class-name,
+  .token.constant,
+  .token.symbol {
+    color: transparentize($accent, .3) !important;
+  }
+
+  .token.property,
+  .token.function,
+  .token.function-name,
+  .token.deleted,
+  code.language-javascript,
+  code.language-html,
+  .command-line-prompt > span:before {
+    color: mix($accent, #999, .9) !important;
+  }
+
+  .token.selector,
+  .token.tag,
+  .token.punctuation {
+    color: white;
+  }
+
+  .token.comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: rgba(255, 255, 255, .3) !important;
+  }
+
+  .token.namespace {
+    opacity: .7 !important;
+  }
+
+  pre[data-line] {
+    position: relative;
+  }
+
+  pre[class*="language-"] {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+  }
+
+  .line-highlight {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    background: transparentize(mix($accent, #999, 90%), .92);
+    pointer-events: none;
+    line-height: inherit;
+    white-space: pre;
+  }
+
+  .line-highlight:before,
+  .line-highlight[data-end]:after {
+    content: attr(data-start);
+    position: absolute;
+    /* top: .4em; */
+    left: .6em;
+    min-width: 1em;
+    padding: 0 .5em;
+    background-color: hsla(24, 20%, 50%, .4);
+    color: hsl(24, 20%, 95%);
+    font: bold 65%/1.5 sans-serif;
+    text-align: center;
+    vertical-align: .3em;
+    border-radius: 999px;
+    text-shadow: none;
+    box-shadow: 0 1px white;
+  }
+
+  .line-highlight[data-end]:after {
+    content: attr(data-end);
+    top: auto;
+    bottom: .4em;
+  }
+
+  .line-numbers .line-highlight:before,
+  .line-numbers .line-highlight:after {
+    content: none;
+  }
+
+  .code-toolbar {
+    $code-margin: 40px;
+          position: relative;
+          margin: $code-margin 0;
+          padding: 20px;
+          border: 1px solid rgba(255, 255, 255, .1);
+
+          + .code-toolbar,
+          + .highlight,
+          + .highlight .code-toolbar {
+                  border-top: 0;
+                  margin-top: calc(-1 * $code-margin);
+          }
+
+          pre, code {
+                  border: none;
+          }
+
+          code {
+                  display: block;
+                  color: inherit;
+          }
+
+    > .toolbar {
+      button {
+        font-size: .8em !important;
+        background: hsla(0,0%,87.8%,.2) !important;
+        color: #bbb !important;
+        box-shadow: 0 2px 0 0 rgba(0,0,0,.2) !important;
+        border-radius: 0 !important;
+        margin: 6px !important;
+        padding: 10px !important;
+        user-select:none
+      }
+    }
+  }
+
+#+end_src
+
+* Mixins
+#+begin_src scss :tangle ./assets/scss/_mixins.scss
+  // Mixins
+  @mixin flexify {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @mixin full-width-mobile {
+    margin-left: calc(-#{$horizontal-layout-padding});
+    margin-right: calc(-#{$horizontal-layout-padding});
+  }
+
+  @mixin full-width-web {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+#+end_src
