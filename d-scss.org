@@ -4,7 +4,7 @@
 #+STARTUP: overview hideblocks
 #+OPTIONS: num:nil author:nil
 #+auto_tangle: t
-#+PROPERTY: :tangle-mode (identity #o444) :mkdirp yes
+#+PROPERTY: header-args:scss :tangle-mode (identity #o444) :mkdirp yes
 -------------------
 
 Searching folders are pain, i have tangle everything from here so its easy to navigate and also *Document* for me to understand.
@@ -520,7 +520,7 @@ Added fonts which i like and are unique across whole web.
   }
 
   h1:before, h1:after {
-      content: " ❉ ";
+      content: " ❄️ ";
       color: #ffd700;
   }
 
