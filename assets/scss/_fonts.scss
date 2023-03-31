@@ -22,12 +22,12 @@ h1, h2, h3, h4 {
 
 h1:before, h1:after {
     content: " ⩮ ";
-    color: #ffd700;
+    color: $h1-color;
 }
 
 article h1 {
     font-weight: 600;
-    color: #ffdab9;
+    color: $h1-color;
     text-align: center;
     font-size: 45px;
     font-family: 'Happy', "Symbols", "Awesome";
@@ -38,12 +38,12 @@ article h1 {
 
 article h2:before {
     content: "◉ ";
-    color: #82b0ec;
+    color: #h2-color;
 }
 article h2 {
     font-weight: 550;
     font-style: bold;
-    color: #bf94fe;
+    color: $h2-color;
     // background-color: #12121275;
     padding: 6px;
     font-size: 38px;
@@ -54,12 +54,12 @@ article h2 {
 
 article h3:before{
     content: "◈ ";
-    color: #6ae4b9;
+    color: $h3-color;
 }
 article h3 {
     font-weight: 550;
     font-style: bold;
-    color: #338fff;
+    color: $h3-color;
     // background-color: #1d223540;
     padding: 4px;
     font-size: 32px;
@@ -68,12 +68,12 @@ article h3 {
 
 article h4:before{
     content: "✥ ";
-    color: #00d3d0;
+    color: $h4-color;
 }
 article h4 {
     font-weight: 550;
     font-style: bold;
-    color: #ffa9bf;
+    color: $h4-color;
     padding: 4px;
     font-size: 26px;
     line-height: 3rem;    

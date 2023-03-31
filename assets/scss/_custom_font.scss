@@ -6,6 +6,13 @@
 }
 
 @font-face{
+    font-family: 'Victoric';
+    src: url('../font/victoric.woff2') format('woff2');
+    font-weight:400;
+    font-style: italic;
+}  
+
+@font-face{
     font-family: 'Happy';
     src: url('../font/happy.woff2') format('woff2');
     font-weight:400;
@@ -67,4 +74,18 @@
     font-weight: 900;
     font-display: block;
     src: url("../font/fa-so.woff2") format("woff2"), url("../font/fa-rg.woff2") format("woff2"), url("../font/fa-co.woff2") format("woff2"), url("../font/fa-br.woff2") format("woff2");
+}
+
+@font-face{
+    font-family: 'Times';
+    src: url('../font/tinos.woff2') format('woff2');
+    font-weight:400;
+    font-style:normal;
+}
+
+@font-face{
+    font-family: 'Term';
+    src: url('../font/retro-term.woff2') format('woff2');
+    font-weight:400;
+    font-style:normal;
 }
