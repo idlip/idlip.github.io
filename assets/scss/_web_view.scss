@@ -289,18 +289,22 @@ blockquote {
     margin: 1.5em 10px;
     padding: 0.5em 10px;
     quotes: "\201C""\201D""\2018""\2019";
+    border-radius: 20px;
+    font-family: 'Victoric';
+    font-style: italic;
 }
 
 blockquote:before, blockquote:after {
     color: $primary-color;
-    content: "“";
-    font-size: 3em;
-    line-height: 0.1em;
-    margin-right: 0.25em;
-    vertical-align: -0.4em;
+    content: "";
+    font-size: 1em;
+    line-height: 1em;
+    margin-right: 0.85em;
+    margin-left: 0.85em;
+    vertical-align: 0.6em;
 }
 blockquote:after {
-    content: "”";
+    content: "";
 }
 
 blockquote p {
