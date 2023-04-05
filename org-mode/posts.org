@@ -29,7 +29,7 @@
 | RSS Reader              | [[https://github.com/skeeto/elfeed][Elfeed]] 📰 (Again, Emacs)             |
 | Music Player            | [[https://github.com/ncmpcpp/ncmpcpp][Ncmpcpp]] or [[https://github.com//mingus][Mingus in Emacs]] 🎶        |
 | Terminal                | [[https://codeberg.org/dnkl/foot][Foot]] via footclient ⚽               |
-| Menu/Launcher           | [[https://github.com/Cloudef/bemenu][Bemenu]] 🚀                            |
+| Menu/Launcher           | [[https://github.com/davatorium/rofi][Rofi]] 🚀                            |
 | Notification            | [[https://github.com/dunst/dunst][Dunst]]  🛎️                            |
 | Shell                   | [[https://zsh.org][Zshell]] with [[https://starship.rs][Starship]] 🔰              |
 | Status Bar              | [[https://github.com/Alexays/Waybar][Waybar]]  🍥                           |
@@ -412,3 +412,151 @@ You can checkout the source here ⟾ [[https://github.com/VernonGrant/emacs-keyb
 | =sort-lines=             | Sort lines in region alphabetically.                          |
 | =delete-duplicate-lines= | Delete all but one copy of any identical lines in the region. |
 | =ff-find-other-file=     | Find the header or source file corresponding to this file.    |
+** Vim Proficiency :minimal:keybindings:cheatsheet:vim:
+:PROPERTIES:
+:EXPORT_FILE_NAME: vim-cheats
+:EXPORT_DATE: 2023-04-05
+:EXPORT_HUGO_DRAFT: false
+:END:
+
+Although I don't use vim, it has good points for being easy *keyboard glue*. Why not learn both of the best worlds of Editors?
+
+Apart from normal vim navigations and operators, These are some of the unique vim magics, which I haven't used at all.
+
+*** Marks
+:PROPERTIES:
+:CUSTOM_ID: marks
+:END:
+
+This is the important one, I have not used this at all. Should try and make use of it. Although emacs ~mark-ring~ is alot better.
+
+| Shortcut  | Description                                          |
+|-----------+------------------------------------------------------|
+| =`^=        | Last position of cursor in insert mode               |
+| =`.=        | Last change in current buffer                        |
+| =`"=        | Last exited current buffer                           |
+| =`0=        | In last file edited                                  |
+| =''=        | Back to line in current buffer where jumped from     |
+| =``=        | Back to position in current buffer where jumped from |
+| =`[=        | To beginning of previously changed or yanked text    |
+| =`]=        | To end of previously changed or yanked text          |
+| =`<=        | To beginning of last visual selection                |
+| =`>=        | To end of last visual selection                      |
+| =ma=        | Mark this cursor position as =a=                       |
+| =`a=        | Jump to the cursor position =a=                        |
+| ='a=        | Jump to the beginning of the line with position =a=    |
+| =d'a=       | Delete from current line to line of mark =a=           |
+| =d`a=       | Delete from current position to position of mark =a=   |
+| =c'a=       | Change text from current line to line of =a=           |
+| =y`a=       | Yank text from current position to position of =a=     |
+| =:marks=    | List all current marks                               |
+| =:delm a=   | Delete mark =a=                                        |
+| =:delm a-d= | Delete marks =a=, =b=, =c=, =d=                              |
+| =:delm abc= | Delete marks =a=, =b=, =c=                                 |
+
+--------
+
+*** Navigation
+:PROPERTIES:
+:CUSTOM_ID: navigation
+:END:
+| Shortcut | Description             |
+|----------+-------------------------|
+| =%=        | Nearest/matching ={[()]}= |
+| =[(= =[{= =[<= | Previous =(= or ={= or =<=    |
+| =])=       | Next                    |
+| =[m=       | Previous method start   |
+| =[M=       | Previous method end     |
+
+--------
+
+*** Jumping
+:PROPERTIES:
+:CUSTOM_ID: jumping
+:END:
+| Shortcut | Description                  |
+|----------+------------------------------|
+| =<C-O>=    | Go back to previous location |
+| =<C-I>=    | Go forward                   |
+| =gf=       | Go to file in cursor         |
+
+--------
+
+*** Counters
+:PROPERTIES:
+:CUSTOM_ID: counters
+:END:
+| Shortcut | Description      |
+|----------+------------------|
+| =<C-A>=  | Increment number |
+| =<C-X>=  | Decrement        |
+
+--------
+
+*** Tags
+:PROPERTIES:
+:CUSTOM_ID: tags
+:END:
+| Shortcut           | Description                                     |
+|--------------------+-------------------------------------------------|
+| =:tag Classname=     | Jump to first definition of Classname           |
+| =<C-]>=              | Jump to definition                              |
+| =g]=                 | See all definitions                             |
+| =<C-T>=              | Go back to last tag                             |
+| =<C-O> <C-I>=        | Back/forward                                    |
+| =:tselect Classname= | Find definitions of Classname                   |
+| =:tjump Classname=   | Find definitions of Classname (auto-select 1st) |
+
+--------
+
+*** Folds
+:PROPERTIES:
+:CUSTOM_ID: folds
+:END:
+| Shortcut | Description                |
+|----------+----------------------------|
+| =zo= /// =zO=  | Open                       |
+| =zc= /// =zC=  | Close                      |
+| =za= /// =zA=  | Toggle                     |
+| =zv=       | Open folds for this line   |
+| =zM=       | Close all                  |
+| =zR=       | Open all                   |
+| =zm=       | Fold more /(foldlevel += 1)/ |
+| =zr=       | Fold less /(foldlevel -= 1)/ |
+| =zx=       | Update folds               |
+
+--------
+
+*** Command line
+:PROPERTIES:
+:CUSTOM_ID: command-line
+:END:
+| Shortcut     | Description                               |
+|--------------+-------------------------------------------|
+| =<C-R><C-W>= | Insert current word into the command line |
+| =<C-R>"=     | Paste from ” register                     |
+| =<C-X><C-F>= | Auto-completion of path in insert mode    |
+
+--------
+
+*** Spell checking
+:PROPERTIES:
+:CUSTOM_ID: spell-checking
+:END:
+| Shortcut                     | Description                                            |
+|------------------------------+--------------------------------------------------------|
+| =:set spell spelllang=en_us= | Turn on US English spell checking                      |
+| =]s=                         | Move to next misspelled word after the cursor          |
+| =[s=                         | Move to previous misspelled word before the cursor     |
+| =z==                         | Suggest spellings for the word under/after the cursor  |
+| =zg=                         | Add word to spell list                                 |
+| =zw=                         | Mark word as bad/mispelling                            |
+| =zu= / =C-X (Insert Mode)=   | Suggest words for bad word under cursor from spellfile |
+
+See =:help spell=
+
+--------
+
+With that noted, I hope you turn out to be a proficient /*Vimmer*/ or an efficient /*Emacser*/
+
+For emacs, I have my previous post for it.
