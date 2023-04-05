@@ -33,7 +33,7 @@ draft = false
 | RSS Reader              | [Elfeed](https://github.com/skeeto/elfeed) 📰 (Again, Emacs)                                                                                                  |
 | Music Player            | [Ncmpcpp](https://github.com/ncmpcpp/ncmpcpp) or [Mingus in Emacs](https://github.com//mingus) 🎶                                                             |
 | Terminal                | [Foot](https://codeberg.org/dnkl/foot) via footclient ⚽                                                                                                      |
-| Menu/Launcher           | [Bemenu](https://github.com/Cloudef/bemenu) 🚀                                                                                                                |
+| Menu/Launcher           | [Rofi](https://github.com/davatorium/rofi) 🚀                                                                                                                 |
 | Notification            | [Dunst](https://github.com/dunst/dunst)  🛎️                                                                                                                    |
 | Shell                   | [Zshell](https://zsh.org) with [Starship](https://starship.rs) 🔰                                                                                             |
 | Status Bar              | [Waybar](https://github.com/Alexays/Waybar)  🍥                                                                                                               |
