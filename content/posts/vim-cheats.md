@@ -150,6 +150,8 @@ See `:help spell`
 
 ---
 
+Source of this cheatsheet : <https://devhints.io/vim>
+
 With that noted, I hope you turn out to be a proficient _**Vimmer**_ or an efficient _**Emacser**_
 
 For emacs, I have my previous post for it.
