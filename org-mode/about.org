@@ -20,5 +20,5 @@
    ------
 
 #+begin_center
-/Time to unlock some Creativity/
+//*Time to unlock some Creativity/*/
 #+end_center
