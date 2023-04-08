@@ -1,13 +1,12 @@
-#+title: Scss for my site
+#+title: 🎨 Scss for my site
 #+author: iDlip
 #+language: English
 #+STARTUP: overview hideblocks
 #+OPTIONS: num:nil author:nil
-#+auto_tangle: t
 #+PROPERTY: header-args:scss :tangle-mode (identity #o444) :mkdirp yes
 -------------------
 
-Searching folders are pain, i have tangle everything from here so its easy to navigate and also *Document* for me to understand.
+Searching folders are pain, I just tangle everything from here so its easy to navigate and also *Document* for me to understand.
 
 * Main scss
 Main file which calls every child (lol)
@@ -18,8 +17,8 @@ Main file which calls every child (lol)
   @import "_mixins";
   @import "_projects";
   @import "_keyboards";
-   @import "_web_view";
- 
+  @import "_web_view";
+
 #+end_src
 
 * Web view
