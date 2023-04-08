@@ -18,6 +18,6 @@ Contact : [GitHub](https://github.com/idlip)
 
 <div class="org-center">
 
-_Time to unlock some Creativity_
+_/\*Time to unlock some Creativity/\*_
 
 </div>
