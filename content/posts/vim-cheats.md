@@ -1,7 +1,7 @@
 +++
 title = "Vim Proficiency"
 date = 2023-04-05
-tags = ["minimal", "keybindings", "cheatsheet", "vim"]
+tags = ["terminal", "minimal", "keybindings", "cheatsheet", "vim"]
 draft = false
 +++
 
