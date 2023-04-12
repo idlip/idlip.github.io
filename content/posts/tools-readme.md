@@ -1,7 +1,7 @@
 +++
 title = "Tools that are Best!"
 date = 2023-03-17
-tags = ["cli", "linux", "minimal", "tools"]
+tags = ["terminal", "cli", "linux", "minimal", "tools"]
 draft = false
 +++
 
