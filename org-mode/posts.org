@@ -4,7 +4,7 @@
 
     
 * Posts
-** Tools that are Best! :cli:linux:minimal:tools:
+** Tools that are Best! :terminal:cli:linux:minimal:tools:
    :PROPERTIES:
    :EXPORT_FILE_NAME: tools-readme
    :EXPORT_DATE: 2023-03-17
@@ -412,7 +412,7 @@ You can checkout the source here ⟾ [[https://github.com/VernonGrant/emacs-keyb
 | =sort-lines=             | Sort lines in region alphabetically.                          |
 | =delete-duplicate-lines= | Delete all but one copy of any identical lines in the region. |
 | =ff-find-other-file=     | Find the header or source file corresponding to this file.    |
-** Vim Proficiency :minimal:keybindings:cheatsheet:vim:
+** Vim Proficiency :terminal:minimal:keybindings:cheatsheet:vim:
 :PROPERTIES:
 :EXPORT_FILE_NAME: vim-cheats
 :EXPORT_DATE: 2023-04-05
@@ -562,3 +562,28 @@ Source of this cheatsheet : [[https://devhints.io/vim]]
 With that noted, I hope you turn out to be a proficient /*Vimmer*/ or an efficient /*Emacser*/
 
 For emacs, I have my previous post for it.
+** Linux : The Matrix :terminal:cheatsheet:minimal:
+:PROPERTIES:
+:EXPORT_FILE_NAME: linux-cheatsheet
+:EXPORT_DATE: 2023-04-12
+:EXPORT_HUGO_DRAFT: false
+:END:
+
+There are tons of linux command line cheatsheet or guides.
+
+Here are some of the best reads, I suggest you to go throught each of it, *It's a gem*.
+
+
++ [[https://github.com/jlevy/the-art-of-command-line][The Art of Command Line]] — notes and tips on using the command-line, suitable for both beginners and experienced users.
++ [[https://www.commandlinefu.com/commands/browse/sort-by-votes][commandlinefu]] — command-line gems, includes a handy search feature.
++ [[https://github.com/tldr-pages/tldr][tldr]] — collection of community-maintained help pages for command-line tools.
++ [[https://explainshell.com/][explainshell]] — write down a command-line to see the help text that matches each argument.
++ [[http://www.compciv.org/unix-tools/][General purpose command-line tools]] — examples for most common usecases.
++ [[https://devmanual.gentoo.org/tools-reference/bash/index.html][Bash reference cheatsheet]] — nicely formatted and explained well.
++ [[https://devhints.io/bash][Bash scripting cheatsheet]] — quick reference to getting started with Bash scripting.
+
+--------------
+
+#+begin_center
+*With that ~coded~, I hope you enjoy the terminal. Unleash the Matrix*.
+#+end_center
