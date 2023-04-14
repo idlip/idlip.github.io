@@ -24,7 +24,7 @@ I don't have to say this, the Internet is hella bloated.. Junks are everywhere, 
 Just do a test, How many popups have you closed today, How many cookies (web) have you eaten, How many captchas did you solve, How many minutes did you wait to skip an ad just to watch a video... Even worse, ads sponsors are embedded within a video (So cruel and harsh world)
 _It goes on_.
 
-Internet and digital software's are getting so much bloated, people (normies) have forgotten unix or say 'minimalism'. People are upgrading RAM like anything, 8GB ain't enough it-seems for them. Here, I do everything with just 4GB RAM.
+Internet and digital software's are getting so much bloated, people (normies) have forgotten Unix or say 'minimalism'. People are upgrading RAM like anything, 8GB ain't enough it-seems for them. Here, I do everything with just 4GB RAM.
 People these days all need ready-made/ready-to-work  stuffs, I wonder how do they even watch DIY channels on YouTube.
 
 
@@ -43,10 +43,10 @@ Actually many of you might know famous news reader called **Feedly**, it is base
 
 ### Feed Readers {#feed-readers}
 
-If you use window there are famous readers like fluet reader.
+If you use window there are famous readers like fluent reader.
 On Linux you get [newsboat](https://newsboat.org/) (terminal lovers), I use [elfeed](https://github.com/skeeto/elfeed) (Emacs way).
 
-For gui Linux user you get : (Install with your system's package manager or use AppImage/Flathub)
+For GUI Linux user you get : (Install with your system's package manager or use AppImage/Flathub)
 
 -   [Liferea](https://github.com/lwindolf/liferea/)
 -   [Fluent-reader](https://github.com/yang991178/fluent-reader)
