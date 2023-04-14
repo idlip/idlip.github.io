@@ -24,11 +24,11 @@ Its time.. time to begin the chapter!
    :END:
 
 Before anyone shouts vim, let me ~:q!~
-I was a vimmer for a year, I played and had a good basic config. Even after an year, I didnt grasp the full potential of vim, its was just handy to use =hjkl= to move around.
+I was a vimmer for a year, I played and had a good basic config. Even after an year, I didn't grasp the full potential of vim, it was just handy to use =hjkl= to move around.
 
-But When I learnt Emacs, the experience was immense, it defines how things are meant and the legacy of emacs of 40 years is not a joke.
+But When I'm learning Emacs, the experience is immense, it defines how things are meant and the legacy of Emacs for 40 years, is not a joke.
 
-I cannot just rant to make people ditch vim for emacs, But once you understand you will realize, that is my friend people went and made ~evil~ mode to emulate Vi layer (vim 100%).
+I cannot just rant to make people ditch vim for Emacs, But once you understand you will realize, that is my friend people went and made ~evil~ mode to emulate Vi layer (vim 100%).
 
 Now they get the *Best* of both the World!
 
@@ -47,7 +47,7 @@ I don't have to say this, the Internet is hella bloated.. Junks are everywhere, 
 Just do a test, How many popups have you closed today, How many cookies (web) have you eaten, How many captchas did you solve, How many minutes did you wait to skip an ad just to watch a video... Even worse, ads sponsors are embedded within a video (So cruel and harsh world)
 /It goes on/.
 
-Internet and digital software's are getting so much bloated, people (normies) have forgotten unix or say 'minimalism'. People are upgrading RAM like anything, 8GB ain't enough it-seems for them. Here, I do everything with just 4GB RAM.
+Internet and digital software's are getting so much bloated, people (normies) have forgotten Unix or say 'minimalism'. People are upgrading RAM like anything, 8GB ain't enough it-seems for them. Here, I do everything with just 4GB RAM.
 People these days all need ready-made/ready-to-work  stuffs, I wonder how do they even watch DIY channels on YouTube.
 
 *** The Hero
@@ -64,10 +64,10 @@ Actually many of you might know famous news reader called *Feedly*, it is based 
 
 **** Feed Readers
 
-If you use window there are famous readers like fluet reader.
+If you use window there are famous readers like fluent reader.
 On Linux you get [[https://newsboat.org/][newsboat]] (terminal lovers), I use [[https://github.com/skeeto/elfeed][elfeed]] (Emacs way).
 
-For gui Linux user you get : (Install with your system's package manager or use AppImage/Flathub)
+For GUI Linux user you get : (Install with your system's package manager or use AppImage/Flathub)
 
   + [[https://github.com/lwindolf/liferea/][Liferea]]
   + [[https://github.com/yang991178/fluent-reader][Fluent-reader]]
