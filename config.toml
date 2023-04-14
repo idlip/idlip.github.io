@@ -27,9 +27,9 @@ publishDir = "docs"
     weight = 10
 
   [[menu.main]]
-    identifier = "projects"
-    name = "Projects"
-    url = "/projects/"
+    identifier = "repository"
+    name = "Repository"
+    url = "/repository/"
     weight = 12
 
   [[menu.main]]
@@ -62,18 +62,18 @@ publishDir = "docs"
   mainSections = "posts"
 
 
-[[params.projects]]
+[[params.repository]]
   name = "Nix Config"
   description = "Nixos config in literate org-mode"
   sourceLink = "https://github.com/idlip/d-nix.git"
 
-[[params.projects]]
+[[params.repository]]
   name = "Shell Scripts"
   description = "Some cool shell scripts which are useful"
   sourceLink = "https://github.com/idlip/d-bin.git"
 
 
-[[params.projects]]
+[[params.repository]]
   name = "Flakes"
   description = "Flake setup into Modules (Deprecated)"
   sourceLink = "https://github.com/idlip/d-flake.git"
