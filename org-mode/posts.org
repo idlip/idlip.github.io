@@ -19,20 +19,20 @@
 |-------------------------+-------------------------------------|
 | Class                   | Name                                |
 |-------------------------+-------------------------------------|
-| Window Manager          | [[https://hyprland.org/][Hyprland]] 🌸                          |
-| Text Editor             | [[https://www.gnu.org/software/emacs/][Emacs]] 💮                             |
-| Gtk Theme               | [[https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme][Gruvbox]] / [[https://github.com/vinceliuice/Orchis-theme][Orchis]] 🎨                  |
+| Window Manager          | [[https://hyprland.org/][Hyprland]] 🌸                         |
+| Text Editor             | [[https://www.gnu.org/software/emacs/][Emacs]] 💮                            |
+| Gtk Theme               | [[https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme][Gruvbox]] / [[https://github.com/vinceliuice/Orchis-theme][Orchis]] 🎨                 |
 | Font                    | [[https://tosche.net/fonts/comic-code][Comic Code]] / [[https://github.com/dtinth/comic-mono-font][Comic Mono]] / [[https://github.com/tonsky/FiraCode][Fira Code]] |
-| Pdf Reader              | [[https://github.com/ahrm/sioyek][Sioyek]] 📔 (ditch zathura)            |
-| Media Player            | [[https://mpv.io][MPV!]] 🎬 (its MVP too)                |
-| Image Viewer            | [[https://sr.ht/~exec64/imv/][Imv]] 🖼️                               |
-| RSS Reader              | [[https://github.com/skeeto/elfeed][Elfeed]] 📰 (Again, Emacs)             |
-| Music Player            | [[https://github.com/ncmpcpp/ncmpcpp][Ncmpcpp]] or [[https://github.com//mingus][Mingus in Emacs]] 🎶        |
-| Terminal                | [[https://codeberg.org/dnkl/foot][Foot]] via footclient ⚽               |
-| Menu/Launcher           | [[https://github.com/davatorium/rofi][Rofi]] 🚀                            |
-| Notification            | [[https://github.com/dunst/dunst][Dunst]]  🛎️                            |
-| Shell                   | [[https://zsh.org][Zshell]] with [[https://starship.rs][Starship]] 🔰              |
-| Status Bar              | [[https://github.com/Alexays/Waybar][Waybar]]  🍥                           |
+| Pdf Reader              | [[https://github.com/ahrm/sioyek][Sioyek]] 📔 (ditch zathura)           |
+| Media Player            | [[https://mpv.io][MPV!]] 🎬 (its MVP too)               |
+| Image Viewer            | [[https://sr.ht/~exec64/imv/][Imv]] 🖼️                              |
+| RSS Reader              | [[https://github.com/skeeto/elfeed][Elfeed]] 📰 (Again, Emacs)            |
+| Music Player            | [[https://github.com/ncmpcpp/ncmpcpp][Ncmpcpp]] or [[https://github.com//mingus][Mingus in Emacs]] 🎶       |
+| Terminal                | [[https://codeberg.org/dnkl/foot][Foot]] via footclient ⚽              |
+| Menu/Launcher           | [[https://github.com/davatorium/rofi][Rofi]] 🚀                             |
+| Notification            | [[https://github.com/dunst/dunst][Dunst]]  🛎️                           |
+| Shell                   | [[https://zsh.org][Zshell]] with [[https://starship.rs][Starship]] 🔰             |
+| Status Bar              | [[https://github.com/Alexays/Waybar][Waybar]]  🍥                          |
 | Favourite Color-Schemes | Modus-Vivendi + Gruvbox             |
 |-------------------------+-------------------------------------|
 
@@ -244,64 +244,64 @@ You can checkout the source here ⟾ [[https://github.com/VernonGrant/emacs-keyb
 
 *** General Shortcuts
 
-| Shortcut            | Command Invoked                | Description                                                       |
-|---------------------+--------------------------------+-------------------------------------------------------------------|
-| =C-x Esc Esc=         | =repeat-complex-command=         | Edit and re-evaluate last complex command.                        |
-| =C-h f=               | =describe-function=              | Help information for a function.                                  |
-| =C-h x=               | =describe-command=               | Help information for a command (a function available using =M-x=).  |
-| =C-h l=               | =view-lossage=                   | Show log for key presses and commands.                            |
-| =M--=                 | =negative-argument=              | Prefix to perform negative meta commands.                         |
-| =C--=                 | =negative-argument=              | Prefix to perform negative commands.                              |
-| =M-l=                 | =downcase-word=                  | Lowercase word forward.                                           |
-| =M-c=                 | =capitalize-word=                | Capitalize word forward.                                          |
-| =M-u=                 | =upcase-word=                    | Uppercase word forward.                                           |
-| =C-<space> C-<space>= | =set-mark-command=               | Add mark to mark ring.                                            |
-| =C-u C-<space>=       | =set-mark-command=               | Jump to previous mark.                                            |
-| =M-q=                 | =fill-paragraph=                 | Wrap/reformat to fill column.                                     |
-| =M-^=                 | =delete-indentation=             | Join previous line.                                               |
-| =M-- M-^=             | =delete-indentation=             | Join following line.                                              |
-| =M-{=                 | =backward-paragraph=             | Previous paragraph.                                               |
-| =M-}=                 | =forward-paragraph=              | Next paragraph.                                                   |
-| =C-x C-v=             | =find-alternate-file=            | Find alternative file.                                            |
-| =C-x i=               | =insert-file=                    | Insert file contents into the current file.                       |
-| =C-x h=               | =mark-whole-buffer=              | Highlight entire buffer.                                          |
-| =C-M-\=               | =indent-region=                  | Re-indent code region in region or from previous mark point.      |
-| =C-x C-x=             | =exchange-point-and-mark=        | Put the mark where point is now, and point where the mark is now. |
-| =C-x C-j=             | =dired-jump=                     | Open Dired jump.                                                  |
-| =C-x SPC=             | =rectangle-mark-mode=            | Rectangle edit mode, can use string-insert-rectangle.             |
-| =C-x +=               | =balance-windows=                | Resize all splits to equal sizes.                                 |
-| =C-x 5 2=             | =make-frame-command=             | Open in new frame.                                                |
-| =C-x r SPC=           | =point-to-register=              | Point-to-register.                                                |
-| =C-x r j=             | =jump-to-register=               | Jump-to-register.                                                 |
-| =M-s o=               | =occur=                          | List lines using regex.                                           |
-| =M-s h r=             | =highlight-regexp=               | Highlights regex expression (useful for presentations).           |
-| =M-r=                 | =move-to-window-line-top-bottom= | Move cursor to top, middle and bottom.                            |
-| =C-l=                 | =recenter-top-bottom=            | Move text in relation to the cursor, to top, middle and bottom.   |
-| =M-!=                 | =shell-command=                  | Run a shell command.                                              |
-| =M-&=                 | =async-shell-command=            | Async shell command.                                              |
-| =C-u 0=               | =universal-argument=             | Infinite count prefix.                                            |
-| =C-u {count}=         | =universal-argument=             | Repeat operation x amount of times.                               |
-| =C-x z=               | =repeat=                         | Repeat command.                                                   |
-| =C-x backspace=       | =backward-kill-sentence=         | Clear mini-buffer.                                                |
-| =M-g M-g=             | =goto-line=                      | Go to line.                                                       |
-| =C-x 1=               | =delete-other-windows=           | Kill other windows.                                               |
-| =M-z (char)=          | =zap-to-char=                    | Zap up to char.                                                   |
-| =C-x * g=             | =calc-dispatch=                  | Eval in new buffer.                                               |
-| =C-u M-x=             | =universal-argument=             | Run command with additional options.                              |
+| Shortcut              | Command Invoked                  | Description                                                        |
+|-----------------------+----------------------------------+--------------------------------------------------------------------|
+| =C-x Esc Esc=         | =repeat-complex-command=         | Edit and re-evaluate last complex command.                         |
+| =C-h f=               | =describe-function=              | Help information for a function.                                   |
+| =C-h x=               | =describe-command=               | Help information for a command (a function available using =M-x=). |
+| =C-h l=               | =view-lossage=                   | Show log for key presses and commands.                             |
+| =M--=                 | =negative-argument=              | Prefix to perform negative meta commands.                          |
+| =C--=                 | =negative-argument=              | Prefix to perform negative commands.                               |
+| =M-l=                 | =downcase-word=                  | Lowercase word forward.                                            |
+| =M-c=                 | =capitalize-word=                | Capitalize word forward.                                           |
+| =M-u=                 | =upcase-word=                    | Uppercase word forward.                                            |
+| =C-<space> C-<space>= | =set-mark-command=               | Add mark to mark ring.                                             |
+| =C-u C-<space>=       | =set-mark-command=               | Jump to previous mark.                                             |
+| =M-q=                 | =fill-paragraph=                 | Wrap/reformat to fill column.                                      |
+| =M-^=                 | =delete-indentation=             | Join previous line.                                                |
+| =M-- M-^=             | =delete-indentation=             | Join following line.                                               |
+| =M-{=                 | =backward-paragraph=             | Previous paragraph.                                                |
+| =M-}=                 | =forward-paragraph=              | Next paragraph.                                                    |
+| =C-x C-v=             | =find-alternate-file=            | Find alternative file.                                             |
+| =C-x i=               | =insert-file=                    | Insert file contents into the current file.                        |
+| =C-x h=               | =mark-whole-buffer=              | Highlight entire buffer.                                           |
+| =C-M-\=               | =indent-region=                  | Re-indent code region in region or from previous mark point.       |
+| =C-x C-x=             | =exchange-point-and-mark=        | Put the mark where point is now, and point where the mark is now.  |
+| =C-x C-j=             | =dired-jump=                     | Open Dired jump.                                                   |
+| =C-x SPC=             | =rectangle-mark-mode=            | Rectangle edit mode, can use string-insert-rectangle.              |
+| =C-x +=               | =balance-windows=                | Resize all splits to equal sizes.                                  |
+| =C-x 5 2=             | =make-frame-command=             | Open in new frame.                                                 |
+| =C-x r SPC=           | =point-to-register=              | Point-to-register.                                                 |
+| =C-x r j=             | =jump-to-register=               | Jump-to-register.                                                  |
+| =M-s o=               | =occur=                          | List lines using regex.                                            |
+| =M-s h r=             | =highlight-regexp=               | Highlights regex expression (useful for presentations).            |
+| =M-r=                 | =move-to-window-line-top-bottom= | Move cursor to top, middle and bottom.                             |
+| =C-l=                 | =recenter-top-bottom=            | Move text in relation to the cursor, to top, middle and bottom.    |
+| =M-!=                 | =shell-command=                  | Run a shell command.                                               |
+| =M-&=                 | =async-shell-command=            | Async shell command.                                               |
+| =C-u 0=               | =universal-argument=             | Infinite count prefix.                                             |
+| =C-u {count}=         | =universal-argument=             | Repeat operation x amount of times.                                |
+| =C-x z=               | =repeat=                         | Repeat command.                                                    |
+| =C-x backspace=       | =backward-kill-sentence=         | Clear mini-buffer.                                                 |
+| =M-g M-g=             | =goto-line=                      | Go to line.                                                        |
+| =C-x 1=               | =delete-other-windows=           | Kill other windows.                                                |
+| =M-z (char)=          | =zap-to-char=                    | Zap up to char.                                                    |
+| =C-x * g=             | =calc-dispatch=                  | Eval in new buffer.                                                |
+| =C-u M-x=             | =universal-argument=             | Run command with additional options.                               |
 
 *** Macros
 :PROPERTIES:
 :CUSTOM_ID: macros
 :END:
-| Shortcut        | Command Invoked           | Description                                                          |
-|-----------------+---------------------------+----------------------------------------------------------------------|
-| =C-x (=           | =kmacro-start-macro=        | Define keyboard macro.                                               |
-| =C-x )=           | =kmacro-end-macro=          | End keyboard macro definition.                                       |
+| Shortcut          | Command Invoked             | Description                                                            |
+|-------------------+-----------------------------+------------------------------------------------------------------------|
+| =C-x (=           | =kmacro-start-macro=        | Define keyboard macro.                                                 |
+| =C-x )=           | =kmacro-end-macro=          | End keyboard macro definition.                                         |
 | =C-x e=           | =kmacro-end-and-call-macro= | Playback keyboard macro, can just keep pressing =e= after first press. |
-| =C-x C-k <space>= | =kmacro-step-edit-macro=    | Open keyboard macro debugger.                                        |
-| =C-x C-k e=       | =edit-kbd-macro=            | Enter macro editor, (C-c C-c) to finish editing.                     |
-| =C-x C-k n=       | =kmacro-name-last-macro=    | Save the keyboard macro for later use.                               |
-|                 | =insert-kbd-macro=          | Insert a saved macro into the file, in Emacs lisp.                   |
+| =C-x C-k <space>= | =kmacro-step-edit-macro=    | Open keyboard macro debugger.                                          |
+| =C-x C-k e=       | =edit-kbd-macro=            | Enter macro editor, (C-c C-c) to finish editing.                       |
+| =C-x C-k n=       | =kmacro-name-last-macro=    | Save the keyboard macro for later use.                                 |
+|                   | =insert-kbd-macro=          | Insert a saved macro into the file, in Emacs lisp.                     |
 
 *** Project
 :PROPERTIES:
@@ -331,16 +331,16 @@ You can checkout the source here ⟾ [[https://github.com/VernonGrant/emacs-keyb
 :PROPERTIES:
 :CUSTOM_ID: balanced-expressions
 :END:
-| Shortcut | Command Invoked      | Description                          |
-|----------+----------------------+--------------------------------------|
-| =C-M-f=  | =forward-sexp=       | Forward over an sexps.               |
-| =C-M-b=  | =backward-sexp=      | Backward over a sexps.               |
-| =C-M-d=  | =down-list=          | Move down into a sexps.              |
-| =C-M-u=  | =backward-up-list=   | Move up out of a sexps.              |
-| =C-M-n=  | =forward-list=       | Move forward to the sexps.           |
-| =C-M-p=  | =backward-list=      | Move backward to the previous sexps. |
-| =C-M-k=  | =kill-sexp=          | Kill down into sexps.                |
-| =M-(=    | =insert-parentheses= | Wraps region in parenthesis.         |
+| Shortcut | Command Invoked    | Description                          |
+|----------+--------------------+--------------------------------------|
+| =C-M-f=    | =forward-sexp=       | Forward over an sexps.               |
+| =C-M-b=    | =backward-sexp=      | Backward over a sexps.               |
+| =C-M-d=    | =down-list=          | Move down into a sexps.              |
+| =C-M-u=    | =backward-up-list=   | Move up out of a sexps.              |
+| =C-M-n=    | =forward-list=       | Move forward to the sexps.           |
+| =C-M-p=    | =backward-list=      | Move backward to the previous sexps. |
+| =C-M-k=    | =kill-sexp=          | Kill down into sexps.                |
+| =M-(=      | =insert-parentheses= | Wraps region in parenthesis.         |
 
 *** Query Replace
 :PROPERTIES:
@@ -359,12 +359,12 @@ You can checkout the source here ⟾ [[https://github.com/VernonGrant/emacs-keyb
 :PROPERTIES:
 :CUSTOM_ID: xref
 :END:
-| Shortcut | Command Invoked         | Description                         |
-|----------+-------------------------+-------------------------------------|
-| =M-.=    | =xref-find-definitions= | Find definitions at point.          |
-| =M-,=    | =xref-go-back=          | Pop marker and return.              |
-| =M-?=    | =xref-find-references=  | Find references matching a pattern. |
-| =C-M-.=  | =xref-find-apropos=     | Find symbols matching a pattern.    |
+| Shortcut | Command Invoked       | Description                         |
+|----------+-----------------------+-------------------------------------|
+| =M-.=      | =xref-find-definitions= | Find definitions at point.          |
+| =M-,=      | =xref-go-back=          | Pop marker and return.              |
+| =M-?=      | =xref-find-references=  | Find references matching a pattern. |
+| =C-M-.=    | =xref-find-apropos=     | Find symbols matching a pattern.    |
 
 *** Bookmarks
 :PROPERTIES:
@@ -380,15 +380,15 @@ You can checkout the source here ⟾ [[https://github.com/VernonGrant/emacs-keyb
 :PROPERTIES:
 :CUSTOM_ID: dired-buffer
 :END:
-| Shortcut | Command Invoked                    | Description                                                                        |
-|----------+------------------------------------+------------------------------------------------------------------------------------|
-| =C-o=    | =dired-display-file=               | Preview file but stay in Dired buffer.                                             |
-| =C-u k=  | =dired-do-kill-lines=              | Remove section.                                                                    |
-| =X=      | =dired-do-shell-command=           | Execute shell command on file.                                                     |
-| =Q=      | =dired-do-find-regexp-and-replace= | Query replace marked files, =<space>= accept, =n= decline and =C-x s= to save all. |
-| =+=      | =dired-create-directory=           | Create directory.                                                                  |
-| =^=      | =dired-up-directory=               | Go up one directory.                                                               |
-|          | =find-name-dired=                  | Recursively find a file.                                                           |
+| Shortcut | Command Invoked                  | Description                                                                  |
+|----------+----------------------------------+------------------------------------------------------------------------------|
+| =C-o=      | =dired-display-file=               | Preview file but stay in Dired buffer.                                       |
+| =C-u k=    | =dired-do-kill-lines=              | Remove section.                                                              |
+| =X=        | =dired-do-shell-command=           | Execute shell command on file.                                               |
+| =Q=        | =dired-do-find-regexp-and-replace= | Query replace marked files, =<space>= accept, =n= decline and =C-x s= to save all. |
+| =+=        | =dired-create-directory=           | Create directory.                                                            |
+| =^=        | =dired-up-directory=               | Go up one directory.                                                         |
+|          | =find-name-dired=                  | Recursively find a file.                                                     |
 
 *** Interface To Spell (Ispell) and On The Fly Spell (Flyspell)
 :PROPERTIES:
@@ -463,8 +463,8 @@ Apart from normal vim navigations and operators, These are some of the unique vi
 
 This is the important one, I have not used this at all. Should try and make use of it. Although emacs ~mark-ring~ is alot better.
 
-| Shortcut  | Description                                          |
-|-----------+------------------------------------------------------|
+| Shortcut    | Description                                          |
+|-------------+------------------------------------------------------|
 | =`^=        | Last position of cursor in insert mode               |
 | =`.=        | Last change in current buffer                        |
 | =`"=        | Last exited current buffer                           |
@@ -475,17 +475,17 @@ This is the important one, I have not used this at all. Should try and make use 
 | =`]=        | To end of previously changed or yanked text          |
 | =`<=        | To beginning of last visual selection                |
 | =`>=        | To end of last visual selection                      |
-| =ma=        | Mark this cursor position as =a=                       |
-| =`a=        | Jump to the cursor position =a=                        |
-| ='a=        | Jump to the beginning of the line with position =a=    |
-| =d'a=       | Delete from current line to line of mark =a=           |
-| =d`a=       | Delete from current position to position of mark =a=   |
-| =c'a=       | Change text from current line to line of =a=           |
-| =y`a=       | Yank text from current position to position of =a=     |
+| =ma=        | Mark this cursor position as =a=                     |
+| =`a=        | Jump to the cursor position =a=                      |
+| ='a=        | Jump to the beginning of the line with position =a=  |
+| =d'a=       | Delete from current line to line of mark =a=         |
+| =d`a=       | Delete from current position to position of mark =a= |
+| =c'a=       | Change text from current line to line of =a=         |
+| =y`a=       | Yank text from current position to position of =a=   |
 | =:marks=    | List all current marks                               |
-| =:delm a=   | Delete mark =a=                                        |
-| =:delm a-d= | Delete marks =a=, =b=, =c=, =d=                              |
-| =:delm abc= | Delete marks =a=, =b=, =c=                                 |
+| =:delm a=   | Delete mark =a=                                      |
+| =:delm a-d= | Delete marks =a=, =b=, =c=, =d=                      |
+| =:delm abc= | Delete marks =a=, =b=, =c=                           |
 
 --------
 
@@ -493,13 +493,13 @@ This is the important one, I have not used this at all. Should try and make use 
 :PROPERTIES:
 :CUSTOM_ID: navigation
 :END:
-| Shortcut | Description             |
-|----------+-------------------------|
-| =%=        | Nearest/matching ={[()]}= |
-| =[(= =[{= =[<= | Previous =(= or ={= or =<=    |
-| =])=       | Next                    |
-| =[m=       | Previous method start   |
-| =[M=       | Previous method end     |
+| Shortcut       | Description                |
+|----------------+----------------------------|
+| =%=            | Nearest/matching ={[()]}=  |
+| =[(= =[{= =[<= | Previous =(= or ={= or =<= |
+| =])=           | Next                       |
+| =[m=           | Previous method start      |
+| =[M=           | Previous method end        |
 
 --------
 
@@ -509,9 +509,9 @@ This is the important one, I have not used this at all. Should try and make use 
 :END:
 | Shortcut | Description                  |
 |----------+------------------------------|
-| =<C-O>=    | Go back to previous location |
-| =<C-I>=    | Go forward                   |
-| =gf=       | Go to file in cursor         |
+| =<C-O>=  | Go back to previous location |
+| =<C-I>=  | Go forward                   |
+| =gf=     | Go to file in cursor         |
 
 --------
 
@@ -530,8 +530,8 @@ This is the important one, I have not used this at all. Should try and make use 
 :PROPERTIES:
 :CUSTOM_ID: tags
 :END:
-| Shortcut           | Description                                     |
-|--------------------+-------------------------------------------------|
+| Shortcut             | Description                                     |
+|----------------------+-------------------------------------------------|
 | =:tag Classname=     | Jump to first definition of Classname           |
 | =<C-]>=              | Jump to definition                              |
 | =g]=                 | See all definitions                             |
@@ -546,17 +546,17 @@ This is the important one, I have not used this at all. Should try and make use 
 :PROPERTIES:
 :CUSTOM_ID: folds
 :END:
-| Shortcut | Description                |
-|----------+----------------------------|
-| =zo= /// =zO=  | Open                       |
-| =zc= /// =zC=  | Close                      |
-| =za= /// =zA=  | Toggle                     |
-| =zv=       | Open folds for this line   |
-| =zM=       | Close all                  |
-| =zR=       | Open all                   |
-| =zm=       | Fold more /(foldlevel += 1)/ |
-| =zr=       | Fold less /(foldlevel -= 1)/ |
-| =zx=       | Update folds               |
+| Shortcut      | Description                  |
+|---------------+------------------------------|
+| =zo= /// =zO= | Open                         |
+| =zc= /// =zC= | Close                        |
+| =za= /// =zA= | Toggle                       |
+| =zv=          | Open folds for this line     |
+| =zM=          | Close all                    |
+| =zR=          | Open all                     |
+| =zm=          | Fold more /(foldlevel += 1)/ |
+| =zr=          | Fold less /(foldlevel -= 1)/ |
+| =zx=          | Update folds                 |
 
 --------
 
