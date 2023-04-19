@@ -72,13 +72,21 @@ publishDir = "docs"
   description = "Some cool shell scripts which are useful"
   sourceLink = "https://github.com/idlip/d-bin.git"
 
+[[params.repository]]
+  name = "Wallpapers"
+  description = "Elegant, Nature Aspiring Wallpapers to bright up your day & your room ;)"
+  sourceLink = "https://github.com/idlip/d-wallpapers.git"
+
+[[params.repository]]
+  name = "De-Bloater"
+  description = "Make Android phones usable with removing craps and junks"
+  sourceLink = "https://github.com/idlip/d-bloater.git"
 
 [[params.repository]]
   name = "Flakes"
   description = "Flake setup into Modules (Deprecated)"
   sourceLink = "https://github.com/idlip/d-flake.git"
   
-
 
 [languages]
   [languages.en]
