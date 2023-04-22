@@ -160,3 +160,55 @@ With that *"quoted"*, I hope you have a great day!
 
 Visit the snippets again!
 #+end_center
+** Cognizance :snippets:quotes:
+:PROPERTIES:
+:EXPORT_FILE_NAME: cognizance-quotes
+:EXPORT_DATE: 2023-04-22
+:EXPORT_HUGO_DRAFT: false
+:END:
+Welcome to next snippet of Quotes.
+
+Hope so, it is advising enought to make your day well ;)
+
+------
+
++ Psychology Reads
+
+#+begin_quote
+People Aren't Better Lie Detectors (50-60%) in More Realistic Settings
+#+end_quote
+
+#+begin_quote
+Nothing in life is as important as you think it is, while you are thinking about it
+#+end_quote
+
++ Herm Albright
+
+  #+begin_quote
+A positive attitude may not solve all your problems, but it will annoy enough people to make it worth the effort.
+#+end_quote
+
++ Bret Harte
+
+  #+begin_quote
+The only sure thing about luck is that it will change.
+#+end_quote
+
++ Philip G. Hammerton
+
+  #+begin_quote
+Have you ever observed that we pay much more attention to a wise passage when it is quoted than when we read it in the original author?
+#+end_quote
+
++ Woodrow Wilson
+
+  #+begin_quote
+The man who is swimming against the stream knows the strength of it.
+#+end_quote
+
+
+------
+
+#+begin_center
+With these sweet little pies, I hope it does make your day alive ;)
+#+end_center
