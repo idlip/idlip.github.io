@@ -23,7 +23,7 @@ Introduction part, you would better have read it on official nixos site (<https:
 
 ## "Should you try NixOS?" ❄️ {#should-you-try-nixos-️}
 
-Here answer from a non-programmer, who just browses and watches media.
+Here's an answer from a non-programmer, who just browses and watches media.
 Just don't, if you are looking for small benefit. **Don't!**
  regret having hard time to figure out petty things, again forget about error, you cannot even search in web.
 
