@@ -1,0 +1,57 @@
++++
+title = "FOSS : On Droid"
+date = 2023-04-25
+tags = ["android", "apps"]
+draft = false
++++
+
+As we know, Android is widely popular OS for many phone. But these days its all filled with junks and bloated apps, these are to say so called **"Popular Android Apps"** or **"Trending Apps"**. The reason simply would be "everyone in my circle uses it" or "I use it because <span class="underline">they</span> use it".
+
+But surely you are not giving yourself some privacy or **space** that you need for your own **personal phone**.
+I'm talking about using Free/Libre and Open Source (FOSS) Apps. Free doesn't mean by price, Free means **Freedom**. Freedom that comes with :
+
+-   No Trackers.
+-   No Ads.
+-   Minimal permission.
+-   Has customization to users need.
+-   No Restrictions.
+
+These can be achieved in this modern time, by Discovering and using FOSS Apps, the best place being [F-droid](https://f-droid.org)  or [r/fossdroid](https://libreddit.kavin.rocks/r/fossdroid).
+
+There are pretty much all apps under FOSS area for every purpose, they are good looking with **Modern UI**, **Lots of Customizations** and **friendly with Battery**.
+
+I happened to search for book and novel reader and found very good apps there, like QuickNovel.
+There is a Manga reader and lots more for every purpose.
+
+I exclusively use every apps from F-droid, because they are great.
+You should also use it, as you might find something interesting and surely, gets Surprised; and say in your head, **_Gosh I should have known this before_**.
+
+---
+
+Some of the cool apps I use everyday :
+
+| Class                          | Apps                                                                                                                                                                  |
+|--------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Launcher                       | Kvæsitso ([izzydroid](https://apt.izzysoft.de/fdroid/index/apk/de.mm20.launcher2.release), [git](https://github.com/MM2-0/Kvaesitso))                                 |
+| F-droid Client                 | Neo Store ([fdroid](https://f-droid.org/en/packages/com.machiav3lli.fdroid/), [git](https://github.com/NeoApplications/Neo-Store))                                    |
+| Browser                        | Mull ([fdroid](https://f-droid.org/en/packages/us.spotco.fennec_dos/), [git](https://gitlab.com/divested-mobile/mull-fenix))                                          |
+| Rss Reader                     | Read You ([fdroid](https://f-droid.org/en/packages/me.ash.reader/), [git](https://github.com/Ashinch/ReadYou))                                                        |
+| YouTube                        | LibreTube ([fdroid](https://f-droid.org/en/packages/com.github.libretube/), [git](https://github.com/libre-tube/LibreTube))                                           |
+| PDF/Ebook Reader               | Librera Reader ([fdroid](https://f-droid.org/en/packages/com.foobnix.pro.pdf.reader/), [git](https://github.com/foobnix/LibreraReader))                               |
+| Manga Reader                   | Tachiyomi ([fdroid](https://f-droid.org/en/packages/eu.kanade.tachiyomi/), [git](https://github.com/tachiyomiorg/tachiyomi))                                          |
+| Password Manager               | KeePassDX ([fdroid](https://f-droid.org/en/packages/com.kunzisoft.keepass.libre/), [git](https://github.com/Kunzisoft/KeePassDX))                                     |
+| Novel Reader                   | QuickNovel ([izzydroid](https://apt.izzysoft.de/fdroid/index/apk/com.lagradost.quicknovel), [git](https://github.com/LagradOst/QuickNovel))                           |
+| Keyboard                       | Unexpected Keyboard ([fdroid](https://f-droid.org/en/packages/juloo.keyboard2/), [git](https://github.com/Julow/Unexpected-Keyboard))                                 |
+| Media Player                   | VLC ([fdroid](https://f-droid.org/en/packages/org.videolan.vlc/), [git](https://code.videolan.org/videolan/vlc-android))                                              |
+| Gallery + Calendar (many more) | Simple Tools Suite ([fdroid](https://search.f-droid.org/?lang=en&q=simple+tools), [git](https://github.com/SimpleMobileTools), [site](https://simplemobiletools.com)) |
+| Note Taking                    | Orgzly ([fdroid](https://f-droid.org/en/packages/com.orgzly/), [git](https://github.com/orgzly/orgzly-android))                                                       |
+
+---
+
+<style>.org-center { margin-left: auto; margin-right: auto; text-align: center; }</style>
+
+<div class="org-center">
+
+With that fossed, I hope your phone gets a new life and finally breathes alive!
+
+</div>
