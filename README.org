@@ -1,3 +1,4 @@
+#+TITLE: Just a newbie blogging
 
 The Journey begins..
 
@@ -17,8 +18,11 @@ I hope its a soothing experience for you to read!
 + Uses and how it is efficient
 + Bad side
 
-**** TODO Fdroid & Fossdroid
-  SCHEDULED: <2023-03-31 Fri 17:12>
+**** DONE Fdroid & Fossdroid
+  CLOSED: [2023-05-17 Wed 19:16] SCHEDULED: <2023-03-31 Fri 17:12>
+  :LOGBOOK:
+  - State "DONE"       from "TODO"       [2023-05-17 Wed 19:16]
+  :END:
 
 **** TODO Use org file for scss too
   SCHEDULED: <2023-03-30 Thu 13:38>
