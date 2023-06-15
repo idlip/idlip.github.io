@@ -14,7 +14,7 @@
 
 	{{ if eq .IsPage true }}
 		{{ if (or (eq .Section "posts") (eq .Section "snippets") (eq .Section "keyboards")) }}
-			{{ partial "comments.html" }}
+			<!-- {{ partial "comments.html" }} -->
 		{{ end }}
 	{{ end }}
 	<!-- <p>&copy; {{ now.Year }} <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></p> -->
