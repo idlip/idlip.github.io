@@ -63,7 +63,7 @@ publishDir = "docs"
 
 
 [[params.repository]]
-  name = "Nix Config"
+  name = "NixOS Config"
   description = "Nixos config in literate org-mode"
   sourceLink = "https://github.com/idlip/d-nix.git"
 
@@ -71,6 +71,21 @@ publishDir = "docs"
   name = "Shell Scripts"
   description = "Some cool shell scripts which are useful"
   sourceLink = "https://github.com/idlip/d-bin.git"
+
+[[params.repository]]
+  name = "Haki"
+  description = "Pleasant, Dark theme for Emacs in Modern sense"
+  sourceLink = "https://github.com/idlip/haki.git"
+
+[[params.repository]]
+  name = "R-code"
+  description = "Initial Learning notes of R programming"
+  sourceLink = "https://github.com/idlip/r-code.git"
+
+[[params.repository]]
+  name = "Python-code"
+  description = "Initial Learning notes of python programming"
+  sourceLink = "https://github.com/idlip/py-code.git"
 
 [[params.repository]]
   name = "Wallpapers"
@@ -84,7 +99,7 @@ publishDir = "docs"
 
 [[params.repository]]
   name = "Flakes"
-  description = "Flake setup into Modules (Deprecated)"
+  description = "Flake setup in Modules (Deprecated)"
   sourceLink = "https://github.com/idlip/d-flake.git"
   
 
