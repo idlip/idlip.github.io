@@ -224,7 +224,7 @@ If you want to explore more on this concepts :
 1. [[https://www.psychologytoday.com/intl/blog/all-kids-thriving/202302/the-power-of-belonging][The Power of Belonging]]
 
 2. [[https://www.psychologytoday.com/intl/blog/on-your-way-with-adhd/202302/the-connection-between-adhd-and-imposter-syndrome][Connection between ADHD and Imposter Syndrome]]
-** Emacs Efficiency :minimal:cheatsheet:keybindings:emacs:
+** Emacs Efficiency :cheatsheet:keybindings:emacs:
 :PROPERTIES:
 :EXPORT_FILE_NAME: emacs-keys
 :EXPORT_DATE: 2023-03-29
@@ -445,7 +445,7 @@ You can checkout the source here ⟾ [[https://github.com/VernonGrant/emacs-keyb
 | =sort-lines=             | Sort lines in region alphabetically.                          |
 | =delete-duplicate-lines= | Delete all but one copy of any identical lines in the region. |
 | =ff-find-other-file=     | Find the header or source file corresponding to this file.    |
-** Vim Proficiency :terminal:minimal:keybindings:cheatsheet:vim:
+** Vim Proficiency :terminal:keybindings:cheatsheet:vim:
 :PROPERTIES:
 :EXPORT_FILE_NAME: vim-cheats
 :EXPORT_DATE: 2023-04-05
@@ -620,7 +620,7 @@ Here are some of the best reads, I suggest you to go throught each of it, *It's 
 #+begin_center
 *With that ~coded~, I hope you enjoy the terminal. Unleash the Matrix*.
 #+end_center
-** FOSS : On Droid :android:apps:
+** FOSS : On Droid :fossdroid:android:
 :PROPERTIES:
 :EXPORT_FILE_NAME: foss-droid
 :EXPORT_DATE: 2023-04-25

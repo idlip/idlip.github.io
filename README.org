@@ -24,6 +24,11 @@ I hope its a soothing experience for you to read!
   - State "DONE"       from "TODO"       [2023-05-17 Wed 19:16]
   :END:
 
-**** TODO Use org file for scss too
-  SCHEDULED: <2023-03-30 Thu 13:38>
+**** DONE Use org file for scss too
+  CLOSED: [2023-07-28 Fri 13:26] SCHEDULED: <2023-03-30 Thu 13:38>
+  :LOGBOOK:
+  - State "DONE"       from "TODO"       [2023-07-28 Fri 13:26]
+  :END:
 
+**** TODO Comprehensive post on Emacs android
+SCHEDULED: <2023-07-31 Mon>
