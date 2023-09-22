@@ -7,7 +7,6 @@
    :EXPORT_HUGO_LAYOUT: single
    :END:
 
-
    + A FOSS Linux Enthusiast, who's willing to learn new unknown (at least for me) knowledge.
 
    + True Loyal OnePiece fan.

@@ -21,7 +21,7 @@ draft = false
 
 -   I also believe in:
 
-> you have to prepare for the worst, to give our your best
+> you have to prepare for the worst, to give out your best
 
 -   Currently, an Post Graduate Student in Bio-informatics.
 
@@ -34,6 +34,7 @@ Profile  : [Linkedin](https://linkedin.com/in/dilip-g-29707727a)
 
 <div class="org-center">
 
-_/\*Time to unlock some Creativity/\*_
+_**Time to unlock some Creativity**_
+
 
 </div>
