@@ -25,10 +25,10 @@
 /If you want to understand the whole, Understand its parts/. *[[https://www.verywellmind.com/what-is-gestalt-psychology-2795808][Gestalt Psychology]]*
 #+end_quote
 
-   + I also believe in: 
+   + I also believe in:
 
    #+begin_quote
-   you have to prepare for the worst, to give our your best
+   you have to prepare for the worst, to give out your best
 #+end_quote
 
    + Currently, an Post Graduate Student in Bio-informatics.
@@ -40,5 +40,5 @@
    ------
 
 #+begin_center
-//*Time to unlock some Creativity/*/
+//*Time to unlock some Creativity*//
 #+end_center
