@@ -26,8 +26,8 @@
 <li><a href="#/slide-2">2. Literature Review</a></li>
 <li><a href="#/slide-3">3. R/Python Codes</a></li>
 <li><a href="#/slide-4">4. Bibliography</a></li>
-<!-- <li><a href="#/slide-5">5. Thank you for your Attention!</a></li> -->
-<li><a href="#/slide-5">5. Glossary</a></li>
+<li><a href="#/slide-5">5. Thank you for your Attention!</a></li>
+<li><a href="#/slide-6">6. Glossary</a></li>
 </ul>
 </div>
 </div>
@@ -138,7 +138,7 @@
 Significant genetic correlations between ADHD and other traits reveal overlap of genetic risk factors for ADHD across several groups of traits
 </p>
 
-<div id="org40dcdf3" class="figure">
+<div id="orgc485ab3" class="figure">
 <p><img src="../images/adhd-gen-cor.jpg" alt="adhd-gen-cor.jpg" height="960px" width="900px" />
 </p>
 </div>
@@ -310,7 +310,7 @@ Z-scores are plotted for the 56 genes significantly associated with ADHD. Signif
 
 </ul>
 
-<div id="orgc84e137" class="figure">
+<div id="orgfce9de9" class="figure">
 <p><img src="../images/twas-56g.webp" alt="twas-56g.webp" height="960px" />
 </p>
 </div>
@@ -360,7 +360,7 @@ The upper and lower blue lines represent the Bonferroni corrected significance t
 </ul>
 
 
-<div id="orgb8f216a" class="figure">
+<div id="orgff315ca" class="figure">
 <p><img src="../images/mice-human-exon11.jpg" alt="mice-human-exon11.jpg" height="260px" align="left" />
 </p>
 <p><span class="figure-number">Figure 1: </span>(A) Schematic representation of mouse Cry1 protein (top), genomic structure (middle), and aa sequence encoded by exon 11 of human or mouse Cry1 gene (bottom).</p>
@@ -390,8 +390,8 @@ adhd <span style="color: #00bcff;">&lt;-</span> <span style="color: #feacd0;">re
 <span style="color: #a8a8a8; font-style: italic;">## </span><span style="color: #a8a8a8; font-style: italic;">no of pateints in y-axis</span>
 myplot <span style="color: #00bcff;">&lt;-</span> <span style="color: #feacd0;">ggplot</span><span style="color: #ffffff;">(</span>adhd, <span style="color: #feacd0;">aes</span><span style="color: #ff62d4;">(</span>x <span style="color: #00bcff;">=</span> Molecule, y <span style="color: #00bcff;">=</span> patients, color <span style="color: #00bcff;">=</span> Molecule<span style="color: #ff62d4;">)</span><span style="color: #ffffff;">)</span> <span style="color: #00bcff;">+</span> <span style="color: #feacd0;">geom_point</span><span style="color: #ffffff;">(</span>size <span style="color: #00bcff;">=</span> <span style="color: #6ae4b9; font-weight: bold;">10</span><span style="color: #ffffff;">)</span>
 
-<span style="color: #a8a8a8; font-style: italic;">## </span><span style="color: #a8a8a8; font-style: italic;">rotate the name to not overlap</span>
-myplot <span style="color: #00bcff;">+</span> <span style="color: #feacd0;">theme</span><span style="color: #ffffff;">(</span>axis.text.x <span style="color: #00bcff;">=</span> <span style="color: #feacd0;">element_text</span><span style="color: #ff62d4;">(</span>angle <span style="color: #00bcff;">=</span> <span style="color: #6ae4b9; font-weight: bold;">45</span>, vjust <span style="color: #00bcff;">=</span> <span style="color: #6ae4b9; font-weight: bold;">1</span>, hjust <span style="color: #00bcff;">=</span> <span style="color: #6ae4b9; font-weight: bold;">1</span><span style="color: #ff62d4;">)</span><span style="color: #ffffff;">)</span>
+<span style="color: #a8a8a8; font-style: italic;">## </span><span style="color: #a8a8a8; font-style: italic;">rotate the name to not overlap and increase font size</span>
+myplot <span style="color: #00bcff;">+</span> <span style="color: #feacd0;">theme</span><span style="color: #ffffff;">(</span>axis.text.x <span style="color: #00bcff;">=</span> <span style="color: #feacd0;">element_text</span><span style="color: #ff62d4;">(</span>angle <span style="color: #00bcff;">=</span> <span style="color: #6ae4b9; font-weight: bold;">45</span>, vjust <span style="color: #00bcff;">=</span> <span style="color: #6ae4b9; font-weight: bold;">1</span>, hjust <span style="color: #00bcff;">=</span> <span style="color: #6ae4b9; font-weight: bold;">1</span><span style="color: #ff62d4;">)</span>, text <span style="color: #00bcff;">=</span> <span style="color: #feacd0;">element_text</span><span style="color: #ff62d4;">(</span>size <span style="color: #00bcff;">=</span> <span style="color: #6ae4b9; font-weight: bold;">23</span>, face <span style="color: #00bcff;">=</span> <span style="color: #79a8ff;">"bold"</span><span style="color: #ff62d4;">)</span><span style="color: #ffffff;">)</span>
 
 <span style="color: #a8a8a8; font-style: italic;">## </span><span style="color: #a8a8a8; font-style: italic;">save the plot to png file with proper aspect ratio</span>
 <span style="color: #feacd0;">ggsave</span><span style="color: #ffffff;">(</span><span style="color: #79a8ff;">"pat-mol.png"</span>, width <span style="color: #00bcff;">=</span> <span style="color: #6ae4b9; font-weight: bold;">1920</span>, height <span style="color: #00bcff;">=</span> <span style="color: #6ae4b9; font-weight: bold;">1080</span>,  units <span style="color: #00bcff;">=</span> <span style="color: #79a8ff;">"px"</span>, dpi <span style="color: #00bcff;">=</span> <span style="color: #6ae4b9; font-weight: bold;">100</span><span style="color: #ffffff;">)</span>
@@ -401,7 +401,7 @@ myplot <span style="color: #00bcff;">+</span> <span style="color: #feacd0;">them
 </section>
 <section>
 
-<div id="org3d1ce4a" class="figure">
+<div id="org3020ada" class="figure">
 <p><img src="../images/pat-mol.png" alt="pat-mol.png" />
 </p>
 </div>
@@ -427,6 +427,9 @@ myplot <span style="color: #00bcff;">+</span> <span style="color: #feacd0;">them
 <span style="color: #00d3d0;">x</span> = adhd<span style="color: #ffffff;">[</span><span style="color: #79a8ff;">'Molecule'</span><span style="color: #ffffff;">]</span>
 <span style="color: #00d3d0;">y</span> = adhd<span style="color: #ffffff;">[</span><span style="color: #79a8ff;">'patients'</span><span style="color: #ffffff;">]</span>
 
+<span style="color: #a8a8a8; font-style: italic;"># </span><span style="color: #a8a8a8; font-style: italic;">increase font size</span>
+plt.rcParams.update<span style="color: #ffffff;">(</span><span style="color: #ff62d4;">{</span><span style="color: #79a8ff;">'font.size'</span>: 11, <span style="color: #79a8ff;">'font.weight'</span>: <span style="color: #79a8ff;">'bold'</span><span style="color: #ff62d4;">}</span><span style="color: #ffffff;">)</span>
+
 <span style="color: #a8a8a8; font-style: italic;"># </span><span style="color: #a8a8a8; font-style: italic;">make a plot</span>
 plt.plot<span style="color: #ffffff;">(</span>x, y<span style="color: #ffffff;">)</span>
 
@@ -438,10 +441,8 @@ plt.title<span style="color: #ffffff;">(</span><span style="color: #79a8ff;">"Nu
 plt.xlabel<span style="color: #ffffff;">(</span><span style="color: #79a8ff;">'Drug Molecules'</span><span style="color: #ffffff;">)</span>
 plt.ylabel<span style="color: #ffffff;">(</span><span style="color: #79a8ff;">'Patients count'</span><span style="color: #ffffff;">)</span>
 
-plt.legend<span style="color: #ffffff;">()</span>
-
 <span style="color: #a8a8a8; font-style: italic;"># </span><span style="color: #a8a8a8; font-style: italic;">saving the final plot</span>
-plt.savefig<span style="color: #ffffff;">(</span><span style="color: #79a8ff;">'pat-mol2.png'</span>, dpi=100<span style="color: #ffffff;">)</span>
+plt.savefig<span style="color: #ffffff;">(</span><span style="color: #79a8ff;">'pat-mol2.png'</span><span style="color: #ffffff;">)</span>
 
 <span style="color: #a8a8a8; font-style: italic;"># </span><span style="color: #a8a8a8; font-style: italic;">shows the final plot when run</span>
 plt.show<span style="color: #ffffff;">()</span>
@@ -451,7 +452,7 @@ plt.show<span style="color: #ffffff;">()</span>
 </section>
 <section>
 
-<div id="org3d083ee" class="figure">
+<div id="orgf696868" class="figure">
 <p><img src="../images/pat-mol2.png" alt="pat-mol2.png" />
 </p>
 </div>
@@ -494,7 +495,7 @@ acgt <span style="color: #00bcff;">&lt;-</span> <span style="color: #feacd0;">gg
 </section>
 <section>
 
-<div id="orgb8c0ef9" class="figure">
+<div id="orgd03e199" class="figure">
 <p><img src="../images/base-count.png" alt="base-count.png" />
 </p>
 </div>
@@ -622,7 +623,7 @@ div.legalese {
 Reveal.initialize({
 
 controls: true,
-progress: false,
+progress: true,
 history: false,
 center: true,
 slideNumber: 'c',
