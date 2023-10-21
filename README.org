@@ -32,3 +32,8 @@ I hope its a soothing experience for you to read!
 
 **** TODO Comprehensive post on Emacs android
 SCHEDULED: <2023-07-31 Mon>
++ It has got better with termux integration. Its almost like desktop experience now.
+
+**** TODO Maybe on Revealjs for presentation?
+
+**** On Bioinfo R/python learning?
