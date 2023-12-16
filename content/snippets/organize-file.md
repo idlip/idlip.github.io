@@ -1,0 +1,18 @@
++++
+title = "Organize File"
+date = 2023-12-16
+tags = ["snippets", "orgmode"]
+draft = false
++++
+
+From past few days I have been dabbling in the dimension of how to organize files, notes in effective manner. After jumping deep into the rabbit hole, I went on a spree of digesting several blog posts, articles on maintaining files, organizing notes, getting things done, what not, the list goes on.
+
+With power of **org-mode** comes the doubt, is it efficient to maintain one big org file or multiple small files. Yes, its personal preference based on users need, there is no set guided rules.
+
+I stumbled across `Zettelkasten` system which wasn't new, I was aware of it in the likes of `org-roam`, although I believe I did not have much matter to use it to some potential to form sensible network. So for now, no hard plans of multiple small files.
+
+After many reading, especially Karl voit's posts ([site](https://karl-voit.at)), I was kinda convinced that file system hierarchy does not make sense, as the file system model I have may change over time, and I would not like to remember and know where I placed something and where to place something. The schema of Zettelkasten is also against this, like you maintain small files and just connect them based on UniqueID or with complexity of SQL database. The simpler alternative would be `denote` emacs package, then too I don't see the light on using it to the potential. I liked denote way of naming files, and it is format agnostic, does not depend on anything. Just pure elisp to do the job.
+
+Thus as a safer approach, I renamed some notes files to denote convention (as there is no harm/changes in that).
+
+Ultimately the fruit to yield is, just go with whatever is easy and does the work done. Forgetting people's upfront images, looking at other side proved me that nobody is well organized in every way. Everybody lacks something in one or the other way, like I saw person who maintained file system well organized, but the desk and the room was gross and jam packed. So it depends, but the key takeaway is, if it just works. That's enough, but as time goes, changes and upgrades are required.
