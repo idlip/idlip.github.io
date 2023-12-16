@@ -37,3 +37,6 @@ SCHEDULED: <2023-07-31 Mon>
 **** TODO Maybe on Revealjs for presentation?
 
 **** On Bioinfo R/python learning?
+
+**** Change of font, give a new elegant look
+- Rather than cool cartoony font
