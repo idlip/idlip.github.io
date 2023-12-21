@@ -1,6 +1,10 @@
 #+TITLE: Just a newbie blogging
 #+tags: post(p) snippet(s) site(t) draft(d)
 
+Note: Planning for rewrite with simple way of using org-publish
+
+-----
+
 The Journey begins..
 
 You know its fascinating to have a personal static website which is rich and valuable for others.
@@ -9,6 +13,7 @@ I went with Hugo and ox-hugo which is a match that exists only for Emacs (GOAT) 
 
 I have forked the theme from [[https://rudra.dev]] , and adjusted colors to my liking.
 
+-----
 
 I hope its a soothing experience for you to read!
 
