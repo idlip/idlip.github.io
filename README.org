@@ -8,11 +8,6 @@ Inspired by: https://www.danliden.com/
 
 You know its fascinating to have a personal static website which is rich and valuable for others.
 
-- Previously I was using hugo.. more on this
-
-I went with Hugo and ox-hugo which is a match that exists only for Emacs (GOAT) to build the site.
-
-I have forked the theme from [[https://rudra.dev]] , and adjusted colors to my liking.
 
 -----
 
@@ -22,6 +17,16 @@ I have forked the theme from [[https://rudra.dev]] , and adjusted colors to my l
 
 
 I hope its a soothing experience for you to read!
+
+*** Notes
+- You need to give read and write permission for the github CI to work.
+  - As it needs to update gh-pages.
+
+- Previously I was using hugo, by wonder support for org export =ox-hugo=, but I was not learning anything, you just choose a hugo theme, and there you go.
+  - I went with Hugo and ox-hugo which is a match that exists only for Emacs (GOAT) to build the site.
+  - I had forked the theme from [[https://rudra.dev]] , and adjusted colors to my liking.
+  - Since I wanted to learn and know things that are behind the site, just trying =org-publish=.
+
 
 *** Ideas - TODO
 **** TODO On Window manager :post:

@@ -3,7 +3,7 @@ name: org-publish
 on:
   push:
     branches:
-      - voyage
+      - voyage # branch to use
 jobs:
   org-publish:
     runs-on: ubuntu-latest
@@ -13,12 +13,12 @@ jobs:
 
       - name: Install Emacs
         run: sudo apt install emacs-nox --yes
-
+        # tui version for simplicity
       - name: Build the site
-        run: ./build.sh
+        run: ./build.sh # run emacs script to build
 
       - name: Publish generated content to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.4
+        uses: JamesIves/github-pages-deploy-action@v4.5.0
         with:
-          branch: gh-pages
-          folder: public
+          branch: gh-pages # deploy to branch
+          folder: public # the built directory to deploy
