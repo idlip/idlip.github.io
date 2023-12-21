@@ -1,26 +1,30 @@
+;; easy way for me to ignore these with my system config, so used by deploy CI
+(unless (package-installed-p 'elfeed)
+
 ;;; packages
 ;;;; Initialize the package system
-(require 'package)
-(setq package-user-dir (expand-file-name "./.packages"))
-(setq package-archives '(("melpa" . "https://melpa.org/packages/")
-                         ("elpa" . "https://elpa.gnu.org/packages/")))
 
-(unless (bound-and-true-p package--initialized)
-  (customize-set-variable 'package-enable-at-startup nil)
-  (package-initialize))
+  (require 'package)
+  (setq package-user-dir (expand-file-name "./.packages"))
+  (setq package-archives '(("melpa" . "https://melpa.org/packages/")
+                           ("elpa" . "https://elpa.gnu.org/packages/")))
 
-(unless package-archive-contents
-  (package-refresh-contents))
+  (unless (bound-and-true-p package--initialized)
+    (customize-set-variable 'package-enable-at-startup nil)
+    (package-initialize))
 
-;; Check and install dependencies
-(dolist (package '(htmlize
-                   ;; julia-mode
-                   ;; ess
-                   ;; ox-rss webfeeder
-                   ;; esxml
-                   ))
-  (unless (package-installed-p package)
-    (package-install package)))
+  (unless package-archive-contents
+    (package-refresh-contents))
+
+  ;; Check and install dependencies
+  (dolist (package '(htmlize
+                     ;; julia-mode
+                     ;; ess
+                     ;; ox-rss webfeeder
+                     ;; esxml
+                     ))
+    (unless (package-installed-p package)
+      (package-install package))))
 
 ;; (require 'julia-mode)
 
@@ -30,10 +34,10 @@
 ;; (require 'webfeeder)
 ;; (require 'esxml)
 
-
 ;; inspired by @djliden : https://djliden.github.io
 
-;; just to add class for toc
+
+;; just to add class for toc, except that its default function as it is.
 (defun org-html-toc (depth info &optional scope)
   "Build a table of contents.
 DEPTH is an integer specifying the depth of the table.  INFO is
@@ -74,14 +78,14 @@ of contents as a string, or nil if it is empty."
 
 ;;; additional settings
 (setq org-html-validation-link nil
-;; idk      ;; org-html-style-default (file-contents "assets/head.html")
       org-export-use-babel nil)
 
-(add-to-list 'org-html-checkbox-types
-             '(nerd-icon
-               (on . "<a class=\"cbon\"> </a>")
-               (off . "<a class=\"cboff\"> </a>")
-               (trans . "<a class=\"cbnil\"> </a>")))
+;; for Beautiful checbox
+(setq org-html-checkbox-types
+      '((nerd-icon
+         (on . "<span class=\"cbon\"> </span>")
+         (off . "<span class=\"cboff\"> </span>")
+         (trans . "<span class=\"cbnil\"> </span>"))))
 
 (setq org-html-checkbox-type 'nerd-icon)
 
@@ -108,6 +112,9 @@ of contents as a string, or nil if it is empty."
              :section-numbers nil
              :time-stamp-file nil
              :htmlized-source t
+             :html-divs '((preamble "nav" "preamble")
+			              (content "main" "content") ;; necessary to get the right styling
+			              (postamble "footer" "postamble"))
              :auto-sitemap t
              :sitemap-filename "sitemap.org"
              ;; :sitemap-format-entry 'dw/format-news-entry
@@ -118,7 +125,7 @@ of contents as a string, or nil if it is empty."
 
              )
 
-       (list "static"
+       (list "static" ;; for images
              :base-directory "./content/"
              :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|svg"
              :publishing-directory "./public"
@@ -127,7 +134,7 @@ of contents as a string, or nil if it is empty."
              ;; :exclude ".*/posts/drafts/.*"  ; Exclude drafts directory from publishing
              )
 
-       (list "assets"
+       (list "assets" ;; for *-amble html, css, fonts & img
              :base-directory "./assets/"
              :base-extension ".*"
              :publishing-directory "./public/"
