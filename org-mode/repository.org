@@ -1,7 +1,0 @@
-#+hugo_base_dir: ../
-#+export_file_name: _index
-#+hugo_layout:  repository
-#+hugo_section: repository
-#+title: Repository
-
-
