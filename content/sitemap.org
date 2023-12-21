@@ -1,5 +1,4 @@
 #+TITLE: Sitemap for project content
 
-- [[file:posts/org-test.org][org-test]]
-- [[file:posts/hello.org][Hello world]]
 - [[file:index.org][Voyage for Glory]]
+- [[file:posts/hello.org][Hello world]]
