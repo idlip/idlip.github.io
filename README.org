@@ -6,8 +6,6 @@ Re-wrote initial setup using =org-publish=
 Inspired by: https://www.danliden.com/
 -----
 
-The Journey begins..
-
 You know its fascinating to have a personal static website which is rich and valuable for others.
 
 - Previously I was using hugo.. more on this
