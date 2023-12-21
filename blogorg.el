@@ -89,9 +89,9 @@ of contents as a string, or nil if it is empty."
       (list
        (list "content"
              :recursive t
-             :base-directory (expand-file-name "content/" default-directory) ;; wherever the file is
+             :base-directory "./content" ;; wherever the file is
              :base-extension "org"
-             :publishing-directory (expand-file-name "public/" default-directory)
+             :publishing-directory "./public"
              :publishing-function 'org-html-publish-to-html
              :headline-levels 4
              :auto-preamble t
@@ -100,8 +100,8 @@ of contents as a string, or nil if it is empty."
              :html-head-include-scripts nil
              :html-head-include-default-style nil
              :html-head "<link rel=\"stylesheet\" href=\"/stylesheet.css\" type=\"text/css\"/>"
-             :html-preamble (file-contents (expand-file-name "assets/pre.html" default-directory))
-             :html-postamble (file-contents (expand-file-name "assets/post.html" default-directory))
+             :html-preamble (file-contents "./assets/pre.html")
+             :html-postamble (file-contents "./assets/post.html")
              :with-author t
              :with-creator t
              :with-toc nil
@@ -119,21 +119,23 @@ of contents as a string, or nil if it is empty."
              )
 
        (list "static"
-             :base-directory (expand-file-name "content/" default-directory)
+             :base-directory "./content/"
              :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|svg"
-             :publishing-directory (expand-file-name "public/" default-directory)
+             :publishing-directory "./public"
              :recursive t
              :publishing-function 'org-publish-attachment
              ;; :exclude ".*/posts/drafts/.*"  ; Exclude drafts directory from publishing
              )
 
        (list "assets"
-             :base-directory (expand-file-name "assets/" default-directory)
+             :base-directory "./assets/"
              :base-extension ".*"
-             :publishing-directory (expand-file-name "public/" default-directory)
+             :publishing-directory "./public/"
              :recursive t ;; for fonts
              :publishing-function 'org-publish-attachment
              )
        '("org" :components ("content" "assets" "static"))
 
        ))
+
+(org-publish-all t)

@@ -18,9 +18,10 @@ I have forked the theme from [[https://rudra.dev]] , and adjusted colors to my l
 
 -----
 
-https://ogbe.net/
-https://taingram.org/
-https://pavpanchekha.com/blog.html
+- https://ogbe.net/
+- https://taingram.org/
+- https://pavpanchekha.com/blog.html
+
 
 I hope its a soothing experience for you to read!
 
