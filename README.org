@@ -2,7 +2,7 @@
 #+tags: post(p) snippet(s) site(t) draft(d)
 
 Note: Planning for rewrite with simple way of using org-publish
-
+Inspired by: https://www.danliden.com/
 -----
 
 The Journey begins..
