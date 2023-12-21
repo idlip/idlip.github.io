@@ -3,17 +3,20 @@
 
 Re-wrote initial setup using =org-publish=
 
-Inspired by: https://www.danliden.com/
 -----
 
 You know its fascinating to have a personal static website which is rich and valuable for others.
 
-
 -----
+
+*** Sites I found using org-publish
 
 - https://ogbe.net/
 - https://taingram.org/
 - https://pavpanchekha.com/blog.html
+- https://patrickdelliott.com/
+- https://www.danliden.com/
+- https://systemcrafters.net/ (obviously, the Youtuber who taught us!)
 
 
 I hope its a soothing experience for you to read!
