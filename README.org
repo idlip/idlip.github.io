@@ -10,6 +10,8 @@ The Journey begins..
 
 You know its fascinating to have a personal static website which is rich and valuable for others.
 
+- Previously I was using hugo.. more on this
+
 I went with Hugo and ox-hugo which is a match that exists only for Emacs (GOAT) to build the site.
 
 I have forked the theme from [[https://rudra.dev]] , and adjusted colors to my liking.
