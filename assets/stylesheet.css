@@ -1,0 +1,318 @@
+/* Define emacs themed colors */
+/* for easy calls */
+:root {
+    --bg-main: #050505;
+    --bg-dim: #121212;
+    --fg-main: #ffffff;
+    --fg-dim: #D8DEE9;
+    --fg-region: #2e8b6d;
+    --bg-inactive: #303030;
+    --fg-comment: #b4aeae;
+    --fg-inactive: #6c7b8b;
+    --cursor: #ffe4e1;
+    --error: #ee6363;
+    --link: #b4befe;
+    --todo: #54ff9f;
+    --done: #b4dddd;
+    --code: #77ee77;
+    --verbatim: #ee77ee;
+    --clock: #eedc82;
+    --bg-tag: #ffe1ff;
+    --bracket: #ffeeee;
+    --title: #6ae4b9;
+    --heading-1: #ab82ff;
+    --heading-2: #fab387;
+    --heading-3: #3cb6df;
+    --heading-4: #9aff9a;
+    --heading-5: #97ffff;
+    --heading-6: #ffa07a;
+    --heading-7: #eeb4b4;
+    --heading-8: #ee4000;
+    --heading-9: #cd96cd;
+
+    /* for fonts */
+    --heading-font: "impress", sans-serif;
+}
+
+/* defined theme variables ends here */
+
+@font-face{
+    font-family: 'victor';
+    src: url('fonts/victor.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'astro';
+    src: url('fonts/astro.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'times';
+    src: url('fonts/tinos.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'impress';
+    src: url('fonts/impress.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'happy';
+    src: url('fonts/happy.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'code-ace';
+    src: url('fonts/code-ace.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'code-haki';
+    src: url('fonts/code-haki.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'code-op';
+    src: url('fonts/code-op.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+#content {
+    max-width: 1000px;
+    margin: auto;
+}
+body {
+    font-size: 1.4em;
+    font-family: "code-haki", sans-serif;
+    color: var(--fg-main);
+    background: var(--bg-main);
+}
+
+.title:before, .title:after {
+    content: " ⩮ ";
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 0.2em;
+    font-weight: bold;
+    font-family: "impress", serif;
+    font-size: 2.7em;
+    color: var(--title);
+    padding: 15px;
+    line-height: 1.8em;
+}
+.subtitle {
+    text-align: center;
+    font-size: 2.3em;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+h1 h2 h3 h4 {
+    font-family: var(--heading-font);
+}
+
+/* h1 is done for title itself */
+
+h2 {
+    font-size: : 2em;
+    color: var(--heading-1);
+}
+h2:before {
+    content: "◉ ";
+}
+
+h3:before {
+    content: "◈ ";
+}
+
+h3 {
+    font-size: 1.8em;
+    color: var(--heading-2);
+}
+
+h4:before {
+    content: "✥ ";
+}
+
+h4 {
+    font-size: 1.6em;
+    color: var(--heading-3);
+}
+
+h5:before {
+    content: "󰴈 ";
+}
+h5 {
+    font-size: 1.4em;
+    color: var(--heading-4);
+}
+
+.todo {
+    font-family: "victor", monospace;
+    color: var(--todo);
+}
+.done {
+    font-family: "victor", monospace;
+    color: var(--done);
+}
+.priority {
+    font-family: "victor", monospace;
+    color: var(--error);
+}
+
+a:link {
+    color: var(--link);
+    font-style: italic;
+    font-family: "code-ace", sans;
+}
+a:visited {
+    color: var(--link);
+}
+
+code {
+    font-family: "code-op", monospace;
+    padding: 0.2em;
+    color: var(--code);
+    background-color: var(--bg-dim);
+}
+
+ul {
+    list-style-type: "❖ ";
+}
+
+pre {
+    background-color: var(--bg-inactive);
+    font-family: "code-op", monospace;
+    font-size: 70%;
+    overflow: auto;
+    margin: 1.2em;
+    border-radius: 20px;
+    padding: 20px;
+    padding-left: 30px;
+}
+pre.src {
+    position: relative;
+    font-family: "code-op", monospace;
+    overflow: auto;
+}
+pre.src:before {
+    display: inline;
+    position: absolute;
+    right: 12px;
+    padding: 3px;
+    margin-top: 2px;
+}
+pre.src:hover:before {
+    display: inline;
+}
+pre.src-conf:before {
+    content: " ";
+}
+
+pre.src-emacs-lisp:before {
+    content: " ";
+}
+
+pre.src-bash:before {
+    content: "󱆃  ";
+}
+pre.src-R:before {
+    content: "󰟔 ";
+}
+pre.src-nix:before {
+    content: " ";
+}
+pre.src-python:before {
+    content: " ";
+}
+pre.src-julia:before {
+    content: " ";
+}
+pre.src-html:before {
+    content: " ";
+}
+
+.example:before {
+    content: "  > ";
+    color: var(--fg-comment);
+}
+
+.tag {
+    font-family: "victor", monospace;
+    padding: 2px;
+    font-size: 80%;
+    font-weight: normal;
+    padding: 0.5em;
+    margin: 10px 2px 10px 0;
+    line-height: 4em;
+    background:
+        linear-gradient(var(--bg-dim) 0 0) padding-box,
+        linear-gradient(90deg, var(--link) 28%, var(--cursor) 85%, var(--bg-tag) ) border-box;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+
+}
+
+blockquote:before {
+    content: "󱀡 ";
+    color: var(--clock);
+}
+
+blockquote {
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    font-style: italic;
+    font-weight: 500;
+    background: var(--bg-dim);
+    border-left: 10px solid var(--fg-inactive);
+}
+blockquote p {
+    display: inline;
+}
+
+table {
+    border-collapse: collapse;
+}
+caption.t-above {
+    caption-side: top;
+}
+caption.t-bottom {
+    caption-side: bottom;
+}
+
+.org-right {
+    margin-left: auto;
+    margin-right: 0px;
+    text-align: right;
+}
+.org-left {
+    margin-left: 0px;
+    margin-right: auto;
+    text-align: left;
+}
+.org-center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.underline {
+    text-decoration: underline;
+}
