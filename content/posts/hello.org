@@ -1,0 +1,27 @@
+#+title: Hello world
+
+- Greeting for the world with first post.
+- Posting org syntax for css testing.
+
+Its is in this post:
+- [[file:org-test.org]]
+
+- [ ] Hello
+
+- [X] Done tasks
+
+- [-] Nil pattern
+
+#+begin_src bash
+echo hello
+
+sed $(echo hi)
+#+end_src
+
+
+#+begin_src emacs-lisp
+(defun hello ()
+  "nothing"
+  (- 2 10)
+  (or nothing))
+#+end_src
