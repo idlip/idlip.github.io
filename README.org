@@ -1,4 +1,5 @@
 #+TITLE: Just a newbie blogging
+#+tags: post(p) snippet(s) site(t) draft(d)
 
 The Journey begins..
 
@@ -12,7 +13,7 @@ I have forked the theme from [[https://rudra.dev]] , and adjusted colors to my l
 I hope its a soothing experience for you to read!
 
 *** Ideas - TODO
-**** TODO On Window manager
+**** TODO On Window manager :post:
   SCHEDULED: <2023-03-30 Thu 13:01>
 + Maybe about advantages
 + Uses and how it is efficient
@@ -30,13 +31,24 @@ I hope its a soothing experience for you to read!
   - State "DONE"       from "TODO"       [2023-07-28 Fri 13:26]
   :END:
 
-**** TODO Comprehensive post on Emacs android
+**** REVIEW Comprehensive post on Emacs android :post:
 SCHEDULED: <2023-07-31 Mon>
 + It has got better with termux integration. Its almost like desktop experience now.
 
-**** TODO Maybe on Revealjs for presentation?
+**** TODO Maybe on Revealjs for presentation? :post:
 
-**** On Bioinfo R/python learning?
+**** On Bioinfo R/python learning? :post:
 
-**** Change of font, give a new elegant look
+**** Change of font, give a new elegant look :site:
 - Rather than cool cartoony font
+
+**** TODO Literate org config vs modular one :post:
+SCHEDULED: <2023-12-18 Mon 13:20>
+
+**** TODO Art of note taking :snippet:
+
+**** TODO Actual way of getting things done :snippet:
+
+**** Try if one.el is good enough for this site
+- Pros: emacs
+- refer: https://github.com/tonyaldon/one.el
