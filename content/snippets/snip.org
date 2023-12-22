@@ -1,0 +1,3 @@
+#+title: New snippet
+
+- New voyage

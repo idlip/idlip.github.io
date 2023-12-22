@@ -145,6 +145,7 @@ body {
     color: var(--title);
     padding: 15px;
     line-height: 1.8em;
+    letter-spacing: 4px;
 }
 .subtitle {
     text-align: center;
@@ -497,14 +498,33 @@ textarea {
 
 #+end_src
 
-** Emacs Theme
-- Generate css from emacs theme.
-#+begin_src emacs-lisp :result output raw
-(org-html-htmlize-generate-css)
+** Header & Footer
+- Pre-amble and post-amble
+- To place the footer at the bottom in all page, even tho content is few lines.
+#+begin_src css
+footer {
+    padding-bottom: 10px;
+}
+
 #+end_src
 
-#+RESULTS:
-: 1
+*** preamble style
+- Since its given class status.
+#+begin_src css
+#preamble a {
+    float: inherit;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: underline;
+    font-size: 0.8em;
+}
+
+#+end_src
+** Emacs Theme
+- Generate css from emacs theme.
+#+begin_src emacs-lisp :tangle no :results output
+(org-html-htmlize-generate-css)
+#+end_src
 
 
 #+begin_src css :tangle assets/emacs-theme.css

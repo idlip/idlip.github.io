@@ -1,0 +1,84 @@
+#+title: Ken quotes
+
+** Beyond Ken :quotes:snippets:
+
+Welcome to some more snippet of Quotes.
+Lately I have been busy, kinda dusting off my table. /Ooof.. procastination!/
+
+Some more laughs, some more values!
+------
+
++ Napoleon Bonaparte
+
+  #+begin_quote
+If you want a thing done well, do it yourself.
+  #+end_quote
+
++ Henny Youngman
+
+  #+begin_quote
+I once wanted to become an atheist, but I gave up - they have no holidays.
+  #+end_quote
+
++ Lillian Hellman
+
+  #+begin_quote
+Things start out as hopes and end up as habits.
+  #+end_quote
+
++ Dorothy Parker
+
+  #+begin_quote
+The cure for boredom is curiosity. There is no cure for curiosity.
+  #+end_quote
+
++ Randy K. Milholland
+
+  #+begin_quote
+Lies are like children. If you don't nurture them, they'll never be useful later.
+  #+end_quote
+
++ Ralph W. Sockman
+
+  #+begin_quote
+The test of courage comes when we are in the minority. The test of tolerance comes when we are in
+ the majority.
+  #+end_quote
+
++ Ethel Waters
+
+  #+begin_quote
+We are all gifted. That is our inheritance.
+#+end_quote
+
++ Tom Brokaw
+
+  #+begin_quote
+It's easy to make a buck. It's a lot tougher to make a difference."
+#+end_quote
+
++ Sonya Parker
+
+  #+begin_quote
+Live your life for you not for anyone else. Don’t let the fear of being judged, rejected or
+ disliked stop you from being yourself.
+#+end_quote
+
++ Wayne Dyer
+
+  #+begin_quote
+If you believe it will work out, you’ll see opportunities. If you believe it won’t, you will see
+ obstacles.
+#+end_quote
+
++ Anime
+
+  #+begin_quote
+The strongest hearts have the most scars.
+#+end_quote
+
+-----------
+
+#+begin_center
+Hopefully with those melifluous thoughts, I hope you are alright ;)
+#+end_center

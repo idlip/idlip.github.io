@@ -1,4 +1,5 @@
 #+TITLE: Sitemap for project content
 
-- [[file:index.org][Voyage for Glory]]
+- [[file:snippets/snip.org][New snippet]]
 - [[file:posts/hello.org][Hello world]]
+- [[file:index.org][Voyage for Glory]]
