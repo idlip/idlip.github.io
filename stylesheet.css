@@ -4,7 +4,7 @@
 
 :root {
     --bg-main: #050505;
-    --bg-dim: #121212;
+    --bg-dim: #222222;
     --fg-main: #ffffff;
     --fg-dim: #D8DEE9;
     --fg-region: #2e8b6d;
@@ -118,6 +118,7 @@ body {
     color: var(--title);
     padding: 15px;
     line-height: 1.8em;
+    letter-spacing: 4px;
 }
 .subtitle {
     text-align: center;
@@ -298,7 +299,8 @@ blockquote {
     font-style: italic;
     font-weight: 500;
     background: var(--bg-dim);
-    border-left: 10px solid var(--fg-inactive);
+    border-left: 10px solid var(--clock);
+    border-radius: 10px;
 }
 blockquote p {
     display: inline;
@@ -333,4 +335,14 @@ caption.t-bottom {
     text-decoration: underline;
 }
 
-(org-html-htmlize-generate-css)
+footer {
+    padding-bottom: 10px;
+}
+
+#preamble a {
+    float: inherit;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: underline;
+    font-size: 0.8em;
+}
