@@ -1,5 +1,11 @@
 #+TITLE: Sitemap for project content
 
-- [[file:snippets/snip.org][New snippet]]
+- [[file:snippets/organize-file.org][Organize File]]
+- [[file:snippets/beyond-ken.org][Ken quotes]]
+- [[file:snippets/insightful-quotes.org][Insightful Quotes]]
+- [[file:snippets/cognizance.org][Cognizance]]
+- [[file:snippets/rss-better.org][Rss: the Internet]]
+- [[file:snippets/emacs-op.org][Emacs is OP!]]
+- [[file:snippets/init.org][Init on Snippets]]
 - [[file:posts/hello.org][Hello world]]
 - [[file:index.org][Voyage for Glory]]
