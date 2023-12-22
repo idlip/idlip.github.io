@@ -1,4 +1,7 @@
 ;; easy way for me to ignore these with my system config, so used by deploy CI
+
+(require 'package)
+
 (unless (package-installed-p 'elfeed)
 
 ;;; packages
