@@ -4,7 +4,7 @@
 
 :root {
     --bg-main: #050505;
-    --bg-dim: #121212;
+    --bg-dim: #222222;
     --fg-main: #ffffff;
     --fg-dim: #D8DEE9;
     --fg-region: #2e8b6d;
@@ -299,7 +299,8 @@ blockquote {
     font-style: italic;
     font-weight: 500;
     background: var(--bg-dim);
-    border-left: 10px solid var(--fg-inactive);
+    border-left: 10px solid var(--clock);
+    border-radius: 10px;
 }
 blockquote p {
     display: inline;
