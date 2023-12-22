@@ -1,5 +1,7 @@
 #+TITLE: Sitemap for project content
 
+- [[file:repository.org][Repository]]
+- [[file:about.org][About]]
 - [[file:snippets/organize-file.org][Organize File]]
 - [[file:snippets/beyond-ken.org][Ken quotes]]
 - [[file:snippets/insightful-quotes.org][Insightful Quotes]]
