@@ -106,7 +106,7 @@ of contents as a string, or nil if it is empty."
              :html-html5-fancy t
              :html-head-include-scripts nil
              :html-head-include-default-style nil
-             :html-head "<link rel=\"stylesheet\" href=\"/stylesheet.css\" type=\"text/css\"/>"
+             ;; :html-head "<link rel=\"stylesheet\" href=\"/stylesheet.css\" type=\"text/css\"/>"
              :html-preamble (file-contents "./assets/pre.html")
              :html-postamble (file-contents "./assets/post.html")
              :with-author t
