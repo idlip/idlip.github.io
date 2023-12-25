@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>&lrm;</title>
+<meta name="generator" content="Org mode">
+</head>
+<body>
+<nav id="preamble" class="status">
+<link rel="stylesheet" type="text/css" href="/stylesheet.css"/>
+
+<p align="right">
+<a class="active" href="/">Home</a> |
+<a href="/sitemap.html" align="right">Posts</a> |
+<a href="/about.html">About</a> |
+<a href="/repository.html">Repository</a>
+
+</p>
+</nav>
+<main id="content">
+<div id="outline-container-org3af33c0" class="outline-2">
+<h2 id="org3af33c0">Emacs Efficiency&#xa0;&#xa0;&#xa0;<span class="tag"><span class="cheatsheet">cheatsheet</span>&#xa0;<span class="keybindings">keybindings</span>&#xa0;<span class="emacs">emacs</span></span></h2>
+<div class="outline-text-2" id="text-org3af33c0">
+<p>
+This is straight away from <a href="https://github.com/VernonGrant/discovering-emacs">VernonGrant</a> who hosts a podcast for Emacs called "<a href="https://www.discovering-emacs.com/">Discovering-Emacs</a>".
+It's a great and has very much professional vibes, the explanations are Crisp and Clear!
+I suggest you to check out, he even has made <a href="https://www.youtube.com/@discoveringemacs">YouTube channel</a> for it.
+</p>
+
+<p>
+I have removed some of the common bindings from this table, I have retained some unique one's which isn't discovered generally. I guess that is why the name is made (lol)
+</p>
+
+<p>
+I just wanted to have a cheatsheet for it, so I decided to leave it as a post here.
+</p>
+
+<p>
+You can checkout the source here ⟾ <a href="https://github.com/VernonGrant/emacs-keyboard-shortcuts">https://github.com/VernonGrant/emacs-keyboard-shortcuts</a>
+</p>
+</div>
+
+<div id="outline-container-org3f2b591" class="outline-3">
+<h3 id="org3f2b591">General Shortcuts</h3>
+<div class="outline-text-3" id="text-org3f2b591">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Shortcut</th>
+<th scope="col" class="org-left">Command Invoked</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>C-x Esc Esc</code></td>
+<td class="org-left"><code>repeat-complex-command</code></td>
+<td class="org-left">Edit and re-evaluate last complex command.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-h f</code></td>
+<td class="org-left"><code>describe-function</code></td>
+<td class="org-left">Help information for a function.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-h x</code></td>
+<td class="org-left"><code>describe-command</code></td>
+<td class="org-left">Help information for a command (a function available using <code>M-x</code>).</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-h l</code></td>
+<td class="org-left"><code>view-lossage</code></td>
+<td class="org-left">Show log for key presses and commands.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>M--</code></td>
+<td class="org-left"><code>negative-argument</code></td>
+<td class="org-left">Prefix to perform negative meta commands.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C--</code></td>
+<td class="org-left"><code>negative-argument</code></td>
+<td class="org-left">Prefix to perform negative commands.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>M-l</code></td>
+<td class="org-left"><code>downcase-word</code></td>
+<td class="org-left">Lowercase word forward.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>M-c</code></td>
+<td class="org-left"><code>capitalize-word</code></td>
+<td class="org-left">Capitalize word forward.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>M-u</code></td>
+<td class="org-left"><code>upcase-word</code></td>
+<td class="org-left">Uppercase word forward.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-&lt;space&gt; C-&lt;space&gt;</code></td>
+<td class="org-left"><code>set-mark-command</code></td>
+<td class="org-left">Add mark to mark ring.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-u C-&lt;space&gt;</code></td>
+<td class="org-left"><code>set-mark-command</code></td>
+<td class="org-left">Jump to previous mark.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>M-q</code></td>
+<td class="org-left"><code>fill-paragraph</code></td>
+<td class="org-left">Wrap/reformat to fill column.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>M-^</code></td>
+<td class="org-left"><code>delete-indentation</code></td>
+<td class="org-left">Join previous line.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>M-- M-^</code></td>
+<td class="org-left"><code>delete-indentation</code></td>
+<td class="org-left">Join following line.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>M-{</code></td>
+<td class="org-left"><code>backward-paragraph</code></td>
+<td class="org-left">Previous paragraph.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>M-}</code></td>
+<td class="org-left"><code>forward-paragraph</code></td>
+<td class="org-left">Next paragraph.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x C-v</code></td>
+<td class="org-left"><code>find-alternate-file</code></td>
+<td class="org-left">Find alternative file.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x i</code></td>
+<td class="org-left"><code>insert-file</code></td>
+<td class="org-left">Insert file contents into the current file.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x h</code></td>
+<td class="org-left"><code>mark-whole-buffer</code></td>
+<td class="org-left">Highlight entire buffer.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-M-\</code></td>
+<td class="org-left"><code>indent-region</code></td>
+<td class="org-left">Re-indent code region in region or from previous mark point.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x C-x</code></td>
+<td class="org-left"><code>exchange-point-and-mark</code></td>
+<td class="org-left">Put the mark where point is now, and point where the mark is now.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x C-j</code></td>
+<td class="org-left"><code>dired-jump</code></td>
+<td class="org-left">Open Dired jump.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x SPC</code></td>
+<td class="org-left"><code>rectangle-mark-mode</code></td>
+<td class="org-left">Rectangle edit mode, can use string-insert-rectangle.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x +</code></td>
+<td class="org-left"><code>balance-windows</code></td>
+<td class="org-left">Resize all splits to equal sizes.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x 5 2</code></td>
+<td class="org-left"><code>make-frame-command</code></td>
+<td class="org-left">Open in new frame.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x r SPC</code></td>
+<td class="org-left"><code>point-to-register</code></td>
+<td class="org-left">Point-to-register.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x r j</code></td>
+<td class="org-left"><code>jump-to-register</code></td>
+<td class="org-left">Jump-to-register.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>M-s o</code></td>
+<td class="org-left"><code>occur</code></td>
+<td class="org-left">List lines using regex.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>M-s h r</code></td>
+<td class="org-left"><code>highlight-regexp</code></td>
+<td class="org-left">Highlights regex expression (useful for presentations).</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>M-r</code></td>
+<td class="org-left"><code>move-to-window-line-top-bottom</code></td>
+<td class="org-left">Move cursor to top, middle and bottom.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-l</code></td>
+<td class="org-left"><code>recenter-top-bottom</code></td>
+<td class="org-left">Move text in relation to the cursor, to top, middle and bottom.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>M-!</code></td>
+<td class="org-left"><code>shell-command</code></td>
+<td class="org-left">Run a shell command.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>M-&amp;</code></td>
+<td class="org-left"><code>async-shell-command</code></td>
+<td class="org-left">Async shell command.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-u 0</code></td>
+<td class="org-left"><code>universal-argument</code></td>
+<td class="org-left">Infinite count prefix.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-u {count}</code></td>
+<td class="org-left"><code>universal-argument</code></td>
+<td class="org-left">Repeat operation x amount of times.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x z</code></td>
+<td class="org-left"><code>repeat</code></td>
+<td class="org-left">Repeat command.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x backspace</code></td>
+<td class="org-left"><code>backward-kill-sentence</code></td>
+<td class="org-left">Clear mini-buffer.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>M-g M-g</code></td>
+<td class="org-left"><code>goto-line</code></td>
+<td class="org-left">Go to line.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x 1</code></td>
+<td class="org-left"><code>delete-other-windows</code></td>
+<td class="org-left">Kill other windows.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>M-z (char)</code></td>
+<td class="org-left"><code>zap-to-char</code></td>
+<td class="org-left">Zap up to char.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x * g</code></td>
+<td class="org-left"><code>calc-dispatch</code></td>
+<td class="org-left">Eval in new buffer.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-u M-x</code></td>
+<td class="org-left"><code>universal-argument</code></td>
+<td class="org-left">Run command with additional options.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orga24d054" class="outline-3">
+<h3 id="macros">Macros</h3>
+<div class="outline-text-3" id="text-macros">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Shortcut</th>
+<th scope="col" class="org-left">Command Invoked</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>C-x (</code></td>
+<td class="org-left"><code>kmacro-start-macro</code></td>
+<td class="org-left">Define keyboard macro.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x )</code></td>
+<td class="org-left"><code>kmacro-end-macro</code></td>
+<td class="org-left">End keyboard macro definition.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x e</code></td>
+<td class="org-left"><code>kmacro-end-and-call-macro</code></td>
+<td class="org-left">Playback keyboard macro, can just keep pressing <code>e</code> after first press.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x C-k &lt;space&gt;</code></td>
+<td class="org-left"><code>kmacro-step-edit-macro</code></td>
+<td class="org-left">Open keyboard macro debugger.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x C-k e</code></td>
+<td class="org-left"><code>edit-kbd-macro</code></td>
+<td class="org-left">Enter macro editor, (C-c C-c) to finish editing.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x C-k n</code></td>
+<td class="org-left"><code>kmacro-name-last-macro</code></td>
+<td class="org-left">Save the keyboard macro for later use.</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>insert-kbd-macro</code></td>
+<td class="org-left">Insert a saved macro into the file, in Emacs lisp.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org210a4ac" class="outline-3">
+<h3 id="project">Project</h3>
+<div class="outline-text-3" id="text-project">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Shortcut</th>
+<th scope="col" class="org-left">Command Invoked</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>C-x p !</code></td>
+<td class="org-left"><code>project-shell-command</code></td>
+<td class="org-left">Run <code>shell-command</code> in the current project's root directory.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x p &amp;</code></td>
+<td class="org-left"><code>project-async-shell-command</code></td>
+<td class="org-left">Run <code>async-shell-command</code> in the current project's root directory.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x p f</code></td>
+<td class="org-left"><code>project-find-file</code></td>
+<td class="org-left">Visit a file (with completion) in the current project.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x p F</code></td>
+<td class="org-left"><code>project-or-external-find-file</code></td>
+<td class="org-left">Visit a file (with completion) in the current project or external roots.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x p b</code></td>
+<td class="org-left"><code>project-switch-to-buffer</code></td>
+<td class="org-left">Display buffer in the selected window, for a buffer belonging to the current project.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x p s</code></td>
+<td class="org-left"><code>project-shell</code></td>
+<td class="org-left">Start an inferior shell in the current project's root directory.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x p d</code></td>
+<td class="org-left"><code>project-find-dir</code></td>
+<td class="org-left">Start Dired in a directory inside the current project.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x p D</code></td>
+<td class="org-left"><code>project-dired</code></td>
+<td class="org-left">Start Dired in the current project's root.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x p v</code></td>
+<td class="org-left"><code>project-vc-dir</code></td>
+<td class="org-left">Run VC-Dir in the current project's root.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x p c</code></td>
+<td class="org-left"><code>project-compile</code></td>
+<td class="org-left">Run <code>compile</code> in the project root.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x p e</code></td>
+<td class="org-left"><code>project-eshell</code></td>
+<td class="org-left">Start Eshell in the current project's root directory.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x p k</code></td>
+<td class="org-left"><code>project-kill-buffers</code></td>
+<td class="org-left">Kill the buffers belonging to the current project.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x p p</code></td>
+<td class="org-left"><code>project-switch-project</code></td>
+<td class="org-left">Switch to another project by running an Emacs command.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x p g</code></td>
+<td class="org-left"><code>project-find-regexp</code></td>
+<td class="org-left">Find all matches for REGEXP in the current project's roots.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x p G</code></td>
+<td class="org-left"><code>project-or-external-find-regexp</code></td>
+<td class="org-left">Find all matches for REGEXP in the project roots or external roots.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x p r</code></td>
+<td class="org-left"><code>project-query-replace-regexp</code></td>
+<td class="org-left">Query-replace REGEXP in all the files of the project.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x p x</code></td>
+<td class="org-left"><code>project-execute-extended-command</code></td>
+<td class="org-left">Execute an extended command in project root.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org9f58a14" class="outline-3">
+<h3 id="balanced-expressions">Balanced Expressions</h3>
+<div class="outline-text-3" id="text-balanced-expressions">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Shortcut</th>
+<th scope="col" class="org-left">Command Invoked</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>C-M-f</code></td>
+<td class="org-left"><code>forward-sexp</code></td>
+<td class="org-left">Forward over an sexps.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-M-b</code></td>
+<td class="org-left"><code>backward-sexp</code></td>
+<td class="org-left">Backward over a sexps.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-M-d</code></td>
+<td class="org-left"><code>down-list</code></td>
+<td class="org-left">Move down into a sexps.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-M-u</code></td>
+<td class="org-left"><code>backward-up-list</code></td>
+<td class="org-left">Move up out of a sexps.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-M-n</code></td>
+<td class="org-left"><code>forward-list</code></td>
+<td class="org-left">Move forward to the sexps.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-M-p</code></td>
+<td class="org-left"><code>backward-list</code></td>
+<td class="org-left">Move backward to the previous sexps.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-M-k</code></td>
+<td class="org-left"><code>kill-sexp</code></td>
+<td class="org-left">Kill down into sexps.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>M-(</code></td>
+<td class="org-left"><code>insert-parentheses</code></td>
+<td class="org-left">Wraps region in parenthesis.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org9812df9" class="outline-3">
+<h3 id="query-replace">Query Replace</h3>
+<div class="outline-text-3" id="text-query-replace">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Shortcut</th>
+<th scope="col" class="org-left">Command Invoked</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>M-%</code></td>
+<td class="org-left"><code>query-replace</code></td>
+<td class="org-left">Start a query replace operation.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>!</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Replace all remaining matches in this buffer with no more questions.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>^</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Move point back to previous match.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>u</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Undo previous replacement.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>U</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">undo all replacements.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>E</code></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Edit the replacement string.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org74af41c" class="outline-3">
+<h3 id="xref">Xref</h3>
+<div class="outline-text-3" id="text-xref">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Shortcut</th>
+<th scope="col" class="org-left">Command Invoked</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>M-.</code></td>
+<td class="org-left"><code>xref-find-definitions</code></td>
+<td class="org-left">Find definitions at point.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>M-,</code></td>
+<td class="org-left"><code>xref-go-back</code></td>
+<td class="org-left">Pop marker and return.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>M-?</code></td>
+<td class="org-left"><code>xref-find-references</code></td>
+<td class="org-left">Find references matching a pattern.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-M-.</code></td>
+<td class="org-left"><code>xref-find-apropos</code></td>
+<td class="org-left">Find symbols matching a pattern.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org8caae31" class="outline-3">
+<h3 id="bookmarks">Bookmarks</h3>
+<div class="outline-text-3" id="text-bookmarks">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Shortcut</th>
+<th scope="col" class="org-left">Command Invoked</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>C-x r m</code></td>
+<td class="org-left"><code>bookmark-set</code></td>
+<td class="org-left">Create / set bookmark.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x r b</code></td>
+<td class="org-left"><code>bookmark-jump</code></td>
+<td class="org-left">Open bookmark.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x r l</code></td>
+<td class="org-left"><code>bookmark-bmenu-list</code></td>
+<td class="org-left">List bookmarks.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org9bf257b" class="outline-3">
+<h3 id="dired-buffer">Dired Buffer</h3>
+<div class="outline-text-3" id="text-dired-buffer">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Shortcut</th>
+<th scope="col" class="org-left">Command Invoked</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>C-o</code></td>
+<td class="org-left"><code>dired-display-file</code></td>
+<td class="org-left">Preview file but stay in Dired buffer.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-u k</code></td>
+<td class="org-left"><code>dired-do-kill-lines</code></td>
+<td class="org-left">Remove section.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>X</code></td>
+<td class="org-left"><code>dired-do-shell-command</code></td>
+<td class="org-left">Execute shell command on file.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>Q</code></td>
+<td class="org-left"><code>dired-do-find-regexp-and-replace</code></td>
+<td class="org-left">Query replace marked files, <code>&lt;space&gt;</code> accept, <code>n</code> decline and <code>C-x s</code> to save all.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>+</code></td>
+<td class="org-left"><code>dired-create-directory</code></td>
+<td class="org-left">Create directory.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>^</code></td>
+<td class="org-left"><code>dired-up-directory</code></td>
+<td class="org-left">Go up one directory.</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><code>find-name-dired</code></td>
+<td class="org-left">Recursively find a file.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orge3a96ee" class="outline-3">
+<h3 id="interface-to-spell-ispell-and-on-the-fly-spell-flyspell">Interface To Spell (Ispell) and On The Fly Spell (Flyspell)</h3>
+<div class="outline-text-3" id="text-interface-to-spell-ispell-and-on-the-fly-spell-flyspell">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Shortcut</th>
+<th scope="col" class="org-left">Command Invoked</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>M $</code></td>
+<td class="org-left"><code>ispell-word</code></td>
+<td class="org-left">Check and correct spelling of the word at point.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-M i</code></td>
+<td class="org-left"><code>completion-at-point</code></td>
+<td class="org-left">Complete the word before point based on the spelling dictionary.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>M-TAB</code></td>
+<td class="org-left"><code>flyspell-auto-correct-word</code></td>
+<td class="org-left">Automatically corrects the current word at point, will also cycle between option.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-c $</code></td>
+<td class="org-left"><code>flyspell-correct-word-before-point</code></td>
+<td class="org-left">Correct word before point.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org4b972eb" class="outline-3">
+<h3 id="org-buffer">Org Buffer</h3>
+<div class="outline-text-3" id="text-org-buffer">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Shortcut</th>
+<th scope="col" class="org-left">Command Invoked</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>S-M-RET</code></td>
+<td class="org-left"><code>org-insert-todo-heading</code></td>
+<td class="org-left">Insert a new TODO entry below the current one.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-c / t</code></td>
+<td class="org-left"><code>org-match-sparse-tree</code></td>
+<td class="org-left">View todo items in a sparse tree.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-c C-t</code></td>
+<td class="org-left"><code>org-todo</code></td>
+<td class="org-left">Toggle todo item state.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-c C-s</code></td>
+<td class="org-left"><code>org-schedule</code></td>
+<td class="org-left">Schedule todo item.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-c C-d</code></td>
+<td class="org-left"><code>org-deadline</code></td>
+<td class="org-left">Add deadline to todo item.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-c [</code></td>
+<td class="org-left"><code>org-agenda-file-to-front</code></td>
+<td class="org-left">Add file to agenda.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-c ]</code></td>
+<td class="org-left"><code>org-remove-file</code></td>
+<td class="org-left">Remove file to agenda.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-c .</code></td>
+<td class="org-left"><code>org-timestamp</code></td>
+<td class="org-left">Insert current date.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-c C-e</code></td>
+<td class="org-left"><code>org-export-dispatch</code></td>
+<td class="org-left">Open exporter.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-c C-e #</code></td>
+<td class="org-left"><code>org-export-dispatch</code></td>
+<td class="org-left">Insert template.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-c C-e P x</code></td>
+<td class="org-left"><code>org-export-dispatch</code></td>
+<td class="org-left">Export specific project.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgbe50930" class="outline-3">
+<h3 id="eww">EWW</h3>
+<div class="outline-text-3" id="text-eww">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Shortcut</th>
+<th scope="col" class="org-left">Command Invoked</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>B</code></td>
+<td class="org-left"><code>eww-list-bookmarks</code></td>
+<td class="org-left">Display your bookmarks.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>b</code></td>
+<td class="org-left"><code>eww-add-bookmark</code></td>
+<td class="org-left">Add the current page as a bookmark.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>l</code></td>
+<td class="org-left"><code>eww-back-url</code></td>
+<td class="org-left">Go to the previously displayed page.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>r</code></td>
+<td class="org-left"><code>eww-forward-url</code></td>
+<td class="org-left">Go to the next displayed page.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>g</code></td>
+<td class="org-left"><code>eww-reload</code></td>
+<td class="org-left">Reload the current page.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>G</code></td>
+<td class="org-left"><code>eww</code></td>
+<td class="org-left">Go to a new address.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>H</code></td>
+<td class="org-left"><code>eww-list-histories</code></td>
+<td class="org-left">Shows a list of your histories.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>TAB</code></td>
+<td class="org-left"><code>shr-next-link</code></td>
+<td class="org-left">Skip to the next link.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgc4284ef" class="outline-3">
+<h3 id="useful-commands">Useful Commands</h3>
+<div class="outline-text-3" id="text-useful-commands">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Command</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>keep-lines</code></td>
+<td class="org-left">Delete all lines not matching the provided regex.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>flush-lines</code></td>
+<td class="org-left">Delete all lines matching the provided regex.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>sort-lines</code></td>
+<td class="org-left">Sort lines in region alphabetically.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>delete-duplicate-lines</code></td>
+<td class="org-left">Delete all but one copy of any identical lines in the region.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>ff-find-other-file</code></td>
+<td class="org-left">Find the header or source file corresponding to this file.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+<footer id="postamble" class="status">
+<p align="center" style="font-size:0.7em;">
+<br>
+- - - - - - -  - - - - - - -  - - - - - - -  - - - - - - -
+<br><br>
+2023 - <b>Dilip<sup></sup></b>- Made with 󰣐  using <a href="https://orgmode.org/">Org-mode</a> &amp; <a href="https://www.gnu.org/software/emacs/">Emacs</a>
+<br>
+The <a href="https://github.com/idlip/idlip.github.io">code</a> for this site is licensed under the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3</a>, and the content is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>
+</p>
+
+<!-- with org convert -->
+
+<!-- #+attr_html: :align center :style font-size:0.7em; -->
+<!-- Made with 󰣐  using [[https://orgmode.org][Org-mode]] & [[https://www.gnu.org/software/emacs/][Emacs]] -->
+<!-- The [[https://github.com/idlip/idlip.github.io][code]] for this site is licensed under the [[https://www.gnu.org/licenses/gpl-3.0.en.html][GPLv3]], and the content is licensed under [[https://creativecommons.org/licenses/by-sa/4.0/][CC-BY-SA 4.0]] -->
+</footer>
+</body>
+</html>

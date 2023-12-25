@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>&lrm;</title>
+<meta name="generator" content="Org mode">
+</head>
+<body>
+<nav id="preamble" class="status">
+<link rel="stylesheet" type="text/css" href="/stylesheet.css"/>
+
+<p align="right">
+<a class="active" href="/">Home</a> |
+<a href="/sitemap.html" align="right">Posts</a> |
+<a href="/about.html">About</a> |
+<a href="/repository.html">Repository</a>
+
+</p>
+</nav>
+<main id="content">
+<div id="outline-container-orgd1c99d6" class="outline-2">
+<h2 id="orgd1c99d6">NixOS : Reproducible - Immutable&#xa0;&#xa0;&#xa0;<span class="tag"><span class="emacs">emacs</span>&#xa0;<span class="distro">distro</span>&#xa0;<span class="linux">linux</span>&#xa0;<span class="nixos">nixos</span></span></h2>
+<div class="outline-text-2" id="text-orgd1c99d6">
+<hr>
+
+<p>
+Introduction part, you would better have read it on official nixos site (<a href="https://nixos.org">https://nixos.org</a>)
+</p>
+</div>
+
+<div id="outline-container-orgd18d739" class="outline-3">
+<h3 id="orgd18d739">"Should you try NixOS?" ❄️</h3>
+<div class="outline-text-3" id="text-orgd18d739">
+<p>
+Here's an answer from a non-programmer, who just browses and watches media.
+Just don't, if you are looking for small benefit. <b>Don't!</b>
+ regret having hard time to figure out petty things, again forget about error, you cannot even search in web.
+</p>
+
+<p>
+But, if you have decided, go with it. According to me (non-programmer), these points are good to consider NixOS
+</p>
+<ul class="org-ul">
+<li>You use Emacs (lol), <b>Emacs</b> ❤️  <b>Nix</b> is Match made in Heaven.</li>
+<li>You want to declare stuffs and get same output, and forget what all you setup, cause its all declared in config.</li>
+<li>You want an isolated environments (shell) to do some stuffs without involving whole system.</li>
+<li>You want to stop troubleshooting and breaking update and are lazy to backup, and want to rollback with ease like with just a reboot.</li>
+<li>You want to say I use <b>Nixos Btw</b>.</li>
+<li>You don't want to worry about breaking your system nor fix something when you are updating system.</li>
+<li>You are willing to learn (advanced) things and fine with steep learning curve.</li>
+</ul>
+
+<hr>
+</div>
+</div>
+
+<div id="outline-container-orgff3dd5b" class="outline-3">
+<h3 id="orgff3dd5b">How I manage my system 🌲</h3>
+<div class="outline-text-3" id="text-orgff3dd5b">
+<p>
+I manage my whole system with single org file. Its easy and pretty handy. You can read that file here <b>↬</b> <a href="https://github.com/idlip/d-nix/blob/onepiece/d-setup.org">d-setup.org</a> , its both self documenting and has all source code blocks.
+</p>
+
+<p>
+Another key feature in my setup is, every file i tangle is at <b>read-only mode</b>. So generally we can avoid editing/touching them. Thus, every action has to be made in <b>d-setup.org</b> only.
+</p>
+
+<p>
+Also, I have made files to be <b>symlink</b>, so i can edit them without requiring to rebuild whole thing!
+</p>
+
+<hr>
+</div>
+
+
+<div id="outline-container-orgcf2d31b" class="outline-4">
+<h4 id="orgcf2d31b">Credits 🎖️</h4>
+<div class="outline-text-4" id="text-orgcf2d31b">
+<p>
+These configs were the inspiration and helped to build this way.
+</p>
+
+<p>
+I thank them sincerely.
+</p>
+
+<p>
+<a href="https://github.com/Iron-Shark/Technonomicon">Iron Shark</a> <b>⟹</b> Made migrating to Single org-file config very easy.
+</p>
+
+<p>
+<a href="https://github.com/sioodmy/dotfiles">Sioodmy</a> <b>⟹</b> First config which I understand thoroughly and modified based on this.
+</p>
+
+<hr>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer id="postamble" class="status">
+<p align="center" style="font-size:0.7em;">
+<br>
+- - - - - - -  - - - - - - -  - - - - - - -  - - - - - - -
+<br><br>
+2023 - <b>Dilip<sup></sup></b>- Made with 󰣐  using <a href="https://orgmode.org/">Org-mode</a> &amp; <a href="https://www.gnu.org/software/emacs/">Emacs</a>
+<br>
+The <a href="https://github.com/idlip/idlip.github.io">code</a> for this site is licensed under the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3</a>, and the content is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>
+</p>
+
+<!-- with org convert -->
+
+<!-- #+attr_html: :align center :style font-size:0.7em; -->
+<!-- Made with 󰣐  using [[https://orgmode.org][Org-mode]] & [[https://www.gnu.org/software/emacs/][Emacs]] -->
+<!-- The [[https://github.com/idlip/idlip.github.io][code]] for this site is licensed under the [[https://www.gnu.org/licenses/gpl-3.0.en.html][GPLv3]], and the content is licensed under [[https://creativecommons.org/licenses/by-sa/4.0/][CC-BY-SA 4.0]] -->
+</footer>
+</body>
+</html>

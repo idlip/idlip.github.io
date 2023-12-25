@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>&lrm;</title>
+<meta name="generator" content="Org mode">
+</head>
+<body>
+<nav id="preamble" class="status">
+<link rel="stylesheet" type="text/css" href="/stylesheet.css"/>
+
+<p align="right">
+<a class="active" href="/">Home</a> |
+<a href="/sitemap.html" align="right">Posts</a> |
+<a href="/about.html">About</a> |
+<a href="/repository.html">Repository</a>
+
+</p>
+</nav>
+<main id="content">
+<div id="outline-container-org558aa01" class="outline-2">
+<h2 id="org558aa01">Nix: Home for Acer&#xa0;&#xa0;&#xa0;<span class="tag"><span class="linux">linux</span>&#xa0;<span class="nixos">nixos</span></span></h2>
+<div class="outline-text-2" id="text-org558aa01">
+<p>
+In this post am sharing some of the experience of using my new laptop, <b>Acer swift Go Oled</b>. Compact, Premium ultra-book with Oled, Yes, a good hand made mobile laptop.
+</p>
+
+<p>
+As expected and as usual, it got windows 11 and first major encounter was heating and battery issue. It got me scared as it felt wrong decision. Since many claimed windows gives better battery life than Linux. It gave me nightmare of installing Linux too, really, new laptop with 4-5 hours of battery, for oled with black screens?
+</p>
+
+<p>
+Anyways, windows made me really tinker to my needs, went on with <code>winutils</code> and de-bloated few stuffs and made it somewhat tacit for me, then too I demanded more of it. To which windows felt weird and too much to handle. Thus did finally decide to dual boot or straightaway to erase disk for Linux. My first thought of choice was to use Arch with gnome, but since I had well maintained <a href="https://github.com/idlip/d-nix">nixos config</a>, I went with same config without much a-due.
+</p>
+
+<p>
+Viola it gave me the exact setup I was looking for, enabling my hand to feel back in pace. Yet I was worried about battery and heating point of view, although many say, <code>laptops arent made to run on battery</code>, yet the heat? the air exhaust hitting my oled display directly?.
+</p>
+
+<p>
+I gave a shot to <code>auto-cpufreq</code>, it did a well decent job, yet I felt too little gain, I did change <code>intel_pstate</code> to <code>acpu</code> one. All i noticed is it lowered the max frequency rate from 4.3GHz to 3.2GHz.
+</p>
+
+<p>
+Later on after many rebuilds, I saw Nixos <a href="https://nixos.wiki/wiki/Laptop">wiki on laptop</a>, may seem outdated, but it was legit, and I did enable service such as <code>thermald</code>, <code>tlp</code> and viola later on I noticed it works well. Seriously I don't know how, it gave me better battery life, less heating in Linux (nixos) than windows. Maybe magical to me as others claim vice-versa.
+</p>
+
+<p>
+Nonetheless, nixos handled the magics of services and making it a better experience by just writing one line of configs to <code>true;</code>. My desktop runs Hyprland (wayland) and it works flawlessly.
+</p>
+
+<p>
+Okay, let me tell you about Finger Print, it gave me little trouble, and funny enough, it was again just to say <code>true;</code> on a line.
+</p>
+
+<p>
+I have FP, so obviously I wanted to be cool looking by using it, I initially did not expect FP to work, again online poeple said so. I was following some debian/ubuntu help on FP and enabling some drivers and all, it did not work. Later I gotta know that <code>fprintd</code> latest one already has the support for my FP id, so just did enable <code>fprintd</code> and viola! viola!, now I login in TTY with FingerPrint.
+</p>
+
+<p>
+Although I wasted some time one tinkering and making it to work on my needs, I was not doing work I wanted, thus decided to settle and do productive tasks from then on. Anyway, whatever you customize it will be little to no gain. That's why I decided to make and get my blog going, it is better to make one day each month or on boring holiday to do cleaning and customizing on OS.
+</p>
+
+<p>
+Finally, It has become a pleasant experience to get nix and make it work as I expected on <b>Acer</b>.
+</p>
+
+<p>
+Yet one thing remains unexplored, fan controlling. I see no mention of fan or <span class="underline">RPM</span> via <code>sensors</code> command, so one way is to check another tool. I skipped that part, since I don't face heating issue or high fan noise even when I'm plugged in.
+</p>
+
+<p>
+Ultimately one more thing making all experience better is the <b>GOAT Emacs</b>. Bringing back my config and using it with more speed is another level of bliss.
+</p>
+
+<p>
+This has become another embark of a journey, where the todo's are just piling even more, and it looks fun to explore more and utilize efficiently for learning.
+</p>
+</div>
+</div>
+</main>
+<footer id="postamble" class="status">
+<p align="center" style="font-size:0.7em;">
+<br>
+- - - - - - -  - - - - - - -  - - - - - - -  - - - - - - -
+<br><br>
+2023 - <b>Dilip<sup></sup></b>- Made with 󰣐  using <a href="https://orgmode.org/">Org-mode</a> &amp; <a href="https://www.gnu.org/software/emacs/">Emacs</a>
+<br>
+The <a href="https://github.com/idlip/idlip.github.io">code</a> for this site is licensed under the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3</a>, and the content is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>
+</p>
+
+<!-- with org convert -->
+
+<!-- #+attr_html: :align center :style font-size:0.7em; -->
+<!-- Made with 󰣐  using [[https://orgmode.org][Org-mode]] & [[https://www.gnu.org/software/emacs/][Emacs]] -->
+<!-- The [[https://github.com/idlip/idlip.github.io][code]] for this site is licensed under the [[https://www.gnu.org/licenses/gpl-3.0.en.html][GPLv3]], and the content is licensed under [[https://creativecommons.org/licenses/by-sa/4.0/][CC-BY-SA 4.0]] -->
+</footer>
+</body>
+</html>

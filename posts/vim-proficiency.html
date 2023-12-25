@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>&lrm;</title>
+<meta name="generator" content="Org mode">
+</head>
+<body>
+<nav id="preamble" class="status">
+<link rel="stylesheet" type="text/css" href="/stylesheet.css"/>
+
+<p align="right">
+<a class="active" href="/">Home</a> |
+<a href="/sitemap.html" align="right">Posts</a> |
+<a href="/about.html">About</a> |
+<a href="/repository.html">Repository</a>
+
+</p>
+</nav>
+<main id="content">
+<div id="outline-container-org71fe939" class="outline-2">
+<h2 id="org71fe939">Vim Proficiency&#xa0;&#xa0;&#xa0;<span class="tag"><span class="terminal">terminal</span>&#xa0;<span class="keybindings">keybindings</span>&#xa0;<span class="cheatsheet">cheatsheet</span>&#xa0;<span class="vim">vim</span></span></h2>
+<div class="outline-text-2" id="text-org71fe939">
+<p>
+Although I don't use vim, it has good points for being easy <b>keyboard glue</b>. Why not learn both of the best worlds of Editors?
+</p>
+
+<p>
+Apart from normal vim navigations and operators, These are some of the unique vim magics, which I haven't used at all.
+</p>
+</div>
+
+<div id="outline-container-org604b1c8" class="outline-3">
+<h3 id="marks">Marks</h3>
+<div class="outline-text-3" id="text-marks">
+<p>
+This is the important one, I have not used this at all. Should try and make use of it. Although emacs <code>mark-ring</code> is alot better.
+</p>
+
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Shortcut</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>`^</code></td>
+<td class="org-left">Last position of cursor in insert mode</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>`.</code></td>
+<td class="org-left">Last change in current buffer</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>`"</code></td>
+<td class="org-left">Last exited current buffer</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>`0</code></td>
+<td class="org-left">In last file edited</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>''</code></td>
+<td class="org-left">Back to line in current buffer where jumped from</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>``</code></td>
+<td class="org-left">Back to position in current buffer where jumped from</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>`[</code></td>
+<td class="org-left">To beginning of previously changed or yanked text</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>`]</code></td>
+<td class="org-left">To end of previously changed or yanked text</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>`&lt;</code></td>
+<td class="org-left">To beginning of last visual selection</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>`&gt;</code></td>
+<td class="org-left">To end of last visual selection</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>ma</code></td>
+<td class="org-left">Mark this cursor position as <code>a</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>`a</code></td>
+<td class="org-left">Jump to the cursor position <code>a</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>'a</code></td>
+<td class="org-left">Jump to the beginning of the line with position <code>a</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>d'a</code></td>
+<td class="org-left">Delete from current line to line of mark <code>a</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>d`a</code></td>
+<td class="org-left">Delete from current position to position of mark <code>a</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>c'a</code></td>
+<td class="org-left">Change text from current line to line of <code>a</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>y`a</code></td>
+<td class="org-left">Yank text from current position to position of <code>a</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>:marks</code></td>
+<td class="org-left">List all current marks</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>:delm a</code></td>
+<td class="org-left">Delete mark <code>a</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>:delm a-d</code></td>
+<td class="org-left">Delete marks <code>a</code>, <code>b</code>, <code>c</code>, <code>d</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>:delm abc</code></td>
+<td class="org-left">Delete marks <code>a</code>, <code>b</code>, <code>c</code></td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+</div>
+</div>
+
+<div id="outline-container-orgdea26b4" class="outline-3">
+<h3 id="navigation">Navigation</h3>
+<div class="outline-text-3" id="text-navigation">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Shortcut</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>%</code></td>
+<td class="org-left">Nearest/matching <code>{[()]}</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[(</code> <code>[{</code> <code>[&lt;</code></td>
+<td class="org-left">Previous <code>(</code> or <code>{</code> or <code>&lt;</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>])</code></td>
+<td class="org-left">Next</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[m</code></td>
+<td class="org-left">Previous method start</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[M</code></td>
+<td class="org-left">Previous method end</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+</div>
+</div>
+
+<div id="outline-container-orgdcace89" class="outline-3">
+<h3 id="jumping">Jumping</h3>
+<div class="outline-text-3" id="text-jumping">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Shortcut</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>&lt;C-O&gt;</code></td>
+<td class="org-left">Go back to previous location</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>&lt;C-I&gt;</code></td>
+<td class="org-left">Go forward</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>gf</code></td>
+<td class="org-left">Go to file in cursor</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+</div>
+</div>
+
+<div id="outline-container-org43eb252" class="outline-3">
+<h3 id="counters">Counters</h3>
+<div class="outline-text-3" id="text-counters">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Shortcut</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>&lt;C-A&gt;</code></td>
+<td class="org-left">Increment number</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>&lt;C-X&gt;</code></td>
+<td class="org-left">Decrement</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+</div>
+</div>
+
+<div id="outline-container-org2525980" class="outline-3">
+<h3 id="tags">Tags</h3>
+<div class="outline-text-3" id="text-tags">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Shortcut</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>:tag Classname</code></td>
+<td class="org-left">Jump to first definition of Classname</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>&lt;C-]&gt;</code></td>
+<td class="org-left">Jump to definition</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>g]</code></td>
+<td class="org-left">See all definitions</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>&lt;C-T&gt;</code></td>
+<td class="org-left">Go back to last tag</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>&lt;C-O&gt; &lt;C-I&gt;</code></td>
+<td class="org-left">Back/forward</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>:tselect Classname</code></td>
+<td class="org-left">Find definitions of Classname</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>:tjump Classname</code></td>
+<td class="org-left">Find definitions of Classname (auto-select 1st)</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+</div>
+</div>
+
+<div id="outline-container-org57dd250" class="outline-3">
+<h3 id="folds">Folds</h3>
+<div class="outline-text-3" id="text-folds">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Shortcut</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>zo</code> <i>/</i> <code>zO</code></td>
+<td class="org-left">Open</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>zc</code> <i>/</i> <code>zC</code></td>
+<td class="org-left">Close</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>za</code> <i>/</i> <code>zA</code></td>
+<td class="org-left">Toggle</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>zv</code></td>
+<td class="org-left">Open folds for this line</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>zM</code></td>
+<td class="org-left">Close all</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>zR</code></td>
+<td class="org-left">Open all</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>zm</code></td>
+<td class="org-left">Fold more <i>(foldlevel += 1)</i></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>zr</code></td>
+<td class="org-left">Fold less <i>(foldlevel -= 1)</i></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>zx</code></td>
+<td class="org-left">Update folds</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+</div>
+</div>
+
+<div id="outline-container-orga9f5d0e" class="outline-3">
+<h3 id="command-line">Command line</h3>
+<div class="outline-text-3" id="text-command-line">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Shortcut</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>&lt;C-R&gt;&lt;C-W&gt;</code></td>
+<td class="org-left">Insert current word into the command line</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>&lt;C-R&gt;"</code></td>
+<td class="org-left">Paste from ” register</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>&lt;C-X&gt;&lt;C-F&gt;</code></td>
+<td class="org-left">Auto-completion of path in insert mode</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+</div>
+</div>
+
+<div id="outline-container-org6c4bf3c" class="outline-3">
+<h3 id="spell-checking">Spell checking</h3>
+<div class="outline-text-3" id="text-spell-checking">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Shortcut</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>:set spell spelllang=en_us</code></td>
+<td class="org-left">Turn on US English spell checking</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>]s</code></td>
+<td class="org-left">Move to next misspelled word after the cursor</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[s</code></td>
+<td class="org-left">Move to previous misspelled word before the cursor</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>z=</code></td>
+<td class="org-left">Suggest spellings for the word under/after the cursor</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>zg</code></td>
+<td class="org-left">Add word to spell list</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>zw</code></td>
+<td class="org-left">Mark word as bad/mispelling</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>zu</code> / <code>C-X (Insert Mode)</code></td>
+<td class="org-left">Suggest words for bad word under cursor from spellfile</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+See <code>:help spell</code>
+</p>
+
+<hr>
+
+<p>
+Source of this cheatsheet : <a href="https://devhints.io/vim">https://devhints.io/vim</a>
+</p>
+
+<p>
+With that noted, I hope you turn out to be a proficient <i><b>Vimmer</b></i> or an efficient <i><b>Emacser</b></i>
+</p>
+
+<p>
+For emacs, I have my previous post for it.
+</p>
+</div>
+</div>
+</div>
+</main>
+<footer id="postamble" class="status">
+<p align="center" style="font-size:0.7em;">
+<br>
+- - - - - - -  - - - - - - -  - - - - - - -  - - - - - - -
+<br><br>
+2023 - <b>Dilip<sup></sup></b>- Made with 󰣐  using <a href="https://orgmode.org/">Org-mode</a> &amp; <a href="https://www.gnu.org/software/emacs/">Emacs</a>
+<br>
+The <a href="https://github.com/idlip/idlip.github.io">code</a> for this site is licensed under the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3</a>, and the content is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>
+</p>
+
+<!-- with org convert -->
+
+<!-- #+attr_html: :align center :style font-size:0.7em; -->
+<!-- Made with 󰣐  using [[https://orgmode.org][Org-mode]] & [[https://www.gnu.org/software/emacs/][Emacs]] -->
+<!-- The [[https://github.com/idlip/idlip.github.io][code]] for this site is licensed under the [[https://www.gnu.org/licenses/gpl-3.0.en.html][GPLv3]], and the content is licensed under [[https://creativecommons.org/licenses/by-sa/4.0/][CC-BY-SA 4.0]] -->
+</footer>
+</body>
+</html>
