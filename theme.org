@@ -363,9 +363,6 @@ blockquote p {
 #+end_src
 *** Table & caption
 #+begin_src css
-table {
-    border-collapse: collapse;
-}
 caption.t-above {
     caption-side: top;
 }
@@ -373,6 +370,14 @@ caption.t-bottom {
     caption-side: bottom;
 }
 
+table {
+    border-collapse: collapse;
+    border: 1px solid;
+    width: 100%;
+}
+table, th, td {
+    border: 1px solid;
+}
 #+end_src
 *** TODO misc
 #+begin_src css :tangle no
