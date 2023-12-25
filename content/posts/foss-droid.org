@@ -1,0 +1,47 @@
+** FOSS : On Droid :fossdroid:android:
+
+As we know, Android is widely popular OS for many phone. But these days its all filled with junks and bloated apps, these are to say so called *"Popular Android Apps"* or *"Trending Apps"*. The reason simply would be "everyone in my circle uses it" or "I use it because _they_ use it".
+
+But surely you are not giving yourself some privacy or *space* that you need for your own *personal phone*.
+I'm talking about using Free/Libre and Open Source (FOSS) Apps. Free doesn't mean by price, Free means *Freedom*. Freedom that comes with :
+  - No Trackers.
+  - No Ads.
+  - Minimal permission.
+  - Has customization to users need.
+  - No Restrictions.
+
+These can be achieved in this modern time, by Discovering and using FOSS Apps, the best place being [[https://f-droid.org][F-droid]]  or [[https://libreddit.kavin.rocks/r/fossdroid][r/fossdroid]].
+
+There are pretty much all apps under FOSS area for every purpose, they are good looking with *Modern UI*, *Lots of Customizations* and *friendly with Battery*.
+
+I happened to search for book and novel reader and found very good apps there, like QuickNovel.
+There is a Manga reader and lots more for every purpose.
+
+I exclusively use every apps from F-droid, because they are great.
+You should also use it, as you might find something interesting and surely, gets Surprised; and say in your head, */Gosh I should have known this before/*.
+
+------
+
+Some of the cool apps I use everyday :
+
+| Class                          | Apps                                   |
+|--------------------------------+----------------------------------------|
+| Launcher                       | Kvæsitso ([[https://apt.izzysoft.de/fdroid/index/apk/de.mm20.launcher2.release][izzydroid]], [[https://github.com/MM2-0/Kvaesitso][git]])              |
+| F-droid Client                 | Neo Store ([[https://f-droid.org/en/packages/com.machiav3lli.fdroid/][fdroid]], [[https://github.com/NeoApplications/Neo-Store][git]])                |
+| Browser                        | Mull ([[https://f-droid.org/en/packages/us.spotco.fennec_dos/][fdroid]], [[https://gitlab.com/divested-mobile/mull-fenix][git]])                     |
+| Rss Reader                     | Read You ([[https://f-droid.org/en/packages/me.ash.reader/][fdroid]], [[https://github.com/Ashinch/ReadYou][git]])                 |
+| YouTube                        | LibreTube ([[https://f-droid.org/en/packages/com.github.libretube/][fdroid]], [[https://github.com/libre-tube/LibreTube][git]])                |
+| PDF/Ebook Reader               | Librera Reader ([[https://f-droid.org/en/packages/com.foobnix.pro.pdf.reader/][fdroid]], [[https://github.com/foobnix/LibreraReader][git]])           |
+| Manga Reader                   | Tachiyomi ([[https://f-droid.org/en/packages/eu.kanade.tachiyomi/][fdroid]], [[https://github.com/tachiyomiorg/tachiyomi][git]])                |
+| Password Manager               | KeePassDX ([[https://f-droid.org/en/packages/com.kunzisoft.keepass.libre/][fdroid]], [[https://github.com/Kunzisoft/KeePassDX][git]])                |
+| Novel Reader                   | QuickNovel ([[https://apt.izzysoft.de/fdroid/index/apk/com.lagradost.quicknovel][izzydroid]], [[https://github.com/LagradOst/QuickNovel][git]])            |
+| Keyboard                       | Unexpected Keyboard ([[https://f-droid.org/en/packages/juloo.keyboard2/][fdroid]], [[https://github.com/Julow/Unexpected-Keyboard][git]])      |
+| Media Player                   | VLC ([[https://f-droid.org/en/packages/org.videolan.vlc/][fdroid]], [[https://code.videolan.org/videolan/vlc-android][git]])                      |
+| Gallery + Calendar (many more) | Simple Tools Suite ([[https://search.f-droid.org/?lang=en&q=simple+tools][fdroid]], [[https://github.com/SimpleMobileTools][git]], [[https://simplemobiletools.com][site]]) |
+| Note Taking                    | Orgzly ([[https://f-droid.org/en/packages/com.orgzly/][fdroid]], [[https://github.com/orgzly/orgzly-android][git]])                   |
+
+------
+
+#+begin_center
+With that fossed, I hope your phone gets a new life and finally breathes alive!
+#+end_center

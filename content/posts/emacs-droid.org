@@ -1,0 +1,51 @@
+** Emacs on Droid
+
+Emacs is a definite Greatest editor of all time, the extensibility power is unmatched with any other software. Users of Emacs can only know what it is, one who has not used it may not really understand the principles and power it gives us, the users.
+
+Once settled with it on PC, its not late to think of something similar for our handy pocket phones, at least support for *org-mode* so we organize our life. The research leads us to find apps, and its unfortunate that market has lots of apps supporting markdown, just for its markup. Even org-mode is good for markup only, Karl voit's [[https://karl-voit.at/2017/09/23/orgmode-as-markup-only/][post]] explains it very well.
+
+Finally we have some apps for org-mode, namely on Android [[https://github.com/orgzly/orgzly-android][Orgzly]] (maintained: [[https://github.com/orgzly-revived/orgzly-android-revived][orgzly-revived]]), Orgro (read-only app) and there is [[https://organice.200ok.ch/][Organice]] (PWA site, unique, supports desktop).
+Surprisingly IOS has many apps for org-mode, namely [[https://beorgapp.com/][beorg]] and [[https://plainorg.com/][plain org]] (I dont use IOS, so please search app store).
+
+New project under development [[https://github.com/Artawower/orgnote-client][OrgNote]] also looks promising.
+
+But it was near February, 2023, that Po Lu, one of the Emacs developer, started and released support for touch-screen devices (including Android) and to our surprise it was *the graphical Emacs*, available now on Android. But before trying the first doubts and cons expected was that it does not work well with virtual keyboard, so only good option is to carry physical keyboard everywhere?
+That could be solved by getting adjusted to keyboard app called "Hackers Keyboard" (TODO link).
+
+But as I dug deep, the developer Po Lu, was on telegram channel in disguise, as I pointed that emacs android needed android's share feature (like open-with) to other people, he had seen it and implemented is very quickly. It shows how much of an interesting take-up it is.
+
+Orgzly actually satisfied org-mode and agenda things with help of syncthing over org directory. But the next bummer came when I fell in love with [[https://github.com/skeeto/elfeed][Elfeed]] (RSS reader) and badly wanted to read feeds in sync with my phone. Since Emacs officially made its way for Android, so why not open some doors, indeed it did gave the power of emacs-lisp!
+
+Initially I started with bare-bone config, and later tried to incorporate my PC config with android, and it was easy, without much hassle. Just had to define a constant to check if system is on Linux or Android, and use the keyword in condition statements and =use-package=. Next thought would be to use Unix tools/commands, so it only leads to Termux, and after few days, the developer released Termux signed apk to use in conjunction with emacs, so as to leverage the command line utilities in Android emacs too, namely ~ripgrep~, ~git~. I have not tried ~image-magick~, ~mupdf~ for =pdf-tools=. But frankly [[https://github.com/foobnix/LibreraReader][Librera reader]] is good enough.
+
+Here is a [[https://marek-g.github.io/posts/tips_and_tricks/emacs_on_android/][blog post]] by marek-g explaining how termux is modified to use with Emacs
+
+Note: Fdroid emacs apk lacks some support like GnuTLS (so won't be able to install package or use eww), thus the only source to get emacs builds for Android is https://sourceforge.net/projects/android-ports-for-gnu-emacs
+
+For anyone trying it out again or newly, please make sure you go through =C-h R android= or =C-h r m android= for frequent issues or things to know for Android build. For any queries to me, please feel free to open up an issue over this [[https://github.com/idlip/d-nix][repo]].
+
+Overall with setting only few variables for android specifically, I replicated almost same emacs config on Android. The definite org-mode reader, read Elfeed feeds in sync with PC, whatever emacs packages you use.
+
+Config just for android exclusively:
+#+begin_src emacs-lisp
+;; define constant to check if system is android
+(defconst d/on-droid (eq system-type 'android))
+;; if system is android, executes following code
+(when d/on-droid
+  (custom-set-variables
+   '(touch-screen-precision-scroll t) ;; smooth scrolling
+   '(touch-screen-display-keyboard t)
+   ;; ^ display virtual keyboard when touch on phone screen
+   ;; does not work on read-only buffer (dashboard, startup..)
+   '(browse-url-android-share t))
+  ;; open links/urls with android's open-with or share kinda popup
+
+  (defun d/key-droid()
+    "To enable touch screen keyboard"
+    (interactive)
+    (frame-toggle-on-screen-keyboard (selected-frame) nil)
+    )
+  )
+#+end_src
+
+I'm not sure how suitable it is for coding environment (with lsp and complexities), but it behaves as expected for reading purpose and for quick note taking. I should probably say, it excels in that segment.

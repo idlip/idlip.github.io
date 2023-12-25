@@ -1,0 +1,61 @@
+** My Linux Journey :distro:linux:
+
+*Small info/log on my linux journey and my experience.*
+
+/If you are reading this, I encourage you to write blogs like this and have it in your git repo. Don't forget to tag or inform me, I'd be glad to read your journey too!/
+
+-----
+
+Linux is not widely recommended or discussed topic among real life friends or circle, every system comes pre-installed with win-dows, and its no big surprise people don't have a feel towards their usage of OS.
+
+Not many people update their system, not many try to explore Alternative softwares, they stick very much to the default out-of-the-box Application. Tbh if you deep dive and understand windows, it is total crap, *Obnoxious*.
+
+My reason to switch over to Linux was simple as other had :
+- No Freedom
+- Slow win-dows
+- Cannot even run the browser properly
+- Cannot even do multitasking efficiently
+- The bloatware crap were too much
+- Updates are like *eternal sleep* (No-sense updates)
+
+My linux journey was from Linux Mint > EndeavourOS > Arch Linux > and now NixOS.
+
+*** The Embark
+
+I started to explore some YouTube video on Linux (as a normie at that time), soon I got familiar with good explanation, thankfully CTT had made an Linux Mint playlist and it helped to installing the first and the best *Beginner Distro*, the *Linux Mint*.
+
+The gain and experience was *Ultimate*. Loved it, felt the Freedom, felt the deeper understanding of a *real System*.
+
+I choose the flagship Cinnamon DE and it was very comfortable.
+
+After few months, I finally stumbled upon a drawback here, it was stable packages (old package versions).
+
+That is when I saw the concept of *Rolling release*, at that time *EndeavourOS* was the flavor of Linux distro at that time, peaked the distrowatch and all. So guess what, I installed EvndeavourOs and expanded more love towards terminal and latest packages.
+
+Soon i felt i did not needed what all EndeavourOS ships, I want custom or DIY (something i take control of), then i realized, EOS was arch-based, so guess again, went with the great Independent Arch linux.
+
+Boom, the best linux journey (learning), I only mean it for learning, other than that Arch is just cool kids bag.
+
+Finally, now with some other jolt of distro trend, I stumbled the name *"NixOS"*.
+It is somewhat reinventing the wheel, but it is so different that I'd hate to even say it as a Linux distro, It stands unique with linux distros.
+
+Tbh I loved LM and Arch alot, I was a devotee to Arch too, and I hated Nix when I tried, cause things were weird.
++ You won't know where to start nor what to refer
++ Flakes or home-manager, How to understand?
++ Do nix-env or rebuild all the time?
++ What files to edit to achieve same setup as my previous distro?
+
+  These were all the things that I hated and was frustrated about, there was still many things that felt hard.
+  I did leave Nix and install Arch few times back and forth, I was debating with myself and id my own research all over Internet.
+
+  That is when I thought nix lacked Documentation or good YouTuber to speak of, I really wish one of them could explain and make it their distro to explain timely on things.
+
+  Fine, somehow forced myself and came a long way of setting up Good working nixos config, now I'm on flakes.
+
+  Nix is great if it works as expected or if we make it work, but, if I get stuck or the issue goes for days that is when I really hate Nix, because it ain't easy to solve some unique issues. Most of these apply for HomeManager actually, it adds more trouble.
+
+  It is adviced to learn how Nix works or Nix as Functional Programming Language.
+
+--------
+
+Okay, so it was not about shilling Nix or anything, Just my Linux experience.

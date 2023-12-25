@@ -1,0 +1,20 @@
+** Linux : The Matrix :terminal:cheatsheet:minimal:
+
+There are tons of linux command line cheatsheet or guides.
+
+Here are some of the best reads, I suggest you to go throught each of it, *It's a gem*.
+
+
++ [[https://github.com/jlevy/the-art-of-command-line][The Art of Command Line]] — notes and tips on using the command-line, suitable for both beginners and experienced users.
++ [[https://www.commandlinefu.com/commands/browse/sort-by-votes][commandlinefu]] — command-line gems, includes a handy search feature.
++ [[https://github.com/tldr-pages/tldr][tldr]] — collection of community-maintained help pages for command-line tools.
++ [[https://explainshell.com/][explainshell]] — write down a command-line to see the help text that matches each argument.
++ [[http://www.compciv.org/unix-tools/][General purpose command-line tools]] — examples for most common usecases.
++ [[https://devmanual.gentoo.org/tools-reference/bash/index.html][Bash reference cheatsheet]] — nicely formatted and explained well.
++ [[https://devhints.io/bash][Bash scripting cheatsheet]] — quick reference to getting started with Bash scripting.
+
+--------------
+
+#+begin_center
+*With that ~coded~, I hope you enjoy the terminal. Unleash the Matrix*.
+#+end_center

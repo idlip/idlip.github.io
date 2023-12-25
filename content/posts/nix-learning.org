@@ -1,0 +1,257 @@
+** Nix Learning :linux:resources:nixos:
+
+NixOS is definitely an advanced Linux distro, but it ain't easy to understand overnight or like Archlinux to have easy manual, but it sure has alot on the table. There is whole bunch of families like Nix functional language, Nix package manager... so and on with the prefix "nix".
+
+This is really confusing, many hate nix and are not convinced to go long run just because of this difficulty (mess?). To make a simple thing work as expected, you need to go through such a rabbit hole.
+But once you know Nix* (families), everything will make sense, and you would feel bad to go back to old traditional Linux manners.
+
+These are some of the learning resources, which are rich in content and nonetheless, will be confusing at some point. But engineers do have spared their time in writing these, taking actions, to reach some audience and solve some of the caveats of Nix. So dig through and learn new ;)
+
+*** nix-learning
+
+**** Uncategorized
+:PROPERTIES:
+:CUSTOM_ID: uncategorized
+:END:
+- [[https://youtu.be/m4sv2M9jRLg][Nix Fundamentals]] (Video)
+- [[https://stephank.nl/p/2020-06-01-a-nix-primer-by-a-newcomer.html][A Nix terminology primer by a newcomer]] - Stéphan Kochen
+- [[https://shopify.engineering/what-is-nix][What Is Nix]]
+- [[https://nasirhm.github.io/posts/getting-started-with-nix-introduction/][Getting Started With Nix: Introduction]] - Nasir Hussain
+- [[https://blog.sulami.xyz/posts/nix-for-developers/][Lightning
+  Introduction to Nix for Developers]] - Robin Schroer
+- [[https://blog.knightsofthelambdacalcul.us/posts/2020-06-20-nix-nixos-thoughts/][Nix(OS)
+  Thoughts]] - ?
+- [[https://fzakaria.com/2020/11/17/on-demand-linked-libraries-for-nix.html][On-demand
+  linked libraries for Nix]] - Farid Zakaria
+- [[https://serokell.io/blog/what-is-nix][What Is Nix and Why You Should
+  Use It]] - ?
+- [[https://push.cx/2018/nixos][NixOS on prgmr and Failing to Learn
+  Nix]] - Peter Bhat Harkins
+- [[https://www.tweag.io/blog/2020-09-10-nix-cas/][Towards a
+  content-addressed model for Nix]] - Théophane Hufschmitt
+- [[https://lucperkins.dev/blog/nix-channel/][The easiest way (I've
+  found) to create your own Nix channel]] - Luc Perkins
+- [[https://www.johnbcoughlin.com/posts/nix-dynamic-linking/][Debugging
+  a dynamic linking bug in a Nix project]] - Jack Coughlin
+- [[https://notes.neeasade.net/adhoc-executable-patching-on-nix.html][adhoc
+  executable patching on nixos]] - ?
+- [[https://maxmcd.com/posts/strategies-for-binary-relocation/][Strategies
+  for Binary Relocation In Functional Build Systems]] - Max McDonnell
+- [[https://christine.website/blog/how-i-start-nix-2020-03-08][How I
+  Start: Nix]] - Christine Dodrill
+- [[https://christine.website/blog/i-was-wrong-about-nix-2020-02-10][I
+  was Wrong about Nix]] - Christine Dodrill
+- [[https://www.infoq.com/articles/configuration-management-with-nix/][Purely
+  Functional Configuration Management with Nix and NixOS]] - Eelco
+  Dolstra
+- [[https://bgottlob.com/post/2019-05-29-nix-use-cases/][Basic Use-Cases
+  of the Nix Package Manager]] - Brandon Gottlob
+- [[https://thomazleite.com/posts/development-with-nix-python/][Development
+  with Nix: Python]] - Thomaz Leite
+- [[https://medium.com/dapphub/dapp-tools-and-the-nix-package-manager-c4c692c87310][Dapp
+  tools and the Nix package manager]] - Mikael Brockman
+- [[http://gfxmonk.net/2015/01/03/nixos-and-stateless-deployment.html][NixOS
+  and Stateless Deployment]] - ?
+- [[https://christine.website/blog/nixos-encrypted-secrets-2021-01-20][Encrypted
+  Secrets with NixOS]] - Christine Dodrill
+- [[https://begriffs.com/posts/2016-08-08-intro-to-nixos.html][Purely
+  Functional Linux with NixOS]] - Joe Nelson
+- [[https://www.tweag.io/blog/2018-03-15-bazel-nix/][Nix + Bazel = fully
+  reproducible, incremental builds]] - Mathieu Boespflug, Théophane
+  Hufschmitt
+- [[https://zenhack.net/2016/01/24/reflections-on-nixos.html][Reflections
+  On NixOS]] - Ian Denhardt
+- [[https://blog.mayflower.de/5800-Hardening-Compiler-Flags-for-NixOS.html][Hardening
+  Compiler Flags for NixOS]] - Franz Pletz
+- [[https://hugoreeves.com/posts/2019/nix-home/][Your home in Nix
+  (dotfile management)]] - Hugo Reeves
+- [[https://christine.website/blog/nixos-desktop-flow-2020-04-25][My
+  NixOS Desktop Flow]] - Christine Dodrill
+- [[https://tailscale.com/blog/nixos-minecraft/][Tailscale on NixOS: A
+  new Minecraft server in ten minutes]] - Christine Dodrill
+- [[https://terinstock.com/post/2021/01/Setting-up-a-git-server-on-NixOS/][Setting
+  up a git server on NixOS]] - Terin Stock
+- [[https://myme.no/posts/2020-01-26-nixos-for-development.html][NixOS:
+  For developers]] - Martin Myrseth
+- [[https://myme.no/posts/2019-07-01-nixos-into-the-deep-end.html][NixOS:
+  Into the deep end]] - Martin Myrseth
+- [[https://rgoswami.me/posts/ccon-tut-nix/][A Tutorial Introduction to
+  Nix]] - Rohit Goswami
+- [[https://zimbatm.com/benchmark-nixpkgs][Benchmarking nixpkgs
+  builds]] - Jonas Chevalier
+- [[https://zimbatm.com/experiment-recursive-nix][Recursive Nix
+  experiment]] - Jonas Chevalier
+- [[https://zimbatm.com/deploying-k8s-apps-with-kubenix][Deploying
+  Kubernetes apps with KubeNix]] - Jonas Chevalier
+- [[https://github.com/tazjin/nix-1p][Nix - A One Pager]] - Vincent Ambo
+- [[https://foo-dogsquared.github.io/blog/posts/moving-into-nixos/][Moving
+  into NixOS]] - Gabriel Arazas
+- [[https://www.willghatch.net/blog/2020/06/27/nixos-the-good-the-bad-and-the-ugly/][NixOS:
+  the good, the bad, and the ugly]] - William G Hatch
+- [[https://www.nmattia.com/posts/2018-03-21-nix-reproducible-setup-linux-macos.html][Nix:
+  A Reproducible Setup for Linux and macOS]] - Nicolas Mattia
+- [[https://www.nmattia.com/posts/2019-01-15-easy-peasy-nix-versions.html][Easy
+  Peasy Nix Versions]] - Nicolas Mattia
+- [[https://www.nmattia.com/posts/2019-10-08-runtime-dependencies][Recovering
+  Nix derivation attributes of runtime dependencies]] - Nicolas Mattia
+
+#+begin_html
+  <!-- TODO: add more from their website -->
+#+end_html
+
+- [[https://ops.functionalalgebra.com/nix-by-example/][Nix By
+  Example]] - Susan Potter
+- [[https://ops.functionalalgebra.com/nixops-by-example/][NixOps By
+  Example]] - Susan Potter
+- [[https://ops.functionalalgebra.com/nixos-by-example/][NixOS By
+  Example]] - Susan Potter
+- [[https://ops.functionalalgebra.com/2018/04/18/inspecting-nix-lambda-named-arguments/][Inspecting
+  Nix lambda function named arguments]] - Susan Potter
+
+#+begin_html
+  <!-- TODO: add Tweag Nix flakes -->
+#+end_html
+
+**** Overview
+:PROPERTIES:
+:CUSTOM_ID: overview
+:END:
+- [[https://web.archive.org/web/20210123223258/https://ebzzry.io/en/nix/][A
+  Gentle Introduction to the Nix Family]]
+
+**** Nix the language
+:PROPERTIES:
+:CUSTOM_ID: nix-the-language
+:END:
+- [[https://nixcloud.io/tour][A tour of Nix]] - an introduction to the
+  Nix Programming Language
+
+**** Nix Shell
+:PROPERTIES:
+:CUSTOM_ID: nix-shell
+:END:
+- [[https://ghedam.at/15978/an-introduction-to-nix-shell][An
+  introduction to nix-shell]] - Mattia Gheda
+- [[https://fzakaria.com/2020/08/11/caching-your-nix-shell.html][caching
+  your nix-shell]] - Farid Zakaria
+
+**** Nix Flakes
+:PROPERTIES:
+:CUSTOM_ID: nix-flakes
+:END:
+- [[https://blog.ysndr.de/posts/internals/2021-01-01-flake-ification/][Building
+  with Nix Flakes for, eh .. reasons!]] - Yannik Sander
+- [[https://zimbatm.com/NixFlakes/][Nix Flakes edition]] - Jonas
+  Chevalier
+
+**** Experience
+:PROPERTIES:
+:CUSTOM_ID: experience
+:END:
+- [[https://catgirl.ai/log/nixos-experience/][Eight Months of NixOS]] -
+  ash
+- [[https://tech.channable.com/posts/2021-04-09-nix-is-the-ultimate-devops-toolkit.html][Nix
+  is the ultimate DevOps toolkit]] - Ruud van Asseldonk, Reinier Maas,
+  Falco Peijnenburg, Fabian Thorand, and Robert Kreuzer
+
+**** Language Specific
+:PROPERTIES:
+:CUSTOM_ID: language-specific
+:END:
+***** Java
+:PROPERTIES:
+:CUSTOM_ID: java
+:END:
+- [[https://fzakaria.com/2020/07/20/packaging-a-maven-application-with-nix.html][Packaging
+  a Maven application with Nix]]
+
+***** Elixir
+:PROPERTIES:
+:CUSTOM_ID: elixir
+:END:
+- [[https://ejpcmac.net/blog/using-nix-in-elixir-projects/][Using Nix in
+  Elixir projects]] - Jean-Philippe
+
+***** C++
+:PROPERTIES:
+:CUSTOM_ID: c
+:END:
+- [[https://blog.galowicz.de/2019/04/17/tutorial_nix_cpp_setup/][Setting
+  up a C++ project environment with nix]] - Jacek Galowicz
+
+***** Rust
+:PROPERTIES:
+:CUSTOM_ID: rust
+:END:
+- Managing Rust Dependencies with Nix - James Kay
+  - [[https://hadean.com/blog/managing-rust-dependencies-with-nix-part-i/][Part
+    1]]
+  - [[https://hadean.com/blog/managing-rust-dependencies-with-nix-part-ii/][Part
+    2]]
+
+**** Series
+:PROPERTIES:
+:CUSTOM_ID: series
+:END:
+- Nix by Example - James Fisher
+  - [[https://medium.com/@MrJamesFisher/nix-by-example-a0063a1a4c55][Part
+    1: The Nix expression language]]
+- Ian Henry's /How to Learn Nix/ series
+  - [[https://ianthehenry.com/posts/how-to-learn-nix/introduction/][Part
+    1: What's all this about?]]
+  - [[https://ianthehenry.com/posts/how-to-learn-nix/prior-knowledge/][Part
+    2: Prior knowledge]]
+  - [[https://ianthehenry.com/posts/how-to-learn-nix/glossary/][Part 3:
+    What we talk about when we talk about Nix]]
+  - [[https://ianthehenry.com/posts/how-to-learn-nix/quick-start-guide/][Part
+    4: Quick starts, full hearts]]
+  - [[https://ianthehenry.com/posts/how-to-learn-nix/basic-package-management/][Part
+    5: Basic package management]]
+  - [[https://ianthehenry.com/posts/how-to-learn-nix/profiles/][Part 6:
+    Profiles]]
+  - [[https://ianthehenry.com/posts/how-to-learn-nix/garbage-collection/][Part
+    7: Garbage collection]]
+  - [[https://ianthehenry.com/posts/how-to-learn-nix/channels/][Part 8:
+    Channels]]
+  - [[https://ianthehenry.com/posts/how-to-learn-nix/sharing/][Part 9:
+    Learning to share]]
+  - [[https://ianthehenry.com/posts/how-to-learn-nix/my-first-derivation/][Part
+    10: My first derivation]]
+  - [[https://ianthehenry.com/posts/how-to-learn-nix/okay-my-actual-first-derivation/][Part
+    11: Okay my actual first derivation]]
+  - [[https://ianthehenry.com/posts/how-to-learn-nix/nix-language/][Part
+    12: The Nix expression language]]
+  - [[https://ianthehenry.com/posts/how-to-learn-nix/derivations/][Part
+    13: Derivations]]
+  - [[https://ianthehenry.com/posts/how-to-learn-nix/built-in-functions/][Part
+    14: Built-in Functions]]
+  - [[https://ianthehenry.com/posts/how-to-learn-nix/advanced-topics/][Part
+    15: Advanced Topics]]
+  - [[https://ianthehenry.com/posts/how-to-learn-nix/command-reference/][Part
+    16: Command Reference]]
+  - [[https://ianthehenry.com/posts/how-to-learn-nix/configuration/][Part
+    17: Configuration]]
+  - [[https://ianthehenry.com/posts/how-to-learn-nix/nix-manual-reflection/][Part
+    18: So I read the manual huh]]
+  - [[https://ianthehenry.com/posts/how-to-learn-nix/switching-from-homebrew-to-nix/][Part
+    19: Switching from Homebrew to Nix]]
+  - [[https://ianthehenry.com/posts/how-to-learn-nix/my-first-nix-bug/][Part
+    20: My first Nix bug]]
+  - [[https://ianthehenry.com/posts/how-to-learn-nix/my-first-package-upgrade/][Part
+    21: My first package upgrade]]
+  - [[https://ianthehenry.com/posts/how-to-learn-nix/declarative-user-environment/][Part
+    22: Setting up a declarative user environment]]
+  - [[https://ianthehenry.com/posts/how-to-learn-nix/how-to-learn-nixpkgs/][Part
+    23: How to learn Nixpkgs]]
+  - [[https://ianthehenry.com/posts/how-to-learn-nix/overlays/][Part 24:
+    Overlays]]
+  - [[https://ianthehenry.com/posts/how-to-learn-nix/overriding/][Part
+    25: Overriding]]
+
+------
+
+These links are extracted from humancalico's git repo (https://github.com/humancalico/nix-learning).
+
+#+begin_center
+With that sorted, I hope learning becomes good ;)
+#+end_center
