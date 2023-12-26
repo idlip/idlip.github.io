@@ -520,11 +520,20 @@ footer {
 #preamble a {
     float: inherit;
     text-align: center;
-    padding: 14px 16px;
+    padding: 4px;
     text-decoration: underline;
     font-size: 0.8em;
 }
 
+#+end_src
+
+*** Index/sitemap
+#+begin_src css :tangle assets/index.css
+.org-ul {
+    display: table;
+    margin: 0 auto;
+    text-align: left;
+}
 #+end_src
 ** Emacs Theme
 - Generate css from emacs theme.

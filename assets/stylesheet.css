@@ -348,7 +348,7 @@ footer {
 #preamble a {
     float: inherit;
     text-align: center;
-    padding: 14px 16px;
+    padding: 4px;
     text-decoration: underline;
     font-size: 0.8em;
 }
