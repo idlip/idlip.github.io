@@ -92,40 +92,102 @@ of contents as a string, or nil if it is empty."
 
 (setq org-html-checkbox-type 'nerd-icon)
 
+
+(defun d/op-format-index (entry style project)
+  "Format posts/snippets with author and published data in the index page."
+  (cond ((not (directory-name-p entry))
+         (format "[[file:%s][%s]] - %s"
+                 entry
+                 (org-publish-find-title entry project)
+                 (format-time-string "%b %d, %Y"
+                                     ;; (format-time-string "%b %d, %Y" '(25994 57546 644885 340000))
+                                     (org-publish-find-date entry project))))
+        ((eq style 'tree) (file-name-nondirectory (directory-file-name entry)))
+        (t entry)))
+
+
+(setq org-publish-use-timestamps-flag t
+      org-publish-timestamp-directory "./.org-cache/"
+      org-export-with-section-numbers nil
+      org-export-use-babel nil
+      org-export-with-smart-quotes t
+      org-export-with-sub-superscripts nil
+      org-export-with-tags 'not-in-toc
+      org-html-htmlize-output-type 'css
+      org-html-prefer-user-labels t
+      org-html-link-org-files-as-html t
+      org-html-html5-fancy t
+      org-html-doctype "html5"
+      org-html-self-link-headlines nil
+      org-html-head-include-scripts nil
+      org-html-head-include-default-style nil
+      org-export-with-toc nil
+      make-backup-files nil)
+
+
+
 (setq org-publish-project-alist
       (list
-       (list "content"
-             :recursive t
+       (list "mainpage"
+             :recursive nil
              :base-directory "./content" ;; wherever the file is
              :base-extension "org"
              :publishing-directory "./public"
              :publishing-function 'org-html-publish-to-html
-             :headline-levels 4
-             :auto-preamble t
-             :html-doctype "html5"
-             :html-html5-fancy t
-             :html-head-include-scripts nil
-             :html-head-include-default-style nil
-             ;; :html-head "<link rel=\"stylesheet\" href=\"/stylesheet.css\" type=\"text/css\"/>"
              :html-preamble (file-contents "./assets/pre.html")
              :html-postamble (file-contents "./assets/post.html")
-             :with-author t
-             :with-creator t
-             :with-toc nil
-             :section-numbers nil
-             :time-stamp-file nil
-             :htmlized-source t
              :html-divs '((preamble "nav" "preamble")
 			              (content "main" "content") ;; necessary to get the right styling
 			              (postamble "footer" "postamble"))
-             :auto-sitemap t
-             :sitemap-filename "sitemap.org"
-             ;; :sitemap-format-entry 'dw/format-news-entry
-             :sitemap-style 'list
-             :sitemap-sort-files 'anti-chronologically
+             )
+
+       (list "posts"
+             ;; index page for posts
+             :with-author t
+             :with-creator t
+             :with-toc nil
+             :with-date t
+             :section-numbers nil
+             :time-stamp-file nil
              :with-title t
              :with-timestamps nil
 
+             :html-preamble (file-contents "./assets/pre.html")
+             :html-postamble (file-contents "./assets/post.html")
+             :sitemap-filename "index.org"
+             :sitemap-format-entry 'd/op-format-index
+             :sitemap-style 'list
+             :with-date t
+             :auto-sitemap t
+             :sitemap-sort-files 'anti-chronologically
+             :sitemap-title "Posts"
+             :base-directory "./content/posts/"
+             :publishing-directory "./public/posts/"
+             :publishing-function 'org-html-publish-to-html
+             )
+
+       (list "snippets"
+             ;; index page for snippets
+             :with-author t
+             :with-creator t
+             :with-toc nil
+             :with-date t
+             :section-numbers nil
+             :time-stamp-file nil
+             :with-title t
+             :with-timestamps nil
+
+             :html-preamble (file-contents "./assets/pre.html")
+             :html-postamble (file-contents "./assets/post.html")
+             :sitemap-filename "index.org"
+             :sitemap-format-entry 'd/op-format-index
+             :sitemap-style 'list
+             :auto-sitemap t
+             :sitemap-sort-files 'anti-chronologically
+             :sitemap-title "Snippets"
+             :base-directory "./content/snippets/"
+             :publishing-directory "./public/snippets/"
+             :publishing-function 'org-html-publish-to-html
              )
 
        (list "static" ;; for images
@@ -144,7 +206,7 @@ of contents as a string, or nil if it is empty."
              :recursive t ;; for fonts
              :publishing-function 'org-publish-attachment
              )
-       '("org" :components ("content" "assets" "static"))
+       '("org" :components ("mainpage" "assets" "static" "posts" "snippets"))
 
        ))
 
