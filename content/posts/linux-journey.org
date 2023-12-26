@@ -1,4 +1,7 @@
-** My Linux Journey :distro:linux:
+#+title: My Linux Journey
+#+date: [2023-03-10]
+
+** The Freedom :distro:linux:
 
 *Small info/log on my linux journey and my experience.*
 

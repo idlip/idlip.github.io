@@ -1,4 +1,7 @@
-** NixOS : Reproducible - Immutable :emacs:distro:linux:nixos:
+#+title: NixOS : Reproducible - Immutable
+#+date: [2023-03-23]
+
+** The Hop :emacs:distro:linux:nixos:
 
 --------------
 

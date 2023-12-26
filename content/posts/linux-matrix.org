@@ -1,4 +1,7 @@
-** Linux : The Matrix :terminal:cheatsheet:minimal:
+#+title: Linux : The Matrix
+#+date: [2023-04-12]
+
+** Terminals to Rescue :terminal:cheatsheet:minimal:
 
 There are tons of linux command line cheatsheet or guides.
 

@@ -1,4 +1,5 @@
 #+title: Insightful Quotes
+#+date: [2023-03-29]
 
 ** Insightful Quotes :snippets:quotes:
 

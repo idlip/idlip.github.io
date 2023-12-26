@@ -1,4 +1,7 @@
-** FOSS : On Droid :fossdroid:android:
+#+title: FOSS : On Droid
+#+date: [2023-04-25]
+
+** Code is Source :fossdroid:android:
 
 As we know, Android is widely popular OS for many phone. But these days its all filled with junks and bloated apps, these are to say so called *"Popular Android Apps"* or *"Trending Apps"*. The reason simply would be "everyone in my circle uses it" or "I use it because _they_ use it".
 

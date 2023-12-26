@@ -1,4 +1,5 @@
 #+title: Cognizance
+#+date: [2023-04-22]
 
 ** Cognizance :snippets:quotes:
 

@@ -1,4 +1,7 @@
-** Vim Proficiency :terminal:keybindings:cheatsheet:vim:
+#+title: Vim Proficiency
+#+date: [2023-04-05]
+
+** Neo Vim Time :terminal:keybindings:cheatsheet:vim:
 
 Although I don't use vim, it has good points for being easy *keyboard glue*. Why not learn both of the best worlds of Editors?
 

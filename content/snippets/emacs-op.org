@@ -1,4 +1,6 @@
 #+title: Emacs is OP!
+#+date: [2023-03-22]
+
 ** The greatest Editor :snippets:editors:emacs:neovim:
 
 Before anyone shouts vim, let me ~:q!~

@@ -1,4 +1,7 @@
-** Emacs Efficiency :cheatsheet:keybindings:emacs:
+#+title: Emacs Efficiency
+#+date: [2023-03-29]
+
+** Discover Emacs :cheatsheet:keybindings:emacs:
 
 This is straight away from [[https://github.com/VernonGrant/discovering-emacs][VernonGrant]] who hosts a podcast for Emacs called "[[https://www.discovering-emacs.com/][Discovering-Emacs]]".
 It's a great and has very much professional vibes, the explanations are Crisp and Clear!

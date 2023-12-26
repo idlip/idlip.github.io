@@ -1,4 +1,6 @@
 #+title: Tools
+#+date: [2023-03-17]
+
 
 ** Tools that are Best! :terminal:cli:linux:minimal:tools:
 
