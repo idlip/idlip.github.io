@@ -1,0 +1,9 @@
+#+TITLE: Snippets
+
+- [[file:organize-file.org][Organize File]] - Dec 16, 2023
+- [[file:beyond-ken.org][Ken quotes]] - Jun 02, 2023
+- [[file:cognizance.org][Cognizance]] - Apr 22, 2023
+- [[file:insightful-quotes.org][Insightful Quotes]] - Mar 29, 2023
+- [[file:rss-better.org][Rss: the Internet]] - Mar 23, 2023
+- [[file:emacs-op.org][Emacs is OP!]] - Mar 22, 2023
+- [[file:init.org][Init on Snippets]] - Mar 21, 2023
