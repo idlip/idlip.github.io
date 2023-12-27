@@ -359,6 +359,7 @@ footer {
 @media only screen and (max-width: 1120px) {
   main#content {
     width: auto;
+    margin-left: 10px;
   }
 }
 
@@ -366,3 +367,4 @@ footer {
   body {
     font-size: 0.95rem;
   }
+}
