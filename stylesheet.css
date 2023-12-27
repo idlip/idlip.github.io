@@ -356,8 +356,6 @@ footer {
     font-size: 0.8em;
 }
 
-HTML{font-size: calc((1vh+1vw)/2)}
-
 @media only screen and (max-width: 1120px) {
   main#content {
     width: auto;
