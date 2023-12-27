@@ -145,7 +145,7 @@ body {
     color: var(--title);
     padding: 15px;
     /* line-height: 1.8em; */
-    letter-spacing: 4px;
+    /* letter-spacing: 4px; */
 }
 .subtitle {
     text-align: center;
