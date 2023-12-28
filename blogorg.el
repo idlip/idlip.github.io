@@ -191,6 +191,10 @@ of contents as a string, or nil if it is empty."
 
        ))
 
+(org-publish-all t)
+
+;; later generate rss feed
+
 (webfeeder-build "rss.xml"
                  "./public"
                  "https://idlip.github.io"
@@ -207,5 +211,3 @@ of contents as a string, or nil if it is empty."
                  :title "Dilip Logs"
                  :description "Dilip's blog posts and snippets"
                  :author "Dilip")
-
-(org-publish-all t)
