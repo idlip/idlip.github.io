@@ -21,6 +21,7 @@
 
   ;; Check and install dependencies
   (dolist (package '(htmlize
+                     webfeeder
                      ;; julia-mode
                      ;; ess
                      ;; ox-rss webfeeder
@@ -33,9 +34,7 @@
 
 ;; ;; Load publishing system
 (require 'ox-publish)
-;; (require 'ox-rss)
-;; (require 'webfeeder)
-;; (require 'esxml)
+(require 'webfeeder)
 
 ;; inspired by @djliden : https://djliden.github.io
 
@@ -88,9 +87,9 @@ of contents as a string, or nil if it is empty."
       '((nerd-icon
          (on . "<span class=\"cbon\"> </span>")
          (off . "<span class=\"cboff\"> </span>")
-         (trans . "<span class=\"cbnil\"> </span>"))))
+         (trans . "<span class=\"cbnil\"> </span>")))
 
-(setq org-html-checkbox-type 'nerd-icon)
+      org-html-checkbox-type 'nerd-icon)
 
 
 (defun d/op-format-index (entry style project)
@@ -108,7 +107,7 @@ of contents as a string, or nil if it is empty."
 
 (setq org-publish-use-timestamps-flag t
       org-publish-timestamp-directory "./.org-cache/"
-      org-export-with-section-numbers nil
+      org-export-with-section-numbers t
       org-export-use-babel nil
       org-export-with-smart-quotes t
       org-export-with-sub-superscripts nil
@@ -143,21 +142,12 @@ of contents as a string, or nil if it is empty."
 
        (list "posts"
              ;; index page for posts
-             :with-author t
-             :with-creator t
-             :with-toc nil
-             :with-date t
-             :section-numbers nil
-             :time-stamp-file nil
-             :with-title t
-             :with-timestamps nil
-
              :html-preamble (file-contents "./assets/pre.html")
              :html-postamble (file-contents "./assets/post.html")
              :sitemap-filename "index.org"
              :sitemap-format-entry 'd/op-format-index
              :sitemap-style 'list
-             :with-date t
+             ;; :with-date t
              :auto-sitemap t
              :sitemap-sort-files 'anti-chronologically
              :sitemap-title "Posts"
@@ -168,15 +158,6 @@ of contents as a string, or nil if it is empty."
 
        (list "snippets"
              ;; index page for snippets
-             :with-author t
-             :with-creator t
-             :with-toc nil
-             :with-date t
-             :section-numbers nil
-             :time-stamp-file nil
-             :with-title t
-             :with-timestamps nil
-
              :html-preamble (file-contents "./assets/pre.html")
              :html-postamble (file-contents "./assets/post.html")
              :sitemap-filename "index.org"
@@ -209,5 +190,22 @@ of contents as a string, or nil if it is empty."
        '("org" :components ("mainpage" "assets" "static" "posts" "snippets"))
 
        ))
+
+(webfeeder-build "rss.xml"
+                 "./public"
+                 "https://idlip.github.io"
+                 ;; basically apart from index.html it takes all files in snippets and posts to generate a rss feed.
+                 (apply #'append
+                        (let ((dirs '("snippets/" "posts/")))
+                          (mapcar (lambda (dir)
+                                    (mapcar (lambda (file) (concat dir file))
+                                            (delete "./index.html"
+                                                    (let ((default-directory (expand-file-name (concat "./public/" dir))))
+                                                      (directory-files-recursively "./" ".*\\.html$")))))
+                                  dirs)))
+                 :builder 'webfeeder-make-rss
+                 :title "Dilip Logs"
+                 :description "Dilip's blog posts and snippets"
+                 :author "Dilip")
 
 (org-publish-all t)
