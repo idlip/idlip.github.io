@@ -68,6 +68,12 @@ SCHEDULED: <2023-12-18 Mon 13:20>
 
 **** TODO Actual way of getting things done :snippet:
 
-**** Try if one.el is good enough for this site
+**** DONE Try if one.el is good enough for this site
 - Pros: emacs
 - refer: https://github.com/tonyaldon/one.el
+- This lead me to dive into ~org-publish~.
+
+**** Improvements for Sites [0/2]
+- [ ] More better sitemap?
+  - One with small gist and proper format, bonus with tags.
+- [ ] Make posts filter via tags. (looks hard)
