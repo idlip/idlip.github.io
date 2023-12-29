@@ -32,6 +32,10 @@ I hope its a soothing experience for you to read!
 
 
 *** Ideas - TODO
+**** Improvements for Sites [0/2]
+- [ ] More better sitemap?
+  - One with small gist and proper format, bonus with tags.
+- [ ] Make posts filter via tags. (looks hard)
 **** TODO On Window manager :post:
   SCHEDULED: <2023-03-30 Thu 13:01>
 + Maybe about advantages
@@ -50,8 +54,11 @@ I hope its a soothing experience for you to read!
   - State "DONE"       from "TODO"       [2023-07-28 Fri 13:26]
   :END:
 
-**** REVIEW Comprehensive post on Emacs android :post:
-SCHEDULED: <2023-07-31 Mon>
+**** DONE Comprehensive post on Emacs android :post:
+CLOSED: [2023-12-29 Fri 16:00] SCHEDULED: <2023-07-31 Mon>
+:LOGBOOK:
+- State "DONE"       from "REVIEW"     [2023-12-29 Fri 16:00]
+:END:
 + It has got better with termux integration. Its almost like desktop experience now.
 
 **** TODO Maybe on Revealjs for presentation? :post:
@@ -61,8 +68,12 @@ SCHEDULED: <2023-07-31 Mon>
 **** Change of font, give a new elegant look :site:
 - Rather than cool cartoony font
 
-**** TODO Literate org config vs modular one :post:
-SCHEDULED: <2023-12-18 Mon 13:20>
+**** DONE Literate org config vs modular one :post:
+CLOSED: [2023-12-29 Fri 16:44] SCHEDULED: <2023-12-18 Mon 13:20>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2023-12-29 Fri 16:44]
+- Made a draft, and it looks good. Mix of general and particulars
+:END:
 
 **** TODO Art of note taking :snippet:
 
@@ -72,8 +83,3 @@ SCHEDULED: <2023-12-18 Mon 13:20>
 - Pros: emacs
 - refer: https://github.com/tonyaldon/one.el
 - This lead me to dive into ~org-publish~.
-
-**** Improvements for Sites [0/2]
-- [ ] More better sitemap?
-  - One with small gist and proper format, bonus with tags.
-- [ ] Make posts filter via tags. (looks hard)
