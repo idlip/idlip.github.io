@@ -107,7 +107,7 @@ of contents as a string, or nil if it is empty."
 
 (setq org-publish-use-timestamps-flag t
       org-publish-timestamp-directory "./.org-cache/"
-      org-export-with-section-numbers t
+      org-export-with-section-numbers nil
       org-export-use-babel nil
       org-export-with-smart-quotes t
       org-export-with-sub-superscripts nil
