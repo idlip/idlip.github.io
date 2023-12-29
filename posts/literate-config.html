@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2023-12-29 Fri 14:25 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Literate org config</title>
+<meta name="generator" content="Org mode">
+</head>
+<body>
+<div id="preamble" class="status">
+<link rel="stylesheet" type="text/css" href="/stylesheet.css"/>
+
+<p align="right">
+<a class="active" href="/"></a> |
+<a href="/posts/">Posts</a> |
+<a href="/snippets/">Snippets</a> |
+<a href="/repository.html">Repository</a> |
+<a href="/about.html">About</a> |
+<a href="/rss.xml"> rss </a>
+</p>
+</div>
+<div id="content">
+<header>
+<h1 class="title">Literate org config</h1>
+</header>
+<div id="outline-container-orgad1cd42" class="outline-2">
+<h2 id="orgad1cd42"><span class="section-number-2">1</span> Organizing Config</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Configuration files as we know are the text to instruct the program to modify and tweak to our needs. Every Open-Source, hack-able software or tool has configuration files provided for the choice of user&rsquo;s needs. Most of the tools provide simple and basic configuration with JSON-like formats, <code>Yaml</code> and <code>Toml</code>. For the word, they are not extensible, as <code>ml</code> stands, they are merely for markup to already defined instructions.
+</p>
+
+<p>
+Tools which are really extensible occupy with the power of a simple or real programming language, to which user gets only sky as the limit to configure. Some tools which are in my mind of this matter are Emacs, neovim, NixOS (home-manager).
+</p>
+
+<p>
+So eventually with more configurations added and tweaked, it becomes evident that it needs to be organized. Humans cannot read a long mass of codes which does not even have basic design principle in it.
+</p>
+
+<p>
+This realization leads to documenting the codes with comments (<i>the grey</i>) and it obviously adds more lines. There after the thoughts lead to modular config, splitting up of files in sensible manner and to import from one stop.
+</p>
+
+<p>
+Now, wait.., This sounds like we are down to creating a file hierarchy for config files, good at the initial days, but sooner or later hierarchy might look alien. I bet it!
+</p>
+
+<p>
+That&rsquo;s where I&rsquo;m stopping you can covering up next on writing Literate configuration, like with Org-mode.
+</p>
+</div>
+
+<div id="outline-container-org53079db" class="outline-3">
+<h3 id="org53079db"><span class="section-number-3">1.1</span> Org-mode Config</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+I won&rsquo;t introduce about org-mode, please do check <a href="https://orgmode.org">here</a>, hopefully it gives you an idea (I mean you should have read whole documentation/manual there). Additionally here is a <a href="https://en.wikipedia.org/wiki/Org-mode">Wikipedia reference</a> which is enough to introduce.
+</p>
+
+<p>
+The concept of <a href="https://en.wikipedia.org/wiki/Literate_programming">Literate programming</a> is having the user&rsquo;s natural language written down in correspondence to code blocks. It adds human-ness to the code, and the instructions we need to understand. Over technical work, it can reduce the usage of manual pages and documentation, wait, that is not a good idea to avoid them, but for something to understand that we wrote ourselves, literate programming helps to add notes.
+</p>
+
+<p>
+The concept is fairly like maintaining a notebook or documentation guide itself, but it also comes with its power.
+</p>
+
+<p>
+Org-mode has tons of features that helps in various categories. Prime use is for maintaining GTD, Notes, Latex, Journaling&#x2026; <i>infinity?</i>
+</p>
+
+<p>
+The main topic is, I tried maintaining modular config for Emacs and Nixos, and after some days, I myself was wondering and wasting time on thinking where did I place some content for this categories and was stuck with file hierarchy for several moments. The main obstacle is file hierarchy might turn out to be complex and redundant.
+</p>
+
+<p>
+That&rsquo;s where I decided to move back all to literate config. I came across <a href="https://github.com/rasendubi/dotfiles">rasendubi</a> dotfiles and he also used Literate org config for both Nixos and Emacs. Eventually I did too, here is the <a href="https://github.com/idlip/d-nix">repo</a>.
+</p>
+
+<p>
+The key benefits were, single org file to rule them all. I can integrate well with Emacs, yes, dependency might be Emacs, then too it is plain text format. Org gives us the power to tangle, annotate, add notes, tables, anything with the Source Code Blocks.
+For many configs or code, we forget why we wrote or why it is uniquely required, and nobody likes to waste time digging on why it is there, of course comments are helpful, but not everywhere to make it more head ache?
+Also I don&rsquo;t have navigate over the file hierarchy again and again with paths, simple single org is the stop.
+</p>
+
+<p>
+Org allows us to write notes there, I do manage lot of TODO and plans over the files, and forget everything. When I revisit or when I want to care, I can see what are the plans and I can execute it timely there after. Org literate config acts the source of truth, for information and understanding for my own level.
+</p>
+
+<p>
+As I bestowed this in practice, I noticed that flow of thoughts and expression of it at that time is the crucial thing. Again, for a thought to come and just vanish, its a haze. Even merely <i>sixty seconds</i> is enough to forget. Org could also fill that void, but just capturing the running thought at that time, and later to expand on it.
+</p>
+
+<p>
+Managing time is precious and Org-mode help with that, with plans Todo &amp; Schedules. Also, endless customization does not fetch any fruit. Having a cleaning kind of a day every month or twice a year can help on tweaking or fixing the necessary lines over the Org config.
+</p>
+
+<p>
+In a recent snippet on <a href="file:///home/runner/d-git/d-site/content/snippets/organize-file.html">Organize File</a>, I was about falling out on maintaining notes. From that scenario also the lesson learned is that, more than maintaining notes, the actual flow of thought and feeling at right time is most important and beats the best organizer anywhere out there. I mean, the goal of note-taking or writing down should be to transcribe the thoughts and knowledge in a approachable manner.
+</p>
+</div>
+
+<div id="outline-container-org7c4eaa9" class="outline-4">
+<h4 id="org7c4eaa9"><span class="section-number-4">1.1.1</span> Key Takeaways</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<ul class="org-ul">
+<li>Org-mode helps in managing and maintaining configuration files.</li>
+<li>Learning can be stressed, and is the key for writing out Literate programming.</li>
+<li>Things are easier to forget, annotating it our own words can help in better understanding and retention of information.</li>
+<li>Org config is the source of truth.</li>
+<li>Notes should be meant to capture the thoughts and feeling at that time of occurence.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<br><br>
+<!-- <p class="date" id="content" align="left" style="font-size:0.8em;">Posted on: 2023-12-29 Fri 00:00 -->
+<!--   <br> -->
+<!--  Updated on: 2023-12-29 Fri 14:25 -->
+<!-- </p> -->
+
+<p align="center" style="font-size:0.7em;">
+<br>
+- - - - - - -  - - - - - - -  - - - - - - -  - - - - - - -
+<br><br>
+2023 - <b>Dilip<sup></sup></b>- Made with 󰣐  using <a href="https://orgmode.org/">Org-mode</a> &amp; <a href="https://www.gnu.org/software/emacs/">Emacs</a>
+<br>
+The <a href="https://github.com/idlip/idlip.github.io">code</a> for this site is licensed under the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3</a>, and the content is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>
+</p>
+
+<!-- with org convert -->
+
+<!-- #+attr_html: :align center :style font-size:0.7em; -->
+<!-- Made with 󰣐  using [[https://orgmode.org][Org-mode]] & [[https://www.gnu.org/software/emacs/][Emacs]] -->
+<!-- The [[https://github.com/idlip/idlip.github.io][code]] for this site is licensed under the [[https://www.gnu.org/licenses/gpl-3.0.en.html][GPLv3]], and the content is licensed under [[https://creativecommons.org/licenses/by-sa/4.0/][CC-BY-SA 4.0]] -->
+</div>
+</body>
+</html>

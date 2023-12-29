@@ -7,207 +7,12 @@
 <generator>Emacs webfeeder.el</generator>
 <link>https://idlip.github.io</link>
 <atom:link href="https://idlip.github.io/rss.xml" rel="self" type="application/rss+xml"/>
-<lastBuildDate>Thu, 28 Dec 2023 17:48:26 +0000</lastBuildDate>
-<item>
-  <title>Organize File</title>
-  <description><![CDATA[<div id="content">
- <div id="outline-container-orge113d94" class="outline-2">
- <h2 id="orge113d94"> <span class="section-number-2">1</span> Organize File    <span class="tag"> <span class="snippets">snippets</span>  <span class="orgmode">orgmode</span></span></h2>
- <div class="outline-text-2" id="text-1">
- <p>
-From past few days I have been dabbling in the dimension of how to organize files, notes in effective manner. After jumping deep into the rabbit hole, I went on a spree of digesting several blog posts, articles on maintaining files, organizing notes, getting things done, what not, the list goes on.
-</p>
-
- <p>
-With power of  <b>org-mode</b> comes the doubt, is it efficient to maintain one big org file or multiple small files. Yes, its personal preference based on users need, there is no set guided rules.
-</p>
-
- <p>
-I stumbled across  <code>Zettelkasten</code> system which wasn’t new, I was aware of it in the likes of  <code>org-roam</code>, although I believe I did not have much matter to use it to some potential to form sensible network. So for now, no hard plans of multiple small files.
-</p>
-
- <p>
-After many reading, especially Karl voit’s posts ( <a href="https://karl-voit.at">site</a>), I was kinda convinced that file system hierarchy does not make sense, as the file system model I have may change over time, and I would not like to remember and know where I placed something and where to place something. The schema of Zettelkasten is also against this, like you maintain small files and just connect them based on UniqueID or with complexity of SQL database. The simpler alternative would be  <code>denote</code> emacs package, then too I don’t see the light on using it to the potential. I liked denote way of naming files, and it is format agnostic, does not depend on anything. Just pure elisp to do the job.
-</p>
-
- <p>
-Thus as a safer approach, I renamed some notes files to denote convention (as there is no harm/changes in that).
-</p>
-
- <p>
-Ultimately the fruit to yield is, just go with whatever is easy and that gets the work done. Forgetting people’s upfront images, looking at other side proved me that nobody is well organized in every way. Everybody lacks something in one or the other way, like I saw person who maintained file system well organized, but the desk and the room was gross and jam packed. So it depends, but the key takeaway is, if it just works; That’s enough. But as time goes, changes and upgrades are required.
-</p>
-</div>
-</div>
-</div>]]></description>
-  <link>https://idlip.github.io/snippets/./organize-file.html</link>
-  <guid isPermaLink="false">https://idlip.github.io/snippets/./organize-file.html</guid>
-  <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
-</item>
-<item>
-  <title>Emacs on Droid</title>
-  <description><![CDATA[<div id="content">
- <div id="outline-container-org9a0c5cb" class="outline-2">
- <h2 id="org9a0c5cb"> <span class="section-number-2">1</span> M-x Anything</h2>
- <div class="outline-text-2" id="text-1">
- <p>
-Emacs is a definite Greatest editor of all time, the extensibility power is unmatched with any other software. Users of Emacs can only know what it is, one who has not used it may not really understand the principles and power it gives us, the users.
-</p>
-
- <p>
-Once settled with it on PC, its not late to think of something similar for our handy pocket phones, at least support for  <b>org-mode</b> so we organize our life. The research leads us to find apps, and its unfortunate that market has lots of apps supporting markdown, just for its markup. Even org-mode is good for markup only, Karl voit’s  <a href="https://karl-voit.at/2017/09/23/orgmode-as-markup-only/">post</a> explains it very well.
-</p>
-
- <p>
-Finally we have some apps for org-mode, namely on Android  <a href="https://github.com/orgzly/orgzly-android">Orgzly</a> (maintained:  <a href="https://github.com/orgzly-revived/orgzly-android-revived">orgzly-revived</a>), Orgro (read-only app) and there is  <a href="https://organice.200ok.ch/">Organice</a> (PWA site, unique, supports desktop).
-Surprisingly IOS has many apps for org-mode, namely  <a href="https://beorgapp.com/">beorg</a> and  <a href="https://plainorg.com/">plain org</a> (I dont use IOS, so please search app store).
-</p>
-
- <p>
-New project under development  <a href="https://github.com/Artawower/orgnote-client">OrgNote</a> also looks promising.
-</p>
-
- <p>
-But it was near February, 2023, that Po Lu, one of the Emacs developer, started and released support for touch-screen devices (including Android) and to our surprise it was  <b>the graphical Emacs</b>, available now on Android. But before trying the first doubts and cons expected was that it does not work well with virtual keyboard, so only good option is to carry physical keyboard everywhere?
-That could be solved by getting adjusted to keyboard app called “Hackers Keyboard” (TODO link).
-</p>
-
- <p>
-But as I dug deep, the developer Po Lu, was on telegram channel in disguise, as I pointed that emacs android needed android’s share feature (like open-with) to other people, he had seen it and implemented is very quickly. It shows how much of an interesting take-up it is.
-</p>
-
- <p>
-Orgzly actually satisfied org-mode and agenda things with help of syncthing over org directory. But the next bummer came when I fell in love with  <a href="https://github.com/skeeto/elfeed">Elfeed</a> (RSS reader) and badly wanted to read feeds in sync with my phone. Since Emacs officially made its way for Android, so why not open some doors, indeed it did gave the power of emacs-lisp!
-</p>
-
- <p>
-Initially I started with bare-bone config, and later tried to incorporate my PC config with android, and it was easy, without much hassle. Just had to define a constant to check if system is on Linux or Android, and use the keyword in condition statements and  <code>use-package</code>. Next thought would be to use Unix tools/commands, so it only leads to Termux, and after few days, the developer released Termux signed apk to use in conjunction with emacs, so as to leverage the command line utilities in Android emacs too, namely  <code>ripgrep</code>,  <code>git</code>. I have not tried  <code>image-magick</code>,  <code>mupdf</code> for  <code>pdf-tools</code>. But frankly  <a href="https://github.com/foobnix/LibreraReader">Librera reader</a> is good enough.
-</p>
-
- <p>
-Here is a  <a href="https://marek-g.github.io/posts/tips_and_tricks/emacs_on_android/">blog post</a> by marek-g explaining how termux is modified to use with Emacs
-</p>
-
- <p>
-Note: Fdroid emacs apk lacks some support like GnuTLS (so won’t be able to install package or use eww), thus the only source to get emacs builds for Android is  <a href="https://sourceforge.net/projects/android-ports-for-gnu-emacs">https://sourceforge.net/projects/android-ports-for-gnu-emacs</a>
-</p>
-
- <p>
-For anyone trying it out again or newly, please make sure you go through  <code>C-h R android</code> or  <code>C-h r m android</code> for frequent issues or things to know for Android build. For any queries to me, please feel free to open up an issue over this  <a href="https://github.com/idlip/d-nix">repo</a>.
-</p>
-
- <p>
-Overall with setting only few variables for android specifically, I replicated almost same emacs config on Android. The definite org-mode reader, read Elfeed feeds in sync with PC, whatever emacs packages you use.
-</p>
-
- <p>
-Config just for android exclusively:
-</p>
- <div class="org-src-container">
- <pre class="src src-emacs-lisp"> <span class="org-comment-delimiter">;; </span> <span class="org-comment">define constant to check if system is android</span>
-( <span class="org-keyword">defconst</span>  <span class="org-variable-name">d/on-droid</span> (eq system-type 'android))
- <span class="org-comment-delimiter">;; </span> <span class="org-comment">if system is android, executes following code</span>
-( <span class="org-keyword">when</span> d/on-droid
-  (custom-set-variables
-   '(touch-screen-precision-scroll t)  <span class="org-comment-delimiter">;; </span> <span class="org-comment">smooth scrolling</span>
-   '(touch-screen-display-keyboard t)
-    <span class="org-comment-delimiter">;; </span> <span class="org-comment">^ display virtual keyboard when touch on phone screen</span>
-    <span class="org-comment-delimiter">;; </span> <span class="org-comment">does not work on read-only buffer (dashboard, startup..)</span>
-   '(browse-url-android-share t))
-   <span class="org-comment-delimiter">;; </span> <span class="org-comment">open links/urls with android's open-with or share kinda popup</span>
-
-  ( <span class="org-keyword">defun</span>  <span class="org-function-name">d/key-droid</span>()
-     <span class="org-doc">"To enable touch screen keyboard"</span>
-    ( <span class="org-keyword">interactive</span>)
-    (frame-toggle-on-screen-keyboard (selected-frame) nil)
-    )
-  )
-</pre>
-</div>
-
- <p>
-I’m not sure how suitable it is for coding environment (with lsp and complexities), but it behaves as expected for reading purpose and for quick note taking. I should probably say, it excels in that segment.
-</p>
-</div>
-</div>
-</div>]]></description>
-  <link>https://idlip.github.io/posts/./emacs-droid.html</link>
-  <guid isPermaLink="false">https://idlip.github.io/posts/./emacs-droid.html</guid>
-  <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
-</item>
-<item>
-  <title>Nix: Home for Acer</title>
-  <description><![CDATA[<div id="content">
- <div id="outline-container-org50c4353" class="outline-2">
- <h2 id="org50c4353"> <span class="section-number-2">1</span> The Machine    <span class="tag"> <span class="linux">linux</span>  <span class="nixos">nixos</span></span></h2>
- <div class="outline-text-2" id="text-1">
- <p>
-In this post am sharing some of the experience of using my new laptop,  <b>Acer swift Go Oled</b>. Compact, Premium ultra-book with Oled, Yes, a good hand made mobile laptop.
-</p>
-
- <p>
-As expected and as usual, it got windows 11 and first major encounter was heating and battery issue. It got me scared as it felt wrong decision. Since many claimed windows gives better battery life than Linux. It gave me nightmare of installing Linux too, really, new laptop with 4-5 hours of battery, for oled with black screens?
-</p>
-
- <p>
-Anyways, windows made me really tinker to my needs, went on with  <code>winutils</code> and de-bloated few stuffs and made it somewhat tacit for me, then too I demanded more of it. To which windows felt weird and too much to handle. Thus did finally decide to dual boot or straightaway to erase disk for Linux. My first thought of choice was to use Arch with gnome, but since I had well maintained  <a href="https://github.com/idlip/d-nix">nixos config</a>, I went with same config without much a-due.
-</p>
-
- <p>
-Viola it gave me the exact setup I was looking for, enabling my hand to feel back in pace. Yet I was worried about battery and heating point of view, although many say,  <code>laptops arent made to run on battery</code>, yet the heat? the air exhaust hitting my oled display directly?.
-</p>
-
- <p>
-I gave a shot to  <code>auto-cpufreq</code>, it did a well decent job, yet I felt too little gain, I did change  <code>intel_pstate</code> to  <code>acpu</code> one. All i noticed is it lowered the max frequency rate from 4.3GHz to 3.2GHz.
-</p>
-
- <p>
-Later on after many rebuilds, I saw Nixos  <a href="https://nixos.wiki/wiki/Laptop">wiki on laptop</a>, may seem outdated, but it was legit, and I did enable service such as  <code>thermald</code>,  <code>tlp</code> and viola later on I noticed it works well. Seriously I don’t know how, it gave me better battery life, less heating in Linux (nixos) than windows. Maybe magical to me as others claim vice-versa.
-</p>
-
- <p>
-Nonetheless, nixos handled the magics of services and making it a better experience by just writing one line of configs to  <code>true;</code>. My desktop runs Hyprland (wayland) and it works flawlessly.
-</p>
-
- <p>
-Okay, let me tell you about Finger Print, it gave me little trouble, and funny enough, it was again just to say  <code>true;</code> on a line.
-</p>
-
- <p>
-I have FP, so obviously I wanted to be cool looking by using it, I initially did not expect FP to work, again online poeple said so. I was following some debian/ubuntu help on FP and enabling some drivers and all, it did not work. Later I gotta know that  <code>fprintd</code> latest one already has the support for my FP id, so just did enable  <code>fprintd</code> and viola! viola!, now I login in TTY with FingerPrint.
-</p>
-
- <p>
-Although I wasted some time one tinkering and making it to work on my needs, I was not doing work I wanted, thus decided to settle and do productive tasks from then on. Anyway, whatever you customize it will be little to no gain. That’s why I decided to make and get my blog going, it is better to make one day each month or on boring holiday to do cleaning and customizing on OS.
-</p>
-
- <p>
-Finally, It has become a pleasant experience to get nix and make it work as I expected on  <b>Acer</b>.
-</p>
-
- <p>
-Yet one thing remains unexplored, fan controlling. I see no mention of fan or  <span class="underline">RPM</span> via  <code>sensors</code> command, so one way is to check another tool. I skipped that part, since I don’t face heating issue or high fan noise even when I’m plugged in.
-</p>
-
- <p>
-Ultimately one more thing making all experience better is the  <b>GOAT Emacs</b>. Bringing back my config and using it with more speed is another level of bliss.
-</p>
-
- <p>
-This has become another embark of a journey, where the todo’s are just piling even more, and it looks fun to explore more and utilize efficiently for learning.
-</p>
-</div>
-</div>
-</div>]]></description>
-  <link>https://idlip.github.io/posts/./nix-acer.html</link>
-  <guid isPermaLink="false">https://idlip.github.io/posts/./nix-acer.html</guid>
-  <pubDate>Sat, 21 Oct 2023 00:00:00 +0000</pubDate>
-</item>
+<lastBuildDate>Fri, 29 Dec 2023 14:25:44 +0000</lastBuildDate>
 <item>
   <title>Ken quotes</title>
   <description><![CDATA[<div id="content">
- <div id="outline-container-org2a51a36" class="outline-2">
- <h2 id="org2a51a36"> <span class="section-number-2">1</span> Beyond Ken    <span class="tag"> <span class="quotes">quotes</span>  <span class="snippets">snippets</span></span></h2>
+ <div id="outline-container-orga9c0d32" class="outline-2">
+ <h2 id="orga9c0d32"> <span class="section-number-2">1</span> Beyond Ken    <span class="tag"> <span class="quotes">quotes</span>  <span class="snippets">snippets</span></span></h2>
  <div class="outline-text-2" id="text-1">
  <p>
 Welcome to some more snippet of Quotes.
@@ -339,383 +144,13 @@ Hopefully with those melifluous thoughts, I hope you are alright ;)
 </div>]]></description>
   <link>https://idlip.github.io/snippets/./beyond-ken.html</link>
   <guid isPermaLink="false">https://idlip.github.io/snippets/./beyond-ken.html</guid>
-  <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
-</item>
-<item>
-  <title>Nix Learning</title>
-  <description><![CDATA[<div id="content">
- <div id="outline-container-orgfdf342c" class="outline-2">
- <h2 id="orgfdf342c"> <span class="section-number-2">1</span> Nobody can Explain    <span class="tag"> <span class="linux">linux</span>  <span class="resources">resources</span>  <span class="nixos">nixos</span></span></h2>
- <div class="outline-text-2" id="text-1">
- <p>
-NixOS is definitely an advanced Linux distro, but it ain’t easy to understand overnight or like Archlinux to have easy manual, but it sure has alot on the table. There is whole bunch of families like Nix functional language, Nix package manager… so and on with the prefix “nix”.
-</p>
-
- <p>
-This is really confusing, many hate nix and are not convinced to go long run just because of this difficulty (mess?). To make a simple thing work as expected, you need to go through such a rabbit hole.
-But once you know Nix* (families), everything will make sense, and you would feel bad to go back to old traditional Linux manners.
-</p>
-
- <p>
-These are some of the learning resources, which are rich in content and nonetheless, will be confusing at some point. But engineers do have spared their time in writing these, taking actions, to reach some audience and solve some of the caveats of Nix. So dig through and learn new ;)
-</p>
-</div>
-
- <div id="outline-container-org751f8f9" class="outline-3">
- <h3 id="org751f8f9"> <span class="section-number-3">1.1</span> nix-learning</h3>
- <div class="outline-text-3" id="text-1-1">
-</div>
- <div id="outline-container-org8989908" class="outline-4">
- <h4 id="uncategorized"> <span class="section-number-4">1.1.1</span> Uncategorized</h4>
- <div class="outline-text-4" id="text-uncategorized">
- <ul class="org-ul"> <li> <a href="https://youtu.be/m4sv2M9jRLg">Nix Fundamentals</a> (Video)</li>
- <li> <a href="https://stephank.nl/p/2020-06-01-a-nix-primer-by-a-newcomer.html">A Nix terminology primer by a newcomer</a> - Stéphan Kochen</li>
- <li> <a href="https://shopify.engineering/what-is-nix">What Is Nix</a></li>
- <li> <a href="https://nasirhm.github.io/posts/getting-started-with-nix-introduction/">Getting Started With Nix: Introduction</a> - Nasir Hussain</li>
- <li> <a href="https://blog.sulami.xyz/posts/nix-for-developers/">Lightning
-Introduction to Nix for Developers</a> - Robin Schroer</li>
- <li> <a href="https://blog.knightsofthelambdacalcul.us/posts/2020-06-20-nix-nixos-thoughts/">Nix(OS)
-Thoughts</a> - ?</li>
- <li> <a href="https://fzakaria.com/2020/11/17/on-demand-linked-libraries-for-nix.html">On-demand
-linked libraries for Nix</a> - Farid Zakaria</li>
- <li> <a href="https://serokell.io/blog/what-is-nix">What Is Nix and Why You Should
-Use It</a> - ?</li>
- <li> <a href="https://push.cx/2018/nixos">NixOS on prgmr and Failing to Learn
-Nix</a> - Peter Bhat Harkins</li>
- <li> <a href="https://www.tweag.io/blog/2020-09-10-nix-cas/">Towards a
-content-addressed model for Nix</a> - Théophane Hufschmitt</li>
- <li> <a href="https://lucperkins.dev/blog/nix-channel/">The easiest way (I’ve
-found) to create your own Nix channel</a> - Luc Perkins</li>
- <li> <a href="https://www.johnbcoughlin.com/posts/nix-dynamic-linking/">Debugging
-a dynamic linking bug in a Nix project</a> - Jack Coughlin</li>
- <li> <a href="https://notes.neeasade.net/adhoc-executable-patching-on-nix.html">adhoc
-executable patching on nixos</a> - ?</li>
- <li> <a href="https://maxmcd.com/posts/strategies-for-binary-relocation/">Strategies
-for Binary Relocation In Functional Build Systems</a> - Max McDonnell</li>
- <li> <a href="https://christine.website/blog/how-i-start-nix-2020-03-08">How I
-Start: Nix</a> - Christine Dodrill</li>
- <li> <a href="https://christine.website/blog/i-was-wrong-about-nix-2020-02-10">I
-was Wrong about Nix</a> - Christine Dodrill</li>
- <li> <a href="https://www.infoq.com/articles/configuration-management-with-nix/">Purely
-Functional Configuration Management with Nix and NixOS</a> - Eelco
-Dolstra</li>
- <li> <a href="https://bgottlob.com/post/2019-05-29-nix-use-cases/">Basic Use-Cases
-of the Nix Package Manager</a> - Brandon Gottlob</li>
- <li> <a href="https://thomazleite.com/posts/development-with-nix-python/">Development
-with Nix: Python</a> - Thomaz Leite</li>
- <li> <a href="https://medium.com/dapphub/dapp-tools-and-the-nix-package-manager-c4c692c87310">Dapp
-tools and the Nix package manager</a> - Mikael Brockman</li>
- <li> <a href="http://gfxmonk.net/2015/01/03/nixos-and-stateless-deployment.html">NixOS
-and Stateless Deployment</a> - ?</li>
- <li> <a href="https://christine.website/blog/nixos-encrypted-secrets-2021-01-20">Encrypted
-Secrets with NixOS</a> - Christine Dodrill</li>
- <li> <a href="https://begriffs.com/posts/2016-08-08-intro-to-nixos.html">Purely
-Functional Linux with NixOS</a> - Joe Nelson</li>
- <li> <a href="https://www.tweag.io/blog/2018-03-15-bazel-nix/">Nix + Bazel = fully
-reproducible, incremental builds</a> - Mathieu Boespflug, Théophane
-Hufschmitt</li>
- <li> <a href="https://zenhack.net/2016/01/24/reflections-on-nixos.html">Reflections
-On NixOS</a> - Ian Denhardt</li>
- <li> <a href="https://blog.mayflower.de/5800-Hardening-Compiler-Flags-for-NixOS.html">Hardening
-Compiler Flags for NixOS</a> - Franz Pletz</li>
- <li> <a href="https://hugoreeves.com/posts/2019/nix-home/">Your home in Nix
-(dotfile management)</a> - Hugo Reeves</li>
- <li> <a href="https://christine.website/blog/nixos-desktop-flow-2020-04-25">My
-NixOS Desktop Flow</a> - Christine Dodrill</li>
- <li> <a href="https://tailscale.com/blog/nixos-minecraft/">Tailscale on NixOS: A
-new Minecraft server in ten minutes</a> - Christine Dodrill</li>
- <li> <a href="https://terinstock.com/post/2021/01/Setting-up-a-git-server-on-NixOS/">Setting
-up a git server on NixOS</a> - Terin Stock</li>
- <li> <a href="https://myme.no/posts/2020-01-26-nixos-for-development.html">NixOS:
-For developers</a> - Martin Myrseth</li>
- <li> <a href="https://myme.no/posts/2019-07-01-nixos-into-the-deep-end.html">NixOS:
-Into the deep end</a> - Martin Myrseth</li>
- <li> <a href="https://rgoswami.me/posts/ccon-tut-nix/">A Tutorial Introduction to
-Nix</a> - Rohit Goswami</li>
- <li> <a href="https://zimbatm.com/benchmark-nixpkgs">Benchmarking nixpkgs
-builds</a> - Jonas Chevalier</li>
- <li> <a href="https://zimbatm.com/experiment-recursive-nix">Recursive Nix
-experiment</a> - Jonas Chevalier</li>
- <li> <a href="https://zimbatm.com/deploying-k8s-apps-with-kubenix">Deploying
-Kubernetes apps with KubeNix</a> - Jonas Chevalier</li>
- <li> <a href="https://github.com/tazjin/nix-1p">Nix - A One Pager</a> - Vincent Ambo</li>
- <li> <a href="https://foo-dogsquared.github.io/blog/posts/moving-into-nixos/">Moving
-into NixOS</a> - Gabriel Arazas</li>
- <li> <a href="https://www.willghatch.net/blog/2020/06/27/nixos-the-good-the-bad-and-the-ugly/">NixOS:
-the good, the bad, and the ugly</a> - William G Hatch</li>
- <li> <a href="https://www.nmattia.com/posts/2018-03-21-nix-reproducible-setup-linux-macos.html">Nix:
-A Reproducible Setup for Linux and macOS</a> - Nicolas Mattia</li>
- <li> <a href="https://www.nmattia.com/posts/2019-01-15-easy-peasy-nix-versions.html">Easy
-Peasy Nix Versions</a> - Nicolas Mattia</li>
- <li> <a href="https://www.nmattia.com/posts/2019-10-08-runtime-dependencies">Recovering
-Nix derivation attributes of runtime dependencies</a> - Nicolas Mattia</li>
-</ul> <div class="html">
- <p>
-<!– TODO: add more from their website –>
-</p>
-
-</div>
-
- <ul class="org-ul"> <li> <a href="https://ops.functionalalgebra.com/nix-by-example/">Nix By
-Example</a> - Susan Potter</li>
- <li> <a href="https://ops.functionalalgebra.com/nixops-by-example/">NixOps By
-Example</a> - Susan Potter</li>
- <li> <a href="https://ops.functionalalgebra.com/nixos-by-example/">NixOS By
-Example</a> - Susan Potter</li>
- <li> <a href="https://ops.functionalalgebra.com/2018/04/18/inspecting-nix-lambda-named-arguments/">Inspecting
-Nix lambda function named arguments</a> - Susan Potter</li>
-</ul> <div class="html">
- <p>
-<!– TODO: add Tweag Nix flakes –>
-</p>
-
-</div>
-</div>
-</div>
-
- <div id="outline-container-org7a299bf" class="outline-4">
- <h4 id="overview"> <span class="section-number-4">1.1.2</span> Overview</h4>
- <div class="outline-text-4" id="text-overview">
- <ul class="org-ul"> <li> <a href="https://web.archive.org/web/20210123223258/https://ebzzry.io/en/nix/">A
-Gentle Introduction to the Nix Family</a></li>
-</ul></div>
-</div>
-
- <div id="outline-container-orgf3354aa" class="outline-4">
- <h4 id="nix-the-language"> <span class="section-number-4">1.1.3</span> Nix the language</h4>
- <div class="outline-text-4" id="text-nix-the-language">
- <ul class="org-ul"> <li> <a href="https://nixcloud.io/tour">A tour of Nix</a> - an introduction to the
-Nix Programming Language</li>
-</ul></div>
-</div>
-
- <div id="outline-container-org4e1323c" class="outline-4">
- <h4 id="nix-shell"> <span class="section-number-4">1.1.4</span> Nix Shell</h4>
- <div class="outline-text-4" id="text-nix-shell">
- <ul class="org-ul"> <li> <a href="https://ghedam.at/15978/an-introduction-to-nix-shell">An
-introduction to nix-shell</a> - Mattia Gheda</li>
- <li> <a href="https://fzakaria.com/2020/08/11/caching-your-nix-shell.html">caching
-your nix-shell</a> - Farid Zakaria</li>
-</ul></div>
-</div>
-
- <div id="outline-container-org411f12f" class="outline-4">
- <h4 id="nix-flakes"> <span class="section-number-4">1.1.5</span> Nix Flakes</h4>
- <div class="outline-text-4" id="text-nix-flakes">
- <ul class="org-ul"> <li> <a href="https://blog.ysndr.de/posts/internals/2021-01-01-flake-ification/">Building
-with Nix Flakes for, eh .. reasons!</a> - Yannik Sander</li>
- <li> <a href="https://zimbatm.com/NixFlakes/">Nix Flakes edition</a> - Jonas
-Chevalier</li>
-</ul></div>
-</div>
-
- <div id="outline-container-orge2eedd2" class="outline-4">
- <h4 id="experience"> <span class="section-number-4">1.1.6</span> Experience</h4>
- <div class="outline-text-4" id="text-experience">
- <ul class="org-ul"> <li> <a href="https://catgirl.ai/log/nixos-experience/">Eight Months of NixOS</a> -
-ash</li>
- <li> <a href="https://tech.channable.com/posts/2021-04-09-nix-is-the-ultimate-devops-toolkit.html">Nix
-is the ultimate DevOps toolkit</a> - Ruud van Asseldonk, Reinier Maas,
-Falco Peijnenburg, Fabian Thorand, and Robert Kreuzer</li>
-</ul></div>
-</div>
-
- <div id="outline-container-orgb521f21" class="outline-4">
- <h4 id="language-specific"> <span class="section-number-4">1.1.7</span> Language Specific</h4>
- <div class="outline-text-4" id="text-language-specific">
-</div>
- <ol class="org-ol"> <li> <a id="java"></a>Java <br></br> <div class="outline-text-5" id="text-java">
- <ul class="org-ul"> <li> <a href="https://fzakaria.com/2020/07/20/packaging-a-maven-application-with-nix.html">Packaging
-a Maven application with Nix</a></li>
-</ul></div>
-</li>
-
- <li> <a id="elixir"></a>Elixir <br></br> <div class="outline-text-5" id="text-elixir">
- <ul class="org-ul"> <li> <a href="https://ejpcmac.net/blog/using-nix-in-elixir-projects/">Using Nix in
-Elixir projects</a> - Jean-Philippe</li>
-</ul></div>
-</li>
-
- <li> <a id="c"></a>C++ <br></br> <div class="outline-text-5" id="text-c">
- <ul class="org-ul"> <li> <a href="https://blog.galowicz.de/2019/04/17/tutorial_nix_cpp_setup/">Setting
-up a C++ project environment with nix</a> - Jacek Galowicz</li>
-</ul></div>
-</li>
-
- <li> <a id="rust"></a>Rust <br></br> <div class="outline-text-5" id="text-rust">
- <ul class="org-ul"> <li>Managing Rust Dependencies with Nix - James Kay
- <ul class="org-ul"> <li> <a href="https://hadean.com/blog/managing-rust-dependencies-with-nix-part-i/">Part
-1</a></li>
- <li> <a href="https://hadean.com/blog/managing-rust-dependencies-with-nix-part-ii/">Part
-2</a></li>
-</ul></li>
-</ul></div>
-</li>
-</ol></div>
-
- <div id="outline-container-org84a6844" class="outline-4">
- <h4 id="series"> <span class="section-number-4">1.1.8</span> Series</h4>
- <div class="outline-text-4" id="text-series">
- <ul class="org-ul"> <li>Nix by Example - James Fisher
- <ul class="org-ul"> <li> <a href="https://medium.com/@MrJamesFisher/nix-by-example-a0063a1a4c55">Part
-1: The Nix expression language</a></li>
-</ul></li>
- <li>Ian Henry’s  <i>How to Learn Nix</i> series
- <ul class="org-ul"> <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/introduction/">Part
-1: What’s all this about?</a></li>
- <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/prior-knowledge/">Part
-2: Prior knowledge</a></li>
- <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/glossary/">Part 3:
-What we talk about when we talk about Nix</a></li>
- <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/quick-start-guide/">Part
-4: Quick starts, full hearts</a></li>
- <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/basic-package-management/">Part
-5: Basic package management</a></li>
- <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/profiles/">Part 6:
-Profiles</a></li>
- <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/garbage-collection/">Part
-7: Garbage collection</a></li>
- <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/channels/">Part 8:
-Channels</a></li>
- <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/sharing/">Part 9:
-Learning to share</a></li>
- <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/my-first-derivation/">Part
-10: My first derivation</a></li>
- <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/okay-my-actual-first-derivation/">Part
-11: Okay my actual first derivation</a></li>
- <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/nix-language/">Part
-12: The Nix expression language</a></li>
- <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/derivations/">Part
-13: Derivations</a></li>
- <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/built-in-functions/">Part
-14: Built-in Functions</a></li>
- <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/advanced-topics/">Part
-15: Advanced Topics</a></li>
- <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/command-reference/">Part
-16: Command Reference</a></li>
- <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/configuration/">Part
-17: Configuration</a></li>
- <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/nix-manual-reflection/">Part
-18: So I read the manual huh</a></li>
- <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/switching-from-homebrew-to-nix/">Part
-19: Switching from Homebrew to Nix</a></li>
- <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/my-first-nix-bug/">Part
-20: My first Nix bug</a></li>
- <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/my-first-package-upgrade/">Part
-21: My first package upgrade</a></li>
- <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/declarative-user-environment/">Part
-22: Setting up a declarative user environment</a></li>
- <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/how-to-learn-nixpkgs/">Part
-23: How to learn Nixpkgs</a></li>
- <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/overlays/">Part 24:
-Overlays</a></li>
- <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/overriding/">Part
-25: Overriding</a></li>
-</ul></li>
-</ul> <hr></hr> <p>
-These links are extracted from humancalico’s git repo ( <a href="https://github.com/humancalico/nix-learning">https://github.com/humancalico/nix-learning</a>).
-</p>
-
- <div class="org-center">
- <p>
-With that sorted, I hope learning becomes good ;)
-</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>]]></description>
-  <link>https://idlip.github.io/posts/./nix-learning.html</link>
-  <guid isPermaLink="false">https://idlip.github.io/posts/./nix-learning.html</guid>
-  <pubDate>Wed, 03 May 2023 00:00:00 +0000</pubDate>
-</item>
-<item>
-  <title>FOSS : On Droid</title>
-  <description><![CDATA[<div id="content">
- <div id="outline-container-orgc3e2d12" class="outline-2">
- <h2 id="orgc3e2d12"> <span class="section-number-2">1</span> Code is Source    <span class="tag"> <span class="fossdroid">fossdroid</span>  <span class="android">android</span></span></h2>
- <div class="outline-text-2" id="text-1">
- <p>
-As we know, Android is widely popular OS for many phone. But these days its all filled with junks and bloated apps, these are to say so called  <b>“Popular Android Apps”</b> or  <b>“Trending Apps”</b>. The reason simply would be “everyone in my circle uses it” or “I use it because  <span class="underline">they</span> use it”.
-</p>
-
- <p>
-But surely you are not giving yourself some privacy or  <b>space</b> that you need for your own  <b>personal phone</b>.
-I’m talking about using Free/Libre and Open Source (FOSS) Apps. Free doesn’t mean by price, Free means  <b>Freedom</b>. Freedom that comes with :
-</p>
- <ul class="org-ul"> <li>No Trackers.</li>
- <li>No Ads.</li>
- <li>Minimal permission.</li>
- <li>Has customization to users need.</li>
- <li>No Restrictions.</li>
-</ul> <p>
-These can be achieved in this modern time, by Discovering and using FOSS Apps, the best place being  <a href="https://f-droid.org">F-droid</a>  or  <a href="https://libreddit.kavin.rocks/r/fossdroid">r/fossdroid</a>.
-</p>
-
- <p>
-There are pretty much all apps under FOSS area for every purpose, they are good looking with  <b>Modern UI</b>,  <b>Lots of Customizations</b> and  <b>friendly with Battery</b>.
-</p>
-
- <p>
-I happened to search for book and novel reader and found very good apps there, like QuickNovel.
-There is a Manga reader and lots more for every purpose.
-</p>
-
- <p>
-I exclusively use every apps from F-droid, because they are great.
-You should also use it, as you might find something interesting and surely, gets Surprised; and say in your head,  <b> <i>Gosh I should have known this before</i></b>.
-</p>
-
- <hr></hr> <p>
-Some of the cool apps I use everyday :
-</p>
-
- <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Class</th>
- <th scope="col" class="org-left">Apps</th>
-</tr></thead> <tbody> <tr> <td class="org-left">Launcher</td>
- <td class="org-left">Kvæsitso ( <a href="https://apt.izzysoft.de/fdroid/index/apk/de.mm20.launcher2.release">izzydroid</a>,  <a href="https://github.com/MM2-0/Kvaesitso">git</a>)</td>
-</tr> <tr> <td class="org-left">F-droid Client</td>
- <td class="org-left">Neo Store ( <a href="https://f-droid.org/en/packages/com.machiav3lli.fdroid/">fdroid</a>,  <a href="https://github.com/NeoApplications/Neo-Store">git</a>)</td>
-</tr> <tr> <td class="org-left">Browser</td>
- <td class="org-left">Mull ( <a href="https://f-droid.org/en/packages/us.spotco.fennec_dos/">fdroid</a>,  <a href="https://gitlab.com/divested-mobile/mull-fenix">git</a>)</td>
-</tr> <tr> <td class="org-left">Rss Reader</td>
- <td class="org-left">Read You ( <a href="https://f-droid.org/en/packages/me.ash.reader/">fdroid</a>,  <a href="https://github.com/Ashinch/ReadYou">git</a>)</td>
-</tr> <tr> <td class="org-left">YouTube</td>
- <td class="org-left">LibreTube ( <a href="https://f-droid.org/en/packages/com.github.libretube/">fdroid</a>,  <a href="https://github.com/libre-tube/LibreTube">git</a>)</td>
-</tr> <tr> <td class="org-left">PDF/Ebook Reader</td>
- <td class="org-left">Librera Reader ( <a href="https://f-droid.org/en/packages/com.foobnix.pro.pdf.reader/">fdroid</a>,  <a href="https://github.com/foobnix/LibreraReader">git</a>)</td>
-</tr> <tr> <td class="org-left">Manga Reader</td>
- <td class="org-left">Tachiyomi ( <a href="https://f-droid.org/en/packages/eu.kanade.tachiyomi/">fdroid</a>,  <a href="https://github.com/tachiyomiorg/tachiyomi">git</a>)</td>
-</tr> <tr> <td class="org-left">Password Manager</td>
- <td class="org-left">KeePassDX ( <a href="https://f-droid.org/en/packages/com.kunzisoft.keepass.libre/">fdroid</a>,  <a href="https://github.com/Kunzisoft/KeePassDX">git</a>)</td>
-</tr> <tr> <td class="org-left">Novel Reader</td>
- <td class="org-left">QuickNovel ( <a href="https://apt.izzysoft.de/fdroid/index/apk/com.lagradost.quicknovel">izzydroid</a>,  <a href="https://github.com/LagradOst/QuickNovel">git</a>)</td>
-</tr> <tr> <td class="org-left">Keyboard</td>
- <td class="org-left">Unexpected Keyboard ( <a href="https://f-droid.org/en/packages/juloo.keyboard2/">fdroid</a>,  <a href="https://github.com/Julow/Unexpected-Keyboard">git</a>)</td>
-</tr> <tr> <td class="org-left">Media Player</td>
- <td class="org-left">VLC ( <a href="https://f-droid.org/en/packages/org.videolan.vlc/">fdroid</a>,  <a href="https://code.videolan.org/videolan/vlc-android">git</a>)</td>
-</tr> <tr> <td class="org-left">Gallery + Calendar (many more)</td>
- <td class="org-left">Simple Tools Suite ( <a href="https://search.f-droid.org/?lang=en&q=simple+tools">fdroid</a>,  <a href="https://github.com/SimpleMobileTools">git</a>,  <a href="https://simplemobiletools.com">site</a>)</td>
-</tr> <tr> <td class="org-left">Note Taking</td>
- <td class="org-left">Orgzly ( <a href="https://f-droid.org/en/packages/com.orgzly/">fdroid</a>,  <a href="https://github.com/orgzly/orgzly-android">git</a>)</td>
-</tr></tbody></table> <hr></hr> <div class="org-center">
- <p>
-With that fossed, I hope your phone gets a new life and finally breathes alive!
-</p>
-</div>
-</div>
-</div>
-</div>]]></description>
-  <link>https://idlip.github.io/posts/./foss-droid.html</link>
-  <guid isPermaLink="false">https://idlip.github.io/posts/./foss-droid.html</guid>
-  <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
+  <pubDate>Fri, 29 Dec 2023 14:25:00 +0000</pubDate>
 </item>
 <item>
   <title>Cognizance</title>
   <description><![CDATA[<div id="content">
- <div id="outline-container-orge97842f" class="outline-2">
- <h2 id="orge97842f"> <span class="section-number-2">1</span> Cognizance    <span class="tag"> <span class="snippets">snippets</span>  <span class="quotes">quotes</span></span></h2>
+ <div id="outline-container-orgb67d5d2" class="outline-2">
+ <h2 id="orgb67d5d2"> <span class="section-number-2">1</span> Cognizance    <span class="tag"> <span class="snippets">snippets</span>  <span class="quotes">quotes</span></span></h2>
  <div class="outline-text-2" id="text-1">
  <p>
 Welcome to next snippet of Quotes.
@@ -787,264 +222,71 @@ With these sweet little pies, I hope it does make your day alive ;)
 </div>]]></description>
   <link>https://idlip.github.io/snippets/./cognizance.html</link>
   <guid isPermaLink="false">https://idlip.github.io/snippets/./cognizance.html</guid>
-  <pubDate>Sat, 22 Apr 2023 00:00:00 +0000</pubDate>
+  <pubDate>Fri, 29 Dec 2023 14:25:00 +0000</pubDate>
 </item>
 <item>
-  <title>Linux : The Matrix</title>
+  <title>Emacs is OP!</title>
   <description><![CDATA[<div id="content">
- <div id="outline-container-orge3e50ab" class="outline-2">
- <h2 id="orge3e50ab"> <span class="section-number-2">1</span> Terminals to Rescue    <span class="tag"> <span class="terminal">terminal</span>  <span class="cheatsheet">cheatsheet</span>  <span class="minimal">minimal</span></span></h2>
+ <div id="outline-container-orge1709e1" class="outline-2">
+ <h2 id="orge1709e1"> <span class="section-number-2">1</span> The greatest Editor    <span class="tag"> <span class="snippets">snippets</span>  <span class="editors">editors</span>  <span class="emacs">emacs</span>  <span class="neovim">neovim</span></span></h2>
  <div class="outline-text-2" id="text-1">
  <p>
-There are tons of linux command line cheatsheet or guides.
+Before anyone shouts vim, let me  <code>:q!</code>
+I was a vimmer for a year, I played and had a good basic config. Even after an year, I didn’t grasp the full potential of vim, it was just handy to use  <code>hjkl</code> to move around.
 </p>
 
  <p>
-Here are some of the best reads, I suggest you to go throught each of it,  <b>It’s a gem</b>.
+But When I’m learning Emacs, the experience is immense, it defines how things are meant and the legacy of Emacs for 40 years, is not a joke.
 </p>
 
-
- <ul class="org-ul"> <li> <a href="https://github.com/jlevy/the-art-of-command-line">The Art of Command Line</a> — notes and tips on using the command-line, suitable for both beginners and experienced users.</li>
- <li> <a href="https://www.commandlinefu.com/commands/browse/sort-by-votes">commandlinefu</a> — command-line gems, includes a handy search feature.</li>
- <li> <a href="https://github.com/tldr-pages/tldr">tldr</a> — collection of community-maintained help pages for command-line tools.</li>
- <li> <a href="https://explainshell.com/">explainshell</a> — write down a command-line to see the help text that matches each argument.</li>
- <li> <a href="http://www.compciv.org/unix-tools/">General purpose command-line tools</a> — examples for most common usecases.</li>
- <li> <a href="https://devmanual.gentoo.org/tools-reference/bash/index.html">Bash reference cheatsheet</a> — nicely formatted and explained well.</li>
- <li> <a href="https://devhints.io/bash">Bash scripting cheatsheet</a> — quick reference to getting started with Bash scripting.</li>
-</ul> <hr></hr> <div class="org-center">
  <p>
- <b>With that  <code>coded</code>, I hope you enjoy the terminal. Unleash the Matrix</b>.
+I cannot just rant to make people ditch vim for Emacs, But once you understand you will realize, that is why people went and made  <code>evil</code> mode to emulate Vi layer (vim 100%).
 </p>
-</div>
+
+ <p>
+Now they get the  <b>Best</b> of both the World!
+</p>
+
+ <p>
+Nonetheless, Emacs is the  <b>GOAT</b> !
+</p>
 </div>
 </div>
 </div>]]></description>
-  <link>https://idlip.github.io/posts/./linux-matrix.html</link>
-  <guid isPermaLink="false">https://idlip.github.io/posts/./linux-matrix.html</guid>
-  <pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate>
+  <link>https://idlip.github.io/snippets/./emacs-op.html</link>
+  <guid isPermaLink="false">https://idlip.github.io/snippets/./emacs-op.html</guid>
+  <pubDate>Fri, 29 Dec 2023 14:25:00 +0000</pubDate>
 </item>
 <item>
-  <title>Vim Proficiency</title>
+  <title>Init on Snippets</title>
   <description><![CDATA[<div id="content">
- <div id="outline-container-org0db1bd9" class="outline-2">
- <h2 id="org0db1bd9"> <span class="section-number-2">1</span> Neo Vim Time    <span class="tag"> <span class="terminal">terminal</span>  <span class="keybindings">keybindings</span>  <span class="cheatsheet">cheatsheet</span>  <span class="vim">vim</span></span></h2>
+ <div id="outline-container-org4001709" class="outline-2">
+ <h2 id="org4001709"> <span class="section-number-2">1</span> Journey Begins    <span class="tag"> <span class="log">log</span>  <span class="snippets">snippets</span>  <span class="first">first</span></span></h2>
  <div class="outline-text-2" id="text-1">
  <p>
-Although I don’t use vim, it has good points for being easy  <b>keyboard glue</b>. Why not learn both of the best worlds of Editors?
+I have almost set my first static website.
+From here my creativity goes public to the world.
 </p>
 
  <p>
-Apart from normal vim navigations and operators, These are some of the unique vim magics, which I haven’t used at all.
-</p>
-</div>
-
- <div id="outline-container-orgc48fb65" class="outline-3">
- <h3 id="marks"> <span class="section-number-3">1.1</span> Marks</h3>
- <div class="outline-text-3" id="text-marks">
- <p>
-This is the important one, I have not used this at all. Should try and make use of it. Although emacs  <code>mark-ring</code> is alot better.
-</p>
-
- <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
- <th scope="col" class="org-left">Description</th>
-</tr></thead> <tbody> <tr> <td class="org-left"> <code>`^</code></td>
- <td class="org-left">Last position of cursor in insert mode</td>
-</tr> <tr> <td class="org-left"> <code>`.</code></td>
- <td class="org-left">Last change in current buffer</td>
-</tr> <tr> <td class="org-left"> <code>`"</code></td>
- <td class="org-left">Last exited current buffer</td>
-</tr> <tr> <td class="org-left"> <code>`0</code></td>
- <td class="org-left">In last file edited</td>
-</tr> <tr> <td class="org-left"> <code>''</code></td>
- <td class="org-left">Back to line in current buffer where jumped from</td>
-</tr> <tr> <td class="org-left"> <code>``</code></td>
- <td class="org-left">Back to position in current buffer where jumped from</td>
-</tr> <tr> <td class="org-left"> <code>`[</code></td>
- <td class="org-left">To beginning of previously changed or yanked text</td>
-</tr> <tr> <td class="org-left"> <code>`]</code></td>
- <td class="org-left">To end of previously changed or yanked text</td>
-</tr> <tr> <td class="org-left"> <code>`<</code></td>
- <td class="org-left">To beginning of last visual selection</td>
-</tr> <tr> <td class="org-left"> <code>`></code></td>
- <td class="org-left">To end of last visual selection</td>
-</tr> <tr> <td class="org-left"> <code>ma</code></td>
- <td class="org-left">Mark this cursor position as  <code>a</code></td>
-</tr> <tr> <td class="org-left"> <code>`a</code></td>
- <td class="org-left">Jump to the cursor position  <code>a</code></td>
-</tr> <tr> <td class="org-left"> <code>'a</code></td>
- <td class="org-left">Jump to the beginning of the line with position  <code>a</code></td>
-</tr> <tr> <td class="org-left"> <code>d'a</code></td>
- <td class="org-left">Delete from current line to line of mark  <code>a</code></td>
-</tr> <tr> <td class="org-left"> <code>d`a</code></td>
- <td class="org-left">Delete from current position to position of mark  <code>a</code></td>
-</tr> <tr> <td class="org-left"> <code>c'a</code></td>
- <td class="org-left">Change text from current line to line of  <code>a</code></td>
-</tr> <tr> <td class="org-left"> <code>y`a</code></td>
- <td class="org-left">Yank text from current position to position of  <code>a</code></td>
-</tr> <tr> <td class="org-left"> <code>:marks</code></td>
- <td class="org-left">List all current marks</td>
-</tr> <tr> <td class="org-left"> <code>:delm a</code></td>
- <td class="org-left">Delete mark  <code>a</code></td>
-</tr> <tr> <td class="org-left"> <code>:delm a-d</code></td>
- <td class="org-left">Delete marks  <code>a</code>,  <code>b</code>,  <code>c</code>,  <code>d</code></td>
-</tr> <tr> <td class="org-left"> <code>:delm abc</code></td>
- <td class="org-left">Delete marks  <code>a</code>,  <code>b</code>,  <code>c</code></td>
-</tr></tbody></table> <hr></hr></div>
-</div>
-
- <div id="outline-container-org65751b5" class="outline-3">
- <h3 id="navigation"> <span class="section-number-3">1.2</span> Navigation</h3>
- <div class="outline-text-3" id="text-navigation">
- <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
- <th scope="col" class="org-left">Description</th>
-</tr></thead> <tbody> <tr> <td class="org-left"> <code>%</code></td>
- <td class="org-left">Nearest/matching  <code>{[()]}</code></td>
-</tr> <tr> <td class="org-left"> <code>[(</code>  <code>[{</code>  <code>[<</code></td>
- <td class="org-left">Previous  <code>(</code> or  <code>{</code> or  <code><</code></td>
-</tr> <tr> <td class="org-left"> <code>])</code></td>
- <td class="org-left">Next</td>
-</tr> <tr> <td class="org-left"> <code>[m</code></td>
- <td class="org-left">Previous method start</td>
-</tr> <tr> <td class="org-left"> <code>[M</code></td>
- <td class="org-left">Previous method end</td>
-</tr></tbody></table> <hr></hr></div>
-</div>
-
- <div id="outline-container-org375e5db" class="outline-3">
- <h3 id="jumping"> <span class="section-number-3">1.3</span> Jumping</h3>
- <div class="outline-text-3" id="text-jumping">
- <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
- <th scope="col" class="org-left">Description</th>
-</tr></thead> <tbody> <tr> <td class="org-left"> <code><C-O></code></td>
- <td class="org-left">Go back to previous location</td>
-</tr> <tr> <td class="org-left"> <code><C-I></code></td>
- <td class="org-left">Go forward</td>
-</tr> <tr> <td class="org-left"> <code>gf</code></td>
- <td class="org-left">Go to file in cursor</td>
-</tr></tbody></table> <hr></hr></div>
-</div>
-
- <div id="outline-container-orgd8ee66c" class="outline-3">
- <h3 id="counters"> <span class="section-number-3">1.4</span> Counters</h3>
- <div class="outline-text-3" id="text-counters">
- <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
- <th scope="col" class="org-left">Description</th>
-</tr></thead> <tbody> <tr> <td class="org-left"> <code><C-A></code></td>
- <td class="org-left">Increment number</td>
-</tr> <tr> <td class="org-left"> <code><C-X></code></td>
- <td class="org-left">Decrement</td>
-</tr></tbody></table> <hr></hr></div>
-</div>
-
- <div id="outline-container-orgbe85488" class="outline-3">
- <h3 id="tags"> <span class="section-number-3">1.5</span> Tags</h3>
- <div class="outline-text-3" id="text-tags">
- <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
- <th scope="col" class="org-left">Description</th>
-</tr></thead> <tbody> <tr> <td class="org-left"> <code>:tag Classname</code></td>
- <td class="org-left">Jump to first definition of Classname</td>
-</tr> <tr> <td class="org-left"> <code><C-]></code></td>
- <td class="org-left">Jump to definition</td>
-</tr> <tr> <td class="org-left"> <code>g]</code></td>
- <td class="org-left">See all definitions</td>
-</tr> <tr> <td class="org-left"> <code><C-T></code></td>
- <td class="org-left">Go back to last tag</td>
-</tr> <tr> <td class="org-left"> <code><C-O> <C-I></code></td>
- <td class="org-left">Back/forward</td>
-</tr> <tr> <td class="org-left"> <code>:tselect Classname</code></td>
- <td class="org-left">Find definitions of Classname</td>
-</tr> <tr> <td class="org-left"> <code>:tjump Classname</code></td>
- <td class="org-left">Find definitions of Classname (auto-select 1st)</td>
-</tr></tbody></table> <hr></hr></div>
-</div>
-
- <div id="outline-container-orgc401362" class="outline-3">
- <h3 id="folds"> <span class="section-number-3">1.6</span> Folds</h3>
- <div class="outline-text-3" id="text-folds">
- <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
- <th scope="col" class="org-left">Description</th>
-</tr></thead> <tbody> <tr> <td class="org-left"> <code>zo</code>  <i>/</i>  <code>zO</code></td>
- <td class="org-left">Open</td>
-</tr> <tr> <td class="org-left"> <code>zc</code>  <i>/</i>  <code>zC</code></td>
- <td class="org-left">Close</td>
-</tr> <tr> <td class="org-left"> <code>za</code>  <i>/</i>  <code>zA</code></td>
- <td class="org-left">Toggle</td>
-</tr> <tr> <td class="org-left"> <code>zv</code></td>
- <td class="org-left">Open folds for this line</td>
-</tr> <tr> <td class="org-left"> <code>zM</code></td>
- <td class="org-left">Close all</td>
-</tr> <tr> <td class="org-left"> <code>zR</code></td>
- <td class="org-left">Open all</td>
-</tr> <tr> <td class="org-left"> <code>zm</code></td>
- <td class="org-left">Fold more  <i>(foldlevel += 1)</i></td>
-</tr> <tr> <td class="org-left"> <code>zr</code></td>
- <td class="org-left">Fold less  <i>(foldlevel -= 1)</i></td>
-</tr> <tr> <td class="org-left"> <code>zx</code></td>
- <td class="org-left">Update folds</td>
-</tr></tbody></table> <hr></hr></div>
-</div>
-
- <div id="outline-container-orgdfcc863" class="outline-3">
- <h3 id="command-line"> <span class="section-number-3">1.7</span> Command line</h3>
- <div class="outline-text-3" id="text-command-line">
- <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
- <th scope="col" class="org-left">Description</th>
-</tr></thead> <tbody> <tr> <td class="org-left"> <code><C-R><C-W></code></td>
- <td class="org-left">Insert current word into the command line</td>
-</tr> <tr> <td class="org-left"> <code><C-R>"</code></td>
- <td class="org-left">Paste from ” register</td>
-</tr> <tr> <td class="org-left"> <code><C-X><C-F></code></td>
- <td class="org-left">Auto-completion of path in insert mode</td>
-</tr></tbody></table> <hr></hr></div>
-</div>
-
- <div id="outline-container-org3753ff5" class="outline-3">
- <h3 id="spell-checking"> <span class="section-number-3">1.8</span> Spell checking</h3>
- <div class="outline-text-3" id="text-spell-checking">
- <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
- <th scope="col" class="org-left">Description</th>
-</tr></thead> <tbody> <tr> <td class="org-left"> <code>:set spell spelllang=en_us</code></td>
- <td class="org-left">Turn on US English spell checking</td>
-</tr> <tr> <td class="org-left"> <code>]s</code></td>
- <td class="org-left">Move to next misspelled word after the cursor</td>
-</tr> <tr> <td class="org-left"> <code>[s</code></td>
- <td class="org-left">Move to previous misspelled word before the cursor</td>
-</tr> <tr> <td class="org-left"> <code>z=</code></td>
- <td class="org-left">Suggest spellings for the word under/after the cursor</td>
-</tr> <tr> <td class="org-left"> <code>zg</code></td>
- <td class="org-left">Add word to spell list</td>
-</tr> <tr> <td class="org-left"> <code>zw</code></td>
- <td class="org-left">Mark word as bad/mispelling</td>
-</tr> <tr> <td class="org-left"> <code>zu</code> /  <code>C-X (Insert Mode)</code></td>
- <td class="org-left">Suggest words for bad word under cursor from spellfile</td>
-</tr></tbody></table> <p>
-See  <code>:help spell</code>
-</p>
-
- <hr></hr> <p>
-Source of this cheatsheet :  <a href="https://devhints.io/vim">https://devhints.io/vim</a>
+Its just a small thing, but my passion thanks me for this.
 </p>
 
  <p>
-With that noted, I hope you turn out to be a proficient  <i> <b>Vimmer</b></i> or an efficient  <i> <b>Emacser</b></i>
+Its time.. time to begin the chapter!
 </p>
-
- <p>
-For emacs, I have my previous post for it.
-</p>
-</div>
 </div>
 </div>
 </div>]]></description>
-  <link>https://idlip.github.io/posts/./vim-proficiency.html</link>
-  <guid isPermaLink="false">https://idlip.github.io/posts/./vim-proficiency.html</guid>
-  <pubDate>Wed, 05 Apr 2023 00:00:00 +0000</pubDate>
+  <link>https://idlip.github.io/snippets/./init.html</link>
+  <guid isPermaLink="false">https://idlip.github.io/snippets/./init.html</guid>
+  <pubDate>Fri, 29 Dec 2023 14:25:00 +0000</pubDate>
 </item>
 <item>
   <title>Insightful Quotes</title>
   <description><![CDATA[<div id="content">
- <div id="outline-container-org338417c" class="outline-2">
- <h2 id="org338417c"> <span class="section-number-2">1</span> Insightful Quotes    <span class="tag"> <span class="snippets">snippets</span>  <span class="quotes">quotes</span></span></h2>
+ <div id="outline-container-org1d4dcda" class="outline-2">
+ <h2 id="org1d4dcda"> <span class="section-number-2">1</span> Insightful Quotes    <span class="tag"> <span class="snippets">snippets</span>  <span class="quotes">quotes</span></span></h2>
  <div class="outline-text-2" id="text-1">
  <p>
 I will be making few snippets on few quotes which impressed me or made me laugh for the day!
@@ -1157,13 +399,290 @@ Visit the snippets again!
 </div>]]></description>
   <link>https://idlip.github.io/snippets/./insightful-quotes.html</link>
   <guid isPermaLink="false">https://idlip.github.io/snippets/./insightful-quotes.html</guid>
-  <pubDate>Wed, 29 Mar 2023 00:00:00 +0000</pubDate>
+  <pubDate>Fri, 29 Dec 2023 14:25:00 +0000</pubDate>
+</item>
+<item>
+  <title>Organize File</title>
+  <description><![CDATA[<div id="content">
+ <div id="outline-container-org0014b2b" class="outline-2">
+ <h2 id="org0014b2b"> <span class="section-number-2">1</span> Organize File    <span class="tag"> <span class="snippets">snippets</span>  <span class="orgmode">orgmode</span></span></h2>
+ <div class="outline-text-2" id="text-1">
+ <p>
+From past few days I have been dabbling in the dimension of how to organize files, notes in effective manner. After jumping deep into the rabbit hole, I went on a spree of digesting several blog posts, articles on maintaining files, organizing notes, getting things done, what not, the list goes on.
+</p>
+
+ <p>
+With power of  <b>org-mode</b> comes the doubt, is it efficient to maintain one big org file or multiple small files. Yes, its personal preference based on users need, there is no set guided rules.
+</p>
+
+ <p>
+I stumbled across  <code>Zettelkasten</code> system which wasn’t new, I was aware of it in the likes of  <code>org-roam</code>, although I believe I did not have much matter to use it to some potential to form sensible network. So for now, no hard plans of multiple small files.
+</p>
+
+ <p>
+After many reading, especially Karl voit’s posts ( <a href="https://karl-voit.at">site</a>), I was kinda convinced that file system hierarchy does not make sense, as the file system model I have may change over time, and I would not like to remember and know where I placed something and where to place something. The schema of Zettelkasten is also against this, like you maintain small files and just connect them based on UniqueID or with complexity of SQL database. The simpler alternative would be  <code>denote</code> emacs package, then too I don’t see the light on using it to the potential. I liked denote way of naming files, and it is format agnostic, does not depend on anything. Just pure elisp to do the job.
+</p>
+
+ <p>
+Thus as a safer approach, I renamed some notes files to denote convention (as there is no harm/changes in that).
+</p>
+
+ <p>
+Ultimately the fruit to yield is, just go with whatever is easy and that gets the work done. Forgetting people’s upfront images, looking at other side proved me that nobody is well organized in every way. Everybody lacks something in one or the other way, like I saw person who maintained file system well organized, but the desk and the room was gross and jam packed. So it depends, but the key takeaway is, if it just works; That’s enough. But as time goes, changes and upgrades are required.
+</p>
+</div>
+</div>
+</div>]]></description>
+  <link>https://idlip.github.io/snippets/./organize-file.html</link>
+  <guid isPermaLink="false">https://idlip.github.io/snippets/./organize-file.html</guid>
+  <pubDate>Fri, 29 Dec 2023 14:25:00 +0000</pubDate>
+</item>
+<item>
+  <title>Rss: the Internet</title>
+  <description><![CDATA[<div id="content">
+ <div id="outline-container-orgfd9bd6d" class="outline-2">
+ <h2 id="orgfd9bd6d"> <span class="section-number-2">1</span> RSS: The better Internet    <span class="tag"> <span class="snippets">snippets</span>  <span class="news">news</span>  <span class="internet">internet</span>  <span class="read">read</span>  <span class="rss">rss</span></span></h2>
+ <div class="outline-text-2" id="text-1">
+</div>
+ <div id="outline-container-org25d3350" class="outline-3">
+ <h3 id="org25d3350"> <span class="section-number-3">1.1</span> Cheesy Internet</h3>
+ <div class="outline-text-3" id="text-1-1">
+ <p>
+I don’t have to say this, the Internet is hella bloated.. Junks are everywhere, nobody knows that they read shit, they are watching shits whole time.
+</p>
+
+ <p>
+Just do a test, How many popups have you closed today, How many cookies (web) have you eaten, How many captchas did you solve, How many minutes did you wait to skip an ad just to watch a video… Even worse, ads sponsors are embedded within a video (So cruel and harsh world)
+ <i>It goes on</i>.
+</p>
+
+ <p>
+Internet and digital software’s are getting so much bloated, people (normies) have forgotten Unix or say ’minimalism’. People are upgrading RAM like anything, 8GB ain’t enough it-seems for them. Here, I do everything with just 4GB RAM.
+People these days all need ready-made/ready-to-work  stuffs, I wonder how do they even watch DIY channels on YouTube.
+</p>
+</div>
+</div>
+
+ <div id="outline-container-org9393f56" class="outline-3">
+ <h3 id="org9393f56"> <span class="section-number-3">1.2</span> The Hero</h3>
+ <div class="outline-text-3" id="text-1-2">
+ <p>
+Rss stands for  <b>Really Simple Syndication</b>, It is a classic on consuming web as supposedly it was built for. Today its all crappy  <b>JavaScript</b> (a big bloat of cheese).
+</p>
+
+ <p>
+People literally have forgotten to read and embrace the text, everyone wants; YouTube tutorials, or some designed way to make them understand.
+Shit, its a no joke, that’s why AI have evolved these days.
+Make our life easy?  Lol
+</p>
+
+ <p>
+It can easily fetch content from web and easily showcase the actual content only. If that content is valuable, we should value our way to taking it.
+</p>
+
+ <p>
+Actually many of you might know famous news reader called  <b>Feedly</b>, it is based on Rss system under-the-hood.
+</p>
+</div>
+
+ <div id="outline-container-org93e9fb4" class="outline-4">
+ <h4 id="org93e9fb4"> <span class="section-number-4">1.2.1</span> Feed Readers</h4>
+ <div class="outline-text-4" id="text-1-2-1">
+ <p>
+If you use window there are famous readers like fluent reader.
+On Linux you get  <a href="https://newsboat.org/">newsboat</a> (terminal lovers), I use  <a href="https://github.com/skeeto/elfeed">elfeed</a> (Emacs way).
+</p>
+
+ <p>
+For GUI Linux user you get : (Install with your system’s package manager or use AppImage/Flathub)
+</p>
+
+ <ul class="org-ul"> <li> <a href="https://github.com/lwindolf/liferea/">Liferea</a></li>
+ <li> <a href="https://github.com/yang991178/fluent-reader">Fluent-reader</a></li>
+ <li> <a href="https://www.thunderbird.net/en-US">Thunderbird</a> (Email client + Rss)</li>
+ <li> <a href="https://gitlab.com/news-flash/news_flash_gtk">NewsFlash</a></li>
+ <li> <a href="https://apps.kde.org/en/akregator">Kde’s Akregator</a></li>
+</ul> <p>
+Watching YouTube contents is whole lot better in Mpv with sponsorblock (It gives seamless content joy)
+</p>
+
+
+ <p>
+Actually elfeed integrates so well with Emacs, I don’t have to learn new stuffs for another application or keyboard shortcuts.
+</p>
+
+ <p>
+That’s one of the reason I call  <b>Emacs as the GOAT-E (Editor)</b>.
+</p>
+
+ <p>
+I will try to expand more bits on rss feeds value by making a detailed post.
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>]]></description>
+  <link>https://idlip.github.io/snippets/./rss-better.html</link>
+  <guid isPermaLink="false">https://idlip.github.io/snippets/./rss-better.html</guid>
+  <pubDate>Fri, 29 Dec 2023 14:25:00 +0000</pubDate>
+</item>
+<item>
+  <title>Tools</title>
+  <description><![CDATA[<div id="content">
+ <div id="outline-container-org17ab892" class="outline-2">
+ <h2 id="org17ab892"> <span class="section-number-2">1</span> Tools that are Best!    <span class="tag"> <span class="terminal">terminal</span>  <span class="cli">cli</span>  <span class="linux">linux</span>  <span class="minimal">minimal</span>  <span class="tools">tools</span></span></h2>
+ <div class="outline-text-2" id="text-1">
+</div>
+ <div id="outline-container-org98b489e" class="outline-3">
+ <h3 id="org98b489e"> <span class="section-number-3">1.1</span> Utilities that are Best! 🌟</h3>
+ <div class="outline-text-3" id="text-1-1">
+ <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Class</th>
+ <th scope="col" class="org-left">Name</th>
+</tr></thead> <tbody> <tr> <td class="org-left">Window Manager</td>
+ <td class="org-left"> <a href="https://hyprland.org/">Hyprland</a> 🌸</td>
+</tr> <tr> <td class="org-left">Text Editor</td>
+ <td class="org-left"> <a href="https://www.gnu.org/software/emacs/">Emacs</a> 💮</td>
+</tr> <tr> <td class="org-left">Gtk Theme</td>
+ <td class="org-left"> <a href="https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme">Gruvbox</a> /  <a href="https://github.com/vinceliuice/Orchis-theme">Orchis</a> 🎨</td>
+</tr> <tr> <td class="org-left">Font</td>
+ <td class="org-left"> <a href="https://tosche.net/fonts/comic-code">Comic Code</a> /  <a href="https://github.com/dtinth/comic-mono-font">Comic Mono</a> /  <a href="https://github.com/tonsky/FiraCode">Fira Code</a></td>
+</tr> <tr> <td class="org-left">Pdf Reader</td>
+ <td class="org-left"> <a href="https://github.com/ahrm/sioyek">Sioyek</a> 📔 (ditch zathura)</td>
+</tr> <tr> <td class="org-left">Media Player</td>
+ <td class="org-left"> <a href="https://mpv.io">MPV!</a> 🎬 (its MVP too)</td>
+</tr> <tr> <td class="org-left">Image Viewer</td>
+ <td class="org-left"> <a href="https://sr.ht/~exec64/imv/">Imv</a> 🖼️</td>
+</tr> <tr> <td class="org-left">RSS Reader</td>
+ <td class="org-left"> <a href="https://github.com/skeeto/elfeed">Elfeed</a> 📰 (Again, Emacs)</td>
+</tr> <tr> <td class="org-left">Music Player</td>
+ <td class="org-left"> <a href="https://github.com/ncmpcpp/ncmpcpp">Ncmpcpp</a> or  <a href="https://github.com//mingus">Mingus in Emacs</a> 🎶</td>
+</tr> <tr> <td class="org-left">Terminal</td>
+ <td class="org-left"> <a href="https://codeberg.org/dnkl/foot">Foot</a> via footclient ⚽</td>
+</tr> <tr> <td class="org-left">Menu/Launcher</td>
+ <td class="org-left"> <a href="https://github.com/davatorium/rofi">Rofi</a> 🚀</td>
+</tr> <tr> <td class="org-left">Notification</td>
+ <td class="org-left"> <a href="https://github.com/dunst/dunst">Dunst</a>  🛎️</td>
+</tr> <tr> <td class="org-left">Shell</td>
+ <td class="org-left"> <a href="https://zsh.org">Zshell</a> with  <a href="https://starship.rs">Starship</a> 🔰</td>
+</tr> <tr> <td class="org-left">Status Bar</td>
+ <td class="org-left"> <a href="https://github.com/Alexays/Waybar">Waybar</a>  🍥</td>
+</tr> <tr> <td class="org-left">Favourite Color-Schemes</td>
+ <td class="org-left">Modus-Vivendi + Gruvbox</td>
+</tr></tbody></table> <blockquote>
+ <p>
+Rest all other stuffs I do in Emacs, tbh I could do everything in Emacs lol.
+</p>
+</blockquote>
+
+
+ <p>
+Feel free to comment down and ask me doubts or about some improvements, you wanna inform! I will be glad.
+</p>
+</div>
+</div>
+</div>
+</div>]]></description>
+  <link>https://idlip.github.io/posts/./best-tool.html</link>
+  <guid isPermaLink="false">https://idlip.github.io/posts/./best-tool.html</guid>
+  <pubDate>Fri, 29 Dec 2023 14:25:00 +0000</pubDate>
+</item>
+<item>
+  <title>Emacs on Droid</title>
+  <description><![CDATA[<div id="content">
+ <div id="outline-container-orgcf324f3" class="outline-2">
+ <h2 id="orgcf324f3"> <span class="section-number-2">1</span> M-x Anything</h2>
+ <div class="outline-text-2" id="text-1">
+ <p>
+Emacs is a definite Greatest editor of all time, the extensibility power is unmatched with any other software. Users of Emacs can only know what it is, one who has not used it may not really understand the principles and power it gives us, the users.
+</p>
+
+ <p>
+Once settled with it on PC, its not late to think of something similar for our handy pocket phones, at least support for  <b>org-mode</b> so we organize our life. The research leads us to find apps, and its unfortunate that market has lots of apps supporting markdown, just for its markup. Even org-mode is good for markup only, Karl voit’s  <a href="https://karl-voit.at/2017/09/23/orgmode-as-markup-only/">post</a> explains it very well.
+</p>
+
+ <p>
+Finally we have some apps for org-mode, namely on Android  <a href="https://github.com/orgzly/orgzly-android">Orgzly</a> (maintained:  <a href="https://github.com/orgzly-revived/orgzly-android-revived">orgzly-revived</a>), Orgro (read-only app) and there is  <a href="https://organice.200ok.ch/">Organice</a> (PWA site, unique, supports desktop).
+Surprisingly IOS has many apps for org-mode, namely  <a href="https://beorgapp.com/">beorg</a> and  <a href="https://plainorg.com/">plain org</a> (I dont use IOS, so please search app store).
+</p>
+
+ <p>
+New project under development  <a href="https://github.com/Artawower/orgnote-client">OrgNote</a> also looks promising.
+</p>
+
+ <p>
+But it was near February, 2023, that Po Lu, one of the Emacs developer, started and released support for touch-screen devices (including Android) and to our surprise it was  <b>the graphical Emacs</b>, available now on Android. But before trying the first doubts and cons expected was that it does not work well with virtual keyboard, so only good option is to carry physical keyboard everywhere?
+That could be solved by getting adjusted to keyboard app called “Hackers Keyboard” (TODO link).
+</p>
+
+ <p>
+But as I dug deep, the developer Po Lu, was on telegram channel in disguise, as I pointed that emacs android needed android’s share feature (like open-with) to other people, he had seen it and implemented is very quickly. It shows how much of an interesting take-up it is.
+</p>
+
+ <p>
+Orgzly actually satisfied org-mode and agenda things with help of syncthing over org directory. But the next bummer came when I fell in love with  <a href="https://github.com/skeeto/elfeed">Elfeed</a> (RSS reader) and badly wanted to read feeds in sync with my phone. Since Emacs officially made its way for Android, so why not open some doors, indeed it did gave the power of emacs-lisp!
+</p>
+
+ <p>
+Initially I started with bare-bone config, and later tried to incorporate my PC config with android, and it was easy, without much hassle. Just had to define a constant to check if system is on Linux or Android, and use the keyword in condition statements and  <code>use-package</code>. Next thought would be to use Unix tools/commands, so it only leads to Termux, and after few days, the developer released Termux signed apk to use in conjunction with emacs, so as to leverage the command line utilities in Android emacs too, namely  <code>ripgrep</code>,  <code>git</code>. I have not tried  <code>image-magick</code>,  <code>mupdf</code> for  <code>pdf-tools</code>. But frankly  <a href="https://github.com/foobnix/LibreraReader">Librera reader</a> is good enough.
+</p>
+
+ <p>
+Here is a  <a href="https://marek-g.github.io/posts/tips_and_tricks/emacs_on_android/">blog post</a> by marek-g explaining how termux is modified to use with Emacs
+</p>
+
+ <p>
+Note: Fdroid emacs apk lacks some support like GnuTLS (so won’t be able to install package or use eww), thus the only source to get emacs builds for Android is  <a href="https://sourceforge.net/projects/android-ports-for-gnu-emacs">https://sourceforge.net/projects/android-ports-for-gnu-emacs</a>
+</p>
+
+ <p>
+For anyone trying it out again or newly, please make sure you go through  <code>C-h R android</code> or  <code>C-h r m android</code> for frequent issues or things to know for Android build. For any queries to me, please feel free to open up an issue over this  <a href="https://github.com/idlip/d-nix">repo</a>.
+</p>
+
+ <p>
+Overall with setting only few variables for android specifically, I replicated almost same emacs config on Android. The definite org-mode reader, read Elfeed feeds in sync with PC, whatever emacs packages you use.
+</p>
+
+ <p>
+Config just for android exclusively:
+</p>
+ <div class="org-src-container">
+ <pre class="src src-emacs-lisp"> <span class="org-comment-delimiter">;; </span> <span class="org-comment">define constant to check if system is android</span>
+( <span class="org-keyword">defconst</span>  <span class="org-variable-name">d/on-droid</span> (eq system-type 'android))
+ <span class="org-comment-delimiter">;; </span> <span class="org-comment">if system is android, executes following code</span>
+( <span class="org-keyword">when</span> d/on-droid
+  (custom-set-variables
+   '(touch-screen-precision-scroll t)  <span class="org-comment-delimiter">;; </span> <span class="org-comment">smooth scrolling</span>
+   '(touch-screen-display-keyboard t)
+    <span class="org-comment-delimiter">;; </span> <span class="org-comment">^ display virtual keyboard when touch on phone screen</span>
+    <span class="org-comment-delimiter">;; </span> <span class="org-comment">does not work on read-only buffer (dashboard, startup..)</span>
+   '(browse-url-android-share t))
+   <span class="org-comment-delimiter">;; </span> <span class="org-comment">open links/urls with android's open-with or share kinda popup</span>
+
+  ( <span class="org-keyword">defun</span>  <span class="org-function-name">d/key-droid</span>()
+     <span class="org-doc">"To enable touch screen keyboard"</span>
+    ( <span class="org-keyword">interactive</span>)
+    (frame-toggle-on-screen-keyboard (selected-frame) nil)
+    )
+  )
+</pre>
+</div>
+
+ <p>
+I’m not sure how suitable it is for coding environment (with lsp and complexities), but it behaves as expected for reading purpose and for quick note taking. I should probably say, it excels in that segment.
+</p>
+</div>
+</div>
+</div>]]></description>
+  <link>https://idlip.github.io/posts/./emacs-droid.html</link>
+  <guid isPermaLink="false">https://idlip.github.io/posts/./emacs-droid.html</guid>
+  <pubDate>Fri, 29 Dec 2023 14:25:00 +0000</pubDate>
 </item>
 <item>
   <title>Emacs Efficiency</title>
   <description><![CDATA[<div id="content">
- <div id="outline-container-orgb453920" class="outline-2">
- <h2 id="orgb453920"> <span class="section-number-2">1</span> Discover Emacs    <span class="tag"> <span class="cheatsheet">cheatsheet</span>  <span class="keybindings">keybindings</span>  <span class="emacs">emacs</span></span></h2>
+ <div id="outline-container-org2dc1c69" class="outline-2">
+ <h2 id="org2dc1c69"> <span class="section-number-2">1</span> Discover Emacs    <span class="tag"> <span class="cheatsheet">cheatsheet</span>  <span class="keybindings">keybindings</span>  <span class="emacs">emacs</span></span></h2>
  <div class="outline-text-2" id="text-1">
  <p>
 This is straight away from  <a href="https://github.com/VernonGrant/discovering-emacs">VernonGrant</a> who hosts a podcast for Emacs called “ <a href="https://www.discovering-emacs.com/">Discovering-Emacs</a>”.
@@ -1184,8 +703,8 @@ You can checkout the source here ⟾  <a href="https://github.com/VernonGrant/em
 </p>
 </div>
 
- <div id="outline-container-org5a7d0d4" class="outline-3">
- <h3 id="org5a7d0d4"> <span class="section-number-3">1.1</span> General Shortcuts</h3>
+ <div id="outline-container-org17cdb76" class="outline-3">
+ <h3 id="org17cdb76"> <span class="section-number-3">1.1</span> General Shortcuts</h3>
  <div class="outline-text-3" id="text-1-1">
  <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
  <th scope="col" class="org-left">Command Invoked</th>
@@ -1319,7 +838,7 @@ You can checkout the source here ⟾  <a href="https://github.com/VernonGrant/em
 </tr></tbody></table></div>
 </div>
 
- <div id="outline-container-org7f0d09b" class="outline-3">
+ <div id="outline-container-org229faa3" class="outline-3">
  <h3 id="macros"> <span class="section-number-3">1.2</span> Macros</h3>
  <div class="outline-text-3" id="text-macros">
  <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
@@ -1349,7 +868,7 @@ You can checkout the source here ⟾  <a href="https://github.com/VernonGrant/em
 </tr></tbody></table></div>
 </div>
 
- <div id="outline-container-orga416d14" class="outline-3">
+ <div id="outline-container-orgafd3bf8" class="outline-3">
  <h3 id="project"> <span class="section-number-3">1.3</span> Project</h3>
  <div class="outline-text-3" id="text-project">
  <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
@@ -1409,7 +928,7 @@ You can checkout the source here ⟾  <a href="https://github.com/VernonGrant/em
 </tr></tbody></table></div>
 </div>
 
- <div id="outline-container-org9a21fe6" class="outline-3">
+ <div id="outline-container-org5ab4139" class="outline-3">
  <h3 id="balanced-expressions"> <span class="section-number-3">1.4</span> Balanced Expressions</h3>
  <div class="outline-text-3" id="text-balanced-expressions">
  <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
@@ -1442,7 +961,7 @@ You can checkout the source here ⟾  <a href="https://github.com/VernonGrant/em
 </tr></tbody></table></div>
 </div>
 
- <div id="outline-container-orga9138f7" class="outline-3">
+ <div id="outline-container-orgabcb9f4" class="outline-3">
  <h3 id="query-replace"> <span class="section-number-3">1.5</span> Query Replace</h3>
  <div class="outline-text-3" id="text-query-replace">
  <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
@@ -1469,7 +988,7 @@ You can checkout the source here ⟾  <a href="https://github.com/VernonGrant/em
 </tr></tbody></table></div>
 </div>
 
- <div id="outline-container-org7342a91" class="outline-3">
+ <div id="outline-container-orgcfc0fc2" class="outline-3">
  <h3 id="xref"> <span class="section-number-3">1.6</span> Xref</h3>
  <div class="outline-text-3" id="text-xref">
  <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
@@ -1490,7 +1009,7 @@ You can checkout the source here ⟾  <a href="https://github.com/VernonGrant/em
 </tr></tbody></table></div>
 </div>
 
- <div id="outline-container-org5535b4d" class="outline-3">
+ <div id="outline-container-org3af5907" class="outline-3">
  <h3 id="bookmarks"> <span class="section-number-3">1.7</span> Bookmarks</h3>
  <div class="outline-text-3" id="text-bookmarks">
  <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
@@ -1508,7 +1027,7 @@ You can checkout the source here ⟾  <a href="https://github.com/VernonGrant/em
 </tr></tbody></table></div>
 </div>
 
- <div id="outline-container-org338c961" class="outline-3">
+ <div id="outline-container-orged77e38" class="outline-3">
  <h3 id="dired-buffer"> <span class="section-number-3">1.8</span> Dired Buffer</h3>
  <div class="outline-text-3" id="text-dired-buffer">
  <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
@@ -1538,7 +1057,7 @@ You can checkout the source here ⟾  <a href="https://github.com/VernonGrant/em
 </tr></tbody></table></div>
 </div>
 
- <div id="outline-container-orgb8705f0" class="outline-3">
+ <div id="outline-container-orga068ee2" class="outline-3">
  <h3 id="interface-to-spell-ispell-and-on-the-fly-spell-flyspell"> <span class="section-number-3">1.9</span> Interface To Spell (Ispell) and On The Fly Spell (Flyspell)</h3>
  <div class="outline-text-3" id="text-interface-to-spell-ispell-and-on-the-fly-spell-flyspell">
  <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
@@ -1559,7 +1078,7 @@ You can checkout the source here ⟾  <a href="https://github.com/VernonGrant/em
 </tr></tbody></table></div>
 </div>
 
- <div id="outline-container-orgf61b2a9" class="outline-3">
+ <div id="outline-container-org316ee4c" class="outline-3">
  <h3 id="org-buffer"> <span class="section-number-3">1.10</span> Org Buffer</h3>
  <div class="outline-text-3" id="text-org-buffer">
  <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
@@ -1601,7 +1120,7 @@ You can checkout the source here ⟾  <a href="https://github.com/VernonGrant/em
 </tr></tbody></table></div>
 </div>
 
- <div id="outline-container-org691f197" class="outline-3">
+ <div id="outline-container-org4b72274" class="outline-3">
  <h3 id="eww"> <span class="section-number-3">1.11</span> EWW</h3>
  <div class="outline-text-3" id="text-eww">
  <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
@@ -1634,7 +1153,7 @@ You can checkout the source here ⟾  <a href="https://github.com/VernonGrant/em
 </tr></tbody></table></div>
 </div>
 
- <div id="outline-container-org96df2cd" class="outline-3">
+ <div id="outline-container-orgf4652ad" class="outline-3">
  <h3 id="useful-commands"> <span class="section-number-3">1.12</span> Useful Commands</h3>
  <div class="outline-text-3" id="text-useful-commands">
  <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Command</th>
@@ -1655,13 +1174,94 @@ You can checkout the source here ⟾  <a href="https://github.com/VernonGrant/em
 </div>]]></description>
   <link>https://idlip.github.io/posts/./emacs-efficiency.html</link>
   <guid isPermaLink="false">https://idlip.github.io/posts/./emacs-efficiency.html</guid>
-  <pubDate>Wed, 29 Mar 2023 00:00:00 +0000</pubDate>
+  <pubDate>Fri, 29 Dec 2023 14:25:00 +0000</pubDate>
+</item>
+<item>
+  <title>FOSS : On Droid</title>
+  <description><![CDATA[<div id="content">
+ <div id="outline-container-org20b9a73" class="outline-2">
+ <h2 id="org20b9a73"> <span class="section-number-2">1</span> Code is Source    <span class="tag"> <span class="fossdroid">fossdroid</span>  <span class="android">android</span></span></h2>
+ <div class="outline-text-2" id="text-1">
+ <p>
+As we know, Android is widely popular OS for many phone. But these days its all filled with junks and bloated apps, these are to say so called  <b>“Popular Android Apps”</b> or  <b>“Trending Apps”</b>. The reason simply would be “everyone in my circle uses it” or “I use it because  <span class="underline">they</span> use it”.
+</p>
+
+ <p>
+But surely you are not giving yourself some privacy or  <b>space</b> that you need for your own  <b>personal phone</b>.
+I’m talking about using Free/Libre and Open Source (FOSS) Apps. Free doesn’t mean by price, Free means  <b>Freedom</b>. Freedom that comes with :
+</p>
+ <ul class="org-ul"> <li>No Trackers.</li>
+ <li>No Ads.</li>
+ <li>Minimal permission.</li>
+ <li>Has customization to users need.</li>
+ <li>No Restrictions.</li>
+</ul> <p>
+These can be achieved in this modern time, by Discovering and using FOSS Apps, the best place being  <a href="https://f-droid.org">F-droid</a>  or  <a href="https://libreddit.kavin.rocks/r/fossdroid">r/fossdroid</a>.
+</p>
+
+ <p>
+There are pretty much all apps under FOSS area for every purpose, they are good looking with  <b>Modern UI</b>,  <b>Lots of Customizations</b> and  <b>friendly with Battery</b>.
+</p>
+
+ <p>
+I happened to search for book and novel reader and found very good apps there, like QuickNovel.
+There is a Manga reader and lots more for every purpose.
+</p>
+
+ <p>
+I exclusively use every apps from F-droid, because they are great.
+You should also use it, as you might find something interesting and surely, gets Surprised; and say in your head,  <b> <i>Gosh I should have known this before</i></b>.
+</p>
+
+ <hr></hr> <p>
+Some of the cool apps I use everyday :
+</p>
+
+ <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Class</th>
+ <th scope="col" class="org-left">Apps</th>
+</tr></thead> <tbody> <tr> <td class="org-left">Launcher</td>
+ <td class="org-left">Kvæsitso ( <a href="https://apt.izzysoft.de/fdroid/index/apk/de.mm20.launcher2.release">izzydroid</a>,  <a href="https://github.com/MM2-0/Kvaesitso">git</a>)</td>
+</tr> <tr> <td class="org-left">F-droid Client</td>
+ <td class="org-left">Neo Store ( <a href="https://f-droid.org/en/packages/com.machiav3lli.fdroid/">fdroid</a>,  <a href="https://github.com/NeoApplications/Neo-Store">git</a>)</td>
+</tr> <tr> <td class="org-left">Browser</td>
+ <td class="org-left">Mull ( <a href="https://f-droid.org/en/packages/us.spotco.fennec_dos/">fdroid</a>,  <a href="https://gitlab.com/divested-mobile/mull-fenix">git</a>)</td>
+</tr> <tr> <td class="org-left">Rss Reader</td>
+ <td class="org-left">Read You ( <a href="https://f-droid.org/en/packages/me.ash.reader/">fdroid</a>,  <a href="https://github.com/Ashinch/ReadYou">git</a>)</td>
+</tr> <tr> <td class="org-left">YouTube</td>
+ <td class="org-left">LibreTube ( <a href="https://f-droid.org/en/packages/com.github.libretube/">fdroid</a>,  <a href="https://github.com/libre-tube/LibreTube">git</a>)</td>
+</tr> <tr> <td class="org-left">PDF/Ebook Reader</td>
+ <td class="org-left">Librera Reader ( <a href="https://f-droid.org/en/packages/com.foobnix.pro.pdf.reader/">fdroid</a>,  <a href="https://github.com/foobnix/LibreraReader">git</a>)</td>
+</tr> <tr> <td class="org-left">Manga Reader</td>
+ <td class="org-left">Tachiyomi ( <a href="https://f-droid.org/en/packages/eu.kanade.tachiyomi/">fdroid</a>,  <a href="https://github.com/tachiyomiorg/tachiyomi">git</a>)</td>
+</tr> <tr> <td class="org-left">Password Manager</td>
+ <td class="org-left">KeePassDX ( <a href="https://f-droid.org/en/packages/com.kunzisoft.keepass.libre/">fdroid</a>,  <a href="https://github.com/Kunzisoft/KeePassDX">git</a>)</td>
+</tr> <tr> <td class="org-left">Novel Reader</td>
+ <td class="org-left">QuickNovel ( <a href="https://apt.izzysoft.de/fdroid/index/apk/com.lagradost.quicknovel">izzydroid</a>,  <a href="https://github.com/LagradOst/QuickNovel">git</a>)</td>
+</tr> <tr> <td class="org-left">Keyboard</td>
+ <td class="org-left">Unexpected Keyboard ( <a href="https://f-droid.org/en/packages/juloo.keyboard2/">fdroid</a>,  <a href="https://github.com/Julow/Unexpected-Keyboard">git</a>)</td>
+</tr> <tr> <td class="org-left">Media Player</td>
+ <td class="org-left">VLC ( <a href="https://f-droid.org/en/packages/org.videolan.vlc/">fdroid</a>,  <a href="https://code.videolan.org/videolan/vlc-android">git</a>)</td>
+</tr> <tr> <td class="org-left">Gallery + Calendar (many more)</td>
+ <td class="org-left">Simple Tools Suite ( <a href="https://search.f-droid.org/?lang=en&q=simple+tools">fdroid</a>,  <a href="https://github.com/SimpleMobileTools">git</a>,  <a href="https://simplemobiletools.com">site</a>)</td>
+</tr> <tr> <td class="org-left">Note Taking</td>
+ <td class="org-left">Orgzly ( <a href="https://f-droid.org/en/packages/com.orgzly/">fdroid</a>,  <a href="https://github.com/orgzly/orgzly-android">git</a>)</td>
+</tr></tbody></table> <hr></hr> <div class="org-center">
+ <p>
+With that fossed, I hope your phone gets a new life and finally breathes alive!
+</p>
+</div>
+</div>
+</div>
+</div>]]></description>
+  <link>https://idlip.github.io/posts/./foss-droid.html</link>
+  <guid isPermaLink="false">https://idlip.github.io/posts/./foss-droid.html</guid>
+  <pubDate>Fri, 29 Dec 2023 14:25:00 +0000</pubDate>
 </item>
 <item>
   <title>Imposter Syndrome : Formula for Success</title>
   <description><![CDATA[<div id="content">
- <div id="outline-container-orgbe4f7a7" class="outline-2">
- <h2 id="orgbe4f7a7"> <span class="section-number-2">1</span> Rally & March    <span class="tag"> <span class="phenomenon">phenomenon</span>  <span class="success">success</span>  <span class="skill">skill</span>  <span class="imposter">imposter</span>  <span class="psychology">psychology</span></span></h2>
+ <div id="outline-container-org898a4ff" class="outline-2">
+ <h2 id="org898a4ff"> <span class="section-number-2">1</span> Rally & March    <span class="tag"> <span class="phenomenon">phenomenon</span>  <span class="success">success</span>  <span class="skill">skill</span>  <span class="imposter">imposter</span>  <span class="psychology">psychology</span></span></h2>
  <div class="outline-text-2" id="text-1">
  <ul class="org-ul"> <li>Have you ever felt a fear of losing or doubt your own ability?</li>
  <li>Have you felt unworthy, lost your self esteem due to a mistake?</li>
@@ -1690,8 +1290,8 @@ I myself have felt this, when I was starting out journey to learn new course (sa
 </p>
 </div>
 
- <div id="outline-container-orgd620d4f" class="outline-3">
- <h3 id="orgd620d4f"> <span class="section-number-3">1.1</span> Ways to stop Imposter Syndrome</h3>
+ <div id="outline-container-orge93de3a" class="outline-3">
+ <h3 id="orge93de3a"> <span class="section-number-3">1.1</span> Ways to stop Imposter Syndrome</h3>
  <div class="outline-text-3" id="text-1-1">
  <blockquote>
  <p>
@@ -1701,8 +1301,8 @@ I myself have felt this, when I was starting out journey to learn new course (sa
 </div>
 
 
- <div id="outline-container-orgedc5567" class="outline-4">
- <h4 id="orgedc5567"> <span class="section-number-4">1.1.1</span> Trust the Process</h4>
+ <div id="outline-container-org8be9b1c" class="outline-4">
+ <h4 id="org8be9b1c"> <span class="section-number-4">1.1.1</span> Trust the Process</h4>
  <div class="outline-text-4" id="text-1-1-1">
  <p>
 Reflect on your actions, see the world praising you. Instead of listening to the negative feeling from your head, listen to the feedback from others.
@@ -1717,8 +1317,8 @@ If you doubt yourself, shouldn’t you also doubt your judgment of yourself?
 </div>
 </div>
 
- <div id="outline-container-orga1723ab" class="outline-4">
- <h4 id="orga1723ab"> <span class="section-number-4">1.1.2</span> Look for Evidence</h4>
+ <div id="outline-container-org4fb42b4" class="outline-4">
+ <h4 id="org4fb42b4"> <span class="section-number-4">1.1.2</span> Look for Evidence</h4>
  <div class="outline-text-4" id="text-1-1-2">
  <p>
 Fine you feel it that way, see if you can find evidence and measures. Think of some example where you have made some positive impact on others, how much change have you brought them.
@@ -1726,8 +1326,8 @@ Fine you feel it that way, see if you can find evidence and measures. Think of s
 </div>
 </div>
 
- <div id="outline-container-org904672f" class="outline-4">
- <h4 id="org904672f"> <span class="section-number-4">1.1.3</span> Remember the Journey</h4>
+ <div id="outline-container-org99321a2" class="outline-4">
+ <h4 id="org99321a2"> <span class="section-number-4">1.1.3</span> Remember the Journey</h4>
  <div class="outline-text-4" id="text-1-1-3">
  <p>
 Look back at the steps you have taken, how was the process of learning from scratch, rock-bottom.
@@ -1739,8 +1339,8 @@ Look back at the steps you have taken, how was the process of learning from scra
 </div>
 </div>
 
- <div id="outline-container-org0c47403" class="outline-4">
- <h4 id="org0c47403"> <span class="section-number-4">1.1.4</span> Turn the Tables</h4>
+ <div id="outline-container-org174925b" class="outline-4">
+ <h4 id="org174925b"> <span class="section-number-4">1.1.4</span> Turn the Tables</h4>
  <div class="outline-text-4" id="text-1-1-4">
  <p>
 Make it a strenth, refrain from doubts. Those with imposter syndrome are more likely to say “I don’t know” when they don’t know. This is an advantage. Overconfident people assume they have all the answers, even when they don’t.
@@ -1753,8 +1353,8 @@ Humility, uncertainty, and self-doubt are part of the learning process. The key 
 </div>
 
 
- <div id="outline-container-orge7133d4" class="outline-4">
- <h4 id="orge7133d4"> <span class="section-number-4">1.1.5</span> Suggested Reads</h4>
+ <div id="outline-container-orgece9314" class="outline-4">
+ <h4 id="orgece9314"> <span class="section-number-4">1.1.5</span> Suggested Reads</h4>
  <div class="outline-text-4" id="text-1-1-5">
  <p>
 If you want to explore more on this concepts :
@@ -1770,307 +1370,16 @@ If you want to explore more on this concepts :
 </div>]]></description>
   <link>https://idlip.github.io/posts/./imposter-syndrome.html</link>
   <guid isPermaLink="false">https://idlip.github.io/posts/./imposter-syndrome.html</guid>
-  <pubDate>Fri, 24 Mar 2023 00:00:00 +0000</pubDate>
-</item>
-<item>
-  <title>Rss: the Internet</title>
-  <description><![CDATA[<div id="content">
- <div id="outline-container-org0f8066a" class="outline-2">
- <h2 id="org0f8066a"> <span class="section-number-2">1</span> RSS: The better Internet    <span class="tag"> <span class="snippets">snippets</span>  <span class="news">news</span>  <span class="internet">internet</span>  <span class="read">read</span>  <span class="rss">rss</span></span></h2>
- <div class="outline-text-2" id="text-1">
-</div>
- <div id="outline-container-org29fb626" class="outline-3">
- <h3 id="org29fb626"> <span class="section-number-3">1.1</span> Cheesy Internet</h3>
- <div class="outline-text-3" id="text-1-1">
- <p>
-I don’t have to say this, the Internet is hella bloated.. Junks are everywhere, nobody knows that they read shit, they are watching shits whole time.
-</p>
-
- <p>
-Just do a test, How many popups have you closed today, How many cookies (web) have you eaten, How many captchas did you solve, How many minutes did you wait to skip an ad just to watch a video… Even worse, ads sponsors are embedded within a video (So cruel and harsh world)
- <i>It goes on</i>.
-</p>
-
- <p>
-Internet and digital software’s are getting so much bloated, people (normies) have forgotten Unix or say ’minimalism’. People are upgrading RAM like anything, 8GB ain’t enough it-seems for them. Here, I do everything with just 4GB RAM.
-People these days all need ready-made/ready-to-work  stuffs, I wonder how do they even watch DIY channels on YouTube.
-</p>
-</div>
-</div>
-
- <div id="outline-container-orgf50ae84" class="outline-3">
- <h3 id="orgf50ae84"> <span class="section-number-3">1.2</span> The Hero</h3>
- <div class="outline-text-3" id="text-1-2">
- <p>
-Rss stands for  <b>Really Simple Syndication</b>, It is a classic on consuming web as supposedly it was built for. Today its all crappy  <b>JavaScript</b> (a big bloat of cheese).
-</p>
-
- <p>
-People literally have forgotten to read and embrace the text, everyone wants; YouTube tutorials, or some designed way to make them understand.
-Shit, its a no joke, that’s why AI have evolved these days.
-Make our life easy?  Lol
-</p>
-
- <p>
-It can easily fetch content from web and easily showcase the actual content only. If that content is valuable, we should value our way to taking it.
-</p>
-
- <p>
-Actually many of you might know famous news reader called  <b>Feedly</b>, it is based on Rss system under-the-hood.
-</p>
-</div>
-
- <div id="outline-container-orgadc826b" class="outline-4">
- <h4 id="orgadc826b"> <span class="section-number-4">1.2.1</span> Feed Readers</h4>
- <div class="outline-text-4" id="text-1-2-1">
- <p>
-If you use window there are famous readers like fluent reader.
-On Linux you get  <a href="https://newsboat.org/">newsboat</a> (terminal lovers), I use  <a href="https://github.com/skeeto/elfeed">elfeed</a> (Emacs way).
-</p>
-
- <p>
-For GUI Linux user you get : (Install with your system’s package manager or use AppImage/Flathub)
-</p>
-
- <ul class="org-ul"> <li> <a href="https://github.com/lwindolf/liferea/">Liferea</a></li>
- <li> <a href="https://github.com/yang991178/fluent-reader">Fluent-reader</a></li>
- <li> <a href="https://www.thunderbird.net/en-US">Thunderbird</a> (Email client + Rss)</li>
- <li> <a href="https://gitlab.com/news-flash/news_flash_gtk">NewsFlash</a></li>
- <li> <a href="https://apps.kde.org/en/akregator">Kde’s Akregator</a></li>
-</ul> <p>
-Watching YouTube contents is whole lot better in Mpv with sponsorblock (It gives seamless content joy)
-</p>
-
-
- <p>
-Actually elfeed integrates so well with Emacs, I don’t have to learn new stuffs for another application or keyboard shortcuts.
-</p>
-
- <p>
-That’s one of the reason I call  <b>Emacs as the GOAT-E (Editor)</b>.
-</p>
-
- <p>
-I will try to expand more bits on rss feeds value by making a detailed post.
-</p>
-</div>
-</div>
-</div>
-</div>
-</div>]]></description>
-  <link>https://idlip.github.io/snippets/./rss-better.html</link>
-  <guid isPermaLink="false">https://idlip.github.io/snippets/./rss-better.html</guid>
-  <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
-</item>
-<item>
-  <title>NixOS : Reproducible - Immutable</title>
-  <description><![CDATA[<div id="content">
- <div id="outline-container-org0a273fa" class="outline-2">
- <h2 id="org0a273fa"> <span class="section-number-2">1</span> The Hop    <span class="tag"> <span class="emacs">emacs</span>  <span class="distro">distro</span>  <span class="linux">linux</span>  <span class="nixos">nixos</span></span></h2>
- <div class="outline-text-2" id="text-1">
- <hr></hr> <p>
-Introduction part, you would better have read it on official nixos site ( <a href="https://nixos.org">https://nixos.org</a>)
-</p>
-</div>
-
- <div id="outline-container-orgc5e4077" class="outline-3">
- <h3 id="orgc5e4077"> <span class="section-number-3">1.1</span> “Should you try NixOS?” ❄️</h3>
- <div class="outline-text-3" id="text-1-1">
- <p>
-Here’s an answer from a non-programmer, who just browses and watches media.
-Just don’t, if you are looking for small benefit.  <b>Don’t!</b>
- regret having hard time to figure out petty things, again forget about error, you cannot even search in web.
-</p>
-
- <p>
-But, if you have decided, go with it. According to me (non-programmer), these points are good to consider NixOS
-</p>
- <ul class="org-ul"> <li>You use Emacs (lol),  <b>Emacs</b> ❤️   <b>Nix</b> is Match made in Heaven.</li>
- <li>You want to declare stuffs and get same output, and forget what all you setup, cause its all declared in config.</li>
- <li>You want an isolated environments (shell) to do some stuffs without involving whole system.</li>
- <li>You want to stop troubleshooting and breaking update and are lazy to backup, and want to rollback with ease like with just a reboot.</li>
- <li>You want to say I use  <b>Nixos Btw</b>.</li>
- <li>You don’t want to worry about breaking your system nor fix something when you are updating system.</li>
- <li>You are willing to learn (advanced) things and fine with steep learning curve.</li>
-</ul> <hr></hr></div>
-</div>
-
- <div id="outline-container-orgfd25a7e" class="outline-3">
- <h3 id="orgfd25a7e"> <span class="section-number-3">1.2</span> How I manage my system 🌲</h3>
- <div class="outline-text-3" id="text-1-2">
- <p>
-I manage my whole system with single org file. Its easy and pretty handy. You can read that file here  <b>↬</b>  <a href="https://github.com/idlip/d-nix/blob/onepiece/d-setup.org">d-setup.org</a> , its both self documenting and has all source code blocks.
-</p>
-
- <p>
-Another key feature in my setup is, every file i tangle is at  <b>read-only mode</b>. So generally we can avoid editing/touching them. Thus, every action has to be made in  <b>d-setup.org</b> only.
-</p>
-
- <p>
-Also, I have made files to be  <b>symlink</b>, so i can edit them without requiring to rebuild whole thing!
-</p>
-
- <hr></hr></div>
-
-
- <div id="outline-container-orgdd10820" class="outline-4">
- <h4 id="orgdd10820"> <span class="section-number-4">1.2.1</span> Credits 🎖️</h4>
- <div class="outline-text-4" id="text-1-2-1">
- <p>
-These configs were the inspiration and helped to build this way.
-</p>
-
- <p>
-I thank them sincerely.
-</p>
-
- <p>
- <a href="https://github.com/Iron-Shark/Technonomicon">Iron Shark</a>  <b>⟹</b> Made migrating to Single org-file config very easy.
-</p>
-
- <p>
- <a href="https://github.com/sioodmy/dotfiles">Sioodmy</a>  <b>⟹</b> First config which I understand thoroughly and modified based on this.
-</p>
-
- <hr></hr></div>
-</div>
-</div>
-</div>
-</div>]]></description>
-  <link>https://idlip.github.io/posts/./nixos-distro.html</link>
-  <guid isPermaLink="false">https://idlip.github.io/posts/./nixos-distro.html</guid>
-  <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
-</item>
-<item>
-  <title>Emacs is OP!</title>
-  <description><![CDATA[<div id="content">
- <div id="outline-container-orgd5908c9" class="outline-2">
- <h2 id="orgd5908c9"> <span class="section-number-2">1</span> The greatest Editor    <span class="tag"> <span class="snippets">snippets</span>  <span class="editors">editors</span>  <span class="emacs">emacs</span>  <span class="neovim">neovim</span></span></h2>
- <div class="outline-text-2" id="text-1">
- <p>
-Before anyone shouts vim, let me  <code>:q!</code>
-I was a vimmer for a year, I played and had a good basic config. Even after an year, I didn’t grasp the full potential of vim, it was just handy to use  <code>hjkl</code> to move around.
-</p>
-
- <p>
-But When I’m learning Emacs, the experience is immense, it defines how things are meant and the legacy of Emacs for 40 years, is not a joke.
-</p>
-
- <p>
-I cannot just rant to make people ditch vim for Emacs, But once you understand you will realize, that is why people went and made  <code>evil</code> mode to emulate Vi layer (vim 100%).
-</p>
-
- <p>
-Now they get the  <b>Best</b> of both the World!
-</p>
-
- <p>
-Nonetheless, Emacs is the  <b>GOAT</b> !
-</p>
-</div>
-</div>
-</div>]]></description>
-  <link>https://idlip.github.io/snippets/./emacs-op.html</link>
-  <guid isPermaLink="false">https://idlip.github.io/snippets/./emacs-op.html</guid>
-  <pubDate>Wed, 22 Mar 2023 00:00:00 +0000</pubDate>
-</item>
-<item>
-  <title>Init on Snippets</title>
-  <description><![CDATA[<div id="content">
- <div id="outline-container-org9122414" class="outline-2">
- <h2 id="org9122414"> <span class="section-number-2">1</span> Journey Begins    <span class="tag"> <span class="log">log</span>  <span class="snippets">snippets</span>  <span class="first">first</span></span></h2>
- <div class="outline-text-2" id="text-1">
- <p>
-I have almost set my first static website.
-From here my creativity goes public to the world.
-</p>
-
- <p>
-Its just a small thing, but my passion thanks me for this.
-</p>
-
- <p>
-Its time.. time to begin the chapter!
-</p>
-</div>
-</div>
-</div>]]></description>
-  <link>https://idlip.github.io/snippets/./init.html</link>
-  <guid isPermaLink="false">https://idlip.github.io/snippets/./init.html</guid>
-  <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate>
-</item>
-<item>
-  <title>Tools</title>
-  <description><![CDATA[<div id="content">
- <div id="outline-container-org5f39aa9" class="outline-2">
- <h2 id="org5f39aa9"> <span class="section-number-2">1</span> Tools that are Best!    <span class="tag"> <span class="terminal">terminal</span>  <span class="cli">cli</span>  <span class="linux">linux</span>  <span class="minimal">minimal</span>  <span class="tools">tools</span></span></h2>
- <div class="outline-text-2" id="text-1">
-</div>
- <div id="outline-container-org821eaea" class="outline-3">
- <h3 id="org821eaea"> <span class="section-number-3">1.1</span> Utilities that are Best! 🌟</h3>
- <div class="outline-text-3" id="text-1-1">
- <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Class</th>
- <th scope="col" class="org-left">Name</th>
-</tr></thead> <tbody> <tr> <td class="org-left">Window Manager</td>
- <td class="org-left"> <a href="https://hyprland.org/">Hyprland</a> 🌸</td>
-</tr> <tr> <td class="org-left">Text Editor</td>
- <td class="org-left"> <a href="https://www.gnu.org/software/emacs/">Emacs</a> 💮</td>
-</tr> <tr> <td class="org-left">Gtk Theme</td>
- <td class="org-left"> <a href="https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme">Gruvbox</a> /  <a href="https://github.com/vinceliuice/Orchis-theme">Orchis</a> 🎨</td>
-</tr> <tr> <td class="org-left">Font</td>
- <td class="org-left"> <a href="https://tosche.net/fonts/comic-code">Comic Code</a> /  <a href="https://github.com/dtinth/comic-mono-font">Comic Mono</a> /  <a href="https://github.com/tonsky/FiraCode">Fira Code</a></td>
-</tr> <tr> <td class="org-left">Pdf Reader</td>
- <td class="org-left"> <a href="https://github.com/ahrm/sioyek">Sioyek</a> 📔 (ditch zathura)</td>
-</tr> <tr> <td class="org-left">Media Player</td>
- <td class="org-left"> <a href="https://mpv.io">MPV!</a> 🎬 (its MVP too)</td>
-</tr> <tr> <td class="org-left">Image Viewer</td>
- <td class="org-left"> <a href="https://sr.ht/~exec64/imv/">Imv</a> 🖼️</td>
-</tr> <tr> <td class="org-left">RSS Reader</td>
- <td class="org-left"> <a href="https://github.com/skeeto/elfeed">Elfeed</a> 📰 (Again, Emacs)</td>
-</tr> <tr> <td class="org-left">Music Player</td>
- <td class="org-left"> <a href="https://github.com/ncmpcpp/ncmpcpp">Ncmpcpp</a> or  <a href="https://github.com//mingus">Mingus in Emacs</a> 🎶</td>
-</tr> <tr> <td class="org-left">Terminal</td>
- <td class="org-left"> <a href="https://codeberg.org/dnkl/foot">Foot</a> via footclient ⚽</td>
-</tr> <tr> <td class="org-left">Menu/Launcher</td>
- <td class="org-left"> <a href="https://github.com/davatorium/rofi">Rofi</a> 🚀</td>
-</tr> <tr> <td class="org-left">Notification</td>
- <td class="org-left"> <a href="https://github.com/dunst/dunst">Dunst</a>  🛎️</td>
-</tr> <tr> <td class="org-left">Shell</td>
- <td class="org-left"> <a href="https://zsh.org">Zshell</a> with  <a href="https://starship.rs">Starship</a> 🔰</td>
-</tr> <tr> <td class="org-left">Status Bar</td>
- <td class="org-left"> <a href="https://github.com/Alexays/Waybar">Waybar</a>  🍥</td>
-</tr> <tr> <td class="org-left">Favourite Color-Schemes</td>
- <td class="org-left">Modus-Vivendi + Gruvbox</td>
-</tr></tbody></table> <blockquote>
- <p>
-Rest all other stuffs I do in Emacs, tbh I could do everything in Emacs lol.
-</p>
-</blockquote>
-
-
- <p>
-Feel free to comment down and ask me doubts or about some improvements, you wanna inform! I will be glad.
-</p>
-</div>
-</div>
-</div>
-</div>]]></description>
-  <link>https://idlip.github.io/posts/./best-tool.html</link>
-  <guid isPermaLink="false">https://idlip.github.io/posts/./best-tool.html</guid>
-  <pubDate>Fri, 17 Mar 2023 00:00:00 +0000</pubDate>
+  <pubDate>Fri, 29 Dec 2023 14:25:00 +0000</pubDate>
 </item>
 <item>
   <title>My Linux Journey</title>
   <description><![CDATA[<div id="content">
- <div id="outline-container-org66bb7a6" class="outline-2">
- <h2 id="org66bb7a6"> <span class="section-number-2">1</span> The Freedom    <span class="tag"> <span class="distro">distro</span>  <span class="linux">linux</span></span></h2>
+ <div id="outline-container-orgd562b73" class="outline-2">
+ <h2 id="orgd562b73"> <span class="section-number-2">1</span> The Freedom    <span class="tag"> <span class="distro">distro</span>  <span class="linux">linux</span></span></h2>
  <div class="outline-text-2" id="text-1">
  <p>
  <b>Small info/log on my linux journey and my experience.</b>
-</p>
-
- <p>
- <i>If you are reading this, I encourage you to write blogs like this and have it in your git repo. Don’t forget to tag or inform me, I’d be glad to read your journey too!</i>
 </p>
 
  <hr></hr> <p>
@@ -2095,8 +1404,8 @@ My linux journey was from Linux Mint > EndeavourOS > Arch Linux > and now NixOS.
 </p>
 </div>
 
- <div id="outline-container-org9099ac4" class="outline-3">
- <h3 id="org9099ac4"> <span class="section-number-3">1.1</span> The Embark</h3>
+ <div id="outline-container-org8e74acd" class="outline-3">
+ <h3 id="org8e74acd"> <span class="section-number-3">1.1</span> The Embark</h3>
  <div class="outline-text-3" id="text-1-1">
  <p>
 I started to explore some YouTube video on Linux (as a normie at that time), soon I got familiar with good explanation, thankfully CTT had made an Linux Mint playlist and it helped to installing the first and the best  <b>Beginner Distro</b>, the  <b>Linux Mint</b>.
@@ -2170,7 +1479,792 @@ Okay, so it was not about shilling Nix or anything, Just my Linux experience.
 </div>]]></description>
   <link>https://idlip.github.io/posts/./linux-journey.html</link>
   <guid isPermaLink="false">https://idlip.github.io/posts/./linux-journey.html</guid>
-  <pubDate>Fri, 10 Mar 2023 00:00:00 +0000</pubDate>
+  <pubDate>Fri, 29 Dec 2023 14:25:00 +0000</pubDate>
+</item>
+<item>
+  <title>Linux : The Matrix</title>
+  <description><![CDATA[<div id="content">
+ <div id="outline-container-org58efa08" class="outline-2">
+ <h2 id="org58efa08"> <span class="section-number-2">1</span> Terminals to Rescue    <span class="tag"> <span class="terminal">terminal</span>  <span class="cheatsheet">cheatsheet</span>  <span class="minimal">minimal</span></span></h2>
+ <div class="outline-text-2" id="text-1">
+ <p>
+There are tons of linux command line cheatsheet or guides.
+</p>
+
+ <p>
+Here are some of the best reads, I suggest you to go throught each of it,  <b>It’s a gem</b>.
+</p>
+
+
+ <ul class="org-ul"> <li> <a href="https://github.com/jlevy/the-art-of-command-line">The Art of Command Line</a> — notes and tips on using the command-line, suitable for both beginners and experienced users.</li>
+ <li> <a href="https://www.commandlinefu.com/commands/browse/sort-by-votes">commandlinefu</a> — command-line gems, includes a handy search feature.</li>
+ <li> <a href="https://github.com/tldr-pages/tldr">tldr</a> — collection of community-maintained help pages for command-line tools.</li>
+ <li> <a href="https://explainshell.com/">explainshell</a> — write down a command-line to see the help text that matches each argument.</li>
+ <li> <a href="http://www.compciv.org/unix-tools/">General purpose command-line tools</a> — examples for most common usecases.</li>
+ <li> <a href="https://devmanual.gentoo.org/tools-reference/bash/index.html">Bash reference cheatsheet</a> — nicely formatted and explained well.</li>
+ <li> <a href="https://devhints.io/bash">Bash scripting cheatsheet</a> — quick reference to getting started with Bash scripting.</li>
+</ul> <hr></hr> <div class="org-center">
+ <p>
+ <b>With that  <code>coded</code>, I hope you enjoy the terminal. Unleash the Matrix</b>.
+</p>
+</div>
+</div>
+</div>
+</div>]]></description>
+  <link>https://idlip.github.io/posts/./linux-matrix.html</link>
+  <guid isPermaLink="false">https://idlip.github.io/posts/./linux-matrix.html</guid>
+  <pubDate>Fri, 29 Dec 2023 14:25:00 +0000</pubDate>
+</item>
+<item>
+  <title>Literate org config</title>
+  <description><![CDATA[<div id="content">
+ <div id="outline-container-orgad1cd42" class="outline-2">
+ <h2 id="orgad1cd42"> <span class="section-number-2">1</span> Organizing Config</h2>
+ <div class="outline-text-2" id="text-1">
+ <p>
+Configuration files as we know are the text to instruct the program to modify and tweak to our needs. Every Open-Source, hack-able software or tool has configuration files provided for the choice of user’s needs. Most of the tools provide simple and basic configuration with JSON-like formats,  <code>Yaml</code> and  <code>Toml</code>. For the word, they are not extensible, as  <code>ml</code> stands, they are merely for markup to already defined instructions.
+</p>
+
+ <p>
+Tools which are really extensible occupy with the power of a simple or real programming language, to which user gets only sky as the limit to configure. Some tools which are in my mind of this matter are Emacs, neovim, NixOS (home-manager).
+</p>
+
+ <p>
+So eventually with more configurations added and tweaked, it becomes evident that it needs to be organized. Humans cannot read a long mass of codes which does not even have basic design principle in it.
+</p>
+
+ <p>
+This realization leads to documenting the codes with comments ( <i>the grey</i>) and it obviously adds more lines. There after the thoughts lead to modular config, splitting up of files in sensible manner and to import from one stop.
+</p>
+
+ <p>
+Now, wait.., This sounds like we are down to creating a file hierarchy for config files, good at the initial days, but sooner or later hierarchy might look alien. I bet it!
+</p>
+
+ <p>
+That’s where I’m stopping you can covering up next on writing Literate configuration, like with Org-mode.
+</p>
+</div>
+
+ <div id="outline-container-org53079db" class="outline-3">
+ <h3 id="org53079db"> <span class="section-number-3">1.1</span> Org-mode Config</h3>
+ <div class="outline-text-3" id="text-1-1">
+ <p>
+I won’t introduce about org-mode, please do check  <a href="https://orgmode.org">here</a>, hopefully it gives you an idea (I mean you should have read whole documentation/manual there). Additionally here is a  <a href="https://en.wikipedia.org/wiki/Org-mode">Wikipedia reference</a> which is enough to introduce.
+</p>
+
+ <p>
+The concept of  <a href="https://en.wikipedia.org/wiki/Literate_programming">Literate programming</a> is having the user’s natural language written down in correspondence to code blocks. It adds human-ness to the code, and the instructions we need to understand. Over technical work, it can reduce the usage of manual pages and documentation, wait, that is not a good idea to avoid them, but for something to understand that we wrote ourselves, literate programming helps to add notes.
+</p>
+
+ <p>
+The concept is fairly like maintaining a notebook or documentation guide itself, but it also comes with its power.
+</p>
+
+ <p>
+Org-mode has tons of features that helps in various categories. Prime use is for maintaining GTD, Notes, Latex, Journaling…  <i>infinity?</i>
+</p>
+
+ <p>
+The main topic is, I tried maintaining modular config for Emacs and Nixos, and after some days, I myself was wondering and wasting time on thinking where did I place some content for this categories and was stuck with file hierarchy for several moments. The main obstacle is file hierarchy might turn out to be complex and redundant.
+</p>
+
+ <p>
+That’s where I decided to move back all to literate config. I came across  <a href="https://github.com/rasendubi/dotfiles">rasendubi</a> dotfiles and he also used Literate org config for both Nixos and Emacs. Eventually I did too, here is the  <a href="https://github.com/idlip/d-nix">repo</a>.
+</p>
+
+ <p>
+The key benefits were, single org file to rule them all. I can integrate well with Emacs, yes, dependency might be Emacs, then too it is plain text format. Org gives us the power to tangle, annotate, add notes, tables, anything with the Source Code Blocks.
+For many configs or code, we forget why we wrote or why it is uniquely required, and nobody likes to waste time digging on why it is there, of course comments are helpful, but not everywhere to make it more head ache?
+Also I don’t have navigate over the file hierarchy again and again with paths, simple single org is the stop.
+</p>
+
+ <p>
+Org allows us to write notes there, I do manage lot of TODO and plans over the files, and forget everything. When I revisit or when I want to care, I can see what are the plans and I can execute it timely there after. Org literate config acts the source of truth, for information and understanding for my own level.
+</p>
+
+ <p>
+As I bestowed this in practice, I noticed that flow of thoughts and expression of it at that time is the crucial thing. Again, for a thought to come and just vanish, its a haze. Even merely  <i>sixty seconds</i> is enough to forget. Org could also fill that void, but just capturing the running thought at that time, and later to expand on it.
+</p>
+
+ <p>
+Managing time is precious and Org-mode help with that, with plans Todo & Schedules. Also, endless customization does not fetch any fruit. Having a cleaning kind of a day every month or twice a year can help on tweaking or fixing the necessary lines over the Org config.
+</p>
+
+ <p>
+In a recent snippet on  <a href="file:///home/runner/d-git/d-site/content/snippets/organize-file.html">Organize File</a>, I was about falling out on maintaining notes. From that scenario also the lesson learned is that, more than maintaining notes, the actual flow of thought and feeling at right time is most important and beats the best organizer anywhere out there. I mean, the goal of note-taking or writing down should be to transcribe the thoughts and knowledge in a approachable manner.
+</p>
+</div>
+
+ <div id="outline-container-org7c4eaa9" class="outline-4">
+ <h4 id="org7c4eaa9"> <span class="section-number-4">1.1.1</span> Key Takeaways</h4>
+ <div class="outline-text-4" id="text-1-1-1">
+ <ul class="org-ul"> <li>Org-mode helps in managing and maintaining configuration files.</li>
+ <li>Learning can be stressed, and is the key for writing out Literate programming.</li>
+ <li>Things are easier to forget, annotating it our own words can help in better understanding and retention of information.</li>
+ <li>Org config is the source of truth.</li>
+ <li>Notes should be meant to capture the thoughts and feeling at that time of occurence.</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>]]></description>
+  <link>https://idlip.github.io/posts/./literate-config.html</link>
+  <guid isPermaLink="false">https://idlip.github.io/posts/./literate-config.html</guid>
+  <pubDate>Fri, 29 Dec 2023 14:25:00 +0000</pubDate>
+</item>
+<item>
+  <title>Nix: Home for Acer</title>
+  <description><![CDATA[<div id="content">
+ <div id="outline-container-orgdb059c4" class="outline-2">
+ <h2 id="orgdb059c4"> <span class="section-number-2">1</span> The Machine    <span class="tag"> <span class="linux">linux</span>  <span class="nixos">nixos</span></span></h2>
+ <div class="outline-text-2" id="text-1">
+ <p>
+In this post am sharing some of the experience of using my new laptop,  <b>Acer swift Go Oled</b>. Compact, Premium ultra-book with Oled, Yes, a good hand made mobile laptop.
+</p>
+
+ <p>
+As expected and as usual, it got windows 11 and first major encounter was heating and battery issue. It got me scared as it felt wrong decision. Since many claimed windows gives better battery life than Linux. It gave me nightmare of installing Linux too, really, new laptop with 4-5 hours of battery, for oled with black screens?
+</p>
+
+ <p>
+Anyways, windows made me really tinker to my needs, went on with  <code>winutils</code> and de-bloated few stuffs and made it somewhat tacit for me, then too I demanded more of it. To which windows felt weird and too much to handle. Thus did finally decide to dual boot or straightaway to erase disk for Linux. My first thought of choice was to use Arch with gnome, but since I had well maintained  <a href="https://github.com/idlip/d-nix">nixos config</a>, I went with same config without much a-due.
+</p>
+
+ <p>
+Viola it gave me the exact setup I was looking for, enabling my hand to feel back in pace. Yet I was worried about battery and heating point of view, although many say,  <code>laptops arent made to run on battery</code>, yet the heat? the air exhaust hitting my oled display directly?.
+</p>
+
+ <p>
+I gave a shot to  <code>auto-cpufreq</code>, it did a well decent job, yet I felt too little gain, I did change  <code>intel_pstate</code> to  <code>acpu</code> one. All i noticed is it lowered the max frequency rate from 4.3GHz to 3.2GHz.
+</p>
+
+ <p>
+Later on after many rebuilds, I saw Nixos  <a href="https://nixos.wiki/wiki/Laptop">wiki on laptop</a>, may seem outdated, but it was legit, and I did enable service such as  <code>thermald</code>,  <code>tlp</code> and viola later on I noticed it works well. Seriously I don’t know how, it gave me better battery life, less heating in Linux (nixos) than windows. Maybe magical to me as others claim vice-versa.
+</p>
+
+ <p>
+Nonetheless, nixos handled the magics of services and making it a better experience by just writing one line of configs to  <code>true;</code>. My desktop runs Hyprland (wayland) and it works flawlessly.
+</p>
+
+ <p>
+Okay, let me tell you about Finger Print, it gave me little trouble, and funny enough, it was again just to say  <code>true;</code> on a line.
+</p>
+
+ <p>
+I have FP, so obviously I wanted to be cool looking by using it, I initially did not expect FP to work, again online poeple said so. I was following some debian/ubuntu help on FP and enabling some drivers and all, it did not work. Later I gotta know that  <code>fprintd</code> latest one already has the support for my FP id, so just did enable  <code>fprintd</code> and viola! viola!, now I login in TTY with FingerPrint.
+</p>
+
+ <p>
+Although I wasted some time one tinkering and making it to work on my needs, I was not doing work I wanted, thus decided to settle and do productive tasks from then on. Anyway, whatever you customize it will be little to no gain. That’s why I decided to make and get my blog going, it is better to make one day each month or on boring holiday to do cleaning and customizing on OS.
+</p>
+
+ <p>
+Finally, It has become a pleasant experience to get nix and make it work as I expected on  <b>Acer</b>.
+</p>
+
+ <p>
+Yet one thing remains unexplored, fan controlling. I see no mention of fan or  <span class="underline">RPM</span> via  <code>sensors</code> command, so one way is to check another tool. I skipped that part, since I don’t face heating issue or high fan noise even when I’m plugged in.
+</p>
+
+ <p>
+Ultimately one more thing making all experience better is the  <b>GOAT Emacs</b>. Bringing back my config and using it with more speed is another level of bliss.
+</p>
+
+ <p>
+This has become another embark of a journey, where the todo’s are just piling even more, and it looks fun to explore more and utilize efficiently for learning.
+</p>
+</div>
+</div>
+</div>]]></description>
+  <link>https://idlip.github.io/posts/./nix-acer.html</link>
+  <guid isPermaLink="false">https://idlip.github.io/posts/./nix-acer.html</guid>
+  <pubDate>Fri, 29 Dec 2023 14:25:00 +0000</pubDate>
+</item>
+<item>
+  <title>Nix Learning</title>
+  <description><![CDATA[<div id="content">
+ <div id="outline-container-org8830019" class="outline-2">
+ <h2 id="org8830019"> <span class="section-number-2">1</span> Nobody can Explain    <span class="tag"> <span class="linux">linux</span>  <span class="resources">resources</span>  <span class="nixos">nixos</span></span></h2>
+ <div class="outline-text-2" id="text-1">
+ <p>
+NixOS is definitely an advanced Linux distro, but it ain’t easy to understand overnight or like Archlinux to have easy manual, but it sure has alot on the table. There is whole bunch of families like Nix functional language, Nix package manager… so and on with the prefix “nix”.
+</p>
+
+ <p>
+This is really confusing, many hate nix and are not convinced to go long run just because of this difficulty (mess?). To make a simple thing work as expected, you need to go through such a rabbit hole.
+But once you know Nix* (families), everything will make sense, and you would feel bad to go back to old traditional Linux manners.
+</p>
+
+ <p>
+These are some of the learning resources, which are rich in content and nonetheless, will be confusing at some point. But engineers do have spared their time in writing these, taking actions, to reach some audience and solve some of the caveats of Nix. So dig through and learn new ;)
+</p>
+</div>
+
+ <div id="outline-container-org52f6d86" class="outline-3">
+ <h3 id="org52f6d86"> <span class="section-number-3">1.1</span> nix-learning</h3>
+ <div class="outline-text-3" id="text-1-1">
+</div>
+ <div id="outline-container-org09962a5" class="outline-4">
+ <h4 id="uncategorized"> <span class="section-number-4">1.1.1</span> Uncategorized</h4>
+ <div class="outline-text-4" id="text-uncategorized">
+ <ul class="org-ul"> <li> <a href="https://youtu.be/m4sv2M9jRLg">Nix Fundamentals</a> (Video)</li>
+ <li> <a href="https://stephank.nl/p/2020-06-01-a-nix-primer-by-a-newcomer.html">A Nix terminology primer by a newcomer</a> - Stéphan Kochen</li>
+ <li> <a href="https://shopify.engineering/what-is-nix">What Is Nix</a></li>
+ <li> <a href="https://nasirhm.github.io/posts/getting-started-with-nix-introduction/">Getting Started With Nix: Introduction</a> - Nasir Hussain</li>
+ <li> <a href="https://blog.sulami.xyz/posts/nix-for-developers/">Lightning
+Introduction to Nix for Developers</a> - Robin Schroer</li>
+ <li> <a href="https://blog.knightsofthelambdacalcul.us/posts/2020-06-20-nix-nixos-thoughts/">Nix(OS)
+Thoughts</a> - ?</li>
+ <li> <a href="https://fzakaria.com/2020/11/17/on-demand-linked-libraries-for-nix.html">On-demand
+linked libraries for Nix</a> - Farid Zakaria</li>
+ <li> <a href="https://serokell.io/blog/what-is-nix">What Is Nix and Why You Should
+Use It</a> - ?</li>
+ <li> <a href="https://push.cx/2018/nixos">NixOS on prgmr and Failing to Learn
+Nix</a> - Peter Bhat Harkins</li>
+ <li> <a href="https://www.tweag.io/blog/2020-09-10-nix-cas/">Towards a
+content-addressed model for Nix</a> - Théophane Hufschmitt</li>
+ <li> <a href="https://lucperkins.dev/blog/nix-channel/">The easiest way (I’ve
+found) to create your own Nix channel</a> - Luc Perkins</li>
+ <li> <a href="https://www.johnbcoughlin.com/posts/nix-dynamic-linking/">Debugging
+a dynamic linking bug in a Nix project</a> - Jack Coughlin</li>
+ <li> <a href="https://notes.neeasade.net/adhoc-executable-patching-on-nix.html">adhoc
+executable patching on nixos</a> - ?</li>
+ <li> <a href="https://maxmcd.com/posts/strategies-for-binary-relocation/">Strategies
+for Binary Relocation In Functional Build Systems</a> - Max McDonnell</li>
+ <li> <a href="https://christine.website/blog/how-i-start-nix-2020-03-08">How I
+Start: Nix</a> - Christine Dodrill</li>
+ <li> <a href="https://christine.website/blog/i-was-wrong-about-nix-2020-02-10">I
+was Wrong about Nix</a> - Christine Dodrill</li>
+ <li> <a href="https://www.infoq.com/articles/configuration-management-with-nix/">Purely
+Functional Configuration Management with Nix and NixOS</a> - Eelco
+Dolstra</li>
+ <li> <a href="https://bgottlob.com/post/2019-05-29-nix-use-cases/">Basic Use-Cases
+of the Nix Package Manager</a> - Brandon Gottlob</li>
+ <li> <a href="https://thomazleite.com/posts/development-with-nix-python/">Development
+with Nix: Python</a> - Thomaz Leite</li>
+ <li> <a href="https://medium.com/dapphub/dapp-tools-and-the-nix-package-manager-c4c692c87310">Dapp
+tools and the Nix package manager</a> - Mikael Brockman</li>
+ <li> <a href="http://gfxmonk.net/2015/01/03/nixos-and-stateless-deployment.html">NixOS
+and Stateless Deployment</a> - ?</li>
+ <li> <a href="https://christine.website/blog/nixos-encrypted-secrets-2021-01-20">Encrypted
+Secrets with NixOS</a> - Christine Dodrill</li>
+ <li> <a href="https://begriffs.com/posts/2016-08-08-intro-to-nixos.html">Purely
+Functional Linux with NixOS</a> - Joe Nelson</li>
+ <li> <a href="https://www.tweag.io/blog/2018-03-15-bazel-nix/">Nix + Bazel = fully
+reproducible, incremental builds</a> - Mathieu Boespflug, Théophane
+Hufschmitt</li>
+ <li> <a href="https://zenhack.net/2016/01/24/reflections-on-nixos.html">Reflections
+On NixOS</a> - Ian Denhardt</li>
+ <li> <a href="https://blog.mayflower.de/5800-Hardening-Compiler-Flags-for-NixOS.html">Hardening
+Compiler Flags for NixOS</a> - Franz Pletz</li>
+ <li> <a href="https://hugoreeves.com/posts/2019/nix-home/">Your home in Nix
+(dotfile management)</a> - Hugo Reeves</li>
+ <li> <a href="https://christine.website/blog/nixos-desktop-flow-2020-04-25">My
+NixOS Desktop Flow</a> - Christine Dodrill</li>
+ <li> <a href="https://tailscale.com/blog/nixos-minecraft/">Tailscale on NixOS: A
+new Minecraft server in ten minutes</a> - Christine Dodrill</li>
+ <li> <a href="https://terinstock.com/post/2021/01/Setting-up-a-git-server-on-NixOS/">Setting
+up a git server on NixOS</a> - Terin Stock</li>
+ <li> <a href="https://myme.no/posts/2020-01-26-nixos-for-development.html">NixOS:
+For developers</a> - Martin Myrseth</li>
+ <li> <a href="https://myme.no/posts/2019-07-01-nixos-into-the-deep-end.html">NixOS:
+Into the deep end</a> - Martin Myrseth</li>
+ <li> <a href="https://rgoswami.me/posts/ccon-tut-nix/">A Tutorial Introduction to
+Nix</a> - Rohit Goswami</li>
+ <li> <a href="https://zimbatm.com/benchmark-nixpkgs">Benchmarking nixpkgs
+builds</a> - Jonas Chevalier</li>
+ <li> <a href="https://zimbatm.com/experiment-recursive-nix">Recursive Nix
+experiment</a> - Jonas Chevalier</li>
+ <li> <a href="https://zimbatm.com/deploying-k8s-apps-with-kubenix">Deploying
+Kubernetes apps with KubeNix</a> - Jonas Chevalier</li>
+ <li> <a href="https://github.com/tazjin/nix-1p">Nix - A One Pager</a> - Vincent Ambo</li>
+ <li> <a href="https://foo-dogsquared.github.io/blog/posts/moving-into-nixos/">Moving
+into NixOS</a> - Gabriel Arazas</li>
+ <li> <a href="https://www.willghatch.net/blog/2020/06/27/nixos-the-good-the-bad-and-the-ugly/">NixOS:
+the good, the bad, and the ugly</a> - William G Hatch</li>
+ <li> <a href="https://www.nmattia.com/posts/2018-03-21-nix-reproducible-setup-linux-macos.html">Nix:
+A Reproducible Setup for Linux and macOS</a> - Nicolas Mattia</li>
+ <li> <a href="https://www.nmattia.com/posts/2019-01-15-easy-peasy-nix-versions.html">Easy
+Peasy Nix Versions</a> - Nicolas Mattia</li>
+ <li> <a href="https://www.nmattia.com/posts/2019-10-08-runtime-dependencies">Recovering
+Nix derivation attributes of runtime dependencies</a> - Nicolas Mattia</li>
+</ul> <div class="html">
+ <p>
+<!– TODO: add more from their website –>
+</p>
+
+</div>
+
+ <ul class="org-ul"> <li> <a href="https://ops.functionalalgebra.com/nix-by-example/">Nix By
+Example</a> - Susan Potter</li>
+ <li> <a href="https://ops.functionalalgebra.com/nixops-by-example/">NixOps By
+Example</a> - Susan Potter</li>
+ <li> <a href="https://ops.functionalalgebra.com/nixos-by-example/">NixOS By
+Example</a> - Susan Potter</li>
+ <li> <a href="https://ops.functionalalgebra.com/2018/04/18/inspecting-nix-lambda-named-arguments/">Inspecting
+Nix lambda function named arguments</a> - Susan Potter</li>
+</ul> <div class="html">
+ <p>
+<!– TODO: add Tweag Nix flakes –>
+</p>
+
+</div>
+</div>
+</div>
+
+ <div id="outline-container-org7b2eaf6" class="outline-4">
+ <h4 id="overview"> <span class="section-number-4">1.1.2</span> Overview</h4>
+ <div class="outline-text-4" id="text-overview">
+ <ul class="org-ul"> <li> <a href="https://web.archive.org/web/20210123223258/https://ebzzry.io/en/nix/">A
+Gentle Introduction to the Nix Family</a></li>
+</ul></div>
+</div>
+
+ <div id="outline-container-orgc9dde12" class="outline-4">
+ <h4 id="nix-the-language"> <span class="section-number-4">1.1.3</span> Nix the language</h4>
+ <div class="outline-text-4" id="text-nix-the-language">
+ <ul class="org-ul"> <li> <a href="https://nixcloud.io/tour">A tour of Nix</a> - an introduction to the
+Nix Programming Language</li>
+</ul></div>
+</div>
+
+ <div id="outline-container-org171c7fd" class="outline-4">
+ <h4 id="nix-shell"> <span class="section-number-4">1.1.4</span> Nix Shell</h4>
+ <div class="outline-text-4" id="text-nix-shell">
+ <ul class="org-ul"> <li> <a href="https://ghedam.at/15978/an-introduction-to-nix-shell">An
+introduction to nix-shell</a> - Mattia Gheda</li>
+ <li> <a href="https://fzakaria.com/2020/08/11/caching-your-nix-shell.html">caching
+your nix-shell</a> - Farid Zakaria</li>
+</ul></div>
+</div>
+
+ <div id="outline-container-org9fb4426" class="outline-4">
+ <h4 id="nix-flakes"> <span class="section-number-4">1.1.5</span> Nix Flakes</h4>
+ <div class="outline-text-4" id="text-nix-flakes">
+ <ul class="org-ul"> <li> <a href="https://blog.ysndr.de/posts/internals/2021-01-01-flake-ification/">Building
+with Nix Flakes for, eh .. reasons!</a> - Yannik Sander</li>
+ <li> <a href="https://zimbatm.com/NixFlakes/">Nix Flakes edition</a> - Jonas
+Chevalier</li>
+</ul></div>
+</div>
+
+ <div id="outline-container-org38c24f9" class="outline-4">
+ <h4 id="experience"> <span class="section-number-4">1.1.6</span> Experience</h4>
+ <div class="outline-text-4" id="text-experience">
+ <ul class="org-ul"> <li> <a href="https://catgirl.ai/log/nixos-experience/">Eight Months of NixOS</a> -
+ash</li>
+ <li> <a href="https://tech.channable.com/posts/2021-04-09-nix-is-the-ultimate-devops-toolkit.html">Nix
+is the ultimate DevOps toolkit</a> - Ruud van Asseldonk, Reinier Maas,
+Falco Peijnenburg, Fabian Thorand, and Robert Kreuzer</li>
+</ul></div>
+</div>
+
+ <div id="outline-container-org332d8d8" class="outline-4">
+ <h4 id="language-specific"> <span class="section-number-4">1.1.7</span> Language Specific</h4>
+ <div class="outline-text-4" id="text-language-specific">
+</div>
+ <ol class="org-ol"> <li> <a id="java"></a>Java <br></br> <div class="outline-text-5" id="text-java">
+ <ul class="org-ul"> <li> <a href="https://fzakaria.com/2020/07/20/packaging-a-maven-application-with-nix.html">Packaging
+a Maven application with Nix</a></li>
+</ul></div>
+</li>
+
+ <li> <a id="elixir"></a>Elixir <br></br> <div class="outline-text-5" id="text-elixir">
+ <ul class="org-ul"> <li> <a href="https://ejpcmac.net/blog/using-nix-in-elixir-projects/">Using Nix in
+Elixir projects</a> - Jean-Philippe</li>
+</ul></div>
+</li>
+
+ <li> <a id="c"></a>C++ <br></br> <div class="outline-text-5" id="text-c">
+ <ul class="org-ul"> <li> <a href="https://blog.galowicz.de/2019/04/17/tutorial_nix_cpp_setup/">Setting
+up a C++ project environment with nix</a> - Jacek Galowicz</li>
+</ul></div>
+</li>
+
+ <li> <a id="rust"></a>Rust <br></br> <div class="outline-text-5" id="text-rust">
+ <ul class="org-ul"> <li>Managing Rust Dependencies with Nix - James Kay
+ <ul class="org-ul"> <li> <a href="https://hadean.com/blog/managing-rust-dependencies-with-nix-part-i/">Part
+1</a></li>
+ <li> <a href="https://hadean.com/blog/managing-rust-dependencies-with-nix-part-ii/">Part
+2</a></li>
+</ul></li>
+</ul></div>
+</li>
+</ol></div>
+
+ <div id="outline-container-org7f5f2fc" class="outline-4">
+ <h4 id="series"> <span class="section-number-4">1.1.8</span> Series</h4>
+ <div class="outline-text-4" id="text-series">
+ <ul class="org-ul"> <li>Nix by Example - James Fisher
+ <ul class="org-ul"> <li> <a href="https://medium.com/@MrJamesFisher/nix-by-example-a0063a1a4c55">Part
+1: The Nix expression language</a></li>
+</ul></li>
+ <li>Ian Henry’s  <i>How to Learn Nix</i> series
+ <ul class="org-ul"> <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/introduction/">Part
+1: What’s all this about?</a></li>
+ <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/prior-knowledge/">Part
+2: Prior knowledge</a></li>
+ <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/glossary/">Part 3:
+What we talk about when we talk about Nix</a></li>
+ <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/quick-start-guide/">Part
+4: Quick starts, full hearts</a></li>
+ <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/basic-package-management/">Part
+5: Basic package management</a></li>
+ <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/profiles/">Part 6:
+Profiles</a></li>
+ <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/garbage-collection/">Part
+7: Garbage collection</a></li>
+ <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/channels/">Part 8:
+Channels</a></li>
+ <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/sharing/">Part 9:
+Learning to share</a></li>
+ <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/my-first-derivation/">Part
+10: My first derivation</a></li>
+ <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/okay-my-actual-first-derivation/">Part
+11: Okay my actual first derivation</a></li>
+ <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/nix-language/">Part
+12: The Nix expression language</a></li>
+ <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/derivations/">Part
+13: Derivations</a></li>
+ <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/built-in-functions/">Part
+14: Built-in Functions</a></li>
+ <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/advanced-topics/">Part
+15: Advanced Topics</a></li>
+ <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/command-reference/">Part
+16: Command Reference</a></li>
+ <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/configuration/">Part
+17: Configuration</a></li>
+ <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/nix-manual-reflection/">Part
+18: So I read the manual huh</a></li>
+ <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/switching-from-homebrew-to-nix/">Part
+19: Switching from Homebrew to Nix</a></li>
+ <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/my-first-nix-bug/">Part
+20: My first Nix bug</a></li>
+ <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/my-first-package-upgrade/">Part
+21: My first package upgrade</a></li>
+ <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/declarative-user-environment/">Part
+22: Setting up a declarative user environment</a></li>
+ <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/how-to-learn-nixpkgs/">Part
+23: How to learn Nixpkgs</a></li>
+ <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/overlays/">Part 24:
+Overlays</a></li>
+ <li> <a href="https://ianthehenry.com/posts/how-to-learn-nix/overriding/">Part
+25: Overriding</a></li>
+</ul></li>
+</ul> <hr></hr> <p>
+These links are extracted from humancalico’s git repo ( <a href="https://github.com/humancalico/nix-learning">https://github.com/humancalico/nix-learning</a>).
+</p>
+
+ <div class="org-center">
+ <p>
+With that sorted, I hope learning becomes good ;)
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>]]></description>
+  <link>https://idlip.github.io/posts/./nix-learning.html</link>
+  <guid isPermaLink="false">https://idlip.github.io/posts/./nix-learning.html</guid>
+  <pubDate>Fri, 29 Dec 2023 14:25:00 +0000</pubDate>
+</item>
+<item>
+  <title>NixOS : Reproducible - Immutable</title>
+  <description><![CDATA[<div id="content">
+ <div id="outline-container-org8952c19" class="outline-2">
+ <h2 id="org8952c19"> <span class="section-number-2">1</span> The Hop    <span class="tag"> <span class="emacs">emacs</span>  <span class="distro">distro</span>  <span class="linux">linux</span>  <span class="nixos">nixos</span></span></h2>
+ <div class="outline-text-2" id="text-1">
+ <hr></hr> <p>
+Introduction part, you would better have read it on official nixos site ( <a href="https://nixos.org">https://nixos.org</a>)
+</p>
+</div>
+
+ <div id="outline-container-org79fe208" class="outline-3">
+ <h3 id="org79fe208"> <span class="section-number-3">1.1</span> “Should you try NixOS?” ❄️</h3>
+ <div class="outline-text-3" id="text-1-1">
+ <p>
+Here’s an answer from a non-programmer, who just browses and watches media.
+Just don’t, if you are looking for small benefit.  <b>Don’t!</b>
+ regret having hard time to figure out petty things, again forget about error, you cannot even search in web.
+</p>
+
+ <p>
+But, if you have decided, go with it. According to me (non-programmer), these points are good to consider NixOS
+</p>
+ <ul class="org-ul"> <li>You use Emacs (lol),  <b>Emacs</b> ❤️   <b>Nix</b> is Match made in Heaven.</li>
+ <li>You want to declare stuffs and get same output, and forget what all you setup, cause its all declared in config.</li>
+ <li>You want an isolated environments (shell) to do some stuffs without involving whole system.</li>
+ <li>You want to stop troubleshooting and breaking update and are lazy to backup, and want to rollback with ease like with just a reboot.</li>
+ <li>You want to say I use  <b>Nixos Btw</b>.</li>
+ <li>You don’t want to worry about breaking your system nor fix something when you are updating system.</li>
+ <li>You are willing to learn (advanced) things and fine with steep learning curve.</li>
+</ul> <hr></hr></div>
+</div>
+
+ <div id="outline-container-orgcb97097" class="outline-3">
+ <h3 id="orgcb97097"> <span class="section-number-3">1.2</span> How I manage my system 🌲</h3>
+ <div class="outline-text-3" id="text-1-2">
+ <p>
+I manage my whole system with single org file. Its easy and pretty handy. You can read that file here  <b>↬</b>  <a href="https://github.com/idlip/d-nix/blob/onepiece/d-setup.org">d-setup.org</a> , its both self documenting and has all source code blocks.
+</p>
+
+ <p>
+Another key feature in my setup is, every file i tangle is at  <b>read-only mode</b>. So generally we can avoid editing/touching them. Thus, every action has to be made in  <b>d-setup.org</b> only.
+</p>
+
+ <p>
+Also, I have made files to be  <b>symlink</b>, so i can edit them without requiring to rebuild whole thing!
+</p>
+
+ <hr></hr></div>
+
+
+ <div id="outline-container-org27b38e6" class="outline-4">
+ <h4 id="org27b38e6"> <span class="section-number-4">1.2.1</span> Credits 🎖️</h4>
+ <div class="outline-text-4" id="text-1-2-1">
+ <p>
+These configs were the inspiration and helped to build this way.
+</p>
+
+ <p>
+I thank them sincerely.
+</p>
+
+ <p>
+ <a href="https://github.com/Iron-Shark/Technonomicon">Iron Shark</a>  <b>⟹</b> Made migrating to Single org-file config very easy.
+</p>
+
+ <p>
+ <a href="https://github.com/sioodmy/dotfiles">Sioodmy</a>  <b>⟹</b> First config which I understand thoroughly and modified based on this.
+</p>
+
+ <hr></hr></div>
+</div>
+</div>
+</div>
+</div>]]></description>
+  <link>https://idlip.github.io/posts/./nixos-distro.html</link>
+  <guid isPermaLink="false">https://idlip.github.io/posts/./nixos-distro.html</guid>
+  <pubDate>Fri, 29 Dec 2023 14:25:00 +0000</pubDate>
+</item>
+<item>
+  <title>Vim Proficiency</title>
+  <description><![CDATA[<div id="content">
+ <div id="outline-container-org7562740" class="outline-2">
+ <h2 id="org7562740"> <span class="section-number-2">1</span> Neo Vim Time    <span class="tag"> <span class="terminal">terminal</span>  <span class="keybindings">keybindings</span>  <span class="cheatsheet">cheatsheet</span>  <span class="vim">vim</span></span></h2>
+ <div class="outline-text-2" id="text-1">
+ <p>
+Although I don’t use vim, it has good points for being easy  <b>keyboard glue</b>. Why not learn both of the best worlds of Editors?
+</p>
+
+ <p>
+Apart from normal vim navigations and operators, These are some of the unique vim magics, which I haven’t used at all.
+</p>
+</div>
+
+ <div id="outline-container-org1b2538d" class="outline-3">
+ <h3 id="marks"> <span class="section-number-3">1.1</span> Marks</h3>
+ <div class="outline-text-3" id="text-marks">
+ <p>
+This is the important one, I have not used this at all. Should try and make use of it. Although emacs  <code>mark-ring</code> is alot better.
+</p>
+
+ <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
+ <th scope="col" class="org-left">Description</th>
+</tr></thead> <tbody> <tr> <td class="org-left"> <code>`^</code></td>
+ <td class="org-left">Last position of cursor in insert mode</td>
+</tr> <tr> <td class="org-left"> <code>`.</code></td>
+ <td class="org-left">Last change in current buffer</td>
+</tr> <tr> <td class="org-left"> <code>`"</code></td>
+ <td class="org-left">Last exited current buffer</td>
+</tr> <tr> <td class="org-left"> <code>`0</code></td>
+ <td class="org-left">In last file edited</td>
+</tr> <tr> <td class="org-left"> <code>''</code></td>
+ <td class="org-left">Back to line in current buffer where jumped from</td>
+</tr> <tr> <td class="org-left"> <code>``</code></td>
+ <td class="org-left">Back to position in current buffer where jumped from</td>
+</tr> <tr> <td class="org-left"> <code>`[</code></td>
+ <td class="org-left">To beginning of previously changed or yanked text</td>
+</tr> <tr> <td class="org-left"> <code>`]</code></td>
+ <td class="org-left">To end of previously changed or yanked text</td>
+</tr> <tr> <td class="org-left"> <code>`<</code></td>
+ <td class="org-left">To beginning of last visual selection</td>
+</tr> <tr> <td class="org-left"> <code>`></code></td>
+ <td class="org-left">To end of last visual selection</td>
+</tr> <tr> <td class="org-left"> <code>ma</code></td>
+ <td class="org-left">Mark this cursor position as  <code>a</code></td>
+</tr> <tr> <td class="org-left"> <code>`a</code></td>
+ <td class="org-left">Jump to the cursor position  <code>a</code></td>
+</tr> <tr> <td class="org-left"> <code>'a</code></td>
+ <td class="org-left">Jump to the beginning of the line with position  <code>a</code></td>
+</tr> <tr> <td class="org-left"> <code>d'a</code></td>
+ <td class="org-left">Delete from current line to line of mark  <code>a</code></td>
+</tr> <tr> <td class="org-left"> <code>d`a</code></td>
+ <td class="org-left">Delete from current position to position of mark  <code>a</code></td>
+</tr> <tr> <td class="org-left"> <code>c'a</code></td>
+ <td class="org-left">Change text from current line to line of  <code>a</code></td>
+</tr> <tr> <td class="org-left"> <code>y`a</code></td>
+ <td class="org-left">Yank text from current position to position of  <code>a</code></td>
+</tr> <tr> <td class="org-left"> <code>:marks</code></td>
+ <td class="org-left">List all current marks</td>
+</tr> <tr> <td class="org-left"> <code>:delm a</code></td>
+ <td class="org-left">Delete mark  <code>a</code></td>
+</tr> <tr> <td class="org-left"> <code>:delm a-d</code></td>
+ <td class="org-left">Delete marks  <code>a</code>,  <code>b</code>,  <code>c</code>,  <code>d</code></td>
+</tr> <tr> <td class="org-left"> <code>:delm abc</code></td>
+ <td class="org-left">Delete marks  <code>a</code>,  <code>b</code>,  <code>c</code></td>
+</tr></tbody></table> <hr></hr></div>
+</div>
+
+ <div id="outline-container-org4deb82a" class="outline-3">
+ <h3 id="navigation"> <span class="section-number-3">1.2</span> Navigation</h3>
+ <div class="outline-text-3" id="text-navigation">
+ <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
+ <th scope="col" class="org-left">Description</th>
+</tr></thead> <tbody> <tr> <td class="org-left"> <code>%</code></td>
+ <td class="org-left">Nearest/matching  <code>{[()]}</code></td>
+</tr> <tr> <td class="org-left"> <code>[(</code>  <code>[{</code>  <code>[<</code></td>
+ <td class="org-left">Previous  <code>(</code> or  <code>{</code> or  <code><</code></td>
+</tr> <tr> <td class="org-left"> <code>])</code></td>
+ <td class="org-left">Next</td>
+</tr> <tr> <td class="org-left"> <code>[m</code></td>
+ <td class="org-left">Previous method start</td>
+</tr> <tr> <td class="org-left"> <code>[M</code></td>
+ <td class="org-left">Previous method end</td>
+</tr></tbody></table> <hr></hr></div>
+</div>
+
+ <div id="outline-container-org68b0b57" class="outline-3">
+ <h3 id="jumping"> <span class="section-number-3">1.3</span> Jumping</h3>
+ <div class="outline-text-3" id="text-jumping">
+ <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
+ <th scope="col" class="org-left">Description</th>
+</tr></thead> <tbody> <tr> <td class="org-left"> <code><C-O></code></td>
+ <td class="org-left">Go back to previous location</td>
+</tr> <tr> <td class="org-left"> <code><C-I></code></td>
+ <td class="org-left">Go forward</td>
+</tr> <tr> <td class="org-left"> <code>gf</code></td>
+ <td class="org-left">Go to file in cursor</td>
+</tr></tbody></table> <hr></hr></div>
+</div>
+
+ <div id="outline-container-org21fed20" class="outline-3">
+ <h3 id="counters"> <span class="section-number-3">1.4</span> Counters</h3>
+ <div class="outline-text-3" id="text-counters">
+ <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
+ <th scope="col" class="org-left">Description</th>
+</tr></thead> <tbody> <tr> <td class="org-left"> <code><C-A></code></td>
+ <td class="org-left">Increment number</td>
+</tr> <tr> <td class="org-left"> <code><C-X></code></td>
+ <td class="org-left">Decrement</td>
+</tr></tbody></table> <hr></hr></div>
+</div>
+
+ <div id="outline-container-org9896182" class="outline-3">
+ <h3 id="tags"> <span class="section-number-3">1.5</span> Tags</h3>
+ <div class="outline-text-3" id="text-tags">
+ <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
+ <th scope="col" class="org-left">Description</th>
+</tr></thead> <tbody> <tr> <td class="org-left"> <code>:tag Classname</code></td>
+ <td class="org-left">Jump to first definition of Classname</td>
+</tr> <tr> <td class="org-left"> <code><C-]></code></td>
+ <td class="org-left">Jump to definition</td>
+</tr> <tr> <td class="org-left"> <code>g]</code></td>
+ <td class="org-left">See all definitions</td>
+</tr> <tr> <td class="org-left"> <code><C-T></code></td>
+ <td class="org-left">Go back to last tag</td>
+</tr> <tr> <td class="org-left"> <code><C-O> <C-I></code></td>
+ <td class="org-left">Back/forward</td>
+</tr> <tr> <td class="org-left"> <code>:tselect Classname</code></td>
+ <td class="org-left">Find definitions of Classname</td>
+</tr> <tr> <td class="org-left"> <code>:tjump Classname</code></td>
+ <td class="org-left">Find definitions of Classname (auto-select 1st)</td>
+</tr></tbody></table> <hr></hr></div>
+</div>
+
+ <div id="outline-container-org5155127" class="outline-3">
+ <h3 id="folds"> <span class="section-number-3">1.6</span> Folds</h3>
+ <div class="outline-text-3" id="text-folds">
+ <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
+ <th scope="col" class="org-left">Description</th>
+</tr></thead> <tbody> <tr> <td class="org-left"> <code>zo</code>  <i>/</i>  <code>zO</code></td>
+ <td class="org-left">Open</td>
+</tr> <tr> <td class="org-left"> <code>zc</code>  <i>/</i>  <code>zC</code></td>
+ <td class="org-left">Close</td>
+</tr> <tr> <td class="org-left"> <code>za</code>  <i>/</i>  <code>zA</code></td>
+ <td class="org-left">Toggle</td>
+</tr> <tr> <td class="org-left"> <code>zv</code></td>
+ <td class="org-left">Open folds for this line</td>
+</tr> <tr> <td class="org-left"> <code>zM</code></td>
+ <td class="org-left">Close all</td>
+</tr> <tr> <td class="org-left"> <code>zR</code></td>
+ <td class="org-left">Open all</td>
+</tr> <tr> <td class="org-left"> <code>zm</code></td>
+ <td class="org-left">Fold more  <i>(foldlevel += 1)</i></td>
+</tr> <tr> <td class="org-left"> <code>zr</code></td>
+ <td class="org-left">Fold less  <i>(foldlevel -= 1)</i></td>
+</tr> <tr> <td class="org-left"> <code>zx</code></td>
+ <td class="org-left">Update folds</td>
+</tr></tbody></table> <hr></hr></div>
+</div>
+
+ <div id="outline-container-org47138e8" class="outline-3">
+ <h3 id="command-line"> <span class="section-number-3">1.7</span> Command line</h3>
+ <div class="outline-text-3" id="text-command-line">
+ <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
+ <th scope="col" class="org-left">Description</th>
+</tr></thead> <tbody> <tr> <td class="org-left"> <code><C-R><C-W></code></td>
+ <td class="org-left">Insert current word into the command line</td>
+</tr> <tr> <td class="org-left"> <code><C-R>"</code></td>
+ <td class="org-left">Paste from ” register</td>
+</tr> <tr> <td class="org-left"> <code><C-X><C-F></code></td>
+ <td class="org-left">Auto-completion of path in insert mode</td>
+</tr></tbody></table> <hr></hr></div>
+</div>
+
+ <div id="outline-container-orgf56d083" class="outline-3">
+ <h3 id="spell-checking"> <span class="section-number-3">1.8</span> Spell checking</h3>
+ <div class="outline-text-3" id="text-spell-checking">
+ <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
+ <th scope="col" class="org-left">Description</th>
+</tr></thead> <tbody> <tr> <td class="org-left"> <code>:set spell spelllang=en_us</code></td>
+ <td class="org-left">Turn on US English spell checking</td>
+</tr> <tr> <td class="org-left"> <code>]s</code></td>
+ <td class="org-left">Move to next misspelled word after the cursor</td>
+</tr> <tr> <td class="org-left"> <code>[s</code></td>
+ <td class="org-left">Move to previous misspelled word before the cursor</td>
+</tr> <tr> <td class="org-left"> <code>z=</code></td>
+ <td class="org-left">Suggest spellings for the word under/after the cursor</td>
+</tr> <tr> <td class="org-left"> <code>zg</code></td>
+ <td class="org-left">Add word to spell list</td>
+</tr> <tr> <td class="org-left"> <code>zw</code></td>
+ <td class="org-left">Mark word as bad/mispelling</td>
+</tr> <tr> <td class="org-left"> <code>zu</code> /  <code>C-X (Insert Mode)</code></td>
+ <td class="org-left">Suggest words for bad word under cursor from spellfile</td>
+</tr></tbody></table> <p>
+See  <code>:help spell</code>
+</p>
+
+ <hr></hr> <p>
+Source of this cheatsheet :  <a href="https://devhints.io/vim">https://devhints.io/vim</a>
+</p>
+
+ <p>
+With that noted, I hope you turn out to be a proficient  <i> <b>Vimmer</b></i> or an efficient  <i> <b>Emacser</b></i>
+</p>
+
+ <p>
+For emacs, I have my previous post for it.
+</p>
+</div>
+</div>
+</div>
+</div>]]></description>
+  <link>https://idlip.github.io/posts/./vim-proficiency.html</link>
+  <guid isPermaLink="false">https://idlip.github.io/posts/./vim-proficiency.html</guid>
+  <pubDate>Fri, 29 Dec 2023 14:25:00 +0000</pubDate>
 </item>
 </channel>
 </rss>
