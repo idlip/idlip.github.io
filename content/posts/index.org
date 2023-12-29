@@ -1,5 +1,6 @@
 #+TITLE: Posts
 
+- [[file:literate-config.org][Literate org config]] - Dec 29, 2023
 - [[file:emacs-droid.org][Emacs on Droid]] - Dec 16, 2023
 - [[file:nix-acer.org][Nix: Home for Acer]] - Oct 21, 2023
 - [[file:nix-learning.org][Nix Learning]] - May 03, 2023

@@ -5,8 +5,6 @@
 
 *Small info/log on my linux journey and my experience.*
 
-/If you are reading this, I encourage you to write blogs like this and have it in your git repo. Don't forget to tag or inform me, I'd be glad to read your journey too!/
-
 -----
 
 Linux is not widely recommended or discussed topic among real life friends or circle, every system comes pre-installed with win-dows, and its no big surprise people don't have a feel towards their usage of OS.

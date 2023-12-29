@@ -1,0 +1,47 @@
+#+title: Literate org config
+#+date: [2023-12-29 Fri]
+
+* Organizing Config
+Configuration files as we know are the text to instruct the program to modify and tweak to our needs. Every Open-Source, hack-able software or tool has configuration files provided for the choice of user's needs. Most of the tools provide simple and basic configuration with JSON-like formats, =Yaml= and =Toml=. For the word, they are not extensible, as =ml= stands, they are merely for markup to already defined instructions.
+
+Tools which are really extensible occupy with the power of a simple or real programming language, to which user gets only sky as the limit to configure. Some tools which are in my mind of this matter are Emacs, neovim, NixOS (home-manager).
+
+So eventually with more configurations added and tweaked, it becomes evident that it needs to be organized. Humans cannot read a long mass of codes which does not even have basic design principle in it.
+
+This realization leads to documenting the codes with comments (/the grey/) and it obviously adds more lines. There after the thoughts lead to modular config, splitting up of files in sensible manner and to import from one stop.
+
+Now, wait.., This sounds like we are down to creating a file hierarchy for config files, good at the initial days, but sooner or later hierarchy might look alien. I bet it!
+
+That's where I'm stopping you can covering up next on writing Literate configuration, like with Org-mode.
+
+** Org-mode Config
+I won't introduce about org-mode, please do check [[https://orgmode.org][here]], hopefully it gives you an idea (I mean you should have read whole documentation/manual there). Additionally here is a [[https://en.wikipedia.org/wiki/Org-mode][Wikipedia reference]] which is enough to introduce.
+
+The concept of [[https://en.wikipedia.org/wiki/Literate_programming][Literate programming]] is having the user's natural language written down in correspondence to code blocks. It adds human-ness to the code, and the instructions we need to understand. Over technical work, it can reduce the usage of manual pages and documentation, wait, that is not a good idea to avoid them, but for something to understand that we wrote ourselves, literate programming helps to add notes.
+
+The concept is fairly like maintaining a notebook or documentation guide itself, but it also comes with its power.
+
+Org-mode has tons of features that helps in various categories. Prime use is for maintaining GTD, Notes, Latex, Journaling... /infinity?/
+
+The main topic is, I tried maintaining modular config for Emacs and Nixos, and after some days, I myself was wondering and wasting time on thinking where did I place some content for this categories and was stuck with file hierarchy for several moments. The main obstacle is file hierarchy might turn out to be complex and redundant.
+
+That's where I decided to move back all to literate config. I came across [[https://github.com/rasendubi/dotfiles][rasendubi]] dotfiles and he also used Literate org config for both Nixos and Emacs. Eventually I did too, here is the [[https://github.com/idlip/d-nix][repo]].
+
+The key benefits were, single org file to rule them all. I can integrate well with Emacs, yes, dependency might be Emacs, then too it is plain text format. Org gives us the power to tangle, annotate, add notes, tables, anything with the Source Code Blocks.
+For many configs or code, we forget why we wrote or why it is uniquely required, and nobody likes to waste time digging on why it is there, of course comments are helpful, but not everywhere to make it more head ache?
+Also I don't have navigate over the file hierarchy again and again with paths, simple single org is the stop.
+
+Org allows us to write notes there, I do manage lot of TODO and plans over the files, and forget everything. When I revisit or when I want to care, I can see what are the plans and I can execute it timely there after. Org literate config acts the source of truth, for information and understanding for my own level.
+
+As I bestowed this in practice, I noticed that flow of thoughts and expression of it at that time is the crucial thing. Again, for a thought to come and just vanish, its a haze. Even merely /sixty seconds/ is enough to forget. Org could also fill that void, but just capturing the running thought at that time, and later to expand on it.
+
+Managing time is precious and Org-mode help with that, with plans Todo & Schedules. Also, endless customization does not fetch any fruit. Having a cleaning kind of a day every month or twice a year can help on tweaking or fixing the necessary lines over the Org config.
+
+In a recent snippet on [[file:~/d-git/d-site/content/snippets/organize-file.org][Organize File]], I was about falling out on maintaining notes. From that scenario also the lesson learned is that, more than maintaining notes, the actual flow of thought and feeling at right time is most important and beats the best organizer anywhere out there. I mean, the goal of note-taking or writing down should be to transcribe the thoughts and knowledge in a approachable manner.
+
+*** Key Takeaways
+- Org-mode helps in managing and maintaining configuration files.
+- Learning can be stressed, and is the key for writing out Literate programming.
+- Things are easier to forget, annotating it our own words can help in better understanding and retention of information.
+- Org config is the source of truth.
+- Notes should be meant to capture the thoughts and feeling at that time of occurence.
