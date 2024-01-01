@@ -1,14 +1,38 @@
 #+TITLE: Posts
 
-- [[file:literate-config.org][Literate org config]] - Dec 29, 2023
-- [[file:emacs-droid.org][Emacs on Droid]] - Dec 16, 2023
-- [[file:nix-acer.org][Nix: Home for Acer]] - Oct 21, 2023
-- [[file:nix-learning.org][Nix Learning]] - May 03, 2023
-- [[file:foss-droid.org][FOSS : On Droid]] - Apr 25, 2023
-- [[file:linux-matrix.org][Linux : The Matrix]] - Apr 12, 2023
-- [[file:vim-proficiency.org][Vim Proficiency]] - Apr 05, 2023
-- [[file:emacs-efficiency.org][Emacs Efficiency]] - Mar 29, 2023
-- [[file:imposter-syndrome.org][Imposter Syndrome : Formula for Success]] - Mar 24, 2023
-- [[file:nixos-distro.org][NixOS : Reproducible - Immutable]] - Mar 23, 2023
-- [[file:best-tool.org][Tools]] - Mar 17, 2023
-- [[file:linux-journey.org][My Linux Journey]] - Mar 10, 2023
+- [[file:literate-config.org][Literate org config]] 
+  
+  Dec 29, 2023
+- [[file:emacs-droid.org][Emacs on Droid]] 
+  
+  Dec 16, 2023
+- [[file:nix-acer.org][Nix: Home for Acer]] 
+  
+  Oct 21, 2023
+- [[file:nix-learning.org][Nix Learning]] 
+  
+  May 03, 2023
+- [[file:foss-droid.org][FOSS : On Droid]] 
+  
+  Apr 25, 2023
+- [[file:linux-matrix.org][Linux : The Matrix]] 
+  
+  Apr 12, 2023
+- [[file:vim-proficiency.org][Vim Proficiency]] 
+  
+  Apr 05, 2023
+- [[file:emacs-efficiency.org][Emacs Efficiency]] 
+  
+  Mar 29, 2023
+- [[file:imposter-syndrome.org][Imposter Syndrome : Formula for Success]] 
+  
+  Mar 24, 2023
+- [[file:nixos-distro.org][NixOS : Reproducible - Immutable]] 
+  
+  Mar 23, 2023
+- [[file:best-tool.org][Tools]] 
+  
+  Mar 17, 2023
+- [[file:linux-journey.org][My Linux Journey]] 
+  
+  Mar 10, 2023
