@@ -95,12 +95,12 @@ of contents as a string, or nil if it is empty."
 (defun d/op-format-index (entry style project)
   "Format posts/snippets with author and published data in the index page."
   (cond ((not (directory-name-p entry))
-         (format "%s - [[file:%s][%s]]"
+         (format "[[file:%s][%s]] \n\n %s"
+                 entry
+                 (org-publish-find-title entry project)
                  (format-time-string "%b %d, %Y"
                                      ;; (format-time-string "%b %d, %Y" '(25994 57546 644885 340000))
                                      (org-publish-find-date entry project))
-                 entry
-                 (org-publish-find-title entry project)
 ))
         ((eq style 'tree) (file-name-nondirectory (directory-file-name entry)))
         (t entry)))
