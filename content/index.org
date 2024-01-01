@@ -1,7 +1,15 @@
-#+title: Voyage for Glory
+#+title: Hi, I'm Dilip
 
 Greeting, and Warn welcome to you!
 
 This site has few blog posts, driven by passion, written to share and be a helpful content.
 --------
-** TODO Things under work !
+
+** [[file:posts/][Posts]]
+- Contains some of the interesting posts I thought to write and share.
+
+** [[file:snippets/][Snippets]]
+- Some "2 Cents" way or quickies kind of a logging message, that are sensible capture of thoughts without much refinement.
+
+** [[file:about.org][About]]
+- About me, and site.
