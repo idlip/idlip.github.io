@@ -188,6 +188,15 @@ of contents as a string, or nil if it is empty."
              :recursive t ;; for fonts
              :publishing-function 'org-publish-attachment
              )
+
+       (list "slides"
+             :base-directory "./content/snippets/"
+             ;; :exclude ".*"
+             ;; :include (list "hello.html")
+             :base-extension "html"
+             :publishing-directory "./public/snippets/"
+             :publishing-function 'org-publish-attachment)
+
        '("org" :components ("mainpage" "assets" "static" "posts" "snippets"))
 
        ))
