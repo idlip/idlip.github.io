@@ -1,0 +1,24 @@
+#+title: Window Managers
+#+date: [2024-01-03 Wed]
+
+Desktop Environment gives us everything we would like to operate on Desktop with care towards UI and UX, that matches the common paradigm. It is a lot driven by mouse, and seems to fairly make work simpler and easier. It is not like keyboard can always make task quicker, mouse can be ahead of the race.
+
+But I too followed the trend to ditch mouse and embrace the swiftness of keyboard. I like to hear the "clicks" and "tacks".
+
+Window Managers are tools which only manage the window alignment and their behavior, with wayland, the compositor acts as both display server and window manager. Typically tho window managers offer keyboard focused, tweakable configuration to suit user's need, but alas it does work for minimal sake, just does offer on managing windows and thats it. It is not a Desktop environment to facilitate for other needs.
+
+After fairly using a lot of window manager, from X11 days to now Wayland years, I stick with window managers only. It gives the feel of unique, self owned customization. My system can only be used by me, how cool !
+
+Back in X11 days, I started with Cinnamon (Linux Mint) and later moved to XFCE to conserve Ram usage. Both were very good, Xfce was very much customization. Later I fell in the rabbit hole for more minimalism, and started looking at Youtube videos and came along the road of Window Managers.
+
+Tried with ~i3wm~, and boyo boy, it worked and made the workflow like charm, and again I feel into another rabbit hole of World of window managers. The cost I had to pay was, endless customization for my needs, and wasting time. After fair usage, with some free time (pandemic age) I tried out other WMs, like ~dwm~, ~leftwm~, ~Qtile~ & ~bspwm~ and used them all fairly equally and it was done.
+
+With wayland years, I soon discovered ~sway~ was popular and drop-in replacement, so was suite of apps needed to replacement for pure wayland integration. Soon listed some and move to ~sway~ ship, and reddit showed beautiful blur and animations of ~hyprland~, and finally I settled on with ~Hyprland~.
+
+So far I have only listen WMs names, and I have not spoken of personal usage and feeling towards each of them, cause, they all just do one thing and they do it well. So except for config file (syntax), there is not much difference for user who wants to use laptop and "*do the work*". It is a wonderful change to stick with WM, cause easy management of windows and minimal way of using the system, so I can use the saving part for demanding tasks.
+
+One peculiar, and best thing WMs offer are Workspace. Which acts like spaces where windows are placed or configured, we get 10 (typically enough) or even more to organize and use our application in a handy way.
+
+Closing words, Window Managers are definitely great, and changing enhancement, users (linux) should give it a try at least once, of course it's not for everyone, but how can anyone tell unless if they have not even tried. It can enhance the workflow for many, and can be worse for others.
+
+So, just have a share of trial, explore and relax!
