@@ -36,8 +36,11 @@ I hope its a soothing experience for you to read!
 - [ ] More better sitemap?
   - One with small gist and proper format, bonus with tags.
 - [ ] Make posts filter via tags. (looks hard)
-**** TODO On Window manager :post:
-  SCHEDULED: <2023-03-30 Thu 13:01>
+**** DONE On Window manager :post:
+  CLOSED: [2024-01-03 Wed 15:05] SCHEDULED: <2023-03-30 Thu 13:01>
+  :LOGBOOK:
+  - State "DONE"       from "TODO"       [2024-01-03 Wed 15:05]
+  :END:
 + Maybe about advantages
 + Uses and how it is efficient
 + Bad side
@@ -83,3 +86,10 @@ CLOSED: [2023-12-29 Fri 16:44] SCHEDULED: <2023-12-18 Mon 13:20>
 - Pros: emacs
 - refer: https://github.com/tonyaldon/one.el
 - This lead me to dive into ~org-publish~.
+
+**** TODO Integrate denote as blogging system
+- It is possible to go with identifier as base, and so interlinking should work.
+
+**** TODO Preparation for sharing slides
+- Using org-re-reveal, try to embed resources in single file.
+- Either keep html and attach it as statics or use =org-re-reveal-publish-to-reveal=
