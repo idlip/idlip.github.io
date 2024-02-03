@@ -190,11 +190,11 @@ of contents as a string, or nil if it is empty."
              )
 
        (list "slides"
-             :base-directory "./content/snippets/"
+             :base-directory "./content/slides/"
              ;; :exclude ".*"
              ;; :include (list "hello.html")
              :base-extension "html"
-             :publishing-directory "./public/snippets/"
+             :publishing-directory "./public/slides/"
              :publishing-function 'org-publish-attachment)
 
        '("org" :components ("mainpage" "assets" "static" "posts" "snippets"))
