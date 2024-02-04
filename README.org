@@ -90,6 +90,18 @@ CLOSED: [2023-12-29 Fri 16:44] SCHEDULED: <2023-12-18 Mon 13:20>
 **** TODO Integrate denote as blogging system
 - It is possible to go with identifier as base, and so interlinking should work.
 
-**** TODO Preparation for sharing slides
+**** DONE Preparation for sharing slides
+CLOSED: [2024-02-04 Sun 21:56]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2024-02-04 Sun 21:56]
+:END:
 - Using org-re-reveal, try to embed resources in single file.
 - Either keep html and attach it as statics or use =org-re-reveal-publish-to-reveal=
+
+**** TODO Dynamically use org files for slides
+- There was issue encountered with using ~org-re-reveal-publish-to-reveal~ in GitHub CI
+- Idk how to debug, check on these [[https://github.com/idlip/idlip.github.io/commit/401a99102ffe0dfda2737f8f5fa60742e0549bee][logs]].
+- There are few ways of handling this.
+  1) Use single file for slides html - This might beat the purpose of dynamic and having source code for it.
+  2) Just deploy a directory (=docs/=) without github action, so you manually publish the site.
+  3) Use =revjs= repo or files, and use simple html to reference it (better for now to go with)
