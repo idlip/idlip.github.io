@@ -22,6 +22,7 @@
   ;; Check and install dependencies
   (dolist (package '(htmlize
                      webfeeder
+                     org-re-reveal
                      ;; julia-mode
                      ;; ess
                      ;; ox-rss webfeeder
@@ -35,6 +36,7 @@
 ;; ;; Load publishing system
 (require 'ox-publish)
 (require 'webfeeder)
+(require 'org-re-reveal)
 
 ;; inspired by @djliden : https://djliden.github.io
 
