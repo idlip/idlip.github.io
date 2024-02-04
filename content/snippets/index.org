@@ -1,5 +1,8 @@
 #+TITLE: Snippets
 
+- [[file:art-gtd.org][Art of Getting things Done]] 
+  
+  Feb 03, 2024
 - [[file:organize-file.org][Organize File]] 
   
   Dec 16, 2023

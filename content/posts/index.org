@@ -1,5 +1,11 @@
 #+TITLE: Posts
 
+- [[file:nixos-madness.org][NixOS & its Madness]] 
+  
+  Feb 04, 2024
+- [[file:window-managers.org][Window Managers]] 
+  
+  Jan 03, 2024
 - [[file:literate-config.org][Literate org config]] 
   
   Dec 29, 2023

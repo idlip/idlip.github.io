@@ -197,13 +197,13 @@ of contents as a string, or nil if it is empty."
              :publishing-directory "./public/slides/"
              :publishing-function 'org-re-reveal-publish-to-reveal)
 
-       ;; (list "slides-assets"
-       ;;       :base-directory "./content/slides"
-       ;;       :recursive t
-       ;;       :base-extension ".*"
-       ;;       :exclude ".*\\.org$"
-       ;;       :publishing-directory "./public/slides/"
-       ;;       :publishing-function 'org-publish-attachment)
+       (list "slides-assets"
+             :base-directory "./content/slides"
+             :recursive t
+             :base-extension ".*"
+             :exclude ".*\\.org$"
+             :publishing-directory "./public/slides/"
+             :publishing-function 'org-publish-attachment)
 
        '("org" :components ("mainpage" "assets" "static" "posts" "snippets" "slides" "slides-assets"))
 
