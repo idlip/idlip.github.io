@@ -1,0 +1,18 @@
+#+title: Art of Getting things Done
+#+date: [2024-02-03 Sat]
+
+* GTD
+The tendency to organize things, and get the workflow in right track is a natural process, and we insist more on that in today's world. The mere idea of finding the "right way", "Best way possible" is a driving opinion for various Internet opinions. People do share what works for them, and they argue.
+
+The ultimate deal I found is, a system does not have to help you, the natural process has to help you in getting things done.
+
+Nowadays, the system has become a hindrance in workflow, like those popular apps trying to do that thing for you.
+
+Usually to most of the person, GTD is not organized, it just goes hand in hand like a chain and workflow is mapped into our brain.
+Sure digital ecosystem has occupied and developed into a "Second brain" for us, but that should be too much work for *first brain* to train _second brain_ to work perfectly for a system.
+
+Just let go of the plans, just focus on what things to do for now. Slowly and gradually let your own system evolve that works perfectly for you, and there is no need to let the world know or judge about our system.
+
+This snippet was addressed on the latest trends, and my long readings on articles and blogs over *Zettelkasten*, *Getting Things Done*, *Personal Knowledge Management* & *Note-Taking*.
+
+This would be a never ending story, and ultimately I just sat with defaults without much over thinking the system or best practice. Just go with *Org mode*, plain text file with headings defined to make sense, add =TODO= for necessary tasks, and over a month, make changes if required to make it feasible and handy for next month. This worked great, I don't need complexity or automation for me to see at redundant information on my notes.
