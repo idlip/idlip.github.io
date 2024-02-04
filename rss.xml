@@ -7,13 +7,13 @@
 <generator>Emacs webfeeder.el</generator>
 <link>https://idlip.github.io</link>
 <atom:link href="https://idlip.github.io/rss.xml" rel="self" type="application/rss+xml"/>
-<lastBuildDate>Sun, 04 Feb 2024 16:03:25 +0000</lastBuildDate>
+<lastBuildDate>Sun, 04 Feb 2024 16:39:42 +0000</lastBuildDate>
 <item>
   <title>Art of Getting things Done</title>
   <description><![CDATA[<div id="content">
- <div id="outline-container-org592895b" class="outline-2">
- <h2 id="org592895b">GTD</h2>
- <div class="outline-text-2" id="text-org592895b">
+ <div id="outline-container-orgab6c378" class="outline-2">
+ <h2 id="orgab6c378">GTD</h2>
+ <div class="outline-text-2" id="text-orgab6c378">
  <p>
 The tendency to organize things, and get the workflow in right track is a natural process, and we insist more on that in today’s world. The mere idea of finding the “right way”, “Best way possible” is a driving opinion for various Internet opinions. People do share what works for them, and they argue.
 </p>
@@ -47,14 +47,14 @@ This would be a never ending story, and ultimately I just sat with defaults with
 </div>]]></description>
   <link>https://idlip.github.io/snippets/./art-gtd.html</link>
   <guid isPermaLink="false">https://idlip.github.io/snippets/./art-gtd.html</guid>
-  <pubDate>Sun, 04 Feb 2024 16:03:00 +0000</pubDate>
+  <pubDate>Sun, 04 Feb 2024 16:39:00 +0000</pubDate>
 </item>
 <item>
   <title>Ken quotes</title>
   <description><![CDATA[<div id="content">
- <div id="outline-container-org148bc4e" class="outline-2">
- <h2 id="org148bc4e">Beyond Ken    <span class="tag"> <span class="quotes">quotes</span>  <span class="snippets">snippets</span></span></h2>
- <div class="outline-text-2" id="text-org148bc4e">
+ <div id="outline-container-org1681cba" class="outline-2">
+ <h2 id="org1681cba">Beyond Ken    <span class="tag"> <span class="quotes">quotes</span>  <span class="snippets">snippets</span></span></h2>
+ <div class="outline-text-2" id="text-org1681cba">
  <p>
 Welcome to some more snippet of Quotes.
 Lately I have been busy, kinda dusting off my table.  <i>Ooof.. procastination!</i>
@@ -185,14 +185,14 @@ Hopefully with those melifluous thoughts, I hope you are alright ;)
 </div>]]></description>
   <link>https://idlip.github.io/snippets/./beyond-ken.html</link>
   <guid isPermaLink="false">https://idlip.github.io/snippets/./beyond-ken.html</guid>
-  <pubDate>Sun, 04 Feb 2024 16:03:00 +0000</pubDate>
+  <pubDate>Sun, 04 Feb 2024 16:39:00 +0000</pubDate>
 </item>
 <item>
   <title>Cognizance</title>
   <description><![CDATA[<div id="content">
- <div id="outline-container-org8376f3b" class="outline-2">
- <h2 id="org8376f3b">Cognizance    <span class="tag"> <span class="snippets">snippets</span>  <span class="quotes">quotes</span></span></h2>
- <div class="outline-text-2" id="text-org8376f3b">
+ <div id="outline-container-org5aa7b37" class="outline-2">
+ <h2 id="org5aa7b37">Cognizance    <span class="tag"> <span class="snippets">snippets</span>  <span class="quotes">quotes</span></span></h2>
+ <div class="outline-text-2" id="text-org5aa7b37">
  <p>
 Welcome to next snippet of Quotes.
 </p>
@@ -263,14 +263,14 @@ With these sweet little pies, I hope it does make your day alive ;)
 </div>]]></description>
   <link>https://idlip.github.io/snippets/./cognizance.html</link>
   <guid isPermaLink="false">https://idlip.github.io/snippets/./cognizance.html</guid>
-  <pubDate>Sun, 04 Feb 2024 16:03:00 +0000</pubDate>
+  <pubDate>Sun, 04 Feb 2024 16:39:00 +0000</pubDate>
 </item>
 <item>
   <title>Emacs is OP!</title>
   <description><![CDATA[<div id="content">
- <div id="outline-container-orgf4a828f" class="outline-2">
- <h2 id="orgf4a828f">The greatest Editor    <span class="tag"> <span class="snippets">snippets</span>  <span class="editors">editors</span>  <span class="emacs">emacs</span>  <span class="neovim">neovim</span></span></h2>
- <div class="outline-text-2" id="text-orgf4a828f">
+ <div id="outline-container-orgbdc045d" class="outline-2">
+ <h2 id="orgbdc045d">The greatest Editor    <span class="tag"> <span class="snippets">snippets</span>  <span class="editors">editors</span>  <span class="emacs">emacs</span>  <span class="neovim">neovim</span></span></h2>
+ <div class="outline-text-2" id="text-orgbdc045d">
  <p>
 Before anyone shouts vim, let me  <code>:q!</code>
 I was a vimmer for a year, I played and had a good basic config. Even after an year, I didn’t grasp the full potential of vim, it was just handy to use  <code>hjkl</code> to move around.
@@ -296,14 +296,14 @@ Nonetheless, Emacs is the  <b>GOAT</b> !
 </div>]]></description>
   <link>https://idlip.github.io/snippets/./emacs-op.html</link>
   <guid isPermaLink="false">https://idlip.github.io/snippets/./emacs-op.html</guid>
-  <pubDate>Sun, 04 Feb 2024 16:03:00 +0000</pubDate>
+  <pubDate>Sun, 04 Feb 2024 16:39:00 +0000</pubDate>
 </item>
 <item>
   <title>Init on Snippets</title>
   <description><![CDATA[<div id="content">
- <div id="outline-container-orgba5a737" class="outline-2">
- <h2 id="orgba5a737">Journey Begins    <span class="tag"> <span class="log">log</span>  <span class="snippets">snippets</span>  <span class="first">first</span></span></h2>
- <div class="outline-text-2" id="text-orgba5a737">
+ <div id="outline-container-orgf72798d" class="outline-2">
+ <h2 id="orgf72798d">Journey Begins    <span class="tag"> <span class="log">log</span>  <span class="snippets">snippets</span>  <span class="first">first</span></span></h2>
+ <div class="outline-text-2" id="text-orgf72798d">
  <p>
 I have almost set my first static website.
 From here my creativity goes public to the world.
@@ -321,14 +321,14 @@ Its time.. time to begin the chapter!
 </div>]]></description>
   <link>https://idlip.github.io/snippets/./init.html</link>
   <guid isPermaLink="false">https://idlip.github.io/snippets/./init.html</guid>
-  <pubDate>Sun, 04 Feb 2024 16:03:00 +0000</pubDate>
+  <pubDate>Sun, 04 Feb 2024 16:39:00 +0000</pubDate>
 </item>
 <item>
   <title>Insightful Quotes</title>
   <description><![CDATA[<div id="content">
- <div id="outline-container-orgfc52391" class="outline-2">
- <h2 id="orgfc52391">Insightful Quotes    <span class="tag"> <span class="snippets">snippets</span>  <span class="quotes">quotes</span></span></h2>
- <div class="outline-text-2" id="text-orgfc52391">
+ <div id="outline-container-orgc2b0a14" class="outline-2">
+ <h2 id="orgc2b0a14">Insightful Quotes    <span class="tag"> <span class="snippets">snippets</span>  <span class="quotes">quotes</span></span></h2>
+ <div class="outline-text-2" id="text-orgc2b0a14">
  <p>
 I will be making few snippets on few quotes which impressed me or made me laugh for the day!
 </p>
@@ -440,14 +440,14 @@ Visit the snippets again!
 </div>]]></description>
   <link>https://idlip.github.io/snippets/./insightful-quotes.html</link>
   <guid isPermaLink="false">https://idlip.github.io/snippets/./insightful-quotes.html</guid>
-  <pubDate>Sun, 04 Feb 2024 16:03:00 +0000</pubDate>
+  <pubDate>Sun, 04 Feb 2024 16:39:00 +0000</pubDate>
 </item>
 <item>
   <title>Organize File</title>
   <description><![CDATA[<div id="content">
- <div id="outline-container-orgffaa1ee" class="outline-2">
- <h2 id="orgffaa1ee">Organize File    <span class="tag"> <span class="snippets">snippets</span>  <span class="orgmode">orgmode</span></span></h2>
- <div class="outline-text-2" id="text-orgffaa1ee">
+ <div id="outline-container-org3415107" class="outline-2">
+ <h2 id="org3415107">Organize File    <span class="tag"> <span class="snippets">snippets</span>  <span class="orgmode">orgmode</span></span></h2>
+ <div class="outline-text-2" id="text-org3415107">
  <p>
 From past few days I have been dabbling in the dimension of how to organize files, notes in effective manner. After jumping deep into the rabbit hole, I went on a spree of digesting several blog posts, articles on maintaining files, organizing notes, getting things done, what not, the list goes on.
 </p>
@@ -476,18 +476,18 @@ Ultimately the fruit to yield is, just go with whatever is easy and that gets th
 </div>]]></description>
   <link>https://idlip.github.io/snippets/./organize-file.html</link>
   <guid isPermaLink="false">https://idlip.github.io/snippets/./organize-file.html</guid>
-  <pubDate>Sun, 04 Feb 2024 16:03:00 +0000</pubDate>
+  <pubDate>Sun, 04 Feb 2024 16:39:00 +0000</pubDate>
 </item>
 <item>
   <title>Rss: the Internet</title>
   <description><![CDATA[<div id="content">
- <div id="outline-container-orge3ca09c" class="outline-2">
- <h2 id="orge3ca09c">RSS: The better Internet    <span class="tag"> <span class="snippets">snippets</span>  <span class="news">news</span>  <span class="internet">internet</span>  <span class="read">read</span>  <span class="rss">rss</span></span></h2>
- <div class="outline-text-2" id="text-orge3ca09c">
+ <div id="outline-container-org178075d" class="outline-2">
+ <h2 id="org178075d">RSS: The better Internet    <span class="tag"> <span class="snippets">snippets</span>  <span class="news">news</span>  <span class="internet">internet</span>  <span class="read">read</span>  <span class="rss">rss</span></span></h2>
+ <div class="outline-text-2" id="text-org178075d">
 </div>
- <div id="outline-container-org21c75ab" class="outline-3">
- <h3 id="org21c75ab">Cheesy Internet</h3>
- <div class="outline-text-3" id="text-org21c75ab">
+ <div id="outline-container-org4e0bd8f" class="outline-3">
+ <h3 id="org4e0bd8f">Cheesy Internet</h3>
+ <div class="outline-text-3" id="text-org4e0bd8f">
  <p>
 I don’t have to say this, the Internet is hella bloated.. Junks are everywhere, nobody knows that they read shit, they are watching shits whole time.
 </p>
@@ -504,9 +504,9 @@ People these days all need ready-made/ready-to-work  stuffs, I wonder how do the
 </div>
 </div>
 
- <div id="outline-container-org864d9b3" class="outline-3">
- <h3 id="org864d9b3">The Hero</h3>
- <div class="outline-text-3" id="text-org864d9b3">
+ <div id="outline-container-orga3a14a2" class="outline-3">
+ <h3 id="orga3a14a2">The Hero</h3>
+ <div class="outline-text-3" id="text-orga3a14a2">
  <p>
 Rss stands for  <b>Really Simple Syndication</b>, It is a classic on consuming web as supposedly it was built for. Today its all crappy  <b>JavaScript</b> (a big bloat of cheese).
 </p>
@@ -526,9 +526,9 @@ Actually many of you might know famous news reader called  <b>Feedly</b>, it is 
 </p>
 </div>
 
- <div id="outline-container-org4b1a1f4" class="outline-4">
- <h4 id="org4b1a1f4">Feed Readers</h4>
- <div class="outline-text-4" id="text-org4b1a1f4">
+ <div id="outline-container-org7b626da" class="outline-4">
+ <h4 id="org7b626da">Feed Readers</h4>
+ <div class="outline-text-4" id="text-org7b626da">
  <p>
 If you use window there are famous readers like fluent reader.
 On Linux you get  <a href="https://newsboat.org/">newsboat</a> (terminal lovers), I use  <a href="https://github.com/skeeto/elfeed">elfeed</a> (Emacs way).
@@ -566,18 +566,18 @@ I will try to expand more bits on rss feeds value by making a detailed post.
 </div>]]></description>
   <link>https://idlip.github.io/snippets/./rss-better.html</link>
   <guid isPermaLink="false">https://idlip.github.io/snippets/./rss-better.html</guid>
-  <pubDate>Sun, 04 Feb 2024 16:03:00 +0000</pubDate>
+  <pubDate>Sun, 04 Feb 2024 16:39:00 +0000</pubDate>
 </item>
 <item>
   <title>Tools</title>
   <description><![CDATA[<div id="content">
- <div id="outline-container-org7cfd0a2" class="outline-2">
- <h2 id="org7cfd0a2">Tools that are Best!    <span class="tag"> <span class="terminal">terminal</span>  <span class="cli">cli</span>  <span class="linux">linux</span>  <span class="minimal">minimal</span>  <span class="tools">tools</span></span></h2>
- <div class="outline-text-2" id="text-org7cfd0a2">
+ <div id="outline-container-org14caaa3" class="outline-2">
+ <h2 id="org14caaa3">Tools that are Best!    <span class="tag"> <span class="terminal">terminal</span>  <span class="cli">cli</span>  <span class="linux">linux</span>  <span class="minimal">minimal</span>  <span class="tools">tools</span></span></h2>
+ <div class="outline-text-2" id="text-org14caaa3">
 </div>
- <div id="outline-container-org24b1c2b" class="outline-3">
- <h3 id="org24b1c2b">Utilities that are Best! 🌟</h3>
- <div class="outline-text-3" id="text-org24b1c2b">
+ <div id="outline-container-org928ba95" class="outline-3">
+ <h3 id="org928ba95">Utilities that are Best! 🌟</h3>
+ <div class="outline-text-3" id="text-org928ba95">
  <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Class</th>
  <th scope="col" class="org-left">Name</th>
 </tr></thead> <tbody> <tr> <td class="org-left">Window Manager</td>
@@ -626,14 +626,14 @@ Feel free to comment down and ask me doubts or about some improvements, you wann
 </div>]]></description>
   <link>https://idlip.github.io/posts/./best-tool.html</link>
   <guid isPermaLink="false">https://idlip.github.io/posts/./best-tool.html</guid>
-  <pubDate>Sun, 04 Feb 2024 16:03:00 +0000</pubDate>
+  <pubDate>Sun, 04 Feb 2024 16:39:00 +0000</pubDate>
 </item>
 <item>
   <title>Emacs on Droid</title>
   <description><![CDATA[<div id="content">
- <div id="outline-container-org6ee7967" class="outline-2">
- <h2 id="org6ee7967">M-x Anything</h2>
- <div class="outline-text-2" id="text-org6ee7967">
+ <div id="outline-container-org8746d90" class="outline-2">
+ <h2 id="org8746d90">M-x Anything</h2>
+ <div class="outline-text-2" id="text-org8746d90">
  <p>
 Emacs is a definite Greatest editor of all time, the extensibility power is unmatched with any other software. Users of Emacs can only know what it is, one who has not used it may not really understand the principles and power it gives us, the users.
 </p>
@@ -717,14 +717,14 @@ I’m not sure how suitable it is for coding environment (with lsp and complexit
 </div>]]></description>
   <link>https://idlip.github.io/posts/./emacs-droid.html</link>
   <guid isPermaLink="false">https://idlip.github.io/posts/./emacs-droid.html</guid>
-  <pubDate>Sun, 04 Feb 2024 16:03:00 +0000</pubDate>
+  <pubDate>Sun, 04 Feb 2024 16:39:00 +0000</pubDate>
 </item>
 <item>
   <title>Emacs Efficiency</title>
   <description><![CDATA[<div id="content">
- <div id="outline-container-orga8c6cde" class="outline-2">
- <h2 id="orga8c6cde">Discover Emacs    <span class="tag"> <span class="cheatsheet">cheatsheet</span>  <span class="keybindings">keybindings</span>  <span class="emacs">emacs</span></span></h2>
- <div class="outline-text-2" id="text-orga8c6cde">
+ <div id="outline-container-org8f602dd" class="outline-2">
+ <h2 id="org8f602dd">Discover Emacs    <span class="tag"> <span class="cheatsheet">cheatsheet</span>  <span class="keybindings">keybindings</span>  <span class="emacs">emacs</span></span></h2>
+ <div class="outline-text-2" id="text-org8f602dd">
  <p>
 This is straight away from  <a href="https://github.com/VernonGrant/discovering-emacs">VernonGrant</a> who hosts a podcast for Emacs called “ <a href="https://www.discovering-emacs.com/">Discovering-Emacs</a>”.
 It’s a great and has very much professional vibes, the explanations are Crisp and Clear!
@@ -744,9 +744,9 @@ You can checkout the source here ⟾  <a href="https://github.com/VernonGrant/em
 </p>
 </div>
 
- <div id="outline-container-org5cebf8e" class="outline-3">
- <h3 id="org5cebf8e">General Shortcuts</h3>
- <div class="outline-text-3" id="text-org5cebf8e">
+ <div id="outline-container-org45e86ba" class="outline-3">
+ <h3 id="org45e86ba">General Shortcuts</h3>
+ <div class="outline-text-3" id="text-org45e86ba">
  <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
  <th scope="col" class="org-left">Command Invoked</th>
  <th scope="col" class="org-left">Description</th>
@@ -879,7 +879,7 @@ You can checkout the source here ⟾  <a href="https://github.com/VernonGrant/em
 </tr></tbody></table></div>
 </div>
 
- <div id="outline-container-org243f40d" class="outline-3">
+ <div id="outline-container-org67a964e" class="outline-3">
  <h3 id="macros">Macros</h3>
  <div class="outline-text-3" id="text-macros">
  <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
@@ -909,7 +909,7 @@ You can checkout the source here ⟾  <a href="https://github.com/VernonGrant/em
 </tr></tbody></table></div>
 </div>
 
- <div id="outline-container-org93790fc" class="outline-3">
+ <div id="outline-container-orgb80c979" class="outline-3">
  <h3 id="project">Project</h3>
  <div class="outline-text-3" id="text-project">
  <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
@@ -969,7 +969,7 @@ You can checkout the source here ⟾  <a href="https://github.com/VernonGrant/em
 </tr></tbody></table></div>
 </div>
 
- <div id="outline-container-org4bb00f5" class="outline-3">
+ <div id="outline-container-orga08e2c0" class="outline-3">
  <h3 id="balanced-expressions">Balanced Expressions</h3>
  <div class="outline-text-3" id="text-balanced-expressions">
  <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
@@ -1002,7 +1002,7 @@ You can checkout the source here ⟾  <a href="https://github.com/VernonGrant/em
 </tr></tbody></table></div>
 </div>
 
- <div id="outline-container-org926993b" class="outline-3">
+ <div id="outline-container-org9d6aade" class="outline-3">
  <h3 id="query-replace">Query Replace</h3>
  <div class="outline-text-3" id="text-query-replace">
  <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
@@ -1029,7 +1029,7 @@ You can checkout the source here ⟾  <a href="https://github.com/VernonGrant/em
 </tr></tbody></table></div>
 </div>
 
- <div id="outline-container-org7977f2a" class="outline-3">
+ <div id="outline-container-orgf6958b3" class="outline-3">
  <h3 id="xref">Xref</h3>
  <div class="outline-text-3" id="text-xref">
  <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
@@ -1050,7 +1050,7 @@ You can checkout the source here ⟾  <a href="https://github.com/VernonGrant/em
 </tr></tbody></table></div>
 </div>
 
- <div id="outline-container-org59570e8" class="outline-3">
+ <div id="outline-container-org876927b" class="outline-3">
  <h3 id="bookmarks">Bookmarks</h3>
  <div class="outline-text-3" id="text-bookmarks">
  <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
@@ -1068,7 +1068,7 @@ You can checkout the source here ⟾  <a href="https://github.com/VernonGrant/em
 </tr></tbody></table></div>
 </div>
 
- <div id="outline-container-org6a1a67d" class="outline-3">
+ <div id="outline-container-org9f76715" class="outline-3">
  <h3 id="dired-buffer">Dired Buffer</h3>
  <div class="outline-text-3" id="text-dired-buffer">
  <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
@@ -1098,7 +1098,7 @@ You can checkout the source here ⟾  <a href="https://github.com/VernonGrant/em
 </tr></tbody></table></div>
 </div>
 
- <div id="outline-container-org4e8dca7" class="outline-3">
+ <div id="outline-container-orgca5e312" class="outline-3">
  <h3 id="interface-to-spell-ispell-and-on-the-fly-spell-flyspell">Interface To Spell (Ispell) and On The Fly Spell (Flyspell)</h3>
  <div class="outline-text-3" id="text-interface-to-spell-ispell-and-on-the-fly-spell-flyspell">
  <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
@@ -1119,7 +1119,7 @@ You can checkout the source here ⟾  <a href="https://github.com/VernonGrant/em
 </tr></tbody></table></div>
 </div>
 
- <div id="outline-container-org8c170c3" class="outline-3">
+ <div id="outline-container-orgbff8cc2" class="outline-3">
  <h3 id="org-buffer">Org Buffer</h3>
  <div class="outline-text-3" id="text-org-buffer">
  <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
@@ -1161,7 +1161,7 @@ You can checkout the source here ⟾  <a href="https://github.com/VernonGrant/em
 </tr></tbody></table></div>
 </div>
 
- <div id="outline-container-org97945af" class="outline-3">
+ <div id="outline-container-org8dfb76e" class="outline-3">
  <h3 id="eww">EWW</h3>
  <div class="outline-text-3" id="text-eww">
  <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
@@ -1194,7 +1194,7 @@ You can checkout the source here ⟾  <a href="https://github.com/VernonGrant/em
 </tr></tbody></table></div>
 </div>
 
- <div id="outline-container-orgfa044df" class="outline-3">
+ <div id="outline-container-org648d06d" class="outline-3">
  <h3 id="useful-commands">Useful Commands</h3>
  <div class="outline-text-3" id="text-useful-commands">
  <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Command</th>
@@ -1215,14 +1215,14 @@ You can checkout the source here ⟾  <a href="https://github.com/VernonGrant/em
 </div>]]></description>
   <link>https://idlip.github.io/posts/./emacs-efficiency.html</link>
   <guid isPermaLink="false">https://idlip.github.io/posts/./emacs-efficiency.html</guid>
-  <pubDate>Sun, 04 Feb 2024 16:03:00 +0000</pubDate>
+  <pubDate>Sun, 04 Feb 2024 16:39:00 +0000</pubDate>
 </item>
 <item>
   <title>FOSS : On Droid</title>
   <description><![CDATA[<div id="content">
- <div id="outline-container-org75f84ec" class="outline-2">
- <h2 id="org75f84ec">Code is Source    <span class="tag"> <span class="fossdroid">fossdroid</span>  <span class="android">android</span></span></h2>
- <div class="outline-text-2" id="text-org75f84ec">
+ <div id="outline-container-org5fb6c3d" class="outline-2">
+ <h2 id="org5fb6c3d">Code is Source    <span class="tag"> <span class="fossdroid">fossdroid</span>  <span class="android">android</span></span></h2>
+ <div class="outline-text-2" id="text-org5fb6c3d">
  <p>
 As we know, Android is widely popular OS for many phone. But these days its all filled with junks and bloated apps, these are to say so called  <b>“Popular Android Apps”</b> or  <b>“Trending Apps”</b>. The reason simply would be “everyone in my circle uses it” or “I use it because  <span class="underline">they</span> use it”.
 </p>
@@ -1296,14 +1296,14 @@ With that fossed, I hope your phone gets a new life and finally breathes alive!
 </div>]]></description>
   <link>https://idlip.github.io/posts/./foss-droid.html</link>
   <guid isPermaLink="false">https://idlip.github.io/posts/./foss-droid.html</guid>
-  <pubDate>Sun, 04 Feb 2024 16:03:00 +0000</pubDate>
+  <pubDate>Sun, 04 Feb 2024 16:39:00 +0000</pubDate>
 </item>
 <item>
   <title>Imposter Syndrome : Formula for Success</title>
   <description><![CDATA[<div id="content">
- <div id="outline-container-org9c464e4" class="outline-2">
- <h2 id="org9c464e4">Rally & March    <span class="tag"> <span class="phenomenon">phenomenon</span>  <span class="success">success</span>  <span class="skill">skill</span>  <span class="imposter">imposter</span>  <span class="psychology">psychology</span></span></h2>
- <div class="outline-text-2" id="text-org9c464e4">
+ <div id="outline-container-orga98da51" class="outline-2">
+ <h2 id="orga98da51">Rally & March    <span class="tag"> <span class="phenomenon">phenomenon</span>  <span class="success">success</span>  <span class="skill">skill</span>  <span class="imposter">imposter</span>  <span class="psychology">psychology</span></span></h2>
+ <div class="outline-text-2" id="text-orga98da51">
  <ul class="org-ul"> <li>Have you ever felt a fear of losing or doubt your own ability?</li>
  <li>Have you felt unworthy, lost your self esteem due to a mistake?</li>
  <li>Are you feeling constant fear of being discovered rather than being proud?</li>
@@ -1331,9 +1331,9 @@ I myself have felt this, when I was starting out journey to learn new course (sa
 </p>
 </div>
 
- <div id="outline-container-org9b329df" class="outline-3">
- <h3 id="org9b329df">Ways to stop Imposter Syndrome</h3>
- <div class="outline-text-3" id="text-org9b329df">
+ <div id="outline-container-org97528b4" class="outline-3">
+ <h3 id="org97528b4">Ways to stop Imposter Syndrome</h3>
+ <div class="outline-text-3" id="text-org97528b4">
  <blockquote>
  <p>
  <i>Where there is a will, there is a way.</i>
@@ -1342,9 +1342,9 @@ I myself have felt this, when I was starting out journey to learn new course (sa
 </div>
 
 
- <div id="outline-container-orgb3166de" class="outline-4">
- <h4 id="orgb3166de">Trust the Process</h4>
- <div class="outline-text-4" id="text-orgb3166de">
+ <div id="outline-container-orgedc1f96" class="outline-4">
+ <h4 id="orgedc1f96">Trust the Process</h4>
+ <div class="outline-text-4" id="text-orgedc1f96">
  <p>
 Reflect on your actions, see the world praising you. Instead of listening to the negative feeling from your head, listen to the feedback from others.
 </p>
@@ -1358,18 +1358,18 @@ If you doubt yourself, shouldn’t you also doubt your judgment of yourself?
 </div>
 </div>
 
- <div id="outline-container-org9dc0082" class="outline-4">
- <h4 id="org9dc0082">Look for Evidence</h4>
- <div class="outline-text-4" id="text-org9dc0082">
+ <div id="outline-container-org6f14b0f" class="outline-4">
+ <h4 id="org6f14b0f">Look for Evidence</h4>
+ <div class="outline-text-4" id="text-org6f14b0f">
  <p>
 Fine you feel it that way, see if you can find evidence and measures. Think of some example where you have made some positive impact on others, how much change have you brought them.
 </p>
 </div>
 </div>
 
- <div id="outline-container-org3ab884d" class="outline-4">
- <h4 id="org3ab884d">Remember the Journey</h4>
- <div class="outline-text-4" id="text-org3ab884d">
+ <div id="outline-container-orgb5454d6" class="outline-4">
+ <h4 id="orgb5454d6">Remember the Journey</h4>
+ <div class="outline-text-4" id="text-orgb5454d6">
  <p>
 Look back at the steps you have taken, how was the process of learning from scratch, rock-bottom.
 </p>
@@ -1380,9 +1380,9 @@ Look back at the steps you have taken, how was the process of learning from scra
 </div>
 </div>
 
- <div id="outline-container-org1831f68" class="outline-4">
- <h4 id="org1831f68">Turn the Tables</h4>
- <div class="outline-text-4" id="text-org1831f68">
+ <div id="outline-container-org4266505" class="outline-4">
+ <h4 id="org4266505">Turn the Tables</h4>
+ <div class="outline-text-4" id="text-org4266505">
  <p>
 Make it a strenth, refrain from doubts. Those with imposter syndrome are more likely to say “I don’t know” when they don’t know. This is an advantage. Overconfident people assume they have all the answers, even when they don’t.
 </p>
@@ -1394,9 +1394,9 @@ Humility, uncertainty, and self-doubt are part of the learning process. The key 
 </div>
 
 
- <div id="outline-container-orgbd47931" class="outline-4">
- <h4 id="orgbd47931">Suggested Reads</h4>
- <div class="outline-text-4" id="text-orgbd47931">
+ <div id="outline-container-org4765c37" class="outline-4">
+ <h4 id="org4765c37">Suggested Reads</h4>
+ <div class="outline-text-4" id="text-org4765c37">
  <p>
 If you want to explore more on this concepts :
 </p>
@@ -1411,14 +1411,14 @@ If you want to explore more on this concepts :
 </div>]]></description>
   <link>https://idlip.github.io/posts/./imposter-syndrome.html</link>
   <guid isPermaLink="false">https://idlip.github.io/posts/./imposter-syndrome.html</guid>
-  <pubDate>Sun, 04 Feb 2024 16:03:00 +0000</pubDate>
+  <pubDate>Sun, 04 Feb 2024 16:39:00 +0000</pubDate>
 </item>
 <item>
   <title>My Linux Journey</title>
   <description><![CDATA[<div id="content">
- <div id="outline-container-orge8a235b" class="outline-2">
- <h2 id="orge8a235b">The Freedom    <span class="tag"> <span class="distro">distro</span>  <span class="linux">linux</span></span></h2>
- <div class="outline-text-2" id="text-orge8a235b">
+ <div id="outline-container-orga5d2f64" class="outline-2">
+ <h2 id="orga5d2f64">The Freedom    <span class="tag"> <span class="distro">distro</span>  <span class="linux">linux</span></span></h2>
+ <div class="outline-text-2" id="text-orga5d2f64">
  <p>
  <b>Small info/log on my linux journey and my experience.</b>
 </p>
@@ -1445,9 +1445,9 @@ My linux journey was from Linux Mint > EndeavourOS > Arch Linux > and now NixOS.
 </p>
 </div>
 
- <div id="outline-container-org183641b" class="outline-3">
- <h3 id="org183641b">The Embark</h3>
- <div class="outline-text-3" id="text-org183641b">
+ <div id="outline-container-org3836ad3" class="outline-3">
+ <h3 id="org3836ad3">The Embark</h3>
+ <div class="outline-text-3" id="text-org3836ad3">
  <p>
 I started to explore some YouTube video on Linux (as a normie at that time), soon I got familiar with good explanation, thankfully CTT had made an Linux Mint playlist and it helped to installing the first and the best  <b>Beginner Distro</b>, the  <b>Linux Mint</b>.
 </p>
@@ -1520,14 +1520,14 @@ Okay, so it was not about shilling Nix or anything, Just my Linux experience.
 </div>]]></description>
   <link>https://idlip.github.io/posts/./linux-journey.html</link>
   <guid isPermaLink="false">https://idlip.github.io/posts/./linux-journey.html</guid>
-  <pubDate>Sun, 04 Feb 2024 16:03:00 +0000</pubDate>
+  <pubDate>Sun, 04 Feb 2024 16:39:00 +0000</pubDate>
 </item>
 <item>
   <title>Linux : The Matrix</title>
   <description><![CDATA[<div id="content">
- <div id="outline-container-org60a4ca3" class="outline-2">
- <h2 id="org60a4ca3">Terminals to Rescue    <span class="tag"> <span class="terminal">terminal</span>  <span class="cheatsheet">cheatsheet</span>  <span class="minimal">minimal</span></span></h2>
- <div class="outline-text-2" id="text-org60a4ca3">
+ <div id="outline-container-org6b63a9a" class="outline-2">
+ <h2 id="org6b63a9a">Terminals to Rescue    <span class="tag"> <span class="terminal">terminal</span>  <span class="cheatsheet">cheatsheet</span>  <span class="minimal">minimal</span></span></h2>
+ <div class="outline-text-2" id="text-org6b63a9a">
  <p>
 There are tons of linux command line cheatsheet or guides.
 </p>
@@ -1554,14 +1554,14 @@ Here are some of the best reads, I suggest you to go throught each of it,  <b>It
 </div>]]></description>
   <link>https://idlip.github.io/posts/./linux-matrix.html</link>
   <guid isPermaLink="false">https://idlip.github.io/posts/./linux-matrix.html</guid>
-  <pubDate>Sun, 04 Feb 2024 16:03:00 +0000</pubDate>
+  <pubDate>Sun, 04 Feb 2024 16:39:00 +0000</pubDate>
 </item>
 <item>
   <title>Literate org config</title>
   <description><![CDATA[<div id="content">
- <div id="outline-container-orgbc30787" class="outline-2">
- <h2 id="orgbc30787">Organizing Config</h2>
- <div class="outline-text-2" id="text-orgbc30787">
+ <div id="outline-container-orgd0bf508" class="outline-2">
+ <h2 id="orgd0bf508">Organizing Config</h2>
+ <div class="outline-text-2" id="text-orgd0bf508">
  <p>
 Configuration files as we know are the text to instruct the program to modify and tweak to our needs. Every Open-Source, hack-able software or tool has configuration files provided for the choice of user’s needs. Most of the tools provide simple and basic configuration with JSON-like formats,  <code>Yaml</code> and  <code>Toml</code>. For the word, they are not extensible, as  <code>ml</code> stands, they are merely for markup to already defined instructions.
 </p>
@@ -1587,9 +1587,9 @@ That’s where I’m stopping you can covering up next on writing Literate confi
 </p>
 </div>
 
- <div id="outline-container-org9fa5462" class="outline-3">
- <h3 id="org9fa5462">Org-mode Config</h3>
- <div class="outline-text-3" id="text-org9fa5462">
+ <div id="outline-container-orgd504dc1" class="outline-3">
+ <h3 id="orgd504dc1">Org-mode Config</h3>
+ <div class="outline-text-3" id="text-orgd504dc1">
  <p>
 I won’t introduce about org-mode, please do check  <a href="https://orgmode.org">here</a>, hopefully it gives you an idea (I mean you should have read whole documentation/manual there). Additionally here is a  <a href="https://en.wikipedia.org/wiki/Org-mode">Wikipedia reference</a> which is enough to introduce.
 </p>
@@ -1637,9 +1637,9 @@ In a recent snippet on  <a href="file:///home/runner/d-git/d-site/content/snippe
 </p>
 </div>
 
- <div id="outline-container-org6a184c8" class="outline-4">
- <h4 id="org6a184c8">Key Takeaways</h4>
- <div class="outline-text-4" id="text-org6a184c8">
+ <div id="outline-container-orgb1daddb" class="outline-4">
+ <h4 id="orgb1daddb">Key Takeaways</h4>
+ <div class="outline-text-4" id="text-orgb1daddb">
  <ul class="org-ul"> <li>Org-mode helps in managing and maintaining configuration files.</li>
  <li>Learning can be stressed, and is the key for writing out Literate programming.</li>
  <li>Things are easier to forget, annotating it our own words can help in better understanding and retention of information.</li>
@@ -1652,14 +1652,14 @@ In a recent snippet on  <a href="file:///home/runner/d-git/d-site/content/snippe
 </div>]]></description>
   <link>https://idlip.github.io/posts/./literate-config.html</link>
   <guid isPermaLink="false">https://idlip.github.io/posts/./literate-config.html</guid>
-  <pubDate>Sun, 04 Feb 2024 16:03:00 +0000</pubDate>
+  <pubDate>Sun, 04 Feb 2024 16:39:00 +0000</pubDate>
 </item>
 <item>
   <title>Nix: Home for Acer</title>
   <description><![CDATA[<div id="content">
- <div id="outline-container-org79ccfe2" class="outline-2">
- <h2 id="org79ccfe2">The Machine    <span class="tag"> <span class="linux">linux</span>  <span class="nixos">nixos</span></span></h2>
- <div class="outline-text-2" id="text-org79ccfe2">
+ <div id="outline-container-orgdbe50da" class="outline-2">
+ <h2 id="orgdbe50da">The Machine    <span class="tag"> <span class="linux">linux</span>  <span class="nixos">nixos</span></span></h2>
+ <div class="outline-text-2" id="text-orgdbe50da">
  <p>
 In this post am sharing some of the experience of using my new laptop,  <b>Acer swift Go Oled</b>. Compact, Premium ultra-book with Oled, Yes, a good hand made mobile laptop.
 </p>
@@ -1720,14 +1720,14 @@ This has become another embark of a journey, where the todo’s are just piling 
 </div>]]></description>
   <link>https://idlip.github.io/posts/./nix-acer.html</link>
   <guid isPermaLink="false">https://idlip.github.io/posts/./nix-acer.html</guid>
-  <pubDate>Sun, 04 Feb 2024 16:03:00 +0000</pubDate>
+  <pubDate>Sun, 04 Feb 2024 16:39:00 +0000</pubDate>
 </item>
 <item>
   <title>Nix Learning</title>
   <description><![CDATA[<div id="content">
- <div id="outline-container-org2d0d894" class="outline-2">
- <h2 id="org2d0d894">Nobody can Explain    <span class="tag"> <span class="linux">linux</span>  <span class="resources">resources</span>  <span class="nixos">nixos</span></span></h2>
- <div class="outline-text-2" id="text-org2d0d894">
+ <div id="outline-container-org5378f73" class="outline-2">
+ <h2 id="org5378f73">Nobody can Explain    <span class="tag"> <span class="linux">linux</span>  <span class="resources">resources</span>  <span class="nixos">nixos</span></span></h2>
+ <div class="outline-text-2" id="text-org5378f73">
  <p>
 NixOS is definitely an advanced Linux distro, but it ain’t easy to understand overnight or like Archlinux to have easy manual, but it sure has alot on the table. There is whole bunch of families like Nix functional language, Nix package manager… so and on with the prefix “nix”.
 </p>
@@ -1742,11 +1742,11 @@ These are some of the learning resources, which are rich in content and nonethel
 </p>
 </div>
 
- <div id="outline-container-orgaa87aa2" class="outline-3">
- <h3 id="orgaa87aa2">nix-learning</h3>
- <div class="outline-text-3" id="text-orgaa87aa2">
+ <div id="outline-container-org236e53e" class="outline-3">
+ <h3 id="org236e53e">nix-learning</h3>
+ <div class="outline-text-3" id="text-org236e53e">
 </div>
- <div id="outline-container-org7f6d6ab" class="outline-4">
+ <div id="outline-container-org40255c9" class="outline-4">
  <h4 id="uncategorized">Uncategorized</h4>
  <div class="outline-text-4" id="text-uncategorized">
  <ul class="org-ul"> <li> <a href="https://youtu.be/m4sv2M9jRLg">Nix Fundamentals</a> (Video)</li>
@@ -1854,7 +1854,7 @@ Nix lambda function named arguments</a> - Susan Potter</li>
 </div>
 </div>
 
- <div id="outline-container-orgd0a5bfc" class="outline-4">
+ <div id="outline-container-org2a01b2e" class="outline-4">
  <h4 id="overview">Overview</h4>
  <div class="outline-text-4" id="text-overview">
  <ul class="org-ul"> <li> <a href="https://web.archive.org/web/20210123223258/https://ebzzry.io/en/nix/">A
@@ -1862,7 +1862,7 @@ Gentle Introduction to the Nix Family</a></li>
 </ul></div>
 </div>
 
- <div id="outline-container-orge468e08" class="outline-4">
+ <div id="outline-container-org7d2de4c" class="outline-4">
  <h4 id="nix-the-language">Nix the language</h4>
  <div class="outline-text-4" id="text-nix-the-language">
  <ul class="org-ul"> <li> <a href="https://nixcloud.io/tour">A tour of Nix</a> - an introduction to the
@@ -1870,7 +1870,7 @@ Nix Programming Language</li>
 </ul></div>
 </div>
 
- <div id="outline-container-orgf4e7f9f" class="outline-4">
+ <div id="outline-container-org5047b49" class="outline-4">
  <h4 id="nix-shell">Nix Shell</h4>
  <div class="outline-text-4" id="text-nix-shell">
  <ul class="org-ul"> <li> <a href="https://ghedam.at/15978/an-introduction-to-nix-shell">An
@@ -1880,7 +1880,7 @@ your nix-shell</a> - Farid Zakaria</li>
 </ul></div>
 </div>
 
- <div id="outline-container-orgdc19f08" class="outline-4">
+ <div id="outline-container-org52c2655" class="outline-4">
  <h4 id="nix-flakes">Nix Flakes</h4>
  <div class="outline-text-4" id="text-nix-flakes">
  <ul class="org-ul"> <li> <a href="https://blog.ysndr.de/posts/internals/2021-01-01-flake-ification/">Building
@@ -1890,7 +1890,7 @@ Chevalier</li>
 </ul></div>
 </div>
 
- <div id="outline-container-org48beff5" class="outline-4">
+ <div id="outline-container-org2963e44" class="outline-4">
  <h4 id="experience">Experience</h4>
  <div class="outline-text-4" id="text-experience">
  <ul class="org-ul"> <li> <a href="https://catgirl.ai/log/nixos-experience/">Eight Months of NixOS</a> -
@@ -1901,7 +1901,7 @@ Falco Peijnenburg, Fabian Thorand, and Robert Kreuzer</li>
 </ul></div>
 </div>
 
- <div id="outline-container-org2d86d39" class="outline-4">
+ <div id="outline-container-org04e637d" class="outline-4">
  <h4 id="language-specific">Language Specific</h4>
  <div class="outline-text-4" id="text-language-specific">
 </div>
@@ -1934,7 +1934,7 @@ up a C++ project environment with nix</a> - Jacek Galowicz</li>
 </li>
 </ul></div>
 
- <div id="outline-container-orgf2d342b" class="outline-4">
+ <div id="outline-container-org3d1b26e" class="outline-4">
  <h4 id="series">Series</h4>
  <div class="outline-text-4" id="text-series">
  <ul class="org-ul"> <li>Nix by Example - James Fisher
@@ -2009,22 +2009,22 @@ With that sorted, I hope learning becomes good ;)
 </div>]]></description>
   <link>https://idlip.github.io/posts/./nix-learning.html</link>
   <guid isPermaLink="false">https://idlip.github.io/posts/./nix-learning.html</guid>
-  <pubDate>Sun, 04 Feb 2024 16:03:00 +0000</pubDate>
+  <pubDate>Sun, 04 Feb 2024 16:39:00 +0000</pubDate>
 </item>
 <item>
   <title>NixOS : Reproducible - Immutable</title>
   <description><![CDATA[<div id="content">
- <div id="outline-container-orga1ea0ab" class="outline-2">
- <h2 id="orga1ea0ab">The Hop    <span class="tag"> <span class="emacs">emacs</span>  <span class="distro">distro</span>  <span class="linux">linux</span>  <span class="nixos">nixos</span></span></h2>
- <div class="outline-text-2" id="text-orga1ea0ab">
+ <div id="outline-container-orgaa00930" class="outline-2">
+ <h2 id="orgaa00930">The Hop    <span class="tag"> <span class="emacs">emacs</span>  <span class="distro">distro</span>  <span class="linux">linux</span>  <span class="nixos">nixos</span></span></h2>
+ <div class="outline-text-2" id="text-orgaa00930">
  <hr></hr> <p>
 Introduction part, you would better have read it on official nixos site ( <a href="https://nixos.org">https://nixos.org</a>)
 </p>
 </div>
 
- <div id="outline-container-org5025a4a" class="outline-3">
- <h3 id="org5025a4a">“Should you try NixOS?” ❄️</h3>
- <div class="outline-text-3" id="text-org5025a4a">
+ <div id="outline-container-orga5d2afa" class="outline-3">
+ <h3 id="orga5d2afa">“Should you try NixOS?” ❄️</h3>
+ <div class="outline-text-3" id="text-orga5d2afa">
  <p>
 Here’s an answer from a non-programmer, who just browses and watches media.
 Just don’t, if you are looking for small benefit.  <b>Don’t!</b>
@@ -2044,9 +2044,9 @@ But, if you have decided, go with it. According to me (non-programmer), these po
 </ul> <hr></hr></div>
 </div>
 
- <div id="outline-container-orgd1ce2dd" class="outline-3">
- <h3 id="orgd1ce2dd">How I manage my system 🌲</h3>
- <div class="outline-text-3" id="text-orgd1ce2dd">
+ <div id="outline-container-org6716a92" class="outline-3">
+ <h3 id="org6716a92">How I manage my system 🌲</h3>
+ <div class="outline-text-3" id="text-org6716a92">
  <p>
 I manage my whole system with single org file. Its easy and pretty handy. You can read that file here  <b>↬</b>  <a href="https://github.com/idlip/d-nix/blob/onepiece/d-setup.org">d-setup.org</a> , its both self documenting and has all source code blocks.
 </p>
@@ -2062,9 +2062,9 @@ Also, I have made files to be  <b>symlink</b>, so i can edit them without requir
  <hr></hr></div>
 
 
- <div id="outline-container-orgd32a8fc" class="outline-4">
- <h4 id="orgd32a8fc">Credits 🎖️</h4>
- <div class="outline-text-4" id="text-orgd32a8fc">
+ <div id="outline-container-orgae625fb" class="outline-4">
+ <h4 id="orgae625fb">Credits 🎖️</h4>
+ <div class="outline-text-4" id="text-orgae625fb">
  <p>
 These configs were the inspiration and helped to build this way.
 </p>
@@ -2088,14 +2088,14 @@ I thank them sincerely.
 </div>]]></description>
   <link>https://idlip.github.io/posts/./nixos-distro.html</link>
   <guid isPermaLink="false">https://idlip.github.io/posts/./nixos-distro.html</guid>
-  <pubDate>Sun, 04 Feb 2024 16:03:00 +0000</pubDate>
+  <pubDate>Sun, 04 Feb 2024 16:39:00 +0000</pubDate>
 </item>
 <item>
   <title>Vim Proficiency</title>
   <description><![CDATA[<div id="content">
- <div id="outline-container-org2553a49" class="outline-2">
- <h2 id="org2553a49">Neo Vim Time    <span class="tag"> <span class="terminal">terminal</span>  <span class="keybindings">keybindings</span>  <span class="cheatsheet">cheatsheet</span>  <span class="vim">vim</span></span></h2>
- <div class="outline-text-2" id="text-org2553a49">
+ <div id="outline-container-org3a4c356" class="outline-2">
+ <h2 id="org3a4c356">Neo Vim Time    <span class="tag"> <span class="terminal">terminal</span>  <span class="keybindings">keybindings</span>  <span class="cheatsheet">cheatsheet</span>  <span class="vim">vim</span></span></h2>
+ <div class="outline-text-2" id="text-org3a4c356">
  <p>
 Although I don’t use vim, it has good points for being easy  <b>keyboard glue</b>. Why not learn both of the best worlds of Editors?
 </p>
@@ -2105,7 +2105,7 @@ Apart from normal vim navigations and operators, These are some of the unique vi
 </p>
 </div>
 
- <div id="outline-container-org4d20fb9" class="outline-3">
+ <div id="outline-container-orge7d4270" class="outline-3">
  <h3 id="marks">Marks</h3>
  <div class="outline-text-3" id="text-marks">
  <p>
@@ -2159,7 +2159,7 @@ This is the important one, I have not used this at all. Should try and make use 
 </tr></tbody></table> <hr></hr></div>
 </div>
 
- <div id="outline-container-org13b0fdd" class="outline-3">
+ <div id="outline-container-org1195169" class="outline-3">
  <h3 id="navigation">Navigation</h3>
  <div class="outline-text-3" id="text-navigation">
  <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
@@ -2177,7 +2177,7 @@ This is the important one, I have not used this at all. Should try and make use 
 </tr></tbody></table> <hr></hr></div>
 </div>
 
- <div id="outline-container-org55ae2b3" class="outline-3">
+ <div id="outline-container-orgee021ec" class="outline-3">
  <h3 id="jumping">Jumping</h3>
  <div class="outline-text-3" id="text-jumping">
  <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
@@ -2191,7 +2191,7 @@ This is the important one, I have not used this at all. Should try and make use 
 </tr></tbody></table> <hr></hr></div>
 </div>
 
- <div id="outline-container-org595631b" class="outline-3">
+ <div id="outline-container-orgb033ec8" class="outline-3">
  <h3 id="counters">Counters</h3>
  <div class="outline-text-3" id="text-counters">
  <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
@@ -2203,7 +2203,7 @@ This is the important one, I have not used this at all. Should try and make use 
 </tr></tbody></table> <hr></hr></div>
 </div>
 
- <div id="outline-container-org8779ca2" class="outline-3">
+ <div id="outline-container-orgd5e0d24" class="outline-3">
  <h3 id="tags">Tags</h3>
  <div class="outline-text-3" id="text-tags">
  <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
@@ -2225,7 +2225,7 @@ This is the important one, I have not used this at all. Should try and make use 
 </tr></tbody></table> <hr></hr></div>
 </div>
 
- <div id="outline-container-orga56eda5" class="outline-3">
+ <div id="outline-container-org448374b" class="outline-3">
  <h3 id="folds">Folds</h3>
  <div class="outline-text-3" id="text-folds">
  <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
@@ -2251,7 +2251,7 @@ This is the important one, I have not used this at all. Should try and make use 
 </tr></tbody></table> <hr></hr></div>
 </div>
 
- <div id="outline-container-org676e0f8" class="outline-3">
+ <div id="outline-container-org781c6ea" class="outline-3">
  <h3 id="command-line">Command line</h3>
  <div class="outline-text-3" id="text-command-line">
  <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
@@ -2265,7 +2265,7 @@ This is the important one, I have not used this at all. Should try and make use 
 </tr></tbody></table> <hr></hr></div>
 </div>
 
- <div id="outline-container-org3d2744b" class="outline-3">
+ <div id="outline-container-orge6ec117" class="outline-3">
  <h3 id="spell-checking">Spell checking</h3>
  <div class="outline-text-3" id="text-spell-checking">
  <table> <colgroup> <col class="org-left"></col> <col class="org-left"></col></colgroup> <thead> <tr> <th scope="col" class="org-left">Shortcut</th>
@@ -2305,7 +2305,7 @@ For emacs, I have my previous post for it.
 </div>]]></description>
   <link>https://idlip.github.io/posts/./vim-proficiency.html</link>
   <guid isPermaLink="false">https://idlip.github.io/posts/./vim-proficiency.html</guid>
-  <pubDate>Sun, 04 Feb 2024 16:03:00 +0000</pubDate>
+  <pubDate>Sun, 04 Feb 2024 16:39:00 +0000</pubDate>
 </item>
 <item>
   <title>Window Managers</title>
@@ -2356,7 +2356,7 @@ So, just have a share of trial, explore and relax!
 </div>]]></description>
   <link>https://idlip.github.io/posts/./window-managers.html</link>
   <guid isPermaLink="false">https://idlip.github.io/posts/./window-managers.html</guid>
-  <pubDate>Sun, 04 Feb 2024 16:03:00 +0000</pubDate>
+  <pubDate>Sun, 04 Feb 2024 16:39:00 +0000</pubDate>
 </item>
 </channel>
 </rss>
