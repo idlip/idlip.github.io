@@ -193,6 +193,7 @@ of contents as a string, or nil if it is empty."
        (list "slides"
              :base-directory "./content/slides/"
              :base-extension ".*"
+             :recursive t
              :publishing-directory "./public/slides/"
              :publishing-function 'org-publish-attachment)
 
