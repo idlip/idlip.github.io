@@ -193,7 +193,7 @@ of contents as a string, or nil if it is empty."
              :base-directory "./content/slides/"
              ;; :exclude ".*"
              ;; :include (list "hello.html")
-             :base-extension "html"
+             :base-extension ".*"
              :publishing-directory "./public/slides/"
              :publishing-function 'org-publish-attachment)
 

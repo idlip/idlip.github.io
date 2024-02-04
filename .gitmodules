@@ -1,0 +1,3 @@
+[submodule "content/slides/revjs"]
+	path = content/slides/revjs
+	url = https://github.com/hakimel/reveal.js/
