@@ -201,7 +201,7 @@ of contents as a string, or nil if it is empty."
              :base-directory "./content/slides"
              :recursive t
              :base-extension ".*"
-             :exclude ".*.org$"
+             :exclude ".*\\.org$"
              :publishing-directory "./public/slides/"
              :publishing-function 'org-publish-attachment)
 
