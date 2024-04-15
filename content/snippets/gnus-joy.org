@@ -1,0 +1,48 @@
+#+title: Using Gnus to read rss feeds
+#+date: [2024-03-10 Sun]
+
+Emacs is my editor, and my companion for most of my tasks. Yes, I'd like to call it a second brain extension.
+
+I'm a rss feed user, to read with coziness, freedom and comfort. Lately I have been experiment with the rss readers choice in Emacs. I feel that =gnus=, the powerhouse in Emacs is one of the good choice. I mean to say, not with =nnrss= backend, but with rss to nntp gateway.
+
+I'm using =elfeed= as the rss reader for over 6 months. I even setup my phone to use emacs app to read news in sync with PC using syncthing. And it worked as expected flawlessly. But elfeed is unmaintained, but it works without any issues tho. By time someone may fork it, looking at how much love it has. This then lead to me try other ways in Emacs, as I was kinda leaning towards keeping Emacs as close to vanilla as possible. Recently I also replaced =flycheck= with built-in =flymake=.
+
+Soon I jotted down only 3 candidate for reading feeds. Elfeed, Newsticker & gnus. Later two are built-in. There might be others as well, like wanderlust, org based.., but when I tried ig it did not work.
+
+** Elfeed
+As said earlier, it was my choice for about 6+ months, and it worked really well. Was reading and tagging feeds alot. Although with my rss usage, I realized I was only looking forward for the *planet emacs* feeds (haha; typical emacser).
+
+It is good with not much issues, except that its database directory is kinda not intuitive for manual edits, and the files are scattered with some random ids. So you dont know where a feed post is located.
+
+It is still my recommend way to go with the package that just works well. But being into more emacs, I needed little more.
+
+** Newsticker
+Firstly, liked the customization it has, and the tree-view how it appeals. But I hit the road blocks very soon. Tree-view was an issue, I need to read each post in single window and navigate to my leisure. I miss tags here. For everytime I launch, =newsticker-treeview= it fetches the articles from feed. That blocks my usage sometimes. Even tho I can keep =newsticker-retrieval-interval= to 0, it still fetches when launched with command for first time.
+
+With plain view you can filter for feeds very much. With tree view you cannot occupy single widow to read the post.
+
+Anyway, newsticker is also good, as it is built-in and does just work.
+
+** gnus
+- I panicked when I came to gnus. Its my..idk.. n^{th} time trying it out again.
+But with little more dedication than last time, I sat down to read the manual.
+
+Soon I realized, how did I miss reading such a marvelous manual before. Although still I was not able to wrap my head, I some how managed only yo grasp what I wanted for the time being. Note, gnus is a usenet reader, so it can be preferred for mails, but my goal for now is rss feeds.
+
+I saw there is =nnrss= backends, it is kinda same as newsticker, the road-block is the not being async to fetch the feeds.
+So if more feeds, it blocks the emacs very much.
+
+Soon I came to another way of reading rss as newsgroup via rss to nntp gateway. I'm using =gwene= and =feedbase= for it, and it gets me most of the feeds in newsgroup format.
+
+Its my first time reading at newsgroup, and I feel amazed and appreciate how simply and focused this UI is. I have started to enjoy reading mailing lists and follow up stuffs in a unified and good way.
+
+Although you may find some cons with this way, offline is possible and can download any number of articles/posts. Which is mega-bonus. I download 5k+ articles from a feed, which might be not possible with plain rss feeds.
+
+The reading in gnus has been a joy, and I would to add more write-ups on it. Yes, I want to write and hope to make some people try it as I feel it. Cause whatever search you do on gnus emacs, people silence and make you use other package. I know I may also hit their issues and end, and realize what they mean. But at the time of writing, I really enjoy it.
+
+And, it was very easy to me use gnus in sync with android emacs too via syncthing of just one file =newsrc.eld=, and if downloading any articles, its will be added to =gnus-directory=.
+
+-----
+
+Finally to say, gnus will be my choice of reading from now. I hope I don't fall into the rabbit hole of gnus now, I just hope to use as is and enjoy reading the content.
+I would like to link my dotfiles for it, maybe will soon add more write-up on it. For now here you go; [[https://www.github.com/idlip/d-nix][check d-setup.org]].
