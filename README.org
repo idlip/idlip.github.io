@@ -32,10 +32,11 @@ I hope its a soothing experience for you to read!
 
 
 *** Ideas - TODO
-**** Improvements for Sites [0/2]
+**** Improvements for Sites [0/3]
 - [ ] More better sitemap?
   - One with small gist and proper format, bonus with tags.
 - [ ] Make posts filter via tags. (looks hard)
+- [ ] Make site part of systemcrafters webring?
 **** DONE On Window manager :post:
   CLOSED: [2024-01-03 Wed 15:05] SCHEDULED: <2023-03-30 Thu 13:01>
   :LOGBOOK:
