@@ -194,7 +194,7 @@ code {
     font-family: "code-op", monospace;
     padding: 0.2em;
     color: var(--code);
-    background-color: var(--bg-dim);
+    /* background-color: var(--bg-dim); */
 }
 
 ul {
