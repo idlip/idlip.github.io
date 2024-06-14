@@ -106,3 +106,14 @@ CLOSED: [2024-02-04 Sun 21:56]
   1) Use single file for slides html - This might beat the purpose of dynamic and having source code for it.
   2) Just deploy a directory (=docs/=) without github action, so you manually publish the site.
   3) Use =revjs= repo or files, and use simple html to reference it (better for now to go with)
+
+*** Logging
+- A way to log key activities that was taken for this site.
+
+**** Move back to Classic Deply from branch via local git push
+[2024-06-14]
+- GitHub action with ubuntu, gave error for emacs 27 due to gpg key thing it was not able to fetch gnu elpa archive. (Especially could not install webfeeder)
+- Also I think why bother with re-reunning CI for small changes, I will anyway test, build the site and push
+- So created =gh-pages= locally as submodule, in [[file:public/][public]] directory, so will push it to gh-pages.
+- So far Works like charm.
+- Also I believe its easy to add small changes overtime.
