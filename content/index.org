@@ -1,8 +1,8 @@
 #+title: Hi, I'm Dilip
 
-Greeting, and Warn welcome to you!
+Greeting, and Warm welcome to you!
 
-This site has few blog posts, driven by passion, written to share and be a helpful content.
+This site has few blog posts, driven by passion, written to share and be a helpful content, if not these posts would be inert.
 --------
 
 ** [[file:posts/][Posts]]
