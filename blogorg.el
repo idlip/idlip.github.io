@@ -2,7 +2,7 @@
 
 (require 'package)
 
-(unless (package-installed-p 'elfeed)
+(unless (package-installed-p 'embark)
 
 ;;; packages
 ;;;; Initialize the package system
