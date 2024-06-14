@@ -8,15 +8,12 @@
 ;;;; Initialize the package system
   (require 'package)
   (setq package-user-dir (expand-file-name "./.packages"))
-  (setq package-archives '(("melpa" . "https://melpa.org/packages/")
-                           ("elpa" . "https://elpa.gnu.org/packages/")))
 
-  (unless (bound-and-true-p package--initialized)
-    (customize-set-variable 'package-enable-at-startup nil)
-    (package-initialize))
+  (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 
-  (unless package-archive-contents
-    (package-refresh-contents))
+
+  (package-initialize)
+  (package-refresh-contents)
 
   ;; Check and install dependencies
   (dolist (package '(htmlize
