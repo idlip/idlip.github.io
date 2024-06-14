@@ -1,4 +1,4 @@
 #+title: NixOS & its Madness
 #+date: [2024-02-04 Sat]
 
-*
+* Need to Update. WIP

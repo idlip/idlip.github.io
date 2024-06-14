@@ -1,5 +1,14 @@
 #+TITLE: Snippets
 
+- [[file:gnus-joy.org][Using Gnus to read rss feeds]] 
+  
+  Mar 10, 2024
+- [[file:time-resonance.org][Resonance: The Echo]] 
+  
+  Mar 10, 2024
+- [[file:nobody-cares.org][Nobody Cares about blogs]] 
+  
+  Feb 08, 2024
 - [[file:art-gtd.org][Art of Getting things Done]] 
   
   Feb 03, 2024
