@@ -105,6 +105,7 @@ of contents as a string, or nil if it is empty."
 
 
 (setq org-publish-use-timestamps-flag t
+      org-export-with-timestamps nil
       org-publish-timestamp-directory "./.org-cache/"
       org-export-with-section-numbers nil
       org-export-use-babel nil
@@ -146,7 +147,7 @@ of contents as a string, or nil if it is empty."
              :sitemap-filename "index.org"
              :sitemap-format-entry 'd/op-format-index
              :sitemap-style 'list
-             ;; :with-date t
+             :with-date t
              :auto-sitemap t
              :sitemap-sort-files 'anti-chronologically
              :sitemap-title "Posts"
