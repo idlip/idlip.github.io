@@ -88,8 +88,15 @@ CLOSED: [2023-12-29 Fri 16:44] SCHEDULED: <2023-12-18 Mon 13:20>
 - refer: https://github.com/tonyaldon/one.el
 - This lead me to dive into ~org-publish~.
 
-**** TODO Integrate denote as blogging system
+**** CANC Integrate denote as blogging system
+CLOSED: [2024-06-14 Fri 23:30]
+:LOGBOOK:
+- State "CANC"       from "TODO"       [2024-06-14 Fri 23:30]
+:END:
 - It is possible to go with identifier as base, and so interlinking should work.
+- As on [2024-06-14], I think that I dont feel comfortable with multiple files.
+- Denote naming scheme is good, and I use it for pdfs mainly.
+- But I prefer to maintian single org file as source.
 
 **** DONE Preparation for sharing slides
 CLOSED: [2024-02-04 Sun 21:56]
@@ -107,6 +114,17 @@ CLOSED: [2024-02-04 Sun 21:56]
   2) Just deploy a directory (=docs/=) without github action, so you manually publish the site.
   3) Use =revjs= repo or files, and use simple html to reference it (better for now to go with)
 
+**** DONE Join system craftering
+CLOSED: [2024-06-14 Fri 23:31]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2024-06-14 Fri 23:31]
+:END:
+- Its fun, and emacsy
+- https://craftering.shom.dev/
+
+**** TODO Move to single org file approach
+SCHEDULED: <2024-06-15 Sat>
+- Easy steps are to export each heading to new file.
 *** Logging
 - A way to log key activities that was taken for this site.
 
@@ -114,6 +132,6 @@ CLOSED: [2024-02-04 Sun 21:56]
 [2024-06-14]
 - GitHub action with ubuntu, gave error for emacs 27 due to gpg key thing it was not able to fetch gnu elpa archive. (Especially could not install webfeeder)
 - Also I think why bother with re-reunning CI for small changes, I will anyway test, build the site and push
-- So created =gh-pages= locally as submodule, in [[file:public/][public]] directory, so will push it to gh-pages.
+- So created =gh-pages= locally as submodule, in =public= directory, so will push it to gh-pages.
 - So far Works like charm.
 - Also I believe its easy to add small changes overtime.

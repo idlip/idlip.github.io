@@ -2,3 +2,11 @@
 #+date: [2024-02-04 Sat]
 
 * Need to Update. WIP
+
+Too much going on, need some time to wrap up.
+
+I initially thought to talk about nix and nixos usage thing, but new drama has rose up regarding to sponsorship, governance and maintainers leaving.
+
+So far Aux and Lix has been initiated, apart from nixos governance, using nix as dev environment and its steep learning curve is a hectic.
+
+Someday might add new posts or update this regarding to nixos!
