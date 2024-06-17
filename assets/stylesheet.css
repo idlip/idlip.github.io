@@ -184,7 +184,7 @@ a:link {
     color: var(--link);
     /* font-style: italic; */
     font-family: "code-ace", sans;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 a:visited {
     color: var(--link);
