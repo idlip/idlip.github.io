@@ -1,0 +1,3 @@
+[submodule "themes/color-world"]
+	path = themes/color-world
+	url = git@github.com:idlip/hugo-theme-color-your-world.git
