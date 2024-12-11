@@ -1,7 +1,8 @@
 +++
 title = "FOSS : On Droid"
+author = ["Dilip"]
 date = 2023-04-25
-tags = ["android", "apps"]
+tags = ["fossdroid", "android"]
 draft = false
 +++
 

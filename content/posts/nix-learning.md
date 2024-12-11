@@ -1,5 +1,6 @@
 +++
 title = "Nix Learning"
+author = ["Dilip"]
 date = 2023-05-03
 tags = ["linux", "resources", "nixos"]
 draft = false

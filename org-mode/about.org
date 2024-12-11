@@ -3,7 +3,7 @@
 
 * About
    :PROPERTIES:
-   :EXPORT_FILE_NAME: _index
+   :EXPORT_FILE_NAME: index
    :EXPORT_HUGO_LAYOUT: single
    :END:
 
@@ -33,8 +33,20 @@
    + Currently, an Post Graduate Student in Bio-informatics.
 
 
-   Contact  : [[https://github.com/idlip][GitHub]]
-   Profile  : [[https://linkedin.com/in/dilip-g-29707727a][Linkedin]]
+You can also find me at:
+
+#+begin_export html
+{{< social >}}
+#+end_export
+
+-----
+
+Or drop me a good ol' email:
+
+#+begin_export html
+{{< contact-form >}}
+#+end_export
+
 
    ------
 

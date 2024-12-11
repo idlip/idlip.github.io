@@ -1,6 +1,8 @@
 +++
 title = "Emacs on Droid"
+author = ["Dilip"]
 date = 2023-12-16
+tags = ["emacs", "android"]
 draft = false
 +++
 

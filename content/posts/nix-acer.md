@@ -1,5 +1,6 @@
 +++
 title = "Nix: Home for Acer"
+author = ["Dilip"]
 date = 2023-10-21
 tags = ["linux", "nixos"]
 draft = false

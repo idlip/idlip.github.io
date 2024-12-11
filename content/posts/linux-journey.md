@@ -1,5 +1,6 @@
 +++
 title = "My Linux Journey"
+author = ["Dilip"]
 date = 2023-03-10
 tags = ["distro", "linux"]
 draft = false

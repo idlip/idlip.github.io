@@ -1,7 +1,8 @@
 +++
 title = "Emacs Efficiency"
+author = ["Dilip"]
 date = 2023-03-29
-tags = ["minimal", "cheatsheet", "keybindings", "emacs"]
+tags = ["cheatsheet", "keybindings", "emacs"]
 draft = false
 +++
 
