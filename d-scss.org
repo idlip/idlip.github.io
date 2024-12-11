@@ -8,7 +8,7 @@
 
 Searching folders are pain, I just tangle everything from here so its easy to navigate and also *Document* for me to understand.
 
-* Main scss
+* COMMENT Main scss
 Main file which calls every child (lol)
 #+begin_src scss :tangle ./assets/scss/main.scss
   @import "_variables";
@@ -21,7 +21,7 @@ Main file which calls every child (lol)
 
 #+end_src
 
-* Web view
+* COMMENT Web view
 All about design and view.
 #+begin_src scss :tangle ./assets/scss/_web_view.scss
   html {
@@ -39,9 +39,6 @@ All about design and view.
       text-decoration: none;
       pointer-events: none;
   }
-
-
-
 
   body {
       line-height: 1.8em;
@@ -229,9 +226,6 @@ All about design and view.
       text-align: center;
   }
 
-  ul li {
-      list-style-type: "❖ ";
-  }
 
 
 
@@ -244,42 +238,6 @@ All about design and view.
   // }
 
 
-  .tags {
-      font-size: .9em;
-      text-align: left;
-      ul {
-          display: block;
-          padding: 0;
-          //margin: 0.5rem;
-          li {
-              display: inline;
-              list-style-type: none;
-              text-align: center;
-              a {
-                  padding: 0.5em;
-                  color: $tags-color;
-                  font-family: 'Comic';
-                  margin: 10px 2px 10px 0;
-                  line-height: 4em;
-                  background: 
-                      linear-gradient(#161616 0 0) padding-box,
-                      linear-gradient(90deg, #bcd2ee 28%, #fff0f5 85%, #ffe4e1 ) border-box;
-                  padding: 10px;
-                  border: 2px solid transparent;
-                  border-radius: 10px;
-
-              }
-              a:hover {
-                  background: $tags-color;
-                  background: $gradient-background;
-                  color: $background-color;
-              }
-          }
-          li:not(:last-child) {
-              padding: 0 0.1rem 0 0;
-          }
-      }
-  }
 
   .highlight {
       @include full-width-mobile
@@ -425,168 +383,83 @@ All about design and view.
 * Fonts
 Added fonts which i like and are unique across whole web.
 ** Define custom font
-#+begin_src scss :tangle ./assets/scss/_custom_font.scss
+#+begin_src scss :tangle ./assets/scss/fonts/font-face.scss
   @font-face{
-      font-family: 'Victor';
-      src: url('../font/victor.woff2') format('woff2');
-      font-weight:400;
-      font-style:normal;
-  }
-
-  @font-face{
-      font-family: 'Victoric';
-      src: url('../font/victoric.woff2') format('woff2');
-      font-weight:400;
-      font-style: italic;
-  }  
-
-  @font-face{
-      font-family: 'Happy';
-      src: url('../font/happy.woff2') format('woff2');
-      font-weight:400;
-      font-style:normal;
-  }
-
-  @font-face{
-      font-family: 'Impress';
-      src: url('../font/impress.woff2') format('woff2');
-      font-weight:400;
-      font-style:normal;
-  }
-
-  @font-face{
-      font-family: 'Comic';
-      src: url('../font/comic.woff2') format('woff2');
-      font-weight:400;
-      font-style:normal;
-  }
-
-  @font-face{
-      font-family: 'Stone';
-      src: url('../font/stone.woff2') format('woff2');
-      font-weight:400;
-      font-style:normal;
-  }
-
-  @font-face{
-      font-family: 'Gandhi';
-      src: url('../font/gandhi.woff2') format('woff2');
-      font-weight:400;
-      font-style:normal;
-  }
-
-  @font-face{
-      font-family: 'Fairy';
-      src: url('../font/fairy.woff2') format('woff2');
-      font-weight:400;
-      font-style:normal;
-  }
-
-  @font-face{
-      font-family: 'Astro';
-      src: url('../font/astro.woff2') format('woff2');
-      font-weight:400;
-      font-style:normal;
-  }
-
-  @font-face{
-      font-family: 'Symbols';
-      src: url('../font/symbols.woff2') format('woff2');
-      font-weight:900;
-      font-style:normal;
-  }
-
-  @font-face {
-      font-family: 'Awesome';
+      font-family: 'impress';
+      src: url('../fonts/impress.woff2') format('woff2');
+      font-weight: 400;
       font-style: normal;
-      font-weight: 900;
-      font-display: block;
-      src: url("../font/fa-so.woff2") format("woff2"), url("../font/fa-rg.woff2") format("woff2"), url("../font/fa-co.woff2") format("woff2"), url("../font/fa-br.woff2") format("woff2");
   }
 
   @font-face{
-      font-family: 'Times';
-      src: url('../font/tinos.woff2') format('woff2');
-      font-weight:400;
-      font-style:normal;
+      font-family: 'code-ace';
+      src: url('../fonts/code-ace.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
   }
 
   @font-face{
-      font-family: 'Term';
-      src: url('../font/retro-term.woff2') format('woff2');
-      font-weight:400;
-      font-style:normal;
+      font-family: 'code-haki';
+      src: url('../fonts/code-haki.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
   }
 
-  #+end_src
+  @font-face{
+      font-family: 'code-op';
+      src: url('../fonts/code-op.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+  }
+
+
+#+end_src
+** Font Variable
+#+begin_src scss :tangle ./assets/scss/fonts/variables.scss
+  $heading-font:  'impress', sans-serif;
+  $body-font:     'code-ace', sans-serif;
+  $code-font:     'code-op', monospace;
+
+  $font-size:               18px;
+  $heading-scaling-factor:  .25;
+
+  $heading-weight:    700;
+  $body-bold-weight:  700;
+
+  $body-line-height: 1.5rem;
+
+  $h1-color: #6ae4b9;
+  $h2-color: #bf94fe;
+  $h3-color: #ffdab9;
+  $h4-color: #ffa9bf;
+
+  @import "heading.scss";
+#+end_src
 ** Apply Fonts
-#+begin_src scss :tangle ./assets/scss/_fonts.scss
-  ,* {
-      box-sizing: border-box;
-  }
-  body {
-      margin: 0;
-      font-family: "Gandhi", "Symbols", "Awesome";
-  }
-
-  code {
-      font-family: "Victor", "Symbols", "Awesome";
-      padding: 7px;
-  }
-
-  tags {
-      font-family: "Fairy", "Symbols", "Awesome";
-  }
-
-  h1, h2, h3, h4 {
-      font-family: 'Comic', "Symbols", "Awesome";
-      line-height: 3rem;    
-  }
-
+#+begin_src scss :tangle ./assets/scss/fonts/heading.scss
   h1:before, h1:after {
       content: " ⩮ ";
       color: $h1-color;
   }
 
   article h1 {
-      font-weight: 600;
       color: $h1-color;
       text-align: center;
-      font-size: 45px;
-      font-family: 'Happy', "Symbols", "Awesome";
-      letter-spacing: 3px;
-      padding: 15px;
-      line-height: 3rem;
   }
 
   article h2:before {
       content: "◉ ";
-      color: #h2-color;
   }
   article h2 {
-      font-weight: 550;
-      font-style: bold;
       color: $h2-color;
-      // background-color: #12121275;
-      padding: 6px;
-      font-size: 38px;
-      letter-spacing: 1px;
-      line-height: 3rem;
   }
-
 
   article h3:before{
       content: "◈ ";
       color: $h3-color;
   }
   article h3 {
-      font-weight: 550;
-      font-style: bold;
       color: $h3-color;
-      // background-color: #1d223540;
-      padding: 4px;
-      font-size: 32px;
-      line-height: 3rem;    
   }
 
   article h4:before{
@@ -594,43 +467,12 @@ Added fonts which i like and are unique across whole web.
       color: $h4-color;
   }
   article h4 {
-      font-weight: 550;
-      font-style: bold;
       color: $h4-color;
-      padding: 4px;
-      font-size: 26px;
-      line-height: 3rem;    
   }
-
-
-  .slim-description {
-      font-family: "Impress", "Symbols", "Awesome";
-      font-size: 1.4rem;
-  }
-
-  code[class*="language-"]{
-      font-family: "Victor", "Symbols", "Awesome";
-      font-style: normal;
-      font-weight: 400;
-      border-radius: 20px;
-      color: #ffffff;
-  }
-
-
-  .blog-list{
-      font-family: 'Comic', "Symbols", "Awesome";
-      font-size: 1.2rem;
-  }
-
-  nav{
-      font-family: 'Astro', 'Awesome';
-      font-size: 2rem;
-  }
-
 
 #+end_src
 
-* Variables
+* COMMENT Variables
 Ease to call and apply for all.
 
 #+begin_src scss :tangle ./assets/scss/_variables.scss
@@ -670,14 +512,14 @@ Ease to call and apply for all.
   $h1-color: #ffdab9;
   $h2-color: #bf94fe;
   $h3-color: #6ae4b9;
-  $h4-color: #ffa9bf;  
+  $h4-color: #ffa9bf;
 
 
   $gradient-background: linear-gradient(90deg, #bcd2ee 28%, #fff0f5 85%, #ffe4e1 100%);
 
 #+end_src
 
-* Repository
+* COMMENT Repository
 Design for Repository card, elegant!
 #+begin_src scss :tangle ./assets/scss/_repository.scss
   .project-board {
@@ -698,7 +540,7 @@ Design for Repository card, elegant!
     border-width: 3px;
     align-items: center;
     justify-content: center;
-    background: 
+    background:
       linear-gradient(#161616 0 0) padding-box,
       linear-gradient(90deg, #bcd2ee 28%, #fff0f5 85%, #ffe4e1 ) border-box;
     padding: 10px;
@@ -753,7 +595,7 @@ Design for Repository card, elegant!
 
 #+end_src
 
-* Keyboard
+* COMMENT Keyboard
 Config for another page (WIP)
 #+begin_src scss :tangle ./assets/scss/_keyboards.scss
   .collection-board {
@@ -793,7 +635,7 @@ Config for another page (WIP)
 
 #+end_src
 
-* Syntax
+* COMMENT Syntax
 #+begin_src scss :tangle ./assets/scss/_syntax.scss
   code.language-css,
   code.language-scss,
@@ -951,7 +793,7 @@ Config for another page (WIP)
 
 #+end_src
 
-* Mixins
+* COMMENT Mixins
 #+begin_src scss :tangle ./assets/scss/_mixins.scss
   // Mixins
   @mixin flexify {

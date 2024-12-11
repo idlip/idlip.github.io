@@ -1,12 +1,13 @@
 # baseURL = "https://idlip.github.io"
 languageCode = "en"
-title = "Dilip"
+title = "Dilip's Log"
 theme = "color-world"
 
 copyright = "Copyright © 2023-2024, Dilip G; All rights reserved."
 
 enableEmoji = true
 enableInlineShortcodes = true
+ignoreLogs = ['warning-goldmark-raw-html']
 
 [pagination]
   pagerSize = 7
@@ -14,30 +15,14 @@ enableInlineShortcodes = true
 [markup.highlight]
   noClasses = false
 
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.extensions]
-      [markup.goldmark.extensions.passthrough]
-        enable = true
-        [markup.goldmark.extensions.passthrough.delimiters]
-          block = [['\[', '\]'], ['$$', '$$']]
-          inline = [['\(', '\)'], ['$ ', ' $']]
+[markup.goldmark.renderer]
+unsafe= true
 
 [params]
 
   description = "Dilip's Log"
 
-  footerText = [
-    "[Craftering](https://craftering.systemcrafters.net/)",
-    "Generated with [Hugo](https://gohugo.io) using the [Color Your World](https://gitlab.com/rmaguiar/hugo-theme-color-your-world) theme."
-  ]
-
-  # Site cover, for Open Graph, Twitter Cards and Schema.org
-  # It will be used if the current page doesn't have a image cover
-  # File will be picked from the "assets" directory
-  # Comment the lines if you don't want to use it
-  cover     = "images/op-roger.jpg"
-  #coverAlt  = "A placeholder that doesn't deserve to be described."
+   favicon = "/images/op-roger.jpg"
 
   hasNoscriptNotice = true
 
@@ -48,8 +33,9 @@ enableInlineShortcodes = true
   titleSeparator = "|"
 
   [params.author]
-    name         = "Dilip"
+    name         = "Dilip's Log"
     description  = "Bioinformatics Student using Nix-Org-Macs."
+    email = 'zororg@tilde.green'
 
   [params.contact]
 
@@ -93,116 +79,41 @@ enableInlineShortcodes = true
   [params.notFound]
     title         = "Page not found"
     description   = "This page was not found."
-    paragraph     = "Please report if this page is missing."
+    paragraph     = "Please report if this page is missing. Just nudge to zororg@tilde.green"
 
   [params.social.centralized]
-    facebook      = [ "<username>", "Zuckerburg" ]
-    flickr        = [ "<username>" ]
-    github        = [ "<username>" ]
-    gitlab        = [ "<username>" ]
-    instagram     = [ "<username>" ]
-    keybase       = [ "<username>" ]
-    linkedin      = [ "<username>" ]
-    medium        = [ "<username>" ]
-    reddit        = [ "<username>" ]
-    snapchat      = [ "<username>" ]
-    soundcloud    = [ "<username>" ]
-    stackOverflow = [ "<username>" ]
-    strava        = [ "<username>" ]
-    telegram      = [ "<username>" ]
-    twitch        = [ "<username>" ]
-    vimeo         = [ "<username>" ]
-    whatsapp      = [ "<number>" ]
-    x             = [ "<username>", "@birb" ]
-    xing          = [ "<username>" ]
-    youtube       = [ "<channelid>" ]
-    #entry         = [ "username", "label (optional)" ]
-
-    # The "entry" here IS important. It's used to load the data.
+    email         = [ "zororg@tilde.green" ]
+    github        = [ "idlip" ]
+    linkedin      = [ "dilip-g-29707727a" ]
+    reddit        = [ "GolD_Lip" ]
 
   [params.social.decentralized]
 
-    [params.social.decentralized.bsky]
-      1 = [ "https://bsky.app/profile/<username>.bsky.social", "bsky.social" ]
-      #entry = [ "full url", "label (required)" ]
-
-    [params.social.decentralized.element]
-      1 = [ "https://app.element.io/#/user/<username>:matrix.org", "matrix.org" ]
-
-    [params.social.decentralized.funkwhale]
-      1 = [ "https://open.audio/<username>", "open.audio" ]
-
-    [params.social.decentralized.mastodon]
-      1 = [ "https://mastodon.social/<username>", "mastodon.social" ]
-      2 = [ "https://mastodon.too/<username>", "mastodon.too" ]
-      3 = [ "https://yet.another.one/<username>", "yet.another.one" ]
-
     [params.social.decentralized.matrix]
-      1 = [ "https://matrix.to/#/<username>:matrix.org", "matrix.org" ]
-      2 = [ "https://matrix.to/#/<username>:other.org", "other.org" ]
-
-    [params.social.decentralized.peertube]
-      1 = [ "https://peertube.something/accounts/<username>", "peertube.something" ]
-
-    [params.social.decentralized.pixelfed]
-      1 = [ "https://pixelfed.social/<username>", "pixelfed.social" ]
-
-    # The "entry" here ISN'T important. It's used for nothing.
+      1 = [ "https://matrix.to/#/zororg:matrix.org", "matrix.org" ]
 
 
-[privacy]
+[[menu.main]]
+  name = "Home"
+  weight = 1
+  url = "/"
 
-  [privacy.vimeo]
-    disabled = false
-    simple = true
+[[menu.main]]
+  name = "Posts"
+  weight = 2
+  url = "posts/"
 
-  [privacy.twitter]
-    disabled = false
-    enableDNT = true
-    simple = true
+[[menu.main]]
+  name = "Projects"
+  weight = 3
+  url = "repo/"
 
-  [privacy.instagram]
-    disabled = false
-    simple = true
+[[menu.main]]
+  name = "About"
+  weight = 4
+  url = "about/"
 
-  [privacy.youtube]
-    disabled = false
-    privacyEnhanced = true
-
-[services]
-
-  [services.instagram]
-    disableInlineCSS = true
-
-  [services.twitter]
-    disableInlineCSS = true
-
-
-
-[languages]
-
-  [languages.en]
-
-    languageName = "English"
-
-    [languages.en.menu]
-
-      [[languages.en.menu.main]]
-        name = "Home"
-        weight = 1
-        url = "/"
-
-      [[languages.en.menu.main]]
-        name = "Posts"
-        weight = 2
-        url = "posts/"
-
-      [[languages.en.menu.main]]
-        name = "Projects"
-        weight = 3
-        url = "repo/"
-
-      [[languages.en.menu.main]]
-        name = "About"
-        weight = 4
-        url = "about/"
+[[menu.main]]
+  name = " "
+  weight = 5
+  url = "index.xml"

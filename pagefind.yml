@@ -1,0 +1,5 @@
+site: public
+output_path: public/pagefind
+exclude_selectors:
+  - "[id^='fnref']"
+  - "[class='highlight']"
