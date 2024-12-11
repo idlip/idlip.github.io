@@ -3,9 +3,9 @@
 
 * Abstract
 :PROPERTIES:
-:EXPORT_FILE_NAME: index
+:EXPORT_FILE_NAME: _index
 :EXPORT_HUGO_LAYOUT: single
-:EXPORT_HUGO_SECTION:
+:EXPORT_HUGO_SECTION: /
 :END:
 
 Hi there! Greetings & Salutations, and Warm welcome to you!
@@ -18,7 +18,7 @@ To know about me or to contact me, please feel free to reach via [[./about/][Abo
 
 * About
 :PROPERTIES:
-:EXPORT_FILE_NAME: index
+:EXPORT_FILE_NAME: _index
 :EXPORT_HUGO_LAYOUT: single
 :EXPORT_HUGO_SECTION: about
 :END:
@@ -77,7 +77,7 @@ Or drop me a good ol' email: [[mailto:zororg@tilde.green][zororg@tilde.green]]
 
 * Search
 :PROPERTIES:
-:EXPORT_FILE_NAME: index
+:EXPORT_FILE_NAME: _index
 :EXPORT_HUGO_LAYOUT: search
 :EXPORT_HUGO_SECTION: search
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :sitemapExclude true :noindex true
@@ -86,7 +86,7 @@ Or drop me a good ol' email: [[mailto:zororg@tilde.green][zororg@tilde.green]]
 
 * Projects
 :PROPERTIES:
-:EXPORT_FILE_NAME: index
+:EXPORT_FILE_NAME: _index
 :EXPORT_HUGO_LAYOUT: single
 :EXPORT_HUGO_SECTION: repo
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :sitemapExclude true :noindex true

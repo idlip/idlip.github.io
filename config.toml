@@ -7,7 +7,6 @@ copyright = "Copyright © 2023-2024, Dilip G; All rights reserved."
 
 enableEmoji = true
 enableInlineShortcodes = true
-ignoreLogs = ['warning-goldmark-raw-html']
 
 [pagination]
   pagerSize = 7
@@ -16,13 +15,20 @@ ignoreLogs = ['warning-goldmark-raw-html']
   noClasses = false
 
 [markup.goldmark.renderer]
-unsafe= true
+unsafe = true
+
+enableEmoji = true
+enableGitInfo = true
+enableRobotsTXT = true
+canonifyURLs = true
+
+publishDir = "public"
 
 [params]
 
   description = "Dilip's Log"
 
-   favicon = "/images/op-roger.jpg"
+  favicon = "/images/op-roger.jpg"
 
   hasNoscriptNotice = true
 
@@ -93,6 +99,8 @@ unsafe= true
       1 = [ "https://matrix.to/#/zororg:matrix.org", "matrix.org" ]
 
 
+[menu]
+
 [[menu.main]]
   name = "Home"
   weight = 1
@@ -101,19 +109,26 @@ unsafe= true
 [[menu.main]]
   name = "Posts"
   weight = 2
-  url = "posts/"
+  url = "/posts/"
 
 [[menu.main]]
   name = "Projects"
   weight = 3
-  url = "repo/"
+  url = "/repo/"
 
 [[menu.main]]
   name = "About"
   weight = 4
-  url = "about/"
+  url = "/about/"
 
 [[menu.main]]
   name = " "
   weight = 5
   url = "index.xml"
+
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    languageCode = "en-us"
+    weight = 1
