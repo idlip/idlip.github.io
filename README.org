@@ -8,13 +8,16 @@ You know its fascinating to have a personal static website which is rich and val
 I went with Hugo and ox-hugo which is a match that exists only for Emacs (GOAT) to build the site.
 
 I have forked the theme from [[https://rudra.dev]] , and adjusted colors to my liking.
-
+As of new remake, the change is changed to==> [[https://gitlab.com/rmaguiar/hugo-theme-color-your-world][color-your-world]]
 
 I hope its a soothing experience for you to read!
 
 *** Ideas - TODO
-**** TODO On Window manager :post:
-  SCHEDULED: <2023-03-30 Thu 13:01>
+**** DONE On Window manager                                          :post:
+  CLOSED: [2025-01-02 Thu 19:46] SCHEDULED: <2023-03-30 Thu 13:01>
+  :LOGBOOK:
+  - State "DONE"       from "TODO"       [2025-01-02 Thu 19:46]
+  :END:
 + Maybe about advantages
 + Uses and how it is efficient
 + Bad side
@@ -31,8 +34,11 @@ I hope its a soothing experience for you to read!
   - State "DONE"       from "TODO"       [2023-07-28 Fri 13:26]
   :END:
 
-**** REVIEW Comprehensive post on Emacs android :post:
-SCHEDULED: <2023-07-31 Mon>
+**** DONE REVIEW Comprehensive post on Emacs android                 :post:
+CLOSED: [2025-01-02 Thu 19:46] SCHEDULED: <2023-07-31 Mon>
+:LOGBOOK:
+- State "DONE"       from              [2025-01-02 Thu 19:46]
+:END:
 + It has got better with termux integration. Its almost like desktop experience now.
 
 **** TODO Maybe on Revealjs for presentation? :post:
