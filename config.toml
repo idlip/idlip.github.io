@@ -3,7 +3,7 @@ languageCode = "en"
 title = "Dilip's Log"
 theme = "color-world"
 
-copyright = "Copyright © 2023-2024, Dilip G; All rights reserved."
+copyright = "Copyright © 2023-2025, Dilip G; All rights reserved."
 
 enableEmoji = true
 enableInlineShortcodes = true
@@ -70,7 +70,7 @@ publishDir = "public"
     darkAccent   = "#54ff9f"
     lightAccent  = "#4f94cd"
 
-    presets = [ "#225670", "#dd587c", "#902b37", "#f3a530", "#754e85", "#7fc121", "#a8314a", "#ff7433", "#3e6728", "#c063bd", "#805080", "#9d629d", "#a064a0", "#7daa50", "#284531", "#285790", "#F5A83D", "#88aa33", "#015660", "#bf274e", "#bf4242", "#51b37c" ]
+    presets = [ "#7fc121", "#51b37c", "#d2b48c", "#fafad2", "#00ff7f", "#ffe4e1", "#e6e6fa", "#00bfff", "#cd8500" ]
 
     hasIconAsFootnoteReturnLink = true
 
@@ -96,7 +96,11 @@ publishDir = "public"
   [params.social.decentralized]
 
     [params.social.decentralized.matrix]
-      1 = [ "https://matrix.to/#/zororg:matrix.org", "matrix.org" ]
+      1 = [ "https://matrix.to/#/zororg:matrix.org", "matrix" ]
+    [params.social.decentralized.bsky]
+      1 = [ "https://bsky.app/profile/idlip.bsky.social", "bluesky" ]
+    [params.social.decentralized.mastodon]
+      1 = [ "https://genomic.social/@idlip", "mastodon" ]
 
 
 [menu]
