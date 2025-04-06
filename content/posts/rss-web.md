@@ -2,7 +2,7 @@
 title = "RSS: The better Internet"
 author = ["Dilip"]
 date = 2023-03-23
-tags = ["snippets", "news", "internet", "read", "rss"]
+tags = ["snippets", "news", "rss"]
 draft = false
 +++
 

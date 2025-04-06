@@ -1,6 +1,6 @@
 +++
 title = "Projects"
-author = ["Zororg"]
+author = ["Dilip"]
 layout = "single"
 draft = false
 sitemapExclude = true

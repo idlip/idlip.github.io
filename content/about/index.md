@@ -1,6 +1,6 @@
 +++
 title = "About"
-author = ["Zororg"]
+author = ["Dilip"]
 layout = "single"
 draft = false
 +++

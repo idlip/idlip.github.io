@@ -2,7 +2,7 @@
 title = "Journey Begins"
 author = ["Dilip"]
 date = 2023-03-21T00:00:00+05:30
-tags = ["log", "snippets", "first"]
+tags = ["snippets"]
 draft = false
 +++
 

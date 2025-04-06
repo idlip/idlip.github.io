@@ -2,7 +2,7 @@
 title = "Emacs is OP"
 author = ["Dilip"]
 date = 2023-03-22
-tags = ["snippets", "editors", "emacs", "neovim"]
+tags = ["snippets", "emacs", "vim"]
 draft = false
 +++
 

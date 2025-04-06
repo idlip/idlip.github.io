@@ -2,7 +2,7 @@
 title = "NixOS : Reproducible - Immutable"
 author = ["Dilip"]
 date = 2023-03-23T00:00:00+05:30
-tags = ["emacs", "distro", "linux", "nixos"]
+tags = ["emacs", "nixos"]
 draft = false
 +++
 

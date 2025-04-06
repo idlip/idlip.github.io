@@ -2,7 +2,7 @@
 title = "Linux : The Matrix"
 author = ["Dilip"]
 date = 2023-04-12
-tags = ["terminal", "cheatsheet", "minimal"]
+tags = ["terminal", "minimal"]
 draft = false
 +++
 

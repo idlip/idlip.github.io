@@ -2,7 +2,7 @@
 title = "Vim Proficiency"
 author = ["Dilip"]
 date = 2023-04-05
-tags = ["terminal", "keybindings", "cheatsheet", "vim"]
+tags = ["cheatsheet", "vim"]
 draft = false
 +++
 

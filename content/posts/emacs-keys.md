@@ -2,7 +2,7 @@
 title = "Emacs Efficiency"
 author = ["Dilip"]
 date = 2023-03-29
-tags = ["cheatsheet", "keybindings", "emacs"]
+tags = ["cheatsheet", "emacs"]
 draft = false
 +++
 

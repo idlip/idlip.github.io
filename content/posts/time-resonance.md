@@ -2,7 +2,7 @@
 title = "Resonance: The Echo"
 author = ["Dilip"]
 date = 2024-03-10T00:00:00+05:30
-tags = ["psychology"]
+tags = ["psychology", "philosophy"]
 draft = false
 +++
 

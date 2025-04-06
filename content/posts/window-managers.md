@@ -2,7 +2,7 @@
 title = "Window Managers"
 author = ["Dilip"]
 date = 2024-01-03T00:00:00+05:30
-tags = ["wm"]
+tags = ["linux", "minimal"]
 draft = false
 +++
 

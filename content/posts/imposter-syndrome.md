@@ -2,7 +2,7 @@
 title = "Imposter Syndrome : Formula for Success"
 author = ["Dilip"]
 date = 2023-03-24
-tags = ["phenomenon", "success", "skill", "imposter", "psychology"]
+tags = ["psychology"]
 draft = false
 +++
 
