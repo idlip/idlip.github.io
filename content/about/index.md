@@ -1,13 +1,13 @@
 +++
 title = "About"
-author = ["Dilip"]
+author = ["Zororg"]
 layout = "single"
 draft = false
 +++
 
 {{< figure src="/images/op-rog.jpg" caption="<span class=\"figure-number\">Figure 1: </span>Gol D. Roger laughing in Laugh Tale!" width="50px" height="10px" >}}
 
-A FOSS Linux Enthusiast, who's willing to learn new unknown (at least for me) knowledge.
+A FOSS Linux Enthusiast, who's willing to learn new unknown (at least for me) knowledge and contribute to the world.
 
 True Loyal OnePiece fan.
 

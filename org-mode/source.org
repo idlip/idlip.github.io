@@ -1,5 +1,6 @@
 #+hugo_base_dir: ../
 #+OPTIONS: toc:2
+#+MACRO: project <a href="$1" style="color: #000000;"><div class="btn"> <ul>$2</ul> </div></a>
 
 * Abstract
 :PROPERTIES:
@@ -23,11 +24,11 @@ To know about me or to contact me, please feel free to reach via [[./about/][Abo
 :EXPORT_HUGO_SECTION: about
 :END:
 
-     #+CAPTION: Gol D. Roger laughing in Laugh Tale!
+#+CAPTION: Gol D. Roger laughing in Laugh Tale!
 #+ATTR_HTML: :width 50px :height 10px
 [[file:/images/op-rog.jpg]]
 
-A FOSS Linux Enthusiast, who's willing to learn new unknown (at least for me) knowledge.
+A FOSS Linux Enthusiast, who's willing to learn new unknown (at least for me) knowledge and contribute to the world.
 
 True Loyal OnePiece fan.
 
@@ -41,7 +42,7 @@ Tinkerer, I explore my areas of interests and research in a deeper level.
 
  I have a motto like:
 
-     #+begin_quote
+#+begin_quote
 /If you want to understand the whole, Understand its parts/. *[[https://www.verywellmind.com/what-is-gestalt-psychology-2795808][Gestalt Psychology]]*
 #+end_quote
 
@@ -92,6 +93,25 @@ Or drop me a good ol' email: [[mailto:zororg@tilde.green][zororg@tilde.green]]
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :sitemapExclude true :noindex true
 :END:
 
+Most of the projects are live on Git repository.
+
+[[https://github.com/idlip][GitHub]]
+
+#+begin_export html
+<a href="https://github.com/idlip/lncrna" style="color: #000000; text-decoration: none;"><div class="btn"> <ul>lncRNA: Coding potential and Sequence analysis</ul> </div></a>
+
+<a href="https://github.com/OncoScan/OralPathNet" style="color: #000000; text-decoration: none;"><div class="btn"> <ul>OralPathnet: DL model on Oral cancer detection</ul> </div></a>
+
+<a href="https://github.com/idlip/alignWrap" style="color: #000000; text-decoration: none;"><div class="btn"> <ul>alignWrap: R wrapper package to align sequences</ul> </div></a>
+
+<a href="https://github.com/idlip/haki" style="color: #000000; text-decoration: none;"><div class="btn"> <ul>Haki: Modern Dark theme for Emacs</ul> </div></a>
+
+<a href="https://github.com/idlip/d-bin" style="color: #000000; text-decoration: none;"><div class="btn"> <ul>Functional shell scripts for Linux</ul> </div></a>
+
+<a href="https://github.com/idlip/d-nix" style="color: #000000; text-decoration: none;"><div class="btn"> <ul>NixOrgMacs: The machine setup</ul> </div></a>
+
+<a href="https://github.com/idlip/QuASeR" style="color: #000000; text-decoration: none;"><div class="btn"> <ul>Proof of concept Denovo genome assembly</ul> </div></a>
+#+end_export
 
 * Posts
 :PROPERTIES:

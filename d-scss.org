@@ -8,6 +8,9 @@
 
 Searching folders are pain, I just tangle everything from here so its easy to navigate and also *Document* for me to understand.
 
+- [ ] Refer https://www.youtube.com/watch?v=j425CIWRfZ8
+  to more hacking with css and work as desired.
+
 * COMMENT Main scss
 Main file which calls every child (lol)
 #+begin_src scss :tangle ./assets/scss/main.scss
