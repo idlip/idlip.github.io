@@ -1,0 +1,21 @@
++++
+title = "If cats disappeared from world"
+author = ["Dilip"]
+date = 2025-04-10T00:00:00+05:30
+tags = ["novel"]
+draft = false
++++
+
+**If Cats Disappeared from the World** is an light novel by Genki Kawamura.
+
+It depicts the life-death situation of a person, who in-return to live a day makes something disappear from the world.
+The novel shows a thought-provoking idea of, "what's life worth it" or how much meaning it carries.
+
+The reviews spoke as sober one, but I did not feel any depressing moment about story. But the lesson and points definitely are reflective on life.
+The major good thing about the book is, English translation and writing style is easy and friendly.
+I would not recommend movie as such, but the gist is shown very well there
+
+The ending was kinda cliffhanger, but did not end as in climax. It suddenly closed off.
+Again I think back, it seemed that the book itself might be the letter he was writing for his father or in some way. But sure ending is confusing.
+
+[**Three days of happiness**]({{< relref "three-days-happiness" >}}) and this one is kinda one of my best reads.
