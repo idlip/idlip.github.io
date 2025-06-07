@@ -3,7 +3,7 @@ title = "Stoicism: Way of life"
 author = ["Dilip"]
 date = 2025-04-06T00:00:00+05:30
 tags = ["philosophy"]
-draft = true
+draft = false
 +++
 
 I've been reading `Stoicism 101 by Erick Cloward` as a beginner. Although internet suggested [stanford philosophy](https://plato.stanford.edu/published.html), book does have a way to communicate which connects readers mind.

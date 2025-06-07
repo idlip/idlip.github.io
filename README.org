@@ -64,3 +64,9 @@ CLOSED: [2023-12-21 Thu 13:12]
 - refer: https://github.com/tonyaldon/one.el
 - Did have some limitations, I then tried *org-publish* (~ox-publish~), was almost convinced but had little too much work to get what I desired.
 - The draft, initial setup is in =voyage= branch
+
+**** TODO Write a post on using revealjs for presentation
+:PROPERTIES:
+:ID:       20250524T223510
+:END:
+- Note I used this for all my ppts
