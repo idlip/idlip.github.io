@@ -92,6 +92,7 @@ publishDir = "public"
     github        = [ "idlip" ]
     linkedin      = [ "dilip-g-29707727a" ]
     reddit        = [ "GolD_Lip" ]
+    telegram      = [ "zororg" ]
 
   [params.social.decentralized]
 
@@ -100,7 +101,7 @@ publishDir = "public"
     [params.social.decentralized.bsky]
       1 = [ "https://bsky.app/profile/idlip.bsky.social", "bluesky" ]
     [params.social.decentralized.mastodon]
-      1 = [ "https://genomic.social/@idlip", "mastodon" ]
+      1 = [ "https://fosstodon.org/@idlip", "mastodon" ]
 
 
 [menu]
