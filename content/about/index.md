@@ -35,7 +35,7 @@ You can also find me at:
 
 ---
 
-Or drop me a good ol' email: [zororg@tilde.green](mailto:zororg@tilde.green)
+Or drop me a good ol' email: [dilip@fossunited.org](mailto:dilip@fossunited.org)
 
 <!-- {{< contact-form >}} -->
 
