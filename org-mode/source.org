@@ -1894,3 +1894,19 @@ This field has so much potential and it just aint achieving maybe due to bad res
 This has left me inner passion to practice and do bioinformatics as an hobby and my passion and interest, cause it can answer a lot of questions, and gaps are so many to fill in.
 This also taught me to get hang of reading research papers, and believe that Papers are the only source of information. Just like how documentations are.
 As per [[id:emacs-msc][previous most]], Emacs and Orgmode helped me a ton in organizing and stay on track with following up on topics.
+** Embarking in Foss United
+:PROPERTIES:
+:EXPORT_FILE_NAME: embark-fossunited
+:EXPORT_DATE: [2025-08-24 Sun]
+:END:
+
+From the previous post, I'm amazed to share that I have started my career in FOSS United Organization ([[https://fossunited.org][FossUnted]]) which focuses on promoting FOSS (Free and Open Source Software) in every day use and every where. Its an NPO, run to conduct events, support students and get this ideology elicited everywhere.
+
+I just joined before 40 days for [[https://fossunited.org/indiafoss/2025][IndiaFoss 2025]], which is now a grinding period with work loads. Lot of focus and work aligned up.
+Initially I feared a bit about taking this responsibility but just few weeks in, I'm happy that I grasped the most parts and got a hang of it. Thank to my CLI, Emacs experience, it hastens up by development workflow.
+
+It has been new learning every day, I'm so excited to be part of it. Everything connects and makes sense to here, somewhere it feels I belong here.
+So far all good, and I'm here.
+-----
+
+/(this post might have updates as days goes on.)/
