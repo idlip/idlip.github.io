@@ -40,8 +40,8 @@ publishDir = "public"
 
   [params.author]
     name         = "Dilip's Log"
-    description  = "Bioinformatics Student using Nix-Org-Macs."
-    email = 'zororg@tilde.green'
+    description  = "Nix-Org-Macs in FOSS"
+    email = 'dilip@fossunited.org'
 
   [params.contact]
 
@@ -88,7 +88,7 @@ publishDir = "public"
     paragraph     = "Please report if this page is missing. Just nudge to zororg@tilde.green"
 
   [params.social.centralized]
-    email         = [ "zororg@tilde.green" ]
+    email         = [ "dilip@fossunited.org" ]
     github        = [ "idlip" ]
     linkedin      = [ "dilip-g-29707727a" ]
     reddit        = [ "GolD_Lip" ]
