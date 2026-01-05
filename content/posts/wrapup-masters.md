@@ -2,6 +2,7 @@
 title = "Wrap up on my Bioinformatics Masters Journey"
 author = ["Dilip"]
 date = 2025-06-28T00:00:00+05:30
+tags = ["masters"]
 draft = false
 +++
 

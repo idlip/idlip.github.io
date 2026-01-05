@@ -2,17 +2,38 @@
 title = "Embarking in Foss United"
 author = ["Dilip"]
 date = 2025-08-24T00:00:00+05:30
+tags = ["work", "foss"]
 draft = false
 +++
+
+<div class="ox-hugo-toc toc">
+
+<div class="heading">Table of Contents</div>
+
+- [<span class="timestamp-wrapper"><span class="timestamp">[2026-01-05 Mon] </span></span> Update](#update)
+
+</div>
+<!--endtoc-->
 
 From the previous post, I'm amazed to share that I have started my career in FOSS United Organization ([FossUnted](https://fossunited.org)) which focuses on promoting FOSS (Free and Open Source Software) in every day use and every where. Its an NPO, run to conduct events, support students and get this ideology elicited everywhere.
 
 I just joined before 40 days for [IndiaFoss 2025](https://fossunited.org/indiafoss/2025), which is now a grinding period with work loads. Lot of focus and work aligned up.
 Initially I feared a bit about taking this responsibility but just few weeks in, I'm happy that I grasped the most parts and got a hang of it. Thank to my CLI, Emacs experience, it hastens up by development workflow.
 
-It has been new learning every day, I'm so excited to be part of it. Everything connects and makes sense to here, somewhere it feels I belong here.
+It has been new learning every day, I'm so excited to be part of it. Everything connects and makes sense to me here, somewhere it feels I belong here.
 So far all good, and I'm here.
 
 ---
 
-_(this post might have updates as days goes on.)_
+
+## <span class="timestamp-wrapper"><span class="timestamp">[2026-01-05 Mon] </span></span> Update {#update}
+
+I've been working as developer and I must say I got the hang of codebase and complete map of the technical foundation. Its so surprising for me that I can think of like programmer and really going deep in this world. Although I must admit that thanks to having some vibes it helps me to code and think more of proper implementation for future maintenance.
+
+Thanks to many resources online the ocean is very vast and I'm loving it to learn something new everyday (as my perseverance goes). I must admit one thing I hate frontend, I hate making pages and I mostly love keeping backend rock solid (yep!)
+One fear I've with frontend is I might be adding complexity in code (vibed) thinking for practical and modern web use case. Before my time most of the pages were static and Vuejs was used for building some complex pages, and here I've started to bake JS script inside pages to add complexity (I'm scared of maintaining in future tbh as things grow).
+
+One things I hate is, even during break or afk I keep getting random thoughts on improving platform/codebase, try that; do that; this way; implement that; etc which irritates me (how to escape?)
+which is quite annoying at this time!
+
+-   _(this post might have updates as days goes on.)_

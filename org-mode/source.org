@@ -1841,7 +1841,7 @@ The wild robot has been an spectacular watch, worthy of Oscar winning movie.
 
 The scenes and dialogues are so relevant to this world, that it depicts a mix of philosophy and reality with touch of AI and LLM models.
 
-** Wrap up on my Bioinformatics Masters Journey
+** Wrap up on my Bioinformatics Masters Journey                    :masters:
 :PROPERTIES:
 :EXPORT_FILE_NAME: wrapup-masters
 :EXPORT_DATE: [2025-06-28 Sat]
@@ -1895,7 +1895,7 @@ This has left me inner passion to practice and do bioinformatics as an hobby and
 This also taught me to get hang of reading research papers, and believe that Papers are the only source of information. Just like how documentations are.
 As per [[id:emacs-msc][previous most]], Emacs and Orgmode helped me a ton in organizing and stay on track with following up on topics.
 
-** Embarking in Foss United
+** Embarking in Foss United                                      :work:foss:
 :PROPERTIES:
 :EXPORT_FILE_NAME: embark-fossunited
 :EXPORT_DATE: [2025-08-24 Sun]
@@ -1906,13 +1906,22 @@ From the previous post, I'm amazed to share that I have started my career in FOS
 I just joined before 40 days for [[https://fossunited.org/indiafoss/2025][IndiaFoss 2025]], which is now a grinding period with work loads. Lot of focus and work aligned up.
 Initially I feared a bit about taking this responsibility but just few weeks in, I'm happy that I grasped the most parts and got a hang of it. Thank to my CLI, Emacs experience, it hastens up by development workflow.
 
-It has been new learning every day, I'm so excited to be part of it. Everything connects and makes sense to here, somewhere it feels I belong here.
+It has been new learning every day, I'm so excited to be part of it. Everything connects and makes sense to me here, somewhere it feels I belong here.
 So far all good, and I'm here.
 -----
 
-/(this post might have updates as days goes on.)/
+*** [2026-01-05 Mon] Update
+I've been working as developer and I must say I got the hang of codebase and complete map of the technical foundation. Its so surprising for me that I can think of like programmer and really going deep in this world. Although I must admit that thanks to having some vibes it helps me to code and think more of proper implementation for future maintenance.
 
-** OBTF as Second Brain with Org mode
+Thanks to many resources online the ocean is very vast and I'm loving it to learn something new everyday (as my perseverance goes). I must admit one thing I hate frontend, I hate making pages and I mostly love keeping backend rock solid (yep!)
+One fear I've with frontend is I might be adding complexity in code (vibed) thinking for practical and modern web use case. Before my time most of the pages were static and Vuejs was used for building some complex pages, and here I've started to bake JS script inside pages to add complexity (I'm scared of maintaining in future tbh as things grow).
+
+One things I hate is, even during break or afk I keep getting random thoughts on improving platform/codebase, try that; do that; this way; implement that; etc which irritates me (how to escape?)
+which is quite annoying at this time!
+
+- /(this post might have updates as days goes on.)/
+
+** OBTF as Second Brain with Org mode                    :orgmode:emacs:pkm:
 :PROPERTIES:
 :EXPORT_FILE_NAME: obtf-org-mode
 :EXPORT_DATE: [2025-09-06 Sat]
@@ -1975,3 +1984,25 @@ This logically acts as an individual file with that tag/category, thus being ato
 
 whatever the system or the tool is, the main takeaways every resource provides is to review the notes and write it for future self. Every capture is to review back and make the fleeting note into and rich information.
 This OBTF with org mode satisfies that needs given that user reviews the notes and visits back to digest it again.
+
+** Revamp the blogs                                               :snippets:
+:PROPERTIES:
+:EXPORT_FILE_NAME: revamp-blog-2026
+:EXPORT_DATE: [2026-01-06 Tue]
+:END:
+
+Hello world, again!
+
+Hopefully with this new year (2026) I wish to do regular blogs and get habit of giving (writing) out more.
+
+I'm a heck fanatic of ASCII text, I prefer text reading over any media. I really want to get on with blog (even crap quality is fine for now). I actually write tech-report for [[https://fossunited.org/blogs/tech-report][FOSSUnited platform]] and to improvise that as well I better do more writing here!
+
+Btw with this new year I bought a domain for myself (https://idlip.in) yay :), been thinking for many days and finally went ahead. Might do zororg.in or dev as well.
+
+The name is mostly derived as my github username, the significance is simply first two letter transposed of my name.
+Dilip (idlip)
+If not for this, maybe I'd have picked "Gol D. Lip" in the veins of OnePiece (Gol D. Roger) {hey there is will of D here}
+
+You can send me email on [[mailto:hi@idlip.in][hi@idlip.in]] (I love emails as well)
+
+/Read more, write more, give more/

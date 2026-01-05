@@ -2,6 +2,7 @@
 title = "OBTF as Second Brain with Org mode"
 author = ["Dilip"]
 date = 2025-09-06T00:00:00+05:30
+tags = ["orgmode", "emacs", "pkm"]
 draft = false
 +++
 
