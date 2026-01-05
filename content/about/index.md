@@ -27,7 +27,7 @@ I also believe in:
 
 > you have to prepare for the worst, to give out your best
 
-Currently, an Post Graduate Student in Bio-informatics.
+Currently, an Developer in [FOSS United](https://fossunited.org/team).
 
 You can also find me at:
 
