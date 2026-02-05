@@ -31,13 +31,12 @@ Currently, an Developer in [FOSS United](https://fossunited.org/team).
 
 You can also find me at:
 
-{{< social >}}
+
 
 ---
 
 Or drop me a good ol' email: [dilip@fossunited.org](mailto:dilip@fossunited.org)
 
-<!-- {{< contact-form >}} -->
 
 ---
 
