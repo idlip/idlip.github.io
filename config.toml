@@ -1,7 +1,7 @@
 # baseURL = "https://idlip.github.io"
 languageCode = "en"
 title = "Dilip's Log"
-theme = "color-world"
+theme = "emacs"
 
 copyright = "Copyright © 2023-2025, Dilip G; All rights reserved."
 
