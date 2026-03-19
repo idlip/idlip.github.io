@@ -50,4 +50,4 @@ I highly recommend bioinformatics to any who wants to pursue or think of it. It 
 This field has so much potential and it just aint achieving maybe due to bad research and bad approach.
 This has left me inner passion to practice and do bioinformatics as an hobby and my passion and interest, cause it can answer a lot of questions, and gaps are so many to fill in.
 This also taught me to get hang of reading research papers, and believe that Papers are the only source of information. Just like how documentations are.
-As per [[id:emacs-msc][previous most]], Emacs and Orgmode helped me a ton in organizing and stay on track with following up on topics.
+As per [[/posts/masters-emacs-orgmode][previous most]], Emacs and Orgmode helped me a ton in organizing and stay on track with following up on topics.

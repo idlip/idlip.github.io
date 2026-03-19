@@ -12,7 +12,7 @@ But I soon came to the conclusion by reading many blogs and reddit discussions t
 
 Thanks to my introduction to emacs and getting deep into rabbit hole, Org mode has been the great tool to handle plain text file as an Organization platform. Just like emacs (OS), Org mode can also be extended to endless limit (I dare say it). If emacs is OS, Org mode is for me Init system (systemd).
 
-You can read more about my note taking journey in [[id:emacs-msc][this post]].
+You can read more about my note taking journey in [[/posts/wrapup-masters][this post]].
 
 This context is also written in favor to post it on r/obtf
 

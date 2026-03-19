@@ -40,7 +40,7 @@ As I bestowed this in practice, I noticed that flow of thoughts and expression o
 
 Managing time is precious and Org-mode help with that, with plans Todo & Schedules. Also, endless customization does not fetch any fruit. Having a cleaning kind of a day every month or twice a year can help on tweaking or fixing the necessary lines over the Org config.
 
-In a recent snippet on [[file:~/d-git/d-site/content/snippets/organize-file.org][Organize File]], I was about falling out on maintaining notes. From that scenario also the lesson learned is that, more than maintaining notes, the actual flow of thought and feeling at right time is most important and beats the best organizer anywhere out there. I mean, the goal of note-taking or writing down should be to transcribe the thoughts and knowledge in a approachable manner.
+In a recent snippet on [[/posts/organize-file][Organize File]], I was about falling out on maintaining notes. From that scenario also the lesson learned is that, more than maintaining notes, the actual flow of thought and feeling at right time is most important and beats the best organizer anywhere out there. I mean, the goal of note-taking or writing down should be to transcribe the thoughts and knowledge in a approachable manner.
 
 * Key Takeaways
 - Org-mode helps in managing and maintaining configuration files.
