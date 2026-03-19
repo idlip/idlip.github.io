@@ -1,7 +1,7 @@
 #+title: Emacs is OP
 #+tags[]: snippets emacs vim
 #+draft: false
-
+#+date: [2023-03-22 Wed]
 
 Before anyone shouts vim, let me ~:q!~
 I was a vimmer for a year, I played and had a good basic config. Even after an year, I didn't grasp the full potential of vim, it was just handy to use =hjkl= to move around.

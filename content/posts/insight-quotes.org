@@ -1,7 +1,7 @@
 #+title: Insightful Quotes
 #+tags[]: snippets quotes
 #+draft: false
-
+#+date: [2023-03-29 Wed]
 
 I will be making few snippets on few quotes which impressed me or made me laugh for the day!
 
@@ -12,7 +12,7 @@ Hope so, it is insightful enough for you also.
 
 + Self quote
 
-  #+begin_quote
+#+begin_quote
  Don't just read, Think - Research and Understand!
 #+end_quote
 

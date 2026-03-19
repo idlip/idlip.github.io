@@ -1,7 +1,7 @@
 #+title: Nix Learning
 #+tags[]: linux nixos
 #+draft: false
-
+#+date: [2023-05-03 Wed]
 
 NixOS is definitely an advanced Linux distro, but it ain't easy to understand overnight or like Archlinux to have easy manual, but it sure has alot on the table. There is whole bunch of families like Nix functional language, Nix package manager... so and on with the prefix "nix".
 

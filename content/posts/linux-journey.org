@@ -1,7 +1,7 @@
 #+title: My Linux Journey
 #+tags[]: linux
 #+draft: false
-
+#+date: [2023-03-10 Fri]
 
 
 *Small info/log on my linux journey and my experience.*

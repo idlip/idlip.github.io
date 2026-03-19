@@ -1,7 +1,7 @@
 #+title: Beyond Ken
 #+tags[]: quotes snippets
 #+draft: false
-
+#+date: [2023-06-02 Fri]
 
 Welcome to some more snippet of Quotes.
 Lately I have been busy, kinda dusting off my table. /Ooof.. procastination!/

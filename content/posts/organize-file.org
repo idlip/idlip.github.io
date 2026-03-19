@@ -1,7 +1,7 @@
 #+title: Organize File
 #+tags[]: snippets orgmode
 #+draft: false
-
+#+date: [2023-12-16 Sat]
 
 From past few days I have been dabbling in the dimension of how to organize files, notes in effective manner. After jumping deep into the rabbit hole, I went on a spree of digesting several blog posts, articles on maintaining files, organizing notes, getting things done, what not, the list goes on.
 

@@ -1,7 +1,7 @@
 #+title: Art of Getting things Done
 #+tags[]: snippets gtd
 #+draft: false
-
+#+date: [2024-02-03 Sat]
 
 * GTD
 The tendency to organize things, and get the workflow in right track is a natural process, and we insist more on that in today's world. The mere idea of finding the "right way", "Best way possible" is a driving opinion for various Internet opinions. People do share what works for them, and they argue.

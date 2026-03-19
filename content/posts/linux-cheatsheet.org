@@ -1,7 +1,7 @@
 #+title: Linux : The Matrix
 #+tags[]: terminal minimal
 #+draft: false
-
+#+date: [2023-04-12 Wed]
 
 There are tons of linux command line cheatsheet or guides.
 

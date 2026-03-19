@@ -1,7 +1,7 @@
 #+title: Journey Begins
 #+tags[]: snippets
 #+draft: false
-
+#+date: [2023-03-21 Tue]
 
 I have almost set my first static website.
 From here my creativity goes public to the world.

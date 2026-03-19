@@ -1,6 +1,7 @@
 #+title: Cognizance
 #+tags[]: snippets quotes
 #+draft: false
+#+date: [2023-04-22 Sat]
 
 Welcome to next snippet of Quotes.
 
