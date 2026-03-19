@@ -1,6 +1,6 @@
 #+title: About
 #+draft: false
-
+#+no_comment: t
 
 #+begin_center
 #+attr_html: :width 200

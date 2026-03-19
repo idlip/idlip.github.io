@@ -1,6 +1,6 @@
 #+title: Now
 #+draft: false
-
+#+no_comment: t
 
 What I'm up to right now — inspired by [[https://nownownow.com][nownownow.com]].
 

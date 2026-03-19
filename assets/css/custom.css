@@ -1,7 +1,7 @@
 /* Fonts | custom built */
 :root {
   --heading-font: 'impress', sans-serif;
-  --body-font:    'code-ace', sans-serif;
+  --sans-font:    'code-ace', sans-serif;
   --code-font:    'code-op', monospace;
 }
 
@@ -27,6 +27,9 @@
 }
 
 body {
+  font-family: var(--code-font);
+}
+article.post-content {
   font-family: var(--code-font);
 }
 .nf {

@@ -1,7 +1,6 @@
 #+title: Projects
 #+draft: false
 
-
 Most of the projects are live on Git repository. Currently I'm maintaining [[https://github.com/fossunited/fossunited][Fossunited platform]] and [[https://forklore.in][Forklore]] site.
 
 [[https://github.com/idlip][GitHub]]
