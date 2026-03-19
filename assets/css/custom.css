@@ -62,8 +62,6 @@ article.post-content {
   /* Modeline */
   --modeline-bg:          #0a0f0a;
   --modeline-fg:          #ffffff;
-  --modeline-bg-inactive: #000000;
-  --modeline-fg-inactive: #b4aeae;
   --modeline-border:      #248f6c;
 
   /* Menu */
