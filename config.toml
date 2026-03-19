@@ -27,6 +27,9 @@ page     = ["HTML"]
 [pagination]
   pagerSize = 7
 
+[markup.goldmark.renderer]
+  unsafe = true
+
 [markup.highlight]
   noClasses = false
 
