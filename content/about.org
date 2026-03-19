@@ -2,9 +2,17 @@
 #+draft: false
 
 
-#+CAPTION: Gol D. Roger laughing in Laugh Tale!
+#+begin_center
 #+attr_html: :width 200
+#+CAPTION: Gol D. Roger laughing in Laugh Tale!
 [[file:/images/op-rog.jpg]]
+#+end_center
+
+-----
+
+I'm Dilip (aka Zororg), I'm from Bangalore and hold Masters in Bioinformatics. I'm a person who just goes with the flow in life.
+
+I'm a "=Know It All=" kinda guy and yet very =Simplistic=. I touch up on every topics, on-going driving _research_, _history_ (to know the roots), _philosophy_ (wonder what's life), _entertainment_ media (anime, manga, novel, kdrama; bliss!), _programming_ (to have fun with numbers) and then engage in small communities.
 
 - A FOSS & Linux Enthusiast, who's willing to learn new unknown (at least for me) knowledge and contribute to the world.
 

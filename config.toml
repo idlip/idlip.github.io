@@ -91,7 +91,7 @@ favicon = "/images/op-roger.jpg"
 [[params.socialLinks]]
   label = "idlip"
   url   = "https://codeberg.org/idlip"
-  icon  = ""
+  icon  = ""
 [[params.socialLinks]]
   label = "Dilip G"
   url   = "https://linkedin.com/in/dilip-g-29707727a"
