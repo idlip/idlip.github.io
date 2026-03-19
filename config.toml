@@ -45,39 +45,39 @@ favicon = "/images/op-roger.jpg"
 # Post listing row icons — checked in priority order, first matching tag wins.
 [[params.tagIcons]]
   tags  = ["snippets"]
-  icon = ""
+  icon = " "
 [[params.tagIcons]]
   tags  = ["nixos", "nix"]
-  icon = ""
+  icon = " "
 [[params.tagIcons]]
   tags  = ["emacs", "gnus"]
-  icon = ""
+  icon = " "
 [[params.tagIcons]]
   tags  = ["orgmode"]
-  icon = ""
+  icon = " "
 [[params.tagIcons]]
   tags  = ["novel"]
-  icon = ""
+  icon = " "
 [[params.tagIcons]]
   tags  = ["onepiece", "anime", "manga"]
-  icon = "󰨈"
+  icon = "󰨈 "
 [[params.tagIcons]]
   tags  = ["linux", "foss"]
-  icon = ""
+  icon = " "
 [[params.tagIcons]]
   tags  = ["rss"]
-  icon = ""
+  icon = " "
 [[params.tagIcons]]
   tags  = ["terminal", "cli", "vim"]
-  icon = ""
+  icon = " "
 [[params.tagIcons]]
   tags  = ["android", "fossdroid"]
-  icon = ""
+  icon = " "
 [[params.tagicons]]
   tags = ["quotes"]
-  icon = "󱀡"
+  icon = "󱀡 "
 [[params.tagIcons]]
-  icon = ""
+  icon = " "
 
 # contact socials
 [[params.socialLinks]]
