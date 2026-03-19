@@ -1,0 +1,18 @@
+#+title: Projects
+#+draft: false
+
+
+Most of the projects are live on Git repository. Currently I'm maintaining [[https://github.com/fossunited/fossunited][Fossunited platform]] and [[https://forklore.in][Forklore]] site.
+
+[[https://github.com/idlip][GitHub]]
+
+- [[https://github.com/idlip/lncrna][lncRNA: Coding potential and Sequence analysis]]
+- [[https://github.com/OncoScan/OralPathNet][OralPathnet: DL model on Oral cancer detection]]
+- [[https://github.com/idlip/alignWrap][alignWrap: R wrapper package to align sequences]]                                                                   
+- [[https://github.com/idlip/haki][Haki: Modern Dark theme for Emacs]]
+- [[https://github.com/idlip/d-bin][Functional shell scripts for Linux]]                                                                                    
+- [[https://github.com/idlip/d-nix][NixOrgMacs: The machine setup]]                                                                                       
+- [[https://github.com/idlip/QuASeR][Proof of concept Denovo genome assembly]]
+
+* Project Ideas
+- Make an frappe based RSS feed reader with shared user subscription for each user list

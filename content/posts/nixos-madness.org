@@ -1,0 +1,19 @@
+#+title: NixOS and its Madness
+#+date: 2024-02-04
+#+tags[]: nixos
+#+draft: false
+
+
+* Need to Update. WIP
+
+Too much going on, need some time to wrap up.
+
+I initially thought to talk about nix and nixos usage thing, but new drama has rose up regarding to sponsorship, governance and maintainers leaving.
+
+So far Aux and Lix has been initiated, apart from nixos governance, using nix as dev environment and its steep learning curve is a hectic.
+
+Someday might add new posts or update this regarding to nixos!
+
+As on [2026-03-19 Thu], I think maybe things got dusted off. Interesting I was reading about a nix user giving Guix a fair try.
+
+- https://nemin.hu/guix-one-month-later.html

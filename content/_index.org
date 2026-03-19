@@ -1,0 +1,15 @@
+#+title: Abstract
+#+draft: false
+#+layout: single
+
+Hi there! Greetings & Salutations, and Warm welcome to you!
+
+This site has few blog posts, driven by passion, written to share and be a helpful content, if not these posts would be inert.
+-----
+Please do check [[./posts/][Posts]] which contains some interesting content I thought to write and share.
+
+To know about me or to contact me, please feel free to reach via [[./about/][About]].
+
+As of [2026-03-19 Thu], I've added an [[/now][Now page]] (inspired by nownownow.com)
+
+You may want to consume this via [[/rss.xml][RSS]] or per tag based [[/tags/emacs/rss.xml][#emacs]]

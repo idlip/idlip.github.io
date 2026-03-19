@@ -1,0 +1,53 @@
+#+title: Wrap up on my Bioinformatics Masters Journey
+#+date: 2025-06-28
+#+tags[]: masters
+#+draft: false
+
+
+June 2025 finally marks the end to my academic journey with completion of my Post-graduation Masters of Science in Bioinformatics.
+
+* Preface
+
+The story of me here starts with the Covid period, when I was introduced with laptop and when I started using Linux, I wanted my Biology related topics to be involved with Computing, Linux and CLI stuffs. That is where magically I learnt about the domain, *Bioinformatics*.
+
+Although one of the teacher had told before to not to choose that in 2019 just because his friend who took was basically working in =excel=. That kinda bombarded me most of the times. Although I took the plunge and could see myself embarked in this field, and slowly as I approached I started to notice how cool this field is.
+It's an booming field, but let me tell you, it's an mature field as well. Starting with Human Genome Project in 1990, the field which was termed as "Big Science" started to rise. Sanger sequencing > NGS > AI ML in Bio.
+
+
+* The voyage
+I really wanted to either get into IISc or IBAB (Bangalore) institutes, since both very much focused on Bioinformatics research and work and had lot of growth. I could get due to the barrier of entrance tests. But I joined another University which offered this course in Bangalore and which syllabus was very up-to-date and shiny (yeah just like the hype train!).
+
+I was introduced with Programming languages R & Python (although I knew Linux, CLI and Git) and there on went on with making this computations on Biological data. My academics were thankfully completely Practical oriented. It was less of an theory, and more of an Hands-on experience mode of learning, running Data analysis on Biological data.
+
+Slowly topics were making sense and started picking pace to meet the higher ends of day-to-day research which seeks driving problems that exists in real world. All fascinating and perfect to know that we have so many gaps to fill in. Healthcare, personalized medicine, research and better medic products and so on was en-visioned in this domain.
+
+Things started booming with AI and ML in biological field as well. Alpha fold made the big news, Google DeepMind, and some more promising event. Recently Alpha Genome made it up to shock the community of whats possible and how quick we can fill in the gaps. But soon there came barriers, in India. heck research did not get much grants nor much research was really moving forward.
+
+Everyone were stuck with traditional RNA-sequencing technology, Analyzing RNA data, Molecular docking and virtual screening, thats all. TBH I realized that most of the Bioinformatics work is basically *predicting a phenomena that it might occur or it might cause*. Yes, this is true. If you don't know, throw me a mail or please read [[https://reddit.com/r/bioinformatics][r/bioinformatics]] you will find lot of people making sense.
+
+Most of the tools are decade old, forget algorithms, even the R packages (Bioconductor) is older are mildly maintained except big ones (tidyverse). The python eco-system is good, day-by-day many Bioconductor packages seem to be efficiently replaced with Python alternatives (eg: SCverse), and since AI/ML it becomes obvious.
+
+*Workflow Management*: This has been kinda a joke TBH. Most of the tasks are carried by custom bash scripts which they run for most of the similar data. Let me break you the truth, they dont reason with data nor make parameter setting effectively. Same bash script pipeline, run for all datasets. Get the results, present it well and highlight finding.
+Snakemake and workflow are really optimized and good, but again its no more better than bash script and yet many people just choose existing pipeline and run, run, run!
+
+Then to my final year project, I did my internship in Computational Genomics Lab in RVCE. It was really a good place and freedom to work on research and explore. I worked on various things, my primary thesis work was on optimizing Denovo genome assembly algorithm (which assembled DNA reads/strings) using Hybrid quantum-classical approach. There were only two work which aimed to tacked this. Although not so successful due to lack of quantum hardware today, it gave proof-of-concept and I just extended a bit to apply for small data.
+Then I also built standalone pipeline tool for Genome variant calling and Metagenome AMR spotter for a researcher there. Then I partially worked on Systems Biology project which was to apply Mathematical modeling for gut health and obesity. All info are in my repo project named =cg-pipelines=
+
+But soon I realized research wasn't my cup of tea, at least in India. They worked on many research papers and so many topics in bioinformatics. Yet, research feels like its all about getting a paper. No real application or action. Then I affirmed that Industry and problem solving is where I'm into.
+
+* Inference
+Bioinformatics is a great domain, holds lot of gaps and needs lot of requirements. This is a promising field that surprise with lot of development and welfare to human. The second largest data produced by field is Bioinformatics, after the giant Astronomy.
+
+Most of these works are only predicting event or enriching data to prove that this - gene, protein, variant, mutation, factor might be responsible for so and so. Yes, that's all. Although nowadays there is more boom with *Metagenomics*, which studies on Microbiota level information and applies more statistics on Bacterial abundance level. Cool enough, but the problem remains same, nobody is really understanding whats running behind the scene or actual code. Most of it is like "Black Box".
+
+* Career Ahead
+This was a hard struck aspect for me. When I started to apply, unfortunately there were not many job opening in Bangalore. Most of it were else, hyd, pune, mumbai, ahmedabad, gurgoan, .. elsewhere all but rarely in bangalore. Although I grinded to apply to most of the companies in bangalore, hardly any clicked or they only offered less. This took a serious toll on me, although I believe I was damn skillful to this field to hasten up higher nobody gave me a chance, at least with good offer.
+
+Finally this is where some magic happened and lucky enough, I got a job in tech field. More on this in next post.
+
+* Final Words
+I highly recommend bioinformatics to any who wants to pursue or think of it. It has a deep research and most of the today's demanding skills align perfectly with the field. r/bioinformatics community has really been helpful and lot of quality discussions, although you will see most of the repeated rants or questions.
+This field has so much potential and it just aint achieving maybe due to bad research and bad approach.
+This has left me inner passion to practice and do bioinformatics as an hobby and my passion and interest, cause it can answer a lot of questions, and gaps are so many to fill in.
+This also taught me to get hang of reading research papers, and believe that Papers are the only source of information. Just like how documentations are.
+As per [[id:emacs-msc][previous most]], Emacs and Orgmode helped me a ton in organizing and stay on track with following up on topics.
