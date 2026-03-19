@@ -1,73 +1,148 @@
+/* Fonts | custom built */
 :root {
---heading-font:  'impress', sans-serif;
---body-font:     'code-ace', sans-serif;
---code-font:     'code-op', monospace;
---font-size:               18px;
-
---h1-color: #6ae4b9;
---h2-color: #bf94fe;
---h3-color: #6ae4b9;
---h4-color: #ffa9bf;
+  --heading-font: 'impress', sans-serif;
+  --body-font:    'code-ace', sans-serif;
+  --code-font:    'code-op', monospace;
 }
 
-@font-face{
-    font-family: 'impress';
-    src: url('../fonts/impress.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
+@font-face {
+  font-family: 'impress';
+  src: url('../fonts/impress.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
 }
 
-@font-face{
-    font-family: 'code-ace';
-    src: url('../fonts/code-ace.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
+@font-face {
+  font-family: 'code-ace';
+  src: url('../fonts/code-ace.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
 }
 
-@font-face{
-    font-family: 'code-op';
-    src: url('../fonts/code-op.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
+@font-face {
+  font-family: 'code-op';
+  src: url('../fonts/code-op.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
   font-family: var(--code-font);
 }
-p a {
-    text-decoration: underline;
+.nf {
+  font-family: 'Symbols Nerd Font Mono', var(--code-font), monospace;
 }
+
+/* modus vivendi with my emacs theme overrides */
+[data-theme="dark"] {
+  /* Backgrounds */
+  --bg-main:     #000000;
+  --bg-dim:      #0a0f0a;
+  --bg-active:   #111c17;
+  --bg-inactive: #1b2a24;
+  --bg-hover:    #111c17;
+  --bg-hl-line:  #142f2b;
+  --bg-region:   #248f6c;
+
+  /* Foregrounds */
+  --fg-main: #ffffff;
+  --fg-dim:  #b4aeae;
+
+  /* Cursor / selection */
+  --cursor:       #5fd7af;
+  --selection-bg: #248f6c;
+
+  /* Borders */
+  --border:     #1b2a24;
+  --border-dim: #0a0f0a;
+
+  /* Modeline */
+  --modeline-bg:          #0a0f0a;
+  --modeline-fg:          #ffffff;
+  --modeline-bg-inactive: #000000;
+  --modeline-fg-inactive: #b4aeae;
+  --modeline-border:      #248f6c;
+
+  /* Menu */
+  --menu-bg:       #0a0f0a;
+  --menu-border:   #1b2a24;
+  --menu-hover-bg: #111c17;
+
+  /* Echo area */
+  --echo-bg: #000000;
+  --echo-fg: #b4aeae;
+
+  /* Code blocks */
+  --code-bg:     #0a0f0a;
+  --code-border: #1b2a24;
+
+  /* Scrollbar */
+  --scrollbar-bg:          #0a0f0a;
+  --scrollbar-thumb:       #248f6c;
+  --scrollbar-thumb-hover: #5fd7af;
+
+  /* Heading colours */
+  --h1-color: #ab82ff;
+  --h2-color: #fab387;
+  --h3-color: #6ae4b9;
+  --h4-color: #ffa9bf;
+}
+
+/* headings */
+h1 { color: var(--h1-color); }
+h2 { color: var(--h2-color); }
+h3 { color: var(--h3-color); }
+h4 { color: var(--h4-color); }
+
+p a {
+  text-decoration: underline;
+}
+
 article :is(h1, h2, h3, h4, h5, h6) {
   font-family: var(--heading-font);
 }
 
-h1:before, h1:after {
-    content: " ⩮ ";
-    color: var(--h1-color);
+.post-title {
+  color: var(--h1-color) !important;
+}
+
+h1::before, h1::after {
+  content: " ⩮ ";
+  color: var(--h1-color);
 }
 
 article h1 {
-    color: var(--h1-color) !important;
-    text-align: center;
+  color: var(--h1-color) !important;
+  text-align: center;
 }
 
-article h2:before {
-    content: "◉ ";
-}
-article h2 {
-    color: var(--h2-color);
+article h2::before { content: "◉ "; }
+article h2         { color: var(--h2-color); }
+
+article h3::before { content: "◈ "; }
+article h3         { color: var(--h3-color); }
+
+article h4::before { content: "✥ "; }
+article h4         { color: var(--h4-color); }
+
+.article-item .post-tags {
+  flex-shrink: 0;
+  font-size: 0.78rem;
+  padding: 0 0.5em;
 }
 
-article h3:before{
-    content: "◈ ";
-}
-article h3 {
-    color: var(--h3-color);
+.article-item .post-tag {
+  color: var(--h3-color);
+  text-decoration: none;
+  white-space: nowrap;
+  opacity: 0.85;
 }
 
-article h4:before{
-    content: "✥ ";
+.article-item .post-tag:hover {
+  color: var(--cursor);
+  opacity: 1;
 }
-article h4 {
-    color: var(--h4-color);
+
+.article-item .post-tag:visited {
+  color: var(--h3-color);
 }
