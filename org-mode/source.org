@@ -28,20 +28,20 @@ To know about me or to contact me, please feel free to reach via [[./about/][Abo
 :END:
 
 #+CAPTION: Gol D. Roger laughing in Laugh Tale!
-#+attr_html: :width 100
+#+attr_html: :width 200
 [[file:/images/op-rog.jpg]]
 
-A FOSS & Linux Enthusiast, who's willing to learn new unknown (at least for me) knowledge and contribute to the world.
+- A FOSS & Linux Enthusiast, who's willing to learn new unknown (at least for me) knowledge and contribute to the world.
 
-True Loyal OnePiece fan.
+- True Loyal OnePiece fan.
 
-Emacs User - Life's Organized.
+- Emacs User - Life's Organized.
 
-I use NixOS. Managing system or development environments, has been a breeze.
+- I use NixOS. Managing system or development environments, has been a breeze.
 
-I consume news/articles/media throught rss feeds. (Internet is bloated)
+- I consume news/articles/media throught rss feeds. (Internet is bloated)
 
-Tinkerer, I explore my areas of interests and research in a deeper level.
+- Tinkerer, I explore my areas of interests and research in a deeper level.
 
  I have a motto like:
 
@@ -55,31 +55,25 @@ Tinkerer, I explore my areas of interests and research in a deeper level.
    you have to prepare for the worst, to give out your best
 #+end_quote
 
-Currently, an Developer in [[https://fossunited.org/team][FOSS United]].
-
-You can also find me at:
-
-#+begin_export html
-{{< social >}}
-#+end_export
+Currently, Software Engineer at [[https://fossunited.org/team][FOSS United]].
 
 -----
+Drop me a good ol' email: [[mailto:hi@idlip.in][hi@idlip.in]] 
 
-Or drop me a good ol' email: [[mailto:dilip@fossunited.org][dilip@fossunited.org]] 
+or find me at:
 
 #+begin_export html
-<!-- {{< contact-form >}} -->
+{{< social-links >}}
 #+end_export
 
-
-   ------
+------
 
 #+begin_center
 /*Time to unlock some Creativity*/
 #+end_center
 
 
-* Search
+* COMMENT Search
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_LAYOUT: search

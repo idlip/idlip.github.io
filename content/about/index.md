@@ -5,21 +5,21 @@ layout = "single"
 draft = false
 +++
 
-{{< figure src="/images/op-rog.jpg" caption="<span class=\"figure-number\">Figure 1: </span>Gol D. Roger laughing in Laugh Tale!" width="100" >}}
+{{< figure src="/images/op-rog.jpg" caption="<span class=\"figure-number\">Figure 1: </span>Gol D. Roger laughing in Laugh Tale!" width="200" >}}
 
-A FOSS &amp; Linux Enthusiast, who's willing to learn new unknown (at least for me) knowledge and contribute to the world.
+-   A FOSS &amp; Linux Enthusiast, who's willing to learn new unknown (at least for me) knowledge and contribute to the world.
 
-True Loyal OnePiece fan.
+-   True Loyal OnePiece fan.
 
-Emacs User - Life's Organized.
+-   Emacs User - Life's Organized.
 
-I use NixOS. Managing system or development environments, has been a breeze.
+-   I use NixOS. Managing system or development environments, has been a breeze.
 
-I consume news/articles/media throught rss feeds. (Internet is bloated)
+-   I consume news/articles/media throught rss feeds. (Internet is bloated)
 
-Tinkerer, I explore my areas of interests and research in a deeper level.
+-   Tinkerer, I explore my areas of interests and research in a deeper level.
 
-I have a motto like:
+    I have a motto like:
 
 > _If you want to understand the whole, Understand its parts_. **[Gestalt Psychology](https://www.verywellmind.com/what-is-gestalt-psychology-2795808)**
 
@@ -27,16 +27,15 @@ I also believe in:
 
 > you have to prepare for the worst, to give out your best
 
-Currently, an Developer in [FOSS United](https://fossunited.org/team).
-
-You can also find me at:
-
-
+Currently, Software Engineer at [FOSS United](https://fossunited.org/team).
 
 ---
 
-Or drop me a good ol' email: [dilip@fossunited.org](mailto:dilip@fossunited.org)
+Drop me a good ol' email: [hi@idlip.in](mailto:hi@idlip.in)
 
+or find me at:
+
+{{< social-links >}}
 
 ---
 
