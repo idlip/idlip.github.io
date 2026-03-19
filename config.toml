@@ -3,10 +3,26 @@ languageCode = "en"
 title = "Dilip's Log"
 theme = "emacs"
 
-copyright = "Copyright © 2023-2025, Dilip G; All rights reserved."
+copyright = "Copyright © 2023-2026, Dilip | Zororg; All rights reserved."
 
 enableEmoji = true
 enableInlineShortcodes = true
+
+[outputFormats]
+[outputFormats.RSS]
+mediatype = "application/rss+xml"
+baseName = "rss"
+
+[outputFormats.Feed]
+mediatype = "application/rss+xml"
+baseName = "feed"
+
+[outputs]
+home     = ["HTML", "RSS", "Feed"]
+section  = ["HTML", "RSS", "Feed"]
+term     = ["HTML", "RSS", "Feed"]
+taxonomy = ["HTML"]
+page     = ["HTML"]
 
 [pagination]
   pagerSize = 7
@@ -14,95 +30,86 @@ enableInlineShortcodes = true
 [markup.highlight]
   noClasses = false
 
-[markup.goldmark.renderer]
-unsafe = true
-
-enableEmoji = true
-enableGitInfo = true
-enableRobotsTXT = true
-canonifyURLs = true
+[taxonomies]
+  tag = "tags"
 
 publishDir = "public"
 
 [params]
+description = "Dilip's Log"
+favicon = "/images/op-roger.jpg"
 
-  description = "Dilip's Log"
+# Post listing row icons — checked in priority order, first matching tag wins.
+[[params.tagIcons]]
+  tags  = ["snippets"]
+  icon = ""
+[[params.tagIcons]]
+  tags  = ["nixos", "nix"]
+  icon = ""
+[[params.tagIcons]]
+  tags  = ["emacs", "gnus"]
+  icon = ""
+[[params.tagIcons]]
+  tags  = ["orgmode"]
+  icon = ""
+[[params.tagIcons]]
+  tags  = ["novel"]
+  icon = ""
+[[params.tagIcons]]
+  tags  = ["onepiece", "anime", "manga"]
+  icon = "󰨈"
+[[params.tagIcons]]
+  tags  = ["linux", "foss"]
+  icon = ""
+[[params.tagIcons]]
+  tags  = ["rss"]
+  icon = ""
+[[params.tagIcons]]
+  tags  = ["terminal", "cli", "vim"]
+  icon = ""
+[[params.tagIcons]]
+  tags  = ["android", "fossdroid"]
+  icon = ""
+[[params.tagicons]]
+  tags = ["quotes"]
+  icon = "󱀡"
+[[params.tagIcons]]
+  icon = ""
 
-  favicon = "/images/op-roger.jpg"
-
-  hasNoscriptNotice = true
-
-  imgPath = "images"
-
-  markupImgClass = ""
-
-  titleSeparator = "|"
-
-  [params.author]
-    name         = "Dilip's Log"
-    description  = "Nix-Org-Macs in FOSS"
-    email = 'dilip@fossunited.org'
-
-  [params.contact]
-
-    autoComplete      = false
-    messageMinLength  = 30
-
-    subject = [ 'Just saying "hi"', "I know what you did last winter", "... Is that a sloth?", "お前はもう死んでいる。" ]
-
-    [params.contact.placeholder]
-      name    = "Foo Bar"
-      email   = "foo_bar@gnu.org"
-      subject = 'Just saying "hi"'
-      message = "Hi there!"
-
-  [params.search]
-    enable = true
-    maxResults = 15
-    minLength = 2
-    maxLength = 42
-
-    placeholder = "Emacs"
-
-  [params.style]
-    isDark = true
-    ignoreSystemSettings = false
-    darkAccent   = "#54ff9f"
-    lightAccent  = "#4f94cd"
-
-    presets = [ "#7fc121", "#51b37c", "#d2b48c", "#fafad2", "#00ff7f", "#ffe4e1", "#e6e6fa", "#00bfff", "#cd8500" ]
-
-    hasIconAsFootnoteReturnLink = true
-
-    socialIsFlex = false
-
-    hideAnchors = true
-
-    useCustomChroma = true
-
-    changeTransition = ".3s ease"
-
-  [params.notFound]
-    title         = "Page not found"
-    description   = "This page was not found."
-    paragraph     = "Please report if this page is missing. Just nudge to zororg@tilde.green"
-
-  [params.social.centralized]
-    email         = [ "dilip@fossunited.org" ]
-    github        = [ "idlip" ]
-    linkedin      = [ "dilip-g-29707727a" ]
-    reddit        = [ "GolD_Lip" ]
-    telegram      = [ "zororg" ]
-
-  [params.social.decentralized]
-
-    [params.social.decentralized.matrix]
-      1 = [ "https://matrix.to/#/zororg:matrix.org", "matrix" ]
-    [params.social.decentralized.bsky]
-      1 = [ "https://bsky.app/profile/idlip.bsky.social", "bluesky" ]
-    [params.social.decentralized.mastodon]
-      1 = [ "https://fosstodon.org/@idlip", "mastodon" ]
-
+# contact socials
+[[params.socialLinks]]
+  label = "hi@idlip.in"
+  url   = "mailto:hi@idlip.in"
+  icon  = ""
+[[params.socialLinks]]
+  label = "idlip"
+  url   = "https://github.com/idlip"
+  icon  = ""
+[[params.socialLinks]]
+  label = "idlip"
+  url   = "https://codeberg.org/idlip"
+  icon  = ""
+[[params.socialLinks]]
+  label = "Dilip G"
+  url   = "https://linkedin.com/in/dilip-g-29707727a"
+  icon  = ""
+[[params.socialLinks]]
+  label = "GolD_Lip"
+  url   = "https://reddit.com/u/GolD_Lip"
+  icon  = ""
+[[params.socialLinks]]
+  label = "zororg"
+  url   = "https://t.me/zororg"
+  icon  = ""
+[[params.socialLinks]]
+  label = "fosstodon.org/@idlip"
+  url   = "https://fosstodon.org/@idlip"
+  icon  = "󰫑"
+  rel   = "me"
+[[params.socialLinks]]
+  label = "matrix.to/#/zororg"
+  url   = "https://matrix.to/#/zororg:matrix.org"
+  icon  = "󰘨"
 
 [menu]
 
@@ -110,25 +117,25 @@ publishDir = "public"
   name = "Home"
   weight = 1
   url = "/"
-
 [[menu.main]]
   name = "Posts"
   weight = 2
   url = "/posts/"
-
 [[menu.main]]
   name = "Projects"
   weight = 3
   url = "/repo/"
-
 [[menu.main]]
   name = "About"
   weight = 4
   url = "/about/"
-
 [[menu.main]]
-  name = " "
+  name = "Now"
   weight = 5
+  url = "/now/"
+[[menu.main]]
+  name = " Feeds"
+  weight = 6
   url = "index.xml"
 
 
