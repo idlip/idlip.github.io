@@ -7,20 +7,28 @@ sitemapExclude = true
 noindex = true
 +++
 
-Most of the projects are live on Git repository.
+<div class="ox-hugo-toc toc">
+
+<div class="heading">Table of Contents</div>
+
+- [Project Ideas](#project-ideas)
+
+</div>
+<!--endtoc-->
+
+Most of the projects are live on Git repository. Currently I'm maintaining [Fossunited platform](https://github.com/fossunited/fossunited) and [Forklore](https://forklore.in) site.
 
 [GitHub](https://github.com/idlip)
 
-<a href="https://github.com/idlip/lncrna" style="color: #000000; text-decoration: none;"><div class="btn"> <ul>lncRNA: Coding potential and Sequence analysis</ul> </div></a>
+-   [lncRNA: Coding potential and Sequence analysis](https://github.com/idlip/lncrna)
+-   [OralPathnet: DL model on Oral cancer detection](https://github.com/OncoScan/OralPathNet)
+-   [alignWrap: R wrapper package to align sequences](https://github.com/idlip/alignWrap)
+-   [Haki: Modern Dark theme for Emacs](https://github.com/idlip/haki)
+-   [Functional shell scripts for Linux](https://github.com/idlip/d-bin)
+-   [NixOrgMacs: The machine setup](https://github.com/idlip/d-nix)
+-   [Proof of concept Denovo genome assembly](https://github.com/idlip/QuASeR)
 
-<a href="https://github.com/OncoScan/OralPathNet" style="color: #000000; text-decoration: none;"><div class="btn"> <ul>OralPathnet: DL model on Oral cancer detection</ul> </div></a>
 
-<a href="https://github.com/idlip/alignWrap" style="color: #000000; text-decoration: none;"><div class="btn"> <ul>alignWrap: R wrapper package to align sequences</ul> </div></a>
+## Project Ideas {#project-ideas}
 
-<a href="https://github.com/idlip/haki" style="color: #000000; text-decoration: none;"><div class="btn"> <ul>Haki: Modern Dark theme for Emacs</ul> </div></a>
-
-<a href="https://github.com/idlip/d-bin" style="color: #000000; text-decoration: none;"><div class="btn"> <ul>Functional shell scripts for Linux</ul> </div></a>
-
-<a href="https://github.com/idlip/d-nix" style="color: #000000; text-decoration: none;"><div class="btn"> <ul>NixOrgMacs: The machine setup</ul> </div></a>
-
-<a href="https://github.com/idlip/QuASeR" style="color: #000000; text-decoration: none;"><div class="btn"> <ul>Proof of concept Denovo genome assembly</ul> </div></a>
+-   Make an frappe based RSS feed reader with shared user subscription for each user list

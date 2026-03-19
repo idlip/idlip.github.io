@@ -82,6 +82,48 @@ or find me at:
 :END:
 
 
+* Now
+:PROPERTIES:
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_LAYOUT: single
+:EXPORT_HUGO_SECTION: now
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :sitemapExclude true :noindex true
+:END:
+
+What I'm up to right now — inspired by [[https://nownownow.com][nownownow.com]].
+
+Last updated: March 2026 · from Bangalore, India
+
+---
+
+** Work
+
+Software Engineer at [[https://fossunited.org/team][FOSSUnited]], maintaining platform and developing it.
+
+** Currently learning / exploring
+
+- Software engineering principles
+- Frappe best practices
+- How to get work done with Vanilla JS
+- Contributing to OSS
+
+** Reading / consuming
+
+- Consuming mostly through RSS — news, blogs, tech articles
+- Currently re-reading Stoic philosophy
+- Kick-started diving into world of Light Novels (Apothecary Diaries, Ascendance of Bookworm)
+
+** Side projects
+
+- This blog — writing more regularly
+- Dotfiles maintenance (NixOS + Emacs config)
+- Configuring [[https://github.com/glide-browser/glide][Glide browser]]
+
+---
+
+This is a [[https://nownownow.com/about][Now Page]]. Update it as life changes.
+
+
 * Projects
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
@@ -90,25 +132,20 @@ or find me at:
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :sitemapExclude true :noindex true
 :END:
 
-Most of the projects are live on Git repository.
+Most of the projects are live on Git repository. Currently I'm maintaining [[https://github.com/fossunited/fossunited][Fossunited platform]] and [[https://forklore.in][Forklore]] site.
 
 [[https://github.com/idlip][GitHub]]
 
-#+begin_export html
-<a href="https://github.com/idlip/lncrna" style="color: #000000; text-decoration: none;"><div class="btn"> <ul>lncRNA: Coding potential and Sequence analysis</ul> </div></a>
+- [[https://github.com/idlip/lncrna][lncRNA: Coding potential and Sequence analysis]]
+- [[https://github.com/OncoScan/OralPathNet][OralPathnet: DL model on Oral cancer detection]]
+- [[https://github.com/idlip/alignWrap][alignWrap: R wrapper package to align sequences]]                                                                   
+- [[https://github.com/idlip/haki][Haki: Modern Dark theme for Emacs]]
+- [[https://github.com/idlip/d-bin][Functional shell scripts for Linux]]                                                                                    
+- [[https://github.com/idlip/d-nix][NixOrgMacs: The machine setup]]                                                                                       
+- [[https://github.com/idlip/QuASeR][Proof of concept Denovo genome assembly]]
 
-<a href="https://github.com/OncoScan/OralPathNet" style="color: #000000; text-decoration: none;"><div class="btn"> <ul>OralPathnet: DL model on Oral cancer detection</ul> </div></a>
-
-<a href="https://github.com/idlip/alignWrap" style="color: #000000; text-decoration: none;"><div class="btn"> <ul>alignWrap: R wrapper package to align sequences</ul> </div></a>
-
-<a href="https://github.com/idlip/haki" style="color: #000000; text-decoration: none;"><div class="btn"> <ul>Haki: Modern Dark theme for Emacs</ul> </div></a>
-
-<a href="https://github.com/idlip/d-bin" style="color: #000000; text-decoration: none;"><div class="btn"> <ul>Functional shell scripts for Linux</ul> </div></a>
-
-<a href="https://github.com/idlip/d-nix" style="color: #000000; text-decoration: none;"><div class="btn"> <ul>NixOrgMacs: The machine setup</ul> </div></a>
-
-<a href="https://github.com/idlip/QuASeR" style="color: #000000; text-decoration: none;"><div class="btn"> <ul>Proof of concept Denovo genome assembly</ul> </div></a>
-#+end_export
+** Project Ideas
+- Make an frappe based RSS feed reader with shared user subscription for each user list
 
 * Posts
 :PROPERTIES:

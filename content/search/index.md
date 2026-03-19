@@ -1,7 +1,7 @@
 +++
-title = "Search"
+title = "Now"
 author = ["Dilip"]
-layout = "search"
+layout = "single"
 draft = false
 sitemapExclude = true
 noindex = true
