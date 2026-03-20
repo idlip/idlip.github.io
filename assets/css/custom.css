@@ -135,7 +135,6 @@ article h4         { color: var(--h4-color); }
 .article-item .post-tag {
   color: var(--h3-color);
   text-decoration: none;
-  white-space: nowrap;
   opacity: 0.85;
 }
 

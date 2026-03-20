@@ -6,7 +6,7 @@ What I'm up to right now — inspired by [[https://nownownow.com][nownownow.com]
 
 Last updated: March 2026 · from Bangalore, India
 
----
+------
 
 * Work
 
@@ -31,6 +31,6 @@ Software Engineer at [[https://fossunited.org/team][FOSSUnited]], maintaining pl
 - Dotfiles maintenance (NixOS + Emacs config)
 - Configuring [[https://github.com/glide-browser/glide][Glide browser]]
 
----
+------
 
 This is a [[https://nownownow.com/about][Now Page]]. Update it as life changes.
