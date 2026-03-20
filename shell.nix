@@ -2,7 +2,9 @@ with import <nixpkgs> {};
 pkgs.mkShell {
 
   buildInputs = with pkgs; [
-    hugo pagefind harper vale
+    # pagefind
+    hugo harper vale
+    # go-org
   ];
 
   shellHook = ''

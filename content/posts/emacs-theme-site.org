@@ -13,7 +13,7 @@ Right at this time, magically the [[https://www.reddit.com/r/emacs/comments/1qtv
 Enough of history, today I added some improvements to this theme in my fork and hopefully I'll be doing more blogs here with as much information I can spread.
 I've been enjoying reading Light novels - Apothecary Diaries and Ascendance of Bookworm, and skimming hacker news and blog posts from [[https://www.feedbase.org/][feedbase]], hence its time to give back and share as well.
 
-----
+------
 
 #+begin_center
 /Its not always of what you can consume, can be what you give as well./
