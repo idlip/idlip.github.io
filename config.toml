@@ -17,10 +17,14 @@ baseName = "rss"
 mediatype = "application/rss+xml"
 baseName = "feed"
 
+[outputFormats.Index]
+mediatype = "application/rss+xml"
+baseName = "index"
+
 [outputs]
-home     = ["HTML", "RSS", "Feed"]
-section  = ["HTML", "RSS", "Feed"]
-term     = ["HTML", "RSS", "Feed"]
+home     = ["HTML", "RSS", "Feed", "Index"]
+section  = ["HTML", "RSS", "Feed", "Index"]
+term     = ["HTML", "RSS", "Feed", "Index"]
 taxonomy = ["HTML"]
 page     = ["HTML"]
 
