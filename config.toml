@@ -45,6 +45,8 @@ publishDir = "public"
 [params]
 description = "Dilip's Log"
 favicon = "/images/op-roger.jpg"
+authorName  = "Dilip | Zororg"
+authorEmail = "hi@idlip.in"
 
 # Post listing row icons — checked in priority order, first matching tag wins.
 [[params.tagIcons]]
