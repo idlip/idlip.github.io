@@ -95,6 +95,8 @@ h2 { color: var(--h2-color); }
 h3 { color: var(--h3-color); }
 h4 { color: var(--h4-color); }
 
+.craftering, .craftering a { color: #c1ffff;}
+
 p a {
   text-decoration: underline;
 }
