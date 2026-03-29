@@ -44,6 +44,46 @@ publishDir = "public"
 
 [params]
 description = "Dilip's Log"
+
+# Color schemes shown in View menu (name must match data-scheme in schemes.css)
+# First entry = default (no data-scheme = Modus)
+[[params.colorSchemes]]
+  name  = "haki"
+  label = "Haki"
+[[params.colorSchemes]]
+  name  = ""
+  label = "Modus"
+[[params.colorSchemes]]
+  name  = "dracula"
+  label = "Dracula"
+[[params.colorSchemes]]
+  name  = "gruvbox"
+  label = "Gruvbox"
+[[params.colorSchemes]]
+  name  = "nord"
+  label = "Nord"
+[[params.colorSchemes]]
+  name  = "solarized"
+  label = "Solarized"
+[[params.colorSchemes]]
+  name  = "tokyo-night"
+  label = "Tokyo Night"
+[[params.colorSchemes]]
+  name  = "catppuccin-mocha"
+  label = "Catppuccin Mocha"
+[[params.colorSchemes]]
+  name  = "catppuccin-latte"
+  label = "Catppuccin Latte"
+[[params.colorSchemes]]
+  name  = "one-dark"
+  label = "One Dark"
+[[params.colorSchemes]]
+  name  = "rose-pine"
+  label = "Rosé Pine"
+[[params.colorSchemes]]
+  name  = "kanagawa"
+  label = "Kanagawa"
+
 favicon = "/images/op-roger.jpg"
 authorName  = "Dilip | Zororg"
 authorEmail = "hi@idlip.in"
@@ -97,7 +137,7 @@ authorEmail = "hi@idlip.in"
 [[params.socialLinks]]
   label = "idlip"
   url   = "https://codeberg.org/idlip"
-  icon  = ""
+  icon  = ""
 [[params.socialLinks]]
   label = "Dilip G"
   url   = "https://linkedin.com/in/dilip-g-29707727a"
@@ -111,12 +151,12 @@ authorEmail = "hi@idlip.in"
   url   = "https://t.me/zororg"
   icon  = ""
 [[params.socialLinks]]
-  label = "fosstodon.org/@idlip"
+  label = "@idlip"
   url   = "https://fosstodon.org/@idlip"
   icon  = "󰫑"
   rel   = "me"
 [[params.socialLinks]]
-  label = "matrix.to/#/zororg"
+  label = "zororg"
   url   = "https://matrix.to/#/zororg:matrix.org"
   icon  = "󰘨"
 

@@ -10,6 +10,7 @@
   src: url('../fonts/impress.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -17,6 +18,7 @@
   src: url('../fonts/code-ace.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -24,6 +26,7 @@
   src: url('../fonts/code-op.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 body {
@@ -34,59 +37,6 @@ article.post-content {
 }
 .nf {
   font-family: 'Symbols Nerd Font Mono', var(--code-font), monospace;
-}
-
-/* modus vivendi with my emacs theme overrides */
-[data-theme="dark"] {
-  /* Backgrounds */
-  --bg-main:     #000000;
-  --bg-dim:      #0a0f0a;
-  --bg-active:   #111c17;
-  --bg-inactive: #1b2a24;
-  --bg-hover:    #111c17;
-  --bg-hl-line:  #142f2b;
-  --bg-region:   #248f6c;
-
-  /* Foregrounds */
-  --fg-main: #ffffff;
-  --fg-dim:  #b4aeae;
-
-  /* Cursor / selection */
-  --cursor:       #5fd7af;
-  --selection-bg: #248f6c;
-
-  /* Borders */
-  --border:     #1b2a24;
-  --border-dim: #0a0f0a;
-
-  /* Modeline */
-  --modeline-bg:          #0a0f0a;
-  --modeline-fg:          #ffffff;
-  --modeline-border:      #248f6c;
-
-  /* Menu */
-  --menu-bg:       #0a0f0a;
-  --menu-border:   #1b2a24;
-  --menu-hover-bg: #111c17;
-
-  /* Echo area */
-  --echo-bg: #000000;
-  --echo-fg: #b4aeae;
-
-  /* Code blocks */
-  --code-bg:     #0a0f0a;
-  --code-border: #1b2a24;
-
-  /* Scrollbar */
-  --scrollbar-bg:          #0a0f0a;
-  --scrollbar-thumb:       #248f6c;
-  --scrollbar-thumb-hover: #5fd7af;
-
-  /* Heading colours */
-  --h1-color: #ab82ff;
-  --h2-color: #fab387;
-  --h3-color: #6ae4b9;
-  --h4-color: #ffa9bf;
 }
 
 /* headings */
