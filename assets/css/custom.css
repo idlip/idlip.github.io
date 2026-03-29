@@ -29,10 +29,11 @@
   font-display: swap;
 }
 
-body {
-  font-family: var(--code-font);
+body, article.post-content {
+  font-family: var(--body-font-family);
 }
-article.post-content {
+/* In mixed/sans modes, keep code blocks monospace */
+pre, code, kbd, samp, .highlight {
   font-family: var(--code-font);
 }
 .nf {
