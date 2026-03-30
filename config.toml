@@ -8,6 +8,9 @@ copyright = "Copyright © 2023-2026, Dilip | Zororg; All rights reserved."
 enableEmoji = true
 enableInlineShortcodes = true
 
+# Ignore non-data files in the tinted-theming schemes submodule
+ignoreFiles = ["data/schemes/LICENSE", "data/schemes/.+\\.md$", "data/schemes/scripts"]
+
 [outputFormats]
 [outputFormats.RSS]
 mediatype = "application/rss+xml"
@@ -119,6 +122,12 @@ description = "Dilip's Log"
   bg     = "#1f1f28"
   fg     = "#dcd7ba"
   accent = "#7aa89f"
+[[params.colorSchemes]]
+  name   = "ayu"
+  label  = "Ayu"
+  bg     = "#0b0e14"
+  fg     = "#5c6166"
+  accent     = "#a37acc"
 
 favicon = "/images/op-roger.jpg"
 authorName  = "Dilip | Zororg"
@@ -165,36 +174,36 @@ authorEmail = "hi@idlip.in"
 [[params.socialLinks]]
   label = "hi@idlip.in"
   url   = "mailto:hi@idlip.in"
-  icon  = ""
+  icon  = " "
 [[params.socialLinks]]
   label = "idlip"
   url   = "https://github.com/idlip"
-  icon  = ""
+  icon  = " "
 [[params.socialLinks]]
   label = "idlip"
   url   = "https://codeberg.org/idlip"
-  icon  = ""
+  icon  = " "
 [[params.socialLinks]]
   label = "Dilip G"
   url   = "https://linkedin.com/in/dilip-g-29707727a"
-  icon  = ""
+  icon  = " "
 [[params.socialLinks]]
   label = "GolD_Lip"
   url   = "https://reddit.com/u/GolD_Lip"
-  icon  = ""
+  icon  = " "
 [[params.socialLinks]]
   label = "zororg"
   url   = "https://t.me/zororg"
-  icon  = ""
+  icon  = " "
 [[params.socialLinks]]
   label = "@idlip"
   url   = "https://fosstodon.org/@idlip"
-  icon  = "󰫑"
+  icon  = "󰫑 "
   rel   = "me"
 [[params.socialLinks]]
   label = "zororg"
   url   = "https://matrix.to/#/zororg:matrix.org"
-  icon  = "󰘨"
+  icon  = "󰘨 "
 
 [menu]
 

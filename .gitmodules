@@ -7,3 +7,7 @@
 [submodule "themes/emacs"]
 	path = themes/emacs
 	url = https://github.com/idlip/hugo-emacs-theme
+[submodule "data/schemes"]
+	path = data/schemes
+	url = https://github.com/tinted-theming/schemes
+	branch = spec-0.11
