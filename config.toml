@@ -254,3 +254,26 @@ authorEmail = "hi@idlip.in"
     languageName = "English"
     languageCode = "en-us"
     weight = 1
+
+[caches]
+  [caches.assets]
+    dir = ':resourceDir/_gen'
+    maxAge = -1
+  [caches.getresource]
+    dir = ':cacheDir/:project'
+    maxAge = -1
+  [caches.images]
+    dir = ':resourceDir/_gen'
+    maxAge = -1
+  [caches.misc]
+    dir = ':cacheDir/:project'
+    maxAge = -1
+  [caches.modulegitinfo]
+    dir = ':cacheDir/modules'
+    maxAge = '24h'
+  [caches.modulequeries]
+    dir = ':cacheDir/modules'
+    maxAge = '24h'
+  [caches.modules]
+    dir = ':cacheDir/modules'
+    maxAge = -1
