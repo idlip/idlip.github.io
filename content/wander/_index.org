@@ -1,0 +1,45 @@
+#+title: Wander My Small Web
+#+wanderconsoles: https://susam.net/wander/::OG Creator Wander|https://susam.github.io/wcn/::Aggregate All Wander Console Network
+
+The web is vast, but the part worth reading is small. These are the sites I return to personal blog pages, long-form writing, and people building things with care. Mostly consumed and followed by [[/posts/rss-web][RSS feeds]].
+
+Wander through them. You might find something worth keeping. (All are minimal lightweight websites)
+
+Inspired and made with: [[https://codeberg.org/susam/wander][Wander by Susam]]
+
+- [[https://idlip.in/][My Site]] :: My personal corner of the web
+- [[https://susam.net/][Susam Pal]] :: Computing, mathematics, writing
+- [[https://planet.emacslife.com/][Planet Emacs]] :: The church of Emacs
+- [[https://www.monadicsheep.org/][MonadicSheep]] :: Bunch of Elisp enjoyers
+- [[https://tusharhero.codeberg.page/][Tusharhero]] :: An emacs friend & a Crafter
+- [[https://www.rahuljuliato.com/][Rahul Juliato]] :: Emacs solo-er and contributor
+- [[https://aryak.me/][Arya Kiran]] :: The self-host person (project segfault)
+- [[https://www.karl-voit.at/][Karl Voit]] :: Posts on personal information management
+- [[https://lobste.rs/][Lobste.rs ]] :: More wandering
+- [[https://irreal.org/blog/][Irreal]] :: Emacs everyday posts
+- [[https://ploum.net/index_en.html][Ploum.net]] :: Essays on software freedom
+- [[https://protesilaos.com/][AKA Prot]] :: Philosophy, hut, emacs
+- [[https://www.youtube.com/@TsodingDaily/videos][Tsoding daily ]] :: Recreational programming
+- [[https://piechowski.io/post/git-commands-before-reading-code/][Git commands before code]] :: Post on show cool Unix-Git tricks
+- [[https://boringmoney.in/][Boring Money]] :: Financial thoughts
+- [[https://www.owlposting.com/][Owl posting]] :: Essays on Bio & Business
+- [[https://timharek.no/][Tim Harek ]] :: Blogger who inspired blogging+reading
+- [[https://lawsofsoftwareengineering.com/][Laws of SDE]] :: Principles that stand strong in SDE
+- [[https://addyosmani.com/blog/21-lessons/][21 Lessons - 14 YOE]] :: From SDE in Google
+- [[https://www.artmann.co/articles/30-years-of-br-tags][30 years of (br) tags]] :: Evolution of Web in 30 years
+- [[https://blainsmith.com/essays/humanities-in-the-machine/][Humanities in the Machine]] :: How philosophy evolved Tech
+- [[https://lr0.org/blog/p/crocker/][Crocker's rule]] :: Allow people to be Direct to you
+- [[https://www.zolkos.com/2025/12/03/vanilla-css-is-all-you-need][Vanilla CSS is all you need]] :: Dive on some advanced CSS practices
+- [[https://www.alicemaz.com/writing/program.html][Thinking about programming]] :: Bigger picture on programming
+- [[https://nrennie.rbind.io/blog/][Nicola rennie]] :: Posts about R packages (ggplot2 universe)
+- [[https://yannesposito.com/][Yann esposito]] :: Blogs on haskell, emacs, orgmode
+- [[https://jvns.ca/][Julia Evans ]] :: Amazing blogger on vast tech topcis
+- [[https://yihui.org/en/][Yihui Xie]] :: R lang, Latex and Typst
+- [[https://endtimes.dev/][Endtimes]] :: Posts on minimal web
+- [[https://www.benkuhn.net/][Ben Kuhn]] :: General, life, teaching
+- [[https://stephango.com/][Stephango]] :: Obsidian CEO, short blogs
+- [[https://ntietz.com/blog/][Ntietz]] :: General, tech, life
+- [[https://brodrigues.co/][Brodrigues]] :: R packages, r-Nix, Data Science
+- [[https://thecreativeindependent.com/][Creative Independent]] :: Literature and Book authors
+
+/(this page might have updates as days goes on.)/  

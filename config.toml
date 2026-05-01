@@ -7,11 +7,22 @@ copyright = "Copyright © 2023-2026, Dilip | Zororg; All rights reserved."
 
 enableEmoji = true
 enableInlineShortcodes = true
+staticDir = ["static"]
 
 # Ignore non-data files in the tinted-theming schemes submodule
 ignoreFiles = ["data/schemes/LICENSE", "data/schemes/.+\\.md$", "data/schemes/scripts"]
 
+[mediaTypes]
+[mediaTypes."application/javascript"]
+suffixes = ["js"]
+
 [outputFormats]
+[outputFormats.WanderJS]
+mediaType = "application/javascript"
+baseName = "wander"
+isPlainText = true
+notAlternative = true
+
 [outputFormats.RSS]
 mediatype = "application/rss+xml"
 baseName = "rss"
@@ -231,6 +242,11 @@ authorEmail = "hi@idlip.in"
   name = " Feeds"
   weight = 6
   url = "index.xml"
+
+[[menu.main]]
+  name = "Wander"
+  weight = 7
+  url = "/wander/"
 
 
 [languages]
