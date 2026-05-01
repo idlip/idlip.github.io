@@ -1,8 +1,7 @@
 name: Build and deploy
 on:
   push:
-    branches:
-      - ["den-den-mushi"]
+    branches: ["den-den-mushi"]
   workflow_dispatch:
 permissions:
   contents: read
