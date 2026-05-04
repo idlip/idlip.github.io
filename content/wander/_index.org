@@ -19,7 +19,7 @@ Inspired and made with: [[https://codeberg.org/susam/wander][Wander by Susam]]
 - [[https://irreal.org/blog/][Irreal]] :: Emacs everyday posts
 - [[https://ploum.net/index_en.html][Ploum.net]] :: Essays on software freedom
 - [[https://protesilaos.com/][AKA Prot]] :: Philosophy, hut, emacs
-- [[https://www.youtube.com/@TsodingDaily/videos][Tsoding daily ]] :: Recreational programming
+- [[https://tsoding.github.io/][Tsoding daily ]] :: Recreational programming
 - [[https://piechowski.io/post/git-commands-before-reading-code/][Git commands before code]] :: Post on show cool Unix-Git tricks
 - [[https://boringmoney.in/][Boring Money]] :: Financial thoughts
 - [[https://www.owlposting.com/][Owl posting]] :: Essays on Bio & Business
@@ -41,5 +41,9 @@ Inspired and made with: [[https://codeberg.org/susam/wander][Wander by Susam]]
 - [[https://ntietz.com/blog/][Ntietz]] :: General, tech, life
 - [[https://brodrigues.co/][Brodrigues]] :: R packages, r-Nix, Data Science
 - [[https://thecreativeindependent.com/][Creative Independent]] :: Literature and Book authors
+- [[https://arne.me/blog/we-need-more-zero-config-tools][Zero config tool]] :: Post on Zero config tools
+- [[https://www.phimulambda.org/][PhiMuLambda]] :: Divya ranjan (emacs-reader author)
+- [[https://karthinks.com/][Karthinks]] :: Emacs+math proficient
+- [[https://craftering.systemcrafters.net/][Craftering]] :: web-ring of system crafters community
 
 /(this page might have updates as days goes on.)/  

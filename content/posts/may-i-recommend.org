@@ -1,0 +1,64 @@
+#+title: May I Recommend EWM
+#+date: 2026-05-04
+#+tags[]: emacs ewm wayland
+#+draft: false
+
+- This post is written for Emacs carnival of May 2026. If you're new to this site, FYI I go by
+  =Zororg= in emacs chat/universe.
+
+Emacs along with being a text editor, is a [[https://karthinks.com/software/batteries-included-with-emacs/][battery included software]] that does more things and
+architecturally well designed (thus no rewrite last strong). Emacs has good (in-fact powerful)
+window management, everything as buffer system, self documenting, extensible (upto human brain,
+maybe DNA?) and every user's Personal development environment.
+
+If you've been a proficient emacs user, you had eventually thought of using emacs to replace tools as
+well, coming down to only requiring [Emacs, Browser and terminal] in an OS of your choice. This has
+been many users experience, phrasing as "Emacs for everything" and eventually it being the OS
+itself.
+
+Even as I was dealing with this experience, I really wanted an Emacs Window Manager, I had used EXWM
+in X11 way back and was not fully convinced on it (this was before minad took over maintaining
+[[https://github.com/emacs-exwm/][emacs-exwm]]). We really needed it for wayland side, although there was a proposal and some work
+initiated in [[https://emacsconf.org/2022/talks/wayland/][2022 via emacs conf talk]], there was no progress. Out of the blue the day came where
+[[https://codeberg.org/ezemtsov][ezemtsov]] had posted on [[https://redlib.catsarch.com/r/emacs/comments/1rbyoui/introducing_ewm_a_new_generation_wayland_window/][r/emacs introducing EWM]] (use reddit domain if redlib does not work). Its niri inspired WM, and uses smithay library and works similarly.
+
+After it was announced there seems to be another brain-coded emacs window manager using [[https://isaacfreund.com/blog/river-window-management/][new river
+protocol]] (v4) called [[https://codeberg.org/tazjin/reka][reka]]. I tried to compile but was discouraged as reka did not seem featureful and ewm already satisfied me a bit.
+
+Although its pretty minimal it does not ship with every feature niri has. Eventually I made the
+switch and boy-o-boy it worked well and was pretty stable. I've been daily driving EWM without much
+issues (although I've opened some issues for enhancements), but basic functionality works, and more
+than all, its Emacsy!
+
+Emacs already has =next-buffer= - ~previous-buffer~ and ~tab-next~ - ~tab-previous~ for tabs (workspaces in EWM) to navigate quick. Although =consult-buffer= is way more quicker. After using ewm I discovered consult has =consult-preview-excluded-buffers=, and thus I just append all side window buffer to exlude preview, but preview can be so helpful with apps to quickly scan if you've more.
+
+#+begin_center
+#+caption: Fig: EWM setup with Noctalia shell while writing this blog post. Left is org mode capture buffer, top right is glide browser showing EWM repo and bottom right is foot terminal running hugo server.
+[[/images/ewm-desktop.png]]
+#+end_center
+
+I was using [[https://github.com/vicinaehq/vicinae/][vicinae]] (raycast in linux) launcher as well, but since most of it can be done in emacs
+itself, I replaced launching apps/scripts in emacs itself by using =call-process= or =start-process=,
+
+You might be interested in [[https://github.com/idlip/d-nix/blob/gol-d/d-setup.org#ewm-config][reading my EWM config]] to get more idea. Scroll down to see all functions,
+I grab firefox history via =sqlite-select= and show in completing-read to insert a link (Emacsy).
+
+Thanks to emacs window management, every apps (browser, terminal) can be managed as Emacs buffer
+itself. All I see is emacs frame, and I work in Emacs as its my WM itself now. Now my whole session can be even more customized (embrace Elisp), Emacs (EWM) is DIY Desktop Environment or WM or simply just Emacs itself (what is emacs now?).
+I no longer quit/leave emacs, if I'm leaving that means I'm shutting down my machine down ;-)
+
+** May I also Recommend Glide browser for emacs keymappings
+
+Glide browser came to [[https://lobste.rs/s/lm3isi/glide_extensible_keyboard_focused_web][lobste.rs news]] and showcased as firefox-fork being keyboard centric, and I was badly looking for qutebrowser enhancements with addons. And I made the switch and config was pretty easy.
+
+Glide supports various firefox API and in browser many Web API can be used in config itself. I've
+remapped all keybindings to Emacs style and have extended glide with some qutebrowser & nyxt
+features to make it completely productive & efficient browsing experience.
+
+Yes, I can do =M-x=, =C-x C-s= to make it work as I wanted. Swap =C-c= to =M-w= (yes possible).
+
+Here's the [[https://github.com/glide-browser/glide/discussions/25][discussion thread I raised for Emacs bindings]].
+
+------
+
+/This post might see update as I think of extending./
