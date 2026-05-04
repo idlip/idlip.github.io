@@ -1,9 +1,3 @@
-[submodule "themes/color-world"]
-	path = themes/color-world
-	url = git@github.com:idlip/hugo-theme-color-your-world.git
-[submodule "themes/mana"]
-	path = themes/mana
-	url = https://github.com/Livour/hugo-mana-theme.git
 [submodule "themes/emacs"]
 	path = themes/emacs
 	url = https://github.com/idlip/hugo-emacs-theme
