@@ -1,0 +1,146 @@
+# baseURL: "https://idlip.github.io"
+languageCode: en
+title: "Dilip's Log"
+theme: emacs
+
+copyright: "Copyright © 2023-2026, Dilip | Zororg; All rights reserved."
+
+enableEmoji: true
+enableInlineShortcodes: true
+staticDir: [static, static-local]
+
+ignoreFiles:
+  - data/schemes/LICENSE
+  - 'data/schemes/.+\.md$'
+  - data/schemes/scripts
+
+mediaTypes:
+  application/javascript:
+    suffixes: [js]
+
+outputFormats:
+  WanderJS:
+    mediaType: application/javascript
+    baseName: wander
+    isPlainText: true
+    notAlternative: true
+  RSS:
+    mediatype: application/rss+xml
+    baseName: rss
+  Feed:
+    mediatype: application/rss+xml
+    baseName: feed
+  Index:
+    mediatype: application/rss+xml
+    baseName: index
+  SVG:
+    mediaType: image/svg+xml
+    baseName: og
+    isPlainText: true
+    notAlternative: true
+
+outputs:
+  home:    [HTML, RSS, Feed, Index, SVG]
+  section: [HTML, RSS, Feed, Index]
+  term:    [HTML, RSS, Feed, Index]
+  taxonomy: [HTML]
+  page:    [HTML]
+
+pagination:
+  pagerSize: 7
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+
+taxonomies:
+  tag: tags
+
+publishDir: public
+
+params:
+  description: "Dilip's Log"
+  images: [/og.svg]
+
+  colorSchemes:
+    - { name: haki,             label: "Haki",             bg: "#000000", fg: "#ffffff", accent: "#5fd7af" }
+    - { name: "",               label: "Modus",            bg: "#000000", fg: "#ffffff", accent: "#2fafff" }
+    - { name: dracula,          label: "Dracula",          bg: "#282a36", fg: "#f8f8f2", accent: "#bd93f9" }
+    - { name: gruvbox,          label: "Gruvbox",          bg: "#282828", fg: "#ebdbb2", accent: "#b8bb26" }
+    - { name: nord,             label: "Nord",             bg: "#2e3440", fg: "#eceff4", accent: "#88c0d0" }
+    - { name: solarized,        label: "Solarized",        bg: "#002b36", fg: "#839496", accent: "#268bd2" }
+    - { name: tokyo-night,      label: "Tokyo Night",      bg: "#1a1b26", fg: "#c0caf5", accent: "#7aa2f7" }
+    - { name: catppuccin-mocha, label: "Catppuccin Mocha", bg: "#1e1e2e", fg: "#cdd6f4", accent: "#cba6f7" }
+    - { name: catppuccin-latte, label: "Catppuccin Latte", bg: "#eff1f5", fg: "#4c4f69", accent: "#8839ef" }
+    - { name: one-dark,         label: "One Dark",         bg: "#282c34", fg: "#abb2bf", accent: "#61afef" }
+    - { name: rose-pine,        label: "Rosé Pine",        bg: "#191724", fg: "#e0def4", accent: "#c4a7e7" }
+    - { name: kanagawa,         label: "Kanagawa",         bg: "#1f1f28", fg: "#dcd7ba", accent: "#7aa89f" }
+    - { name: ayu,              label: "Ayu",              bg: "#0b0e14", fg: "#5c6166", accent: "#a37acc" }
+
+  # flat map — templates: index site.Params.tagicons (tag | lower)
+  tagIcons:
+    snippets:  " "
+    nixos:     " "
+    nix:       " "
+    emacs:     " "
+    gnus:      " "
+    orgmode:   " "
+    novel:     " "
+    onepiece:  "󰨈 "
+    anime:     "󰨈 "
+    manga:     "󰨈 "
+    linux:     " "
+    foss:      " "
+    rss:       " "
+    terminal:  " "
+    cli:       " "
+    vim:       " "
+    android:   " "
+    fossdroid: " "
+    quotes:    "󱀡 "
+    bioinformatics: " "
+    python:    " "
+    r:         "󰟔"
+    _default:  " "
+
+  favicon: /images/op-roger.jpg
+  authorName: "Dilip | Zororg"
+  authorEmail: hi@idlip.in
+
+  socialLinks:
+    - { label: "hi@idlip.in",  url: "mailto:hi@idlip.in",                          icon: " "  }
+    - { label: "idlip",        url: "https://github.com/idlip",                     icon: " "  }
+    - { label: "idlip",        url: "https://codeberg.org/idlip",                   icon: " "  }
+    - { label: "Dilip G",      url: "https://linkedin.com/in/dilip-g-29707727a",    icon: " "  }
+    - { label: "GolD_Lip",     url: "https://reddit.com/u/GolD_Lip",               icon: " "  }
+    - { label: "zororg",       url: "https://t.me/zororg",                          icon: " "  }
+    - { label: "@idlip",       url: "https://fosstodon.org/@idlip",                 icon: "󰫑 ", rel: me }
+    - { label: "zororg",       url: "https://matrix.to/#/zororg:matrix.org",        icon: "󰘨 " }
+
+menu:
+  main:
+    - { name: Home,      weight: 1, url: / }
+    - { name: Posts,     weight: 2, url: /posts/ }
+    - { name: Projects,  weight: 3, url: /repo/ }
+    - { name: About,     weight: 4, url: /about/ }
+    - { name: Now,       weight: 5, url: /now/ }
+    - { name: " Feeds", weight: 6, url: index.xml }
+    - { name: Wander,    weight: 7, url: /wander/ }
+
+languages:
+  en:
+    languageName: English
+    languageCode: en-us
+    weight: 1
+
+caches:
+  assets:        { dir: ":resourceDir/_gen",  maxAge: -1  }
+  getresource:   { dir: ":cacheDir/:project", maxAge: -1  }
+  images:        { dir: ":resourceDir/_gen",  maxAge: -1  }
+  misc:          { dir: ":cacheDir/:project", maxAge: -1  }
+  modulegitinfo: { dir: ":cacheDir/modules",  maxAge: 24h }
+  modulequeries: { dir: ":cacheDir/modules",  maxAge: 24h }
+  modules:       { dir: ":cacheDir/modules",  maxAge: -1  }

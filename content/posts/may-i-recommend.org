@@ -27,7 +27,7 @@ protocol]] (v4) called [[https://codeberg.org/tazjin/reka][reka]]. I tried to co
 
 Although its pretty minimal it does not ship with every feature niri has. Eventually I made the
 switch and boy-o-boy it worked well and was pretty stable. I've been daily driving EWM without much
-issues (although I've opened some issues for enhancements), but basic functionality works, and more
+issues (although [[https://codeberg.org/ezemtsov/ewm/issues?q=&type=all&sort=relevance&state=all&labels=&milestone=0&project=0&assignee=0&poster=184629&archived=false][I've opened some issues]] for enhancements), but basic functionality works, and more
 than all, its Emacsy!
 
 Emacs already has =next-buffer= - ~previous-buffer~ and ~tab-next~ - ~tab-previous~ for tabs (workspaces in EWM) to navigate quick. Although =consult-buffer= is way more quicker. After using ewm I discovered consult has =consult-preview-excluded-buffers=, and thus I just append all side window buffer to exlude preview, but preview can be so helpful with apps to quickly scan if you've more.
