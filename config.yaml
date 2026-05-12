@@ -1,4 +1,4 @@
-# baseURL: "https://idlip.github.io"
+baseURL: "https://idlip.in"
 languageCode: en
 title: "Dilip's Log"
 theme: emacs
@@ -123,12 +123,12 @@ params:
 menu:
   main:
     - { name: Home,      weight: 1, url: / }
-    - { name: Posts,     weight: 2, url: /posts/ }
-    - { name: Projects,  weight: 3, url: /repo/ }
     - { name: About,     weight: 4, url: /about/ }
-    - { name: Now,       weight: 5, url: /now/ }
+    - { name: Blog Posts,     weight: 2, url: /posts/ }
+    - { name: Projects & Tools,  weight: 3, url: /repo/ }
+    - { name: Now Now Now,       weight: 5, url: /now/ }
     - { name: " Feeds", weight: 6, url: index.xml }
-    - { name: Wander,    weight: 7, url: /wander/ }
+    - { name: Wander My Small Web,    weight: 7, url: /wander/ }
 
 languages:
   en:
