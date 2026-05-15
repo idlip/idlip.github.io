@@ -58,6 +58,7 @@ markup:
 
 taxonomies:
   tag: tags
+  ref: refs
 
 publishDir: public
 
@@ -81,6 +82,7 @@ params:
     - { name: ayu,              label: "Ayu",              bg: "#0b0e14", fg: "#5c6166", accent: "#a37acc" }
 
   # flat map — templates: index site.Params.tagicons (tag | lower)
+  # applies for all listing pages (/posts, /wander, /projects, /media ,++...)
   tagIcons:
     snippets:  " "
     nixos:     " "
@@ -129,6 +131,8 @@ menu:
     - { name: Now Now Now,       weight: 5, url: /now/ }
     - { name: " Feeds", weight: 6, url: index.xml }
     - { name: Wander My Small Web,    weight: 7, url: /wander/ }
+    - { name: Media,                  weight: 8, url: /media/ }
+    - { name: Quotes,                 weight: 9, url: /quotes/ }
 
 languages:
   en:
