@@ -1,0 +1,24 @@
+#+title: Media
+#+layout: topic-list
+#+chip_color: base0E
+
+Things I like watching, reading, and remembering.
+
+* Talks & Conferences
+- [[https://youtu.be/6avJHaC3C2U][The Art of Code - Dylan Beattie]] :: Programming with Music, unleashes artistic skills | year:
+  2020 | conf: NDC London | by: Dylan Beattie
+- [[https://youtu.be/FKTxC9pl-WM][Making Badass Developers - Kathy Sierra]] :: Explaing cognitive load on programmers | conf:
+  FluentConf | by: Kathy Sierra
+
+* Books & Novels
+- [[https://web.mit.edu/6.001/6.037/sicp.pdf][Structure & Interpretation of Computer Programs (SICP)]] :: OG programming book on abstracts | by: Harold Abelson and Gerald Jay Sussman
+
+* Movies
+- [[https://www.imdb.com/title/tt0088763/][Back to the future]] :: | Just amazing comedy & fun in time travelling | year: 1985
+
+* Anime
+- [[https://myanimelist.net/anime/21/One_Piece][One Piece]] :: The greatest adventure in manga/anime | year: 1999 | ep: ongoing | by: G-Oda
+
+* YouTube
+- [[https://www.youtube.com/@tsoding][Tsoding Daily]] :: Recreational programming, live | channel: tsoding
+- [[https://www.youtube.com/@ThePrimeagen][ThePrimeagen]] :: Vim, performance, opinions | channel: theprimeagen
