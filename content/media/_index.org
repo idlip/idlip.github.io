@@ -14,7 +14,7 @@ Things I like watching, reading, and remembering.
 - [[https://web.mit.edu/6.001/6.037/sicp.pdf][Structure & Interpretation of Computer Programs (SICP)]] :: OG programming book on abstracts | by: Harold Abelson and Gerald Jay Sussman
 
 * Movies
-- [[https://www.imdb.com/title/tt0088763/][Back to the future]] :: | Just amazing comedy & fun in time travelling | year: 1985
+- [[https://www.imdb.com/title/tt0088763/][Back to the future]] :: Just amazing comedy & fun in time-traveling | year: 1985
 
 * Anime
 - [[https://myanimelist.net/anime/21/One_Piece][One Piece]] :: The greatest adventure in manga/anime | year: 1999 | ep: ongoing | by: G-Oda

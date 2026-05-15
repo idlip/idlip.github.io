@@ -14,5 +14,7 @@ To know about me or to contact me, please feel free to reach via [[./about/][Abo
 - As of [2026-03-19 Thu], I've added an [[/now][Now page]] (inspired by nownownow.com)
 - As on [2026-05-01 Fri], added a [[/wander][Wander page]] (inspired by https://codeberg.org/susam/wander)
 - As on [2026-05-12 Tue], added a page to list [[/projects][Interesting projects and tools]] I use.
+- As on [2026-05-15 Fri], added list of [[/media][Media I like]], watch and highly recommend.
+- As on [2026-05-16 Sat], added a [[/quotes][Quotes & thoughts]] page for useful memo.
 
 You may want to consume this via [[/rss.xml][RSS]] or per tag based [[/tags/emacs/rss.xml][#emacs]]

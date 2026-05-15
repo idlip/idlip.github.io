@@ -1,0 +1,26 @@
+#+title: Quotes
+#+layout: topic-list
+#+chip_color: base0A
+#+buffer_name: *quotes*
+
+Words that stayed.
+
+/Most of them do not have links so they fallback to this page itself/
+
+* Life & Philosophy
+- [[https://en.wikipedia.org/wiki/Marcus_Aurelius][Marcus Aurelius]] :: The impediment to action advances action. What stands in the way becomes the way. | year: 161 | work: Meditations
+- [[https://en.wikipedia.org/wiki/Seneca_the_Younger][Seneca]] :: Omnia aliena sunt, tempus tantum nostrum est. (Everything is alien to us, only time is ours.) | work: Letters to Lucilius
+- [[.][Dorothy Parker]] :: The cure for boredom is curiosity. There is no cure for curiosity.
+- [[.][Tom Brokaw]] :: It's easy to make a buck. It's a lot tougher to make a difference."
+- [[.][Wayne Dyer]] :: If you believe it will work out, you’ll see opportunities. If you believe it won’t, you will see obstacles.
+- [[.][Herm Albright]] :: A positive attitude may not solve all your problems, but it will annoy enough people to make it worth the effort.
+- [[.][Gustave Flaubert]] :: The art of writing is the art of discovering what you believe.
+- [[.][Samuel Butlet]] :: Let us be grateful to the mirror for revealing to us our appearance only.
+
+* Software & Craft
+- [[https://en.wikipedia.org/wiki/Edsger_W._Dijkstra][Dijkstra]] :: Simplicity is a great virtue but it requires hard work to achieve it and education to appreciate it. And to make matters worse, complexity sells better.
+- [[https://en.wikipedia.org/wiki/Rob_Pike][Rob Pike]] :: A little copying is better than a little dependency. | work: Go Proverbs
+
+* Self
+- [[/about/][Self]] :: Write code you'd be comfortable reading at 3am during an incident.
+- [[.][Self]] :: Prepare for the worst to give out the best!

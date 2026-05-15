@@ -42,8 +42,7 @@ Lies are like children. If you don't nurture them, they'll never be useful later
 + Ralph W. Sockman
 
   #+begin_quote
-The test of courage comes when we are in the minority. The test of tolerance comes when we are in
- the majority.
+The test of courage comes when we are in the minority. The test of tolerance comes when we are in the majority.
   #+end_quote
 
 + Ethel Waters
@@ -68,8 +67,7 @@ Live your life for you not for anyone else. Don’t let the fear of being judged
 + Wayne Dyer
 
   #+begin_quote
-If you believe it will work out, you’ll see opportunities. If you believe it won’t, you will see
- obstacles.
+If you believe it will work out, you’ll see opportunities. If you believe it won’t, you will see obstacles.
 #+end_quote
 
 + Anime
