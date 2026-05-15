@@ -2,6 +2,7 @@
 #+date: 2026-05-04
 #+tags[]: emacs ewm wayland
 #+draft: false
+#+refs[]: ewm
 
 - This post is written for Emacs carnival of May 2026. If you're new to this site, FYI I go by
   =Zororg= in emacs chat/universe.

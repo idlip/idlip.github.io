@@ -1,5 +1,11 @@
 #+title: Wander My Small Web
+#+layout: topic-list
 #+wanderconsoles: https://susam.net/wander/::OG Creator Wander|https://susam.github.io/wcn/::Aggregate All Wander Console Network
+#+sort: name
+#+show_console: true
+#+list_label: ↝ Known Sites
+#+chip_color: base09
+#+buffer_name: *wander*
 
 The web is vast, but the part worth reading is small. These are the sites I return to personal blog pages, long-form writing, and people building things with care. Mostly consumed and followed by [[/posts/rss-web][RSS feeds]].
 

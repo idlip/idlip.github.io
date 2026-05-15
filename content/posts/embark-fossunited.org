@@ -1,7 +1,8 @@
 #+title: Embarking in Foss United
 #+date: 2025-08-24
-#+tags[]: work foss
+#+tags[]: work foss fossunited
 #+draft: false
+#+refs[]: fossunited
 
 
 From the previous post, I'm amazed to share that I have started my career in FOSS United Organization ([[https://fossunited.org][FossUnted]]) which focuses on promoting FOSS (Free and Open Source Software) in every day use and every where. Its an NPO, run to conduct events, support students and get this ideology elicited everywhere.

@@ -1,5 +1,7 @@
 #+title: Projects
+#+layout: topic-list
 #+draft: false
+#+chip_color: base0B
 
 Projects I build, maintain, tools I use, and interesting things worth checking out.
 
@@ -15,7 +17,7 @@ Projects I build, maintain, tools I use, and interesting things worth checking o
 - [[https://github.com/idlip/alignWrap][alignWrap]] :: R wrapper package for sequence alignment tools | tags: bioinformatics,r
 - [[https://github.com/idlip/QuASeR][QuASeR]] :: Proof-of-concept de novo genome assembler | tags: bioinformatics,python
 
-- [[https://github.com/fossunited/fossunited][FossUnited Platform]] :: Frappe based platform that I maintain as my day job | tags: frappe,work
+- [[https://github.com/fossunited/fossunited][FossUnited Platform]] :: Frappe based platform that I maintain as my day job | tags: frappe,work | refs: fossunited
 
 * Interesting Projects
 - [[https://codeberg.org/GramEditor/gram/][Gram Editor]] :: A zed-forked editor with no AI | web: [[https://gram-editor.com]]
@@ -29,4 +31,4 @@ Projects I build, maintain, tools I use, and interesting things worth checking o
 - [[https://github.com/junegunn/fzf][fzf]] :: General-purpose command-line fuzzy finder | tags: cli,tui
 - [[https://github.com/vicinaehq/vicinae/][Vicinae]] :: Raycast OSS launcher for Linux | tags: launcher | web: https://www.vicinae.com/
 - [[https://github.com/noctalia-dev/noctalia-shell/][Noctalia Shell]] :: Quickshell to make WM an DE | web: [[https://docs.noctalia.dev/v4/][website]]
-- [[https://codeberg.org/ezemtsov/ewm][EWM]] :: Emacs wayland Manager
+- [[https://codeberg.org/ezemtsov/ewm][EWM]] :: Emacs wayland Manager | refs: ewm
