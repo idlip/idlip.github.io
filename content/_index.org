@@ -6,7 +6,9 @@
 Hi there! Greetings & Salutations, and Warm welcome to you!
 
 This site has few blog posts, driven by passion, written to share and be a helpful content, if not these posts would be inert.
+
 -----
+
 Please do check [[./posts/][Posts]] which contains some interesting content I thought to write and share.
 
 To know about me or to contact me, please feel free to reach via [[./about/][About]].
@@ -16,5 +18,7 @@ To know about me or to contact me, please feel free to reach via [[./about/][Abo
 - As on [2026-05-12 Tue], added a page to list [[/projects][Interesting projects and tools]] I use.
 - As on [2026-05-15 Fri], added list of [[/media][Media I like]], watch and highly recommend.
 - As on [2026-05-16 Sat], added a [[/quotes][Quotes & thoughts]] page for useful memo.
+
+-----
 
 You may want to consume this via [[/rss.xml][RSS]] or per tag based [[/tags/emacs/rss.xml][#emacs]]
