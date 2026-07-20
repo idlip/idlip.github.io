@@ -1,0 +1,93 @@
+#+title: I've Consumed Enough
+#+date: 2026-07-20
+#+tags[]: webring gtd pkm 
+#+draft: false
+
+#+begin_quote
+I've had enough and Consumed enough these days.
+#+end_quote
+
+From past days (...months actually) I've binged alot media and consumed so many free contents (just
+because they're free?). Movies, TV shows, Kdrama, Light Novels, Blog posts, Reviews
+(Movie/Books/Product), Comments on Reddit, Doom scrolling forum threads, Internet research and ... I
+think I've just had enough. In the name of *"Know it all person"*, I've just consumed and spent so
+much time on being *Internet Nerd* or *Digital Consumer monster*.
+
+Usually every time that we spend has some purpose, and yes I also had purpose to consume each bits.
+But at the end of the day, I finally want some answers, thoughts, moment of realization or insights
+that I'd carry.
+
+Honest truth, Nothing really answered me, and only thing that kept back firing me was "Regret" on
+trying to do stuff by consuming them. I think I had well researched on things before, but still all
+I was procrastinate and go on consuming streak just so I don't miss on on-going things.
+
+Eventually I realized that I only trying to kill time by pushing it ahead or trying to get motivated
+by external resources (again be it all media/content I mentioned). Sooner thankfully I finally
+realized that I only needed space and a moment to mindfully think whats actually needed and what
+I've been doing. You know, that moment or flow state of being self-conscious and understand whats
+surrounding you.
+
+Majority of this related to me trying to perfect some PKM (Personal Knowledge Management) system and
+trying to write more blog posts. I tried [[/posts/revamp-blog-2026][revamping the blog]] so I'd be posting and writing more here.
+
+Recently things have changed for good, thanks for me seeing the other side of ocean. Rather
+than looking at the book, I started looking at critics and review of things in negative side. Then
+it all clicked of whats wrong with current thoughts of people and media, golden tag I realized was
+that everyone is selling some or the other things. And people who buy well, proclaim it well, and
+only when you look at critic or product value we realize its not what it looks like.
+
+One moment that clicked when I was reading on PKM was that not many successful people claim those
+fancy terms in practice, only people who are sold will advertise them. PKM or note taking has never
+been about a system, it was always about writing, thinking and processing, just that. They all just
+write than complicate or find a system. System comes when need exist, I don't think any practitioner
+has need for those fancy systems at all.
+
+Another moment that clicked was when I stumbled across [[https://lobste.rs/s/69mche/what_is_your_favorite_blog_read_recently][Lobste.rs Favorite Blogs]] discussion today. It
+showed how diverse poeple write posts and what they seek to communicate by them. Again realized
+here, most of them just write without boasting anything about organization or providing self-host to
+others. They'll just write to get it done, they don't validate with system to work for them.
+I Imagine they all achieve the *Flow State* while writing content and publishing, that is their
+formula for having it as favorite blogs. That flow state really dictates how quality they give out
+their posts.
+
+Later this evening I stumbled on [[https://fosstodon.org/@abnv@fantastic.earth][Abhinav tushar]] on mastodon and saw that he is part of [[https://blr.indiewebclub.org/][Bangalore
+Indie web club]]. Did not know it existed at all, If not I'd have definitely made way to attend them
+as much as possible.
+
+There is one things common from all people in that club, =Weekly Posts=, they all write weekly post on
+their own blog site. How the heck they write them all without missing or procrastinating?
+I thinking they all just start to write and get it done. Even as of writing this post I'm amazed at
+how everyone writes their every week. Even quality bloggers do only every month for one good post,
+and they all just write good enough.
+
+I soon want to join their webring so it reminds me to write more so I get engaged in the club more.
+But I'll first try to attend in-person meetup and start getting disciplined myself to write more and
+then officially becomes the keeper.
+
+Books are very verbose and beat around the bush (just because text is free). All books (from
+reviews) are better off an Article post, or One page or 21 lesson or 30 tips in summary. All books
+do is give out various examples to make readers self-validate the method and convey acceptance. Only
+when I look at critics part I realize the other way round.
+And Only thing book can give readers is to take a space/moment of time to reflect, think and process
+the information in concrete and pragmatic way. I believe =One page a day= only clicks for eliciting an idea or giving space for thoughts and processing.
+
+Even I've not updated my blog site at all, stopped mid during adding media content in pages
+([[/projects][Projects]], [[/media][Media]] and [[/wander][Wander]]). I should start updating them since I read various gems from again
+recent consumption race.
+
+1. [[https://brennan.day/what-have-note-taking-pkms-accomplished-really/][Brennan's take on PKM]] - Great site to read and writes alot
+2. [[https://blr.indiewebclub.org/][BLR Indie Web Club]] - All posts + People blog page (so many writers)
+3. [[https://dotat.at/@/][Dotat's two Decades of blogs]] - Good overview of how things changed and what remained constant
+   trouble.
+4. ...and there are more.
+
+-----
+*** TLDR
+
+- For anyone who couldn't grasp this post, What I wanted to say was that, I've wasted too much consuming media and resources all over Internet.
+- I've lately realized that I should start writing more or process information than being mindless consumer.
+- This time I'll finally put an end to mindless consumption and keep this post as reminder to do
+  daily journal and write blog posts as much as possible.
+- I do not know who reads, so all I can do I hope to at-least do writing spree.
+
+
