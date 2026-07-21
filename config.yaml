@@ -41,10 +41,10 @@ outputFormats:
 
 outputs:
   home:    [HTML, RSS, Feed, Index, SVG]
-  section: [HTML, RSS, Feed, Index]
+  section: [HTML, RSS, Feed, Index, SVG]   # SVG = section OG image source
   term:    [HTML, RSS, Feed, Index]
   taxonomy: [HTML]
-  page:    [HTML]
+  page:    [HTML, SVG]   # SVG = per-post OG image source (rasterized by `just og`)
 
 pagination:
   pagerSize: 7
@@ -64,7 +64,7 @@ publishDir: public
 
 params:
   description: "Dilip's Log"
-  images: [/og.svg]
+  images: [/og/home.png]
 
   colorSchemes:
     - { name: haki,             label: "Haki",             bg: "#000000", fg: "#ffffff", accent: "#5fd7af" }
@@ -109,6 +109,9 @@ params:
     _default:  " "
 
   favicon: /images/op-roger.jpg
+  # Font family for the per-post OG image (themes/emacs/layouts/_default/single.svg).
+  # Must be a family name fontconfig/rsvg-convert can resolve (an installed TTF/OTF, not a woff2).
+  ogFont: Code D OnePiece
   authorName: "Dilip | Zororg"
   authorEmail: hi@idlip.in
 
