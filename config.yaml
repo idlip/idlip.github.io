@@ -66,20 +66,36 @@ params:
   description: "Dilip's Log"
   images: [/og/home.png]
 
+  # Preset palettes. `dark`/`light` reference base16 yaml keys in
+  # data/schemes/base16/; Hugo generates the [data-scheme] CSS + menu swatch
+  # from them at build (see partials/scheme-css.html), so colors stay authentic.
+  # haki + Modus have no yaml (personal / theme default) -> hand-written block +
+  # explicit swatch (bg/fg/accent). Omit `light` for dark-only schemes.
   colorSchemes:
     - { name: haki,             label: "Haki",             bg: "#000000", fg: "#ffffff", accent: "#5fd7af" }
     - { name: "",               label: "Modus",            bg: "#000000", fg: "#ffffff", accent: "#2fafff" }
-    - { name: dracula,          label: "Dracula",          bg: "#282a36", fg: "#f8f8f2", accent: "#bd93f9" }
-    - { name: gruvbox,          label: "Gruvbox",          bg: "#282828", fg: "#ebdbb2", accent: "#b8bb26" }
-    - { name: nord,             label: "Nord",             bg: "#2e3440", fg: "#eceff4", accent: "#88c0d0" }
-    - { name: solarized,        label: "Solarized",        bg: "#002b36", fg: "#839496", accent: "#268bd2" }
-    - { name: tokyo-night,      label: "Tokyo Night",      bg: "#1a1b26", fg: "#c0caf5", accent: "#7aa2f7" }
-    - { name: catppuccin-mocha, label: "Catppuccin Mocha", bg: "#1e1e2e", fg: "#cdd6f4", accent: "#cba6f7" }
-    - { name: catppuccin-latte, label: "Catppuccin Latte", bg: "#eff1f5", fg: "#4c4f69", accent: "#8839ef" }
-    - { name: one-dark,         label: "One Dark",         bg: "#282c34", fg: "#abb2bf", accent: "#61afef" }
-    - { name: rose-pine,        label: "Rosé Pine",        bg: "#191724", fg: "#e0def4", accent: "#c4a7e7" }
-    - { name: kanagawa,         label: "Kanagawa",         bg: "#1f1f28", fg: "#dcd7ba", accent: "#7aa89f" }
-    - { name: ayu,              label: "Ayu",              bg: "#0b0e14", fg: "#5c6166", accent: "#a37acc" }
+    - { name: dracula,          label: "Dracula",          dark: dracula }
+    - { name: gruvbox,          label: "Gruvbox",          dark: gruvbox-dark-medium,  light: gruvbox-light-medium }
+    - { name: tokyo-night,      label: "Tokyo Night",      dark: tokyo-night-dark,     light: tokyo-night-light }
+    - { name: catppuccin-mocha, label: "Catppuccin Mocha", dark: catppuccin-mocha,     light: catppuccin-latte }
+    - { name: one-dark,         label: "One Dark",         dark: onedark,              light: one-light }
+    - { name: rose-pine,        label: "Rosé Pine",        dark: rose-pine,            light: rose-pine-dawn }
+    - { name: kanagawa,         label: "Kanagawa",         dark: kanagawa }
+    - { name: ayu,              label: "Ayu",              dark: ayu-dark,             light: ayu-light }
+    - { name: everforest,       label: "Everforest",       dark: everforest-dark-hard }
+    - { name: oxocarbon,        label: "Oxocarbon",        dark: oxocarbon-dark,       light: oxocarbon-light }
+    - { name: monokai,          label: "Monokai",          dark: monokai }
+    - { name: github-dark,      label: "GitHub Dark",      dark: github-dark,          light: github }
+
+  # Command-palette item-type icons (Nerd Font glyphs). Swap freely; the JS
+  # falls back to these same defaults if a key is missing.
+  paletteIcons:
+    nav:     "󰘍 "
+    command: "󰘳 "
+    post:    " "
+    tag:     " "
+    scheme:  " "
+    help:    "󰘥 "
 
   # flat map — templates: index site.Params.tagicons (tag | lower)
   # applies for all listing pages (/posts, /wander, /projects, /media ,++...)

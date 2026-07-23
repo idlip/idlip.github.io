@@ -48,7 +48,7 @@ Drop me a good ol' email: [[mailto:hi@idlip.in][hi@idlip.in]]
 or find me at:
 
 #+begin_export html
-{{< social-links >}}
+{{< social-links layout="grid" >}}
 #+end_export
 
 ------

@@ -1,24 +1,74 @@
 #+title: Abstract
 #+draft: false
-#+layout: single
 #+no_comment: t
 
-Hi there! Greetings & Salutations, and Warm welcome to you!
+Hi there! Greetings & salutations, and a warm welcome.
 
-This site has few blog posts, driven by passion, written to share and be a helpful content, if not these posts would be inert.
+This site holds a few blog posts, driven by passion and written to share. Poke
+around: everything here works by keyboard, and the colors change on every visit.
 
------
+Latest post: {{< latest >}}
 
-Please do check [[./posts/][Posts]] which contains some interesting content I thought to write and share.
+* Recently added
 
-To know about me or to contact me, please feel free to reach via [[./about/][About]].
+- A [[/now/][Now]] page (inspired by https://nownownow.com).
+- A [[/wander/][Wander]] page (inspired by [[https://codeberg.org/susam/wander][susam/wander]]).
+- A list of [[/repo/][interesting projects and tools]] I use.
+- A list of [[/media/][media]] I like and recommend.
+- A [[/quotes/][quotes & thoughts]] page for useful memos.
 
-- As of [2026-03-19 Thu], I've added an [[/now][Now page]] (inspired by nownownow.com)
-- As on [2026-05-01 Fri], added a [[/wander][Wander page]] (inspired by https://codeberg.org/susam/wander)
-- As on [2026-05-12 Tue], added a page to list [[/projects][Interesting projects and tools]] I use.
-- As on [2026-05-15 Fri], added list of [[/media][Media I like]], watch and highly recommend.
-- As on [2026-05-16 Sat], added a [[/quotes][Quotes & thoughts]] page for useful memo.
+* Try it
 
------
+The command palette is the fastest way around: search posts, run any command, or
+preview all 305 color themes. Open it with =x=, =Ctrl-P=, =Ctrl-K=, or =Alt-x=
+(Emacs =M-x=). It is the same idea as a universal search/launcher, telescope, or fuzzy
+finder. The buttons below run these features right here:
 
-You may want to consume this via [[/rss.xml][RSS]] or per tag based [[/tags/emacs/rss.xml][#emacs]]
+#+begin_export html
+<div class="tag-cloud" role="group" aria-label="Try the theme features">
+  <button type="button" class="tag-cloud-btn" data-action="open-palette">Command palette</button>
+  <button type="button" class="tag-cloud-btn" data-action="toggle-theme">Dark / light</button>
+  <button type="button" class="tag-cloud-btn" data-action="cycle-font">Cycle font</button>
+  <button type="button" class="tag-cloud-btn" data-action="cycle-width">Cycle width</button>
+  <button type="button" class="tag-cloud-btn" data-action="browse-schemes">305 themes</button>
+  <button type="button" class="tag-cloud-btn" data-action="fix-scheme">Pin scheme</button>
+  <button type="button" class="tag-cloud-btn" data-action="show-help">All shortcuts</button>
+</div>
+#+end_export
+
+* Explore
+
+| Page             | What it is                | Key |
+|------------------+---------------------------+-----|
+| [[/posts/][Blog Posts]]       | the main blog             | =g p= |
+| [[/wander/][Wander]]           | a small-web browser       | =g w= |
+| [[/repo/][Projects & Tools]] | things I build and use    | =g r= |
+| [[/media/][Media]]            | watch and recommend       |     |
+| [[/quotes/][Quotes]]           | useful memos              |     |
+| [[/now/][Now]]              | what I am up to lately    |     |
+| [[/about/][About]]            | who I am, how to reach me |     |
+| [[/tags/][Tags]]             | browse posts by topic     |     |
+| [[/index.xml][Feeds]]            | subscribe via RSS         |     |
+
+* Keys worth knowing
+
+| Key                       | Does                   |
+|---------------------------+------------------------|
+| =x= / =Ctrl-P= / =Ctrl-K= / =M-x= | command palette        |
+| =j= =k= or =n= =p=                | move within a list     |
+| =Enter= / =o=                 | open the selected item |
+| =t=                         | toggle dark / light    |
+| =f= / =w=                     | cycle font / width     |
+| =c=                         | color scheme picker    |
+| =?=                         | show all shortcuts     |
+
+* Good to know
+
+- The color scheme is *random every visit*. Found one you like? Hit *Pin scheme* to keep it across sessions.
+- Posts auto-collect their external links into a numbered *References* list and suggest related *See Also* reading.
+- Comments are backend-free: the box opens a pre-filled email.
+
+* Find me
+
+{{< social-links layout="grid" >}}
+
