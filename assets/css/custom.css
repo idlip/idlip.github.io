@@ -100,3 +100,87 @@ article h4         { color: var(--h4-color); }
 .article-item .post-tag:visited {
   color: var(--h3-color);
 }
+
+/* ================================================================
+   Custom color schemes — hand-written, single source for both this
+   file's live CSS AND the /themes gallery + "t " picker (parsed at
+   build time by layouts/partials/all-schemes.html).
+
+   Convention: one "@scheme: Name | Author (URL) | dark|light" comment
+   directly above each [data-scheme="X"] block. Selector order is
+   fixed: [data-scheme="X"] then, for the light variant,
+   [data-scheme="X"][data-theme="light"] — scheme attribute first.
+   ================================================================ */
+
+/* @scheme: Haki | Dilip-Zororg (https://github.com/idlip/haki) | dark */
+[data-scheme="haki"] {
+  --base00: #000000;  /* pure black bg        */
+  --base01: #0a0f0a;  /* dark green-tint dim  */
+  --base02: #111c17;  /* active/hover bg      */
+  --base03: #b4aeae;  /* dim fg / comments    */
+  --base04: #888888;  /* dark fg              */
+  --base05: #ffffff;  /* main fg              */
+  --base06: #ffffff;
+  --base07: #ffffff;
+  --base08: #ffa9bf;  /* red/pink  — h4       */
+  --base09: #fab387;  /* orange    — h2       */
+  --base0A: #d0bc00;  /* yellow               */
+  --base0B: #6ae4b9;  /* green/teal — h3      */
+  --base0C: #5fd7af;  /* cyan/cursor          */
+  --base0D: #2fafff;  /* blue                 */
+  --base0E: #ab82ff;  /* violet    — h1       */
+  --base0F: #248f6c;  /* teal accent/border   */
+
+  /* Haki-specific semantic overrides */
+  --modeline-bg:           #0a0f0a;
+  --modeline-border:       #248f6c;
+  --menu-bg:               #0a0f0a;
+  --code-bg:               #0a0f0a;
+  --echo-bg:               #000000;
+  --cursor:                #5fd7af;
+  --selection-bg:          #248f6c;
+  --bg-region:             #248f6c;
+  --scrollbar-thumb:       #248f6c;
+  --scrollbar-thumb-hover: #5fd7af;
+  --border:                #1b2a24;
+  --border-dim:            #0a0f0a;
+  --code-border:           #1b2a24;
+  --menu-border:           #1b2a24;
+  --menu-hover-bg:         #111c17;
+}
+
+/* @scheme: Haki Light | Dilip-Zororg (https://github.com/idlip/haki) | light */
+[data-scheme="haki"][data-theme="light"] {
+  --base00: #ffffff;
+  --base01: #f2f2f2;
+  --base02: #d7d7d7;
+  --base03: #595959;
+  --base04: #193668;
+  --base05: #000000;
+  --base06: #000000;
+  --base07: #ffffff;
+  --base08: #a60000;
+  --base09: #884900;
+  --base0A: #6f5500;
+  --base0B: #006800;
+  --base0C: #005e8b;
+  --base0D: #0031a9;
+  --base0E: #531ab6;
+  --base0F: #a0132f;
+
+  --modeline-bg:           #c8c8c8;
+  --modeline-border:       #a3a3a3;
+  --menu-bg:               #f2f2f2;
+  --code-bg:               #f5f5f5;
+  --echo-bg:               #ffffff;
+  --cursor:                #005f5f;
+  --selection-bg:          #c4e3ff;
+  --bg-region:             #c4e3ff;
+  --scrollbar-thumb:       #a3a3a3;
+  --scrollbar-thumb-hover: #595959;
+  --border:                #d7d7d7;
+  --border-dim:            #e4e4e4;
+  --code-border:           #d7d7d7;
+  --menu-border:           #d7d7d7;
+  --menu-hover-bg:         #e4e4e4;
+}

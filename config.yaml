@@ -152,6 +152,7 @@ menu:
     - { name: Wander My Small Web,    weight: 7, url: /wander/ }
     - { name: Media,                  weight: 8, url: /media/ }
     - { name: Quotes,                 weight: 9, url: /quotes/ }
+    - { name: Color Themes,           weight: 10, url: /themes/ }
 
 languages:
   en:

@@ -1,0 +1,5 @@
+#+title: Color Themes
+
+All color schemes available on this site :: 305 from the [[https://github.com/tinted-theming/schemes][tinted-theming/schemes]] base16 collection (browse the full set in the [[https://tinted-theming.github.io/tinted-gallery/][tinted-theming gallery]]), plus a couple of site-specific ones. See the [[https://github.com/tinted-theming/base16][base16 spec]] for how the 16 slots map to a theme.
+
+Hover a card to preview it live; click to apply and pin it. Pinned schemes persist across visits (same mechanism as the ~"t "~ command-palette picker).
