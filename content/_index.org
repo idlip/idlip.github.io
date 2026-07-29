@@ -11,7 +11,7 @@ Latest post: {{< latest >}}
 
 * Recently added
 
-- A [[/now/][Now]] page (inspired by https://nownownow.com).
+- A [[/now/][Now]] page (inspired by [[https://nownownow.com]]).
 - A [[/wander/][Wander]] page (inspired by [[https://codeberg.org/susam/wander][susam/wander]]).
 - A list of [[/repo/][interesting projects and tools]] I use.
 - A list of [[/media/][media]] I like and recommend.

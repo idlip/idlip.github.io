@@ -62,4 +62,24 @@ Here's the [[https://github.com/glide-browser/glide/discussions/25][discussion t
 
 ------
 
+* [2026-07-29 Wed]
+
+[[https://codeberg.org/ezemtsov][Ezemtsov]] has made a [[https://codeberg.org/ezemtsov/emacs/src/branch/wayland][fork of emacs]] with [[https://codeberg.org/ezemtsov/emacs/commit/6147db532ae4fb462910816e55fab0cc62418269][pure wayland backend]], with no gtk or
+cairo toolkit. As I was very excited on this, I immediately jumped and built it with no toolkit.
+
+For context, initially he used Skia instead of cairo on top of PGTK and I was using it as well, the
+input delay and lags reduced a bit and was comparivetly faster since it used GPU compared to just Pgtk, but now with pure wayland (=pwayl= ,
+=(pwayl-skia-gl-enabled-p)= => t), its more snappier and faster. Almost feels like native WM and not
+emacs.
+
+There is no delay in anything whatsoever and ezemtsov was genuine to fix [[https://codeberg.org/ezemtsov/emacs/issues/2][a reported issue]] ASAP as
+well.
+TBH it has elevated the EWM experience more folds and I might finally remove [[https://github.com/niri-wm/niri/][Niri]] and [[https://github.com/mangowm/mango/][MangoWM]]
+that I had it installed and yet haven't opened it for >3 months (really!).
+
+I must say these days I'm not tinkering anything, and just use emacs with matured config of mine and
+day to day has been either emacs for notes/task and glide browser for being on Internet.
+
+-----
+
 /This post might see update as I think of extending./
