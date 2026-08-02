@@ -33,8 +33,8 @@
 body, article.post-content {
   font-family: var(--body-font-family);
 }
-/* In mixed/sans modes, keep code blocks monospace */
-pre, code, kbd, samp, .highlight {
+/* Code/verbatim stay monospace always, independent of font mode entirely */
+pre, code, kbd, samp, .highlight, .org-verbatim, .org-code {
   font-family: var(--code-font);
 }
 .nf {
