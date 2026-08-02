@@ -1,4 +1,4 @@
-#+title: Indie Web BLR First Meetup
+#+title: Indie Web: Write more?
 #+date: 2026-08-02
 #+tags[]: indieweb til wikimedia meetup
 
@@ -10,15 +10,15 @@ searched for some clubs like these to improve my writing, and get motivated to w
 was too involved in [[/posts/may-i-recommend/][church of Emacs]], and as you see I started [[/posts/revamp-blog-2026][revamping this blog site]] from January,
 and till July I did not get another push...?
 
-Nevertheless, _every-time is a right time_ to start the work. So as of I'm writing this post, I've
-attended my first Indie web meetup, and this is [[https://underline.center/t/indiewebclub-31][club's 31st meetup]]. So here's to the great day of
+Nevertheless, _every-time is a right time_ to start the work. So as of I'm writing this post, this is
+my first *BLR Indie Web Club* meetup, and this is [[https://underline.center/t/indiewebclub-31][club's 31st meetup]]. So here's to the great day of
 writers coming together, am writing this post based on the prompt of discovering a random image from
 WikiMedia commons and making a post about it.
 
 And look what I found randomly... Lucky for me it was a tree (garden or park Idk).
 
 #+attr_html: :width 600px
-#+caption: A random image found via Wikimedia Commons
+#+caption: A random image found via Wikimedia Commons. Source: [[https://commons.wikimedia.org/wiki/File:Palazzo_Boncompagni_-_Giornata_nazionale_delle_dimore_storiche_e_WP25BO_01.jpg][WikiMedia]]
 [[https://upload.wikimedia.org/wikipedia/commons/c/cd/Palazzo_Boncompagni_-_Giornata_nazionale_delle_dimore_storiche_e_WP25BO_01.jpg]]
 
 I dont know about the place since [[https://commons.wikimedia.org/wiki/File:Palazzo_Boncompagni_-_Giornata_nazionale_delle_dimore_storiche_e_WP25BO_01.jpg][the page]] has all info in Italian language nor I'm writing about
