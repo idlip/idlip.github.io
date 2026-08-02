@@ -1,0 +1,53 @@
+#+title: Indie Web BLR First Meetup
+#+date: 2026-08-02
+#+tags[]: indieweb til wikimedia meetup
+
+- This post was written in BLR Indie Web Club writing session.
+
+As I've spoken on [[/posts/consumed-enough][prev post]], I accidentally discovered [[https://blr.indiewebclub.org/][Bengaluru Indie Web Club]] on mastodon by
+abhinav tushar. And ever since I had a blog site, why did it not occur to me that I should have
+searched for some clubs like these to improve my writing, and get motivated to write more. Maybe I
+was too involved in [[/posts/may-i-recommend/][church of Emacs]], and as you see I started [[/posts/revamp-blog-2026][revamping this blog site]] from January,
+and till July I did not get another push...?
+
+Nevertheless, _every-time is a right time_ to start the work. So as of I'm writing this post, I've
+attended my first Indie web meetup, and this is [[https://underline.center/t/indiewebclub-31][club's 31st meetup]]. So here's to the great day of
+writers coming together, am writing this post based on the prompt of discovering a random image from
+WikiMedia commons and making a post about it.
+
+And look what I found randomly... Lucky for me it was a tree (garden or park Idk).
+
+#+attr_html: :width 600px
+#+caption: A random image found via Wikimedia Commons
+[[https://upload.wikimedia.org/wikipedia/commons/c/cd/Palazzo_Boncompagni_-_Giornata_nazionale_delle_dimore_storiche_e_WP25BO_01.jpg]]
+
+I dont know about the place since [[https://commons.wikimedia.org/wiki/File:Palazzo_Boncompagni_-_Giornata_nazionale_delle_dimore_storiche_e_WP25BO_01.jpg][the page]] has all info in Italian language nor I'm writing about
+the place. *Picture can definitely speak 1000 words* (yes this phrase was repeated many times in
+today's session, so cheers to it.)
+
+All I can see is the peaceful and lovely tree, sitting in the shadowy realms of every day life. Its
+always the nature that makes me a take a moment in life, sit back, relax and reflect on whats
+happening around me. Day by day life seems so busy that I fail to acknowledge whats even next to me,
+so much focused work is also harming me lol.
+And here's a simple park or a garden that can make me relive a lost moment and make me process my
+living state and always guide me to think [[/posts/consumed-enough][what I've been doing and what's actually required]].
+
+Apart from main focus on tree in the image, there are two people, a house behind, the one half of a
+gate and so on, I'm not giving opinion on them, those are yours to interpret (if you can!) and
+follow any details.. its a static image after all, I only wrote about =~160 words=, you fill the rest of the 840 words please!
+
+Another things I learned today was that August month are considered as *Blaugust* time and Indie web
+circle practice to publish one post each day, so totaling 31 posts for this month. Its easy to do micro
+blog, but heck I need to find topics to even try it, but I may as well give it a try so I get
+disciplined as well. This also stops me from updating my [[https://github.com/idlip/hugo-emacs-theme/][site eamcs theme]] and start writing more to utilize them feature-fully and then analyze the need and whats actually required for my site/posts.
+
+- The 2026 edition is happening [[https://nerdybookahs.wordpress.com/2026/07/16/blaugust-2026-is-coming/][here]].
+
+Finally, cheers to the first embark of long-overdue tasks on writing and to blog more. I tried to
+start in Jan, and here finally in August 2026 I'm able to get the actual start. And on good side
+I've been writing daily journal from past week, so that's again a good start to more writing.
+
+Still I need to write more, but gosh Times Up! 30 mins got me only so far?
+
+Note: 10 mins was extended, But Imma use that time to clean and fix grammar. Its also time for me to
+reflect what could 30mins of my brain write and converse in text.
