@@ -22,7 +22,8 @@ Latest post: {{< latest >}}
 The command palette is the fastest way around: search posts, run any command, or
 preview all 305 color themes. Open it with =x=, =Ctrl-P=, =Ctrl-K=, or =Alt-x=
 (Emacs =M-x=). It is the same idea as a universal search/launcher, telescope, or fuzzy
-finder. The buttons below run these features right here:
+finder. The buttons below run these features right here, and [[/prefs/][Preferences]] documents
+every setting in full:
 
 #+begin_export html
 <div class="tag-cloud" role="group" aria-label="Try the theme features">
@@ -36,6 +37,18 @@ finder. The buttons below run these features right here:
 </div>
 #+end_export
 
+[[/wander/][Wander]] is a small-web console: hit launch and it drops you on a random site/post from a personal
+list of blogs, articles or cool stuffs.
+
+#+begin_export html
+<div class="wander-launch">
+  <a href="/wander/console/" class="wander-btn">
+    <span class="nf" aria-hidden="true"> </span> Launch Wander Console
+  </a>
+  <span class="wander-hint">browse random sites from this network</span>
+</div>
+#+end_export
+
 * Explore
 
 | Page             | What it is                | Key |
@@ -46,6 +59,7 @@ finder. The buttons below run these features right here:
 | [[/media/][Media]]            | watch and recommend       |     |
 | [[/quotes/][Quotes]]           | useful memos              |     |
 | [[/now/][Now]]              | what I am up to lately    |     |
+| [[/prefs/][Preferences]]      | every setting, explained  |     |
 | [[/about/][About]]            | who I am, how to reach me |     |
 | [[/tags/][Tags]]             | browse posts by topic     |     |
 | [[/index.xml][Feeds]]            | subscribe via RSS         |     |
@@ -55,8 +69,7 @@ finder. The buttons below run these features right here:
 | Key                       | Does                   |
 |---------------------------+------------------------|
 | =x= / =Ctrl-P= / =Ctrl-K= / =M-x= | command palette        |
-| =j= =k= or =n= =p=                | move within a list     |
-| =Enter= / =o=                 | open the selected item |
+| =n= / =p=                     | next / previous post   |
 | =t=                         | toggle dark / light    |
 | =f= / =w=                     | cycle font / width     |
 | =c=                         | color scheme picker    |

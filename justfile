@@ -15,6 +15,19 @@ build:
 # Rebuild OG images, then build for deploy.
 release: og build
 
+# Format everything treefmt knows about (.org excluded, no safe formatter for it).
+fmt:
+    treefmt
+
+# Install git hooks (formatting on commit, a11y check on push).
+setup:
+    pre-commit install --hook-type pre-commit --hook-type pre-push
+
+# a11y lint against the built output (Go templates aren't valid HTML pre-render).
+a11y:
+    hugo --minify
+    htmlhint --config .htmlhintrc "public/**/*.html"
+
 # Regenerate per-post OG PNGs (run inside nix-shell for rsvg-convert).
 og: _og-build _og-render
 

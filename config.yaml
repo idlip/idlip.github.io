@@ -125,6 +125,9 @@ params:
     bioinformatics: " "
     python:    " "
     r:         "󰟔"
+    finance:   " "
+    principle: " "
+    webdev:       " "
     _default:  " "
 
   favicon: /images/op-roger.jpg

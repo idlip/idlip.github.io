@@ -13,43 +13,74 @@ Wander through them. You might find something worth keeping. (All are minimal li
 
 Inspired and made with: [[https://codeberg.org/susam/wander][Wander by Susam]]
 
-- [[https://idlip.in/][My Site]] :: My personal corner of the web
+- [[https://idlip.in/][My Site]] :: My personal corner of the web | tag: emacs
 - [[https://susam.net/][Susam Pal]] :: Computing, mathematics, writing
-- [[https://planet.emacslife.com/][Planet Emacs]] :: The church of Emacs
-- [[https://www.monadicsheep.org/][MonadicSheep]] :: Bunch of Elisp enjoyers
+- [[https://planet.emacslife.com/][Planet Emacs]] :: The church of Emacs | tag: emacs
+- [[https://www.monadicsheep.org/][MonadicSheep]] :: Bunch of Elisp enjoyers | tag: emacs
+- [[https://www.marginalia.nu/][Marginalia]] :: The better search for good content
 - [[https://tusharhero.codeberg.page/][Tusharhero]] :: An emacs friend & a Crafter
-- [[https://www.rahuljuliato.com/][Rahul Juliato]] :: Emacs solo-er and contributor
+- [[https://www.rahuljuliato.com/][Rahul Juliato]] :: Emacs solo-er and contributor | tag: emacs
 - [[https://aryak.me/][Arya Kiran]] :: The self-host person (project segfault)
-- [[https://www.karl-voit.at/][Karl Voit]] :: Posts on personal information management
-- [[https://lobste.rs/][Lobste.rs ]] :: More wandering
-- [[https://irreal.org/blog/][Irreal]] :: Emacs everyday posts
+- [[https://www.karl-voit.at/][Karl Voit]] :: Posts on personal information management | tag: emacs
+- [[https://lobste.rs/][Lobste.rs ]] :: More wandering | tag: rss
+- [[https://irreal.org/blog/][Irreal]] :: Emacs everyday posts | tag: emacs
 - [[https://ploum.net/index_en.html][Ploum.net]] :: Essays on software freedom
-- [[https://protesilaos.com/][AKA Prot]] :: Philosophy, hut, emacs
-- [[https://tsoding.github.io/][Tsoding daily ]] :: Recreational programming
+- [[https://protesilaos.com/][AKA Prot]] :: Philosophy, hut, emacs | tag: emacs
+- [[https://tsoding.github.io/][Tsoding daily ]] :: Recreational programming | tag: cli
 - [[https://piechowski.io/post/git-commands-before-reading-code/][Git commands before code]] :: Post on show cool Unix-Git tricks
-- [[https://boringmoney.in/][Boring Money]] :: Financial thoughts
+- [[https://boringmoney.in/][Boring Money]] :: Financial thoughts | tag: finance
 - [[https://www.owlposting.com/][Owl posting]] :: Essays on Bio & Business
 - [[https://timharek.no/][Tim Harek ]] :: Blogger who inspired blogging+reading
-- [[https://lawsofsoftwareengineering.com/][Laws of SDE]] :: Principles that stand strong in SDE
-- [[https://addyosmani.com/blog/21-lessons/][21 Lessons - 14 YOE]] :: From SDE in Google
+- [[https://lawsofsoftwareengineering.com/][Laws of SDE]] :: Principles that stand strong in SDE | tag: principle
+- [[https://addyosmani.com/blog/21-lessons/][21 Lessons - 14 YOE]] :: From SDE in Google | tag: principle
 - [[https://www.artmann.co/articles/30-years-of-br-tags][30 years of (br) tags]] :: Evolution of Web in 30 years
-- [[https://blainsmith.com/essays/humanities-in-the-machine/][Humanities in the Machine]] :: How philosophy evolved Tech
+- [[https://blainsmith.com/essays/humanities-in-the-machine/][Humanities in the Machine]] :: How philosophy evolved Tech | tag: principle
 - [[https://lr0.org/blog/p/crocker/][Crocker's rule]] :: Allow people to be Direct to you
-- [[https://www.zolkos.com/2025/12/03/vanilla-css-is-all-you-need][Vanilla CSS is all you need]] :: Dive on some advanced CSS practices
-- [[https://www.alicemaz.com/writing/program.html][Thinking about programming]] :: Bigger picture on programming
-- [[https://nrennie.rbind.io/blog/][Nicola rennie]] :: Posts about R packages (ggplot2 universe)
-- [[https://yannesposito.com/][Yann esposito]] :: Blogs on haskell, emacs, orgmode
+- [[https://www.zolkos.com/2025/12/03/vanilla-css-is-all-you-need][Vanilla CSS is all you need]] :: Dive on some advanced CSS practices | tag: webdev
+- [[https://www.alicemaz.com/writing/program.html][Thinking about programming]] :: Bigger picture on programming | tag: principle
+- [[https://nrennie.rbind.io/blog/][Nicola rennie]] :: Posts about R packages (ggplot2 universe) | tag: r
+- [[https://yannesposito.com/][Yann esposito]] :: Blogs on haskell, emacs, orgmode | tag: emacs
 - [[https://jvns.ca/][Julia Evans ]] :: Amazing blogger on vast tech topcis
-- [[https://yihui.org/en/][Yihui Xie]] :: R lang, Latex and Typst
+- [[https://yihui.org/en/][Yihui Xie]] :: R lang, Latex and Typst | tag: r
 - [[https://endtimes.dev/][Endtimes]] :: Posts on minimal web
 - [[https://www.benkuhn.net/][Ben Kuhn]] :: General, life, teaching
 - [[https://stephango.com/][Stephango]] :: Obsidian CEO, short blogs
 - [[https://ntietz.com/blog/][Ntietz]] :: General, tech, life
-- [[https://brodrigues.co/][Brodrigues]] :: R packages, r-Nix, Data Science
-- [[https://thecreativeindependent.com/][Creative Independent]] :: Literature and Book authors
-- [[https://arne.me/blog/we-need-more-zero-config-tools][Zero config tool]] :: Post on Zero config tools
-- [[https://www.phimulambda.org/][PhiMuLambda]] :: Divya ranjan (emacs-reader author)
-- [[https://karthinks.com/][Karthinks]] :: Emacs+math proficient
-- [[https://craftering.systemcrafters.net/][Craftering]] :: web-ring of system crafters community
+- [[https://brodrigues.co/][Brodrigues]] :: R packages, r-Nix, Data Science | tag: r
+- [[https://thecreativeindependent.com/][Creative Independent]] :: Literature and Book authors | tag: novel
+- [[https://arne.me/blog/we-need-more-zero-config-tools][Zero config tool]] :: Post on Zero config tools | tag: cli
+- [[https://www.phimulambda.org/][PhiMuLambda]] :: Divya ranjan (emacs-reader author) | tag: emacs
+- [[https://karthinks.com/][Karthinks]] :: Emacs+math proficient | tag: emacs
+- [[https://craftering.systemcrafters.net/][Craftering]] :: web-ring of system crafters community | tag: emacs
+- [[https://chrisburnell.com/][Chris Burnell]] :: Cool front-end blogs | tag: webdev
+- [[https://vickiboykis.com/][Vicki Boykis]] :: More writing and Essays
+- [[https://chrissmith.xyz/][Chris Smith]] :: Tech blog in cool way
+- [[https://en.andros.dev/blog/ddd78757/quick-tutorial-to-get-started-on-org-social/][Org Social]] :: Cool emacsian way to socialize with org mode | tag: orgmode
+- [[https://obtf.ru/en/][OBTF]] :: The best first-brain method, GTD, Organization system | tag: principle
+- [[https://scotto.me/blog/2026-07-17-which-lisp/][Road to Lisp]] :: Overview of LISP land
+- [[https://slashpages.net/][Slash pages]] :: slash pages that personal site can have
+- [[https://dbushell.com/uses/][Web tools]] :: Some web tools resource to build site
+- [[https://sive.rs/][Direk Sivers ]] :: Short blog posts and to the point of purpose
+- [[https://blog.jsbarretto.com/post/software-is-joy][Software is Joy]] :: Writing toy software for fun
+- [[https://rhaeguard.github.io/posts/regex][Rhaeguard Regex Engine]] :: Build regex in Go
+- [[https://ianthehenry.com/][Henry]] :: Blog from Janet lover
+- [[https://mtlynch.io/code-review-love/][How to make reviewer happy on PR]] :: Good PR practices
+- [[https://davidpoblador.com/deep-dives/what-happened-to-the-frontend/][Frontend code smells/looks]] :: Review on frontend framework and code
+- [[https://franktisellano.github.io/datatype/][Datatype Glyph Charts]] :: Font glyph charts
+- [[https://penfight.xyz/][Pen fight]] :: Oops its a game battle
+- [[https://blr.indiewebclub.org/][Blr Indie Web Club]] :: World is small for indie web
+- [[https://chrismorgan.info/][Chris Morgan]] :: Tech blog on web stuff
+- [[https://avilpage.com/][Avil page]] :: Blog by python community veteran and Bioinformatics
+- [[https://bearblog.dev/discover/][Bear blogs ]] :: I love the [[https://robertbirming.com/bearming/][bear]] [[https://github.com/janraasch/hugo-bearblog/][theme]]
+- [[https://joecode.com/2026-08-19-sqlite3/][Sqlite for everything]] :: Nice overview on sqlite
+- [[https://miniflux.app/opinionated.html][Miniflux opinionated]] :: How minimalist tools are better built
+- [[https://outputerror.com/posts/tracking-reading-in-emacs/][Tracking reading in Emacs]] ::  org mode to track & read more
+- [[https://feedle.world/top-stories][Feedle]] :: Top stories curated from HN
+- [[https://indieblog.page/all][Indie Blog]] :: Discover more
+- [[https://powrss.com/][Powrss]] :: Consume more
+- [[https://ooh.directory/][ooh directory]] :: Collection of diverse blogs
+- [[https://minifeed.net/global][Minifeed]] :: Discover more
+- [[https://deadsimpletech.com/blog/why-dont-people-use-git-properly][Use git properly]] :: Why people dont utilize git properly
+- [[https://brownian.substack.com/p/rust-for-bioinformatics-a-curated][Rust for Bioinformatics]] :: Rust is more adapted
 
 /(this page might have updates as days goes on.)/  
