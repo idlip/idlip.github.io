@@ -3,7 +3,7 @@
   --heading-font: 'impress', sans-serif;
   --sans-font:    'code-ace', sans-serif;
   --code-font:    'code-op', monospace;
-  --serif-font:   serif;
+  --serif-font:   'code-haki', serif;
 }
 
 @font-face {
@@ -25,6 +25,14 @@
 @font-face {
   font-family: 'code-op';
   src: url('../fonts/code-op.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'code-haki';
+    src: url('../fonts/code-haki.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
