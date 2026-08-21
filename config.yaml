@@ -18,6 +18,8 @@ ignoreFiles:
 mediaTypes:
   application/javascript:
     suffixes: [js]
+  application/atom+xml:
+    suffixes: [xml]
 
 outputFormats:
   WanderJS:
@@ -26,13 +28,13 @@ outputFormats:
     isPlainText: true
     notAlternative: true
   RSS:
-    mediatype: application/rss+xml
+    mediatype: application/atom+xml
     baseName: rss
   Feed:
-    mediatype: application/rss+xml
+    mediatype: application/atom+xml
     baseName: feed
   Index:
-    mediatype: application/rss+xml
+    mediatype: application/atom+xml
     baseName: index
   SVG:
     mediaType: image/svg+xml
@@ -131,6 +133,9 @@ params:
   ogFont: Code D OnePiece
   authorName: "Dilip | Zororg"
   authorEmail: hi@idlip.in
+
+  umamiScriptURL: https://analytics.fossunited.org/script.js
+  umamiWebsiteID: 64825a51-be1b-416e-b1ec-895aa541dcab
 
   socialLinks:
     - { label: "hi@idlip.in",  url: "mailto:hi@idlip.in",                          icon: " "  }

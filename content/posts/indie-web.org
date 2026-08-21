@@ -17,7 +17,7 @@ WikiMedia commons and making a post about it.
 
 And look what I found randomly... Lucky for me it was a tree (garden or park Idk).
 
-#+attr_html: :width 600px
+#+attr_html: :width 600px :alt "A tree at Palazzo Boncompagni, a historic Italian residence"
 #+caption: A random image found via Wikimedia Commons. Source: [[https://commons.wikimedia.org/wiki/File:Palazzo_Boncompagni_-_Giornata_nazionale_delle_dimore_storiche_e_WP25BO_01.jpg][WikiMedia]]
 [[https://upload.wikimedia.org/wikipedia/commons/c/cd/Palazzo_Boncompagni_-_Giornata_nazionale_delle_dimore_storiche_e_WP25BO_01.jpg]]
 
