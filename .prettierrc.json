@@ -1,0 +1,10 @@
+{
+  "overrides": [
+    {
+      "files": "layouts/**/*.html",
+      "options": {
+        "parser": "go-template"
+      }
+    }
+  ]
+}

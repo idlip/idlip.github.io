@@ -1,0 +1,24 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-merge-conflict
+      - id: mixed-line-ending
+      - id: check-added-large-files
+
+  - repo: local
+    hooks:
+      - id: treefmt
+        name: treefmt
+        entry: treefmt
+        language: system
+        pass_filenames: false
+
+      - id: a11y
+        name: a11y (htmlhint on built output)
+        entry: just a11y
+        language: system
+        pass_filenames: false
+        stages: [pre-push]
