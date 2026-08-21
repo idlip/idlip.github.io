@@ -6,9 +6,8 @@ options = ["--write"]
 includes = ["*.css", "*.js", "*.json", "*.yaml", "*.yml"]
 excludes = ["data/schemes/**", "static/wander/console/**"]
 
-[formatter.prettier-templates]
-command = "prettier-gotmpl"
-options = ["--write"]
+[formatter.gotmplfmt]
+command = "gotmplfmt"
 includes = ["layouts/**/*.html"]
 
 [formatter.toml]
