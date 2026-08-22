@@ -1,0 +1,11 @@
+#+title: Verify
+#+draft: false
+#+no_comment: t
+
+Proof of identity across the web :: ~rel=me~ links.
+
+------
+
+#+begin_export html
+{{< social-links layout="grid" >}}
+#+end_export
