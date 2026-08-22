@@ -1,0 +1,12 @@
+#+title: The Will of D. License
+#+aliases[]: will d D
+#+draft: false
+#+no_comment: t
+
+Code license, straight off the =LICENSE= file in [[https://github.com/idlip/hakimacs][the theme]]. Long Stand Pirates (FOSS)!
+
+------
+
+#+begin_export html
+{{< license >}}
+#+end_export

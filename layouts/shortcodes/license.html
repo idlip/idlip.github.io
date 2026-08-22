@@ -1,0 +1,7 @@
+{{- /*
+  license shortcode pulls the WILL OF D. onepiece license verbatim from
+  the theme submodule so the text lives in exactly one file. Used on
+  content/license.org; /will redirects here via that page's aliases.
+  */ -}}
+{{- $raw := readFile "themes/emacs/LICENSE" -}}
+<pre><code>{{ $raw | htmlEscape }}</code></pre>
