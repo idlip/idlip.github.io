@@ -1,0 +1,54 @@
+#+title: Uses
+#+aliases[]: defaults
+#+draft: false
+#+no_comment: t
+#+layout: topic-list
+
+What I use everyday, tools, stuff and resources I depend.
+
+Initially I had made blog post on [[/posts/tools-readme/][Tools that are best]] which gets easily outdated.
+
+I also have [[/projects][Projects]] page show tools and projects I like & use as well.
+
+I do have [[https://github.com/idlip/d-nix][public OS config]] which might cover many as well.
+
+------
+
+* Hardware
+
+- Thinkpad E14 :: Office laptop to do FOSS work
+
+- Acer Swift Go :: The OLED beauty that is eye candy
+
+- [[https://www.redragon.in/products/fizz-k617-60-wired-mechanical-keyboard-white-and-grey-red-switches][Redragon Fizz K617]] :: 60% Keyboard that tic-tacs enough
+
+- Redragon Gaming Mouse :: Some wired mouse which has rgb
+
+- Artic Fox Mouse :: The transparent shell one
+
+- [[https://www.theaudiostore.in/products/tanchjim-bunny-type-c-dsp-plug-with-mic-iem][Tanchjim Bunny DSP]] :: Wired IEM that elevates the audio
+
+- Realme 9 Pro+ :: Android phone, Sony OIS Camera is top-notch (but I'm not photo geek)
+
+* Software
+
+- [[https://github.com/idlip/d-nix][NixOS]] :: OS
+- [[https://www.gnu.org/software/emacs/][Emacs ]] :: Editor and Everything else there after
+- [[https://glide-browser.app/][Glide Browser]] :: Keyboard-driven web browsing in [[https://github.com/glide-browser/glide/discussions/25][emacs style]]
+- [[https://fishshell.com/][Fish]] :: Shell
+- [[https://codeberg.org/dnkl/foot/][Foot]] :: Terminal
+- [[https://codeberg.org/ezemtsov/ewm][Emacs Window Manager]] :: Desktop Environment (WM)
+- [[https://github.com/idlip/code-d-font][Code D Font]] :: Recursive Font with custom naming and Nerd Icons patch
+- [[https://github.com/ahrm/sioyek][Sioyek ]] :: The best PDF reader that is so well written, one of fav software inspiration
+- [[https://mpv.io][MPV]] :: Media player to binge my time slots
+- [[https://noctalia.dev/][Noctalia]] :: Desktop Shell that completes the suite
+- [[https://protesilaos.com/emacs/modus-themes][Modus Themes]] :: The best WCAG AAA theme to use everywhere
+- [[https://notmuchmail.org/][Notmuch]] + [[https://en.wikipedia.org/wiki/Gnus][Gnus]] :: Email client and News reader
+- [[https://gohugo.io/][Hugo]] :: Site being built by
+- [[https://orgmode.org/][Org mode]] :: Knowledge management, GTD, Task management, content writing and documenting everything.
+- [[https://fosstodon.org/][Mastodon]] :: Peaceful internet with nerds
+
+* Dev tools
+
+- [[https://claude.com/product/claude-code][Claude code]] :: Helps the day job
+- [[https://nix.dev/][Nix]] :: Package management and gets every tooling
