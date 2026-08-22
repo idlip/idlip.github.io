@@ -1,6 +1,7 @@
 #+title: Verify
 #+draft: false
 #+no_comment: t
+#+aliases[]: follow
 
 Proof of identity across the web :: ~rel=me~ links.
 

@@ -1,0 +1,23 @@
+#+title: Changelog
+#+draft: false
+#+no_comment: t
+#+aliases[]: readme updates
+
+Notable changes to this site and theme.
+
+------
+
+* 2026
+
+** August
+
+Site theme has been moved since it drifted completely from original fork.
+
+- [[https://github.com/idlip/hakimacs][Hakimacs]] is the new name and place where updates go on for the theme.
+
+Theme is almost ready as I want, and I won't go with tinkering it more. More post writing and
+reading to continue (/kampai 🍻/)
+
+- Adding many slashpages inspired by https://slashpages.net/
+
+[[/][Home page]] and [[/sitemap][sitemap]] should give more overview.

@@ -1,0 +1,17 @@
+#+title: Colophon
+#+draft: false
+#+no_comment: t
+
+How this site is made. Please do check [[/prefs][Preferences]] page as well for all features available for you.
+
+------
+
+- SSG : [[https://gohugo.io][Hugo]]
+
+- Content : [[https://orgmode.org/][Org-mode]] (via go-org) using Emacs
+
+- Theme : [[https://github.com/idlip/hakimacs][Hakimacs]] with base16 tinted themeing used dynamically
+
+- Hosting : Domain + CI CD
+
+- Fonts : [[https://github.com/idlip/code-d-font][Code D font]] (Recursive font with Nerd Icons patched)

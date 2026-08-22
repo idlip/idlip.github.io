@@ -3,6 +3,9 @@
 #+draft: false
 #+date: [2023-03-17 Fri]
 
+Note: This is very outdated from when it was written. Please check [[https://github.com/idlip/d-nix][current config]] file or [[/uses][check Uses
+page]] for updated list.
+
 --------------
 
 * Utilities that are Best! 🌟

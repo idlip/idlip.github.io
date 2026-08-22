@@ -1,0 +1,259 @@
+#+title: Preferences
+#+draft: false
+#+no_comment: t
+#+toc: t
+
+Everything on this site that you can change and have personalized experience.
+
+- Source :: [[https://github.com/idlip/hakimacs][github.com/idlip/hakimacs]] (the readme, and the whole thing)
+
+* Try everything at once
+
+Each button does exactly what the matching key does. Nothing navigates away, so
+click freely and watch the page change under you.
+
+#+begin_export html
+<div class="tag-cloud" role="group" aria-label="Preference controls">
+  <button type="button" class="tag-cloud-btn" data-action="open-palette">Command palette</button>
+  <button type="button" class="tag-cloud-btn" data-action="toggle-theme">Dark / light</button>
+  <button type="button" class="tag-cloud-btn" data-action="cycle-font">Cycle font</button>
+  <button type="button" class="tag-cloud-btn" data-action="cycle-width">Cycle width</button>
+  <button type="button" class="tag-cloud-btn" data-action="cycle-align">Cycle alignment</button>
+  <button type="button" class="tag-cloud-btn" data-action="increase-font">Bigger text</button>
+  <button type="button" class="tag-cloud-btn" data-action="decrease-font">Smaller text</button>
+  <button type="button" class="tag-cloud-btn" data-action="reset-font">Reset text size</button>
+  <button type="button" class="tag-cloud-btn" data-action="browse-schemes">All 305 schemes</button>
+  <button type="button" class="tag-cloud-btn" data-action="fix-scheme">Pin / unpin scheme</button>
+  <button type="button" class="tag-cloud-btn" data-action="toggle-keys">Shortcuts on / off</button>
+  <button type="button" class="tag-cloud-btn" data-action="show-help">All shortcuts</button>
+</div>
+#+end_export
+
+[[/wander/][Wander]] is a separate feature, not a theme preference: it launches a small-web console that drops you
+on a random site from a curated list of personal blogs.
+
+#+begin_export html
+<div class="wander-launch">
+  <a href="/wander/console/" class="wander-btn">
+    <span class="nf" aria-hidden="true"> </span> Launch Wander Console
+  </a>
+  <span class="wander-hint">browse random sites from this network</span>
+</div>
+#+end_export
+
+-------
+
+This paragraph is here on purpose, as something long enough to actually watch
+change. Cycle the font and the letterforms change under you; cycle the width and
+the measure gets narrower or wider; cycle the alignment and the right edge goes
+from ragged to flush to two columns. The colours come from whichever scheme
+loaded this visit, and dark/light flips the whole palette without touching the
+scheme itself.
+
+-------
+
+* The cycles
+
+Five settings are cycles: each press advances one step and wraps around at the
+end. The step you land on is remembered.
+
+** Font mode :: =f=
+
+Four modes, and *Mixed is the default* for a first visit.
+
+| Mode   | Prose             | Structure, meta, UI | Code |
+|--------+-------------------+---------------------+------|
+| Mixed  | serif             | sans                | mono |
+| Mono   | mono              | mono                | mono |
+| Sans   | sans              | sans                | mono |
+| Serif  | serif             | serif               | mono |
+
+Two things never move. *Code, =verbatim=, and preformatted blocks are always
+monospace*, in every mode. And *headings always use the display face*, outside
+the cycle entirely.
+
+** Content width :: =w=
+
+Steps: *840px* (default), then =100%=, =80%=, =60%=.
+
+840px is a comfortable measure for prose. =100%= fills the window, which is
+useful for wide code blocks and tables. =80%= and =60%= are proportions of the
+window rather than fixed widths, so on a very wide screen they can still come out
+wider than the 840px default.
+
+** Text alignment :: =a=
+
+Steps: *Normal* (default), *Justified*, *Columns*.
+
+Column turns text into bookish column view.
+
+** Text size :: =+= / =-= / =0=
+
+Steps of 10%, clamped between *80%* and *150%*. =0= resets to 100%.
+
+** Dark / light :: =t= or =i=
+
+This flips the *variant*, not the scheme. If the scheme you are on has both a
+dark and a light palette, it swaps. If it has only one (Everforest, Monokai,
+Dracula and Kanagawa are dark-only), nothing pretends to work: the page tells you
+there is no such variant and opens the scheme search filtered to the mode you
+asked for, so you can pick one that has it.
+
+* Colour schemes
+
+** Where they come from
+
+Three different sources, deliberately:
+
+- *Haki* is mine, hand-written as CSS.
+- *Modus* is the built-in default, following Protesilaos Stavrou's
+  [[https://protesilaos.com/emacs/modus-themes][Modus themes]] for Emacs, with both a dark (Vivendi) and a light (Operandi)
+  variant. It is what you get when no scheme is set at all.
+- *Everything else* comes straight from [[https://github.com/tinted-theming/schemes][tinted-theming/schemes]], the base16
+  community collection, unmodified. Twelve of them sit in the menu as presets;
+  the full set of *305* is one search away.
+
+** How the whole thing works
+
+Every scheme is just sixteen colours, =base00= through =base0F=, and the entire
+UI is built from semantic names that point at those sixteen. So =--link= means
+"=base0D=", dates mean "=base0A=", and swapping a scheme means swapping sixteen
+values while every rule in the stylesheet keeps working untouched.
+
+That is the reason 305 imported editor themes can drive a website they were never
+designed for. It also means schemes cost almost nothing: the presets in the menu
+are plain CSS, and the rest are fetched only when you actually open the picker.
+
+Colours carry consistent meaning, which is worth knowing if you switch schemes a
+lot: yellow is always dates, cyan is reading time, blue is links.
+
+** Random every visit, unless you pin it
+
+By default *the scheme is picked at random on every page load*. If you find one
+you like, *Pin* it and that choice sticks until you unpin. Pinning also works
+from the modeline at the bottom and from the =M-x= menu; all three controls stay
+in sync.
+
+Press =c= for the preset popup, or =t= followed by a space in the command palette
+to search all 305 by name. Hovering a scheme in either previews it live on the
+real page, and moving away puts it back.
+
+* The command palette
+
+One dialog does search and every command. Open it with =x=, or with the editor
+bindings =Ctrl-P=, =Ctrl-K=, or =Alt-x= (Emacs =M-x=), whichever your fingers
+already know.
+
+| Type this        | Get                                |
+|------------------+------------------------------------|
+| anything         | commands and posts together        |
+| =t= then space     | all 305 colour schemes, by name    |
+| =?= then space     | every keyboard shortcut            |
+
+=Esc= or =Ctrl-g= closes it. Backspace at an empty prefix goes back to the
+default list.
+
+* Keys
+
+** Anywhere
+
+| Key                         | Does                          |
+|-----------------------------+-------------------------------|
+| =x= / =Ctrl-P= / =Ctrl-K= / =Alt-x= | command palette               |
+| =?=                           | every shortcut                |
+| =t= or =i=                      | dark / light                  |
+| =c=                           | scheme popup                  |
+| =f=                           | cycle font mode               |
+| =w=                           | cycle content width           |
+| =a=                           | cycle text alignment          |
+| =+= / =-= / =0=                   | text bigger / smaller / reset |
+| =PageDown= / =PageUp=           | page down / up                |
+| =Esc= / =Ctrl-g=                | close whatever is open        |
+
+** Going places
+
+| Key | Goes to            |
+|-----+--------------------|
+| =g h= | home               |
+| =g p= | posts              |
+| =g w= | wander             |
+| =g r= | projects & tools   |
+| =g g= | top of the page    |
+| =g G= | bottom of the page |
+
+** Reading a post
+
+| Key            | Does                 |
+|----------------+----------------------|
+| =n= / =p=          | next / previous post |
+| =q=              | back                 |
+| =Space=          | page down            |
+| =Shift-Space=    | page up              |
+| =Ctrl-v= / =Alt-v= | page down / up       |
+
+Arrow keys, =Home= and =End= scroll normally and are left alone on purpose.
+
+** Turning shortcuts off
+
+Single-letter shortcuts are convenient until you want your browser's own
+single-letter behaviour back, or you use voice input, where a stray letter fires
+a command. *Shortcuts on / off* disables all of them and is remembered.
+=Esc= keeps working either way.
+
+This is [[https://www.w3.org/WAI/WCAG22/Understanding/character-key-shortcuts.html][WCAG 2.1.4 Character Key Shortcuts]], and it is why the toggle exists
+rather than being a nicety.
+
+* Lists and cards
+
+Where a listing has a search box, =/= focuses it and =Esc= clears it.
+
+* Reading a post
+
+- *Images* click to open full size, and load lazily as you reach them.
+- *Code blocks* get a copy button on hover, and show their language.
+- *Headings* get a =#= anchor on hover, so any section is directly linkable.
+- *References* are collected automatically from the links in the post and
+  numbered at the end. *See Also* fills the leftover space with related posts,
+  and only when there is room.
+- *The progress bar* along the modeline is pure CSS, driven by scroll position
+  with no JavaScript running as you scroll.
+- *Comments* have no backend at all. The box composes a pre-filled email and
+  hands it to your mail client. Embrace email!
+
+* What gets stored
+
+Ten keys in =localStorage=, no cookies, no analytics, no third-party requests.
+
+| Key                    | Holds                                    |
+|------------------------+------------------------------------------|
+| =emacs-theme=            | dark or light                            |
+| =emacs-scheme-fixed=     | the pinned preset, if you pinned one     |
+| =emacs-custom-palette=   | a pinned scheme from the 305             |
+| =emacs-scheme-last=      | the scheme shown last                    |
+| =emacs-scheme-hint-seen= | whether the random-scheme note was shown |
+| =emacs-font-mode=        | mono, sans, serif or mixed               |
+| =emacs-font-size=        | 80 to 150                                |
+| =emacs-width-idx=        | which width step                         |
+| =emacs-align=            | normal, justify or columns               |
+| =emacs-keys-off=         | shortcuts disabled                       |
+
+Clearing site data resets everything to defaults. Nothing here identifies you,
+and none of it leaves your browser.
+
+* How my site is put/designed together
+
+Written down mostly because people ask.
+
+- No framework, no build step beyond Hugo. Content is *Org-mode*, rendered by
+  go-org.
+- One stylesheet, in [[https://developer.mozilla.org/en-US/docs/Web/CSS/@layer][cascade layers]], so the responsive rules can win without a
+  specificity fight.
+- Three small scripts, bundled into one deferred file.
+- Your scheme and font mode are applied *before the first paint*, so there is no
+  flash of the wrong colours on load.
+- =prefers-reduced-motion= is respected: smooth scrolling and transitions are
+  opt-in on it, never forced.
+- Every interactive thing is reachable by keyboard and has a visible focus ring.
+
+More detail on the stack is on the [[/colophon/][Colophon]] page, and the whole source is
+[[https://github.com/idlip/hakimacs][on GitHub]] if you would rather just read it.

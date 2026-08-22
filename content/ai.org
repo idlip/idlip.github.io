@@ -1,0 +1,12 @@
+#+title: AI
+#+draft: false
+#+no_comment: t
+
+How I use sensible AI on this site and in my work.
+
+------
+
+*Content* :: All posts and content in this site is written by me completely (100% typed by me).
+
+*Theme* :: Claude was used for refactoring and experimenting with site theme, but requirements was as I
+  wanted, and thus I maintain it as I want. AI purpose is to only help fill gaps and do what I ask for.
