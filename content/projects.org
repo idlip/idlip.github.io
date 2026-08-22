@@ -5,6 +5,8 @@
 
 Projects I build, maintain, tools I use, and interesting things worth checking out.
 
+For what I primarily use please check: [[/Uses]] page which lists defaults I depend on.
+
 /WIP page, will have more updates/
 
 * My Projects
