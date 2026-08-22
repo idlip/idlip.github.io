@@ -1,0 +1,12 @@
+#+title: Sitemap
+#+layout: sitemap
+#+draft: false
+#+no_comment: t
+
+#+begin_export html
+Every section and pages on this site. Navigate here or use
+<button type="button" class="tag-cloud-btn" data-action="open-palette">
+  Command Palette (x)
+</button>
+to jump quick
+#+end_export

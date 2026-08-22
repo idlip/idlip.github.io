@@ -5,68 +5,20 @@ The Journey begins..
 
 You know its fascinating to have a personal static website which is rich and valuable for others.
 
-I went with Hugo and ox-hugo which is a match that exists only for Emacs (GOAT) to build the site.
+I went with Hugo, writing straight in Org-mode (content/*.org, rendered natively by
+Hugo's own org support) since Emacs (GOAT) is the one true way to write.
 
-I have forked the theme from [[https://rudra.dev]] , and adjusted colors to my liking.
-As of new remake, the change is changed to==> [[https://gitlab.com/rmaguiar/hugo-theme-color-your-world][color-your-world]]
+The theme has been rewritten from scratch a few times, [[https://github.com/idlip/hakimacs][hakimacs]], living in
+=themes/emacs/= as a submodule.
 
 I hope its a soothing experience for you to read!
 
-*** Ideas - TODO
-**** DONE On Window manager                                          :post:
-  CLOSED: [2025-01-02 Thu 19:46] SCHEDULED: <2023-03-30 Thu 13:01>
-  :LOGBOOK:
-  - State "DONE"       from "TODO"       [2025-01-02 Thu 19:46]
-  :END:
-+ Maybe about advantages
-+ Uses and how it is efficient
-+ Bad side
+* Ideas
+- [ ] [[https://en.andros.dev/blog/ddd78757/quick-tutorial-to-get-started-on-org-social/][setup org-social for my site]] - Should be fairly simple
 
-**** DONE Fdroid & Fossdroid
-  CLOSED: [2023-05-17 Wed 19:16] SCHEDULED: <2023-03-31 Fri 17:12>
-  :LOGBOOK:
-  - State "DONE"       from "TODO"       [2023-05-17 Wed 19:16]
-  :END:
 
-**** DONE Use org file for scss too
-  CLOSED: [2023-07-28 Fri 13:26] SCHEDULED: <2023-03-30 Thu 13:38>
-  :LOGBOOK:
-  - State "DONE"       from "TODO"       [2023-07-28 Fri 13:26]
-  :END:
-
-**** DONE REVIEW Comprehensive post on Emacs android                 :post:
-CLOSED: [2025-01-02 Thu 19:46] SCHEDULED: <2023-07-31 Mon>
-:LOGBOOK:
-- State "DONE"       from              [2025-01-02 Thu 19:46]
-:END:
-+ It has got better with termux integration. Its almost like desktop experience now.
-
-**** TODO Maybe on Revealjs for presentation? :post:
-
-**** On Bioinfo R/python learning? :post:
-
-**** Change of font, give a new elegant look :site:
-- Rather than cool cartoony font
-
-**** TODO Literate org config vs modular one :post:
-SCHEDULED: <2023-12-18 Mon 13:20>
-
-**** TODO Art of note taking :snippet:
-
-**** TODO Actual way of getting things done :snippet:
-
-**** DONE Try if one.el is good enough for this site
-CLOSED: [2023-12-21 Thu 13:12]
-:LOGBOOK:
-- State "DONE"       from              [2023-12-21 Thu 13:12]
-:END:
-- Pros: emacs
-- refer: https://github.com/tonyaldon/one.el
-- Did have some limitations, I then tried *org-publish* (~ox-publish~), was almost convinced but had little too much work to get what I desired.
-- The draft, initial setup is in =voyage= branch
-
-**** TODO Write a post on using revealjs for presentation
-:PROPERTIES:
-:ID:       20250524T223510
-:END:
-- Note I used this for all my ppts
+* Resources
+- [ ] https://chrisburnell.com/html-can-do-that/#example-until-found
+- [ ] https://vickiboykis.com/
+- [ ] https://silktide.com/blog/how-to-write-readable-content/
+- [ ] https://chrissmith.xyz/blog/2026/the-process-of-migrating-from-sass-to-native-css/
