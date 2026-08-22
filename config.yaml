@@ -1,5 +1,5 @@
 baseURL: "https://idlip.in"
-languageCode: en
+locale: en
 title: "Dilip's Log"
 theme: emacs
 
@@ -165,8 +165,8 @@ menu:
 
 languages:
   en:
-    languageName: English
-    languageCode: en-us
+    label: English
+    locale: en-us
     weight: 1
 
 caches:

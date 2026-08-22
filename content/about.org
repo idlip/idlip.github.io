@@ -1,11 +1,12 @@
 #+title: About
+#+aliases[]: contact me
 #+draft: false
 #+no_comment: t
 
 #+begin_center
 #+attr_html: :width 200
 #+CAPTION: Gol D. Roger laughing in Laugh Tale!
-[[file:/images/op-rog.jpg]]
+[[file:/images/op-roger.jpg]]
 #+end_center
 
 -----
