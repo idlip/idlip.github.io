@@ -2,29 +2,8 @@
 #+draft: false
 #+no_comment: t
 
-Hi there! Greetings & salutations, and a warm welcome.
-
-This site holds a few blog posts, driven by passion and written to share. Poke
-around: everything here works by keyboard, and the colors change on every visit.
-
-Latest post: {{< latest >}}
-
-* Recently added
-
-- A [[/now/][Now]] page (inspired by [[https://nownownow.com]]).
-- A [[/wander/][Wander]] page (inspired by [[https://codeberg.org/susam/wander][susam/wander]]).
-- A list of [[/repo/][interesting projects and tools]] I use.
-- A list of [[/media/][media]] I like and recommend.
-- A [[/quotes/][quotes & thoughts]] page for useful memos.
-- Bunch of [[https://slashpages.net/][slash pages]] and [[/sitemap][sitemap]] ([[/uses]], [[/colophon]], [[/verify]], [[/prefs]], [[/ai]], [[/changelog]], [[/license][license or will]])
-
-* Try it
-
-The command palette is the fastest way around: search posts, run any command, or
-preview all 305 color themes. Open it with =x=, =Ctrl-P=, =Ctrl-K=, or =Alt-x=
-(Emacs =M-x=). It is the same idea as a universal search/launcher, telescope, or fuzzy
-finder. The buttons below run these features right here, and [[/prefs/][Preferences]] documents
-every setting in full:
+Hi there! Greetings & salutations, and a warm welcome. Everything here works by
+keyboard, and the colors change on every visit.
 
 #+begin_export html
 <div class="tag-cloud" role="group" aria-label="Try the theme features">
@@ -38,9 +17,6 @@ every setting in full:
 </div>
 #+end_export
 
-[[/wander/][Wander]] is a small-web console: hit launch and it drops you on a random site/post from a personal
-list of blogs, articles or cool stuffs.
-
 #+begin_export html
 <div class="wander-launch">
   <a href="/wander/console/" class="wander-btn">
@@ -50,39 +26,13 @@ list of blogs, articles or cool stuffs.
 </div>
 #+end_export
 
-* Explore
+This site holds a few [[/posts/][blog posts]], driven by passion and written to share.
 
-| Page             | What it is                | Key |
-|------------------+---------------------------+-----|
-| [[/posts/][Blog Posts]]       | the main blog             | =g p= |
-| [[/wander/][Wander]]           | a small-web browser       | =g w= |
-| [[/repo/][Projects & Tools]] | things I build and use    | =g r= |
-| [[/media/][Media]]            | watch and recommend       |     |
-| [[/quotes/][Quotes]]           | useful memos              |     |
-| [[/now/][Now]]              | what I am up to lately    |     |
-| [[/prefs/][Preferences]]      | every setting, explained  |     |
-| [[/about/][About]]            | who I am, how to reach me |     |
-| [[/tags/][Tags]]             | browse posts by topic     |     |
-| [[/index.xml][Feeds]]            | subscribe via RSS         |     |
+Latest post: {{< latest >}}
 
-* Keys worth knowing
+Beyond posts: [[/wander/][Wander]] is a small-web console linking out to blogs I actually read; [[/repo/][Projects & Tools]]
+lists things I use and find interesting; [[/media/][Media]] is what I like watching or reading; and [[/quotes/][Quotes]] are memos worth keeping. 
 
-| Key                       | Does                   |
-|---------------------------+------------------------|
-| =x= / =Ctrl-P= / =Ctrl-K= / =M-x= | command palette        |
-| =n= / =p=                     | next / previous post   |
-| =t=                         | toggle dark / light    |
-| =f= / =w=                     | cycle font / width     |
-| =c=                         | color scheme picker    |
-| =?=                         | show all shortcuts     |
+There's also a [[/now/][Now]] page for what I'm up to lately, a stack of [[https://slashpages.net/][slash pages]] mapped out on the [[/sitemap/][sitemap]], and every button above explained in full on [[/prefs/][Preferences]].
 
-* Good to know
-
-- The color scheme is *random every visit*. Found one you like? Hit *Pin scheme* to keep it across sessions.
-- Posts auto-collect their external links into a numbered *References* list and suggest related *See Also* reading.
-- Comments are backend-free: the box opens a pre-filled email.
-
-* Find me
-
-{{< social-links layout="grid" >}}
-
+Curious about me, or want to reach me? Head to [[/about/][About]].

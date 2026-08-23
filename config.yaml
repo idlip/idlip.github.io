@@ -48,11 +48,11 @@ outputFormats:
     notAlternative: true
 
 outputs:
-  home:    [HTML, RSS, Feed, Index, SVG]
-  section: [HTML, RSS, Feed, Index, SVG]   # SVG = section OG image source
-  term:    [HTML, RSS, Feed, Index]
+  home: [HTML, RSS, Feed, Index, SVG]
+  section: [HTML, RSS, Feed, Index, SVG] # SVG = section OG image source
+  term: [HTML, RSS, Feed, Index]
   taxonomy: [HTML]
-  page:    [HTML, SVG]   # SVG = per-post OG image source (rasterized by `just og`)
+  page: [HTML, SVG] # SVG = per-post OG image source (rasterized by `just og`)
 
 pagination:
   pagerSize: 7
@@ -80,63 +80,105 @@ params:
   # haki + Modus have no yaml (personal / theme default) -> hand-written block +
   # explicit swatch (bg/fg/accent). Omit `light` for dark-only schemes.
   colorSchemes:
-    - { name: haki,             label: "Haki",             bg: "#000000", fg: "#ffffff", accent: "#5fd7af" }
-    - { name: "",               label: "Modus",            bg: "#000000", fg: "#ffffff", accent: "#2fafff" }
-    - { name: dracula,          label: "Dracula",          dark: dracula }
-    - { name: gruvbox,          label: "Gruvbox",          dark: gruvbox-dark-medium,  light: gruvbox-light-medium }
-    - { name: tokyo-night,      label: "Tokyo Night",      dark: tokyo-night-dark,     light: tokyo-night-light }
-    - { name: catppuccin-mocha, label: "Catppuccin Mocha", dark: catppuccin-mocha,     light: catppuccin-latte }
-    - { name: one-dark,         label: "One Dark",         dark: onedark,              light: one-light }
-    - { name: rose-pine,        label: "Rosé Pine",        dark: rose-pine,            light: rose-pine-dawn }
-    - { name: kanagawa,         label: "Kanagawa",         dark: kanagawa }
-    - { name: ayu,              label: "Ayu",              dark: ayu-dark,             light: ayu-light }
-    - { name: everforest,       label: "Everforest",       dark: everforest-dark-hard }
-    - { name: oxocarbon,        label: "Oxocarbon",        dark: oxocarbon-dark,       light: oxocarbon-light }
-    - { name: monokai,          label: "Monokai",          dark: monokai }
-    - { name: github-dark,      label: "GitHub Dark",      dark: github-dark,          light: github }
+    - {
+        name: haki,
+        label: "Haki",
+        bg: "#000000",
+        fg: "#ffffff",
+        accent: "#5fd7af",
+      }
+    - {
+        name: "",
+        label: "Modus",
+        bg: "#000000",
+        fg: "#ffffff",
+        accent: "#2fafff",
+      }
+    - { name: dracula, label: "Dracula", dark: dracula }
+    - {
+        name: gruvbox,
+        label: "Gruvbox",
+        dark: gruvbox-dark-medium,
+        light: gruvbox-light-medium,
+      }
+    - {
+        name: tokyo-night,
+        label: "Tokyo Night",
+        dark: tokyo-night-dark,
+        light: tokyo-night-light,
+      }
+    - {
+        name: catppuccin-mocha,
+        label: "Catppuccin Mocha",
+        dark: catppuccin-mocha,
+        light: catppuccin-latte,
+      }
+    - { name: one-dark, label: "One Dark", dark: onedark, light: one-light }
+    - {
+        name: rose-pine,
+        label: "Rosé Pine",
+        dark: rose-pine,
+        light: rose-pine-dawn,
+      }
+    - { name: kanagawa, label: "Kanagawa", dark: kanagawa }
+    - { name: ayu, label: "Ayu", dark: ayu-dark, light: ayu-light }
+    - { name: everforest, label: "Everforest", dark: everforest-dark-hard }
+    - {
+        name: oxocarbon,
+        label: "Oxocarbon",
+        dark: oxocarbon-dark,
+        light: oxocarbon-light,
+      }
+    - { name: monokai, label: "Monokai", dark: monokai }
+    - {
+        name: github-dark,
+        label: "GitHub Dark",
+        dark: github-dark,
+        light: github,
+      }
 
   # Command-palette item-type icons (Nerd Font glyphs). Swap freely; the JS
   # falls back to these same defaults if a key is missing.
   paletteIcons:
-    nav:     "󰘍 "
-    command: "󰘳 "
-    post:    " "
-    tag:     " "
-    scheme:  " "
-    help:    "󰘥 "
+    nav: "󰘍 "
+    command: " "
+    post: " "
+    tag: " "
+    scheme: " "
+    help: "󰘥 "
 
   # flat map — templates: index site.Params.tagicons (tag | lower)
   # applies for all listing pages (/posts, /wander, /projects, /media ,++...)
   tagIcons:
-    snippets:  " "
-    nixos:     " "
-    nix:       " "
-    emacs:     " "
-    gnus:      " "
-    orgmode:   " "
-    novel:     " "
-    onepiece:  "󰨈 "
-    anime:     "󰨈 "
-    manga:     "󰨈 "
-    linux:     " "
-    foss:      " "
-    rss:       " "
-    terminal:  " "
-    cli:       " "
-    vim:       " "
-    android:   " "
+    snippets: " "
+    nixos: " "
+    nix: " "
+    emacs: " "
+    gnus: " "
+    orgmode: " "
+    novel: " "
+    onepiece: "󰨈 "
+    anime: "󰨈 "
+    manga: "󰨈 "
+    linux: " "
+    foss: " "
+    rss: " "
+    terminal: " "
+    cli: " "
+    vim: " "
+    android: " "
     fossdroid: " "
-    quotes:    "󱀡 "
+    quotes: "󱀡 "
     bioinformatics: " "
-    python:    " "
-    r:         "󰟔"
-    finance:   " "
+    python: " "
+    r: "󰟔"
+    finance: " "
     principle: " "
-    webdev:    " "
-    lisp:      "󱃺 "
-    git:       " "
-    game:      " "
-    _default:  " "
+    webdev: " "
+    lisp: "󱃺 "
+    git: " "
+    game: " "
+    _default: " "
 
   favicon: /images/op-roger.jpg
   # Font family for the per-post OG image (themes/emacs/layouts/_default/single.svg).
@@ -149,27 +191,40 @@ params:
   umamiWebsiteID: 64825a51-be1b-416e-b1ec-895aa541dcab
 
   socialLinks:
-    - { label: "hi@idlip.in",  url: "mailto:hi@idlip.in",                          icon: " "  }
-    - { label: "idlip",        url: "https://github.com/idlip",                     icon: " "  }
-    - { label: "idlip",        url: "https://codeberg.org/idlip",                   icon: " "  }
-    - { label: "Dilip G",      url: "https://linkedin.com/in/dilip-g-29707727a",    icon: " "  }
-    - { label: "GolD_Lip",     url: "https://reddit.com/u/GolD_Lip",               icon: " "  }
-    - { label: "zororg",       url: "https://t.me/zororg",                          icon: " "  }
-    - { label: "@idlip",       url: "https://fosstodon.org/@idlip",                 icon: "󰫑 ", rel: me }
-    - { label: "zororg",       url: "https://matrix.to/#/zororg:matrix.org",        icon: "󰘨 " }
+    - { label: "hi@idlip.in", url: "mailto:hi@idlip.in", icon: " " }
+    - { label: "idlip", url: "https://github.com/idlip", icon: " " }
+    - { label: "idlip", url: "https://codeberg.org/idlip", icon: " " }
+    - {
+        label: "Dilip G",
+        url: "https://linkedin.com/in/dilip-g-29707727a",
+        icon: " ",
+      }
+    - { label: "GolD_Lip", url: "https://reddit.com/u/GolD_Lip", icon: " " }
+    - { label: "zororg", url: "https://t.me/zororg", icon: " " }
+    - {
+        label: "@idlip",
+        url: "https://fosstodon.org/@idlip",
+        icon: "󰫑 ",
+        rel: me,
+      }
+    - {
+        label: "zororg",
+        url: "https://matrix.to/#/zororg:matrix.org",
+        icon: "󰘨 ",
+      }
 
 menu:
   main:
-    - { name: Home,      weight: 1, url: / }
-    - { name: About,     weight: 4, url: /about/ }
-    - { name: Blog Posts,     weight: 2, url: /posts/ }
-    - { name: Projects & Tools,  weight: 3, url: /repo/ }
-    - { name: Now Now Now,       weight: 5, url: /now/ }
+    - { name: Home, weight: 1, url: / }
+    - { name: About, weight: 4, url: /about/ }
+    - { name: Blog Posts, weight: 2, url: /posts/ }
+    - { name: Projects & Tools, weight: 3, url: /repo/ }
+    - { name: Now Now Now, weight: 5, url: /now/ }
     - { name: " Feeds", weight: 6, url: index.xml }
-    - { name: Wander My Small Web,    weight: 7, url: /wander/ }
-    - { name: Media,                  weight: 8, url: /media/ }
-    - { name: Quotes,                 weight: 9, url: /quotes/ }
-    - { name: Color Themes,           weight: 10, url: /themes/ }
+    - { name: Wander My Small Web, weight: 7, url: /wander/ }
+    - { name: Media, weight: 8, url: /media/ }
+    - { name: Quotes, weight: 9, url: /quotes/ }
+    - { name: Color Themes, weight: 10, url: /themes/ }
 
 languages:
   en:
@@ -178,10 +233,10 @@ languages:
     weight: 1
 
 caches:
-  assets:        { dir: ":resourceDir/_gen",  maxAge: -1  }
-  getresource:   { dir: ":cacheDir/:project", maxAge: -1  }
-  images:        { dir: ":resourceDir/_gen",  maxAge: -1  }
-  misc:          { dir: ":cacheDir/:project", maxAge: -1  }
-  modulegitinfo: { dir: ":cacheDir/modules",  maxAge: 24h }
-  modulequeries: { dir: ":cacheDir/modules",  maxAge: 24h }
-  modules:       { dir: ":cacheDir/modules",  maxAge: -1  }
+  assets: { dir: ":resourceDir/_gen", maxAge: -1 }
+  getresource: { dir: ":cacheDir/:project", maxAge: -1 }
+  images: { dir: ":resourceDir/_gen", maxAge: -1 }
+  misc: { dir: ":cacheDir/:project", maxAge: -1 }
+  modulegitinfo: { dir: ":cacheDir/modules", maxAge: 24h }
+  modulequeries: { dir: ":cacheDir/modules", maxAge: 24h }
+  modules: { dir: ":cacheDir/modules", maxAge: -1 }
