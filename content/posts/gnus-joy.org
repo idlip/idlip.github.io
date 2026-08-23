@@ -2,6 +2,7 @@
 #+date: 2024-03-10
 #+tags[]: gnus emacs
 #+draft: false
+#+refs[]: gnus
 
 
 Emacs is my editor, and my companion for most of my tasks. Yes, I'd like to call it a second brain extension.

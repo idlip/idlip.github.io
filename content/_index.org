@@ -16,6 +16,7 @@ Latest post: {{< latest >}}
 - A list of [[/repo/][interesting projects and tools]] I use.
 - A list of [[/media/][media]] I like and recommend.
 - A [[/quotes/][quotes & thoughts]] page for useful memos.
+- Bunch of [[https://slashpages.net/][slash pages]] and [[/sitemap][sitemap]] ([[/uses]], [[/colophon]], [[/verify]], [[/prefs]], [[/ai]], [[/changelog]], [[/license][license or will]])
 
 * Try it
 

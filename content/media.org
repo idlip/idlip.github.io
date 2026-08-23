@@ -15,9 +15,14 @@ Things I like watching, reading, and remembering.
 
 * Movies
 - [[https://www.imdb.com/title/tt0088763/][Back to the future]] :: Just amazing comedy & fun in time-traveling | year: 1985
+- [[https://www.themoviedb.org/movie/412862][Ratsasan]] :: Amazing crime thriller that had my assumption wrong every time | year: 2018
+- [[https://www.themoviedb.org/movie/211672-minions][Minions]] :: The OG minions, I'd like to learn there language tbh
+- [[https://www.themoviedb.org/movie/295693-the-boss-baby][Boss Baby]] :: Thats a boss gotta be
+- [[https://www.themoviedb.org/movie/9470][Kung Fu Hustle]] :: Just wish it was real
+- [[https://www.themoviedb.org/movie/9336-police-academy][Police Academy]] :: Funny the unfunny stuffs
 
 * Anime
-- [[https://myanimelist.net/anime/21/One_Piece][One Piece]] :: The greatest adventure in manga/anime | year: 1999 | ep: ongoing | by: G-Oda
+- [[https://myanimelist.net/anime/21/One_Piece][One Piece]] :: The greatest adventure in manga/anime | year: 1999-present | ep: ongoing | by: G-Oda
 
 * YouTube
 - [[https://www.youtube.com/@tsoding][Tsoding Daily]] :: Recreational programming, live | channel: tsoding

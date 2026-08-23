@@ -1,9 +1,7 @@
 #+title: Wander My Small Web
 #+layout: topic-list
-#+wanderconsoles: https://susam.net/wander/::OG Creator Wander|https://susam.github.io/wcn/::Aggregate All Wander Console Network
 #+sort: name
 #+show_console: true
-#+list_label: ↝ Known Sites
 #+chip_color: base09
 #+buffer_name: *wander*
 
@@ -12,6 +10,13 @@ The web is vast, but the part worth reading is small. These are the sites I retu
 Wander through them. You might find something worth keeping. (All are minimal lightweight websites)
 
 Inspired and made with: [[https://codeberg.org/susam/wander][Wander by Susam]]
+
+* Neighbour Consoles
+
+- [[https://susam.net/wander/][OG Creator Wander]] :: https://susam.net/wander/
+- [[https://susam.github.io/wcn/][Aggregate All Wander Console Network]] :: https://susam.github.io/wcn/
+
+* ↝ Known Sites
 
 - [[https://idlip.in/][My Site]] :: My personal corner of the web | tag: emacs
 - [[https://susam.net/][Susam Pal]] :: Computing, mathematics, writing
@@ -57,30 +62,31 @@ Inspired and made with: [[https://codeberg.org/susam/wander][Wander by Susam]]
 - [[https://chrissmith.xyz/][Chris Smith]] :: Tech blog in cool way
 - [[https://en.andros.dev/blog/ddd78757/quick-tutorial-to-get-started-on-org-social/][Org Social]] :: Cool emacsian way to socialize with org mode | tag: orgmode
 - [[https://obtf.ru/en/][OBTF]] :: The best first-brain method, GTD, Organization system | tag: principle
-- [[https://scotto.me/blog/2026-07-17-which-lisp/][Road to Lisp]] :: Overview of LISP land
+- [[https://scotto.me/blog/2026-07-17-which-lisp/][Road to Lisp]] :: Overview of LISP land | tag: lisp
 - [[https://slashpages.net/][Slash pages]] :: slash pages that personal site can have
-- [[https://dbushell.com/uses/][Web tools]] :: Some web tools resource to build site
+- [[https://dbushell.com/uses/][Web tools]] :: Some web tools resource to build site | tag: webdev
 - [[https://sive.rs/][Direk Sivers ]] :: Short blog posts and to the point of purpose
-- [[https://blog.jsbarretto.com/post/software-is-joy][Software is Joy]] :: Writing toy software for fun
-- [[https://rhaeguard.github.io/posts/regex][Rhaeguard Regex Engine]] :: Build regex in Go
-- [[https://ianthehenry.com/][Henry]] :: Blog from Janet lover
-- [[https://mtlynch.io/code-review-love/][How to make reviewer happy on PR]] :: Good PR practices
-- [[https://davidpoblador.com/deep-dives/what-happened-to-the-frontend/][Frontend code smells/looks]] :: Review on frontend framework and code
-- [[https://franktisellano.github.io/datatype/][Datatype Glyph Charts]] :: Font glyph charts
-- [[https://penfight.xyz/][Pen fight]] :: Oops its a game battle
-- [[https://blr.indiewebclub.org/][Blr Indie Web Club]] :: World is small for indie web
-- [[https://chrismorgan.info/][Chris Morgan]] :: Tech blog on web stuff
-- [[https://avilpage.com/][Avil page]] :: Blog by python community veteran and Bioinformatics
+- [[https://blog.jsbarretto.com/post/software-is-joy][Software is Joy]] :: Writing toy software for fun | tag: cli
+- [[https://rhaeguard.github.io/posts/regex][Rhaeguard Regex Engine]] :: Build regex in Go | tag: cli
+- [[https://ianthehenry.com/][Henry]] :: Blog from Janet lover | tag: lisp
+- [[https://mtlynch.io/code-review-love/][How to make reviewer happy on PR]] :: Good PR practices | tag: git
+- [[https://davidpoblador.com/deep-dives/what-happened-to-the-frontend/][Frontend code smells/looks]] :: Review on frontend framework and code | tag: webdev
+- [[https://franktisellano.github.io/datatype/][Datatype Glyph Charts]] :: Font glyph charts | tag: webdev
+- [[https://penfight.xyz/][Pen fight]] :: Oops its a game battle | tag: game
+- [[https://blr.indiewebclub.org/][Blr Indie Web Club]] :: World is small for indie web | refs: iwcblr
+- [[https://chrismorgan.info/][Chris Morgan]] :: Tech blog on web stuff | tag: webdev
+- [[https://avilpage.com/][Avil page]] :: Blog by python community veteran and Bioinformatics | tag: py
 - [[https://bearblog.dev/discover/][Bear blogs ]] :: I love the [[https://robertbirming.com/bearming/][bear]] [[https://github.com/janraasch/hugo-bearblog/][theme]]
-- [[https://joecode.com/2026-08-19-sqlite3/][Sqlite for everything]] :: Nice overview on sqlite
-- [[https://miniflux.app/opinionated.html][Miniflux opinionated]] :: How minimalist tools are better built
-- [[https://outputerror.com/posts/tracking-reading-in-emacs/][Tracking reading in Emacs]] ::  org mode to track & read more
-- [[https://feedle.world/top-stories][Feedle]] :: Top stories curated from HN
-- [[https://indieblog.page/all][Indie Blog]] :: Discover more
-- [[https://powrss.com/][Powrss]] :: Consume more
-- [[https://ooh.directory/][ooh directory]] :: Collection of diverse blogs
-- [[https://minifeed.net/global][Minifeed]] :: Discover more
-- [[https://deadsimpletech.com/blog/why-dont-people-use-git-properly][Use git properly]] :: Why people dont utilize git properly
-- [[https://brownian.substack.com/p/rust-for-bioinformatics-a-curated][Rust for Bioinformatics]] :: Rust is more adapted
+- [[https://joecode.com/2026-08-19-sqlite3/][Sqlite for everything]] :: Nice overview on sqlite | tag: cli
+- [[https://miniflux.app/opinionated.html][Miniflux opinionated ]] :: How minimalist tools are better built
+- [[https://outputerror.com/posts/tracking-reading-in-emacs/][Tracking reading in Emacs]] ::  org mode to track & read more | tag: org
+- [[https://feedle.world/top-stories][Feedle]] :: Top stories curated from HN | tag: rss
+- [[https://indieblog.page/all][Indie Blog]] :: Discover more | tag: rss
+- [[https://powrss.com/][Powrss]] :: Consume more | tag: rss
+- [[https://ooh.directory/][ooh directory]] :: Collection of diverse blogs | tag: rss
+- [[https://minifeed.net/global][Minifeed]] :: Discover more | tag: rss
+- [[https://deadsimpletech.com/blog/why-dont-people-use-git-properly][Use git properly]] :: Why people dont utilize git properly | tag: git
+- [[https://brownian.substack.com/p/rust-for-bioinformatics-a-curated][Rust for Bioinformatics]] :: Rust is more adapted | tag: bioinformatics
+- [[https://joshblais.com/][Joshua Blais]] :: Emacs proponent | tag: emacs
 
 /(this page might have updates as days goes on.)/  

@@ -1,6 +1,7 @@
 #+title: Indie Web: Write more?
 #+date: 2026-08-02
 #+tags[]: indieweb til wikimedia meetup
+#+refs[]: iwcblr
 
 - This post was written in BLR Indie Web Club writing session.
 

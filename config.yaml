@@ -41,6 +41,11 @@ outputFormats:
     baseName: og
     isPlainText: true
     notAlternative: true
+  SearchIndex:
+    mediaType: application/json
+    baseName: search-index
+    isPlainText: true
+    notAlternative: true
 
 outputs:
   home:    [HTML, RSS, Feed, Index, SVG]
@@ -127,7 +132,10 @@ params:
     r:         "󰟔"
     finance:   " "
     principle: " "
-    webdev:       " "
+    webdev:    " "
+    lisp:      "󱃺 "
+    git:       " "
+    game:      " "
     _default:  " "
 
   favicon: /images/op-roger.jpg

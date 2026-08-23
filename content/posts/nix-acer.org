@@ -2,6 +2,7 @@
 #+tags[]: linux nixos
 #+draft: false
 #+date: [2023-10-21 Sat]
+#+refs[]: acer
 
 In this post am sharing some of the experience of using my new laptop, *Acer swift Go Oled*. Compact, Premium ultra-book with Oled, Yes, a good hand made mobile laptop.
 
