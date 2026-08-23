@@ -1,9 +1,9 @@
 /* Fonts | custom built */
 :root {
-  --heading-font: "impress", sans-serif;
-  --sans-font: "code-ace", sans-serif;
-  --code-font: "code-op", monospace;
-  --serif-font: "code-haki", serif;
+  --heading-font: "impress", "nerd-icons", sans-serif;
+  --sans-font: "code-ace", "nerd-icons", sans-serif;
+  --code-font: "code-op", "nerd-icons", monospace;
+  --serif-font: "code-haki", "nerd-icons", serif;
 }
 
 @font-face {
@@ -38,9 +38,17 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "nerd-icons";
+  src: url("../fonts/symbols-nerd.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 body,
 article.post-content {
-  font-family: var(--body-font-family);
+  font-family: var(--body-font-family), "nerd-icons";
 }
 /* Code/verbatim stay monospace always, independent of font mode entirely */
 pre,
@@ -53,7 +61,7 @@ samp,
   font-family: var(--code-font);
 }
 .nf {
-  font-family: "Symbols Nerd Font Mono", var(--code-font), monospace;
+  font-family: "nerd-icons", var(--code-font), monospace;
 }
 
 /* headings */
