@@ -163,11 +163,12 @@ params:
     linux: " "
     foss: " "
     rss: " "
+    games: " "
     terminal: " "
     cli: " "
     vim: " "
-    android: " "
-    fossdroid: " "
+    android: ""
+    fossdroid: ""
     quotes: "󱀡 "
     bioinformatics: " "
     python: " "
@@ -177,7 +178,6 @@ params:
     webdev: " "
     lisp: "󱃺 "
     git: " "
-    game: " "
     _default: " "
 
   favicon: /images/op-roger.jpg

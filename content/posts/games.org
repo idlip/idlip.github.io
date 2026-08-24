@@ -1,0 +1,174 @@
+#+title: Games that occupied my life
+#+date: 2026-08-23
+#+tags[]: games android
+#+draft: true
+
+Games are in fact occupation of childhood and adulthood. We pay with out time to play, form social
+community or just kill time playing it.
+
+* Early childhood
+
+The best game that really filled my early childhood was [[https://www.rockstargames.com/games/vicecity][GTA Vice City]], the OG steal car and roam
+around, act as a simulator person immersed in Tony's grant adventure of theft
+
+In fact, before this most of my time was spent on playing [[https://www.wwe.com/article/wwe-video-games-history][WWE SmackDown! Here Comes the Pain]] in PS2
+with my brother and close friend. It used to be so fun, to smack and pin down people. In fact I do
+love WWE for its entertainment factor and character they had in Attitude era (that's for another
+blog)
+
+#+BEGIN_grid
+  #+attr_html: :alt "GTA Vice City game showing final Mission Passed"
+  #+caption: GTA Vice City game showing final Mission Passed.
+  [[https://media.gtanet.com/images/2764.jpg]]
+
+  #+caption: WWE Smackdown here comes pain, undertaker choke slamming Brock in Elimination chamber
+  [[https://images.launchbox-app.com/02c94837-29ae-4d2d-b0d9-a1e55b08ccd5.png]]
+#+END_grid
+
+Along with this, offline games that crushed my time were, [[https://www.ea.com/games][Road Rash]], yep kick the police guy and
+swing the chain and smash it right on the head.
+
+Also [[https://en.wikipedia.org/wiki/Captain_Claw][Captain Claw]] was so good, cat and dog chase in such a pirated way, maybe this started my love
+towards Pirates world (One piece). Captain claw was definitely ahead of its time for sure, even today I find the visuals stunning compared to any mobile games.
+
+#+begin_grid
+#+caption: Road rash game with cop chasing and one biker about to be kicked
+[[https://images.sftcdn.net/images/t_app-cover-l,f_auto/p/0c450dd1-e4cb-447c-9d2f-ac3e7aabf75e/1425069087/road-rash-road-rash_5.jpg]]
+
+#+caption: Captain claw about to kill two puppy
+[[https://static0.xdaimages.com/wordpress/wp-content/uploads/wm/2025/07/captain-claw-level-two-enemies.png]]
+#+end_grid
+
+Of course I cannot miss mentioning offline games outside in real life. With friends we also used to
+play cricket in the streets and in ground every day. School sports games weren't much though.
+
+
+* Adulthood
+
+Most of the adulthood drifted towards using social media; Facebook was peak among socializing, Hike
+was crazy with stickers and there arised the mobile gaming which was at most peak.
+
+As a kid the only game I discovered on android people playing was [[https://subwaysurfers.com/][Subway Surfers]] and [[https://imangistudios.com/][Temple Run]], the
+endless runner that gave the dopamine a game needs to give. And at this time I had limited phone
+usage and time. Obviously I cannot forget the giant game that was on everyone's phone, [[https://www.king.com/game/candycrush][Candy Crush
+Saga]], it was just delicious.
+
+#+begin_grid 
+#+caption: Subway surfer where boy got caught by cop
+[[https://i.pinimg.com/originals/f1/76/8f/f1768fc4d935f5b018eeace40dfcb995.jpg]]
+
+#+caption: Candy crush saga. The OG arcase puzzle game.
+[[https://cdn.mobygames.com/screenshots/1175350-candy-crush-saga-android-the-chocolate-candy-covered-with-sprink.jpg]]
+#+end_grid
+
+Then came the best game for mobile, [[https://supercell.com/en/games/clashofclans/][Clash of Clans]], it is the most nostalgic game that I feel even
+today. The slow base building, and clan socializing with players, constant chat, global chat to show
+off trophy leagues, war time, attach plans and _Barchers_ attach, using each barbarian and archer to
+loot and save elixir, watch for efficient times on upgrades and so much more.
+
+Clash of clans definitely felt more immersive to play and connect everyday to progress until TH11.
+TBH I liked until Th10, but TH11 gave night mare over an eagle for sure. After TH12 I think game
+went boring in bits and complicated the game. Until TH11 everything felt worth it and had its
+purpose in game. We friends and neighbors used to build clan, do attacks and discuss every day. Go
+to popular clan and ask for "Give me Co or else will leave", yes promotion was life achievement
+there.
+
+#+begin_grid
+#+caption: Clash of Clans TH9 GoHo attack with hogs lvl 5 max
+[[https://cocland.com/wp-content/uploads/2015/05/hogowiwi-th9-guide-1.jpg]]
+
+#+caption: Clash royale training camp attack
+https://upload.wikimedia.org/wikipedia/en/9/9e/Clash_Royale_2v2.jpg
+#+end_grid
+
+Then game the big breakout with clash universe game, [[https://supercell.com/en/games/clashroyale/][Clash Royale]], which was easily best strategy
+game with cards and skills. It even beat out clash of clans in popularity and took over soon with
+esports scene and more. They had varied cards, various combos and it applied same clash of clans
+formula of being very immersive. But I wonder if it was supercell greedy or something, both games
+failed IMO after 2020, as they started complicating or people moved on with life.
+
+In fact, clash royale was best those days, but soon in relaity later turned out be [[https://redlib.catsarch.com/r/AndroidGaming/comments/1vklcn6/which_game_do_you_regret_spending_lots_of_hours/][most regret mobile game to have wasted time on]]. Cause they ruined it so badly into Pay-to-upgrade tier.
+
+Even tho brawl stars is kinda third success to them, I did not like brawl as it soon got complicated
+with pay to get easy upgrades stuff. Grind was totally bad.
+
+But supercell definitely was the champ among mobile gaming and took over 2016-2020 until they
+complicated and ruined the games (thanks).
+
+** Pandemic
+
+Then came the pandemic and home quarantine, this period started more time towards mobile gaming.
+Since all friends had to kill time, we eventually came to one game to play, it was [[https://www.mobilelegends.com/][Mobile Legends:
+Bang Bang]] (MLBB aka Moba Legends 5x5). This was 5v5 MOBA game which had several herous, flashy
+moves, skills and objective was simply to kill other players and beat the base.
+
+This definitely took most hours player per day, and it was the first time which was totally
+competitive to play with others. We used to play as team and it was fun to curse, bash, troll and
+play many games laughing together.
+
+#+begin_grid
+#+caption: Mobile Legends attacking in Enemy base
+https://i0.wp.com/gamingonphone.com/wp-content/uploads/2022/02/mobile-legends-lancelot.jpg
+
+#+caption: Onmyoji Arena, the beauty of MOBA game
+https://cdn-www.bluestacks.com/bs-images/Onmyoji-Arena_Bot-Guide_EN_6.png
+#+end_grid
+
+Also there was one of the most beautiful and aesthetic game out there, which was not at all P2W and
+was the perfect MOBA for mobile, [[https://www.onmyojiarena.us/][Onmyoji Arena]]. It had all japanese customs and themed, but thanks
+to Indian Gov, they banned all NetEase games, and flush it went away.
+
+Obviously there was among us as well for a bit, but due to hype I started it, but not a major part
+of time occupancy.
+
+* Adult
+
+After pandemic and MLBB, I slowly dropped playing any games. Our friends used to play Badminton
+together in park as beginner and slowly shifted to playing only in Indoor court nowadays (novice ->
+pro so quick!)
+
+After that there aren't any games that made big impact or occupied tremendous time, all were offline
+or real life games.
+
+Definitely I missed mentioning many misc games that once player, or simply enjoyed alone. Some of it
+were:
+
+Detective games, Object finding games, Candy crush or farm saga, many puzzle solving games.
+
+Recently I've been enjoying [[https://www.honorofkings.com/][Honor of Kings]] the Chinese MOBA giant. Its better than MLBB for sure,
+but lacks the playerbase worldwide outside china, except that its a solid game with poor matchmaking.
+
+As of writing this, I'm really enjoying [[https://play.google.com/store/apps/details?id=com.dunderbit.humbug2&hl=en_US][Humbug 2]] game, this is really fantastic puzzle game. Chill
+and cozy way to move insects to target.
+
+#+begin_grid
+#+caption: Humbug 2 gameplay
+https://img.skich.io/games/screenshots/637021ce-eee4-4bc7-8d27-b936e25f641a.jpg
+
+#+caption: Honor of Kings game
+https://www.levelinfinite.com/wp-content/uploads/2024/02/honor-of-kings-game-image-7.jpg
+#+end_grid
+
+------
+
+In case you wonder why no PC games are shown, PC was also used only for limited time. Now that I use
+Linux, I only have some casual native games here as well.
+
+1. [[https://www.playrix.com/games/fishdom/][Fishdom H2O: Hidden Odyssey]] - Detect objectives in cozy ocean
+2. [[https://www.ageofempires.com/][Age of Empires]] and [[https://www.ageofempires.com/games/age-of-mythology/][Age of Mythology]] (GOAT) - History speaks the strategy
+3. [[https://www.ea.com/games/need-for-speed][Need for Speed: Special Edition]] - The mclaren and the engine noise was bliss
+4. [[https://www.openttd.org/][OpenTTD]] - FOSS Transport tycoon game
+
+#+begin_grid
+#+caption: Fishdom H20 find hidden objects
+https://cdn8.gametop.com/download-free-games/fishdom-h2o/b2.jpg
+
+#+caption: Age of mythology village cooking
+https://media.dotesports.com/wp-content/uploads/2024/08/Find-all-unit-hotkeys-in-Age-of-Mythology.jpg
+
+#+caption: NFS SE Racing game
+https://pcgames9505.weebly.com/uploads/1/0/2/1/102119388/nfs2semonolithic.jpg
+
+#+caption: OpenTTD land mass
+https://assetsio.gnwcdn.com/openttd-best-management-games.jpg
+#+end_grid
