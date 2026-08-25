@@ -1,7 +1,6 @@
 #+title: Games that occupied my life
-#+date: 2026-08-23
+#+date: 2026-08-25
 #+tags[]: games android
-#+draft: true
 
 Games are in fact occupation of childhood and adulthood. We pay with out time to play, form social
 community or just kill time playing it.
