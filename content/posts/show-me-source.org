@@ -1,0 +1,69 @@
+#+title: Talk is Cheap. Code is Cheap. Show me the Source
+#+date: [2026-08-27 Thu]
+#+tags[]: philosophy programming
+
+- https://blainsmith.com/essays/humanities-in-the-machine/
+
+I've been meaning to write about this since [2026-03-20 Fri]. finally doing it.
+
+Quick note on the title before I get into it. It's riffing on Linus Torvalds' old line, "talk is
+cheap, show me the code". Except these days even that doesn't hold up, talk is cheap sure, but code
+is cheap too now, anyone can get an LLM to spit out a working function in seconds. What's actually
+hard to fake, and what most of what I read (and write) is missing, is the source: the history, the
+reasoning, the "why" behind a piece of code or a life's work, not just the diff. That's what this
+essay is actually about, so show me the source felt more honest than show me the code.
+
+To put it simply: Business gives us endless *Talk* for free, AI gives us endless *Code* for free, but the *Source*, the real reason behind any of it, can only come from us, Humans.
+
+So I read this essay by [[https://blainsmith.com][Blain smith]] and it stuck with me for months. The whole point of it is that
+the people who actually built computers as we know them were not "just" engineers. Hoare studied
+classics and philosophy before he ever wrote quicksort. Lovelace called herself a poetical
+scientist. Turing published his most famous paper in a philosophy journal, not a computer science
+one. Dijkstra wrote actual essays, by hand, instead of just writing code comments. None of them were pure "tech pals", they came from somewhere else first.
+
+Honestly the thing that makes the essay slap me is not just "look, philosophy guy also did tech",
+its that the stuff they built actually held up. Quicksort is still the sort you get taught first,
+decades later. Dijkstra's shortest path algorithm is quietly running every time you open maps and
+ask for directions. C is still the grandparent of basically every language people use today, and
+unix is still under the hood of most servers and phones on earth. hopper's idea, that code should
+read like english (I favor code as docs too), is why every language after her looks the way it does
+instead of staying pure math symbols. None of this stuff got replaced because someone found a
+"better" idea next year, it just kept being the right idea. That's rare. Most code I see in industry
+or tool these days doesn't survive six months, let alone sixty years, every few year they all get
+replaced with better alternative or solution (grander eg: rust hype for everything)
+
+What got me thinking is, i'm still just a novice in this field. Most of what I read day to day is
+[[https://lobste.rs][lobste.rs]], [[https://fosstodon.org][mastodon]], docs, and youtube. Nobody ever tells you to go read philosophy or history to
+get better at writing code. Its always "learn this framework", "learn this language", "here's how to
+solve this", heck nobody even bothers telling how to think of solving.
+
+The essay also says something that annoyed me a bit, in a good way. It says a lot of today's tech,
+social media, algorithms, all of it, is built by people who never studied ethics or psychology or
+how to write clearly, and thats part of why it feels careless. Like nobody stopped to ask "should we
+build this" and only asked "can we build this", they should've asked "Does it solve a problem",
+instead it went into "We create a problem and then solve it". I don't fully know if i agree with
+that, but it does feel true when i think about doomscrolling or apps that are clearly designed to be
+addictive on purpose, economy & business...!
+
+The ending is basically: you don't need a philosophy degree, you just need to actually read stuff
+outside of tech. Books, essays, history. Let it change how we think about what we build, not just how to build it technically.
+
+I genuinely don't know where i land on all of this yet. But it did make me want to read more outside of programming books, and maybe slow down a bit before shipping things.
+
+Some more amazing resource to check: [[https://www.youtube.com/watch?v=yIPbE7BssOs][Rethinking the Developer Career Path – Randall Koutnik]]
+([[https://speakerdeck.com/rkoutnik/implementers-solvers-finders-rethinking-the-developer-career-path?slide=14][slides]]) ,[[https://fossunited.org/blog/learning-to-manage/building-a-shared-foundation][Learning to Manage - Building a shared foundation]], [[https://notashelf.dev/posts/taste-is-all-thats-left][Taste is all thats left]] and [[https://vickiboykis.com/2026/08/12/write-for-people/][Write for people]].
+
+-----
+
+Little cheat sheet of everyone the essay talks about, one line each, with a link if you
+want to actually go read them instead of taking blain's word (or mine) for it.
+
+- [[https://amturing.acm.org/pdf/HoareTuringTranscript.pdf][Tony Hoare]] : quicksort person, studied classics and philosophy at oxford before any of that.
+- [[https://nesslabs.com/ada-lovelace][Ada Lovelace]] : called her own thinking "poetical science", saw that babbage's machine could do more than just crunch numbers.
+- [[Https://phil415.pbworks.com/f/TuringComputing.pdf][Alan Turing]] : published "computing machinery and intelligence" in a philosophy journal, not a cs one.
+- [[Https://www.cs.utexas.edu/~EWD/transcriptions/EWD03xx/EWD340.html][Edsger Dijkstra]] : wrote 1300+ essays by hand (the EWDs), also wrote [[https://www.cs.utexas.edu/~EWD/transcriptions/EWD02xx/EWD215.html]["go to statement considered harmful"]].
+- [[https://en.wikipedia.org/wiki/Grace_Hopper][Grace Hopper]] : made compilers speak english instead of math symbols, because "very few people are really symbol manipulators."
+- [[Https://www.cnn.com/2011/10/14/tech/innovation/dennis-ritchie-obit-bell-labs/index.html][Dennis Ritchie]] : made C and unix, died the same week as steve jobs and almost nobody noticed.
+- [[Https://engineering.princeton.edu/news/2012/02/07/brian-kernighan-what-intelligent-people-should-know-about-computers][Brian Kernighan]] : co-wrote the C book, later spent his career trying to connect CS back to liberal arts.
+- [[Https://www.gnu.org/gnu/manifesto.en.html][Richard Stallman]] : founded free software as a moral stance, not just a technical one.
+- also worth reading: [[http://esr.ibiblio.org/?p=4386][eric raymond's take on stallman]], if you want the other side of the free software story.
