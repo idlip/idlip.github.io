@@ -67,3 +67,16 @@ want to actually go read them instead of taking blain's word (or mine) for it.
 - [[Https://engineering.princeton.edu/news/2012/02/07/brian-kernighan-what-intelligent-people-should-know-about-computers][Brian Kernighan]] : co-wrote the C book, later spent his career trying to connect CS back to liberal arts.
 - [[Https://www.gnu.org/gnu/manifesto.en.html][Richard Stallman]] : founded free software as a moral stance, not just a technical one.
 - also worth reading: [[http://esr.ibiblio.org/?p=4386][eric raymond's take on stallman]], if you want the other side of the free software story.
+
+
+------
+
+I know the title was very catchy, and [[https://www.alexmolas.com/2023/07/15/nobody-cares-about-your-blog.html][nobody cares about blog]], but I honestly didn't expect people to find this post so soon.
+
+Thanks for the shout-outs:
+
+- https://lobste.rs/s/idizd1/talk_is_cheap_code_is_cheap_show_me_source
+
+- https://fosstodon.org/@phoefer@suma-ev.social/117171481544630493
+
+I'm just glad my little post got mined 💎
