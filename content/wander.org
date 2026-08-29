@@ -88,5 +88,9 @@ Inspired and made with: [[https://codeberg.org/susam/wander][Wander by Susam]]
 - [[https://deadsimpletech.com/blog/why-dont-people-use-git-properly][Use git properly]] :: Why people dont utilize git properly | tag: git
 - [[https://brownian.substack.com/p/rust-for-bioinformatics-a-curated][Rust for Bioinformatics]] :: Rust is more adapted | tag: bioinformatics
 - [[https://joshblais.com/][Joshua Blais]] :: Emacs proponent | tag: emacs
+- [[https://www.tomica.net/][Ivan tomica]] :: Another emacs themed site just like twin
+- [[https://www.chiply.dev/][Chiply]] :: Emacs, Org roam graph and hyperbole
 
+
+------
 /(this page might have updates as days goes on.)/  
