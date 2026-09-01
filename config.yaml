@@ -8,7 +8,15 @@ copyright: "Copyright © 2023-2026, Dilip | Zororg; All rights reserved."
 enableEmoji: true
 enableInlineShortcodes: true
 enableRobotsTXT: true
+enableGitInfo: true
 staticDir: [static, static-local]
+
+frontmatter:
+  lastmod:
+    - lastmod
+    - :git
+    - date
+    - publishdate
 
 ignoreFiles:
   - data/schemes/LICENSE
