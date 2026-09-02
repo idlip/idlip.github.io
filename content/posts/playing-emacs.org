@@ -1,0 +1,41 @@
+#+title: Playing with Emacs
+#+date: 2026-09-02
+#+tags[]: emacs carnival games
+
+- This post is my second [[https://www.emacswiki.org/emacs/Carnival][Emacs carnival]] entry, this time for [[https://www.emacswiki.org/emacs/CarnivalSeptember2026][Sept 2026]]. If you're new to this site, FYI I go by =Zororg= in emacs chat/universe.
+
+Coincidentally I just wrote on [[/posts/games][games]] in my previous post, but it covers more on what all games I've played till now mostly.
+
+Every emacs users (>1 YOE to qualify) would know that emacs is the tinkering lisp machine, all you
+do everyday is tweak and play with it. Emacs is like a big playground, the definite workshop to all users.
+
+I don't play any game in emacs as such, but one thing that impress me everytime I run is, =M-x zone=.
+Not the graphical screensaver you'd expect, but the ASCII text dancing around my screen is so
+blissful to watch. Never seen any editor do that, CLI programs can do, but having in emacs is chef's
+kiss for me. IMO it should also be easy to program it to behave like =cava= (music visualizer) to make
+a package that integrates with mpd/mpv and =M-x zone= mode dances along!
+
+/wow I'm serious I just got this prompt while writing this, anyone can feel free to go ahead. Even I
+plan to experiment this at some point/. Additionally if lyrics can be fetched to dance with you (≧∇≦)/
+
+Or you can say it was unconscious memory that sparked since I watch [[https://www.youtube.com/watch?v=580DxF2M7EE][Tsoding livestream]] where he has
+been programming a Jai program to play song and show with cool visualization.
+
+I read alot of epub thanks to [[https://depp.brause.cc/nov.el/][nov.el]] package, embracing ASCII text is always great. I seldom use
+PDFs, in fact I don't use [[https://github.com/ahrm/sioyek][sioyek]] (one of the best software IMO) as well. I really wanna use
+[[https://codeberg.org/MonadicSheep/emacs-reader][emacs-reader]] but I have stopped using pdf altogether 😅
+
+These days I only Emacs, [[https://github.com/glide-browser/glide][Glide browser]], terminal, Agentic coding (work) as my four pillars of
+computing interface. Anything else? the answer always been emacs again. Its like a cycle, nothing
+goes out of these 4 honestly.
+
+This just proves how much playful emacs is, its surely is a small community, but every discussion and
+updates on [[https://fosstodon.org/tags/emacs][#emacs]] always provides a smile on every emacs users (again, >1 YOE to realize). Every
+[[https://redlib.catsarch.com/r/emacs/comments/1w4knk3/question_about_things_that_surprised_you_about/p792xh7/?context=3#p792xh7]["aha" moment]] is always a TIL for someone and remember me notes for all veterans.
+
+Another game of emacs I like is, how its a swimming pool of texts. You breath text, you see text and
+even you edit the text (please do if not).
+
+Emacs has always been a playful machine that mends to the user and not make user mend to it.
+
+Emacs is what every software should be designed as: something that keeps you busy playing with it, so you never get around to actually using it.
