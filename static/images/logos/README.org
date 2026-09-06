@@ -1,0 +1,31 @@
+#+title: Logo attributions
+
+Source and attribution for each logo used in the footer badges.
+
+The introduction to badge was inspired by Emacs badges created in this repo:
+https://github.com/DevelopmentCool2449/emacs-svg-badges/
+
+Thought to keep only Emacs and orgmode as it is, but decided to expand it in some style.
+
+* emacs.png
+
+- Source : https://www.gnu.org/software/emacs/ and 
+- License : GPL
+
+* orgmode.png
+
+- Source : https://orgmode.org/
+- License : GPL
+
+* zoro-chibi.webp
+
+- Source : https://www.vecteezy.com/vector-art/24104955-vector-manga-anime-pirate-japan-character-cute-cartoon
+- OP : Sam Kal
+
+* onepiece.webp
+
+- Source : Seeklogo - https://seeklogo.com/vector-logo/103249/one-piece
+
+* foss.webp
+
+- Source : Flaticon - https://www.flaticon.com/free-icon/coding_2010957

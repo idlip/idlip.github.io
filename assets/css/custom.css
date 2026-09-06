@@ -148,6 +148,219 @@ article h4 {
   color: var(--h3-color);
 }
 
+/* badges */
+.badge {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35em;
+  width: 6.5em;
+  padding: 0.6em 0.4em;
+  margin: 0 0.4em;
+  /* border: 1px solid var(--border); */
+  border-radius: var(--radius);
+  text-decoration: none;
+  text-align: center;
+  vertical-align: top;
+}
+
+.rain-confetti {
+  display: contents;
+  pointer-events: none;
+}
+
+.rain-confetti span {
+  position: fixed;
+  top: -5vh;
+  left: var(--rain-left);
+  font-family: var(--code-font);
+  font-size: 0.95rem;
+  color: var(--fg-dim);
+  opacity: 0;
+  z-index: 500;
+}
+
+.rain-confetti span:nth-child(1) {
+  --rain-left: 4%;
+  animation-duration: 2.6s;
+  animation-delay: -0.1s;
+}
+.rain-confetti span:nth-child(2) {
+  --rain-left: 8%;
+  animation-duration: 3s;
+  animation-delay: -0.4s;
+}
+.rain-confetti span:nth-child(3) {
+  --rain-left: 12%;
+  animation-duration: 3.5s;
+  animation-delay: -0.7s;
+}
+.rain-confetti span:nth-child(4) {
+  --rain-left: 16%;
+  animation-duration: 4s;
+  animation-delay: -1s;
+}
+.rain-confetti span:nth-child(5) {
+  --rain-left: 20%;
+  animation-duration: 2.9s;
+  animation-delay: -1.3s;
+}
+.rain-confetti span:nth-child(6) {
+  --rain-left: 24%;
+  animation-duration: 3.4s;
+  animation-delay: -1.6s;
+}
+.rain-confetti span:nth-child(7) {
+  --rain-left: 28%;
+  animation-duration: 2.6s;
+  animation-delay: -1.9s;
+}
+.rain-confetti span:nth-child(8) {
+  --rain-left: 32%;
+  animation-duration: 3s;
+  animation-delay: -2.2s;
+}
+.rain-confetti span:nth-child(9) {
+  --rain-left: 36%;
+  animation-duration: 3.5s;
+  animation-delay: -0.1s;
+}
+.rain-confetti span:nth-child(10) {
+  --rain-left: 40%;
+  animation-duration: 4s;
+  animation-delay: -0.4s;
+}
+.rain-confetti span:nth-child(11) {
+  --rain-left: 44%;
+  animation-duration: 2.9s;
+  animation-delay: -0.7s;
+}
+.rain-confetti span:nth-child(12) {
+  --rain-left: 48%;
+  animation-duration: 3.4s;
+  animation-delay: -1s;
+}
+.rain-confetti span:nth-child(13) {
+  --rain-left: 52%;
+  animation-duration: 2.6s;
+  animation-delay: -1.3s;
+}
+.rain-confetti span:nth-child(14) {
+  --rain-left: 56%;
+  animation-duration: 3s;
+  animation-delay: -1.6s;
+}
+.rain-confetti span:nth-child(15) {
+  --rain-left: 60%;
+  animation-duration: 3.5s;
+  animation-delay: -1.9s;
+}
+.rain-confetti span:nth-child(16) {
+  --rain-left: 64%;
+  animation-duration: 4s;
+  animation-delay: -2.2s;
+}
+.rain-confetti span:nth-child(17) {
+  --rain-left: 68%;
+  animation-duration: 2.9s;
+  animation-delay: -0.1s;
+}
+.rain-confetti span:nth-child(18) {
+  --rain-left: 72%;
+  animation-duration: 3.4s;
+  animation-delay: -0.4s;
+}
+.rain-confetti span:nth-child(19) {
+  --rain-left: 76%;
+  animation-duration: 2.6s;
+  animation-delay: -0.7s;
+}
+.rain-confetti span:nth-child(20) {
+  --rain-left: 80%;
+  animation-duration: 3s;
+  animation-delay: -1s;
+}
+.rain-confetti span:nth-child(21) {
+  --rain-left: 84%;
+  animation-duration: 3.5s;
+  animation-delay: -1.3s;
+}
+.rain-confetti span:nth-child(22) {
+  --rain-left: 88%;
+  animation-duration: 4s;
+  animation-delay: -1.6s;
+}
+.rain-confetti span:nth-child(23) {
+  --rain-left: 92%;
+  animation-duration: 2.9s;
+  animation-delay: -1.9s;
+}
+.rain-confetti span:nth-child(24) {
+  --rain-left: 96%;
+  animation-duration: 3.4s;
+  animation-delay: -2.2s;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .rain-hover:hover .rain-confetti span {
+    animation-name: badge-rain-fall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes badge-rain-fall {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(110vh);
+  }
+}
+
+.badge-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.6em;
+  height: 2.6em;
+  /* border-radius: 50%; */
+  overflow: hidden;
+  /* background: var(--bg-active); */
+}
+
+.badge-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 0.2em;
+}
+
+.badge-subtitle {
+  font-size: 0.62rem;
+  color: var(--fg-dim);
+}
+
+.badge-name {
+  width: 100%;
+  font-family: var(--heading-font);
+  font-size: 0.72rem;
+  font-weight: bold;
+  color: #ffffff;
+  mix-blend-mode: difference;
+  padding: 0.15em 0.5em;
+  border-radius: var(--radius);
+}
+
 /* ================================================================
    Custom color schemes — hand-written, single source for both this
    file's live CSS AND the /themes gallery + "t " picker (parsed at

@@ -198,6 +198,45 @@ params:
   umamiScriptURL: https://analytics.fossunited.org/script.js
   umamiWebsiteID: 64825a51-be1b-416e-b1ec-895aa541dcab
 
+  # Footer badges: rounded card (icon + subtitle + name)
+  badges:
+    - {
+        name: "Emacs",
+        logo: "/images/logos/emacs.png",
+        color: "#5b2a85",
+        link: "https://www.gnu.org/software/emacs/",
+        subtitle: "Living in",
+      }
+    - {
+        name: "Org mode",
+        logo: "/images/logos/orgmode.png",
+        color: "#3f6b5e",
+        link: "https://orgmode.org/",
+        subtitle: "Swimming in",
+      }
+    - {
+        name: "Santōryū",
+        logo: "/images/logos/zoro-chibi.webp",
+        color: "#32ae55",
+        link: "/wander/",
+        subtitle: "Wander my web",
+        tooltip: "Find your way over the network",
+      }
+    - {
+        name: "OnePiece",
+        logo: "/images/logos/onepiece.webp",
+        color: "#D49A00",
+        subtitle: "Finding",
+        link: "https://one-piece.com/",
+      }
+    - {
+        name: "FOSS",
+        logo: "/images/logos/foss.webp",
+        color: "#8AA9BC",
+        link: "https://en.wikipedia.org/wiki/Free_and_open-source_software",
+        subtitle: "Liberated by",
+      }
+
   socialLinks:
     - { label: "hi@idlip.in", url: "mailto:hi@idlip.in", icon: " " }
     - { label: "idlip", url: "https://github.com/idlip", icon: " " }
