@@ -188,7 +188,7 @@ params:
     git: " "
     _default: " "
 
-  favicon: /images/op-roger.jpg
+  favicon: /images/op-zoro.webp
   # Font family for the per-post OG image (themes/emacs/layouts/_default/single.svg).
   # Must be a family name fontconfig/rsvg-convert can resolve (an installed TTF/OTF, not a woff2).
   ogFont: Code D OnePiece

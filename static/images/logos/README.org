@@ -7,6 +7,18 @@ https://github.com/DevelopmentCool2449/emacs-svg-badges/
 
 Thought to keep only Emacs and orgmode as it is, but decided to expand it in some style.
 
+* Favicon Used
+
+- One I use official OnePiece manga's panel where Gol D. Roger laughed
+  [[file:~/d-git/d-site/static/images/op-roger.jpg]]
+
+  src: official manga
+
+- Zoro illustration art with katana
+  [[file:~/d-git/d-site/static/images/op-zoro.webp]]
+
+  src: https://imgbin.com/png/uYSn2kHA/one-piece-zoro-green-swordsman-ready-to-strike-png
+
 * emacs.png
 
 - Source : https://www.gnu.org/software/emacs/ and 
