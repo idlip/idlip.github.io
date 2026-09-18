@@ -93,6 +93,9 @@ Inspired and made with: [[https://codeberg.org/susam/wander][Wander by Susam]]
 - [[https://juliepagano.com/blog/2013/03/24/my-experiences-in-tech-death-by-1000-paper-cuts][Death by 1000 Cuts]] :: Some initial exp as SDE and Diversity
 - [[https://www.evalapply.org/posts/how-to-not-die-by-a-thousand-cuts/index.html][Thinking about software quality]] :: How systems design matter to not get cut
 - [[https://www.jim-nielsen.com/][Jim Nielsen]] :: mobile like blog & site, minimal and so easy | tag: webdev
+- [[https://jrsinclair.com/][James Sinclair]] :: Javascript and some SDE
+- [[https://archive.ph/c5RoJ][Eras of UX Design & Lessons]] :: Nice overview on how UX view changed over decade.
+- [[https://manualdousuario.net/en/page/4/][Manual do Usuário]] :: Finding cool stuff made easy
 
 
 ------
