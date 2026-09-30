@@ -5,12 +5,3 @@ command = "prettier"
 options = ["--write"]
 includes = ["*.css", "*.js", "*.json", "*.yaml", "*.yml"]
 excludes = ["data/schemes/**", "static/wander/console/**"]
-
-[formatter.gotmplfmt]
-command = "gotmplfmt"
-includes = ["layouts/**/*.html"]
-
-[formatter.toml]
-command = "taplo"
-options = ["format"]
-includes = ["*.toml"]
