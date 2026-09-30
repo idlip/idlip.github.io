@@ -7,6 +7,11 @@ Code license, straight off the =LICENSE= file in [[https://github.com/idlip/haki
 
 ------
 
-#+begin_export html
-{{< license >}}
-#+end_export
+#+begin_src emacs-lisp :exports results :results value html
+  (denden-serialize-node
+   (denden-normalise-node
+    (list 'pre nil (list 'code nil
+                         (with-temp-buffer
+                           (insert-file-contents (expand-file-name "static/license.txt" denden-repository-directory))
+                           (buffer-string))))))
+#+end_src

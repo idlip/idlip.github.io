@@ -7,6 +7,6 @@ Proof of identity across the web :: ~rel=me~ links.
 
 ------
 
-#+begin_export html
-{{< social-links layout="grid" >}}
-#+end_export
+#+begin_src emacs-lisp :exports results :results value html
+  (denden-serialize-node (denden-normalise-node (theme-social-links-grid site-social-links)))
+#+end_src

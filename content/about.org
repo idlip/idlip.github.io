@@ -48,9 +48,9 @@ Drop me a good ol' email: [[mailto:hi@idlip.in][hi@idlip.in]]
 
 or find me at:
 
-#+begin_export html
-{{< social-links layout="grid" >}}
-#+end_export
+#+begin_src emacs-lisp :exports results :results value html
+  (denden-serialize-node (denden-normalise-node (theme-social-links-grid site-social-links)))
+#+end_src
 
 ------
 

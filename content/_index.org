@@ -2,12 +2,65 @@
 #+draft: false
 #+no_comment: t
 
-Hi there! Greetings & salutations, and a warm welcome. Everything here works by
-keyboard, and the colors change on every visit.
+Hey, there. Welcome to my little corner of the internet, where I write about Emacs, FOSS, and
+whatever else I'm tinkering with.
 
-This site holds a few [[/posts/][blog posts]], driven by passion and written to share.
+This site holds a few [[/log/][blog posts]], written whenever something feels worth sharing.
 
-Latest post: {{< latest >}}
+Treasure this island has to offer:
+#+begin_src emacs-lisp :exports results :results value html
+  (let* ((truncate-text (lambda (text limit)
+                          (if (> (length text) limit) (concat (substring text 0 limit) "…") text)))
+         (all-pages (org-publish-property :denden-all-pages (assoc "site-org" org-publish-project-alist)))
+         (latest-post (car (denden-sort-pages-by-date-desc (denden-pages-in-section all-pages "log"))))
+         (post-cell (if latest-post
+                        (list 'span nil
+                              (list 'a (list :href (concat "/" (plist-get latest-post :url)))
+                                    (plist-get latest-post :title))
+                              (format " (%s)" (denden-format-iso-date (plist-get latest-post :date) "%d %b %Y")))
+                      "none yet"))
+         (pose-entry (with-temp-buffer
+                       (insert-file-contents (expand-file-name "content/pose.org" denden-repository-directory))
+                       (org-mode)
+                       (goto-char (point-min))
+                       (when (re-search-forward "^\\*\\* \\(.*\\)$" nil t)
+                         (let* ((date (match-string 1))
+                                (body-start (point))
+                                (body-end (if (re-search-forward "^\\*\\* " nil t) (match-beginning 0) (point-max))))
+                           (list :date date
+                                 :body (string-trim (buffer-substring-no-properties body-start body-end)))))))
+         (pose-cell (if pose-entry
+                        (list 'span nil
+                              (list 'a '(:href "/pose/") (plist-get pose-entry :date))
+                              (format " — %s" (funcall truncate-text (plist-get pose-entry :body) 100)))
+                      "none yet"))
+         ;; Last item in wander.org
+         (wander-groups (denden-parse-topic-list (expand-file-name "content/wander.org" denden-repository-directory)))
+         (wander-last (car (last (plist-get (car (last wander-groups)) :items))))
+         (wander-cell (if wander-last
+                          (list 'a (list :href (plist-get wander-last :url)) (plist-get wander-last :name))
+                        "none yet"))
+         ;; media.org has several thematic groups (Talks/Books/Movies/
+         ;; Anime/YouTube)
+         (media-rows (mapcar
+                      (lambda (group)
+                        (let ((last-item (car (last (plist-get group :items)))))
+                          (list 'tr nil
+                                (list 'td nil (list 'a '(:href "/media/") (plist-get group :label)))
+                                (list 'td nil (if last-item
+                                                  (list 'a (list :href (plist-get last-item :url))
+                                                        (plist-get last-item :name))
+                                                "none yet")))))
+                      (denden-parse-topic-list (expand-file-name "content/media.org" denden-repository-directory))))
+         (table (append
+                 (list 'table nil
+                       (list 'tr nil (list 'th nil "One") (list 'th nil "Piece"))
+                       (list 'tr nil (list 'td nil (list 'a '(:href "/log/") "Log")) (list 'td nil post-cell))
+                       (list 'tr nil (list 'td nil (list 'a '(:href "/pose/") "Pose")) (list 'td nil pose-cell))
+                       (list 'tr nil (list 'td nil (list 'a '(:href "/wander/") "Wander")) (list 'td nil wander-cell)))
+                 media-rows)))
+    (denden-serialize-node (denden-normalise-node table)))
+#+end_src
 
 Beyond posts: [[/wander/][Wander]] is a small-web console linking out to blogs I actually read; [[/repo/][Projects & Tools]]
 lists things I use and find interesting; [[/media/][Media]] is what I like watching or reading; and [[/quotes/][Quotes]] are memos worth keeping.

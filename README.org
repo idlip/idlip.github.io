@@ -1,21 +1,67 @@
 #+TITLE: Just a newbie blogging
 #+tags: post(p) snippet(s) site(t) draft(d)
 
-The Journey begins..
+The journey begins.
 
-You know its fascinating to have a personal static website which is rich and valuable for others.
+A personal static website can be rich and valuable, both to write and to read.
 
-I went with Hugo, writing straight in Org-mode (content/*.org, rendered natively by
-Hugo's own org support) since Emacs (GOAT) is the one true way to write.
+I started with Hugo. I wrote directly in Org-mode (=content/*.org=, rendered by Hugo's own go-org support), because Emacs is the one true way to write.
 
-The theme has been rewritten from scratch a few times, [[https://github.com/idlip/hakimacs][hakimacs]], living in
-=themes/emacs/= as a submodule.
+Hugo's theme went through a full rewrite a few times: [[https://github.com/idlip/hakimacs][hakimacs]], living in =themes/emacs/= as a
+submodule. Hugo is now the legacy build. The current build is denden, an Emacs Lisp static site
+generator, described below.
 
-I hope its a soothing experience for you to read!
+I hope this is a soothing read for you.
+
+* Denden: build and preview the site
+
+Denden is the current build. It replaces Hugo. Three files make it up: =denden/denden.el= (the core
+build library, reusable by any Org-based site), =site/site.el= (this site's own configuration and
+rendering), and =theme/theme.el= (this site's templates). Each file has its own =README.org= with more
+detail.
+
+** For everyday use
+*** Load it once per Emacs session
+
+#+begin_src elisp
+(dolist (dir '("denden" "site" "theme"))
+  (add-to-list 'load-path (expand-file-name dir default-directory)))
+(require 'site)   ;; also loads denden.el and theme.el
+#+end_src
+
+Or, from the shell, for any one-off command below:
+
+#+begin_src sh
+emacs -Q --batch -L denden -L site -L theme \
+  -l denden/denden.el -l theme/theme.el -l site/site-schemes-base16.el -l site/site.el \
+  --eval "(denden-build)"
+#+end_src
+
+*** Commands (M-x, once loaded)
+
+- ~denden-preview-current-file~ :: rebuild the file you are editing and open or refresh it in a browser.
+  This is the everyday command while writing. The first call starts the
+  preview server and opens the tab. Every later call rebuilds and lets
+  live reload refresh the page. It also works on a subtree post, with
+  point inside it, in a container file.
+- ~denden-build~ :: build the whole site. It uses the cache and skips unchanged pages.
+- ~denden-clean-build~ :: clear the cache, then rebuild everything.
+- ~denden-build-serve~ :: build, then serve with ~denden-preview-command~ (a plain HTTP server, by default).
+- ~denden-clean~ :: delete the publishing directory. It does not rebuild.
+- ~denden-lint~ :: run the accessibility and structure linter over the current build.
+- ~denden-list-drafts~ :: list every post with =#+draft: t=.
+- ~denden-diff~ :: compare two rendered HTML files, structurally. A debugging aid.
+- ~denden-new~ :: create a post. It asks for a title, tags (completed against existing ones), and whether the post is a draft.
+- ~denden-find~ :: find a file, scoped to the repo root.
+- ~denden-site~ :: switch to the repo root as the active project.
+
+Output goes to =public-denden/= (~denden-publishing-directory~).
 
 * Ideas
 - [ ] [[https://en.andros.dev/blog/ddd78757/quick-tutorial-to-get-started-on-org-social/][setup org-social for my site]] - Should be fairly simple
+- [ ] [[https://fosstodon.org/@als@alico.nexus/117146913313225219][Live in age of AI]] - Write on this cool comic?
 
+- [ ] [2026-08-31 Mon] Write on life is all about regret?
 
 * Resources
 - https://blr.indiewebclub.org/archive/ -> To read weekly to get inspired for writing more.
@@ -23,3 +69,9 @@ I hope its a soothing experience for you to read!
 - [ ] https://vickiboykis.com/
 - [ ] https://silktide.com/blog/how-to-write-readable-content/
 - [ ] https://chrissmith.xyz/blog/2026/the-process-of-migrating-from-sass-to-native-css/
+- [ ] https://softwareleadweekly.com/issues/
+- [ ] https://www.jvt.me/posts/2026/08/17/hand-write-commits/
+- [ ] [2026-08-28 Fri] https://martinfowler.com/agile.html
+- [ ] [2026-08-28 Fri] https://joecode.com/2026-08-19-sqlite3/
+- [ ] [2026-08-28 Fri] https://www.chiply.dev/post-hyperbole-hyrolo
+- [ ] https://www.tomica.net/

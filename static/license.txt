@@ -1,0 +1,117 @@
+THE WILL OF D. LICENSE
+(as sworn upon the name of Nika, Joy Boy, Davy D Jones & Gol D Roger)
+=======================================
+
+Somewhere between Romance Dawn and Laugh Tale, this code washed up
+in a barrel. You opened it. That makes you crew now. Somewhere out
+there, an old man in chains is laughing about it.
+
+GRANT OF RIGHTS (the Going Merry clause):
+By reading this you are granted permission to sail, fork, splice, and
+redistribute this code as freely as Luffy makes promises he has no
+plan for keeping the details of. Split your crew up at Sabaody and
+regroup two years three days 3D2Y later with a codebase none of your teammates
+recognize, that is a valid workflow here. Modify it
+until it floats like Skypiea, sinks like Fishman Island, or burns
+like Punk Hazard's other half. Bring your own Vivi, your own Robin,
+your own Nami, no invitation from the World Government required.
+
+THE SANTORYU CLAUSE (forking, Zoro-style):
+You are explicitly permitted to fork this repository into three
+branches at once, wield them simultaneously, and still somehow end up
+walking in the wrong direction on the way to merge. Every commit you
+land counts as one named technique, and you are encouraged to name
+your PRs accordingly:
+
+  - Oni Giri            -- the two-line diff that ends the review
+
+  - Tatsu Maki          -- a rebase so violent it takes the whole
+                           branch history with it
+
+  - 108 Pound Hou       -- a hundred small fixup commits, squashed
+
+  - Rashomon            -- a merge conflict summoned from three gates
+                           at once, straight out of Thriller Bark
+
+  - Ashura              -- when you review your own PR from all nine
+                           angles and still approve it
+
+  - Sanzen Sekai        -- the changeset so large it splits the repo
+                           into three thousand worlds of diff context
+
+  - 1080 Pound Phoenix  -- deploying to prod on a Friday, ablaze
+
+  - Purgatory Onigiri   -- the hotfix that arrives one commit before
+                           the outage, sharpened somewhere in Wano
+
+A true swordsman does not fear a losing diff; a scar on the front of
+your git blame is a scar of honor, one on the back is a rejected PR
+you should not have opened.
+
+THE CLOSED-EYE CLAUSE (hidden power, gated):
+Some functions in this codebase, like a certain swordsman's left eye
+since that night in Thriller Bark, are sealed shut on purpose. They
+are not bugs. They are Conqueror's Haki held in reserve behind a
+feature flag, and they will open exactly once, at the one moment the
+story actually needs them to - somewhere around Egghead, if the
+timeline holds. Do not `git blame` the eye. Do not remove the
+eyepatch early.
+
+THE SOUNDTRACK CLAUSE:
+This code is best read with a Binks' Sake hum in the background
+Alabasta's desert wind for the quiet refactors, Fishman Island's
+coral hum for the slow ones and a Yohohoho on violin whenever a
+test suite finally goes green, courtesy of whichever skeleton is on
+bass that day. Every crash deserves a proper villain-voice-actor boom
+on its stack trace. If your error log does not sound at least a
+little like Doflamingo's laugh, Kaido's growl, or a Zehahaha rolling
+in from somewhere out at sea when it crashes, you are running it
+wrong. "We Are!" plays on every green CI run, unofficially, in your
+heart.
+
+CONDITIONS (the Water 7 shipwright's clause):
+  1. If this code cracks under load the way the original Merry did
+     at Water 7, that is not a defect, that is a ship telling you it
+     is time to build a better one. No refunds, no Franky House labor
+     dispute.
+  2. Bugs found in production must be reported the way a Baroque
+     Works spy reports back to Crocodile: promptly, and without
+     revealing your true identity if you would rather not.
+  3. No teammate gets left behind at Enies Lobby. If the build breaks
+     for one person, it is broken for the whole crew until it is
+     fixed.
+  4. Should this code attain Gear 5 and rewrite its own rules at
+     runtime, that is between you and Joy Boy, not this license.
+  5. Should this code instead attain Conqueror's Haki and knock out
+     every lesser dependency in your `node_modules` without meaning
+     to, that is between you and Mihawk, not this license.
+  6. Refactors are permitted to run as long and as strange as
+     Dressrosa's toy-soldier curse or the endless halls of Whole Cake
+     Island, provided they eventually resolve.
+  7. No Road Poneglyphs, no Ancient Weapons, and no actual Laugh Tale
+     coordinates are conveyed by this grant. Keep sailing for those
+     yourself.
+
+DISCLAIMER OF WARRANTY (the Marineford clause):
+THIS CODE IS PROVIDED "AS IS," THE WAY A WORLD IS PROVIDED TO A CHILD
+WHO WANTS TO BE FREE - with no guarantee of safe passage, no Ace to
+shield you from a stray admiral-grade exception, and no Whitebeard to
+declare it exists before it segfaults. Use at your own risk, on any
+sea, Paradise or New World alike.
+
+Inherit whatever will you like from this. It's a big, big repo,
+bigger than Zou, older than a Reverie squabble. Get lost in it if you
+must, like Zoro would.
+
+Some legend lurks around, reading this site and this very license
+more closely than most; a man marked with flames, said to carry
+the fourth Road Poneglyph, if the stories are even true. Whoever you
+are: thank you for reading this far. The rest stays a secret.
+
+                                                  -- signed, Zororg
+
+--------------------------------------------------------------------
+This is a just-for-fun wrapper with no legal weight of its own. The
+actual license terms governing use, modification, and redistribution
+are the MIT License; see LICENSE-MIT for the real thing.
+--------------------------------------------------------------------

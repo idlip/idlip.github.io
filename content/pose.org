@@ -1,0 +1,16 @@
+#+title: Pose
+#+layout: pose
+#+draft: false
+#+no_comment: t
+
+Quick thoughts, single lines, half-formed ideas -- the stuff too small for a proper Log entry.
+
+------
+
+** 2026-09-17
+
+Testing the Pose format for the first time. Feels good having a place for stray thoughts that don't need a whole post.
+
+** 2026-09-10
+
+Some days you just need one sentence: today was a good day.

@@ -8,3 +8,6 @@
 [submodule "static/wander/console"]
 	path = static/wander/console
 	url = https://codeberg.org/susam/wander
+[submodule "denden"]
+	path = denden
+	url = git@github.com:idlip/denden.git

@@ -29,7 +29,7 @@ a11y:
     hugo --minify
     htmlhint --config .htmlhintrc "public/**/*.html"
 
-# Regenerate per-post OG PNGs (run inside nix-shell for rsvg-convert).
+# Regenerate per-post OG PNGs from both public/ and public-denden/ (rsvg-convert).
 og: _og-build _og-render
 
 # Fresh build so stale og.svg from removed drafts don't linger.
@@ -37,17 +37,28 @@ _og-build:
     rm -rf public
     hugo
 
-# Rasterize each og.svg to static/og/<slug>.png; root page becomes home.
+# Rasterize each og.svg to static/og/<slug>.png. Root page becomes home.
 _og-render:
     #!/usr/bin/env bash
     set -euo pipefail
     mkdir -p {{og_dir}}
-    slug() { local d; d="$(dirname "${1#public/}")"; [ "$d" = "." ] && echo home || basename "$d"; }
+    slug() {
+        local rel="$1"
+        case "$rel" in
+            public-denden/*) rel="${rel#public-denden/}" ;;
+            public/*) rel="${rel#public/}" ;;
+        esac
+        local d; d="$(dirname "$rel")"
+        [ "$d" = "." ] && echo home || basename "$d"
+    }
+    dirs=()
+    [ -d public ] && dirs+=(public)
+    [ -d public-denden ] && dirs+=(public-denden)
     n=0
     while IFS= read -r f; do
         rsvg-convert "$f" -o "{{og_dir}}/$(slug "$f").png"
         n=$((n + 1))
-    done < <(find public -name 'og.svg')
+    done < <(find "${dirs[@]}" -name 'og.svg')
     echo "rasterized $n OG image(s) to {{og_dir}}"
 
 # Regenerate the favicon set from any input
@@ -66,3 +77,42 @@ favicon input name:
     magick "static/images/op-{{name}}.webp" -define icon:auto-resize=16,32,48 static/favicon.ico
     echo "generated static/images/op-{{name}}.webp + favicon-32.png + apple-touch-icon.png + favicon.ico"
     echo "set favicon: /images/op-{{name}}.webp under params in config.yaml to activate it"
+
+# Denden (Emacs/Org migration)
+
+denden_pub := "public-denden"
+denden_elisp := "-Q -L denden -L site -L theme -l denden/denden.el -l site/site.el -l theme/theme.el"
+
+# Real production build (public-denden/, idlip.in URLs) -- headless, for CI/deploy.
+denden-build:
+    emacs --batch {{denden_elisp}} \
+        --eval '(setq denden-repository-directory "{{justfile_directory()}}")' \
+        --eval '(site-build t)'
+
+# Build, then serve public-denden/ locally: static-web-server, real or via `nix run`.
+denden-serve: denden-build
+    #!/usr/bin/env bash
+    set -euo pipefail
+    cd {{denden_pub}}
+    if command -v static-web-server >/dev/null 2>&1; then
+        static-web-server --port 8000 --page404 404.html
+    elif command -v nix >/dev/null 2>&1; then
+        nix run nixpkgs#static-web-server -- --port 8000 --page404 404.html
+    else
+        python3 -m http.server 8000
+    fi
+
+# Run the denden/site/theme ERT suite.
+denden-test:
+    emacs --batch {{denden_elisp}} -l ert \
+        $(find denden/test site/test theme/test -name '*.el' -printf '-l %p ') \
+        -f ert-run-tests-batch-and-exit
+
+# Byte-compile denden/site/theme, warnings visible, no .elc left behind.
+denden-check:
+    emacs --batch -L denden --eval '(setq byte-compile-warnings t)' -f batch-byte-compile denden/denden.el
+    emacs --batch -L denden -L theme -l denden/denden.el \
+        --eval '(setq byte-compile-warnings t)' -f batch-byte-compile theme/theme.el
+    emacs --batch -L denden -L theme -L site -l denden/denden.el -l theme/theme.el \
+        --eval '(setq byte-compile-warnings t)' -f batch-byte-compile site/site.el
+    rm -f denden/*.elc site/*.elc theme/*.elc
