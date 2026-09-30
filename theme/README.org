@@ -1,0 +1,82 @@
+#+title: theme
+
+This file explains =theme.el=. It holds the HTML *structure* templates for this site, in one file. No
+site configuration lives here. =site/site.el= supplies the menu items, colors, tags, and other
+configuration as arguments to these functions. See the top-level =README.org= for how to load and build the site.
+
+* For everyday edits
+To change how the site looks, edit the CSS files directly. =theme.el=
+never sets colors or a =<style>= block, except for a few small computed
+swatch styles for the scheme-picker dots.
+- The main stylesheet: =assets/css/theme.css=.
+- This site's overrides and custom schemes: =assets/css/custom.css=.
+- The wander-console stylesheet: =assets/css/wander-theme.css=.
+
+Edit these files with normal CSS tools. Nothing in them is generated.
+This site no longer reads CSS from the =themes/emacs/= submodule. That
+copy is Hugo's, kept in sync by hand until Hugo is retired.
+
+To change JS behavior on the site, edit =assets/js/index.js= directly.
+This is the one real JS file, plain-copied into the build. =theme.el=
+only points a =<script src>= at it.
+
+* For developers
+** Sexp-HTML, explained
+
+A template in this file is a plain Lisp list:
+=(TAG (:attr "value" ...) CHILD1 CHILD2 ...)=. For example,
+=(a (:href "/" :class "menu-bar-title") "Home")= becomes
+=<a href="/" class="menu-bar-title">Home</a>=. A bare string is a text
+node, escaped for HTML automatically. =(raw-html nil "<b>already
+html</b>")= inserts already-rendered HTML without escaping it. Post
+bodies from org-export use this. Small template functions build up
+bigger sexp trees. Then =denden-serialize-node= (in =denden.el=) turns
+the final tree into an HTML string when the site is published.
+
+** Why not plain HTML files with placeholders?
+
+A plain Lisp list is real data. It composes with =append=, =list=, and
+=mapcar=, like any other Lisp value. A malformed list, for example a
+dotted pair where a list of children was meant, is a build-time error
+from =denden-normalise-attributes=. It does not silently break a page.
+
+The tradeoff: a template reads less like HTML at first glance. If that
+is a problem, use =denden-convert-html-file= or
+=denden-convert-html-string= (in =denden.el=). These functions turn real
+HTML back into this sexp form. This is useful for sketching a piece of
+markup as plain HTML first, then converting it in.
+
+** What is in here, top to bottom
+
+- Emacs-frame chrome. The menu bar, modeline, command-palette dialog,
+  lightbox, footer wrapper, and the =<html>=/=<head>=/=<body>= skeleton
+  (=theme-baseof=).
+- A single post or page. Breadcrumbs, the post header, references and
+  See Also, the comment box, and previous/next navigation.
+- Listing pages. The tag cloud, article list, term pages, and sitemap.
+- Topic-list pages. The shape used for wander, projects, media, quotes,
+  and uses pages.
+- The =/themes/= gallery. The scheme-card grid.
+
+** How the CSS pipeline works
+Most CSS is hand-edited, in the two files named above. Two small parts
+are generated instead, both in =site.el=:
+- =site-scheme-css=. The base16 color variables for each scheme.
+- =site-highlight-stylesheet=. The code-highlight color mapping.
+
+Both are short =[data-scheme="x"]{--base00:#...;...}= blocks, one per
+scheme. At build time, =site-build-stylesheet= joins =theme.css=,
+=custom.css=, and these two generated blocks into
+=public-denden/css/bundle.css=. Each part sits under its own comment
+banner. Open that file after a build to see exactly what shipped.
+
+** Search box, tag cloud, and topic-list filtering
+Two scripts carry this behavior:
+- =theme--post-listing-search-script=. Search and tag-cloud clicks on
+  the post-listing page.
+- =theme--topic-list-search-script=. Search and view-toggle on
+  topic-list pages.
+
+Both match the live Hugo theme's =list-search-js.html= and
+=topic-list-js.html= partials. Both use =raw-html=, because their
+=&&= operators would otherwise get escaped by a plain =script= node.
