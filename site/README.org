@@ -1,0 +1,54 @@
+#+title: site
+
+This file explains =site.el=. Reusable code that any denden site can use lives in =denden/denden.el=. See the top-level =README.org= for how to load and build the site.
+
+* For everyday edits
+These are the places to change for common, cosmetic changes. No new Lisp functions are needed for any of them.
+
+- New menu link: edit =site-menu-main=.
+- New color scheme card: edit =site-color-schemes=. It needs a matching
+  entry in =site-schemes-base16.el=, or a =/* @scheme: */= block in
+  =assets/css/custom.css=.
+- New social link: edit =site-social-links=.
+- New badge: edit =site-badges=.
+- New tag icon: edit =site-tag-icons=.
+
+* For developers
+** How this file is organized
+Content, from top to bottom of the file:
+- Configuration data. Menu items, color schemes, social links, tag icons,
+  and footer content. These are plain constants. Edit them directly for
+  cosmetic changes.
+- Base16 scheme handling. This builds the CSS for the scheme switcher and
+  the data for the =/themes/= gallery. It also parses custom schemes in
+  =assets/css/custom.css=, using the =/* @scheme: ... */= comment
+  convention.
+- =site-generate-schemes-base16-file=. This regenerates
+  =site-schemes-base16.el=, the committed file with 304 base16 entries.
+  Run it by hand only when the =data/schemes/= submodule updates. No part
+  of the real build calls this function.
+- Base16 code-highlight mapping. This maps each htmlize class to its
+  =--baseNN= token.
+- The OG card template. This site's own SVG card layout and colors. The
+  reusable word-wrap and truncate code lives in =denden.el=.
+- Page dispatch (=site-publish-page= and related functions). This is the
+  largest section. It builds the home page, single posts, topic-list
+  pages, the themes gallery, the sitemap, container files for subtree
+  posts, and taxonomy pages such as =/tags/= and =/refs/=.
+- Other outputs. Feeds, =sitemap.xml=, =robots.txt=, aliases, the search
+  index, =wander.js=, OG cards, and =404.html=.
+- =org-publish-project-alist= and =site-build=/=site-build-async=. These
+  are the real build entry points that =denden-build= calls.
+- The section that connects this site to denden. It sets every
+  =denden-*= customize variable that =denden.el= needs. This includes
+  the content directory, the post directory, the container file, and the
+  build functions. Copy this pattern if you point denden at a second
+  site.
+- This site's own commands, added with =denden-define-command=. Right
+  now there is only =denden-idlip-og-regenerate-all=. Add new commands
+  here, not in =denden.el=.
+
+** Adding a new page kind
+A new page kind needs its own template, not just a new page. To add one,
+write a =site-publish-<kind>-page= function. Then add a clause to the
+=cond= in =site-publish-page=.
