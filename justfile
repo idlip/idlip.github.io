@@ -116,3 +116,53 @@ denden-check:
     emacs --batch -L denden -L theme -L site -l denden/denden.el -l theme/theme.el \
         --eval '(setq byte-compile-warnings t)' -f batch-byte-compile site/site.el
     rm -f denden/*.elc site/*.elc theme/*.elc
+
+gh_pages_branch := "gh-pages"
+gh_pages_worktree := ".gh-pages-worktree"
+
+# Make sure the gh-pages branch and its worktree (.gh-pages-worktree/,
+# gitignored) exist. First call creates an empty gh-pages branch; every call
+# is otherwise a no-op. The worktree is a real, independent checkout of
+# gh-pages -- open it directly in magit (or any editor) to hand-edit,
+# commit, and push, with no branch-switching in the main checkout at all.
+denden-pages-setup:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    if ! git show-ref --verify --quiet "refs/heads/{{gh_pages_branch}}"; then
+        empty_tree=$(git hash-object -t tree /dev/null)
+        root_commit=$(git commit-tree "$empty_tree" -m "gh-pages root")
+        git branch "{{gh_pages_branch}}" "$root_commit"
+    fi
+    if [ ! -d "{{gh_pages_worktree}}" ]; then
+        git worktree add "{{gh_pages_worktree}}" "{{gh_pages_branch}}"
+    fi
+
+# Copy public-denden/ into the gh-pages worktree (deletes anything from a
+# previous build/edit that the current build no longer writes). Does not
+# commit or push -- inspect or hand-edit the worktree first if you want to,
+# then run `just denden-pages-push` when you're ready.
+denden-pages-sync: denden-pages-setup
+    # NOTE: the exclude pattern must be `.git`, not `.git/` -- a worktree's
+    # .git is a plain FILE (a pointer back into the main repo), and rsync's
+    # trailing-slash exclude only matches directories. `.git/` here silently
+    # deletes that file, which breaks every git command run in the worktree
+    # afterwards (they fall through to the main repo's .git instead).
+    rsync -a --delete --exclude .git {{denden_pub}}/ {{gh_pages_worktree}}/
+
+# Commit and force-push whatever is currently in the gh-pages worktree,
+# however it got there (denden-pages-sync, or your own hand edits via
+# magit). Force-push is safe here: nothing else ever writes to gh-pages.
+denden-pages-push:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    cd {{gh_pages_worktree}}
+    git add -A
+    if git diff --cached --quiet; then
+        echo "denden-pages-push: nothing changed, not pushing"
+        exit 0
+    fi
+    git commit -m "deploy $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+    git push origin {{gh_pages_branch}} --force
+
+# Build, sync, and push in one go -- the common case.
+denden-deploy: denden-build denden-pages-sync denden-pages-push
