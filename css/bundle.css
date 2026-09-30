@@ -1,4 +1,3 @@
-/* ---- assets/css/theme.css ---- */
 @layer tokens, base, components, chrome, overrides;
 
 /* theme.css — layered CSS entry point.
@@ -496,9 +495,10 @@
     height: auto;
   }
   hr {
+    width: 80%;
+    margin: 2em auto;
     border: none;
-    border-top: 1px solid var(--border);
-    margin: 2em 0;
+    border-top: 1px dashed var(--border-dim);
   }
   figcaption {
     margin-bottom: 1rem;
@@ -600,21 +600,24 @@
     content: "󱋭 ";
     color: var(--yellow);
   }
-  .todo {
+  /* org's own TODO-keyword output on a heading: <span class="todo TODO">
+     / <span class="done DONE"> (verified directly against denden-html's
+     real output, not assumed from source reading). */
+  :is(.todo, .done) {
     font-size: var(--fs-sm);
     font-weight: bold;
     padding: 0.1em 0.45em;
     margin-right: 0.5em;
     vertical-align: middle;
     letter-spacing: var(--tracking-caps);
-    &.status-todo {
-      background: var(--yellow);
-      color: var(--bg-main);
-    }
-    &.status-done {
-      background: var(--green);
-      color: var(--bg-main);
-    }
+  }
+  .todo {
+    background: var(--yellow);
+    color: var(--bg-main);
+  }
+  .done {
+    background: var(--green);
+    color: var(--bg-main);
   }
 
   /* ── Sidenotes ── */
@@ -1246,23 +1249,54 @@
       max-width: 100%;
       cursor: zoom-in;
     }
-    & :is(h2, h3, h4, h5, h6) .heading-anchor {
-      margin-left: 0.4em;
-      font-size: 0.75em;
-      color: var(--fg-dim);
-      text-decoration: none;
-      opacity: 0;
-      transition:
-        opacity var(--transition),
-        color var(--transition);
+    /* #+begin_center/#+begin_left/#+begin_right export as these classes
+       (org's own defaults). .org-center's own image already centers
+       itself (the img rule above), but its caption text didn't; .figure
+       is org's wrapper around any captioned image, #+begin_center or
+       not, so this also fixes every other caption in the site, not just
+       ones hand-wrapped like this one was. */
+    & :is(.org-center, .figure) {
+      text-align: center;
     }
-    & :is(h2, h3, h4, h5, h6):hover .heading-anchor,
-    & .heading-anchor:focus-visible {
-      opacity: 1;
+    & .org-left {
+      text-align: left;
     }
-    & .heading-anchor:hover {
-      color: var(--link);
+    & .org-right {
+      text-align: right;
     }
+    /* org's own _underlined_ markup: <span class="underline">. Distinct
+       from the menu bar's own .underline (scoped under .menu-item, see
+       above) -- this one only reaches prose. */
+    & .underline {
+      text-decoration: underline;
+    }
+  }
+
+  /* Heading-anchor look, shared by .post-body headings, Pose cards, and
+     the Pose dialog's own title -- same declarations, just a wider
+     selector, not a second copy of them. */
+  :is(:is(.post-body, .pose-card) :is(h2, h3, h4, h5, h6), #pose-dialog-title) .heading-anchor {
+    /* Pose cards stretch their title button's click target over the
+       whole card (see .pose-card-trigger); position+z-index keeps this
+       link clickable above that overlay instead of getting covered by
+       it. No effect outside Pose -- nothing else there overlaps it. */
+    position: relative;
+    z-index: 1;
+    margin-left: 0.4em;
+    font-size: 0.75em;
+    color: var(--fg-dim);
+    text-decoration: none;
+    opacity: 0;
+    transition:
+      opacity var(--transition),
+      color var(--transition);
+  }
+  :is(:is(.post-body, .pose-card) :is(h2, h3, h4, h5, h6), #pose-dialog-title):hover .heading-anchor,
+  :is(.post-body, .pose-card, #pose-dialog-title) .heading-anchor:focus-visible {
+    opacity: 1;
+  }
+  :is(.post-body, .pose-card, #pose-dialog-title) .heading-anchor:hover {
+    color: var(--link);
   }
 
   /* ── List page layout ── */
@@ -2319,8 +2353,11 @@
     color: var(--fg-dim);
   }
 
-  /* ── Image lightbox (native <dialog>) ── */
-  #image-lightbox {
+  /* ── Lightbox dialogs (native <dialog>) ── Image preview and the Pose
+     entry dialog share this exact chrome, one block, not two. Pose's own
+     title/content use plain <h2> and the existing .post-body class, so
+     there is nothing pose-specific to style here at all. */
+  :is(#image-lightbox, #pose-dialog) {
     padding: 0;
     border: none;
     outline: 2px dashed var(--border-highlight);
@@ -2372,6 +2409,14 @@
       height: auto;
       cursor: zoom-out;
     }
+  }
+  #pose-dialog {
+    padding: 1.5rem 1.75rem;
+    outline-color: var(--border-highlight);
+    background: var(--bg-main);
+    color: var(--fg-main);
+    max-width: min(640px, 92vw);
+    overflow-y: auto;
   }
 }
 
@@ -2675,8 +2720,7 @@
     font-family: var(--sans-font);
   }
 }
-
-/* ---- assets/css/custom.css ---- */
+/* ---- custom.css (merged 2026-09-30) ---- */
 /* Fonts | custom built */
 :root {
   --heading-font: "impress", "nerd-icons", sans-serif;
@@ -2785,7 +2829,7 @@ article h1 {
   text-align: center;
 }
 
-article h2::before {
+:is(article h2, #pose-dialog-title)::before {
   content: "◉ ";
 }
 article h2 {
@@ -2842,6 +2886,45 @@ article h4, article h5, article h6 {
   text-decoration: none;
   text-align: center;
   vertical-align: top;
+}
+
+/* Rotating gradient ring: universal hover/focus treatment for every
+   card/button-shaped interactive element, not just badges -- each one can
+   set its own --glow (oklch lightness steps off that one color, not
+   separate named stops); anything that doesn't gets --border-highlight.
+   Same reveal-on-interaction idiom used everywhere else on this site. */
+@property --glow-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+@keyframes glow-spin {
+  to {
+    --glow-angle: 360deg;
+  }
+}
+/* Paint the rotating gradient straight onto each element's own existing
+   border -- no overlay pseudo-element, no inset, no mask math, so no
+   asymmetric-edge rendering to chase. The one real constraint: this only
+   works where there is already border-width to paint into. Every one of
+   these already has a visible border; a bare icon-only <button> (the
+   global reset sets border: none) has none, so it can't join the list
+   without first giving it a border it doesn't otherwise want. */
+:is(.badge, .pose-card, .wander-btn, .tag-cloud-btn, .code-copy-btn):is(:hover, :focus-visible),
+/* .pose-card is never focused directly (its title is a real <button>
+   instead, see theme.el) -- :focus-within covers keyboard focus on it
+   or on the share link inside it. */
+.pose-card:focus-within {
+  border-image: conic-gradient(
+      from var(--glow-angle),
+      oklch(from var(--glow, var(--border-highlight)) calc(l + 0.15) c h),
+      var(--glow, var(--border-highlight)),
+      oklch(from var(--glow, var(--border-highlight)) calc(l - 0.15) c h),
+      var(--glow, var(--border-highlight)),
+      oklch(from var(--glow, var(--border-highlight)) calc(l + 0.15) c h)
+    )
+    1;
+  animation: glow-spin 3s linear infinite;
 }
 
 .rain-confetti {
@@ -3093,13 +3176,27 @@ article h4, article h5, article h6 {
 }
 
 .pose-card {
+  position: relative;
   padding: 1.25rem 1.5rem;
   border: 2px solid var(--border);
   border-radius: 3px 10px 3px 10px;
   background: var(--code-bg);
 }
 
-.pose-card h2 {
+/* The real, accessible trigger is still just the title button (see
+   theme.el) -- Tab/Enter/Space reach it directly, same as before. This
+   only stretches its clickable AREA to the whole card for mouse/touch,
+   via a pseudo-element covering the card, so there is still exactly one
+   interactive control here, not a button nested in a bigger fake one. */
+.pose-card-trigger {
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+}
+
+:is(.pose-card h2, #pose-dialog-title) {
   margin-top: 0;
   font-size: 1rem;
   letter-spacing: 0.05rem;
