@@ -8,7 +8,7 @@ These are the places to change for common, cosmetic changes. No new Lisp functio
 - New menu link: edit =site-menu-main=.
 - New color scheme card: edit =site-color-schemes=. It needs a matching
   entry in =site-schemes-base16.el=, or a =/* @scheme: */= block in
-  =assets/css/custom.css=.
+  =assets/css/theme.css=.
 - New social link: edit =site-social-links=.
 - New badge: edit =site-badges=.
 - New tag icon: edit =site-tag-icons=.
@@ -21,7 +21,7 @@ Content, from top to bottom of the file:
   cosmetic changes.
 - Base16 scheme handling. This builds the CSS for the scheme switcher and
   the data for the =/themes/= gallery. It also parses custom schemes in
-  =assets/css/custom.css=, using the =/* @scheme: ... */= comment
+  =assets/css/theme.css=, using the =/* @scheme: ... */= comment
   convention.
 - =site-generate-schemes-base16-file=. This regenerates
   =site-schemes-base16.el=, the committed file with 304 base16 entries.

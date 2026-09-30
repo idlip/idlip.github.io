@@ -8,13 +8,15 @@ configuration as arguments to these functions. See the top-level =README.org= fo
 To change how the site looks, edit the CSS files directly. =theme.el=
 never sets colors or a =<style>= block, except for a few small computed
 swatch styles for the scheme-picker dots.
-- The main stylesheet: =assets/css/theme.css=.
-- This site's overrides and custom schemes: =assets/css/custom.css=.
+- The main stylesheet: =assets/css/theme.css=. One file, covering both
+  this theme's own rules and this site's overrides and custom schemes.
+  The two used to be separate files (=theme.css= and =custom.css=),
+  merged 2026-09-30 since this theme only ever serves this one site.
 - The wander-console stylesheet: =assets/css/wander-theme.css=.
 
 Edit these files with normal CSS tools. Nothing in them is generated.
-This site no longer reads CSS from the =themes/emacs/= submodule. That
-copy is Hugo's, kept in sync by hand until Hugo is retired.
+This site no longer reads CSS from the =themes/emacs/= submodule. Hugo,
+which that submodule belonged to, is fully retired.
 
 To change JS behavior on the site, edit =assets/js/index.js= directly.
 This is the one real JS file, plain-copied into the build. =theme.el=
@@ -59,16 +61,16 @@ markup as plain HTML first, then converting it in.
 - The =/themes/= gallery. The scheme-card grid.
 
 ** How the CSS pipeline works
-Most CSS is hand-edited, in the two files named above. Two small parts
+Most CSS is hand-edited, in =theme.css=, named above. Two small parts
 are generated instead, both in =site.el=:
 - =site-scheme-css=. The base16 color variables for each scheme.
 - =site-highlight-stylesheet=. The code-highlight color mapping.
 
 Both are short =[data-scheme="x"]{--base00:#...;...}= blocks, one per
-scheme. At build time, =site-build-stylesheet= joins =theme.css=,
-=custom.css=, and these two generated blocks into
-=public-denden/css/bundle.css=. Each part sits under its own comment
-banner. Open that file after a build to see exactly what shipped.
+scheme. At build time, =site-build-stylesheet= joins =theme.css= and
+these two generated blocks into =public-denden/css/bundle.css=. Each
+part sits under its own comment banner. Open that file after a build to
+see exactly what shipped.
 
 ** Search box, tag cloud, and topic-list filtering
 Two scripts carry this behavior:

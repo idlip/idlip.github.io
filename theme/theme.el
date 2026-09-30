@@ -279,11 +279,13 @@ since aria-hidden is not respected there.")
 
 
 (cl-defun theme-badge (&key name logo color link subtitle tooltip)
-  "One badge link for NAME (icon + optional subtitle + optional name pill)."
+  "One badge link for NAME (icon + optional subtitle + optional name pill).
+COLOR, if given, also sets --glow (theme.css's rotating gradient ring,
+shared by every card/button-shaped element, reads it on hover)."
   (let ((tooltip (or tooltip (and subtitle name (format "%s %s" subtitle name)) subtitle name "")))
     (append
      (list 'a (list :href (or link "#") :class "badge rain-hover" :title tooltip
-                     :style (and color (format "border:1px solid %s" color))))
+                     :style (and color (format "border:1px solid %s;--glow:%s" color color))))
      (list (list 'span '(:class "badge-icon") (list 'img (list :src logo :alt (or name "") :loading "lazy"))))
      (when subtitle (list (list 'span '(:class "badge-subtitle") subtitle)))
      (when name (list (list 'span (list :class "badge-name" :style (and color (format "background:%s" color)))
@@ -295,6 +297,15 @@ since aria-hidden is not respected there.")
            (img (:id "lightbox-img" :src "" :alt "")))
   "The image lightbox dialog. :src/:alt stay empty strings, not bare, so
 libxml keeps them for the alt-text lint.")
+
+(defconst theme-pose-dialog
+  '(dialog (:id "pose-dialog" :aria-label "Pose entry")
+           (h2 (:id "pose-dialog-title"))
+           (div (:id "pose-dialog-content" :class "post-body")))
+  "The shared Pose entry dialog: the same look as `theme-lightbox' (CSS
+groups the two by selector, nothing new), content styled by the existing
+`post-body' class rather than a dedicated one. JS fills title/content in
+from `window.__poseEntries', keyed by the clicked card's own heading id.")
 
 
 (defconst theme--base16-keys
@@ -456,7 +467,7 @@ PALETTE-DATA-SCRIPT must be a `(raw-html nil STRING)' node."
                   (list 'div '(:class "emacs-frame"))
                   menu-bar-nodes
                   (list (list 'main '(:class "buffer-container" :id "buffer-container") body)
-                        theme-echo-area theme-lightbox)))
+                        theme-echo-area theme-lightbox theme-pose-dialog)))
            (when palette-data-script (list palette-data-script))))))
 
 ;;;; Single post/page
@@ -483,7 +494,7 @@ hides that field."
          (list 'div '(:class "post-meta"))
          (when date
            (list (list 'span '(:class "post-date" :title "Created on")
-                       '(span (:class "nf" :aria-hidden "true") " ")
+                       '(span (:class "nf" :aria-hidden "true") "")
                        '(span (:class "visually-hidden") "Created on: ")
                        (list 'time (list :datetime date) date))))
          (when (and lastmod date (not (equal lastmod date)))
@@ -624,27 +635,34 @@ no breadcrumbs or tags."
               (append (list 'footer nil) (when footer (list footer))))
         modeline))
 
-(cl-defun theme-pose-page (&key title intro-html entries footer modeline)
-  "The Pose layout for TITLE/ENTRIES: one page of short-form card entries, no
-per-entry permalink."
+(cl-defun theme-pose-page (&key title intro-html entries entries-data-script footer modeline)
+  "The Pose layout for TITLE/ENTRIES: one page of short-form cards, each with
+its own shareable heading id and a click-to-expand dialog for its full
+content (ENTRIES-DATA-SCRIPT, a <script> tag, supplies that full content
+to the dialog; see `site--pose-entries-data-script')."
   (let* ((pose-list (append (list 'ul '(:class "pose-list"))
-                             (mapcar (lambda (entry)
-                                       (list 'li '(:class "pose-card")
-                                             (list 'h2 nil (plist-get entry :title))
-                                             (list 'raw-html nil (plist-get entry :html))))
-                                     entries)))
+                             (mapcar
+                              (lambda (entry)
+                                (list 'li '(:class "pose-card")
+                                      (list 'h2 (list :id (plist-get entry :id))
+                                            (list 'button '(:type "button" :class "pose-card-trigger")
+                                                  (plist-get entry :title)))
+                                      (list 'raw-html nil (plist-get entry :teaser-html))))
+                              entries)))
          (article (append
                    (list 'article '(:class "post-content")
                          (list 'div '(:class "post-header") (list 'h1 '(:class "post-title") title)))
                    (unless (or (null intro-html) (string-empty-p intro-html))
                      (list (list 'div '(:class "post-body") (list 'raw-html nil intro-html))))
                    (list pose-list))))
-    (list 'section (list :class "buffer buffer-content active" :id "buffer-content"
-                          :role "region" :aria-label title)
-          (list 'div '(:class "buffer-body")
-                article
-                (append (list 'footer nil) (when footer (list footer))))
-          modeline)))
+    (append
+     (list 'section (list :class "buffer buffer-content active" :id "buffer-content"
+                           :role "region" :aria-label title)
+           (list 'div '(:class "buffer-body")
+                 article
+                 (append (list 'footer nil) (when footer (list footer))))
+           modeline)
+     (when entries-data-script (list entries-data-script)))))
 
 ;;;; Listing pages
 

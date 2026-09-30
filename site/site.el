@@ -681,9 +681,17 @@ instead of exporting FILENAME a second time."
      :toc (site--toc-node filename all-pages)
      :modeline-buffer-name (file-name-nondirectory filename))))
 
+(defun site--pose-entry-teaser (html)
+  "Return HTML up to its first <hr>, or all of HTML if it has none. An
+entry can put a horizontal rule (five or more dashes on their own line)
+after its opening thought, so extra context/examples after that point
+show only in the entry's own dialog, not on the compact card."
+  (let ((cut (string-match "<hr" html)))
+    (if cut (substring html 0 cut) html)))
+
 (defun site--pose-entries (filename all-pages)
   "Return every level-2 heading in FILENAME, a #+layout: pose file, as a
-(:title :html) plist, each its own subtree export."
+(:id :title :html :teaser-html) plist, each its own subtree export."
   (with-temp-buffer
     (insert-file-contents filename)
     (org-mode)
@@ -691,9 +699,13 @@ instead of exporting FILENAME a second time."
       (org-map-entries
        (lambda ()
          (when (= (org-current-level) 2)
-           (push (list :title (org-get-heading t t t t)
-                       :html (org-export-as 'denden-html t nil t (denden-export-options-with-pages all-pages)))
-                 entries)))
+           (let* ((id (denden-heading-id (org-element-at-point)))
+                  (html (org-export-as 'denden-html t nil t (denden-export-options-with-pages all-pages))))
+             (push (list :id id
+                         :title (org-get-heading t t t t)
+                         :html html
+                         :teaser-html (site--pose-entry-teaser html))
+                   entries))))
        nil nil)
       (nreverse entries))))
 
@@ -708,9 +720,20 @@ instead of exporting FILENAME a second time."
       (narrow-to-region (point-min) (match-beginning 0)))
     (org-export-as 'denden-html nil nil t (denden-export-options-with-pages all-pages))))
 
+(defun site--pose-entries-data-script (entries)
+  "Return ENTRIES' full title/html, keyed by id, as one <script> tag. The
+Pose page's click-to-expand dialog reads this to show an entry's full
+content, past whatever its card's own teaser cuts off at."
+  (let ((table (make-hash-table :test 'equal)))
+    (dolist (entry entries)
+      (puthash (plist-get entry :id)
+                (list :title (plist-get entry :title) :html (plist-get entry :html))
+                table))
+    (list 'raw-html nil (format "<script>window.__poseEntries=%s;</script>" (json-serialize table)))))
+
 (defun site-publish-pose-page (plist filename pub-dir)
   "Publish FILENAME, a #+layout: pose file, via `theme-pose-page'; one page,
-no per-entry permalink."
+each entry with its own shareable anchor and expand-to-dialog view."
   (let* ((output (denden-output-file-for filename (cons nil plist)))
          (all-pages (plist-get plist :denden-all-pages))
          (title (or (cadr (assoc "TITLE" (with-temp-buffer
@@ -721,7 +744,8 @@ no per-entry permalink."
          (this-page (seq-find (lambda (p) (equal (plist-get p :url)
                                                   (denden-pretty-url (file-relative-name output pub-dir))))
                                all-pages))
-         (date (and this-page (plist-get this-page :date))))
+         (date (and this-page (plist-get this-page :date)))
+         (entries (site--pose-entries filename all-pages)))
     (site--write-page
      (site--wrap-page
       :title title
@@ -729,7 +753,8 @@ no per-entry permalink."
       :body (theme-pose-page
              :title title
              :intro-html (site--pose-intro-html filename all-pages)
-             :entries (site--pose-entries filename all-pages)
+             :entries entries
+             :entries-data-script (site--pose-entries-data-script entries)
              :footer (theme-footer site-footer-content)
              :modeline (theme-modeline :buffer (format "*%s*" (downcase title)) :date date)))
      output)))
@@ -900,25 +925,19 @@ every page grouped by section."
 
 (defun site-publish-page (plist filename pub-dir)
   "Dispatch FILENAME to the right site-publish-* function, by filename then
-#+layout:. Every build path (serial, async) funnels through here, so
-logging and re-signaling any error names FILENAME in `denden-log-file'
-instead of leaving only a bare backtrace."
-  (condition-case err
-      (cond
-       ((member (file-name-base filename) '("_index" "index"))
-        (site-publish-home-page plist filename pub-dir))
-       ((equal (site--file-layout filename) "topic-list")
-        (site-publish-topic-list-page plist filename pub-dir))
-       ((equal (site--file-layout filename) "themes")
-        (site-publish-themes-page plist filename pub-dir))
-       ((equal (site--file-layout filename) "sitemap")
-        (site-publish-sitemap-page plist filename pub-dir))
-       ((equal (site--file-layout filename) "pose")
-        (site-publish-pose-page plist filename pub-dir))
-       (t (site-publish-single-page plist filename pub-dir)))
-    (error
-     (denden-log "ERROR publishing %s: %s" filename (error-message-string err))
-     (signal (car err) (cdr err)))))
+#+layout:."
+  (cond
+   ((member (file-name-base filename) '("_index" "index"))
+    (site-publish-home-page plist filename pub-dir))
+   ((equal (site--file-layout filename) "topic-list")
+    (site-publish-topic-list-page plist filename pub-dir))
+   ((equal (site--file-layout filename) "themes")
+    (site-publish-themes-page plist filename pub-dir))
+   ((equal (site--file-layout filename) "sitemap")
+    (site-publish-sitemap-page plist filename pub-dir))
+   ((equal (site--file-layout filename) "pose")
+    (site-publish-pose-page plist filename pub-dir))
+   (t (site-publish-single-page plist filename pub-dir))))
 
 (defun site--distinct-sections (all-pages)
   "Return every non-empty :section value in ALL-PAGES, deduplicated."
@@ -1075,16 +1094,11 @@ publish pass already stashed it (single-post layout); other layouts
 real page body is assembled differently from this flat file export."
   (append page
           (list :content-html (or (plist-get page :content-html)
-                                   (condition-case err
-                                       (with-temp-buffer
-                                         (insert-file-contents (plist-get page :source))
-                                         (org-mode)
-                                         (org-export-as 'denden-html nil nil t
-                                                        (denden-export-options-with-pages all-pages)))
-                                     (error
-                                      (denden-log "ERROR enriching %s: %s"
-                                                  (plist-get page :source) (error-message-string err))
-                                      (signal (car err) (cdr err)))))
+                                   (with-temp-buffer
+                                     (insert-file-contents (plist-get page :source))
+                                     (org-mode)
+                                     (org-export-as 'denden-html nil nil t
+                                                    (denden-export-options-with-pages all-pages))))
                 :permalink (site--page-permalink page base-url)
                 :lastmod (denden-page-lastmod page))))
 
@@ -1347,32 +1361,27 @@ works, not just site.el's own load.")
              :publishing-function 'org-publish-attachment)
        (list "site" :components '("site-org" "site-static"))))
 
-(defconst site-css-source-files
-  (list (expand-file-name "assets/css/theme.css" denden-repository-directory)
-        (expand-file-name "assets/css/custom.css" denden-repository-directory))
-  "Real CSS files, concatenated in theme.css-then-custom.css order, kept in
-sync with Hugo's copy by hand.")
+(defconst site-css-source-file
+  (expand-file-name "assets/css/theme.css" denden-repository-directory)
+  "This site's one real, hand-edited CSS file.")
 
 
 (defun site--custom-css-text ()
-  "Return the content of assets/css/custom.css, for `site-all-schemes' to
-parse its @scheme comments."
+  "Return `site-css-source-file''s content, for `site-all-schemes' to parse
+its @scheme comments."
   (with-temp-buffer
-    (insert-file-contents (nth 1 site-css-source-files))
+    (insert-file-contents site-css-source-file)
     (buffer-string)))
 
 (defun site-build-stylesheet (pub-dir)
-  "Concatenate the real CSS files plus generated scheme and highlight CSS into
+  "Concatenate the real CSS file plus generated scheme and highlight CSS into
 PUB-DIR/css/bundle.css."
   (let ((output (expand-file-name "css/bundle.css" pub-dir)))
     (make-directory (file-name-directory output) t)
     (with-temp-file output
-      (dolist (file site-css-source-files)
-        (insert (format "/* ---- %s ---- */\n" (file-relative-name file denden-repository-directory)))
-        (insert-file-contents file)
-        (goto-char (point-max))
-        (insert "\n"))
-      (insert "/* ---- generated: base16 scheme variables (site-scheme-css) ---- */\n")
+      (insert-file-contents site-css-source-file)
+      (goto-char (point-max))
+      (insert "\n/* ---- generated: base16 scheme variables (site-scheme-css) ---- */\n")
       (insert (site-scheme-css site-color-schemes))
       (insert "\n/* ---- generated: code-highlight colors (site-highlight-stylesheet) ---- */\n")
       (insert (site-highlight-stylesheet)))))
@@ -1414,26 +1423,18 @@ once, stashed for reuse across pages."
 
 (defun site-build (&optional force)
   "Build the site synchronously, plus taxonomy pages and every auxiliary
-output, using the cache unless FORCE. Logs each stage's timing, and any
-error, to `denden-log-file' via `denden--log-stage'."
+output, using the cache unless FORCE."
   (let* ((coding-system-for-read 'utf-8-unix)
          (coding-system-for-write 'utf-8-unix)
          (org-confirm-babel-evaluate nil)
-         (build-start (float-time))
          (denden--git-lastmod-table (denden-git-lastmod-table denden-repository-directory))
-         (all-pages (denden--log-stage "Metadata collection" #'site--inject-all-pages)))
-    (denden--log-stage "Main publish loop"
-      (lambda () (denden-build-project (assoc "site" org-publish-project-alist) force)))
-    (denden--log-stage "Taxonomy pages"
-      (lambda () (site-build-taxonomy-pages all-pages site-publishing-directory)))
-    (denden--log-stage "Stylesheet/scripts/schemes-json"
-      (lambda ()
-        (site-build-stylesheet site-publishing-directory)
-        (site-build-scripts site-publishing-directory)
-        (site-build-schemes-json site-publishing-directory)))
-    (denden--log-stage "Auxiliary outputs"
-      (lambda () (site-build-auxiliary-outputs all-pages site-publishing-directory denden-repository-directory)))
-    (denden-log "Total: %.2fs" (- (float-time) build-start))))
+         (all-pages (site--inject-all-pages)))
+    (denden-build-project (assoc "site" org-publish-project-alist) force)
+    (site-build-taxonomy-pages all-pages site-publishing-directory)
+    (site-build-stylesheet site-publishing-directory)
+    (site-build-scripts site-publishing-directory)
+    (site-build-schemes-json site-publishing-directory)
+    (site-build-auxiliary-outputs all-pages site-publishing-directory denden-repository-directory)))
 
 (defcustom site-dev-include-drafts t
   "Non-nil: dev-only rebuilds include drafts; the real production build never does.

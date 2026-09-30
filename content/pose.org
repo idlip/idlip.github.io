@@ -1,16 +1,16 @@
-#+title: Pose
+#+title: Pose | Vivre Card
 #+layout: pose
 #+draft: false
 #+no_comment: t
 
-Quick thoughts, single lines, half-formed ideas -- the stuff too small for a proper Log entry.
+Quick thoughts, single lines, mini notes and snippets of journal.
 
 ------
 
-** 2026-09-17
+** 2026-09-30                                                   :philosophy:
 
-Testing the Pose format for the first time. Feels good having a place for stray thoughts that don't need a whole post.
+Owning something is better than consuming anything
+-----
+Consuming is a trap and well played psychological game intellects created.
 
-** 2026-09-10
-
-Some days you just need one sentence: today was a good day.
+Owning stuff adds realization and give more thoughts on why stuff exist in the first place.

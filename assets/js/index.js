@@ -95,6 +95,9 @@
   // ── Heading anchor links ─────────────────────────────────────────────────
   // go-org already assigns sequential ids (headline-N) to post headings; add
   // a visible, focusable link to each so sections are directly linkable.
+  // Pose cards get the same link, styled by the same CSS rule, but as a
+  // share icon: if the browser has the native Web Share sheet, use it;
+  // otherwise it's just a plain "#id" permalink like any other heading.
   function addHeadingAnchors() {
     document
       .querySelectorAll(".post-body :is(h2, h3, h4, h5, h6)[id]")
@@ -106,27 +109,122 @@
         a.textContent = "#";
         h.appendChild(a);
       });
+    document.querySelectorAll(".pose-card h2[id]").forEach(function (h) {
+      var a = document.createElement("a");
+      a.className = "heading-anchor";
+      a.href = "#" + h.id;
+      a.setAttribute("aria-label", "Share this entry");
+      a.textContent = "";
+      if (navigator.share) {
+        a.addEventListener("click", function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          var entry = (window.__poseEntries || {})[h.id];
+          navigator
+            .share({
+              title: entry ? entry.title : h.textContent,
+              url: location.origin + location.pathname + "#" + h.id,
+            })
+            .catch(function () {});
+        });
+      }
+      h.appendChild(a);
+    });
   }
 
-  // ── Image lightbox ───────────────────────────────────────────────────────
-  // Click a post image to view it full-size in the shared <dialog> (baseof.html).
-  // Esc and backdrop-click close it natively/via the same idiom as the palette.
-  function initImageLightbox() {
-    var imgs = document.querySelectorAll(".post-body img");
-    if (!imgs.length) return;
-    var dlg = document.getElementById("image-lightbox");
-    var lbImg = document.getElementById("lightbox-img");
-    if (!dlg || !lbImg) return;
-    imgs.forEach(function (img) {
-      img.addEventListener("click", function () {
-        lbImg.src = img.currentSrc || img.src;
-        lbImg.alt = img.alt || "";
+  // ── Generic dialog opener ─────────────────────────────────────────────────
+  // Both the image lightbox and the Pose entry dialog are the same shape: a
+  // click on some trigger element fills in a shared <dialog>'s content, then
+  // shows it; a backdrop click closes it. This is the one place that wiring
+  // lives; each caller only supplies its own "how do I fill this in" step.
+  // POPULATE returning false for a given trigger/event skips opening it.
+  function initDialog(dlg, triggers, populate) {
+    if (!dlg || !triggers.length) return;
+    triggers.forEach(function (trigger) {
+      trigger.addEventListener("click", function (e) {
+        if (populate(trigger, e) === false) return;
         dlg.showModal();
       });
     });
     dlg.addEventListener("click", function (e) {
       if (e.target === dlg) dlg.close();
     });
+  }
+
+  // ── Image lightbox ───────────────────────────────────────────────────────
+  // Click a post image to view it full-size. Esc/backdrop-click close it
+  // natively, via initDialog above.
+  function initImageLightbox() {
+    var dlg = document.getElementById("image-lightbox");
+    var lbImg = document.getElementById("lightbox-img");
+    if (!dlg || !lbImg) return;
+    initDialog(dlg, document.querySelectorAll(".post-body img"), function (img) {
+      lbImg.src = img.currentSrc || img.src;
+      lbImg.alt = img.alt || "";
+    });
+  }
+
+  // ── Pose cards: expand-to-dialog ──────────────────────────────────────────
+  // Each card's full content lives in window.__poseEntries (site.el, keyed
+  // by the card's own heading id). Clicking a card shows it in the same
+  // dialog the image lightbox uses (theme.css groups the two by selector).
+  // Opening a link that already points at an entry's id (#2026-09-17, from
+  // either share icon, or pasted straight into a browser) opens its dialog
+  // too. The dialog's own title gets a share icon as well, kept in sync with
+  // whichever entry is currently open, so a direct-linked dialog is still
+  // shareable even without going back to its card.
+  function initPoseCards() {
+    var entries = window.__poseEntries || {};
+    var dlg = document.getElementById("pose-dialog");
+    var dlgTitle = document.getElementById("pose-dialog-title");
+    var dlgContent = document.getElementById("pose-dialog-content");
+    if (!dlg || !dlgTitle || !dlgContent) return;
+
+    var dlgTitleText = document.createElement("span");
+    dlgTitle.appendChild(dlgTitleText);
+    var dlgShare = document.createElement("a");
+    dlgShare.className = "heading-anchor";
+    dlgShare.setAttribute("aria-label", "Share this entry");
+    dlgShare.textContent = "";
+    dlgTitle.appendChild(dlgShare);
+
+    function show(id) {
+      var entry = entries[id];
+      if (!entry) return false;
+      dlgTitleText.textContent = entry.title;
+      dlgContent.innerHTML = entry.html;
+      dlgShare.href = "#" + id;
+      return true;
+    }
+
+    // The title itself is a real <button> (not the whole <li>), so this is
+    // keyboard-reachable and activatable (Tab, Enter/Space) for free, and
+    // doesn't nest one interactive control (a card "button") inside another
+    // (the share link) the way a whole-card click handler would have.
+    var triggers = document.querySelectorAll(".pose-card-trigger");
+    initDialog(dlg, triggers, function (btn) {
+      var h2 = btn.closest("h2[id]");
+      return h2 && show(h2.id);
+    });
+
+    if (navigator.share) {
+      dlgShare.addEventListener("click", function (e) {
+        e.preventDefault();
+        navigator
+          .share({
+            title: dlgTitleText.textContent,
+            url: location.origin + location.pathname + dlgShare.getAttribute("href"),
+          })
+          .catch(function () {});
+      });
+    }
+
+    function openFromHash() {
+      var id = location.hash.slice(1);
+      if (id && show(id)) dlg.showModal();
+    }
+    window.addEventListener("hashchange", openFromHash);
+    openFromHash();
   }
 
   // ── Init ───────────────────────────────────────────────────────────────────
@@ -143,6 +241,7 @@
       addHeadingAnchors();
       initImageLightbox();
     }
+    initPoseCards();
 
     updateEchoHint();
   }
