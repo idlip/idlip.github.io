@@ -148,6 +148,8 @@ denden-pages-sync: denden-pages-setup
     # deletes that file, which breaks every git command run in the worktree
     # afterwards (they fall through to the main repo's .git instead).
     rsync -a --delete --exclude .git {{denden_pub}}/ {{gh_pages_worktree}}/
+    # for github pages
+    cp CNAME {{gh_pages_worktree}}/CNAME
 
 # Commit and force-push whatever is currently in the gh-pages worktree,
 # however it got there (denden-pages-sync, or your own hand edits via

@@ -19,20 +19,16 @@ Treasure this island has to offer:
                                     (plist-get latest-post :title))
                               (format " (%s)" (denden-format-iso-date (plist-get latest-post :date) "%d %b %Y")))
                       "none yet"))
-         (pose-entry (with-temp-buffer
-                       (insert-file-contents (expand-file-name "content/pose.org" denden-repository-directory))
-                       (org-mode)
-                       (goto-char (point-min))
-                       (when (re-search-forward "^\\*\\* \\(.*\\)$" nil t)
-                         (let* ((date (match-string 1))
-                                (body-start (point))
-                                (body-end (if (re-search-forward "^\\*\\* " nil t) (match-beginning 0) (point-max))))
-                           (list :date date
-                                 :body (string-trim (buffer-substring-no-properties body-start body-end)))))))
-         (pose-cell (if pose-entry
+         (latest-pose (car (site--pose-entries
+                             (expand-file-name "content/pose.org" denden-repository-directory)
+                             all-pages)))
+         (pose-cell (if latest-pose
                         (list 'span nil
-                              (list 'a '(:href "/pose/") (plist-get pose-entry :date))
-                              (format " — %s" (funcall truncate-text (plist-get pose-entry :body) 100)))
+                              (list 'a '(:href "/pose/") (plist-get latest-pose :title))
+                              (format " :: %s"
+                                      (funcall truncate-text
+                                               (denden-html-plain-text (plist-get latest-pose :teaser-html))
+                                               100)))
                       "none yet"))
          ;; Last item in wander.org
          (wander-groups (denden-parse-topic-list (expand-file-name "content/wander.org" denden-repository-directory)))

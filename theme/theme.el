@@ -281,11 +281,15 @@ since aria-hidden is not respected there.")
 (cl-defun theme-badge (&key name logo color link subtitle tooltip)
   "One badge link for NAME (icon + optional subtitle + optional name pill).
 COLOR, if given, also sets --glow (theme.css's rotating gradient ring,
-shared by every card/button-shaped element, reads it on hover)."
+shared by every card/button-shaped element, reads it on hover). Sets
+border-width/style/color as three longhands, not the border shorthand:
+the shorthand also resets border-image back to none, and being inline
+that reset would outrank theme.css's own hover rule for it."
   (let ((tooltip (or tooltip (and subtitle name (format "%s %s" subtitle name)) subtitle name "")))
     (append
      (list 'a (list :href (or link "#") :class "badge rain-hover" :title tooltip
-                     :style (and color (format "border:1px solid %s;--glow:%s" color color))))
+                     :style (and color (format "border-width:1px;border-style:solid;border-color:%s;--glow:%s"
+                                                color color))))
      (list (list 'span '(:class "badge-icon") (list 'img (list :src logo :alt (or name "") :loading "lazy"))))
      (when subtitle (list (list 'span '(:class "badge-subtitle") subtitle)))
      (when name (list (list 'span (list :class "badge-name" :style (and color (format "background:%s" color)))
