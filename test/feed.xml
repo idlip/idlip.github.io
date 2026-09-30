@@ -1,0 +1,1199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/feed.xml" /><id>https://idlip.in/</id><updated>2026-09-14T00:00:00Z</updated><author><name>Dilip | Zororg</name><email>hi@idlip.in</email></author><generator uri="https://gohugo.io/">Hugo</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Denden Org-mode Feature Test</title><link rel="alternate" type="text/html" href="https://idlip.in/test/denden-org-test/" /><id>https://idlip.in/test/denden-org-test/</id><published>2026-09-14T00:00:00Z</published><updated>2026-09-14T00:00:00Z</updated><category term="test" label="test" scheme="https://idlip.in/tags/"></category><category term="denden" label="denden" scheme="https://idlip.in/tags/"></category><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+The denden-specific equivalent of <code>org-test.org</code> (which covers generic
+Org syntax against the <b>old</b> Hugo/go-org renderer) &ndash; this file exercises
+the same ground through the <b>denden</b> backend instead, plus native Org
+features go-org either doesn't support or <code>org-test.org</code> didn't happen to
+cover: timestamps, radio targets, LaTeX fragments, inline source, a named
+and captioned table, <code>:noexport:</code>, <code>COMMENT</code> headings, and multi-term
+description lists. Hugo shortcodes (<code>org-test.org</code>'s own last section) are
+intentionally absent &ndash; decision 10 defers that whole question to Stage 11,
+except note/tip/warn/sidenote (2026-09-14, "Special Blocks" below):
+those are no longer Hugo shortcode text at all, but real Org special
+blocks (<code>#+begin_note</code> etc) and a macro (<code>{{{sidenote(...)}}}</code>) &ndash;
+<code>denden-special-block=/the =sidenote</code> macro, not a shortcode port.
+</p>
+
+<hr />
+<div id="outline-container-text-formatting" class="outline-2">
+<h2 id="text-formatting">Text Formatting</h2>
+<div class="outline-text-2" id="text-orgd598c55">
+<p>
+Plain paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing
+elit.
+</p>
+
+<p>
+<b>Bold</b>, <i>italic</i>, <span class="underline">underline</span>, <code>code</code>, <code>verbatim</code>, <del>strikethrough</del> &ndash; all
+native org syntax, all routed through the same derived denden-html
+backend as everything else on this page.
+</p>
+
+<p>
+Combine them: <b>bold and <i>italic</i> together</b>, or <code>code with _underline_</code>.
+</p>
+
+<p>
+Superscript: E=mc<sup>2</sup> and subscript: H<sub>2</sub>O.
+</p>
+
+<p>
+Special characters: em-dash &mdash; and en-dash &ndash; render via org.
+</p>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-headings" class="outline-2">
+<h2 id="headings">Headings</h2>
+<div class="outline-text-2" id="text-org64adef3">
+</div>
+<div id="outline-container-h2-section" class="outline-3">
+<h3 id="h2-section">H2 &ndash; Section</h3>
+<div class="outline-text-3" id="text-org64064bc">
+<p>
+Content under H2.
+</p>
+</div>
+<div id="outline-container-h3-subsection" class="outline-4">
+<h4 id="h3-subsection">H3 &ndash; Subsection</h4>
+<div class="outline-text-4" id="text-orgc227f64">
+<p>
+Content under H3.
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="h4-sub-subsection"></a>H4 &ndash; Sub-subsection<br />
+<div class="outline-text-5" id="text-orgfa39c49">
+<p>
+Content under H4.
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="h5-minor"></a>H5 &ndash; Minor<br />
+<div class="outline-text-6" id="text-orgf09f510">
+<p>
+Content under H5.
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="h6-smallest"></a>H6 &ndash; Smallest<br />
+<div class="outline-text-7" id="text-org457d94e">
+<p>
+Content under H6.
+</p>
+
+<hr />
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-lists" class="outline-2">
+<h2 id="lists">Lists</h2>
+<div class="outline-text-2" id="text-org6960b6a">
+</div>
+<div id="outline-container-unordered" class="outline-3">
+<h3 id="unordered">Unordered</h3>
+<div class="outline-text-3" id="text-org55302fa">
+<ul class="org-ul">
+<li>First item</li>
+<li>Second item
+<ul class="org-ul">
+<li>Nested item A</li>
+<li>Nested item B
+<ul class="org-ul">
+<li>Deeply nested</li>
+</ul></li>
+</ul></li>
+<li>Third item</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-ordered" class="outline-3">
+<h3 id="ordered">Ordered</h3>
+<div class="outline-text-3" id="text-orgc610005">
+<ol class="org-ol">
+<li>Alpha</li>
+<li>Beta
+<ol class="org-ol">
+<li>Beta-one</li>
+<li>Beta-two</li>
+</ol></li>
+<li>Gamma</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-description-multiple-terms-per-item" class="outline-3">
+<h3 id="description-multiple-terms-per-item">Description, Multiple Terms Per Item</h3>
+<div class="outline-text-3" id="text-org8a72e27">
+<dl class="org-dl">
+<dt>Emacs, GNU Emacs</dt><dd>A text editor and way of life &ndash; a description term
+can carry more than one name before the <code>::</code>.</dd>
+<dt>Org-mode</dt><dd>The best document format.</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-checkboxes" class="outline-3">
+<h3 id="checkboxes">Checkboxes</h3>
+<div class="outline-text-3" id="text-org5629c67">
+<ul class="org-ul">
+<li class="on"><code>[X]</code> Completed task</li>
+<li class="off"><code>[&nbsp;]</code> Pending task</li>
+<li class="trans"><code>[-]</code> In-progress task (partial)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-mixed-nesting" class="outline-3">
+<h3 id="mixed-nesting">Mixed Nesting</h3>
+<div class="outline-text-3" id="text-org3521c83">
+<ol class="org-ol">
+<li>Ordered top level
+<ul class="org-ul">
+<li>Unordered nested inside ordered</li>
+<li class="off"><code>[&nbsp;]</code> A checkbox nested inside that</li>
+</ul></li>
+<li>Back to ordered</li>
+</ol>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="outline-container-links-targets-and-timestamps" class="outline-2">
+<h2 id="links-targets-and-timestamps">Links, Targets and Timestamps</h2>
+<div class="outline-text-2" id="text-orgccf9f4c">
+<p>
+External: <a href="https://gohugo.io/documentation/">Hugo documentation</a>
+</p>
+
+<p>
+Bare URL: <a href="https://dilip.idlip.in">https://dilip.idlip.in</a>
+</p>
+
+<p>
+Internal page: <a href="/about/">About</a>
+</p>
+
+<p>
+A radio target, defined once <a id="org30664b8">radio example</a> and referenced by plain
+text matching it elsewhere in this same buffer: <a href="#org30664b8">radio example</a> (Org turns
+the second occurrence into a link back to the first automatically &ndash; note
+the triple angle brackets on the definition; a double-angle <code>&lt;&lt;target&gt;&gt;</code>
+is a plain target, only linkable via an explicit <code>[[target]]</code>, and does
+not auto-link matching plain text the way a radio target does).
+</p>
+
+<p>
+Active timestamp: <span class="timestamp-wrapper"><span class="timestamp">&lt;2026-09-20 Sun&gt;</span></span>. Inactive timestamp (no agenda
+entry): <span class="timestamp-wrapper"><span class="timestamp">[2026-09-14 Mon]</span></span>. A range: <span class="timestamp-wrapper"><span class="timestamp">&lt;2026-09-20 Sun&gt;&ndash;&lt;2026-09-25 Fri&gt;</span></span>.
+</p>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-images" class="outline-2">
+<h2 id="images">Images</h2>
+<div class="outline-text-2" id="text-org5704bdf">
+<p>
+<a href="/images/op-roger.jpg">Image alt text</a>
+</p>
+
+<p>
+With a caption and a <code>#+name:</code> (for cross-referencing, even though this
+port doesn't resolve <code>[[fig:...]]</code> references specially yet):
+</p>
+
+
+<div id="org28c8ddb" class="figure">
+<p><img src="/images/op-roger.jpg" alt="op-roger.jpg" width="300" />
+</p>
+<p>Roger from One Piece</p>
+</div>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-blockquotes" class="outline-2">
+<h2 id="blockquotes">Blockquotes</h2>
+<div class="outline-text-2" id="text-orgff98e91">
+<blockquote>
+<p>
+"An idiot admires complexity, a genius admires simplicity."
+&mdash; Terry Davis
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+Nested outer level.
+#+begin<sub>quote</sub>
+Inner nested quote.
+</p>
+</blockquote>
+<p>
+Back to outer.
+#+end<sub>quote</sub>
+</p>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-code" class="outline-2">
+<h2 id="code">Code</h2>
+<div class="outline-text-2" id="text-orgd9e7f52">
+</div>
+<div id="outline-container-inline" class="outline-3">
+<h3 id="inline">Inline</h3>
+<div class="outline-text-3" id="text-org05ceda1">
+<p>
+Use <code>hugo server -D</code> to run the dev server. Reference <code>config.toml</code> for
+settings.
+</p>
+</div>
+</div>
+<div id="outline-container-inline-source-evaluated-at-export-time-by-the-language-s-own" class="outline-3">
+<h3 id="inline-source-evaluated-at-export-time-by-the-language-s-own">Inline Source (evaluated at export time by the language's own</h3>
+<div class="outline-text-3" id="text-org6567ba0">
+<p>
+font-lock, not executed)
+</p>
+
+<p>
+Approximately <code class="src src-emacs-lisp">(+ 1 2)</code> inline, same
+htmlize path as a block.
+</p>
+</div>
+</div>
+<div id="outline-container-emacs-lisp" class="outline-3">
+<h3 id="emacs-lisp">Emacs Lisp</h3>
+<div class="outline-text-3" id="text-org0c7955a">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><code>(<span class="org-keyword">defun</span> <span class="org-function-name">denden-example</span> (name)
+  <span class="org-doc">"Return a greeting for NAME."</span>
+  (<span class="org-keyword">interactive</span> <span class="org-string">"sName: "</span>)
+  (message <span class="org-string">"Hello, %s!"</span> name))
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-bash" class="outline-3">
+<h3 id="bash">Bash</h3>
+<div class="outline-text-3" id="text-org18d03e4">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span class="org-comment-delimiter">#</span><span class="org-comment">!/usr/bin/</span><span class="org-keyword">env</span><span class="org-comment"> bash
+</span><span class="org-builtin">set</span> -euo pipefail
+<span class="org-function-name">greet</span>() { <span class="org-builtin">echo</span> <span class="org-string">"Hello, ${1:-world}!"</span>; }
+greet <span class="org-string">"Dilip"</span>
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-python" class="outline-3">
+<h3 id="python">Python</h3>
+<div class="outline-text-3" id="text-org3b95bf8">
+<div class="org-src-container">
+<pre class="src src-python"><code><span class="org-keyword">from</span> dataclasses <span class="org-keyword">import</span> dataclass
+
+<span class="org-type">@dataclass</span>
+<span class="org-keyword">class</span> <span class="org-type">Post</span>:
+    title: <span class="org-builtin">str</span>
+    tags: <span class="org-builtin">list</span>[<span class="org-builtin">str</span>]
+
+<span class="org-builtin">print</span>(Post(<span class="org-string">"Hello"</span>, [<span class="org-string">"emacs"</span>]))
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-no-language-example-block" class="outline-3">
+<h3 id="no-language-example-block">No Language (example block)</h3>
+<div class="outline-text-3" id="text-orgca3a003">
+<pre class="example" id="org0cfe1d8">
+Plain preformatted text block.
+No syntax highlighting here.
+  Indentation is preserved.
+</pre>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="outline-container-tables" class="outline-2">
+<h2 id="tables">Tables</h2>
+<div class="outline-text-2" id="text-org77ed33d">
+<p>
+A plain table:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Language</th>
+<th scope="col" class="org-left">Paradigm</th>
+<th scope="col" class="org-right">Year</th>
+<th scope="col" class="org-left">Typed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Emacs Lisp</td>
+<td class="org-left">Functional</td>
+<td class="org-right">1985</td>
+<td class="org-left">Dynamic</td>
+</tr>
+
+<tr>
+<td class="org-left">Python</td>
+<td class="org-left">Multi</td>
+<td class="org-right">1991</td>
+<td class="org-left">Dynamic</td>
+</tr>
+
+<tr>
+<td class="org-left">Haskell</td>
+<td class="org-left">Functional</td>
+<td class="org-right">1990</td>
+<td class="org-left">Static</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+A named, captioned table with alignment cookies (right-aligned numeric
+column):
+</p>
+
+<table id="org7c06dc0" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 1:</span> A small, explicitly captioned and named table</caption>
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Year</th>
+<th scope="col" class="org-right">&lt;r&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">2023</td>
+<td class="org-right">100</td>
+</tr>
+
+<tr>
+<td class="org-right">2024</td>
+<td class="org-right">250</td>
+</tr>
+
+<tr>
+<td class="org-right">2025</td>
+<td class="org-right">400</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-special-blocks" class="outline-2">
+<h2 id="special-blocks">Special Blocks</h2>
+<div class="outline-text-2" id="text-org96687f3">
+</div>
+<div id="outline-container-centered-text" class="outline-3">
+<h3 id="centered-text">Centered text</h3>
+<div class="outline-text-3" id="text-org992aeb5">
+<div class="org-center">
+<p>
+<b>This paragraph is centered using org-center.</b>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-verse-block-preserves-line-breaks" class="outline-3">
+<h3 id="verse-block-preserves-line-breaks">Verse block (preserves line breaks)</h3>
+<div class="outline-text-3" id="text-orga8d7a43">
+<p class="verse">
+In the beginning was the Word,<br />
+&nbsp;&nbsp;and the Word was with God,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;and the Word was God.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-export-html-block-raw-passthrough" class="outline-3">
+<h3 id="export-html-block-raw-passthrough">Export HTML block (raw passthrough)</h3>
+<div class="outline-text-3" id="text-org64db195">
+<div style="border: 1px dashed var(--border); padding: 0.5em 1em; margin: 1em 0;">
+  Raw HTML export block -- passes directly to output, same raw-html
+  escape hatch the post-body pipeline itself relies on (denden-serialize's
+  own raw-html pseudo-tag).
+</div>
+</div>
+</div>
+<div id="outline-container-callouts-note-tip-warn" class="outline-3">
+<h3 id="callouts-note-tip-warn">Callouts (note / tip / warn)</h3>
+<div class="outline-text-3" id="text-org56e35e4">
+<p>
+Native Org special blocks now, not Hugo shortcode text embedded in the
+source &ndash; <code>denden-special-block</code> renders these as the same
+<code>callout callout-TYPE</code> divs the Hugo theme's shortcodes produce
+(theme.css's own styling), but content inside is real Org, so formatting
+is consistent with the rest of the page instead of going through
+markdownify.
+</p>
+
+<div class="callout callout-note">
+<p>
+This is a <b>note</b> callout. Org formatting works inside.
+</p>
+</div>
+
+<div class="callout callout-tip">
+<p>
+This is a <b>tip</b> callout. Useful for best practices.
+</p>
+</div>
+
+<div class="callout callout-warn">
+<p>
+This is a <b>warning</b> callout. Something might break.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sidenote" class="outline-3">
+<h3 id="sidenote">Sidenote</h3>
+<div class="outline-text-3" id="text-orgd11d803">
+<p>
+Sidenotes are inline, not block-level, so they use an Org macro instead:
+here is a paragraph with a sidenote.<aside class="sidenote">This appears in the right margin on wide screens</aside> The main text continues after the sidenote.
+</p>
+</div>
+</div>
+<div id="outline-container-latex-fragment-rendered-as-is-by-ox-html-no-mathjax-wiring-in-this" class="outline-3">
+<h3 id="latex-fragment-rendered-as-is-by-ox-html-no-mathjax-wiring-in-this">LaTeX fragment (rendered as-is by ox-html, no MathJax wiring in this</h3>
+<div class="outline-text-3" id="text-orgf8835b9">
+<p>
+port &ndash; included to document current behaviour, not to claim support)
+</p>
+
+<p>
+Inline: \(E = mc^2\). Display:
+\[
+\sum_{i=1}^{n} i = \frac{n(n+1)}{2}
+\]
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="outline-container-properties-todo-keywords-and-exclusion" class="outline-2">
+<h2 id="properties-todo-keywords-and-exclusion">Properties, TODO Keywords and Exclusion</h2>
+<div class="outline-text-2" id="text-org83aab89">
+</div>
+<div id="outline-container-properties-drawer-entry" class="outline-3">
+<h3 id="properties-drawer-entry">Entry with a PROPERTIES drawer</h3>
+<div class="outline-text-3" id="text-properties-drawer-entry">
+<p>
+This heading has a properties drawer and an explicit <code>:CUSTOM_ID:</code>
+(decision 15) &ndash; both should be honoured the same way the migration's own
+id-scheme fixture tests directly.
+</p>
+</div>
+</div>
+<div id="outline-container-a-finished-todo-heading" class="outline-3">
+<h3 id="a-finished-todo-heading"><span class="done DONE">DONE</span> A finished TODO heading</h3>
+<div class="outline-text-3" id="text-orgba3cf37">
+<p>
+This heading has a TODO keyword.
+</p>
+</div>
+</div>
+<div id="outline-container-a-pending-heading" class="outline-3">
+<h3 id="a-pending-heading"><span class="todo TODO">TODO</span> A pending heading</h3>
+<div class="outline-text-3" id="text-org938d7e8">
+<p>
+This one is still pending.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org-specific-features" class="outline-2">
+<h2 id="org-specific-features">Org-Specific Features</h2>
+<div class="outline-text-2" id="text-orgda79a7a">
+</div>
+<div id="outline-container-horizontal-rule" class="outline-3">
+<h3 id="horizontal-rule">Horizontal Rule</h3>
+<div class="outline-text-3" id="text-org42c7025">
+<p>
+Five or more dashes become an <code>&lt;hr&gt;</code>:
+</p>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-special-symbols" class="outline-3">
+<h3 id="special-symbols">Special Symbols</h3>
+<div class="outline-text-3" id="text-org12943f6">
+<p>
+Arrows: &rarr; &larr; &rArr; &lArr; &harr;
+</p>
+
+<p>
+Greek: &alpha; &beta; &gamma; &delta; &pi; &Omega; &lambda;
+</p>
+
+<p>
+Misc: &copy; &trade; &nbsp; &deg; &plusmn;
+</p>
+</div>
+</div>
+<div id="outline-container-line-break" class="outline-3">
+<h3 id="line-break">Line Break</h3>
+<div class="outline-text-3" id="text-org74baf32">
+<p>
+First line.<br />
+Second line forced with double-backslash.
+</p>
+</div>
+</div>
+<div id="outline-container-fixed-width-one-liner-code-no-block" class="outline-3">
+<h3 id="fixed-width-one-liner-code-no-block">Fixed-Width (one-liner code, no block)</h3>
+<div class="outline-text-3" id="text-org338c276">
+<pre class="example">
+This is a fixed-width line.
+Another fixed-width line.
+</pre>
+</div>
+</div>
+<div id="outline-container-comment-not-rendered" class="outline-3">
+<h3 id="comment-not-rendered">Comment (not rendered)</h3>
+<div class="outline-text-3" id="text-org76fa808">
+</div>
+</div>
+<div id="outline-container-drawer-rendered-by-default" class="outline-3">
+<h3 id="drawer-rendered-by-default">Drawer (rendered by default)</h3>
+<div class="outline-text-3" id="text-org6932bac">
+<p>
+A named, non-standard drawer &ndash; unlike <code>:PROPERTIES:</code>, ox-html's own
+default (<code>org-export-with-drawers</code> = <code>(not "LOGBOOK")</code>) exports every
+drawer except LOGBOOK, so this text is expected to appear in the output.
+</p>
+</div>
+</div>
+<div id="outline-container-non-ascii-wide-text" class="outline-3">
+<h3 id="non-ascii-wide-text">Non-ASCII / Wide Text</h3>
+<div class="outline-text-3" id="text-org8ca5756">
+<p>
+日本語のテキストも正しくレンダリングされるはずです。
+Emoji stay literal, not glyph-substituted: 🎉 ✅ 🚀.
+</p>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+This is the first footnote with plain text, referenced twice above
+&ndash; both should point at the same definition, not create a duplicate.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.note" class="footnum" href="#fnr.note" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+This footnote has <b>bold</b> and <code>code</code> in it.
+</p>
+
+<hr /></div></div>
+
+
+</div>
+</div>]]></content></entry><entry><title>Org-mode Feature Test</title><link rel="alternate" type="text/html" href="https://idlip.in/test/org-test/" /><id>https://idlip.in/test/org-test/</id><published>2026-01-01T00:00:00Z</published><updated>2026-01-01T00:00:00Z</updated><category term="test" label="test" scheme="https://idlip.in/tags/"></category><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<div id="outline-container-text-formatting" class="outline-2">
+<h2 id="text-formatting">Text Formatting</h2>
+<div class="outline-text-2" id="text-orgd766730">
+<p>
+Hello world, dude. loll no. and here again.
+</p>
+
+<p>
+Plain paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</p>
+
+<p>
+<b>Bold</b>, <i>italic</i>, <span class="underline">underline</span>, <code>code</code>, <code>verbatim</code>, <del>strikethrough</del> — all native org syntax.
+</p>
+
+<p>
+Combine them: <b>bold and <i>italic</i> together</b>, or <code>code with _underline_</code>.
+</p>
+
+<p>
+Superscript: E=mc<sup>2</sup> and subscript: H<sub>2</sub>O (org native).
+</p>
+
+<p>
+Special characters: em-dash &mdash; and en-dash &ndash; render via org.
+</p>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-headings" class="outline-2">
+<h2 id="headings">Headings</h2>
+<div class="outline-text-2" id="text-org3d1a624">
+</div>
+<div id="outline-container-h2-section" class="outline-3">
+<h3 id="h2-section">H2 — Section</h3>
+<div class="outline-text-3" id="text-orgb8bfe9a">
+<p>
+Content under H2.
+</p>
+</div>
+<div id="outline-container-h3-subsection" class="outline-4">
+<h4 id="h3-subsection">H3 — Subsection</h4>
+<div class="outline-text-4" id="text-org3ea80f9">
+<p>
+Content under H3.
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="h4-sub-subsection"></a>H4 — Sub-subsection<br />
+<div class="outline-text-5" id="text-org53ee6c4">
+<p>
+Content under H4.
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="h5-minor"></a>H5 — Minor<br />
+<div class="outline-text-6" id="text-org71d2062">
+<p>
+Content under H5.
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="h6-smallest"></a>H6 — Smallest<br />
+<div class="outline-text-7" id="text-org8cd7901">
+<p>
+Content under H6.
+</p>
+
+<hr />
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-lists" class="outline-2">
+<h2 id="lists">Lists</h2>
+<div class="outline-text-2" id="text-org6b9175f">
+</div>
+<div id="outline-container-unordered" class="outline-3">
+<h3 id="unordered">Unordered</h3>
+<div class="outline-text-3" id="text-org25d59ce">
+<ul class="org-ul">
+<li>First item</li>
+<li>Second item
+<ul class="org-ul">
+<li>Nested item A</li>
+<li>Nested item B
+<ul class="org-ul">
+<li>Deeply nested</li>
+</ul></li>
+</ul></li>
+<li>Third item</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-ordered" class="outline-3">
+<h3 id="ordered">Ordered</h3>
+<div class="outline-text-3" id="text-org0b5ea5b">
+<ol class="org-ol">
+<li>Alpha</li>
+<li>Beta
+<ol class="org-ol">
+<li>Beta-one</li>
+<li>Beta-two</li>
+</ol></li>
+<li>Gamma</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-with-descriptions-definition-list" class="outline-3">
+<h3 id="with-descriptions-definition-list">With Descriptions (definition list)</h3>
+<div class="outline-text-3" id="text-org2d62dac">
+<dl class="org-dl">
+<dt>Emacs</dt><dd>A text editor and way of life.</dd>
+<dt>Org-mode</dt><dd>The best document format.</dd>
+<dt>NixOS</dt><dd>Purely functional Linux.</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-checkboxes-todo-items-in-lists" class="outline-3">
+<h3 id="checkboxes-todo-items-in-lists">Checkboxes (TODO items in lists)</h3>
+<div class="outline-text-3" id="text-org72eecd6">
+<ul class="org-ul">
+<li class="on"><code>[X]</code> Completed task</li>
+<li class="off"><code>[&nbsp;]</code> Pending task</li>
+<li class="on"><code>[X]</code> Another done one</li>
+<li class="trans"><code>[-]</code> In-progress task (partial)</li>
+</ul>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="outline-container-links" class="outline-2">
+<h2 id="links">Links</h2>
+<div class="outline-text-2" id="text-orgdcd7245">
+<p>
+External: <a href="https://gohugo.io/documentation/">Hugo documentation</a>
+</p>
+
+<p>
+With description: <a href="https://nixos.org">NixOS — the purely functional Linux distro</a>
+</p>
+
+<p>
+Bare URL: <a href="https://dilip.idlip.in">https://dilip.idlip.in</a>
+</p>
+
+<p>
+Internal page: <a href="/about/">About</a>
+</p>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-images" class="outline-2">
+<h2 id="images">Images</h2>
+<div class="outline-text-2" id="text-org74c22a1">
+<p>
+<a href="/images/op-roger.jpg">Image alt text</a>
+</p>
+
+<p>
+With caption:
+</p>
+
+
+<div id="org839ab68" class="figure">
+<p><img src="/images/op-roger.jpg" alt="op-roger.jpg" width="300" />
+</p>
+<p>Roger from One Piece</p>
+</div>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-blockquotes" class="outline-2">
+<h2 id="blockquotes">Blockquotes</h2>
+<div class="outline-text-2" id="text-orgdbf22a5">
+<blockquote>
+<p>
+"An idiot admires complexity, a genius admires simplicity."
+&mdash; Terry Davis
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+Nested outer level.
+</p>
+
+<p>
+#+begin<sub>quote</sub>
+Inner nested quote.
+</p>
+</blockquote>
+
+<p>
+Back to outer.
+#+end<sub>quote</sub>
+</p>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-code-blocks" class="outline-2">
+<h2 id="code-blocks">Code Blocks</h2>
+<div class="outline-text-2" id="text-org0b76f36">
+</div>
+<div id="outline-container-inline" class="outline-3">
+<h3 id="inline">Inline</h3>
+<div class="outline-text-3" id="text-orgd9c1104">
+<p>
+Use <code>hugo server -D</code> to run the dev server. Reference <code>config.toml</code> for settings.
+</p>
+</div>
+</div>
+<div id="outline-container-bash" class="outline-3">
+<h3 id="bash">Bash</h3>
+<div class="outline-text-3" id="text-org0416323">
+<div class="org-src-container">
+<pre class="src src-bash"><code><span class="org-comment-delimiter">#</span><span class="org-comment">!/usr/bin/</span><span class="org-keyword">env</span><span class="org-comment"> bash
+</span><span class="org-builtin">set</span> -euo pipefail
+
+<span class="org-function-name">greet</span>() {
+  local <span class="org-variable-name">name</span>=<span class="org-string">"${1:-world}"</span>
+  <span class="org-builtin">echo</span> <span class="org-string">"Hello, ${name}!"</span>
+}
+
+greet <span class="org-string">"Dilip"</span>
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-python" class="outline-3">
+<h3 id="python">Python</h3>
+<div class="outline-text-3" id="text-org157ba36">
+<div class="org-src-container">
+<pre class="src src-python"><code><span class="org-keyword">from</span> dataclasses <span class="org-keyword">import</span> dataclass
+
+<span class="org-type">@dataclass</span>
+<span class="org-keyword">class</span> <span class="org-type">Post</span>:
+    title: <span class="org-builtin">str</span>
+    tags: <span class="org-builtin">list</span>[<span class="org-builtin">str</span>]
+    <span class="org-variable-name">draft</span>: <span class="org-builtin">bool</span> <span class="org-operator">=</span> <span class="org-constant">False</span>
+
+    <span class="org-keyword">def</span> <span class="org-function-name">__repr__</span>(<span class="org-keyword">self</span>) <span class="org-operator">-&gt;</span> <span class="org-builtin">str</span>:
+        <span class="org-keyword">return</span> f<span class="org-string">"Post(</span>{<span class="org-keyword">self</span>.title!r}<span class="org-string">)"</span>
+
+<span class="org-variable-name">post</span> <span class="org-operator">=</span> Post(<span class="org-string">"Hello World"</span>, [<span class="org-string">"emacs"</span>, <span class="org-string">"nix"</span>])
+<span class="org-builtin">print</span>(post)
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-emacs-lisp" class="outline-3">
+<h3 id="emacs-lisp">Emacs Lisp</h3>
+<div class="outline-text-3" id="text-orge2ac60b">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><code>(<span class="org-keyword">use-package</span> org-roam
+  <span class="org-builtin">:custom</span>
+  (org-roam-directory <span class="org-string">"~/notes"</span>)
+  <span class="org-builtin">:config</span>
+  (org-roam-db-autosync-mode))
+
+(<span class="org-keyword">defun</span> <span class="org-function-name">my/greet</span> (name)
+  <span class="org-doc">"Greet NAME in the minibuffer."</span>
+  (<span class="org-keyword">interactive</span> <span class="org-string">"sName: "</span>)
+  (message <span class="org-string">"Hello, %s!"</span> name))
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-nix" class="outline-3">
+<h3 id="nix">Nix</h3>
+<div class="outline-text-3" id="text-orgb49319f">
+<div class="org-src-container">
+<pre class="src src-nix"><code>{ pkgs, ... }: {
+  home.packages = with pkgs; [
+    emacs
+    ripgrep
+    fd
+  ];
+
+  programs.emacs = {
+    enable = true;
+    extraPackages = epkgs: [ epkgs.org-roam epkgs.magit ];
+  };
+}
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-no-language-example-block" class="outline-3">
+<h3 id="no-language-example-block">No Language (example block)</h3>
+<div class="outline-text-3" id="text-org8bd0314">
+<pre class="example" id="org57f2916">
+Plain preformatted text block.
+No syntax highlighting here.
+  Indentation is preserved.
+</pre>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="outline-container-tables" class="outline-2">
+<h2 id="tables">Tables</h2>
+<div class="outline-text-2" id="text-org106a731">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Language</th>
+<th scope="col" class="org-left">Paradigm</th>
+<th scope="col" class="org-right">Year</th>
+<th scope="col" class="org-left">Typed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Emacs Lisp</td>
+<td class="org-left">Functional</td>
+<td class="org-right">1985</td>
+<td class="org-left">Dynamic</td>
+</tr>
+
+<tr>
+<td class="org-left">Python</td>
+<td class="org-left">Multi</td>
+<td class="org-right">1991</td>
+<td class="org-left">Dynamic</td>
+</tr>
+
+<tr>
+<td class="org-left">Haskell</td>
+<td class="org-left">Functional</td>
+<td class="org-right">1990</td>
+<td class="org-left">Static</td>
+</tr>
+
+<tr>
+<td class="org-left">Nix</td>
+<td class="org-left">Functional</td>
+<td class="org-right">2003</td>
+<td class="org-left">Lazy</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Org table alignment is automatic in Emacs with <code>TAB</code>.
+</p>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-special-blocks" class="outline-2">
+<h2 id="special-blocks">Special Blocks</h2>
+<div class="outline-text-2" id="text-orgcc063ec">
+</div>
+<div id="outline-container-centered-text" class="outline-3">
+<h3 id="centered-text">Centered text</h3>
+<div class="outline-text-3" id="text-org6af2580">
+<div class="org-center">
+<p>
+<b>This paragraph is centered using org-center.</b>
+</p>
+
+<p>
+It can span multiple lines and the alignment is preserved.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-verse-block-preserves-line-breaks" class="outline-3">
+<h3 id="verse-block-preserves-line-breaks">Verse block (preserves line breaks)</h3>
+<div class="outline-text-3" id="text-orgdf81cba">
+<p class="verse">
+In the beginning was the Word,<br />
+&nbsp;&nbsp;and the Word was with God,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;and the Word was God.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-export-html-block-raw-html-passthrough" class="outline-3">
+<h3 id="export-html-block-raw-html-passthrough">Export HTML block (raw HTML passthrough)</h3>
+<div class="outline-text-3" id="text-orgc4ba3f6">
+<div style="border: 1px dashed var(--border); padding: 0.5em 1em; margin: 1em 0; color: var(--fg-dim);">
+  Raw HTML export block — passes directly to output.
+</div>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="outline-container-properties-and-metadata" class="outline-2">
+<h2 id="properties-and-metadata">Properties and Metadata</h2>
+<div class="outline-text-2" id="text-org96bcda1">
+</div>
+<div id="outline-container-entry-with-properties-drawer" class="outline-3">
+<h3 id="entry-with-properties-drawer">Entry with PROPERTIES drawer</h3>
+<div class="outline-text-3" id="text-org00857f0">
+<p>
+:CUSTOM<sub>ID</sub>: my-custom-anchor
+:CREATED: <span class="timestamp-wrapper"><span class="timestamp">[2026-01-01 Thu]</span></span>
+</p>
+
+<p>
+This heading has a properties drawer. Hugo's org parser reads but typically ignores drawers (they don't render visually).
+</p>
+</div>
+</div>
+<div id="outline-container-a-todo-heading" class="outline-3">
+<h3 id="a-todo-heading"><span class="done DONE">DONE</span> A TODO heading</h3>
+<div class="outline-text-3" id="text-orga7afffc">
+<p>
+This heading has a TODO keyword. Hugo's native org support renders the keyword or strips it depending on the parser version.
+</p>
+</div>
+</div>
+<div id="outline-container-a-pending-heading" class="outline-3">
+<h3 id="a-pending-heading"><span class="todo TODO">TODO</span> A pending heading</h3>
+<div class="outline-text-3" id="text-org430e447">
+<p>
+This one is still pending.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="outline-container-shortcodes" class="outline-2">
+<h2 id="shortcodes">Shortcodes</h2>
+<div class="outline-text-2" id="text-org0724228">
+<p>
+Hugo shortcodes work inside org files the same way.
+</p>
+</div>
+<div id="outline-container-note" class="outline-3">
+<h3 id="note">Note</h3>
+<div class="outline-text-3" id="text-org73329e5">
+<p>
+{{&lt; note &gt;}}
+This is a <b>note</b> callout. Org formatting works inside.
+{{&lt; /note &gt;}}
+</p>
+</div>
+</div>
+<div id="outline-container-tip" class="outline-3">
+<h3 id="tip">Tip</h3>
+<div class="outline-text-3" id="text-orgead664b">
+<p>
+{{&lt; tip &gt;}}
+This is a <b>tip</b> callout. Useful for best practices.
+{{&lt; /tip &gt;}}
+</p>
+</div>
+</div>
+<div id="outline-container-warning" class="outline-3">
+<h3 id="warning">Warning</h3>
+<div class="outline-text-3" id="text-orgff9da36">
+<p>
+{{&lt; warn &gt;}}
+This is a <b>warning</b> callout. Something might break.
+{{&lt; /warn &gt;}}
+</p>
+</div>
+</div>
+<div id="outline-container-sidenote" class="outline-3">
+<h3 id="sidenote">Sidenote</h3>
+<div class="outline-text-3" id="text-org0f8066a">
+<p>
+Here is a paragraph with a sidenote.{{&lt; sidenote &gt;}}This appears in the right margin on wide screens, inline on narrow ones.{{&lt; /sidenote &gt;}} The main text continues after the sidenote.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="outline-container-org-specific-features" class="outline-2">
+<h2 id="org-specific-features">Org-Specific Features</h2>
+<div class="outline-text-2" id="text-org84ce440">
+</div>
+<div id="outline-container-horizontal-rule" class="outline-3">
+<h3 id="horizontal-rule">Horizontal Rule</h3>
+<div class="outline-text-3" id="text-org645c3e1">
+<p>
+Five or more dashes become an <code>&lt;hr&gt;</code>:
+</p>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-special-symbols" class="outline-3">
+<h3 id="special-symbols">Special Symbols</h3>
+<div class="outline-text-3" id="text-org9f9e5f4">
+<p>
+Arrows: &rarr; &larr; &rArr; &lArr; &harr;
+</p>
+
+<p>
+Greek: &alpha; &beta; &gamma; &delta; &pi; &Omega; &lambda;
+</p>
+
+<p>
+Misc: &copy; &trade; &nbsp; &deg; &plusmn;
+</p>
+</div>
+</div>
+<div id="outline-container-line-break" class="outline-3">
+<h3 id="line-break">Line Break</h3>
+<div class="outline-text-3" id="text-org50f795d">
+<p>
+First line.<br />
+Second line forced with double-backslash.
+</p>
+</div>
+</div>
+<div id="outline-container-fixed-width-one-liner-code-no-block" class="outline-3">
+<h3 id="fixed-width-one-liner-code-no-block">Fixed-Width (one-liner code, no block)</h3>
+<div class="outline-text-3" id="text-org75b643a">
+<pre class="example">
+This is a fixed-width line.
+Another fixed-width line.
+</pre>
+</div>
+</div>
+<div id="outline-container-drawer-not-rendered" class="outline-3">
+<h3 id="drawer-not-rendered">Drawer (not rendered)</h3>
+<div class="outline-text-3" id="text-orga454e61">
+<p>
+Hidden content in a named drawer.
+</p>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+This is the first footnote with plain text.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.note" class="footnum" href="#fnr.note" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+This footnote has <b>bold</b> and <code>code</code> in it.
+</p>
+
+<hr /></div></div>
+
+
+</div>
+</div>]]></content></entry></feed>

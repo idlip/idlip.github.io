@@ -1,0 +1,63 @@
+/* Wander Console */
+
+@font-face {
+  font-family: "code-op";
+  src: url("/fonts/code-op.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* Custom properties :: haki dark defaults, overridden by wander-theme.js */
+:root {
+  --wt-bg: #000000;
+  --wt-bg-dim: #0a0f0a;
+  --wt-bg-alt: #111c17;
+  --wt-fg: #ffffff;
+  --wt-fg-dim: #b4aeae;
+  --wt-border: #248f6c;
+  --wt-error: #ffa9bf;
+}
+
+body {
+  background: var(--wt-bg);
+  color: var(--wt-fg);
+}
+body,
+button,
+input {
+  font-family: "code-op", "Courier New", monospace;
+  font-weight: normal;
+  color: var(--wt-fg);
+}
+button,
+input,
+dialog {
+  background: var(--wt-bg-dim);
+  border-color: var(--wt-border);
+}
+button:hover {
+  background: var(--wt-bg-alt);
+}
+button:active {
+  background: var(--wt-bg-alt);
+}
+button:disabled,
+button:disabled:hover,
+button:disabled:active {
+  background: var(--wt-bg-dim);
+  color: var(--wt-fg-dim);
+}
+dialog {
+  background: var(--wt-bg-dim);
+  color: var(--wt-fg);
+}
+dialog details[open] {
+  background: var(--wt-bg-alt);
+}
+#wander-iframe {
+  border-color: var(--wt-border);
+  background: var(--wt-bg);
+}
+noscript {
+  border-color: var(--wt-error);
+  color: var(--wt-error);
+}

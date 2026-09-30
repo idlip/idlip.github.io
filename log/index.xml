@@ -1,0 +1,3251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/index.xml" /><id>https://idlip.in/</id><updated>2026-09-30T00:00:00Z</updated><author><name>Dilip | Zororg</name><email>hi@idlip.in</email></author><generator uri="https://gohugo.io/">Hugo</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Playing with Emacs</title><link rel="alternate" type="text/html" href="https://idlip.in/log/playing-emacs/" /><id>https://idlip.in/log/playing-emacs/</id><published>2026-09-02T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="carnival" label="carnival" scheme="https://idlip.in/tags/"></category><category term="games" label="games" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<ul class="org-ul">
+<li>This post is my second <a href="https://www.emacswiki.org/emacs/Carnival">Emacs carnival</a> entry, this time for <a href="https://www.emacswiki.org/emacs/CarnivalSeptember2026">Sept 2026</a>. If you're new to this site, FYI I go by <code>Zororg</code> in emacs chat/universe.</li>
+</ul>
+
+<p>
+Coincidentally I just wrote on <a href="/log/games">Games that occupied my life</a> in my previous post, but it covers more on what all games I've played till now mostly.
+</p>
+
+<p>
+Every emacs users (&gt;1 YOE to qualify) would know that emacs is the tinkering lisp machine, all you
+do everyday is tweak and play with it. Emacs is like a big playground, the definite workshop to all users.
+</p>
+
+<p>
+I don't play any game in emacs as such, but one thing that impress me everytime I run is, <code>M-x zone</code>.
+Not the graphical screensaver you'd expect, but the ASCII text dancing around my screen is so
+blissful to watch. Never seen any editor do that, CLI programs can do, but having in emacs is chef's
+kiss for me. IMO it should also be easy to program it to behave like <code>cava</code> (music visualizer) to make
+a package that integrates with mpd/mpv and <code>M-x zone</code> mode dances along!
+</p>
+
+<p>
+<i>wow I'm serious I just got this prompt while writing this, anyone can feel free to go ahead. Even I
+plan to experiment this at some point</i>. Additionally if lyrics can be fetched to dance with you (≧∇≦)/
+</p>
+
+<p>
+Or you can say it was unconscious memory that sparked since I watch <a href="https://www.youtube.com/watch?v=580DxF2M7EE">Tsoding livestream</a> where he has
+been programming a Jai program to play song and show with cool visualization.
+</p>
+
+<p>
+I read alot of epub thanks to <a href="https://depp.brause.cc/nov.el/">nov.el</a> package, embracing ASCII text is always great. I seldom use
+PDFs, in fact I don't use <a href="https://github.com/ahrm/sioyek">sioyek</a> (one of the best software IMO) as well. I really wanna use
+<a href="https://codeberg.org/MonadicSheep/emacs-reader">emacs-reader</a> but I have stopped using pdf altogether 😅
+</p>
+
+<p>
+These days I only Emacs, <a href="https://github.com/glide-browser/glide">Glide browser</a>, terminal, Agentic coding (work) as my four pillars of
+computing interface. Anything else? the answer always been emacs again. Its like a cycle, nothing
+goes out of these 4 honestly.
+</p>
+
+<p>
+This just proves how much playful emacs is, its surely is a small community, but every discussion and
+updates on <a href="https://fosstodon.org/tags/emacs">#emacs</a> always provides a smile on every emacs users (again, &gt;1 YOE to realize). Every
+<a href="https://redlib.catsarch.com/r/emacs/comments/1w4knk3/question_about_things_that_surprised_you_about/p792xh7/?context=3#p792xh7">"aha" moment</a> is always a TIL for someone and remember me notes for all veterans.
+</p>
+
+<p>
+Another game of emacs I like is, how its a swimming pool of texts. You breath text, you see text and
+even you edit the text (please do if not).
+</p>
+
+<p>
+Emacs has always been a playful machine that mends to the user and not make user mend to it.
+</p>
+
+<p>
+Emacs is what every software should be designed as: something that keeps you busy playing with it, so you never get around to actually using it.
+</p>
+]]></content></entry><entry><title>Talk is Cheap. Code is Cheap. Show me the Source</title><link rel="alternate" type="text/html" href="https://idlip.in/log/show-me-source/" /><id>https://idlip.in/log/show-me-source/</id><published>2026-08-27T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="philosophy" label="philosophy" scheme="https://idlip.in/tags/"></category><category term="programming" label="programming" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<ul class="org-ul">
+<li><a href="https://blainsmith.com/essays/humanities-in-the-machine/">https://blainsmith.com/essays/humanities-in-the-machine/</a></li>
+</ul>
+
+<p>
+I've been meaning to write about this since <span class="timestamp-wrapper"><span class="timestamp">[2026-03-20 Fri]</span></span>. finally doing it.
+</p>
+
+<p>
+Quick note on the title before I get into it. It's riffing on Linus Torvalds' old line, "talk is
+cheap, show me the code". Except these days even that doesn't hold up, talk is cheap sure, but code
+is cheap too now, anyone can get an LLM to spit out a working function in seconds. What's actually
+hard to fake, and what most of what I read (and write) is missing, is the source: the history, the
+reasoning, the "why" behind a piece of code or a life's work, not just the diff. That's what this
+essay is actually about, so show me the source felt more honest than show me the code.
+</p>
+
+<p>
+To put it simply: Business gives us endless <b>Talk</b> for free, AI gives us endless <b>Code</b> for free, but the <b>Source</b>, the real reason behind any of it, can only come from us, Humans.
+</p>
+
+<p>
+So I read this essay by <a href="https://blainsmith.com">Blain smith</a> and it stuck with me for months. The whole point of it is that
+the people who actually built computers as we know them were not "just" engineers. Hoare studied
+classics and philosophy before he ever wrote quicksort. Lovelace called herself a poetical
+scientist. Turing published his most famous paper in a philosophy journal, not a computer science
+one. Dijkstra wrote actual essays, by hand, instead of just writing code comments. None of them were pure "tech pals", they came from somewhere else first.
+</p>
+
+<p>
+Honestly the thing that makes the essay slap me is not just "look, philosophy guy also did tech",
+its that the stuff they built actually held up. Quicksort is still the sort you get taught first,
+decades later. Dijkstra's shortest path algorithm is quietly running every time you open maps and
+ask for directions. C is still the grandparent of basically every language people use today, and
+unix is still under the hood of most servers and phones on earth. hopper's idea, that code should
+read like english (I favor code as docs too), is why every language after her looks the way it does
+instead of staying pure math symbols. None of this stuff got replaced because someone found a
+"better" idea next year, it just kept being the right idea. That's rare. Most code I see in industry
+or tool these days doesn't survive six months, let alone sixty years, every few year they all get
+replaced with better alternative or solution (grander eg: rust hype for everything)
+</p>
+
+<p>
+What got me thinking is, i'm still just a novice in this field. Most of what I read day to day is
+<a href="https://lobste.rs">lobste.rs</a>, <a href="https://fosstodon.org">mastodon</a>, docs, and youtube. Nobody ever tells you to go read philosophy or history to
+get better at writing code. Its always "learn this framework", "learn this language", "here's how to
+solve this", heck nobody even bothers telling how to think of solving.
+</p>
+
+<p>
+The essay also says something that annoyed me a bit, in a good way. It says a lot of today's tech,
+social media, algorithms, all of it, is built by people who never studied ethics or psychology or
+how to write clearly, and thats part of why it feels careless. Like nobody stopped to ask "should we
+build this" and only asked "can we build this", they should've asked "Does it solve a problem",
+instead it went into "We create a problem and then solve it". I don't fully know if i agree with
+that, but it does feel true when i think about doomscrolling or apps that are clearly designed to be
+addictive on purpose, economy &amp; business&hellip;!
+</p>
+
+<p>
+The ending is basically: you don't need a philosophy degree, you just need to actually read stuff
+outside of tech. Books, essays, history. Let it change how we think about what we build, not just how to build it technically.
+</p>
+
+<p>
+I genuinely don't know where i land on all of this yet. But it did make me want to read more outside of programming books, and maybe slow down a bit before shipping things.
+</p>
+
+<p>
+Some more amazing resource to check: <a href="https://www.youtube.com/watch?v=yIPbE7BssOs">Rethinking the Developer Career Path – Randall Koutnik</a>
+(<a href="https://speakerdeck.com/rkoutnik/implementers-solvers-finders-rethinking-the-developer-career-path?slide=14">slides</a>) ,<a href="https://fossunited.org/blog/learning-to-manage/building-a-shared-foundation">Learning to Manage - Building a shared foundation</a>, <a href="https://notashelf.dev/posts/taste-is-all-thats-left">Taste is all thats left</a> and <a href="https://vickiboykis.com/2026/08/12/write-for-people/">Write for people</a>.
+</p>
+
+<hr />
+
+<p>
+Little cheat sheet of everyone the essay talks about, one line each, with a link if you
+want to actually go read them instead of taking blain's word (or mine) for it.
+</p>
+
+<ul class="org-ul">
+<li><a href="https://amturing.acm.org/pdf/HoareTuringTranscript.pdf">Tony Hoare</a> : quicksort person, studied classics and philosophy at oxford before any of that.</li>
+<li><a href="https://nesslabs.com/ada-lovelace">Ada Lovelace</a> : called her own thinking "poetical science", saw that babbage's machine could do more than just crunch numbers.</li>
+<li><a href="https://phil415.pbworks.com/f/TuringComputing.pdf">Alan Turing</a> : published "computing machinery and intelligence" in a philosophy journal, not a cs one.</li>
+<li><a href="https://www.cs.utexas.edu/~EWD/transcriptions/EWD03xx/EWD340.html">Edsger Dijkstra</a> : wrote 1300+ essays by hand (the EWDs), also wrote <a href="https://www.cs.utexas.edu/~EWD/transcriptions/EWD02xx/EWD215.html">"go to statement considered harmful"</a>.</li>
+<li><a href="https://en.wikipedia.org/wiki/Grace_Hopper">Grace Hopper</a> : made compilers speak english instead of math symbols, because "very few people are really symbol manipulators."</li>
+<li><a href="https://www.cnn.com/2011/10/14/tech/innovation/dennis-ritchie-obit-bell-labs/index.html">Dennis Ritchie</a> : made C and unix, died the same week as steve jobs and almost nobody noticed.</li>
+<li><a href="https://engineering.princeton.edu/news/2012/02/07/brian-kernighan-what-intelligent-people-should-know-about-computers">Brian Kernighan</a> : co-wrote the C book, later spent his career trying to connect CS back to liberal arts.</li>
+<li><a href="https://www.gnu.org/gnu/manifesto.en.html">Richard Stallman</a> : founded free software as a moral stance, not just a technical one.</li>
+<li>also worth reading: <a href="http://esr.ibiblio.org/?p=4386">eric raymond's take on stallman</a>, if you want the other side of the free software story.</li>
+</ul>
+
+
+<hr />
+
+<p>
+I know the title was very catchy, and <a href="https://www.alexmolas.com/2023/07/15/nobody-cares-about-your-blog.html">nobody cares about blog</a>, but I honestly didn't expect people to find this post so soon.
+</p>
+
+<p>
+Thanks for the shout-outs:
+</p>
+
+<ul class="org-ul">
+<li><a href="https://lobste.rs/s/idizd1/talk_is_cheap_code_is_cheap_show_me_source">https://lobste.rs/s/idizd1/talk_is_cheap_code_is_cheap_show_me_source</a></li>
+
+<li><a href="https://fosstodon.org/@phoefer@suma-ev.social/117171481544630493">https://fosstodon.org/@phoefer@suma-ev.social/117171481544630493</a></li>
+</ul>
+
+<p>
+I'm just glad my little post got mined 💎
+</p>
+]]></content></entry><entry><title>Games that occupied my life</title><link rel="alternate" type="text/html" href="https://idlip.in/log/games/" /><id>https://idlip.in/log/games/</id><published>2026-08-25T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="games" label="games" scheme="https://idlip.in/tags/"></category><category term="android" label="android" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+Games are in fact occupation of childhood and adulthood. We pay with out time to play, form social
+community or just kill time playing it.
+</p>
+<div id="outline-container-early-childhood" class="outline-2">
+<h2 id="early-childhood">Early childhood</h2>
+<div class="outline-text-2" id="text-org5083551">
+<p>
+The best game that really filled my early childhood was <a href="https://www.rockstargames.com/games/vicecity">GTA Vice City</a>, the OG steal car and roam
+around, act as a simulator person immersed in Tony's grant adventure of theft
+</p>
+
+<p>
+In fact, before this most of my time was spent on playing <a href="https://www.wwe.com/article/wwe-video-games-history">WWE SmackDown! Here Comes the Pain</a> in PS2
+with my brother and close friend. It used to be so fun, to smack and pin down people. In fact I do
+love WWE for its entertainment factor and character they had in Attitude era (that's for another
+blog)
+</p>
+
+<div class="grid" id="org6b0208e">
+
+<div id="org4daa8f0" class="figure">
+<p><img src="https://media.gtanet.com/images/2764.jpg" alt="&quot;GTA Vice City game showing final Mission Passed&quot;" />
+</p>
+<p>GTA Vice City game showing final Mission Passed.</p>
+</div>
+
+
+<div id="org90ed527" class="figure">
+<p><img src="https://images.launchbox-app.com/02c94837-29ae-4d2d-b0d9-a1e55b08ccd5.png" alt="02c94837-29ae-4d2d-b0d9-a1e55b08ccd5.png" />
+</p>
+<p>WWE Smackdown here comes pain, undertaker choke slamming Brock in Elimination chamber</p>
+</div>
+
+</div>
+
+<p>
+Along with this, offline games that crushed my time were, <a href="https://www.ea.com/games">Road Rash</a>, yep kick the police guy and
+swing the chain and smash it right on the head.
+</p>
+
+<p>
+Also <a href="https://en.wikipedia.org/wiki/Captain_Claw">Captain Claw</a> was so good, cat and dog chase in such a pirated way, maybe this started my love
+towards Pirates world (One piece). Captain claw was definitely ahead of its time for sure, even today I find the visuals stunning compared to any mobile games.
+</p>
+
+<div class="grid" id="org1cd3603">
+
+<div id="org2495c2b" class="figure">
+<p><img src="https://images.sftcdn.net/images/t_app-cover-l,f_auto/p/0c450dd1-e4cb-447c-9d2f-ac3e7aabf75e/1425069087/road-rash-road-rash_5.jpg" alt="road-rash-road-rash_5.jpg" />
+</p>
+<p>Road rash game with cop chasing and one biker about to be kicked</p>
+</div>
+
+
+<div id="org626e2bf" class="figure">
+<p><img src="https://static0.xdaimages.com/wordpress/wp-content/uploads/wm/2025/07/captain-claw-level-two-enemies.png" alt="captain-claw-level-two-enemies.png" />
+</p>
+<p>Captain claw about to kill two puppy</p>
+</div>
+
+</div>
+
+<p>
+Of course I cannot miss mentioning offline games outside in real life. With friends we also used to
+play cricket in the streets and in ground every day. School sports games weren't much though.
+</p>
+</div>
+</div>
+<div id="outline-container-adulthood" class="outline-2">
+<h2 id="adulthood">Adulthood</h2>
+<div class="outline-text-2" id="text-org60762ab">
+<p>
+Most of the adulthood drifted towards using social media; Facebook was peak among socializing, Hike
+was crazy with stickers and there arised the mobile gaming which was at most peak.
+</p>
+
+<p>
+As a kid the only game I discovered on android people playing was <a href="https://subwaysurfers.com/">Subway Surfers</a> and <a href="https://imangistudios.com/">Temple Run</a>, the
+endless runner that gave the dopamine a game needs to give. And at this time I had limited phone
+usage and time. Obviously I cannot forget the giant game that was on everyone's phone, <a href="https://www.king.com/game/candycrush">Candy Crush
+Saga</a>, it was just delicious.
+</p>
+
+<div class="grid" id="orgc1c2c84">
+
+<div id="org905bb79" class="figure">
+<p><img src="https://i.pinimg.com/originals/f1/76/8f/f1768fc4d935f5b018eeace40dfcb995.jpg" alt="f1768fc4d935f5b018eeace40dfcb995.jpg" />
+</p>
+<p>Subway surfer where boy got caught by cop</p>
+</div>
+
+
+<div id="orgc8f6b9a" class="figure">
+<p><img src="https://cdn.mobygames.com/screenshots/1175350-candy-crush-saga-android-the-chocolate-candy-covered-with-sprink.jpg" alt="1175350-candy-crush-saga-android-the-chocolate-candy-covered-with-sprink.jpg" />
+</p>
+<p>Candy crush saga. The OG arcase puzzle game.</p>
+</div>
+
+</div>
+
+<p>
+Then came the best game for mobile, <a href="https://supercell.com/en/games/clashofclans/">Clash of Clans</a>, it is the most nostalgic game that I feel even
+today. The slow base building, and clan socializing with players, constant chat, global chat to show
+off trophy leagues, war time, attach plans and <span class="underline">Barchers</span> attach, using each barbarian and archer to
+loot and save elixir, watch for efficient times on upgrades and so much more.
+</p>
+
+<p>
+Clash of clans definitely felt more immersive to play and connect everyday to progress until TH11.
+TBH I liked until Th10, but TH11 gave night mare over an eagle for sure. After TH12 I think game
+went boring in bits and complicated the game. Until TH11 everything felt worth it and had its
+purpose in game. We friends and neighbors used to build clan, do attacks and discuss every day. Go
+to popular clan and ask for "Give me Co or else will leave", yes promotion was life achievement
+there.
+</p>
+
+<div class="grid" id="org0662369">
+
+<div id="org038cb66" class="figure">
+<p><img src="https://cocland.com/wp-content/uploads/2015/05/hogowiwi-th9-guide-1.jpg" alt="hogowiwi-th9-guide-1.jpg" />
+</p>
+<p>Clash of Clans TH9 GoHo attack with hogs lvl 5 max</p>
+</div>
+
+
+<div id="org3aba30a" class="figure">
+<p><img src="https://upload.wikimedia.org/wikipedia/en/9/9e/Clash_Royale_2v2.jpg" alt="Clash_Royale_2v2.jpg" />
+</p>
+<p>Clash royale training camp attack</p>
+</div>
+
+</div>
+
+<p>
+Then game the big breakout with clash universe game, <a href="https://supercell.com/en/games/clashroyale/">Clash Royale</a>, which was easily best strategy
+game with cards and skills. It even beat out clash of clans in popularity and took over soon with
+esports scene and more. They had varied cards, various combos and it applied same clash of clans
+formula of being very immersive. But I wonder if it was supercell greedy or something, both games
+failed IMO after 2020, as they started complicating or people moved on with life.
+</p>
+
+<p>
+In fact, clash royale was best those days, but soon in relaity later turned out be <a href="https://redlib.catsarch.com/r/AndroidGaming/comments/1vklcn6/which_game_do_you_regret_spending_lots_of_hours/">most regret mobile game to have wasted time on</a>. Cause they ruined it so badly into Pay-to-upgrade tier.
+</p>
+
+<p>
+Even tho brawl stars is kinda third success to them, I did not like brawl as it soon got complicated
+with pay to get easy upgrades stuff. Grind was totally bad.
+</p>
+
+<p>
+But supercell definitely was the champ among mobile gaming and took over 2016-2020 until they
+complicated and ruined the games (thanks).
+</p>
+</div>
+<div id="outline-container-pandemic" class="outline-3">
+<h3 id="pandemic">Pandemic</h3>
+<div class="outline-text-3" id="text-orge33f2f0">
+<p>
+Then came the pandemic and home quarantine, this period started more time towards mobile gaming.
+Since all friends had to kill time, we eventually came to one game to play, it was <a href="https://www.mobilelegends.com/">Mobile Legends:
+Bang Bang</a> (MLBB aka Moba Legends 5x5). This was 5v5 MOBA game which had several herous, flashy
+moves, skills and objective was simply to kill other players and beat the base.
+</p>
+
+<p>
+This definitely took most hours player per day, and it was the first time which was totally
+competitive to play with others. We used to play as team and it was fun to curse, bash, troll and
+play many games laughing together.
+</p>
+
+<div class="grid" id="org78131cb">
+
+<div id="orgf21712c" class="figure">
+<p><img src="https://i0.wp.com/gamingonphone.com/wp-content/uploads/2022/02/mobile-legends-lancelot.jpg" alt="mobile-legends-lancelot.jpg" />
+</p>
+<p>Mobile Legends attacking in Enemy base</p>
+</div>
+
+
+<div id="orga5fee8a" class="figure">
+<p><img src="https://cdn-www.bluestacks.com/bs-images/Onmyoji-Arena_Bot-Guide_EN_6.png" alt="Onmyoji-Arena_Bot-Guide_EN_6.png" />
+</p>
+<p>Onmyoji Arena, the beauty of MOBA game</p>
+</div>
+
+</div>
+
+<p>
+Also there was one of the most beautiful and aesthetic game out there, which was not at all P2W and
+was the perfect MOBA for mobile, <a href="https://www.onmyojiarena.us/">Onmyoji Arena</a>. It had all japanese customs and themed, but thanks
+to Indian Gov, they banned all NetEase games, and flush it went away.
+</p>
+
+<p>
+Obviously there was among us as well for a bit, but due to hype I started it, but not a major part
+of time occupancy.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-adult" class="outline-2">
+<h2 id="adult">Adult</h2>
+<div class="outline-text-2" id="text-orgdb8df3e">
+<p>
+After pandemic and MLBB, I slowly dropped playing any games. Our friends used to play Badminton
+together in park as beginner and slowly shifted to playing only in Indoor court nowadays (novice -&gt;
+pro so quick!)
+</p>
+
+<p>
+After that there aren't any games that made big impact or occupied tremendous time, all were offline
+or real life games.
+</p>
+
+<p>
+Definitely I missed mentioning many misc games that once player, or simply enjoyed alone. Some of it
+were:
+</p>
+
+<p>
+Detective games, Object finding games, Candy crush or farm saga, many puzzle solving games.
+</p>
+
+<p>
+Recently I've been enjoying <a href="https://www.honorofkings.com/">Honor of Kings</a> the Chinese MOBA giant. Its better than MLBB for sure,
+but lacks the playerbase worldwide outside china, except that its a solid game with poor matchmaking.
+</p>
+
+<p>
+As of writing this, I'm really enjoying <a href="https://play.google.com/store/apps/details?id=com.dunderbit.humbug2&amp;hl=en_US">Humbug 2</a> game, this is really fantastic puzzle game. Chill
+and cozy way to move insects to target.
+</p>
+
+<div class="grid" id="org8262b6c">
+
+<div id="org60b8103" class="figure">
+<p><img src="https://img.skich.io/games/screenshots/637021ce-eee4-4bc7-8d27-b936e25f641a.jpg" alt="637021ce-eee4-4bc7-8d27-b936e25f641a.jpg" />
+</p>
+<p>Humbug 2 gameplay</p>
+</div>
+
+
+<div id="orgdb6f46c" class="figure">
+<p><img src="https://www.levelinfinite.com/wp-content/uploads/2024/02/honor-of-kings-game-image-7.jpg" alt="honor-of-kings-game-image-7.jpg" />
+</p>
+<p>Honor of Kings game</p>
+</div>
+
+</div>
+
+<hr />
+
+<p>
+In case you wonder why no PC games are shown, PC was also used only for limited time. Now that I use
+Linux, I only have some casual native games here as well.
+</p>
+
+<ol class="org-ol">
+<li><a href="https://www.playrix.com/games/fishdom/">Fishdom H2O: Hidden Odyssey</a> - Detect objectives in cozy ocean</li>
+<li><a href="https://www.ageofempires.com/">Age of Empires</a> and <a href="https://www.ageofempires.com/games/age-of-mythology/">Age of Mythology</a> (GOAT) - History speaks the strategy</li>
+<li><a href="https://www.ea.com/games/need-for-speed">Need for Speed: Special Edition</a> - The mclaren and the engine noise was bliss</li>
+<li><a href="https://www.openttd.org/">OpenTTD</a> - FOSS Transport tycoon game</li>
+</ol>
+
+<div class="grid" id="orgd1b82d8">
+
+<div id="org7fc029d" class="figure">
+<p><img src="https://cdn8.gametop.com/download-free-games/fishdom-h2o/b2.jpg" alt="b2.jpg" />
+</p>
+<p>Fishdom H20 find hidden objects</p>
+</div>
+
+
+<div id="orgb4bd42e" class="figure">
+<p><img src="https://media.dotesports.com/wp-content/uploads/2024/08/Find-all-unit-hotkeys-in-Age-of-Mythology.jpg" alt="Find-all-unit-hotkeys-in-Age-of-Mythology.jpg" />
+</p>
+<p>Age of mythology village cooking</p>
+</div>
+
+
+<div id="org1d24d79" class="figure">
+<p><img src="https://pcgames9505.weebly.com/uploads/1/0/2/1/102119388/nfs2semonolithic.jpg" alt="nfs2semonolithic.jpg" />
+</p>
+<p>NFS SE Racing game</p>
+</div>
+
+
+<div id="orgbb67b8c" class="figure">
+<p><img src="https://assetsio.gnwcdn.com/openttd-best-management-games.jpg" alt="openttd-best-management-games.jpg" />
+</p>
+<p>OpenTTD land mass</p>
+</div>
+
+</div>
+</div>
+</div>
+]]></content></entry><entry><title>Indie Web: Write more?</title><link rel="alternate" type="text/html" href="https://idlip.in/log/indie-web/" /><id>https://idlip.in/log/indie-web/</id><published>2026-08-02T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="indieweb" label="indieweb" scheme="https://idlip.in/tags/"></category><category term="til" label="til" scheme="https://idlip.in/tags/"></category><category term="wikimedia" label="wikimedia" scheme="https://idlip.in/tags/"></category><category term="meetup" label="meetup" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<ul class="org-ul">
+<li>This post was written in BLR Indie Web Club writing session.</li>
+</ul>
+
+<p>
+As I've spoken on <a href="/log/consumed-enough">I've Consumed Enough</a>, I accidentally discovered <a href="https://blr.indiewebclub.org/">Bengaluru Indie Web Club</a> on mastodon by
+abhinav tushar. And ever since I had a blog site, why did it not occur to me that I should have
+searched for some clubs like these to improve my writing, and get motivated to write more. Maybe I
+was too involved in <a href="/log/may-i-recommend/">May I Recommend EWM</a>, and as you see I started <a href="/log/revamp-blog-2026">Revamp the blogs</a> from January,
+and till July I did not get another push&hellip;?
+</p>
+
+<p>
+Nevertheless, <span class="underline">every-time is a right time</span> to start the work. So as of I'm writing this post, this is
+my first <b>BLR Indie Web Club</b> meetup, and this is <a href="https://underline.center/t/indiewebclub-31">club's 31st meetup</a>. So here's to the great day of
+writers coming together, am writing this post based on the prompt of discovering a random image from
+WikiMedia commons and making a post about it.
+</p>
+
+<p>
+And look what I found randomly&hellip; Lucky for me it was a tree (garden or park Idk).
+</p>
+
+
+<div id="org8ade61c" class="figure">
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Palazzo_Boncompagni_-_Giornata_nazionale_delle_dimore_storiche_e_WP25BO_01.jpg" alt="&quot;A tree at Palazzo Boncompagni, a historic Italian residence&quot;" width="600px" />
+</p>
+<p>A random image found via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:Palazzo_Boncompagni_-_Giornata_nazionale_delle_dimore_storiche_e_WP25BO_01.jpg">WikiMedia</a></p>
+</div>
+
+<p>
+I dont know about the place since <a href="https://commons.wikimedia.org/wiki/File:Palazzo_Boncompagni_-_Giornata_nazionale_delle_dimore_storiche_e_WP25BO_01.jpg">the page</a> has all info in Italian language nor I'm writing about
+the place. <b>Picture can definitely speak 1000 words</b> (yes this phrase was repeated many times in
+today's session, so cheers to it.)
+</p>
+
+<p>
+All I can see is the peaceful and lovely tree, sitting in the shadowy realms of every day life. Its
+always the nature that makes me a take a moment in life, sit back, relax and reflect on whats
+happening around me. Day by day life seems so busy that I fail to acknowledge whats even next to me,
+so much focused work is also harming me lol.
+And here's a simple park or a garden that can make me relive a lost moment and make me process my
+living state and always guide me to think <a href="/log/consumed-enough">I've Consumed Enough</a>.
+</p>
+
+<p>
+Apart from main focus on tree in the image, there are two people, a house behind, the one half of a
+gate and so on, I'm not giving opinion on them, those are yours to interpret (if you can!) and
+follow any details.. its a static image after all, I only wrote about <code>~160 words</code>, you fill the rest of the 840 words please!
+</p>
+
+<p>
+Another things I learned today was that August month are considered as <b>Blaugust</b> time and Indie web
+circle practice to publish one post each day, so totaling 31 posts for this month. Its easy to do micro
+blog, but heck I need to find topics to even try it, but I may as well give it a try so I get
+disciplined as well. This also stops me from updating my <a href="https://github.com/idlip/hugo-emacs-theme/">site eamcs theme</a> and start writing more to utilize them feature-fully and then analyze the need and whats actually required for my site/posts.
+</p>
+
+<ul class="org-ul">
+<li>The 2026 edition is happening <a href="https://nerdybookahs.wordpress.com/2026/07/16/blaugust-2026-is-coming/">here</a>.</li>
+</ul>
+
+<p>
+Finally, cheers to the first embark of long-overdue tasks on writing and to blog more. I tried to
+start in Jan, and here finally in August 2026 I'm able to get the actual start. And on good side
+I've been writing daily journal from past week, so that's again a good start to more writing.
+</p>
+
+<p>
+Still I need to write more, but gosh Times Up! 30 mins got me only so far?
+</p>
+
+<p>
+Note: 10 mins was extended, But Imma use that time to clean and fix grammar. Its also time for me to
+reflect what could 30mins of my brain write and converse in text.
+</p>
+]]></content></entry><entry><title>TIL a word: Sentience</title><link rel="alternate" type="text/html" href="https://idlip.in/log/sentience/" /><id>https://idlip.in/log/sentience/</id><published>2026-08-01T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="til" label="til" scheme="https://idlip.in/tags/"></category><category term="mosaic" label="mosaic" scheme="https://idlip.in/tags/"></category><category term="sciencesante" label="sciencesante" scheme="https://idlip.in/tags/"></category><category term="meetup" label="meetup" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<ul class="org-ul">
+<li>NGL, Its a subtle word among <code>Sentence</code> and <code>Patience</code></li>
+</ul>
+
+<p>
+I attended the <a href="https://mosaichq.org/events/science-sante-blr-3-1-aug-2026/">third science sante</a> (my 2nd sante) and I was excited to attend because there will be
+<a href="https://en.wikipedia.org/wiki/Unconference#:~:text=the%20agenda%20is%20created%20by%20the%20attendees%20at%20the%20beginning%20of%20the%20meeting%2E%20Anyone%20who%20wants%20to%20initiate%20a%20discussion%20on%20a%20topic%20can%20claim%20a%20time%20and%20a%20space"><b>Unconference</b> session</a> during the meetup (TBH I only cared for that &amp; of course the free Lunch -
+<span class="underline">Nothing's better than free food</span>!).
+</p>
+
+<p>
+Thankfully this event is not equipped with only talks, I hate the boring talks and presentations
+(that's another topic to blog about). <a href="https://en.wikipedia.org/wiki/Unconference#:~:text=the%20agenda%20is%20created%20by%20the%20attendees%20at%20the%20beginning%20of%20the%20meeting%2E%20Anyone%20who%20wants%20to%20initiate%20a%20discussion%20on%20a%20topic%20can%20claim%20a%20time%20and%20a%20space">Unconference session</a> is where group of attendees propose
+topics in chits and organizers pick and give space and time to talk about it. And people can
+randomly pick any of their interest, sit, listen or speak about it.
+</p>
+
+<p>
+These are run in a faith that not only one person speaks or lectures, and its about who you are or
+what you are, its more of, here's the topic and lets put our facts and opinions with evidence and
+discussion in multi-disciplinary to comment on the matter. But TBH not every topic were ideal, of
+course many table go on with one person driving &amp; streamlining the conversation and many putting up
+opinions or their own belief. But nonetheless it can turn out to be fruitful session and some
+discussion can carry to connect a missing dot.
+</p>
+
+<p>
+Just like that on second unconf topic, there was topic on "<b>Our unsung heroes of Agriculture</b>".
+Immediately as I read the immediate picture I had was of farmer's pets, the soil bacteria, worms,
+insects and cattle's, but mostly I thought of micro-organisms (such a small bookish brain I've to
+imagine them).
+</p>
+
+<p>
+But the proposer's viewpoint were completely different, since the theme of the event was on "Food
+Science", they cam right on track with the topic IMO. The person opened the discussion with putting
+out the word -&gt; <b>Sentience</b>
+</p>
+
+<p>
+Sentience means to perceive and sense the feelings of either oneself or others. OP asked that why
+don't we human feel sentience among the primary animals that we use for either farming or even as
+food. Here they primarily meant <span class="underline">meat</span>, people consuming them in mass and even farmers utilizing them
+in mass. OP wanted to either know why we human are not really feeling sentience towards them or why
+do we even not understand that they also have awareness and feelings, why don't we respect those
+animals?
+</p>
+
+<p>
+Even I sat and argued that we humans might have normalized this based on mapping out, these animals
+life cycle is this, purpose is of a sort and we can efficiently utilize them this way.
+This was my argument saying that maybe scientist might have already studied them all, and just chose
+whats most economical and ideal way for even that species to live? Better to ask a Animal behaviorist TBH.
+</p>
+
+<p>
+Others argued that we humans are not welcoming to other humans, it might be our psychology and
+<b>Anthropomorphism</b>. But at the end, the point did not go anywhere, nobody got answer nor OP was even
+contempt (I guess). OP was not definitely looking for these opinions or answers, but I felt like
+that was a nice moment to appreciate others lives and think in other animal's shoe (if they wear),
+and yes sentience can make us <span class="underline">Buddha</span> in some way TBH.
+</p>
+
+<p>
+Oof.. it was a coaster for me, initially I thought the topic was on appreciating important of
+microbes in farming/agricultural needs (how silly of me..) and then topic shifted on generic
+sentience on animals around us, and later I realized that OP was vegan and all they meant was on
+Meat consumption (holy&hellip; that concludes).
+</p>
+
+<p>
+Most bizarre moment was that, just after this unconf, the talk was presented on "Insects as our
+future protein food". Appetizing for sure just before lunch!
+</p>
+
+<p>
+It's always worthwhile to pause and reflect on the lives of other beings, to recognize the natural behaviors of animals, appreciate their place in the world, and cultivate gratitude for both the joys and hardships we experience. Yet, in the rush of our own lives, we're often too consumed by work, deadlines, and an ever-growing list of tasks to even reflect on ourselves, let alone extend that empathy to other sentient human. Perhaps taking a moment to acknowledge their lives is also a reminder to slow down and reconnect with our own humanity.
+</p>
+]]></content></entry><entry><title>I've Consumed Enough</title><link rel="alternate" type="text/html" href="https://idlip.in/log/consumed-enough/" /><id>https://idlip.in/log/consumed-enough/</id><published>2026-07-20T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="webring" label="webring" scheme="https://idlip.in/tags/"></category><category term="gtd" label="gtd" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<blockquote>
+<p>
+I've had enough and Consumed enough these days.
+</p>
+</blockquote>
+
+<p>
+From past days (&hellip;months actually) I've binged alot media and consumed so many free contents (just
+because they're free?). Movies, TV shows, Kdrama, Light Novels, Blog posts, Reviews
+(Movie/Books/Product), Comments on Reddit, Doom scrolling forum threads, Internet research and &hellip; I
+think I've just had enough. In the name of <b>"Know it all person"</b>, I've just consumed and spent so
+much time on being <b>Internet Nerd</b> or <b>Digital Consumer monster</b>.
+</p>
+
+<p>
+Usually every time that we spend has some purpose, and yes I also had purpose to consume each bits.
+But at the end of the day, I finally want some answers, thoughts, moment of realization or insights
+that I'd carry.
+</p>
+
+<p>
+Honest truth, Nothing really answered me, and only thing that kept back firing me was "Regret" on
+trying to do stuff by consuming them. I think I had well researched on things before, but still all
+I was procrastinate and go on consuming streak just so I don't miss on on-going things.
+</p>
+
+<p>
+Eventually I realized that I only trying to kill time by pushing it ahead or trying to get motivated
+by external resources (again be it all media/content I mentioned). Sooner thankfully I finally
+realized that I only needed space and a moment to mindfully think whats actually needed and what
+I've been doing. You know, that moment or flow state of being self-conscious and understand whats
+surrounding you.
+</p>
+
+<p>
+Majority of this related to me trying to perfect some PKM (Personal Knowledge Management) system and
+trying to write more blog posts. I tried <a href="/log/revamp-blog-2026">Revamp the blogs</a> so I'd be posting and writing more here.
+</p>
+
+<p>
+Recently things have changed for good, thanks for me seeing the other side of ocean. Rather
+than looking at the book, I started looking at critics and review of things in negative side. Then
+it all clicked of whats wrong with current thoughts of people and media, golden tag I realized was
+that everyone is selling some or the other things. And people who buy well, proclaim it well, and
+only when you look at critic or product value we realize its not what it looks like.
+</p>
+
+<p>
+One moment that clicked when I was reading on PKM was that not many successful people claim those
+fancy terms in practice, only people who are sold will advertise them. PKM or note taking has never
+been about a system, it was always about writing, thinking and processing, just that. They all just
+write than complicate or find a system. System comes when need exist, I don't think any practitioner
+has need for those fancy systems at all.
+</p>
+
+<p>
+Another moment that clicked was when I stumbled across <a href="https://lobste.rs/s/69mche/what_is_your_favorite_blog_read_recently">Lobste.rs Favorite Blogs</a> discussion today. It
+showed how diverse poeple write posts and what they seek to communicate by them. Again realized
+here, most of them just write without boasting anything about organization or providing self-host to
+others. They'll just write to get it done, they don't validate with system to work for them.
+I Imagine they all achieve the <b>Flow State</b> while writing content and publishing, that is their
+formula for having it as favorite blogs. That flow state really dictates how quality they give out
+their posts.
+</p>
+
+<p>
+Later this evening I stumbled on <a href="https://fosstodon.org/@abnv@fantastic.earth">Abhinav tushar</a> on mastodon and saw that he is part of <a href="https://blr.indiewebclub.org/">Bangalore
+Indie web club</a>. Did not know it existed at all, If not I'd have definitely made way to attend them
+as much as possible.
+</p>
+
+<p>
+There is one things common from all people in that club, <code>Weekly Posts</code>, they all write weekly post on
+their own blog site. How the heck they write them all without missing or procrastinating?
+I thinking they all just start to write and get it done. Even as of writing this post I'm amazed at
+how everyone writes their every week. Even quality bloggers do only every month for one good post,
+and they all just write good enough.
+</p>
+
+<p>
+I soon want to join their webring so it reminds me to write more so I get engaged in the club more.
+But I'll first try to attend in-person meetup and start getting disciplined myself to write more and
+then officially becomes the keeper.
+</p>
+
+<p>
+Books are very verbose and beat around the bush (just because text is free). All books (from
+reviews) are better off an Article post, or One page or 21 lesson or 30 tips in summary. All books
+do is give out various examples to make readers self-validate the method and convey acceptance. Only
+when I look at critics part I realize the other way round.
+And Only thing book can give readers is to take a space/moment of time to reflect, think and process
+the information in concrete and pragmatic way. I believe <code>One page a day</code> only clicks for eliciting an idea or giving space for thoughts and processing.
+</p>
+
+<p>
+Even I've not updated my blog site at all, stopped mid during adding media content in pages
+(<a href="/projects">Projects</a>, <a href="/media">Media</a> and <a href="/wander">Wander My Small Web</a>). I should start updating them since I read various gems from again
+recent consumption race.
+</p>
+
+<ol class="org-ol">
+<li><a href="https://brennan.day/what-have-note-taking-pkms-accomplished-really/">Brennan's take on PKM</a> - Great site to read and writes alot</li>
+<li><a href="https://blr.indiewebclub.org/">BLR Indie Web Club</a> - All posts + People blog page (so many writers)</li>
+<li><a href="https://dotat.at/@/">Dotat's two Decades of blogs</a> - Good overview of how things changed and what remained constant
+trouble.</li>
+<li>&hellip;and there are more.</li>
+</ol>
+
+<hr />
+<div id="outline-container-tldr" class="outline-2">
+<h2 id="tldr">TLDR</h2>
+<div class="outline-text-2" id="text-org3957cba">
+<ul class="org-ul">
+<li>For anyone who couldn't grasp this post, What I wanted to say was that, I've wasted too much consuming media and resources all over Internet.</li>
+<li>I've lately realized that I should start writing more or process information than being mindless consumer.</li>
+<li>This time I'll finally put an end to mindless consumption and keep this post as reminder to do
+daily journal and write blog posts as much as possible.</li>
+<li>I do not know who reads, so all I can do I hope to at-least do writing spree.</li>
+</ul>
+</div>
+</div>
+]]></content></entry><entry><title>May I Recommend EWM</title><link rel="alternate" type="text/html" href="https://idlip.in/log/may-i-recommend/" /><id>https://idlip.in/log/may-i-recommend/</id><published>2026-05-04T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="carnival" label="carnival" scheme="https://idlip.in/tags/"></category><category term="ewm" label="ewm" scheme="https://idlip.in/tags/"></category><category term="wayland" label="wayland" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<ul class="org-ul">
+<li>This post is written for <a href="https://www.emacswiki.org/emacs/Carnival">Emacs carnival</a> of <a href="https://www.emacswiki.org/emacs/CarnivalMay2026">May 2026</a>. If you're new to this site, FYI I go by
+<code>Zororg</code> in emacs chat/universe.</li>
+</ul>
+
+<p>
+Emacs along with being a text editor, is a <a href="https://karthinks.com/software/batteries-included-with-emacs/">battery included software</a> that does more things and
+architecturally well designed (thus no rewrite last strong). Emacs has good (in-fact powerful)
+window management, everything as buffer system, self documenting, extensible (upto human brain,
+maybe DNA?) and every user's Personal development environment.
+</p>
+
+<p>
+If you've been a proficient emacs user, you had eventually thought of using emacs to replace tools as
+well, coming down to only requiring [Emacs, Browser and terminal] in an OS of your choice. This has
+been many users experience, phrasing as "Emacs for everything" and eventually it being the OS
+itself.
+</p>
+
+<p>
+Even as I was dealing with this experience, I really wanted an Emacs Window Manager, I had used EXWM
+in X11 way back and was not fully convinced on it (this was before minad took over maintaining
+<a href="https://github.com/emacs-exwm/">emacs-exwm</a>). We really needed it for wayland side, although there was a proposal and some work
+initiated in <a href="https://emacsconf.org/2022/talks/wayland/">2022 via emacs conf talk</a>, there was no progress. Out of the blue the day came where
+<a href="https://codeberg.org/ezemtsov">ezemtsov</a> had posted on <a href="https://redlib.catsarch.com/r/emacs/comments/1rbyoui/introducing_ewm_a_new_generation_wayland_window/">r/emacs introducing EWM</a> (use reddit domain if redlib does not work). Its niri inspired WM, and uses smithay library and works similarly.
+</p>
+
+<p>
+After it was announced there seems to be another brain-coded emacs window manager using <a href="https://isaacfreund.com/blog/river-window-management/">new river
+protocol</a> (v4) called <a href="https://codeberg.org/tazjin/reka">reka</a>. I tried to compile but was discouraged as reka did not seem featureful and ewm already satisfied me a bit.
+</p>
+
+<p>
+Although its pretty minimal it does not ship with every feature niri has. Eventually I made the
+switch and boy-o-boy it worked well and was pretty stable. I've been daily driving EWM without much
+issues (although <a href="https://codeberg.org/ezemtsov/ewm/issues?q=&amp;type=all&amp;sort=relevance&amp;state=all&amp;labels=&amp;milestone=0&amp;project=0&amp;assignee=0&amp;poster=184629&amp;archived=false">I've opened some issues</a> for enhancements), but basic functionality works, and more
+than all, its Emacsy!
+</p>
+
+<p>
+Emacs already has <code>next-buffer</code> - <code>previous-buffer</code> and <code>tab-next</code> - <code>tab-previous</code> for tabs (workspaces in EWM) to navigate quick. Although <code>consult-buffer</code> is way more quicker. After using ewm I discovered consult has <code>consult-preview-excluded-buffers</code>, and thus I just append all side window buffer to exlude preview, but preview can be so helpful with apps to quickly scan if you've more.
+</p>
+
+<div class="org-center">
+
+<div id="org2168548" class="figure">
+<p><img src="/images/ewm-desktop.png" alt="ewm-desktop.png" />
+</p>
+<p>Fig: EWM setup with Noctalia shell while writing this blog post. Left is org mode capture buffer, top right is glide browser showing EWM repo and bottom right is foot terminal running hugo server.</p>
+</div>
+</div>
+
+<p>
+I was using <a href="https://github.com/vicinaehq/vicinae/">vicinae</a> (raycast in linux) launcher as well, but since most of it can be done in emacs
+itself, I replaced launching apps/scripts in emacs itself by using <code>call-process</code> or <code>start-process</code>,
+</p>
+
+<p>
+You might be interested in <a href="https://github.com/idlip/d-nix/blob/gol-d/d-setup.org#ewm-config">reading my EWM config</a> to get more idea. Scroll down to see all functions,
+I grab firefox history via <code>sqlite-select</code> and show in completing-read to insert a link (Emacsy).
+</p>
+
+<p>
+Thanks to emacs window management, every apps (browser, terminal) can be managed as Emacs buffer
+itself. All I see is emacs frame, and I work in Emacs as its my WM itself now. Now my whole session can be even more customized (embrace Elisp), Emacs (EWM) is DIY Desktop Environment or WM or simply just Emacs itself (what is emacs now?).
+I no longer quit/leave emacs, if I'm leaving that means I'm shutting down my machine down ;-)
+</p>
+<div id="outline-container-may-i-also-recommend-glide-browser-for-emacs-keymappings" class="outline-3">
+<h3 id="may-i-also-recommend-glide-browser-for-emacs-keymappings">May I also Recommend Glide browser for emacs keymappings</h3>
+<div class="outline-text-3" id="text-org1803e14">
+<p>
+Glide browser came to <a href="https://lobste.rs/s/lm3isi/glide_extensible_keyboard_focused_web">lobste.rs news</a> and showcased as firefox-fork being keyboard centric, and I was badly looking for qutebrowser enhancements with addons. And I made the switch and config was pretty easy.
+</p>
+
+<p>
+Glide supports various firefox API and in browser many Web API can be used in config itself. I've
+remapped all keybindings to Emacs style and have extended glide with some qutebrowser &amp; nyxt
+features to make it completely productive &amp; efficient browsing experience.
+</p>
+
+<p>
+Yes, I can do <code>M-x</code>, <code>C-x C-s</code> to make it work as I wanted. Swap <code>C-c</code> to <code>M-w</code> (yes possible).
+</p>
+
+<p>
+Here's the <a href="https://github.com/glide-browser/glide/discussions/25">discussion thread I raised for Emacs bindings</a>.
+</p>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-2026-07-29-wed" class="outline-2">
+<h2 id="2026-07-29-wed"><span class="timestamp-wrapper"><span class="timestamp">[2026-07-29 Wed]</span></span></h2>
+<div class="outline-text-2" id="text-org59355d7">
+<p>
+<a href="https://codeberg.org/ezemtsov">Ezemtsov</a> has made a <a href="https://codeberg.org/ezemtsov/emacs/src/branch/wayland">fork of emacs</a> with <a href="https://codeberg.org/ezemtsov/emacs/commit/6147db532ae4fb462910816e55fab0cc62418269">pure wayland backend</a>, with no gtk or
+cairo toolkit. As I was very excited on this, I immediately jumped and built it with no toolkit.
+</p>
+
+<p>
+For context, initially he used Skia instead of cairo on top of PGTK and I was using it as well, the
+input delay and lags reduced a bit and was comparivetly faster since it used GPU compared to just Pgtk, but now with pure wayland (<code>pwayl</code> ,
+<code>(pwayl-skia-gl-enabled-p)</code> =&gt; t), its more snappier and faster. Almost feels like native WM and not
+emacs.
+</p>
+
+<p>
+There is no delay in anything whatsoever and ezemtsov was genuine to fix <a href="https://codeberg.org/ezemtsov/emacs/issues/2">a reported issue</a> ASAP as
+well.
+TBH it has elevated the EWM experience more folds and I might finally remove <a href="https://github.com/niri-wm/niri/">Niri</a> and <a href="https://github.com/mangowm/mango/">MangoWM</a>
+that I had it installed and yet haven't opened it for &gt;3 months (really!).
+</p>
+
+<p>
+I must say these days I'm not tinkering anything, and just use emacs with matured config of mine and
+day to day has been either emacs for notes/task and glide browser for being on Internet.
+</p>
+
+<hr />
+
+<p>
+<i>This post might see update as I think of extending.</i>
+</p>
+</div>
+</div>
+]]></content></entry><entry><title>Replenish theme - its Emacsy</title><link rel="alternate" type="text/html" href="https://idlip.in/log/emacs-theme-site/" /><id>https://idlip.in/log/emacs-theme-site/</id><published>2026-03-19T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+With previous post on <a href="/log/revamp-blog-2026">Revamp the blogs</a>, I finally today went ahead and upgrades the beautiful <a href="https://github.com/ArthurHeymans/hugo-emacs-theme/">emacs theme made by Arthur</a>, and locally forked to add goodies.
+</p>
+
+<p>
+Reflecting on upgrades since beginning it has received, I'm strictly thinking to settle with this, as it looks good, minimal enough and modern looking, adaptive in mobile, has rss support and I can extend as I want and more than all, I can live in my editor - <code>Emacs</code>.
+</p>
+
+<p>
+Initially the itch to setup own blog and personal website starting with <a href="https://rudra.dev/">rudra.dev</a> (may no longer be active) site which had simple blog listing made using Hugo. Then I moved to org-mode's <code>org-publish</code>, and had setup replacing the same with full html and css from org. I still have the theme in another branch <a href="https://github.com/idlip/idlip.github.io/tree/voyage">here</a>. But again wanted to extend things and org-publish did not feel clean. So went back to hugo, was exploring plethora of theme and went ahead with <a href="https://gitlab.com/rmaguiar/hugo-theme-color-your-world">Color your world</a>, which looked unique giving color accent for whole page and letting user pick with choice. It had search and katex support, but later realized I dont use any of it and it loaded many JS files. Then began another hunt and was thinking of <a href="https://github.com/Livour/hugo-mana-theme">Mana theme</a>, which seemed cool and was active in development with new features every commit.
+</p>
+
+<p>
+Right at this time, magically the <a href="https://www.reddit.com/r/emacs/comments/1qtvnpl/making_my_blog_look_and_feel_like_emacs/">Emacs theme came by reddit</a> and the path got clear and jumped the ship.
+</p>
+
+<p>
+Enough of history, today I added some improvements to this theme in my fork and hopefully I'll be doing more blogs here with as much information I can spread.
+I've been enjoying reading Light novels - Apothecary Diaries and Ascendance of Bookworm, and skimming hacker news and blog posts from <a href="https://www.feedbase.org/">feedbase</a>, hence its time to give back and share as well.
+</p>
+
+<hr />
+
+<div class="org-center">
+<p>
+<i>Its not always of what you can consume, can be what you give as well.</i>
+</p>
+</div>
+]]></content></entry><entry><title>Revamp the blogs</title><link rel="alternate" type="text/html" href="https://idlip.in/log/revamp-blog-2026/" /><id>https://idlip.in/log/revamp-blog-2026/</id><published>2026-01-06T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+Hello world, again!
+</p>
+
+<p>
+Hopefully with this new year (2026) I wish to do regular blogs and get habit of giving (writing) out more.
+</p>
+
+<p>
+I'm a heck fanatic of ASCII text, I prefer text reading over any media. I really want to get on with blog (even crap quality is fine for now). I actually write tech-report for <a href="https://fossunited.org/blogs/tech-report">FOSSUnited platform</a> and to improvise that as well I better do more writing here!
+</p>
+
+<p>
+Btw with this new year I bought a domain for myself (<a href="https://idlip.in">https://idlip.in</a>) yay :), been thinking for many days and finally went ahead. Might do zororg.in or dev as well.
+</p>
+
+<p>
+The name is mostly derived as my github username, the significance is simply first two letter transposed of my name.
+Dilip (idlip)
+If not for this, maybe I'd have picked "Gol D. Lip" in the veins of OnePiece (Gol D. Roger) {hey there is <a href="/license">The Will of D. License</a> here}
+</p>
+
+<p>
+You can send me email on <a href="mailto:hi@idlip.in">hi@idlip.in</a> (I love emails as well)
+</p>
+
+<p>
+<i>Read more, write more, give more</i>
+</p>
+]]></content></entry><entry><title>OBTF as Second Brain with Org mode</title><link rel="alternate" type="text/html" href="https://idlip.in/log/obtf-org-mode/" /><id>https://idlip.in/log/obtf-org-mode/</id><published>2025-09-06T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+<b>One Big Text File</b> is simply writing down mostly everything in single file to organize or manage data. This single file acts as the source of knowledge and holds all notes.
+</p>
+
+<p>
+Second brain has been a buzz word, thanks to the sourcing of Zettelkasten method, every productivity freak is on the stance to organize their life and get things done.
+</p>
+
+<p>
+But I soon came to the conclusion by reading many blogs and reddit discussions that, searching is far superior than organizing. On internet all we do is search for information, and not organize or build system just to get info. This is how note taking should work as well. Just for <b>efficient retrieval and storage</b>. 
+</p>
+
+<p>
+Thanks to my introduction to emacs and getting deep into rabbit hole, Org mode has been the great tool to handle plain text file as an Organization platform. Just like emacs (OS), Org mode can also be extended to endless limit (I dare say it). If emacs is OS, Org mode is for me Init system (systemd).
+</p>
+
+<p>
+You can read more about my note taking journey in <a href="/log/wrapup-masters">Wrap up on my Bioinformatics Masters Journey</a>.
+</p>
+
+<p>
+This context is also written in favor to post it on r/obtf
+</p>
+<div id="outline-container-org-mode-is-the-best-tool-for-managing-obtf" class="outline-2">
+<h2 id="org-mode-is-the-best-tool-for-managing-obtf">Org mode is the best tool for managing OBTF</h2>
+<div class="outline-text-2" id="text-org1c3048b">
+<p>
+Many popular workflow would go by simple format as bullet points with Time date and info, and regexp based searching via CLI (rg, vim, grep, sed&hellip;. bash scripts)
+</p>
+
+<p>
+Org mode has many bells and whistles (features) that aid in this method. Tags, integration with commands and rich source of documentation (one of the best things of Emacs or org mode). Thanks to emacs and <a href="https://protesilaos.com/">protesilaos stavrou</a> I learnt how important are documentation and writing sensible notes. It means alot for future self to recognize and re-instantiate the thoughts and state.
+</p>
+
+<p>
+Org mode has an <code>datetree</code> method which has file heading hierarchy in the Year &gt; Month &gt; Day and 4th nested heading follows any notes.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><code><span class="org-org-level-1">* 2022</span>
+<span class="org-org-level-2">** 2022-10 October</span>
+<span class="org-org-level-3">*** 2022-10-07 Friday</span>
+<span class="org-org-level-3">*** 2022-10-08 Saturday</span>
+<span class="org-org-level-4">**** &lt;Any notes I'm capturing&gt;            </span><span class="org-org-level-4"><span class="org-org-tag">:tag1:tag2:</span></span>
+</code></pre>
+</div>
+
+<p>
+This gives out the leverage of journaling, but also a lazy man's organization. I use tagging extensively to most of the (4th) heading based on context so as to narrow down to filter.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><code><span class="org-comment"># learning notes --- l@</span>
+<span class="org-org-meta-line">#+tags: l@coding l@emacs l@bioinfo l@nix l@bash l@julia l@rstats l@python l@devnote l@latex l@til</span>
+
+<span class="org-comment"># generic notes to remember or readme --- n@</span>
+<span class="org-org-meta-line">#+tags: n@linux n@shell n@cli n@book n@idea</span>
+
+<span class="org-comment"># projects --- p@</span>
+<span class="org-org-meta-line">#+tags: p@webcli p@cyanate p@scitomep</span>
+</code></pre>
+</div>
+
+<ul class="org-ul">
+<li>These tag help to categorize the heading in some (lazy) way</li>
+</ul>
+
+<p>
+Org mode has <code>org-sparse-tree</code> bound to <code>C-c /</code> which helps to narrow down based on tag or property. Also another emacs package <code>consult</code> helps to take it up further via <code>consult-line</code> and <code>consult-org-heading</code> along with <code>org-ql</code> package. Org mode also has <code>#+select_tags</code> to export headings to file.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><code><span class="org-org-meta-line">#+select_tags: r@book</span>
+</code></pre>
+</div>
+
+<p>
+With that we can <code>C-c C-e</code> (org-export-dispatch) and press "O O" (make sure org is in org-export-backends) to get temporary Org buffer only with those heading.
+This logically acts as an individual file with that tag/category, thus being atomic in my sense. Org-sparse-tree might also be same.
+</p>
+
+<p>
+-&mdash;
+</p>
+</div>
+</div>
+<div id="outline-container-key-takeaways" class="outline-2">
+<h2 id="key-takeaways">Key takeaways</h2>
+<div class="outline-text-2" id="text-org47ed58f">
+<p>
+whatever the system or the tool is, the main takeaways every resource provides is to review the notes and write it for future self. Every capture is to review back and make the fleeting note into and rich information.
+This OBTF with org mode satisfies that needs given that user reviews the notes and visits back to digest it again.
+</p>
+</div>
+</div>
+]]></content></entry><entry><title>Embarking in Foss United</title><link rel="alternate" type="text/html" href="https://idlip.in/log/embark-fossunited/" /><id>https://idlip.in/log/embark-fossunited/</id><published>2025-08-24T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="work" label="work" scheme="https://idlip.in/tags/"></category><category term="foss" label="foss" scheme="https://idlip.in/tags/"></category><category term="fossunited" label="fossunited" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+From the previous post, I'm amazed to share that I have started my career in FOSS United Organization (<a href="https://fossunited.org">FossUnted</a>) which focuses on promoting FOSS (Free and Open Source Software) in every day use and every where. Its an NPO, run to conduct events, support students and get this ideology elicited everywhere.
+</p>
+
+<p>
+I just joined before 40 days for <a href="https://fossunited.org/indiafoss/2025">IndiaFoss 2025</a>, which is now a grinding period with work loads. Lot of focus and work aligned up.
+Initially I feared a bit about taking this responsibility but just few weeks in, I'm happy that I grasped the most parts and got a hang of it. Thank to my CLI, Emacs experience, it hastens up by development workflow.
+</p>
+
+<p>
+It has been new learning every day, I'm so excited to be part of it. Everything connects and makes sense to me here, somewhere it feels I belong here.
+So far all good, and I'm here.
+</p>
+<hr />
+<div id="outline-container-2026-01-05-mon-update" class="outline-2">
+<h2 id="2026-01-05-mon-update"><span class="timestamp-wrapper"><span class="timestamp">[2026-01-05 Mon]</span></span> Update</h2>
+<div class="outline-text-2" id="text-org529f15e">
+<p>
+I've been working as developer and I must say I got the hang of codebase and complete map of the technical foundation. Its so surprising for me that I can think of like programmer and really going deep in this world. Although I must admit that thanks to having some vibes it helps me to code and think more of proper implementation for future maintenance.
+</p>
+
+<p>
+Thanks to many resources online the ocean is very vast and I'm loving it to learn something new everyday (as my perseverance goes). I must admit one thing I hate frontend, I hate making pages and I mostly love keeping backend rock solid (yep!)
+One fear I've with frontend is I might be adding complexity in code (vibed) thinking for practical and modern web use case. Before my time most of the pages were static and Vuejs was used for building some complex pages, and here I've started to bake JS script inside pages to add complexity (I'm scared of maintaining in future tbh as things grow).
+</p>
+
+<p>
+One things I hate is, even during break or afk I keep getting random thoughts on improving platform/codebase, try that; do that; this way; implement that; etc which irritates me (how to escape?)
+which is quite annoying at this time!
+</p>
+
+<ul class="org-ul">
+<li><i>(this post might have updates as days goes on.)</i></li>
+</ul>
+</div>
+</div>
+]]></content></entry><entry><title>Wrap up on my Bioinformatics Masters Journey</title><link rel="alternate" type="text/html" href="https://idlip.in/log/wrapup-masters/" /><id>https://idlip.in/log/wrapup-masters/</id><published>2025-06-28T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="masters" label="masters" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+June 2025 finally marks the end to my academic journey with completion of my Post-graduation Masters of Science in Bioinformatics.
+</p>
+<div id="outline-container-preface" class="outline-2">
+<h2 id="preface">Preface</h2>
+<div class="outline-text-2" id="text-orgc690b9c">
+<p>
+The story of me here starts with the Covid period, when I was introduced with laptop and when I started using Linux, I wanted my Biology related topics to be involved with Computing, Linux and CLI stuffs. That is where magically I learnt about the domain, <b>Bioinformatics</b>.
+</p>
+
+<p>
+Although one of the teacher had told before to not to choose that in 2019 just because his friend who took was basically working in <code>excel</code>. That kinda bombarded me most of the times. Although I took the plunge and could see myself embarked in this field, and slowly as I approached I started to notice how cool this field is.
+It's an booming field, but let me tell you, it's an mature field as well. Starting with Human Genome Project in 1990, the field which was termed as "Big Science" started to rise. Sanger sequencing &gt; NGS &gt; AI ML in Bio.
+</p>
+</div>
+</div>
+<div id="outline-container-the-voyage" class="outline-2">
+<h2 id="the-voyage">The voyage</h2>
+<div class="outline-text-2" id="text-org6c826af">
+<p>
+I really wanted to either get into IISc or IBAB (Bangalore) institutes, since both very much focused on Bioinformatics research and work and had lot of growth. I could get due to the barrier of entrance tests. But I joined another University which offered this course in Bangalore and which syllabus was very up-to-date and shiny (yeah just like the hype train!).
+</p>
+
+<p>
+I was introduced with Programming languages R &amp; Python (although I knew Linux, CLI and Git) and there on went on with making this computations on Biological data. My academics were thankfully completely Practical oriented. It was less of an theory, and more of an Hands-on experience mode of learning, running Data analysis on Biological data.
+</p>
+
+<p>
+Slowly topics were making sense and started picking pace to meet the higher ends of day-to-day research which seeks driving problems that exists in real world. All fascinating and perfect to know that we have so many gaps to fill in. Healthcare, personalized medicine, research and better medic products and so on was en-visioned in this domain.
+</p>
+
+<p>
+Things started booming with AI and ML in biological field as well. Alpha fold made the big news, Google DeepMind, and some more promising event. Recently Alpha Genome made it up to shock the community of whats possible and how quick we can fill in the gaps. But soon there came barriers, in India. heck research did not get much grants nor much research was really moving forward.
+</p>
+
+<p>
+Everyone were stuck with traditional RNA-sequencing technology, Analyzing RNA data, Molecular docking and virtual screening, thats all. TBH I realized that most of the Bioinformatics work is basically <b>predicting a phenomena that it might occur or it might cause</b>. Yes, this is true. If you don't know, throw me a mail or please read <a href="https://reddit.com/r/bioinformatics">r/bioinformatics</a> you will find lot of people making sense.
+</p>
+
+<p>
+Most of the tools are decade old, forget algorithms, even the R packages (Bioconductor) is older are mildly maintained except big ones (tidyverse). The python eco-system is good, day-by-day many Bioconductor packages seem to be efficiently replaced with Python alternatives (eg: SCverse), and since AI/ML it becomes obvious.
+</p>
+
+<p>
+<b>Workflow Management</b>: This has been kinda a joke TBH. Most of the tasks are carried by custom bash scripts which they run for most of the similar data. Let me break you the truth, they dont reason with data nor make parameter setting effectively. Same bash script pipeline, run for all datasets. Get the results, present it well and highlight finding.
+Snakemake and workflow are really optimized and good, but again its no more better than bash script and yet many people just choose existing pipeline and run, run, run!
+</p>
+
+<p>
+Then to my final year project, I did my internship in Computational Genomics Lab in RVCE. It was really a good place and freedom to work on research and explore. I worked on various things, my primary thesis work was on optimizing Denovo genome assembly algorithm (which assembled DNA reads/strings) using Hybrid quantum-classical approach. There were only two work which aimed to tacked this. Although not so successful due to lack of quantum hardware today, it gave proof-of-concept and I just extended a bit to apply for small data.
+Then I also built standalone pipeline tool for Genome variant calling and Metagenome AMR spotter for a researcher there. Then I partially worked on Systems Biology project which was to apply Mathematical modeling for gut health and obesity. All info are in my repo project named <code>cg-pipelines</code>
+</p>
+
+<p>
+But soon I realized research wasn't my cup of tea, at least in India. They worked on many research papers and so many topics in bioinformatics. Yet, research feels like its all about getting a paper. No real application or action. Then I affirmed that Industry and problem solving is where I'm into.
+</p>
+</div>
+</div>
+<div id="outline-container-inference" class="outline-2">
+<h2 id="inference">Inference</h2>
+<div class="outline-text-2" id="text-org3205752">
+<p>
+Bioinformatics is a great domain, holds lot of gaps and needs lot of requirements. This is a promising field that surprise with lot of development and welfare to human. The second largest data produced by field is Bioinformatics, after the giant Astronomy.
+</p>
+
+<p>
+Most of these works are only predicting event or enriching data to prove that this - gene, protein, variant, mutation, factor might be responsible for so and so. Yes, that's all. Although nowadays there is more boom with <b>Metagenomics</b>, which studies on Microbiota level information and applies more statistics on Bacterial abundance level. Cool enough, but the problem remains same, nobody is really understanding whats running behind the scene or actual code. Most of it is like "Black Box".
+</p>
+</div>
+</div>
+<div id="outline-container-career-ahead" class="outline-2">
+<h2 id="career-ahead">Career Ahead</h2>
+<div class="outline-text-2" id="text-org7146dd9">
+<p>
+This was a hard struck aspect for me. When I started to apply, unfortunately there were not many job opening in Bangalore. Most of it were else, hyd, pune, mumbai, ahmedabad, gurgoan, .. elsewhere all but rarely in bangalore. Although I grinded to apply to most of the companies in bangalore, hardly any clicked or they only offered less. This took a serious toll on me, although I believe I was damn skillful to this field to hasten up higher nobody gave me a chance, at least with good offer.
+</p>
+
+<p>
+Finally this is where some magic happened and lucky enough, I got a job in tech field. More on this in next post.
+</p>
+</div>
+</div>
+<div id="outline-container-final-words" class="outline-2">
+<h2 id="final-words">Final Words</h2>
+<div class="outline-text-2" id="text-org0292b98">
+<p>
+I highly recommend bioinformatics to any who wants to pursue or think of it. It has a deep research and most of the today's demanding skills align perfectly with the field. r/bioinformatics community has really been helpful and lot of quality discussions, although you will see most of the repeated rants or questions.
+This field has so much potential and it just aint achieving maybe due to bad research and bad approach.
+This has left me inner passion to practice and do bioinformatics as an hobby and my passion and interest, cause it can answer a lot of questions, and gaps are so many to fill in.
+This also taught me to get hang of reading research papers, and believe that Papers are the only source of information. Just like how documentations are.
+As per <a href="/log/masters-emacs-orgmode">My MSc journey with Emacs Orgmode</a>, Emacs and Orgmode helped me a ton in organizing and stay on track with following up on topics.
+</p>
+</div>
+</div>
+]]></content></entry><entry><title>The Wild Robot</title><link rel="alternate" type="text/html" href="https://idlip.in/log/wild-robot-movie/" /><id>https://idlip.in/log/wild-robot-movie/</id><published>2025-06-10T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><content type="html"><![CDATA[<p>
+The wild robot has been an spectacular watch, worthy of Oscar winning movie.
+</p>
+
+<p>
+The scenes and dialogues are so relevant to this world, that it depicts a mix of philosophy and reality with touch of AI and LLM models.</p>
+]]></content></entry><entry><title>My MSc journey with Emacs Orgmode</title><link rel="alternate" type="text/html" href="https://idlip.in/log/masters-emacs-orgmode/" /><id>https://idlip.in/log/masters-emacs-orgmode/</id><published>2025-06-06T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="bioinformatics" label="bioinformatics" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+<b>I wrote and used emacs orgmode for all of my post-grad Masters classes, presentations, projects and thesis.</b>
+</p>
+
+<p>
+Before post-grad itself I was introduced to Emacs world and enjoyed getting good with it. As I used it, I realized emacs is not just an text editor, its an Personal Development Environment itself and user has power to craft it as they need. This was a worthwhile investment.
+</p>
+
+<p>
+My initial plan when I started Masters (Bioinformatics) was to fully stay organized and be productive. I was a freak at this, I was reading up many blogs and digesting discussion on being productive. I even read books such as,
+</p>
+
+<ol class="org-ol">
+<li>Getting things Done</li>
+<li>How to Smart notes by Sonke Ahrens
+Introduces on Zettelkasten note-taking system. Although hyped up, I believe system does not function as brain.</li>
+<li>Deep Work by Cal Newport
+Insights on focused working and being distraction-less.</li>
+<li>Second Brain by Tiago Forte
+Again, whole thing about Zettelkasten. Popularized the term "Second brain" itself.</li>
+<li>Atomic Habits by James Clear
+Mentions on starting habits in small steps.</li>
+<li>A system for Writing by Bob Doto
+Latest book, emphasis on above all books and zettelkasten.</li>
+</ol>
+
+<p>
+I could have been an normie student like others and be at ease, but why did I choose to burden with Emacs and Orgmode..?
+</p>
+
+<p>
+I valued investment and growth. I could see the development and learning of skills compared to working with traditional GUI applications.
+</p>
+<div id="outline-container-note-taking" class="outline-2">
+<h2 id="note-taking">Note taking</h2>
+<div class="outline-text-2" id="text-orgad921a0">
+<p>
+Note-taking is understandable, its just format of text to store and read. And org-mode was superior and helped me alot.
+I later on embraced single big org file, and started using tags heavily with context based tagging.
+</p>
+
+<ul class="org-ul">
+<li>t -&gt; task;         t@shop t@meeting t@work</li>
+<li>p -&gt; project;   p@plan p@lncrna p@thesis</li>
+<li>l -&gt; learn;        l@nix l@python</li>
+</ul>
+
+<p>
+So on which really helps with narrowing using consult package and org-ql for querying. I eventually formed my own second brain with org mode like an zettelkasten system. This became my personal knowledge management (PKM) as well which empowered me to stay organized.
+</p>
+</div>
+</div>
+<div id="outline-container-reports-doc" class="outline-2">
+<h2 id="reports-doc">Reports/Doc</h2>
+<div class="outline-text-2" id="text-orga0b5c60">
+<p>
+Org mode can produce pdf via latex or ODT/docx format. That eventually guided me for submission of assignments and documents for sharing.
+Although it was an hassle to get formatting correct as they instructed, where as others just did them in breeze via M$ word and AI crap generated.
+</p>
+
+<p>
+Although there was not much work with reports, I had good workflow of storing notes and working with integration and stayed organized.
+</p>
+</div>
+</div>
+<div id="outline-container-presentations" class="outline-2">
+<h2 id="presentations">Presentations</h2>
+<div class="outline-text-2" id="text-org627105c">
+<p>
+I thought to give presentations in Emacs editor itself, but that did not make the cut for required normie friendly slides. The magically I came across revealJS and observed many people in tech presentations and talks used them. There was active development of org-reveal package as well, in new form from OER gitlab repo.
+</p>
+
+<p>
+This workflow was definitely more painful, to get as they expect. The default works, but tweaking were more. But revealjs and org package provided many options and it sufficed for completing the setup along with power of HTML and CSS.
+</p>
+
+<p>
+I had local.scss file for color and designing slides, and org generated html files.
+</p>
+</div>
+</div>
+<div id="outline-container-thesis" class="outline-2">
+<h2 id="thesis">Thesis</h2>
+<div class="outline-text-2" id="text-orgf5fd12d">
+<p>
+The final saga of the journey, since thesis takes time to write, I thought to not bother with complicating this task. My initial thought was to either use Latex, if it was too much headache then simply follow given docx format file and write.
+Thankfully there was another player getting really popular, a new typesetting "Typst". It did the magic and wonders.
+</p>
+
+<p>
+The syntax and process was very robust and simple. The documentation was standard and was simple enough to grasp and tweak everything. And here was well someone had made basic org export support for typst format. Although IMHO typst syntax is so easy to understand and I loved to write and learn the syntax. Workflow was bliss with it, I wonder why I did not discover it earlier. Maybe I'm not a mathematician to have it for demand, but it was a good skill to have it in my hands.
+</p>
+</div>
+</div>
+<div id="outline-container-conclusion" class="outline-2">
+<h2 id="conclusion">Conclusion</h2>
+<div class="outline-text-2" id="text-org401be06">
+<p>
+The main draw from this experience was that investing in tools that allow extending and allow programming to customize and tweak as I require was a major win and good rewards. These were added up skills that makes working with related tasks a breeze ahead.</p>
+</div>
+</div>
+]]></content></entry><entry><title>If cats disappeared from world</title><link rel="alternate" type="text/html" href="https://idlip.in/log/cats-disappeared-world/" /><id>https://idlip.in/log/cats-disappeared-world/</id><published>2025-04-10T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="novel" label="novel" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+<b>If Cats Disappeared from the World</b> is an light novel by Genki Kawamura.
+</p>
+
+<p>
+It depicts the life-death situation of a person, who in-return to live a day makes something disappear from the world.
+The novel shows a thought-provoking idea of, "what's life worth it" or how much meaning it carries.
+</p>
+
+<p>
+The reviews spoke as sober one, but I did not feel any depressing moment about story. But the lesson and points definitely are reflective on life.
+The major good thing about the book is, English translation and writing style is easy and friendly.
+I would not recommend movie as such, but the gist is shown very well there
+</p>
+
+<p>
+The ending was kinda cliffhanger, but did not end as in climax. It suddenly closed off.
+Again I think back, it seemed that the book itself might be the letter he was writing for his father or in some way. But sure ending is confusing.
+</p>
+
+<p>
+<b><a href="/log/three-days-happiness">Manga: Three days of happiness</a></b> and this one is kinda one of my best reads.
+</p>
+]]></content></entry><entry><title>Stoicism: Way of life</title><link rel="alternate" type="text/html" href="https://idlip.in/log/init-stoicism/" /><id>https://idlip.in/log/init-stoicism/</id><published>2025-04-06T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="philosophy" label="philosophy" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+I've been reading <code>Stoicism 101 by Erick Cloward</code> as a beginner. Although internet suggested <a href="https://plato.stanford.edu/published.html">stanford philosophy</a>, book does have a way to communicate which connects readers mind.
+</p>
+
+<p>
+Initial chapters covered the history of Greek and Roman times, of how prominent philosophers emerged.
+Some prominent works that influence and laid foundation were from
+</p>
+<ol class="org-ol">
+<li>Zeno of Citium</li>
+<li>Socrates</li>
+<li>Epictetus</li>
+<li>Marcus Aurelius</li>
+</ol>
+
+<p>
+The book or in-fact the philosophy, is a thought provoking for sure which not only talks about history, but it provides a realization of how thinkers and people lived in those moments.
+</p>
+
+<p>
+As my first time into actual philosophy, I really align with it and relate the message.
+The most takeaways they pass on are to live good, be virtuous, and all good quality/behaviors you can think of.
+</p>
+
+<p>
+The point I started with philosophy was, unlike mythology, this one connects well with modern day thinkers. Many points in fact remain true.
+Protesilaos stavrou remains one of the good philosophy vlogger along with emacs proponent, his journey has been inspiring and one of my lead thought provoker on philosophy.</p>
+]]></content></entry><entry><title>Overview of Decentralized socials</title><link rel="alternate" type="text/html" href="https://idlip.in/log/overview-decentralized-socials/" /><id>https://idlip.in/log/overview-decentralized-socials/</id><published>2025-04-06T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<ul class="org-ul">
+<li><a href="https://arxiv.org/abs/2504.00071">https://arxiv.org/abs/2504.00071</a></li>
+</ul>
+
+<p>
+The paper elaborates on architecture of Decentralized social networks.
+Although not much takeaways for common users, but it ensure that Decentralized networks would be the way future for privacy and security concerns.
+</p>
+
+<p>
+Although I lurk around mastodon, I think Decentralized did not work as expected. Althought small communities can group together, the inter-connection between other serves are tedious.
+There is no smoother discovery of posts. The pain is, some account in a server must expose or connect with other server people to get their feed/posts exposed in current server. So unless that, even with trendy hashtags, there is no way to view their posts.
+</p>
+
+<p>
+This becomes a hindrance, that's why bluesky with their big mono server can tackle them with some business model.
+Although mastodon has <code>mastodon.social</code> instance for big giant network.
+</p>
+
+<p>
+Even though small communities thrive, a single person cannot take forth maintenance longer, many would appreciate some volunteer donation and support.
+</p>
+
+<p>
+As a sad one, <code>emacs.ch</code> got shutdown due to its maintenance burder. As of writing <code>emacs.social</code> seems to be up for same cause, although the emacs community has already diversed.
+</p>
+
+<hr />
+<p>
+Also this hopefully marks end of an hiatus to this site, and revert this blog site with more stream of posts.
+</p>
+]]></content></entry><entry><title>Biocode Daily to hack solutions</title><link rel="alternate" type="text/html" href="https://idlip.in/log/biocode-daily/" /><id>https://idlip.in/log/biocode-daily/</id><published>2025-04-03T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><category term="bioinformatics" label="bioinformatics" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<ul class="org-ul">
+<li><a href="https://www.biocodedaily.com/">https://www.biocodedaily.com/</a></li>
+</ul>
+
+<p>
+Biocode Daily is a new platform like <a href="https://rosalind.info">rosalind</a>, which offers daily bio-related coding challenges.
+</p>
+
+<p>
+Its python oriented currently, which basically gives problems and expects a solution on given example and also on hidden tests.
+</p>
+
+<p>
+These hidden tests are the good ones, because you need to solve the problems effectively and cannot just hard code some solutions to get over it. Althought very new, I'm excited to see how it will grow, as I'm highly anticipating a comments section, a way to engage with others and share code with help.
+</p>
+
+
+<div id="orgf7f62ae" class="figure">
+<p><img src="/images/biocode-lb.png" alt="biocode-lb.png" width="70%" />
+</p>
+<p>Leaderboard as of third day challenge (I'm at #8)</p>
+</div>
+
+<p>
+I missed the first day challenge, so I could not have 3 done.
+</p>
+
+<p>
+Biocode also offers daily challenge in easy and hard form, clearing any would grant as solved.
+</p>
+
+<p>
+I actually wanted to get involved with this, or at least follow up on development. I had mailed the contact author, but ig my mail went to spam. Should probably nudge sometime.</p>
+]]></content></entry><entry><title>Manga: Three days of happiness</title><link rel="alternate" type="text/html" href="https://idlip.in/log/three-days-happiness/" /><id>https://idlip.in/log/three-days-happiness/</id><published>2025-02-21T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="manga" label="manga" scheme="https://idlip.in/tags/"></category><category term="novel" label="novel" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+A light novel by the name, and manga goes by name <b>Jumyou wo Kaitotte Moratta. Ichinen ni Tsuki, Ichimanen de</b> by Sugaru Miaki. His all novels follow similar theme.
+</p>
+
+<blockquote>
+<p>
+If you wonder why japanese manga names are reallyyy long, they say that, its useful for buyers to know the gist of what it is about. So basically the names would indicate most of the main theme or gist. It makes sense as it can gives mini-overview on itself.
+</p>
+</blockquote>
+
+<p>
+The story is kinda depressing, or lets say it makes you sober. More of its an thought provoking story and makes you wonder the importance in life. Although everyone cannot relate based on NEET character, since IRL we are busy with connections and responsibilities and some flow is going on with out life.
+</p>
+
+<p>
+This manga/LN left me with lots of questions and lots of thoughts. Wonderful depiction of love, life and the worthwhile of doing things.
+In fact, last (extra) chapter was so valuable that gave another perspective of living.
+</p>
+
+<p>
+Lot of take in, but many were indirectly spoken. The focus might seem on lifespan, love and death. But the key takeaway would be on passion, interests and career.
+</p>
+
+<p>
+Socializing came a bit and flew away, but still seemed positive.
+</p>
+
+<p>
+This might be my beginning for loving these kinda manga, of understanding life and maybe kick start reading light novels.
+</p>
+
+<p>
+<code>Good for nothing</code> was the main theme, but it depicts that it vanishes when loved ones are together.
+</p>
+
+<p>
+First time I did not feel much, but reading some pages again felt more pain. After reading this one, I went on searching similar one just like this, but unfortunately nothing like this. This feels different unlike any for me.
+I wish I could have started off with light novel, but maybe pictures only gave me more value and more comprehension.
+</p>
+]]></content></entry><entry><title>Using Gnus to read rss feeds</title><link rel="alternate" type="text/html" href="https://idlip.in/log/gnus-joy/" /><id>https://idlip.in/log/gnus-joy/</id><published>2024-03-10T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="gnus" label="gnus" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+Emacs is my editor, and my companion for most of my tasks. Yes, I'd like to call it a second brain extension.
+</p>
+
+<p>
+I'm a rss feed user, to read with coziness, freedom and comfort. Lately I have been experiment with the rss readers choice in Emacs. I feel that <code>gnus</code>, the powerhouse in Emacs is one of the good choice. I mean to say, not with <code>nnrss</code> backend, but with rss to nntp gateway.
+</p>
+
+<p>
+I'm using <code>elfeed</code> as the rss reader for over 6 months. I even setup my phone to use emacs app to read news in sync with PC using syncthing. And it worked as expected flawlessly. But elfeed is unmaintained, but it works without any issues tho. By time someone may fork it, looking at how much love it has. This then lead to me try other ways in Emacs, as I was kinda leaning towards keeping Emacs as close to vanilla as possible. Recently I also replaced <code>flycheck</code> with built-in <code>flymake</code>.
+</p>
+
+<p>
+Soon I jotted down only 3 candidate for reading feeds. Elfeed, Newsticker &amp; gnus. Later two are built-in. There might be others as well, like wanderlust, org based.., but when I tried ig it did not work.
+</p>
+<div id="outline-container-elfeed" class="outline-2">
+<h2 id="elfeed">Elfeed</h2>
+<div class="outline-text-2" id="text-org7ebd906">
+<p>
+As said earlier, it was my choice for about 6+ months, and it worked really well. Was reading and tagging feeds alot. Although with my rss usage, I realized I was only looking forward for the <b>planet emacs</b> feeds (haha; typical emacser).
+</p>
+
+<p>
+It is good with not much issues, except that its database directory is kinda not intuitive for manual edits, and the files are scattered with some random ids. So you dont know where a feed post is located.
+</p>
+
+<p>
+It is still my recommend way to go with the package that just works well. But being into more emacs, I needed little more.
+</p>
+</div>
+</div>
+<div id="outline-container-newsticker" class="outline-2">
+<h2 id="newsticker">Newsticker</h2>
+<div class="outline-text-2" id="text-org00d4a41">
+<p>
+Firstly, liked the customization it has, and the tree-view how it appeals. But I hit the road blocks very soon. Tree-view was an issue, I need to read each post in single window and navigate to my leisure. I miss tags here. For everytime I launch, <code>newsticker-treeview</code> it fetches the articles from feed. That blocks my usage sometimes. Even tho I can keep <code>newsticker-retrieval-interval</code> to 0, it still fetches when launched with command for first time.
+</p>
+
+<p>
+With plain view you can filter for feeds very much. With tree view you cannot occupy single widow to read the post.
+</p>
+
+<p>
+Anyway, newsticker is also good, as it is built-in and does just work.
+</p>
+</div>
+</div>
+<div id="outline-container-gnus" class="outline-2">
+<h2 id="gnus">gnus</h2>
+<div class="outline-text-2" id="text-org0e187d5">
+<ul class="org-ul">
+<li>I panicked when I came to gnus. Its my..idk.. n<sup>th</sup> time trying it out again.</li>
+</ul>
+<p>
+But with little more dedication than last time, I sat down to read the manual.
+</p>
+
+<p>
+Soon I realized, how did I miss reading such a marvelous manual before. Although still I was not able to wrap my head, I some how managed only yo grasp what I wanted for the time being. Note, gnus is a usenet reader, so it can be preferred for mails, but my goal for now is rss feeds.
+</p>
+
+<p>
+I saw there is <code>nnrss</code> backends, it is kinda same as newsticker, the road-block is the not being async to fetch the feeds.
+So if more feeds, it blocks the emacs very much.
+</p>
+
+<p>
+Soon I came to another way of reading rss as newsgroup via rss to nntp gateway. I'm using <code>gwene</code> and <code>feedbase</code> for it, and it gets me most of the feeds in newsgroup format.
+</p>
+
+<p>
+Its my first time reading at newsgroup, and I feel amazed and appreciate how simply and focused this UI is. I have started to enjoy reading mailing lists and follow up stuffs in a unified and good way.
+</p>
+
+<p>
+Although you may find some cons with this way, offline is possible and can download any number of articles/posts. Which is mega-bonus. I download 5k+ articles from a feed, which might be not possible with plain rss feeds.
+</p>
+
+<p>
+The reading in gnus has been a joy, and I would to add more write-ups on it. Yes, I want to write and hope to make some people try it as I feel it. Cause whatever search you do on gnus emacs, people silence and make you use other package. I know I may also hit their issues and end, and realize what they mean. But at the time of writing, I really enjoy it.
+</p>
+
+<p>
+And, it was very easy to me use gnus in sync with android emacs too via syncthing of just one file <code>newsrc.eld</code>, and if downloading any articles, its will be added to <code>gnus-directory</code>.
+</p>
+
+<hr />
+
+<p>
+Finally to say, gnus will be my choice of reading from now. I hope I don't fall into the rabbit hole of gnus now, I just hope to use as is and enjoy reading the content.
+I would like to link my dotfiles for it, maybe will soon add more write-up on it. For now here you go; <a href="https://www.github.com/idlip/d-nix">check d-setup.org</a>.
+</p>
+</div>
+</div>
+]]></content></entry><entry><title>Resonance: The Echo</title><link rel="alternate" type="text/html" href="https://idlip.in/log/time-resonance/" /><id>https://idlip.in/log/time-resonance/</id><published>2024-03-10T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="psychology" label="psychology" scheme="https://idlip.in/tags/"></category><category term="philosophy" label="philosophy" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+Am at such a career building stage, and learning lot of new things everyday. Every day I wanted to blog and write something, and  even now at the time of writing, I'm enjoying to put up and convey something as a post in my editor, emacs. The point, is "I have to just start".
+</p>
+
+<p>
+<b>The sound</b>
+All these days, some of the thoughts have been echoing inside me, recursively bombarding with same realization and finally coming to the same point. I would like to note down some of the points that are amusing and as a record that exists to realize.
+</p>
+<div id="outline-container-whatever-task-it-is-just-start" class="outline-2">
+<h2 id="whatever-task-it-is-just-start">Whatever task it is, "Just start"</h2>
+<div class="outline-text-2" id="text-org3478244">
+<p>
+I realized that just starting anything is not only half done, but its a perfection. Issues and complication start when I don't start and exaggerate thinking about it.
+</p>
+</div>
+</div>
+<div id="outline-container-don-t-follow-the-system-let-it-just-work" class="outline-2">
+<h2 id="don-t-follow-the-system-let-it-just-work">Don't follow the system, Let it just work</h2>
+<div class="outline-text-2" id="text-org44c1103">
+<p>
+Cool trendy, shiny tools and concepts bloom up every morning, cause its how the world is hastening up. But chasing something new, is a huge mistake and leave us nowhere out in the blue. Simply trying to adapt to shiny trends will lead to new issues and new challenges. That is good in some sense, and should be welcome. But we have to know the priorities.
+</p>
+
+<p>
+So better to follow something that works, and adapt and improvise it. As I feel this true for my note taking system. I feel zettelkasten system is not adding any meaning to my workflow. I feel it might only make me feel lost and lose information with FOMO (fear of missing out).
+</p>
+
+<p>
+Since I'm fond of org-mode, it might be reasonable in my case. So I think sticking with few large org files is a go-to and a best strategy, given that I utilize the tools properly and craft my own wizard-ery flow!
+</p>
+</div>
+</div>
+<div id="outline-container-nothing-in-life-makes-sense-after-a-period-of-its-time" class="outline-2">
+<h2 id="nothing-in-life-makes-sense-after-a-period-of-its-time">Nothing in life makes sense, after a period of its time</h2>
+<div class="outline-text-2" id="text-org3fd31bc">
+<p>
+Every matter and material has some time in our life, past and post that, its useless and alien to us. For whatever we fight, and chase during that time, is a laughing material for the future you.
+</p>
+
+<p>
+I believe that, we need to sit down and think properly of what's going on with us. Its a good practice to better understand about self. I'm sure many don't notice or feel about themselves these days. Completely lost and being someone they want to be. But lost the person they were born to be.
+</p>
+</div>
+</div>
+<div id="outline-container-silence-and-no-is-the-best-answer-to-many" class="outline-2">
+<h2 id="silence-and-no-is-the-best-answer-to-many">Silence, and No is the best answer to many</h2>
+<div class="outline-text-2" id="text-orga9e394a">
+<p>
+Many times, life deviates with noise and nodding "yes" to questions. Some seconds of silence and "No" would elevate life's progress and improve the betterment of life for many.
+</p>
+</div>
+</div>
+<div id="outline-container-don-t-be-a-judge" class="outline-2">
+<h2 id="don-t-be-a-judge">Don't be a judge</h2>
+<div class="outline-text-2" id="text-org287b1c4">
+<p>
+Judging does come with a price, at the end we may lose our own support. As I said, silence and simplicity voyages the person to bright life.
+</p>
+
+<p>
+Disclaimer: No need to think too much, I'm not a philosopher. <i>Please take it with a pinch of salt</i></p>
+</div>
+</div>
+]]></content></entry><entry><title>Nobody Cares about blogs</title><link rel="alternate" type="text/html" href="https://idlip.in/log/nobody-cares/" /><id>https://idlip.in/log/nobody-cares/</id><published>2024-02-08T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="blog" label="blog" scheme="https://idlip.in/tags/"></category><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+This is an obvious statement over this era, that things are moving so fast that people lost the touch of blogs.
+I came across an interesting blog post on how nobody would care, and it sounded pretty reasonable. In fact, social media's have dominated over rss (Ik nobody even is aware of it now) and blog sites. Another interesting fact, AI has taken over social media now.
+</p>
+
+<p>
+Now, only AI and social media becomes the de-facto place to read about others post. Having a website or blog site is like now people calling you, "are you still living in old times?"
+</p>
+
+<p>
+Also the site features good blogs, and <a href="https://www.alexmolas.com/blogroll.html">blogroll</a> which has more blogs posts linked. Its one of the gem!
+</p>
+
+<p>
+<a href="https://www.alexmolas.com/2023/07/15/nobody-cares-about-your-blog.html">https://www.alexmolas.com/2023/07/15/nobody-cares-about-your-blog.html</a>
+</p>
+
+
+<hr />
+<p>
+Probably I might add more sites, or blogroll like page to my site in future. In the mean, I'll plan to share some interesting blogs read in snippets as a list!</p>
+]]></content></entry><entry><title>NixOS and its Madness</title><link rel="alternate" type="text/html" href="https://idlip.in/log/nixos-madness/" /><id>https://idlip.in/log/nixos-madness/</id><published>2024-02-04T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="nixos" label="nixos" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<div id="outline-container-need-to-update-wip" class="outline-2">
+<h2 id="need-to-update-wip">Need to Update. WIP</h2>
+<div class="outline-text-2" id="text-org8c9c09c">
+<p>
+Too much going on, need some time to wrap up.
+</p>
+
+<p>
+I initially thought to talk about nix and nixos usage thing, but new drama has rose up regarding to sponsorship, governance and maintainers leaving.
+</p>
+
+<p>
+So far Aux and Lix has been initiated, apart from nixos governance, using nix as dev environment and its steep learning curve is a hectic.
+</p>
+
+<p>
+Someday might add new posts or update this regarding to nixos!
+</p>
+
+<p>
+As on <span class="timestamp-wrapper"><span class="timestamp">[2026-03-19 Thu]</span></span>, I think maybe things got dusted off. Interesting I was reading about a nix user giving Guix a fair try.
+</p>
+
+<ul class="org-ul">
+<li><a href="https://nemin.hu/guix-one-month-later.html">https://nemin.hu/guix-one-month-later.html</a></li>
+</ul>
+</div>
+</div>
+]]></content></entry><entry><title>Art of Getting things Done</title><link rel="alternate" type="text/html" href="https://idlip.in/log/art-gtd/" /><id>https://idlip.in/log/art-gtd/</id><published>2024-02-03T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><category term="gtd" label="gtd" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<div id="outline-container-gtd" class="outline-2">
+<h2 id="gtd">GTD</h2>
+<div class="outline-text-2" id="text-org10a84ca">
+<p>
+The tendency to organize things, and get the workflow in right track is a natural process, and we insist more on that in today's world. The mere idea of finding the "right way", "Best way possible" is a driving opinion for various Internet opinions. People do share what works for them, and they argue.
+</p>
+
+<p>
+The ultimate deal I found is, a system does not have to help you, the natural process has to help you in getting things done.
+</p>
+
+<p>
+Nowadays, the system has become a hindrance in workflow, like those popular apps trying to do that thing for you.
+</p>
+
+<p>
+Usually to most of the person, GTD is not organized, it just goes hand in hand like a chain and workflow is mapped into our brain.
+Sure digital ecosystem has occupied and developed into a "Second brain" for us, but that should be too much work for <b>first brain</b> to train <span class="underline">second brain</span> to work perfectly for a system.
+</p>
+
+<p>
+Just let go of the plans, just focus on what things to do for now. Slowly and gradually let your own system evolve that works perfectly for you, and there is no need to let the world know or judge about our system.
+</p>
+
+<p>
+This snippet was addressed on the latest trends, and my long readings on articles and blogs over <b>Zettelkasten</b>, <b>Getting Things Done</b>, <b>Personal Knowledge Management</b> &amp; <b>Note-Taking</b>.
+</p>
+
+<p>
+This would be a never ending story, and ultimately I just sat with defaults without much over thinking the system or best practice. Just go with <b>Org mode</b>, plain text file with headings defined to make sense, add <code>TODO</code> for necessary tasks, and over a month, make changes if required to make it feasible and handy for next month. This worked great, I don't need complexity or automation for me to see at redundant information on my notes.
+</p>
+</div>
+</div>
+]]></content></entry><entry><title>Window Managers</title><link rel="alternate" type="text/html" href="https://idlip.in/log/window-managers/" /><id>https://idlip.in/log/window-managers/</id><published>2024-01-03T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="linux" label="linux" scheme="https://idlip.in/tags/"></category><category term="minimal" label="minimal" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+Desktop Environment gives us everything we would like to operate on Desktop with care towards UI and UX, that matches the common paradigm. It is a lot driven by mouse, and seems to fairly make work simpler and easier. It is not like keyboard can always make task quicker, mouse can be ahead of the race.
+</p>
+
+<p>
+But I too followed the trend to ditch mouse and embrace the swiftness of keyboard. I like to hear the "clicks" and "tacks".
+</p>
+
+<p>
+Window Managers are tools which only manage the window alignment and their behavior, with wayland, the compositor acts as both display server and window manager. Typically tho window managers offer keyboard focused, tweakable configuration to suit user's need, but alas it does work for minimal sake, just does offer on managing windows and thats it. It is not a Desktop environment to facilitate for other needs.
+</p>
+
+<p>
+After fairly using a lot of window manager, from X11 days to now Wayland years, I stick with window managers only. It gives the feel of unique, self owned customization. My system can only be used by me, how cool !
+</p>
+
+<p>
+Back in X11 days, I started with Cinnamon (Linux Mint) and later moved to XFCE to conserve Ram usage. Both were very good, Xfce was very much customization. Later I fell in the rabbit hole for more minimalism, and started looking at Youtube videos and came along the road of Window Managers.
+</p>
+
+<p>
+Tried with <code>i3wm</code>, and boyo boy, it worked and made the workflow like charm, and again I feel into another rabbit hole of World of window managers. The cost I had to pay was, endless customization for my needs, and wasting time. After fair usage, with some free time (pandemic age) I tried out other WMs, like <code>dwm</code>, <code>leftwm</code>, <code>Qtile</code> &amp; <code>bspwm</code> and used them all fairly equally and it was done.
+</p>
+
+<p>
+With wayland years, I soon discovered <code>sway</code> was popular and drop-in replacement, so was suite of apps needed to replacement for pure wayland integration. Soon listed some and move to <code>sway</code> ship, and reddit showed beautiful blur and animations of <code>hyprland</code>, and finally I settled on with <code>Hyprland</code>.
+</p>
+
+<p>
+So far I have only listen WMs names, and I have not spoken of personal usage and feeling towards each of them, cause, they all just do one thing and they do it well. So except for config file (syntax), there is not much difference for user who wants to use laptop and "<b>do the work</b>". It is a wonderful change to stick with WM, cause easy management of windows and minimal way of using the system, so I can use the saving part for demanding tasks.
+</p>
+
+<p>
+One peculiar, and best thing WMs offer are Workspace. Which acts like spaces where windows are placed or configured, we get 10 (typically enough) or even more to organize and use our application in a handy way.
+</p>
+
+<p>
+Closing words, Window Managers are definitely great, and changing enhancement, users (linux) should give it a try at least once, of course it's not for everyone, but how can anyone tell unless if they have not even tried. It can enhance the workflow for many, and can be worse for others.
+</p>
+
+<p>
+So, just have a share of trial, explore and relax!</p>
+]]></content></entry><entry><title>Literate org config</title><link rel="alternate" type="text/html" href="https://idlip.in/log/literate-config/" /><id>https://idlip.in/log/literate-config/</id><published>2023-12-29T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<div id="outline-container-organizing-config" class="outline-2">
+<h2 id="organizing-config">Organizing Config</h2>
+<div class="outline-text-2" id="text-org759085a">
+<p>
+Configuration files as we know are the text to instruct the program to modify and tweak to our needs. Every Open-Source, hack-able software or tool has configuration files provided for the choice of user's needs. Most of the tools provide simple and basic configuration with JSON-like formats, <code>Yaml</code> and <code>Toml</code>. For the word, they are not extensible, as <code>ml</code> stands, they are merely for markup to already defined instructions.
+</p>
+
+<p>
+Tools which are really extensible occupy with the power of a simple or real programming language, to which user gets only sky as the limit to configure. Some tools which are in my mind of this matter are Emacs, neovim, NixOS (home-manager).
+</p>
+
+<p>
+So eventually with more configurations added and tweaked, it becomes evident that it needs to be organized. Humans cannot read a long mass of codes which does not even have basic design principle in it.
+</p>
+
+<p>
+This realization leads to documenting the codes with comments (<i>the grey</i>) and it obviously adds more lines. There after the thoughts lead to modular config, splitting up of files in sensible manner and to import from one stop.
+</p>
+
+<p>
+Now, wait.., This sounds like we are down to creating a file hierarchy for config files, good at the initial days, but sooner or later hierarchy might look alien. I bet it!
+</p>
+
+<p>
+That's where I'm stopping you can covering up next on writing Literate configuration, like with Org-mode.
+</p>
+</div>
+</div>
+<div id="outline-container-org-mode-config" class="outline-2">
+<h2 id="org-mode-config">Org-mode Config</h2>
+<div class="outline-text-2" id="text-org2af4adb">
+<p>
+I won't introduce about org-mode, please do check <a href="https://orgmode.org">here</a>, hopefully it gives you an idea (I mean you should have read whole documentation/manual there). Additionally here is a <a href="https://en.wikipedia.org/wiki/Org-mode">Wikipedia reference</a> which is enough to introduce.
+</p>
+
+<p>
+The concept of <a href="https://en.wikipedia.org/wiki/Literate_programming">Literate programming</a> is having the user's natural language written down in correspondence to code blocks. It adds human-ness to the code, and the instructions we need to understand. Over technical work, it can reduce the usage of manual pages and documentation, wait, that is not a good idea to avoid them, but for something to understand that we wrote ourselves, literate programming helps to add notes.
+</p>
+
+<p>
+The concept is fairly like maintaining a notebook or documentation guide itself, but it also comes with its power.
+</p>
+
+<p>
+Org-mode has tons of features that helps in various categories. Prime use is for maintaining GTD, Notes, Latex, Journaling&hellip; <i>infinity?</i>
+</p>
+
+<p>
+The main topic is, I tried maintaining modular config for Emacs and Nixos, and after some days, I myself was wondering and wasting time on thinking where did I place some content for this categories and was stuck with file hierarchy for several moments. The main obstacle is file hierarchy might turn out to be complex and redundant.
+</p>
+
+<p>
+That's where I decided to move back all to literate config. I came across <a href="https://github.com/rasendubi/dotfiles">rasendubi</a> dotfiles and he also used Literate org config for both Nixos and Emacs. Eventually I did too, here is the <a href="https://github.com/idlip/d-nix">repo</a>.
+</p>
+
+<p>
+The key benefits were, single org file to rule them all. I can integrate well with Emacs, yes, dependency might be Emacs, then too it is plain text format. Org gives us the power to tangle, annotate, add notes, tables, anything with the Source Code Blocks.
+For many configs or code, we forget why we wrote or why it is uniquely required, and nobody likes to waste time digging on why it is there, of course comments are helpful, but not everywhere to make it more head ache?
+Also I don't have navigate over the file hierarchy again and again with paths, simple single org is the stop.
+</p>
+
+<p>
+Org allows us to write notes there, I do manage lot of TODO and plans over the files, and forget everything. When I revisit or when I want to care, I can see what are the plans and I can execute it timely there after. Org literate config acts the source of truth, for information and understanding for my own level.
+</p>
+
+<p>
+As I bestowed this in practice, I noticed that flow of thoughts and expression of it at that time is the crucial thing. Again, for a thought to come and just vanish, its a haze. Even merely <i>sixty seconds</i> is enough to forget. Org could also fill that void, but just capturing the running thought at that time, and later to expand on it.
+</p>
+
+<p>
+Managing time is precious and Org-mode help with that, with plans Todo &amp; Schedules. Also, endless customization does not fetch any fruit. Having a cleaning kind of a day every month or twice a year can help on tweaking or fixing the necessary lines over the Org config.
+</p>
+
+<p>
+In a recent snippet on <a href="/log/organize-file">Organize File</a>, I was about falling out on maintaining notes. From that scenario also the lesson learned is that, more than maintaining notes, the actual flow of thought and feeling at right time is most important and beats the best organizer anywhere out there. I mean, the goal of note-taking or writing down should be to transcribe the thoughts and knowledge in a approachable manner.
+</p>
+</div>
+</div>
+<div id="outline-container-key-takeaways" class="outline-2">
+<h2 id="key-takeaways">Key Takeaways</h2>
+<div class="outline-text-2" id="text-org5d3421a">
+<ul class="org-ul">
+<li>Org-mode helps in managing and maintaining configuration files.</li>
+<li>Learning can be stressed, and is the key for writing out Literate programming.</li>
+<li>Things are easier to forget, annotating it our own words can help in better understanding and retention of information.</li>
+<li>Org config is the source of truth.</li>
+<li>Notes should be meant to capture the thoughts and feeling at that time of occurence.</li>
+</ul>
+</div>
+</div>
+]]></content></entry><entry><title>Emacs on Droid</title><link rel="alternate" type="text/html" href="https://idlip.in/log/emacs-droid/" /><id>https://idlip.in/log/emacs-droid/</id><published>2023-12-16T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="android" label="android" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+Emacs is a definite Greatest editor of all time, the extensibility power is unmatched with any other software. Users of Emacs can only know what it is, one who has not used it may not really understand the principles and power it gives us, the users.
+</p>
+
+<p>
+Once settled with it on PC, its not late to think of something similar for our handy pocket phones, at least support for <b>org-mode</b> so we organize our life. The research leads us to find apps, and its unfortunate that market has lots of apps supporting markdown, just for its markup. Even org-mode is good for markup only, Karl voit's <a href="https://karl-voit.at/2017/09/23/orgmode-as-markup-only/">post</a> explains it very well.
+</p>
+
+<p>
+Finally we have some apps for org-mode, namely on Android <a href="https://github.com/orgzly/orgzly-android">Orgzly</a> (maintained: <a href="https://github.com/orgzly-revived/orgzly-android-revived">orgzly-revived</a>), Orgro (read-only app) and there is <a href="https://organice.200ok.ch/">Organice</a> (PWA site, unique, supports desktop).
+Surprisingly IOS has many apps for org-mode, namely <a href="https://beorgapp.com/">beorg</a> and <a href="https://plainorg.com/">plain org</a> (I dont use IOS, so please search app store).
+</p>
+
+<p>
+New project under development <a href="https://github.com/Artawower/orgnote-client">OrgNote</a> also looks promising.
+</p>
+
+<p>
+But it was near February, 2023, that Po Lu, one of the Emacs developer, started and released support for touch-screen devices (including Android) and to our surprise it was <b>the graphical Emacs</b>, available now on Android. But before trying the first doubts and cons expected was that it does not work well with virtual keyboard, so only good option is to carry physical keyboard everywhere?
+That could be solved by getting adjusted to keyboard app called "Hackers Keyboard" (TODO link).
+</p>
+
+<p>
+But as I dug deep, the developer Po Lu, was on telegram channel in disguise, as I pointed that emacs android needed android's share feature (like open-with) to other people, he had seen it and implemented is very quickly. It shows how much of an interesting take-up it is.
+</p>
+
+<p>
+Orgzly actually satisfied org-mode and agenda things with help of syncthing over org directory. But the next bummer came when I fell in love with <a href="https://github.com/skeeto/elfeed">Elfeed</a> (RSS reader) and badly wanted to read feeds in sync with my phone. Since Emacs officially made its way for Android, so why not open some doors, indeed it did gave the power of emacs-lisp!
+</p>
+
+<p>
+Initially I started with bare-bone config, and later tried to incorporate my PC config with android, and it was easy, without much hassle. Just had to define a constant to check if system is on Linux or Android, and use the keyword in condition statements and <code>use-package</code>. Next thought would be to use Unix tools/commands, so it only leads to Termux, and after few days, the developer released Termux signed apk to use in conjunction with emacs, so as to leverage the command line utilities in Android emacs too, namely <code>ripgrep</code>, <code>git</code>. I have not tried <code>image-magick</code>, <code>mupdf</code> for <code>pdf-tools</code>. But frankly <a href="https://github.com/foobnix/LibreraReader">Librera reader</a> is good enough.
+</p>
+
+<p>
+Here is a <a href="https://marek-g.github.io/posts/tips_and_tricks/emacs_on_android/">blog post</a> by marek-g explaining how termux is modified to use with Emacs
+</p>
+
+<p>
+Note: Fdroid emacs apk lacks some support like GnuTLS (so won't be able to install package or use eww), thus the only source to get emacs builds for Android is <a href="https://sourceforge.net/projects/android-ports-for-gnu-emacs">https://sourceforge.net/projects/android-ports-for-gnu-emacs</a>
+</p>
+
+<p>
+For anyone trying it out again or newly, please make sure you go through <code>C-h R android</code> or <code>C-h r m android</code> for frequent issues or things to know for Android build. For any queries to me, please feel free to open up an issue over this <a href="https://github.com/idlip/d-nix">repo</a>.
+</p>
+
+<p>
+Overall with setting only few variables for android specifically, I replicated almost same emacs config on Android. The definite org-mode reader, read Elfeed feeds in sync with PC, whatever emacs packages you use.
+</p>
+
+<p>
+Config just for android exclusively:
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><code><span class="org-comment-delimiter">;; </span><span class="org-comment">define constant to check if system is android
+</span>(<span class="org-keyword">defconst</span> <span class="org-variable-name">d/on-droid</span> (eq system-type 'android))
+<span class="org-comment-delimiter">;; </span><span class="org-comment">if system is android, executes following code
+</span>(<span class="org-keyword">when</span> d/on-droid
+  (custom-set-variables
+   '(touch-screen-precision-scroll t) <span class="org-comment-delimiter">;; </span><span class="org-comment">smooth scrolling
+</span>   '(touch-screen-display-keyboard t)
+   <span class="org-comment-delimiter">;; </span><span class="org-comment">^ display virtual keyboard when touch on phone screen
+</span>   <span class="org-comment-delimiter">;; </span><span class="org-comment">does not work on read-only buffer (dashboard, startup..)
+</span>   '(browse-url-android-share t))
+  <span class="org-comment-delimiter">;; </span><span class="org-comment">open links/urls with android's open-with or share kinda popup
+</span>
+  (<span class="org-keyword">defun</span> <span class="org-function-name">d/key-droid</span>()
+    <span class="org-doc">"To enable touch screen keyboard"</span>
+    (<span class="org-keyword">interactive</span>)
+    (frame-toggle-on-screen-keyboard (selected-frame) nil)
+    )
+  )
+</code></pre>
+</div>
+
+<p>
+I'm not sure how suitable it is for coding environment (with lsp and complexities), but it behaves as expected for reading purpose and for quick note taking. I should probably say, it excels in that segment.
+</p>
+]]></content></entry><entry><title>Organize File</title><link rel="alternate" type="text/html" href="https://idlip.in/log/organize-file/" /><id>https://idlip.in/log/organize-file/</id><published>2023-12-16T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+From past few days I have been dabbling in the dimension of how to organize files, notes in effective manner. After jumping deep into the rabbit hole, I went on a spree of digesting several blog posts, articles on maintaining files, organizing notes, getting things done, what not, the list goes on.
+</p>
+
+<p>
+With power of <b>org-mode</b> comes the doubt, is it efficient to maintain one big org file or multiple small files. Yes, its personal preference based on users need, there is no set guided rules.
+</p>
+
+<p>
+I stumbled across <code>Zettelkasten</code> system which wasn't new, I was aware of it in the likes of <code>org-roam</code>, although I believe I did not have much matter to use it to some potential to form sensible network. So for now, no hard plans of multiple small files.
+</p>
+
+<p>
+After many reading, especially Karl voit's posts (<a href="https://karl-voit.at">site</a>), I was kinda convinced that file system hierarchy does not make sense, as the file system model I have may change over time, and I would not like to remember and know where I placed something and where to place something. The schema of Zettelkasten is also against this, like you maintain small files and just connect them based on UniqueID or with complexity of SQL database. The simpler alternative would be <code>denote</code> emacs package, then too I don't see the light on using it to the potential. I liked denote way of naming files, and it is format agnostic, does not depend on anything. Just pure elisp to do the job.
+</p>
+
+<p>
+Thus as a safer approach, I renamed some notes files to denote convention (as there is no harm/changes in that).
+</p>
+
+<p>
+Ultimately the fruit to yield is, just go with whatever is easy and that gets the work done. Forgetting people's upfront images, looking at other side proved me that nobody is well organized in every way. Everybody lacks something in one or the other way, like I saw person who maintained file system well organized, but the desk and the room was gross and jam packed. So it depends, but the key takeaway is, if it just works; That's enough. But as time goes, changes and upgrades are required.
+</p>
+]]></content></entry><entry><title>Nix: Home for Acer</title><link rel="alternate" type="text/html" href="https://idlip.in/log/nix-acer/" /><id>https://idlip.in/log/nix-acer/</id><published>2023-10-21T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="linux" label="linux" scheme="https://idlip.in/tags/"></category><category term="nixos" label="nixos" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+In this post am sharing some of the experience of using my new laptop, <b>Acer swift Go Oled</b>. Compact, Premium ultra-book with Oled, Yes, a good hand made mobile laptop.
+</p>
+
+<p>
+As expected and as usual, it got windows 11 and first major encounter was heating and battery issue. It got me scared as it felt wrong decision. Since many claimed windows gives better battery life than Linux. It gave me nightmare of installing Linux too, really, new laptop with 4-5 hours of battery, for oled with black screens?
+</p>
+
+<p>
+Anyways, windows made me really tinker to my needs, went on with <code>winutils</code> and de-bloated few stuffs and made it somewhat tacit for me, then too I demanded more of it. To which windows felt weird and too much to handle. Thus did finally decide to dual boot or straightaway to erase disk for Linux. My first thought of choice was to use Arch with gnome, but since I had well maintained <a href="https://github.com/idlip/d-nix">nixos config</a>, I went with same config without much a-due.
+</p>
+
+<p>
+Viola it gave me the exact setup I was looking for, enabling my hand to feel back in pace. Yet I was worried about battery and heating point of view, although many say, <code>laptops arent made to run on battery</code>, yet the heat? the air exhaust hitting my oled display directly?.
+</p>
+
+<p>
+I gave a shot to <code>auto-cpufreq</code>, it did a well decent job, yet I felt too little gain, I did change <code>intel_pstate</code> to <code>acpu</code> one. All i noticed is it lowered the max frequency rate from 4.3GHz to 3.2GHz.
+</p>
+
+<p>
+Later on after many rebuilds, I saw Nixos <a href="https://nixos.wiki/wiki/Laptop">wiki on laptop</a>, may seem outdated, but it was legit, and I did enable service such as <code>thermald</code>, <code>tlp</code> and viola later on I noticed it works well. Seriously I don't know how, it gave me better battery life, less heating in Linux (nixos) than windows. Maybe magical to me as others claim vice-versa.
+</p>
+
+<p>
+Nonetheless, nixos handled the magics of services and making it a better experience by just writing one line of configs to <code>true;</code>. My desktop runs Hyprland (wayland) and it works flawlessly.
+</p>
+
+<p>
+Okay, let me tell you about Finger Print, it gave me little trouble, and funny enough, it was again just to say <code>true;</code> on a line.
+</p>
+
+<p>
+I have FP, so obviously I wanted to be cool looking by using it, I initially did not expect FP to work, again online poeple said so. I was following some debian/ubuntu help on FP and enabling some drivers and all, it did not work. Later I gotta know that <code>fprintd</code> latest one already has the support for my FP id, so just did enable <code>fprintd</code> and viola! viola!, now I login in TTY with FingerPrint.
+</p>
+
+<p>
+Although I wasted some time one tinkering and making it to work on my needs, I was not doing work I wanted, thus decided to settle and do productive tasks from then on. Anyway, whatever you customize it will be little to no gain. That's why I decided to make and get my blog going, it is better to make one day each month or on boring holiday to do cleaning and customizing on OS.
+</p>
+
+<p>
+Finally, It has become a pleasant experience to get nix and make it work as I expected on <b>Acer</b>.
+</p>
+
+<p>
+Yet one thing remains unexplored, fan controlling. I see no mention of fan or <span class="underline">RPM</span> via <code>sensors</code> command, so one way is to check another tool. I skipped that part, since I don't face heating issue or high fan noise even when I'm plugged in.
+</p>
+
+<p>
+Ultimately one more thing making all experience better is the <b>GOAT Emacs</b>. Bringing back my config and using it with more speed is another level of bliss.
+</p>
+
+<p>
+This has become another embark of a journey, where the todo's are just piling even more, and it looks fun to explore more and utilize efficiently for learning.
+</p>
+]]></content></entry><entry><title>Beyond Ken</title><link rel="alternate" type="text/html" href="https://idlip.in/log/ken-quotes/" /><id>https://idlip.in/log/ken-quotes/</id><published>2023-06-02T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="quotes" label="quotes" scheme="https://idlip.in/tags/"></category><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+Welcome to some more snippet of Quotes.
+Lately I have been busy, kinda dusting off my table. <i>Ooof.. procastination!</i>
+</p>
+
+<p>
+Some more laughs, some more values!
+</p>
+<hr />
+
+<ul class="org-ul">
+<li><p>
+Napoleon Bonaparte
+</p>
+
+<blockquote>
+<p>
+If you want a thing done well, do it yourself.
+</p>
+</blockquote></li>
+
+<li><p>
+Henny Youngman
+</p>
+
+<blockquote>
+<p>
+I once wanted to become an atheist, but I gave up - they have no holidays.
+</p>
+</blockquote></li>
+
+<li><p>
+Lillian Hellman
+</p>
+
+<blockquote>
+<p>
+Things start out as hopes and end up as habits.
+</p>
+</blockquote></li>
+
+<li><p>
+Dorothy Parker
+</p>
+
+<blockquote>
+<p>
+The cure for boredom is curiosity. There is no cure for curiosity.
+</p>
+</blockquote></li>
+
+<li><p>
+Randy K. Milholland
+</p>
+
+<blockquote>
+<p>
+Lies are like children. If you don't nurture them, they'll never be useful later.
+</p>
+</blockquote></li>
+
+<li><p>
+Ralph W. Sockman
+</p>
+
+<blockquote>
+<p>
+The test of courage comes when we are in the minority. The test of tolerance comes when we are in the majority.
+</p>
+</blockquote></li>
+
+<li><p>
+Ethel Waters
+</p>
+
+<blockquote>
+<p>
+We are all gifted. That is our inheritance.
+</p>
+</blockquote></li>
+
+<li><p>
+Tom Brokaw
+</p>
+
+<blockquote>
+<p>
+It's easy to make a buck. It's a lot tougher to make a difference."
+</p>
+</blockquote></li>
+
+<li><p>
+Sonya Parker
+</p>
+
+<blockquote>
+<p>
+Live your life for you not for anyone else. Don’t let the fear of being judged, rejected or
+ disliked stop you from being yourself.
+</p>
+</blockquote></li>
+
+<li><p>
+Wayne Dyer
+</p>
+
+<blockquote>
+<p>
+If you believe it will work out, you’ll see opportunities. If you believe it won’t, you will see obstacles.
+</p>
+</blockquote></li>
+
+<li><p>
+Anime
+</p>
+
+<blockquote>
+<p>
+The strongest hearts have the most scars.
+</p>
+</blockquote></li>
+</ul>
+
+<hr />
+
+<div class="org-center">
+<p>
+Hopefully with those melifluous thoughts, I hope you are alright ;)
+</p>
+</div>
+]]></content></entry><entry><title>Nix Learning</title><link rel="alternate" type="text/html" href="https://idlip.in/log/nix-learning/" /><id>https://idlip.in/log/nix-learning/</id><published>2023-05-03T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="linux" label="linux" scheme="https://idlip.in/tags/"></category><category term="nixos" label="nixos" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+NixOS is definitely an advanced Linux distro, but it ain't easy to understand overnight or like Archlinux to have easy manual, but it sure has alot on the table. There is whole bunch of families like Nix functional language, Nix package manager&hellip; so and on with the prefix "nix".
+</p>
+
+<p>
+This is really confusing, many hate nix and are not convinced to go long run just because of this difficulty (mess?). To make a simple thing work as expected, you need to go through such a rabbit hole.
+But once you know Nix* (families), everything will make sense, and you would feel bad to go back to old traditional Linux manners.
+</p>
+
+<p>
+These are some of the learning resources, which are rich in content and nonetheless, will be confusing at some point. But engineers do have spared their time in writing these, taking actions, to reach some audience and solve some of the caveats of Nix. So dig through and learn new ;)
+</p>
+<div id="outline-container-nix-learning" class="outline-2">
+<h2 id="nix-learning">nix-learning</h2>
+</div>
+
+<div id="outline-container-uncategorized" class="outline-2">
+<h2 id="uncategorized">Uncategorized</h2>
+<div class="outline-text-2" id="text-uncategorized">
+<ul class="org-ul">
+<li><a href="https://youtu.be/m4sv2M9jRLg">Nix Fundamentals</a> (Video)</li>
+<li><a href="https://stephank.nl/p/2020-06-01-a-nix-primer-by-a-newcomer.html">A Nix terminology primer by a newcomer</a> - Stéphan Kochen</li>
+<li><a href="https://shopify.engineering/what-is-nix">What Is Nix</a></li>
+<li><a href="https://nasirhm.github.io/posts/getting-started-with-nix-introduction/">Getting Started With Nix: Introduction</a> - Nasir Hussain</li>
+<li><a href="https://blog.sulami.xyz/posts/nix-for-developers/">Lightning
+Introduction to Nix for Developers</a> - Robin Schroer</li>
+<li><a href="https://blog.knightsofthelambdacalcul.us/posts/2020-06-20-nix-nixos-thoughts/">Nix(OS)
+Thoughts</a> - ?</li>
+<li><a href="https://fzakaria.com/2020/11/17/on-demand-linked-libraries-for-nix.html">On-demand
+linked libraries for Nix</a> - Farid Zakaria</li>
+<li><a href="https://serokell.io/blog/what-is-nix">What Is Nix and Why You Should
+Use It</a> - ?</li>
+<li><a href="https://push.cx/2018/nixos">NixOS on prgmr and Failing to Learn
+Nix</a> - Peter Bhat Harkins</li>
+<li><a href="https://www.tweag.io/blog/2020-09-10-nix-cas/">Towards a
+content-addressed model for Nix</a> - Théophane Hufschmitt</li>
+<li><a href="https://lucperkins.dev/blog/nix-channel/">The easiest way (I've
+found) to create your own Nix channel</a> - Luc Perkins</li>
+<li><a href="https://www.johnbcoughlin.com/posts/nix-dynamic-linking/">Debugging
+a dynamic linking bug in a Nix project</a> - Jack Coughlin</li>
+<li><a href="https://notes.neeasade.net/adhoc-executable-patching-on-nix.html">adhoc
+executable patching on nixos</a> - ?</li>
+<li><a href="https://maxmcd.com/posts/strategies-for-binary-relocation/">Strategies
+for Binary Relocation In Functional Build Systems</a> - Max McDonnell</li>
+<li><a href="https://christine.website/blog/how-i-start-nix-2020-03-08">How I
+Start: Nix</a> - Christine Dodrill</li>
+<li><a href="https://christine.website/blog/i-was-wrong-about-nix-2020-02-10">I
+was Wrong about Nix</a> - Christine Dodrill</li>
+<li><a href="https://www.infoq.com/articles/configuration-management-with-nix/">Purely
+Functional Configuration Management with Nix and NixOS</a> - Eelco
+Dolstra</li>
+<li><a href="https://bgottlob.com/post/2019-05-29-nix-use-cases/">Basic Use-Cases
+of the Nix Package Manager</a> - Brandon Gottlob</li>
+<li><a href="https://thomazleite.com/posts/development-with-nix-python/">Development
+with Nix: Python</a> - Thomaz Leite</li>
+<li><a href="https://medium.com/dapphub/dapp-tools-and-the-nix-package-manager-c4c692c87310">Dapp
+tools and the Nix package manager</a> - Mikael Brockman</li>
+<li><a href="http://gfxmonk.net/2015/01/03/nixos-and-stateless-deployment.html">NixOS
+and Stateless Deployment</a> - ?</li>
+<li><a href="https://christine.website/blog/nixos-encrypted-secrets-2021-01-20">Encrypted
+Secrets with NixOS</a> - Christine Dodrill</li>
+<li><a href="https://begriffs.com/posts/2016-08-08-intro-to-nixos.html">Purely
+Functional Linux with NixOS</a> - Joe Nelson</li>
+<li><a href="https://www.tweag.io/blog/2018-03-15-bazel-nix/">Nix + Bazel = fully
+reproducible, incremental builds</a> - Mathieu Boespflug, Théophane
+Hufschmitt</li>
+<li><a href="https://zenhack.net/2016/01/24/reflections-on-nixos.html">Reflections
+On NixOS</a> - Ian Denhardt</li>
+<li><a href="https://blog.mayflower.de/5800-Hardening-Compiler-Flags-for-NixOS.html">Hardening
+Compiler Flags for NixOS</a> - Franz Pletz</li>
+<li><a href="https://hugoreeves.com/posts/2019/nix-home/">Your home in Nix
+(dotfile management)</a> - Hugo Reeves</li>
+<li><a href="https://christine.website/blog/nixos-desktop-flow-2020-04-25">My
+NixOS Desktop Flow</a> - Christine Dodrill</li>
+<li><a href="https://tailscale.com/blog/nixos-minecraft/">Tailscale on NixOS: A
+new Minecraft server in ten minutes</a> - Christine Dodrill</li>
+<li><a href="https://terinstock.com/post/2021/01/Setting-up-a-git-server-on-NixOS/">Setting
+up a git server on NixOS</a> - Terin Stock</li>
+<li><a href="https://myme.no/posts/2020-01-26-nixos-for-development.html">NixOS:
+For developers</a> - Martin Myrseth</li>
+<li><a href="https://myme.no/posts/2019-07-01-nixos-into-the-deep-end.html">NixOS:
+Into the deep end</a> - Martin Myrseth</li>
+<li><a href="https://rgoswami.me/posts/ccon-tut-nix/">A Tutorial Introduction to
+Nix</a> - Rohit Goswami</li>
+<li><a href="https://zimbatm.com/benchmark-nixpkgs">Benchmarking nixpkgs
+builds</a> - Jonas Chevalier</li>
+<li><a href="https://zimbatm.com/experiment-recursive-nix">Recursive Nix
+experiment</a> - Jonas Chevalier</li>
+<li><a href="https://zimbatm.com/deploying-k8s-apps-with-kubenix">Deploying
+Kubernetes apps with KubeNix</a> - Jonas Chevalier</li>
+<li><a href="https://github.com/tazjin/nix-1p">Nix - A One Pager</a> - Vincent Ambo</li>
+<li><a href="https://foo-dogsquared.github.io/blog/posts/moving-into-nixos/">Moving
+into NixOS</a> - Gabriel Arazas</li>
+<li><a href="https://www.willghatch.net/blog/2020/06/27/nixos-the-good-the-bad-and-the-ugly/">NixOS:
+the good, the bad, and the ugly</a> - William G Hatch</li>
+<li><a href="https://www.nmattia.com/posts/2018-03-21-nix-reproducible-setup-linux-macos.html">Nix:
+A Reproducible Setup for Linux and macOS</a> - Nicolas Mattia</li>
+<li><a href="https://www.nmattia.com/posts/2019-01-15-easy-peasy-nix-versions.html">Easy
+Peasy Nix Versions</a> - Nicolas Mattia</li>
+<li><a href="https://www.nmattia.com/posts/2019-10-08-runtime-dependencies">Recovering
+Nix derivation attributes of runtime dependencies</a> - Nicolas Mattia</li>
+</ul>
+
+<div class="html" id="orgac4d8bc">
+<p>
+&lt;!&ndash; TODO: add more from their website &ndash;&gt;
+</p>
+
+</div>
+
+<ul class="org-ul">
+<li><a href="https://ops.functionalalgebra.com/nix-by-example/">Nix By
+Example</a> - Susan Potter</li>
+<li><a href="https://ops.functionalalgebra.com/nixops-by-example/">NixOps By
+Example</a> - Susan Potter</li>
+<li><a href="https://ops.functionalalgebra.com/nixos-by-example/">NixOS By
+Example</a> - Susan Potter</li>
+<li><a href="https://ops.functionalalgebra.com/2018/04/18/inspecting-nix-lambda-named-arguments/">Inspecting
+Nix lambda function named arguments</a> - Susan Potter</li>
+</ul>
+
+<div class="html" id="orgc62e7ae">
+<p>
+&lt;!&ndash; TODO: add Tweag Nix flakes &ndash;&gt;
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-overview" class="outline-2">
+<h2 id="overview">Overview</h2>
+<div class="outline-text-2" id="text-overview">
+<ul class="org-ul">
+<li><a href="https://web.archive.org/web/20210123223258/https://ebzzry.io/en/nix/">A
+Gentle Introduction to the Nix Family</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-nix-the-language" class="outline-2">
+<h2 id="nix-the-language">Nix the language</h2>
+<div class="outline-text-2" id="text-nix-the-language">
+<ul class="org-ul">
+<li><a href="https://nixcloud.io/tour">A tour of Nix</a> - an introduction to the
+Nix Programming Language</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-nix-shell" class="outline-2">
+<h2 id="nix-shell">Nix Shell</h2>
+<div class="outline-text-2" id="text-nix-shell">
+<ul class="org-ul">
+<li><a href="https://ghedam.at/15978/an-introduction-to-nix-shell">An
+introduction to nix-shell</a> - Mattia Gheda</li>
+<li><a href="https://fzakaria.com/2020/08/11/caching-your-nix-shell.html">caching
+your nix-shell</a> - Farid Zakaria</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-nix-flakes" class="outline-2">
+<h2 id="nix-flakes">Nix Flakes</h2>
+<div class="outline-text-2" id="text-nix-flakes">
+<ul class="org-ul">
+<li><a href="https://blog.ysndr.de/posts/internals/2021-01-01-flake-ification/">Building
+with Nix Flakes for, eh .. reasons!</a> - Yannik Sander</li>
+<li><a href="https://zimbatm.com/NixFlakes/">Nix Flakes edition</a> - Jonas
+Chevalier</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-experience" class="outline-2">
+<h2 id="experience">Experience</h2>
+<div class="outline-text-2" id="text-experience">
+<ul class="org-ul">
+<li><a href="https://catgirl.ai/log/nixos-experience/">Eight Months of NixOS</a> -
+ash</li>
+<li><a href="https://tech.channable.com/posts/2021-04-09-nix-is-the-ultimate-devops-toolkit.html">Nix
+is the ultimate DevOps toolkit</a> - Ruud van Asseldonk, Reinier Maas,
+Falco Peijnenburg, Fabian Thorand, and Robert Kreuzer</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-language-specific" class="outline-2">
+<h2 id="language-specific">Language Specific</h2>
+<div class="outline-text-2" id="text-language-specific">
+</div>
+</div>
+<div id="outline-container-java" class="outline-2">
+<h2 id="java">Java</h2>
+<div class="outline-text-2" id="text-java">
+<ul class="org-ul">
+<li><a href="https://fzakaria.com/2020/07/20/packaging-a-maven-application-with-nix.html">Packaging
+a Maven application with Nix</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-elixir" class="outline-2">
+<h2 id="elixir">Elixir</h2>
+<div class="outline-text-2" id="text-elixir">
+<ul class="org-ul">
+<li><a href="https://ejpcmac.net/blog/using-nix-in-elixir-projects/">Using Nix in
+Elixir projects</a> - Jean-Philippe</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-c" class="outline-2">
+<h2 id="c">C++</h2>
+<div class="outline-text-2" id="text-c">
+<ul class="org-ul">
+<li><a href="https://blog.galowicz.de/2019/04/17/tutorial_nix_cpp_setup/">Setting
+up a C++ project environment with nix</a> - Jacek Galowicz</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-rust" class="outline-2">
+<h2 id="rust">Rust</h2>
+<div class="outline-text-2" id="text-rust">
+<ul class="org-ul">
+<li>Managing Rust Dependencies with Nix - James Kay
+<ul class="org-ul">
+<li><a href="https://hadean.com/blog/managing-rust-dependencies-with-nix-part-i/">Part
+1</a></li>
+<li><a href="https://hadean.com/blog/managing-rust-dependencies-with-nix-part-ii/">Part
+2</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-series" class="outline-2">
+<h2 id="series">Series</h2>
+<div class="outline-text-2" id="text-series">
+<ul class="org-ul">
+<li>Nix by Example - James Fisher
+<ul class="org-ul">
+<li><a href="https://medium.com/@MrJamesFisher/nix-by-example-a0063a1a4c55">Part
+1: The Nix expression language</a></li>
+</ul></li>
+<li>Ian Henry's <i>How to Learn Nix</i> series
+<ul class="org-ul">
+<li><a href="https://ianthehenry.com/posts/how-to-learn-nix/introduction/">Part
+1: What's all this about?</a></li>
+<li><a href="https://ianthehenry.com/posts/how-to-learn-nix/prior-knowledge/">Part
+2: Prior knowledge</a></li>
+<li><a href="https://ianthehenry.com/posts/how-to-learn-nix/glossary/">Part 3:
+What we talk about when we talk about Nix</a></li>
+<li><a href="https://ianthehenry.com/posts/how-to-learn-nix/quick-start-guide/">Part
+4: Quick starts, full hearts</a></li>
+<li><a href="https://ianthehenry.com/posts/how-to-learn-nix/basic-package-management/">Part
+5: Basic package management</a></li>
+<li><a href="https://ianthehenry.com/posts/how-to-learn-nix/profiles/">Part 6:
+Profiles</a></li>
+<li><a href="https://ianthehenry.com/posts/how-to-learn-nix/garbage-collection/">Part
+7: Garbage collection</a></li>
+<li><a href="https://ianthehenry.com/posts/how-to-learn-nix/channels/">Part 8:
+Channels</a></li>
+<li><a href="https://ianthehenry.com/posts/how-to-learn-nix/sharing/">Part 9:
+Learning to share</a></li>
+<li><a href="https://ianthehenry.com/posts/how-to-learn-nix/my-first-derivation/">Part
+10: My first derivation</a></li>
+<li><a href="https://ianthehenry.com/posts/how-to-learn-nix/okay-my-actual-first-derivation/">Part
+11: Okay my actual first derivation</a></li>
+<li><a href="https://ianthehenry.com/posts/how-to-learn-nix/nix-language/">Part
+12: The Nix expression language</a></li>
+<li><a href="https://ianthehenry.com/posts/how-to-learn-nix/derivations/">Part
+13: Derivations</a></li>
+<li><a href="https://ianthehenry.com/posts/how-to-learn-nix/built-in-functions/">Part
+14: Built-in Functions</a></li>
+<li><a href="https://ianthehenry.com/posts/how-to-learn-nix/advanced-topics/">Part
+15: Advanced Topics</a></li>
+<li><a href="https://ianthehenry.com/posts/how-to-learn-nix/command-reference/">Part
+16: Command Reference</a></li>
+<li><a href="https://ianthehenry.com/posts/how-to-learn-nix/configuration/">Part
+17: Configuration</a></li>
+<li><a href="https://ianthehenry.com/posts/how-to-learn-nix/nix-manual-reflection/">Part
+18: So I read the manual huh</a></li>
+<li><a href="https://ianthehenry.com/posts/how-to-learn-nix/switching-from-homebrew-to-nix/">Part
+19: Switching from Homebrew to Nix</a></li>
+<li><a href="https://ianthehenry.com/posts/how-to-learn-nix/my-first-nix-bug/">Part
+20: My first Nix bug</a></li>
+<li><a href="https://ianthehenry.com/posts/how-to-learn-nix/my-first-package-upgrade/">Part
+21: My first package upgrade</a></li>
+<li><a href="https://ianthehenry.com/posts/how-to-learn-nix/declarative-user-environment/">Part
+22: Setting up a declarative user environment</a></li>
+<li><a href="https://ianthehenry.com/posts/how-to-learn-nix/how-to-learn-nixpkgs/">Part
+23: How to learn Nixpkgs</a></li>
+<li><a href="https://ianthehenry.com/posts/how-to-learn-nix/overlays/">Part 24:
+Overlays</a></li>
+<li><a href="https://ianthehenry.com/posts/how-to-learn-nix/overriding/">Part
+25: Overriding</a></li>
+</ul></li>
+</ul>
+
+<hr />
+
+<p>
+These links are extracted from humancalico's git repo (<a href="https://github.com/humancalico/nix-learning">https://github.com/humancalico/nix-learning</a>).
+</p>
+
+<div class="org-center">
+<p>
+With that sorted, I hope learning becomes good ;)
+</p>
+</div>
+</div>
+</div>
+]]></content></entry><entry><title>FOSS : On Droid</title><link rel="alternate" type="text/html" href="https://idlip.in/log/foss-droid/" /><id>https://idlip.in/log/foss-droid/</id><published>2023-04-25T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="fossdroid" label="fossdroid" scheme="https://idlip.in/tags/"></category><category term="android" label="android" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+As we know, Android is widely popular OS for many phone. But these days its all filled with junks and bloated apps, these are to say so called <b>"Popular Android Apps"</b> or <b>"Trending Apps"</b>. The reason simply would be "everyone in my circle uses it" or "I use it because <span class="underline">they</span> use it".
+</p>
+
+<p>
+But surely you are not giving yourself some privacy or <b>space</b> that you need for your own <b>personal phone</b>.
+I'm talking about using Free/Libre and Open Source (FOSS) Apps. Free doesn't mean by price, Free means <b>Freedom</b>. Freedom that comes with :
+</p>
+<ul class="org-ul">
+<li>No Trackers.</li>
+<li>No Ads.</li>
+<li>Minimal permission.</li>
+<li>Has customization to users need.</li>
+<li>No Restrictions.</li>
+</ul>
+
+<p>
+These can be achieved in this modern time, by Discovering and using FOSS Apps, the best place being <a href="https://f-droid.org">F-droid</a>  or <a href="https://libreddit.kavin.rocks/r/fossdroid">r/fossdroid</a>.
+</p>
+
+<p>
+There are pretty much all apps under FOSS area for every purpose, they are good looking with <b>Modern UI</b>, <b>Lots of Customizations</b> and <b>friendly with Battery</b>.
+</p>
+
+<p>
+I happened to search for book and novel reader and found very good apps there, like QuickNovel.
+There is a Manga reader and lots more for every purpose.
+</p>
+
+<p>
+I exclusively use every apps from F-droid, because they are great.
+You should also use it, as you might find something interesting and surely, gets Surprised; and say in your head, <b><i>Gosh I should have known this before</i></b>.
+</p>
+
+<hr />
+
+<p>
+Some of the cool apps I use everyday :
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Class</th>
+<th scope="col" class="org-left">Apps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Launcher</td>
+<td class="org-left">Kvæsitso (<a href="https://apt.izzysoft.de/fdroid/index/apk/de.mm20.launcher2.release">izzydroid</a>, <a href="https://github.com/MM2-0/Kvaesitso">git</a>)</td>
+</tr>
+
+<tr>
+<td class="org-left">F-droid Client</td>
+<td class="org-left">Neo Store (<a href="https://f-droid.org/en/packages/com.machiav3lli.fdroid/">fdroid</a>, <a href="https://github.com/NeoApplications/Neo-Store">git</a>)</td>
+</tr>
+
+<tr>
+<td class="org-left">Browser</td>
+<td class="org-left">Mull (<a href="https://f-droid.org/en/packages/us.spotco.fennec_dos/">fdroid</a>, <a href="https://gitlab.com/divested-mobile/mull-fenix">git</a>)</td>
+</tr>
+
+<tr>
+<td class="org-left">Rss Reader</td>
+<td class="org-left">Read You (<a href="https://f-droid.org/en/packages/me.ash.reader/">fdroid</a>, <a href="https://github.com/Ashinch/ReadYou">git</a>)</td>
+</tr>
+
+<tr>
+<td class="org-left">YouTube</td>
+<td class="org-left">LibreTube (<a href="https://f-droid.org/en/packages/com.github.libretube/">fdroid</a>, <a href="https://github.com/libre-tube/LibreTube">git</a>)</td>
+</tr>
+
+<tr>
+<td class="org-left">PDF/Ebook Reader</td>
+<td class="org-left">Librera Reader (<a href="https://f-droid.org/en/packages/com.foobnix.pro.pdf.reader/">fdroid</a>, <a href="https://github.com/foobnix/LibreraReader">git</a>)</td>
+</tr>
+
+<tr>
+<td class="org-left">Manga Reader</td>
+<td class="org-left">Tachiyomi (<a href="https://f-droid.org/en/packages/eu.kanade.tachiyomi/">fdroid</a>, <a href="https://github.com/tachiyomiorg/tachiyomi">git</a>)</td>
+</tr>
+
+<tr>
+<td class="org-left">Password Manager</td>
+<td class="org-left">KeePassDX (<a href="https://f-droid.org/en/packages/com.kunzisoft.keepass.libre/">fdroid</a>, <a href="https://github.com/Kunzisoft/KeePassDX">git</a>)</td>
+</tr>
+
+<tr>
+<td class="org-left">Novel Reader</td>
+<td class="org-left">QuickNovel (<a href="https://apt.izzysoft.de/fdroid/index/apk/com.lagradost.quicknovel">izzydroid</a>, <a href="https://github.com/LagradOst/QuickNovel">git</a>)</td>
+</tr>
+
+<tr>
+<td class="org-left">Keyboard</td>
+<td class="org-left">Unexpected Keyboard (<a href="https://f-droid.org/en/packages/juloo.keyboard2/">fdroid</a>, <a href="https://github.com/Julow/Unexpected-Keyboard">git</a>)</td>
+</tr>
+
+<tr>
+<td class="org-left">Media Player</td>
+<td class="org-left">VLC (<a href="https://f-droid.org/en/packages/org.videolan.vlc/">fdroid</a>, <a href="https://code.videolan.org/videolan/vlc-android">git</a>)</td>
+</tr>
+
+<tr>
+<td class="org-left">Gallery + Calendar (many more)</td>
+<td class="org-left">Simple Tools Suite (<a href="https://search.f-droid.org/?lang=en&amp;q=simple+tools">fdroid</a>, <a href="https://github.com/SimpleMobileTools">git</a>, <a href="https://simplemobiletools.com">site</a>)</td>
+</tr>
+
+<tr>
+<td class="org-left">Note Taking</td>
+<td class="org-left">Orgzly (<a href="https://f-droid.org/en/packages/com.orgzly/">fdroid</a>, <a href="https://github.com/orgzly/orgzly-android">git</a>)</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<div class="org-center">
+<p>
+With that fossed, I hope your phone gets a new life and finally breathes alive!
+</p>
+</div>
+]]></content></entry><entry><title>Cognizance</title><link rel="alternate" type="text/html" href="https://idlip.in/log/cognizance-quotes/" /><id>https://idlip.in/log/cognizance-quotes/</id><published>2023-04-22T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><category term="quotes" label="quotes" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+Welcome to next snippet of Quotes.
+</p>
+
+<p>
+Hope so, it is advising enough to make your day well ;)
+</p>
+
+<hr />
+
+<ul class="org-ul">
+<li>Psychology Reads</li>
+</ul>
+
+<blockquote>
+<p>
+People Aren't Better Lie Detectors (50-60%) in More Realistic Settings
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+Nothing in life is as important as you think it is, while you are thinking about it
+</p>
+</blockquote>
+
+<ul class="org-ul">
+<li><p>
+Herm Albright
+</p>
+
+<blockquote>
+<p>
+A positive attitude may not solve all your problems, but it will annoy enough people to make it worth the effort.
+</p>
+</blockquote></li>
+
+<li><p>
+Bret Harte
+</p>
+
+<blockquote>
+<p>
+The only sure thing about luck is that it will change.
+</p>
+</blockquote></li>
+
+<li><p>
+Philip G. Hammerton
+</p>
+
+<blockquote>
+<p>
+Have you ever observed that we pay much more attention to a wise passage when it is quoted than when we read it in the original author?
+</p>
+</blockquote></li>
+
+<li><p>
+Woodrow Wilson
+</p>
+
+<blockquote>
+<p>
+The man who is swimming against the stream knows the strength of it.
+</p>
+</blockquote></li>
+</ul>
+
+
+<hr />
+
+<div class="org-center">
+<p>
+With these sweet little pies, I hope it does make your day alive ;)
+</p>
+</div>
+]]></content></entry><entry><title>Linux : The Matrix</title><link rel="alternate" type="text/html" href="https://idlip.in/log/linux-cheatsheet/" /><id>https://idlip.in/log/linux-cheatsheet/</id><published>2023-04-12T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="terminal" label="terminal" scheme="https://idlip.in/tags/"></category><category term="minimal" label="minimal" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+There are tons of linux command line cheatsheet or guides.
+</p>
+
+<p>
+Here are some of the best reads, I suggest you to go throught each of it, <b>It's a gem</b>.
+</p>
+
+
+<ul class="org-ul">
+<li><a href="https://github.com/jlevy/the-art-of-command-line">The Art of Command Line</a> — notes and tips on using the command-line, suitable for both beginners and experienced users.</li>
+<li><a href="https://www.commandlinefu.com/commands/browse/sort-by-votes">commandlinefu</a> — command-line gems, includes a handy search feature.</li>
+<li><a href="https://github.com/tldr-pages/tldr">tldr</a> — collection of community-maintained help pages for command-line tools.</li>
+<li><a href="https://explainshell.com/">explainshell</a> — write down a command-line to see the help text that matches each argument.</li>
+<li><a href="http://www.compciv.org/unix-tools/">General purpose command-line tools</a> — examples for most common usecases.</li>
+<li><a href="https://devmanual.gentoo.org/tools-reference/bash/index.html">Bash reference cheatsheet</a> — nicely formatted and explained well.</li>
+<li><a href="https://devhints.io/bash">Bash scripting cheatsheet</a> — quick reference to getting started with Bash scripting.</li>
+</ul>
+
+<hr />
+
+<div class="org-center">
+<p>
+<b>With that <code>coded</code>, I hope you enjoy the terminal. Unleash the Matrix</b>.
+</p>
+</div>
+]]></content></entry><entry><title>Emacs Efficiency</title><link rel="alternate" type="text/html" href="https://idlip.in/log/emacs-keys/" /><id>https://idlip.in/log/emacs-keys/</id><published>2023-03-29T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="cheatsheet" label="cheatsheet" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+This is straight away from <a href="https://github.com/VernonGrant/discovering-emacs">VernonGrant</a> who hosts a podcast for Emacs called "<a href="https://www.discovering-emacs.com/">Discovering-Emacs</a>".
+It's a great and has very much professional vibes, the explanations are Crisp and Clear!
+I suggest you to check out, he even has made <a href="https://www.youtube.com/@discoveringemacs">YouTube channel</a> for it.
+</p>
+
+<p>
+I have removed some of the common bindings from this table, I have retained some unique one's which isn't discovered generally. I guess that is why the name is made (lol)
+</p>
+
+<p>
+I just wanted to have a cheatsheet for it, so I decided to leave it as a post here.
+</p>
+
+<p>
+You can checkout the source here ⟾ <a href="https://github.com/VernonGrant/emacs-keyboard-shortcuts">https://github.com/VernonGrant/emacs-keyboard-shortcuts</a>
+</p>
+
+<ul class="org-ul">
+<li><a href="https://github.com/VernonGrant/discovering-emacs">https://github.com/VernonGrant/discovering-emacs</a></li>
+</ul>
+]]></content></entry><entry><title>Insightful Quotes</title><link rel="alternate" type="text/html" href="https://idlip.in/log/insight-quotes/" /><id>https://idlip.in/log/insight-quotes/</id><published>2023-03-29T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><category term="quotes" label="quotes" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+I will be making few snippets on few quotes which impressed me or made me laugh for the day!
+</p>
+
+<p>
+Hope so, it is insightful enough for you also.
+</p>
+
+<hr />
+
+
+<ul class="org-ul">
+<li>Self quote</li>
+</ul>
+
+<blockquote>
+<p>
+Don't just read, Think - Research and Understand!
+</p>
+</blockquote>
+
+<ul class="org-ul">
+<li><p>
+Walt Kelly
+</p>
+
+<blockquote>
+<p>
+Every burden is a blessing.
+</p>
+</blockquote></li>
+
+<li><p>
+Gustave Flaubert
+</p>
+
+<blockquote>
+<p>
+The art of writing is the art of discovering what you believe.
+</p>
+</blockquote></li>
+
+<li><p>
+Samuel Butlet
+</p>
+
+<blockquote>
+<p>
+Let us be grateful to the mirror for revealing to us our appearance only.
+</p>
+</blockquote></li>
+
+<li><p>
+Joseph Cossman
+</p>
+
+<blockquote>
+<p>
+Obstacles are things a person sees when he takes his eyes off his goal.
+</p>
+</blockquote></li>
+
+<li><p>
+Henny Youngman
+</p>
+
+<blockquote>
+<p>
+I told the doctor I broke my leg in two places. He told me to quit going to those places.
+</p>
+</blockquote></li>
+
+<li><p>
+Barabara Tober
+</p>
+
+<blockquote>
+<p>
+Traditions are group efforts to keep the unexpected from happening.
+</p>
+</blockquote></li>
+
+<li><p>
+Frank Wilczek
+</p>
+
+<blockquote>
+<p>
+In physics, you don't have to go around making trouble for yourself - nature does it for you.
+</p>
+</blockquote></li>
+
+<li><p>
+David Coblitz
+</p>
+
+<blockquote>
+<p>
+A committee can make a decision that is dumber than any of its members.
+</p>
+</blockquote></li>
+</ul>
+
+
+<hr />
+
+
+<div class="org-center">
+<p>
+With that <b>"quoted"</b>, I hope you have a great day!
+</p>
+
+<p>
+Visit the snippets again!
+</p>
+</div>
+]]></content></entry><entry><title>Imposter Syndrome : Formula for Success</title><link rel="alternate" type="text/html" href="https://idlip.in/log/imposter-syndrome/" /><id>https://idlip.in/log/imposter-syndrome/</id><published>2023-03-24T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="psychology" label="psychology" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<ul class="org-ul">
+<li>Have you ever felt a fear of losing or doubt your own ability?</li>
+<li>Have you felt unworthy, lost your self esteem due to a mistake?</li>
+<li>Are you feeling constant fear of being discovered rather than being proud?</li>
+</ul>
+
+<p>
+The matter is, is these sound true or happening at some moment, let me condition it as <b>"Imposted Syndrome"</b>.
+</p>
+
+<p>
+You might remember the word "Imposter" from the most popular mobile game during lockdown, <b>Among us</b> (<a href="https://www.innersloth.com/games/among-us/">site</a>), yeah as the name suggests it means one who deceives.
+</p>
+
+<p>
+But imposter syndrome is seriously for real, a condition, which people do experience in their life. They don't usually realize or find its symptoms as it is in itself a <span class="underline">negative feeling</span>, provoking <a href="https://www.psychologytoday.com/intl/basics/anxiety">anxiety</a> and <a href="https://www.psychologytoday.com/intl/basics/fear">fear</a>.
+</p>
+
+
+<ul class="org-ul">
+<li>People with imposter syndrome feel inauthentic, question their own ability to be</li>
+</ul>
+<p>
+successful, and are convinced that they do not belong in the roles they stand, even
+when they experience success.
+</p>
+
+<p>
+I myself have felt this, when I was starting out journey to learn new course (say programming language), I felt it was oceanic knowledge where I only had a boat.
+</p>
+<div id="outline-container-ways-to-stop-imposter-syndrome" class="outline-2">
+<h2 id="ways-to-stop-imposter-syndrome">Ways to stop Imposter Syndrome</h2>
+<div class="outline-text-2" id="text-org18e31e9">
+<blockquote>
+<p>
+<i>Where there is a will, there is a way.</i>
+</p>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-trust-the-process" class="outline-2">
+<h2 id="trust-the-process">Trust the Process</h2>
+<div class="outline-text-2" id="text-org9cbd2e2">
+<p>
+Reflect on your actions, see the world praising you. Instead of listening to the negative feeling from your head, listen to the feedback from others.
+</p>
+
+<ul class="org-ul">
+<li>Others believe in you</li>
+<li>You don't believe in yourself</li>
+<li>Yet you believe yourself instead of them</li>
+</ul>
+
+<p>
+If you doubt yourself, shouldn't you also doubt your judgment of yourself?
+</p>
+</div>
+</div>
+<div id="outline-container-look-for-evidence" class="outline-2">
+<h2 id="look-for-evidence">Look for Evidence</h2>
+<div class="outline-text-2" id="text-org28d8cf4">
+<p>
+Fine you feel it that way, see if you can find evidence and measures. Think of some example where you have made some positive impact on others, how much change have you brought them.
+</p>
+</div>
+</div>
+<div id="outline-container-remember-the-journey" class="outline-2">
+<h2 id="remember-the-journey">Remember the Journey</h2>
+<div class="outline-text-2" id="text-org0559824">
+<p>
+Look back at the steps you have taken, how was the process of learning from scratch, rock-bottom.
+</p>
+
+<p>
+<i>'It will get better and you'll be more proud of yourself.'</i>
+</p>
+</div>
+</div>
+<div id="outline-container-turn-the-tables" class="outline-2">
+<h2 id="turn-the-tables">Turn the Tables</h2>
+<div class="outline-text-2" id="text-org048da08">
+<p>
+Make it a strenth, refrain from doubts. Those with imposter syndrome are more likely to say "I don't know" when they don't know. This is an advantage. Overconfident people assume they have all the answers, even when they don't.
+</p>
+
+<p>
+Humility, uncertainty, and self-doubt are part of the learning process. The key is to believe in your ability to learn.
+</p>
+</div>
+</div>
+<div id="outline-container-suggested-reads" class="outline-2">
+<h2 id="suggested-reads">Suggested Reads</h2>
+<div class="outline-text-2" id="text-orgc0d773d">
+<p>
+If you want to explore more on this concepts :
+</p>
+
+<ol class="org-ol">
+<li><a href="https://www.psychologytoday.com/intl/blog/all-kids-thriving/202302/the-power-of-belonging">The Power of Belonging</a></li>
+
+<li><a href="https://www.psychologytoday.com/intl/blog/on-your-way-with-adhd/202302/the-connection-between-adhd-and-imposter-syndrome">Connection between ADHD and Imposter Syndrome</a></li>
+</ol>
+</div>
+</div>
+]]></content></entry><entry><title>RSS: The better Internet</title><link rel="alternate" type="text/html" href="https://idlip.in/log/rss-web/" /><id>https://idlip.in/log/rss-web/</id><published>2023-03-23T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><category term="news" label="news" scheme="https://idlip.in/tags/"></category><category term="rss" label="rss" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<div id="outline-container-cheesy-internet" class="outline-2">
+<h2 id="cheesy-internet">Cheesy Internet</h2>
+<div class="outline-text-2" id="text-org63da537">
+<p>
+I don't have to say this, the Internet is hella bloated.. Junks are everywhere, nobody knows that they read shit, they are watching shits whole time.
+</p>
+
+<p>
+Just do a test, How many popups have you closed today, How many cookies (web) have you eaten, How many captchas did you solve, How many minutes did you wait to skip an ad just to watch a video&hellip; Even worse, ads sponsors are embedded within a video (So cruel and harsh world)
+<i>It goes on</i>.
+</p>
+
+<p>
+Internet and digital software's are getting so much bloated, people (normies) have forgotten Unix or say 'minimalism'. People are upgrading RAM like anything, 8GB ain't enough it-seems for them. Here, I do everything with just 4GB RAM.
+People these days all need ready-made/ready-to-work  stuffs, I wonder how do they even watch DIY channels on YouTube.
+</p>
+</div>
+</div>
+<div id="outline-container-the-hero" class="outline-2">
+<h2 id="the-hero">The Hero</h2>
+<div class="outline-text-2" id="text-org597aee6">
+<p>
+Rss stands for <b>Really Simple Syndication</b>, It is a classic on consuming web as supposedly it was built for. Today its all crappy <b>JavaScript</b> (a big bloat of cheese).
+</p>
+
+<p>
+People literally have forgotten to read and embrace the text, everyone wants; YouTube tutorials, or some designed way to make them understand.
+Shit, its a no joke, that's why AI have evolved these days.
+Make our life easy?  Lol
+</p>
+
+<p>
+It can easily fetch content from web and easily showcase the actual content only. If that content is valuable, we should value our way to taking it.
+</p>
+
+<p>
+Actually many of you might know famous news reader called <b>Feedly</b>, it is based on Rss system under-the-hood.
+</p>
+</div>
+</div>
+<div id="outline-container-feed-readers" class="outline-2">
+<h2 id="feed-readers">Feed Readers</h2>
+<div class="outline-text-2" id="text-org11c902c">
+<p>
+If you use window there are famous readers like fluent reader.
+On Linux you get <a href="https://newsboat.org/">newsboat</a> (terminal lovers), I use <a href="https://github.com/skeeto/elfeed">elfeed</a> (Emacs way).
+</p>
+
+<p>
+For GUI Linux user you get : (Install with your system's package manager or use AppImage/Flathub)
+</p>
+
+<ul class="org-ul">
+<li><a href="https://github.com/lwindolf/liferea/">Liferea</a></li>
+<li><a href="https://github.com/yang991178/fluent-reader">Fluent-reader</a></li>
+<li><a href="https://www.thunderbird.net/en-US">Thunderbird</a> (Email client + Rss)</li>
+<li><a href="https://gitlab.com/news-flash/news_flash_gtk">NewsFlash</a></li>
+<li><a href="https://apps.kde.org/en/akregator">Kde's Akregator</a></li>
+</ul>
+
+<p>
+Watching YouTube contents is whole lot better in Mpv with sponsorblock (It gives seamless content joy)
+</p>
+
+
+<p>
+Actually elfeed integrates so well with Emacs, I don't have to learn new stuffs for another application or keyboard shortcuts.
+</p>
+
+<p>
+That's one of the reason I call <b>Emacs as the GOAT-E (Editor)</b>.
+</p>
+
+<p>
+I will try to expand more bits on rss feeds value by making a detailed post.
+</p>
+</div>
+</div>
+]]></content></entry><entry><title>NixOS : Reproducible - Immutable</title><link rel="alternate" type="text/html" href="https://idlip.in/log/try-nixos/" /><id>https://idlip.in/log/try-nixos/</id><published>2023-03-23T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="nixos" label="nixos" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<hr />
+
+<p>
+Introduction part, you would better have read it on official nixos site (<a href="https://nixos.org">https://nixos.org</a>)
+</p>
+<div id="outline-container-should-you-try-nixos" class="outline-2">
+<h2 id="should-you-try-nixos">"Should you try NixOS?" ❄️</h2>
+<div class="outline-text-2" id="text-org37a73fc">
+<p>
+Here's an answer from a non-programmer, who just browses and watches media.
+Just don't, if you are looking for small benefit. <b>Don't!</b>
+ regret having hard time to figure out petty things, again forget about error, you cannot even search in web.
+</p>
+
+<p>
+But, if you have decided, go with it. According to me (non-programmer), these points are good to consider NixOS
+</p>
+<ul class="org-ul">
+<li>You use Emacs (lol), <b>Emacs</b> ❤️  <b>Nix</b> is Match made in Heaven.</li>
+<li>You want to declare stuffs and get same output, and forget what all you setup, cause its all declared in config.</li>
+<li>You want an isolated environments (shell) to do some stuffs without involving whole system.</li>
+<li>You want to stop troubleshooting and breaking update and are lazy to backup, and want to rollback with ease like with just a reboot.</li>
+<li>You want to say I use <b>Nixos Btw</b>.</li>
+<li>You don't want to worry about breaking your system nor fix something when you are updating system.</li>
+<li>You are willing to learn (advanced) things and fine with steep learning curve.</li>
+</ul>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-how-i-manage-my-system" class="outline-2">
+<h2 id="how-i-manage-my-system">How I manage my system 🌲</h2>
+<div class="outline-text-2" id="text-orga85d7b2">
+<p>
+I manage my whole system with single org file. Its easy and pretty handy. You can read that file here <b>↬</b> <a href="https://github.com/idlip/d-nix/blob/onepiece/d-setup.org">d-setup.org</a> , its both self documenting and has all source code blocks.
+</p>
+
+<p>
+Another key feature in my setup is, every file i tangle is at <b>read-only mode</b>. So generally we can avoid editing/touching them. Thus, every action has to be made in <b>d-setup.org</b> only.
+</p>
+
+<p>
+Also, I have made files to be <b>symlink</b>, so i can edit them without requiring to rebuild whole thing!
+</p>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-credits" class="outline-2">
+<h2 id="credits">Credits 🎖️</h2>
+<div class="outline-text-2" id="text-org7736060">
+<p>
+These configs were the inspiration and helped to build this way.
+</p>
+
+<p>
+I thank them sincerely.
+</p>
+
+<p>
+<a href="https://github.com/Iron-Shark/Technonomicon">Iron Shark</a> <b>⟹</b> Made migrating to Single org-file config very easy.
+</p>
+
+<p>
+<a href="https://github.com/sioodmy/dotfiles">Sioodmy</a> <b>⟹</b> First config which I understand thoroughly and modified based on this.
+</p>
+
+<hr />
+</div>
+</div>
+]]></content></entry><entry><title>Emacs is OP</title><link rel="alternate" type="text/html" href="https://idlip.in/log/emacs-goat/" /><id>https://idlip.in/log/emacs-goat/</id><published>2023-03-22T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="vim" label="vim" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+Before anyone shouts vim, let me <code>:q!</code>
+I was a vimmer for a year, I played and had a good basic config. Even after an year, I didn't grasp the full potential of vim, it was just handy to use <code>hjkl</code> to move around.
+</p>
+
+<p>
+But When I'm learning Emacs, the experience is immense, it defines how things are meant and the legacy of Emacs for 40 years, is not a joke.
+</p>
+
+<p>
+I cannot just rant to make people ditch vim for Emacs, But once you understand you will realize, that is why people went and made <code>evil</code> mode to emulate Vi layer (vim 100%).
+</p>
+
+<p>
+Now they get the <b>Best</b> of both the World!
+</p>
+
+<p>
+Nonetheless, Emacs is the <b>GOAT</b> !
+</p>
+]]></content></entry><entry><title>Journey Begins</title><link rel="alternate" type="text/html" href="https://idlip.in/log/blogging-journey/" /><id>https://idlip.in/log/blogging-journey/</id><published>2023-03-21T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+I have almost set my first static website.
+From here my creativity goes public to the world.
+</p>
+
+<p>
+Its just a small thing, but my passion thanks me for this.
+</p>
+
+<p>
+Its time.. time to begin the chapter!
+</p>
+]]></content></entry><entry><title>Tools that are Best!</title><link rel="alternate" type="text/html" href="https://idlip.in/log/tools-readme/" /><id>https://idlip.in/log/tools-readme/</id><published>2023-03-17T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="terminal" label="terminal" scheme="https://idlip.in/tags/"></category><category term="linux" label="linux" scheme="https://idlip.in/tags/"></category><category term="minimal" label="minimal" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+Note: This is very outdated from when it was written. Please check <a href="https://github.com/idlip/d-nix">current config</a> file or <a href="/uses">Uses</a> for updated list.
+</p>
+
+<hr />
+<div id="outline-container-utilities-that-are-best" class="outline-2">
+<h2 id="utilities-that-are-best">Utilities that are Best! 🌟</h2>
+<div class="outline-text-2" id="text-orgf17ed94">
+<hr />
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Class</th>
+<th scope="col" class="org-left">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Window Manager</td>
+<td class="org-left"><a href="https://hyprland.org/">Hyprland</a> 🌸</td>
+</tr>
+
+<tr>
+<td class="org-left">Text Editor</td>
+<td class="org-left"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 💮</td>
+</tr>
+
+<tr>
+<td class="org-left">Gtk Theme</td>
+<td class="org-left"><a href="https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme">Gruvbox</a> / <a href="https://github.com/vinceliuice/Orchis-theme">Orchis</a> 🎨</td>
+</tr>
+
+<tr>
+<td class="org-left">Font</td>
+<td class="org-left"><a href="https://tosche.net/fonts/comic-code">Comic Code</a> / <a href="https://github.com/dtinth/comic-mono-font">Comic Mono</a> / <a href="https://github.com/tonsky/FiraCode">Fira Code</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Pdf Reader</td>
+<td class="org-left"><a href="https://github.com/ahrm/sioyek">Sioyek</a> 📔 (ditch zathura)</td>
+</tr>
+
+<tr>
+<td class="org-left">Media Player</td>
+<td class="org-left"><a href="https://mpv.io">MPV!</a> 🎬 (its MVP too)</td>
+</tr>
+
+<tr>
+<td class="org-left">Image Viewer</td>
+<td class="org-left"><a href="https://sr.ht/~exec64/imv/">Imv</a> 🖼️</td>
+</tr>
+
+<tr>
+<td class="org-left">RSS Reader</td>
+<td class="org-left"><a href="https://github.com/skeeto/elfeed">Elfeed</a> 📰 (Again, Emacs)</td>
+</tr>
+
+<tr>
+<td class="org-left">Music Player</td>
+<td class="org-left"><a href="https://github.com/ncmpcpp/ncmpcpp">Ncmpcpp</a> or <a href="https://github.com//mingus">Mingus in Emacs</a> 🎶</td>
+</tr>
+
+<tr>
+<td class="org-left">Terminal</td>
+<td class="org-left"><a href="https://codeberg.org/dnkl/foot">Foot</a> via footclient ⚽</td>
+</tr>
+
+<tr>
+<td class="org-left">Menu/Launcher</td>
+<td class="org-left"><a href="https://github.com/davatorium/rofi">Rofi</a> 🚀</td>
+</tr>
+
+<tr>
+<td class="org-left">Notification</td>
+<td class="org-left"><a href="https://github.com/dunst/dunst">Dunst</a>  🛎️</td>
+</tr>
+
+<tr>
+<td class="org-left">Shell</td>
+<td class="org-left"><a href="https://zsh.org">Zshell</a> with <a href="https://starship.rs">Starship</a> 🔰</td>
+</tr>
+
+<tr>
+<td class="org-left">Status Bar</td>
+<td class="org-left"><a href="https://github.com/Alexays/Waybar">Waybar</a>  🍥</td>
+</tr>
+
+<tr>
+<td class="org-left">Favourite Color-Schemes</td>
+<td class="org-left">Modus-Vivendi + Gruvbox</td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p>
+Rest all other stuffs I do in Emacs, tbh I could do everything in Emacs lol.
+</p>
+</blockquote>
+
+
+<p>
+Feel free to comment down and ask me doubts or about some improvements, you wanna inform! I will be glad.
+</p>
+</div>
+</div>
+]]></content></entry><entry><title>My Linux Journey</title><link rel="alternate" type="text/html" href="https://idlip.in/log/linux-journey/" /><id>https://idlip.in/log/linux-journey/</id><published>2023-03-10T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="linux" label="linux" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+<b>Small info/log on my linux journey and my experience.</b>
+</p>
+
+<p>
+<i>If you are reading this, I encourage you to write blogs like this and have it in your git repo. Don't forget to tag or inform me, I'd be glad to read your journey too!</i>
+</p>
+
+<hr />
+
+<p>
+Linux is not widely recommended or discussed topic among real life friends or circle, every system comes pre-installed with win-dows, and its no big surprise people don't have a feel towards their usage of OS.
+</p>
+
+<p>
+Not many people update their system, not many try to explore Alternative softwares, they stick very much to the default out-of-the-box Application. Tbh if you deep dive and understand windows, it is total crap, <b>Obnoxious</b>.
+</p>
+
+<p>
+My reason to switch over to Linux was simple as other had :
+</p>
+<ul class="org-ul">
+<li>No Freedom</li>
+<li>Slow win-dows</li>
+<li>Cannot even run the browser properly</li>
+<li>Cannot even do multitasking efficiently</li>
+<li>The bloatware crap were too much</li>
+<li>Updates are like <b>eternal sleep</b> (No-sense updates)</li>
+</ul>
+
+<p>
+My linux journey was from Linux Mint &gt; EndeavourOS &gt; Arch Linux &gt; and now NixOS.
+</p>
+<div id="outline-container-the-embark" class="outline-2">
+<h2 id="the-embark">The Embark</h2>
+<div class="outline-text-2" id="text-orga56b691">
+<p>
+I started to explore some YouTube video on Linux (as a normie at that time), soon I got familiar with good explanation, thankfully CTT had made an Linux Mint playlist and it helped to installing the first and the best <b>Beginner Distro</b>, the <b>Linux Mint</b>.
+</p>
+
+<p>
+The gain and experience was <b>Ultimate</b>. Loved it, felt the Freedom, felt the deeper understanding of a <b>real System</b>.
+</p>
+
+<p>
+I choose the flagship Cinnamon DE and it was very comfortable.
+</p>
+
+<p>
+After few months, I finally stumbled upon a drawback here, it was stable packages (old package versions).
+</p>
+
+<p>
+That is when I saw the concept of <b>Rolling release</b>, at that time <b>EndeavourOS</b> was the flavor of Linux distro at that time, peaked the distrowatch and all. So guess what, I installed EvndeavourOs and expanded more love towards terminal and latest packages.
+</p>
+
+<p>
+Soon i felt i did not needed what all EndeavourOS ships, I want custom or DIY (something i take control of), then i realized, EOS was arch-based, so guess again, went with the great Independent Arch linux.
+</p>
+
+<p>
+Boom, the best linux journey (learning), I only mean it for learning, other than that Arch is just cool kids bag.
+</p>
+
+<p>
+Finally, now with some other jolt of distro trend, I stumbled the name <b>"NixOS"</b>.
+It is somewhat reinventing the wheel, but it is so different that I'd hate to even say it as a Linux distro, It stands unique with linux distros.
+</p>
+
+<p>
+Tbh I loved LM and Arch alot, I was a devotee to Arch too, and I hated Nix when I tried, cause things were weird.
+</p>
+<ul class="org-ul">
+<li>You won't know where to start nor what to refer</li>
+<li>Flakes or home-manager, How to understand?</li>
+<li>Do nix-env or rebuild all the time?</li>
+<li><p>
+What files to edit to achieve same setup as my previous distro?
+</p>
+
+<p>
+These were all the things that I hated and was frustrated about, there was still many things that felt hard.
+I did leave Nix and install Arch few times back and forth, I was debating with myself and id my own research all over Internet.
+</p>
+
+<p>
+That is when I thought nix lacked Documentation or good YouTuber to speak of, I really wish one of them could explain and make it their distro to explain timely on things.
+</p>
+
+<p>
+Fine, somehow forced myself and came a long way of setting up Good working nixos config, now I'm on flakes.
+</p>
+
+<p>
+Nix is great if it works as expected or if we make it work, but, if I get stuck or the issue goes for days that is when I really hate Nix, because it ain't easy to solve some unique issues. Most of these apply for HomeManager actually, it adds more trouble.
+</p>
+
+<p>
+It is adviced to learn how Nix works or Nix as Functional Programming Language.
+</p></li>
+</ul>
+
+<hr />
+
+<p>
+Okay, so it was not about shilling Nix or anything, Just my Linux experience.
+</p>
+</div>
+</div>
+]]></content></entry></feed>
