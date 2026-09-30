@@ -393,11 +393,14 @@ length."
 
 (defun site--og-excerpt-lines (excerpt)
   "Return EXCERPT's lines, word-wrapped to 62 characters per paragraph and
-capped to 5 lines."
+capped to 5 lines. A blank line in EXCERPT (a paragraph break) becomes a
+blank output line, so the break still shows as a gap on the card."
   (when excerpt
     (denden-og-truncate-lines
      (seq-mapcat (lambda (source-line)
-                   (denden-og-wrap-words (replace-regexp-in-string "[ \t]+" " " (string-trim source-line)) 62))
+                   (if (string-empty-p source-line)
+                       (list "")
+                     (denden-og-wrap-words (replace-regexp-in-string "[ \t]+" " " (string-trim source-line)) 62)))
                  (split-string (string-trim excerpt) "\n"))
      5)))
 
@@ -1210,13 +1213,27 @@ never writes these.")
     (when (file-exists-p png)
       (concat (string-remove-suffix "/" (site-base-url)) "/og/" slug ".png"))))
 
+(defun site--og-prose-paragraphs (node)
+  "Return every <p> element under NODE, in document order, skipping the
+contents of any <div class=\"figure\"> or <figure> element. Those hold an
+image and its caption, both rendered as plain <p> tags with no class of
+their own once `denden-paragraph' strips the \"Figure N:\" prefix, so
+they would otherwise look like body prose."
+  (cond
+   ((not (consp node)) nil)
+   ((eq (dom-tag node) 'figure) nil)
+   ((and (eq (dom-tag node) 'div) (equal (dom-attr node 'class) "figure")) nil)
+   ((eq (dom-tag node) 'p) (list node))
+   (t (seq-mapcat #'site--og-prose-paragraphs (dom-children node)))))
+
 (defun site--og-excerpt-for-page (page)
-  "Return PAGE's OG-card excerpt: the first two <p>s of its rendered body, as
-blank-line separated plain text."
+  "Return PAGE's OG-card excerpt: the first two body-prose <p>s of its
+rendered content, as blank-line separated plain text. Skips any <p> that
+is really an image or its caption; see `site--og-prose-paragraphs'."
   (let* ((dom (with-temp-buffer (insert (plist-get page :content-html))
                                 (libxml-parse-html-region (point-min) (point-max))))
-         (paragraphs (seq-take (dom-by-tag dom 'p) 2)))
-    (mapconcat #'dom-texts paragraphs "\n")))
+         (paragraphs (seq-take (site--og-prose-paragraphs dom) 2)))
+    (mapconcat (lambda (p) (string-trim (dom-texts p))) paragraphs "\n\n")))
 
 (defun site--meta-description-for-page (page)
   "Return PAGE's meta-description text: its OG excerpt, collapsed to one line
