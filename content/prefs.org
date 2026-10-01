@@ -9,8 +9,8 @@ Everything on this site that you can change and have personalized experience.
 
 * Try everything at once
 
-Each button does exactly what the matching key does. Nothing navigates away, so
-click freely and watch the page change under you.
+Each button does exactly what it says. Nothing navigates away, so click freely
+and watch the page change under you.
 
 #+begin_export html
 <div class="tag-cloud" role="group" aria-label="Preference controls">
@@ -18,14 +18,9 @@ click freely and watch the page change under you.
   <button type="button" class="tag-cloud-btn" data-action="toggle-theme">Dark / light</button>
   <button type="button" class="tag-cloud-btn" data-action="cycle-font">Cycle font</button>
   <button type="button" class="tag-cloud-btn" data-action="cycle-width">Cycle width</button>
-  <button type="button" class="tag-cloud-btn" data-action="cycle-align">Cycle alignment</button>
-  <button type="button" class="tag-cloud-btn" data-action="increase-font">Bigger text</button>
-  <button type="button" class="tag-cloud-btn" data-action="decrease-font">Smaller text</button>
-  <button type="button" class="tag-cloud-btn" data-action="reset-font">Reset text size</button>
   <button type="button" class="tag-cloud-btn" data-action="browse-schemes">All 305 schemes</button>
   <button type="button" class="tag-cloud-btn" data-action="fix-scheme">Pin / unpin scheme</button>
-  <button type="button" class="tag-cloud-btn" data-action="toggle-keys">Shortcuts on / off</button>
-  <button type="button" class="tag-cloud-btn" data-action="show-help">All shortcuts</button>
+  <button type="button" class="tag-cloud-btn" data-action="toggle-keys">Palette shortcut on / off</button>
 </div>
 #+end_export
 
@@ -44,20 +39,19 @@ on a random site from a curated list of personal blogs.
 -------
 
 This paragraph is here on purpose, as something long enough to actually watch
-change. Cycle the font and the letterforms change under you; cycle the width and
-the measure gets narrower or wider; cycle the alignment and the right edge goes
-from ragged to flush to two columns. The colours come from whichever scheme
-loaded this visit, and dark/light flips the whole palette without touching the
-scheme itself.
+change. Cycle the font and the letterforms change under you; cycle the width
+and the measure gets narrower or wider. The colours come from whichever
+scheme loaded this visit, and dark/light flips the whole palette without
+touching the scheme itself.
 
 -------
 
 * The cycles
 
-Five settings are cycles: each press advances one step and wraps around at the
-end. The step you land on is remembered.
+Three settings are cycles: each press advances one step and wraps around at
+the end. The step you land on is remembered.
 
-** Font mode :: =f=
+** Font mode
 
 Four modes, and *Mixed is the default* for a first visit.
 
@@ -72,7 +66,7 @@ Two things never move. *Code, =verbatim=, and preformatted blocks are always
 monospace*, in every mode. And *headings always use the display face*, outside
 the cycle entirely.
 
-** Content width :: =w=
+** Content width
 
 Steps: *840px* (default), then =100%=, =80%=, =60%=.
 
@@ -81,17 +75,7 @@ useful for wide code blocks and tables. =80%= and =60%= are proportions of the
 window rather than fixed widths, so on a very wide screen they can still come out
 wider than the 840px default.
 
-** Text alignment :: =a=
-
-Steps: *Normal* (default), *Justified*, *Columns*.
-
-Column turns text into bookish column view.
-
-** Text size :: =+= / =-= / =0=
-
-Steps of 10%, clamped between *80%* and *150%*. =0= resets to 100%.
-
-** Dark / light :: =t= or =i=
+** Dark / light
 
 This flips the *variant*, not the scheme. If the scheme you are on has both a
 dark and a light palette, it swaps. If it has only one (Everforest, Monokai,
@@ -131,81 +115,32 @@ lot: yellow is always dates, cyan is reading time, blue is links.
 
 By default *the scheme is picked at random on every page load*. If you find one
 you like, *Pin* it and that choice sticks until you unpin. Pinning also works
-from the modeline at the bottom and from the =M-x= menu; all three controls stay
-in sync.
+from the modeline at the bottom and from the command palette; all three controls
+stay in sync.
 
-Press =c= for the preset popup, or =t= followed by a space in the command palette
-to search all 305 by name. Hovering a scheme in either previews it live on the
-real page, and moving away puts it back.
+Open the preset popup from the menu, or open the command palette and type =t=
+followed by a space to search all 305 by name. Hovering a scheme in either
+previews it live on the real page, and moving away puts it back.
 
 * The command palette
 
-One dialog does search and every command. Open it with =x=, or with the editor
-bindings =Ctrl-P=, =Ctrl-K=, or =Alt-x= (Emacs =M-x=), whichever your fingers
-already know.
+One dialog does search and every command. Open it by clicking *Command
+palette* above, or with =x=, =Ctrl-P=, =Ctrl-K=, or =Alt-x= (Emacs =M-x=),
+whichever your fingers already know.
 
-| Type this        | Get                                |
-|------------------+------------------------------------|
-| anything         | commands and posts together        |
-| =t= then space     | all 305 colour schemes, by name    |
-| =?= then space     | every keyboard shortcut            |
+| Type this    | Get                             |
+|--------------+----------------------------------|
+| anything     | commands and posts together     |
+| =t= then space | all 305 colour schemes, by name |
+| =#=            | tags                             |
 
 =Esc= or =Ctrl-g= closes it. Backspace at an empty prefix goes back to the
 default list.
 
-* Keys
-
-** Anywhere
-
-| Key                         | Does                          |
-|-----------------------------+-------------------------------|
-| =x= / =Ctrl-P= / =Ctrl-K= / =Alt-x= | command palette               |
-| =?=                           | every shortcut                |
-| =t= or =i=                      | dark / light                  |
-| =c=                           | scheme popup                  |
-| =f=                           | cycle font mode               |
-| =w=                           | cycle content width           |
-| =a=                           | cycle text alignment          |
-| =+= / =-= / =0=                   | text bigger / smaller / reset |
-| =PageDown= / =PageUp=           | page down / up                |
-| =Esc= / =Ctrl-g=                | close whatever is open        |
-
-** Going places
-
-| Key | Goes to            |
-|-----+--------------------|
-| =g h= | home               |
-| =g p= | posts              |
-| =g w= | wander             |
-| =g r= | projects & tools   |
-| =g g= | top of the page    |
-| =g G= | bottom of the page |
-
-** Reading a post
-
-| Key            | Does                 |
-|----------------+----------------------|
-| =n= / =p=          | next / previous post |
-| =q=              | back                 |
-| =Space=          | page down            |
-| =Shift-Space=    | page up              |
-| =Ctrl-v= / =Alt-v= | page down / up       |
-
-Arrow keys, =Home= and =End= scroll normally and are left alone on purpose.
-
-** Turning shortcuts off
-
-Single-letter shortcuts are convenient until you want your browser's own
-single-letter behaviour back, or you use voice input, where a stray letter fires
-a command. *Shortcuts on / off* disables all of them and is remembered.
-=Esc= keeps working either way.
-
-This is [[https://www.w3.org/WAI/WCAG22/Understanding/character-key-shortcuts.html][WCAG 2.1.4 Character Key Shortcuts]], and it is why the toggle exists
-rather than being a nicety.
-
-* Lists and cards
-
-Where a listing has a search box, =/= focuses it and =Esc= clears it.
+*Palette shortcut on / off* turns the =x= key off if you need your browser's
+own =x= back, or use voice input where a stray letter fires a command. =Esc=
+and the other open-palette keys keep working either way. This is
+[[https://www.w3.org/WAI/WCAG22/Understanding/character-key-shortcuts.html][WCAG 2.1.4 Character Key Shortcuts]].
 
 * Reading a post
 
@@ -222,20 +157,17 @@ Where a listing has a search box, =/= focuses it and =Esc= clears it.
 
 * What gets stored
 
-Ten keys in =localStorage=, no cookies, no analytics, no third-party requests.
+Seven keys in =localStorage=, no cookies, no analytics, no third-party requests.
 
 | Key                    | Holds                                    |
-|------------------------+------------------------------------------|
+|------------------------+-------------------------------------------|
 | =emacs-theme=            | dark or light                            |
 | =emacs-scheme-fixed=     | the pinned preset, if you pinned one     |
 | =emacs-custom-palette=   | a pinned scheme from the 305             |
-| =emacs-scheme-last=      | the scheme shown last                    |
 | =emacs-scheme-hint-seen= | whether the random-scheme note was shown |
 | =emacs-font-mode=        | mono, sans, serif or mixed               |
-| =emacs-font-size=        | 80 to 150                                |
 | =emacs-width-idx=        | which width step                         |
-| =emacs-align=            | normal, justify or columns               |
-| =emacs-keys-off=         | shortcuts disabled                       |
+| =emacs-keys-off=         | palette shortcut disabled                |
 
 Clearing site data resets everything to defaults. Nothing here identifies you,
 and none of it leaves your browser.

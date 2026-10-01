@@ -6,12 +6,12 @@ How this site is made. Please do check [[/prefs][Preferences]] page as well for 
 
 ------
 
-- SSG : [[https://gohugo.io][Hugo]]
+- SSG : [[https://github.com/idlip/denden][denden]], a small Emacs Lisp static site generator I wrote based on =org-publish= in native method.
 
-- Content : [[https://orgmode.org/][Org-mode]] (via go-org) using Emacs
+- Content : [[https://orgmode.org/][Org-mode]], parsed natively via =org-element=.
 
-- Theme : [[https://github.com/idlip/hakimacs][Hakimacs]] with base16 tinted themeing used dynamically
+- Theme : originally [[https://github.com/idlip/hakimacs][Hakimacs]], now its embedded directly in blog site repo and maintained on my own.
 
-- Hosting : Domain + CI CD
+- Hosting : Manual build and push =gh-pages= branch
 
 - Fonts : [[https://github.com/idlip/code-d-font][Code D font]] (Recursive font with Nerd Icons patched)
