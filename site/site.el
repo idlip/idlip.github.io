@@ -895,28 +895,42 @@ sectionless bucket first."
                  (list :label (capitalize section) :count (length pages) :pages pages)))
              (sort (copy-sequence (site--distinct-sections all-pages)) #'string<)))))
 
-(defun site-publish-sitemap-page (plist filename _pub-dir)
-  "Publish FILENAME (content/sitemap.org) via `theme-sitemap-page', listing
-every page grouped by section."
+(defun site--page-as-topic-item (page)
+  "Return PAGE (`denden-collect-page-metadata' shape) as a topic-list item
+plist, so `site--sitemap-groups' output can go straight through
+`theme-topic-list-items' instead of its own separate template."
+  (list :url (concat "/" (plist-get page :url))
+        :name (plist-get page :title)
+        :desc ""
+        :parts (append (mapcar (lambda (tag) (format "tag: %s" tag)) (plist-get page :tags))
+                       (mapcar (lambda (ref) (format "refs: %s" ref)) (plist-get page :refs)))))
+
+(defun site-publish-sitemap-page (plist filename pub-dir)
+  "Publish FILENAME (content/sitemap.org) via `theme-topic-list-page': one
+topic-list group per section, every page's own tags/refs as chips, and
+the same search box every other topic-list page has."
   (let* ((output (denden-output-file-for filename (cons nil plist)))
          (all-pages (plist-get plist :denden-all-pages))
-         (root-pub-dir (file-name-as-directory (org-publish-property :publishing-directory (cons nil plist))))
          (this-page (seq-find (lambda (p) (equal (plist-get p :url)
-                                                  (denden-pretty-url (file-relative-name output root-pub-dir))))
+                                                  (denden-pretty-url (file-relative-name output pub-dir))))
                                all-pages))
          (title (or (and this-page (plist-get this-page :title)) "Sitemap"))
-         (body-html (with-temp-buffer
-                      (insert-file-contents filename)
-                      (org-mode)
-                      (org-export-as 'denden-html nil nil t (denden-export-options-with-pages all-pages)))))
+         (intro-html (with-temp-buffer
+                       (insert-file-contents filename)
+                       (org-mode)
+                       (org-export-as 'denden-html nil nil t (denden-export-options-with-pages all-pages))))
+         (groups (mapcar (lambda (g) (list :label (plist-get g :label)
+                                            :items (mapcar #'site--page-as-topic-item (plist-get g :pages))))
+                         (site--sitemap-groups all-pages this-page))))
     (site--write-page
      (site--wrap-page
       :title title
       :url (and this-page (plist-get this-page :url))
-      :body (theme-sitemap-page
-             :title title :body-html body-html
-             :groups (site--sitemap-groups all-pages this-page)
-             :tag-icons site-tag-icons
+      :body (theme-topic-list-page
+             :title title
+             :intro-html intro-html
+             :items-node (theme-topic-list-items :groups groups :tag-icons site-tag-icons
+                                                 :all-pages all-pages :external nil)
              :footer (theme-footer site-footer-content)
              :modeline (theme-modeline :buffer "*sitemap*" :title title
                                        :date (format-time-string "%Y-%m-%d"))))

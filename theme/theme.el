@@ -288,8 +288,7 @@ that reset would outrank theme.css's own hover rule for it."
   (let ((tooltip (or tooltip (and subtitle name (format "%s %s" subtitle name)) subtitle name "")))
     (append
      (list 'a (list :href (or link "#") :class "badge rain-hover" :title tooltip
-                     :style (and color (format "border-width:1px;border-style:solid;border-color:%s;--glow:%s"
-                                                color color))))
+                     :style (and color (format "border-style:solid;border-color:%s;--glow:%s" color color))))
      (list (list 'span '(:class "badge-icon") (list 'img (list :src logo :alt (or name "") :loading "lazy"))))
      (when subtitle (list (list 'span '(:class "badge-subtitle") subtitle)))
      (when name (list (list 'span (list :class "badge-name" :style (and color (format "background:%s" color)))
@@ -884,41 +883,6 @@ LIST-HEADER, TERM-HEADER, or TAG-CLOUD."
            buffer-body)
      (when modeline (list modeline)))))
 
-(defun theme--sitemap-item (page tag-icons)
-  "One <li> for PAGE in the sitemap listing: icon and title only, no date or
-tags."
-  (list 'li '(:class "article-item")
-        (list 'a (list :href (concat "/" (plist-get page :url)) :class "article-link")
-              (list 'span '(:class "article-type-icon nf" :aria-hidden "true")
-                    (theme--tag-icon (plist-get page :tags) tag-icons))
-              (list 'span '(:class "article-title") (plist-get page :title)))))
-
-(defun theme--sitemap-group-label (label count)
-  "One year-divider <li> labeled LABEL, with a COUNT badge span if COUNT is
-non-nil."
-  (list 'li '(:class "year-divider")
-        (append (list 'span '(:class "year-label") label)
-                (when count (list (list 'span '(:class "year-count") (format "(%d)" count)))))))
-
-(cl-defun theme-sitemap-page (&key title body-html groups tag-icons footer modeline)
-  "The sitemap page: header, body, then every GROUPS bucket as a year-divider
-run, tagged via TAG-ICONS."
-  (append
-   (list 'section (list :class "buffer buffer-content active" :id "buffer-content"
-                         :role "region" :aria-label title)
-         (list 'div '(:class "buffer-body" :id "content-body")
-               (list 'article '(:class "post-content" :id "article-content")
-                     (list 'div '(:class "post-header") (list 'h1 '(:class "post-title") title))
-                     (list 'div '(:class "post-body") (list 'raw-html nil body-html))
-                     (append
-                      (list 'ul '(:class "article-list is-grid" :role "list"))
-                      (mapcan (lambda (group)
-                                (cons (theme--sitemap-group-label (plist-get group :label) (plist-get group :count))
-                                      (mapcar (lambda (p) (theme--sitemap-item p tag-icons)) (plist-get group :pages))))
-                              groups)))
-               (append (list 'footer nil) (when footer (list footer)))))
-   (when modeline (list modeline))))
-
 ;;;; Topic-list pages (wander, projects, media, quotes, uses)
 ;;
 ;; Refs backlinks resolve against this build's own page metadata
@@ -967,9 +931,12 @@ that share that ref."
                              (format "[%d]" i)))
                      pages))))))))
 
-(cl-defun theme-topic-item (&key item icon chip-color all-pages tag-icons)
+(cl-defun theme-topic-item (&key item icon chip-color all-pages tag-icons (external t))
   "One topic-list <li> for ITEM, a `denden-parse-topic-item' plist, using
-ICON, CHIP-COLOR and ALL-PAGES."
+ICON, CHIP-COLOR and ALL-PAGES. EXTERNAL (the default) opens the item's
+own link in a new tab, right for wander/projects/media's links out to
+other sites; pass nil for a list of this site's own pages instead,
+where that would be wrong."
   (let* ((chips (delq nil (mapcar (lambda (p) (theme--topic-part-chip p tag-icons all-pages)) (plist-get item :parts))))
          (refs-node (theme--topic-refs-backlinks item all-pages))
          (url (plist-get item :url))
@@ -992,7 +959,8 @@ ICON, CHIP-COLOR and ALL-PAGES."
             (append
              (list 'div '(:class "project-header"))
              (list (if has-url
-                       (list 'a (list :href url :class "article-title project-name" :target "_blank" :rel "noopener")
+                       (list 'a (list :href url :class "article-title project-name"
+                                       :target (and external "_blank") :rel (and external "noopener"))
                              name)
                      (list 'span '(:class "article-title project-name") name)))
              (when refs-node (list refs-node))))
@@ -1010,30 +978,34 @@ ICON, CHIP-COLOR and ALL-PAGES."
   (delq nil (mapcar (lambda (p) (and (string-prefix-p "tag:" p) (string-trim (substring p 4))))
                     (plist-get item :parts))))
 
-(defun theme--topic-group-items (group tag-icons chip-color all-pages)
-  "The rendered <li> items for one GROUP, group icon falling back per item."
+(defun theme--topic-group-items (group tag-icons chip-color all-pages external)
+  "The rendered <li> items for one GROUP, group icon falling back per item.
+EXTERNAL is passed straight through to `theme-topic-item'."
   (let ((label (plist-get group :label)))
     (mapcar
      (lambda (item)
        ;; Item-level "tag:" parts win over the group label's own icon,
        ;; which is only the fallback.
        (let ((icon (theme--tag-icon (append (theme--topic-item-tags item) (list (downcase label))) tag-icons)))
-         (theme-topic-item :item item :icon icon :chip-color chip-color :all-pages all-pages)))
+         (theme-topic-item :item item :icon icon :chip-color chip-color :all-pages all-pages :external external)))
      (plist-get group :items))))
 
 (defun theme-topic-list-items (&rest args)
   "The full <ul>: one year-divider header per group plus its items, from
-ARGS's :groups and friends."
+ARGS's :groups and friends. :external defaults to t (links out to other
+sites, as for wander/projects/media); pass nil for a list of this
+site's own pages instead."
   (let ((groups (plist-get args :groups))
         (tag-icons (plist-get args :tag-icons))
         (chip-color (plist-get args :chip-color))
-        (all-pages (plist-get args :all-pages)))
+        (all-pages (plist-get args :all-pages))
+        (external (if (plist-member args :external) (plist-get args :external) t)))
     (append
      (list 'ul '(:class "article-list wander-list" :id "article-list" :role "list"))
      (mapcan
       (lambda (group)
         (cons (theme--topic-group-divider (plist-get group :label) (length (plist-get group :items)))
-              (theme--topic-group-items group tag-icons chip-color all-pages)))
+              (theme--topic-group-items group tag-icons chip-color all-pages external)))
       groups))))
 
 (cl-defun theme--list-search (&key placeholder count-text)
