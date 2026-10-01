@@ -2545,16 +2545,17 @@
       opacity: 0.8;
     }
 
-    /* Content tables: scroll horizontally instead of cramming. */
-    .post-content table {
+    /* tables: scroll horizontally if cols > 2 */
+    .post-content table:has(tr :nth-child(3)) {
       display: block;
       width: 100%;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
+      & :is(th, td) {
+        white-space: nowrap;
+      }
     }
-    .post-content :is(th, td) {
-      white-space: nowrap;
-    }
+
   }
 
   /* Small mobile */
@@ -2855,6 +2856,10 @@ article h4, article h5, article h6 {
 }
 
 /* badges */
+.badge-grid {
+  text-align: center;
+}
+
 .badge {
   position: relative;
   display: inline-flex;
@@ -3095,6 +3100,26 @@ button {
   mix-blend-mode: difference;
   padding: 0.15em 0.5em;
   border-radius: var(--radius);
+}
+
+@media screen and (width <= 768px) {
+  .badge-grid {
+    display: flex;
+    justify-content: space-between;
+  }
+  .badge {
+    margin: 0;
+  }
+  .badge-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+  .badge-subtitle {
+    font-size: 0.45rem;
+  }
+  .badge-name {
+    font-size: 0.5rem;
+  }
 }
 
 /* 404 page's WANTED-poster gag */
