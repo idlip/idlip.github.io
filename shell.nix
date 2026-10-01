@@ -3,10 +3,12 @@ pkgs.mkShell {
 
   buildInputs = with pkgs; [
     # pagefind
-    hugo harper vale
+    # hugo
+    harper vale
     just librsvg
     # go-org
-    treefmt pre-commit prettier taplo htmlhint gotmplfmt
+    pre-commit prettier
+    static-web-server
   ];
 
   shellHook = ''

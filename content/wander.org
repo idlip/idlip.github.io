@@ -96,6 +96,7 @@ Inspired and made with: [[https://codeberg.org/susam/wander][Wander by Susam]]
 - [[https://jrsinclair.com/][James Sinclair]] :: Javascript and some SDE
 - [[https://archive.ph/c5RoJ][Eras of UX Design & Lessons]] :: Nice overview on how UX view changed over decade.
 - [[https://manualdousuario.net/en/page/4/][Manual do Usuário]] :: Finding cool stuff made easy
+- [[https://cider.mx/][Cider]] :: Emacs theme package website (wish to learn clojure now)
 
 
 ------
