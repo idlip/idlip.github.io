@@ -81,5 +81,6 @@ pages:
   "https://jrsinclair.com/",
   "https://archive.ph/c5RoJ",
   "https://manualdousuario.net/en/page/4/",
+  "https://cider.mx/",
 ],
 styles: ["wander-theme.css"], ignore: [], }
