@@ -142,7 +142,7 @@ extended_head.html.")
          '(br nil)
          "The content is licensed under "
          '(a (:href "https://creativecommons.org/licenses/by-sa/4.0/") "CC-BY-SA 4.0"))
-   (append (list 'p '(:style "text-align: center;"))
+   (append (list 'p '(:class "badge-grid"))
            (mapcar (lambda (b) (apply #'theme-badge b)) site-badges)))
   "Webring links, credits, license, then every `site-badges' entry.")
 
