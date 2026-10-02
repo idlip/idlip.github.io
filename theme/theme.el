@@ -22,12 +22,15 @@
 ;;; Code:
 
 (require 'cl-lib)
+(require 'rx)
 (require 'denden)
 
 (defun theme--url-domain (url)
   "Return URL's bare domain, e.g. \"example.com\" from
 \"https://example.com/x\"."
-  (replace-regexp-in-string "/.*\\'" "" (replace-regexp-in-string "\\`https?://\\(www\\.\\)?" "" url)))
+  (replace-regexp-in-string
+   (rx "/" (* nonl) eos) ""
+   (replace-regexp-in-string (rx bos "http" (opt "s") "://" (opt "www.")) "" url)))
 
 (defun theme--tag-icon (tags tag-icons)
   "Return the first of TAGS with an entry in TAG-ICONS, else \"_default\",
@@ -949,7 +952,7 @@ where that would be wrong."
     (list 'li (list :class "article-item topic-item"
                      :data-url (and has-url url) :data-external (and has-url "true")
                      :data-title (downcase (concat name " "
-                                                    (replace-regexp-in-string "<[^>]+>" "" (plist-get item :desc))
+                                                    (replace-regexp-in-string (rx "<" (+ (not (any ">"))) ">") "" (plist-get item :desc))
                                                     " " (mapconcat #'identity (plist-get item :parts) " ")))
                      :style (if chip-color (format "--chip-color: var(--%s)" chip-color) ""))
           (list 'div '(:class "project-left") (list 'span '(:class "project-icon nf" :aria-hidden "true") icon))

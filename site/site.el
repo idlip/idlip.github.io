@@ -15,6 +15,7 @@
 (require 'cl-lib)
 (require 'seq)
 (require 'dom)
+(require 'rx)
 (require 'denden)
 (require 'theme)
 (require 'site-schemes-base16)
@@ -203,7 +204,7 @@ its base16 palette or explicit colors."
 (defun site-parse-author (author)
   "Parse \"Name (URL)\" or plain \"Name\" AUTHOR into (:name :url); :url is
 \"\" if there is none."
-  (if (string-match "\\`\\([^(]+\\)(\\([^)]*\\))" author)
+  (if (string-match (rx bos (group (+ (not (any "(")))) "(" (group (* (not (any ")")))) ")") author)
       (list :name (string-trim (match-string 1 author)) :url (match-string 2 author))
     (list :name (string-trim author) :url "")))
 
@@ -211,10 +212,10 @@ its base16 palette or explicit colors."
   "Parse CSS-TEXT's \"/* @scheme: Name | Author | Variant */\" comments into
 base16-shaped entries."
   (when (and css-text (not (string-empty-p css-text)))
-    (let ((unit-re (concat "/\\* @scheme:\\([^*]*\\)\\*/[ \t\n]*"
-                            "\\[data-scheme=\"\\([a-zA-Z0-9_-]+\\)\"\\]"
-                            "\\(\\[data-theme=\"light\"\\]\\)?[ \t\n]*"
-                            "{\\([^}]*\\)}"))
+    (let ((unit-re (rx "/* @scheme:" (group (* (not (any "*")))) "*/" (* (any " \t\n"))
+                       "[data-scheme=\"" (group (+ (any "a-zA-Z0-9_-"))) "\"]"
+                       (opt (group "[data-theme=\"light\"]")) (* (any " \t\n"))
+                       "{" (group (* (not (any "}")))) "}"))
           (start 0) (out nil))
       (while (string-match unit-re css-text start)
         ;; next-start/meta/key/light/body must be read off the match data
@@ -234,7 +235,9 @@ base16-shaped entries."
                (colors nil)
                (hex-start 0))
           (setq start next-start)
-          (while (string-match "--base0[0-9A-F]:[ \t]*\\(#[0-9a-fA-F]\\{6\\}\\)" body hex-start)
+          (while (string-match
+                  (rx "--base0" (any "0-9A-F") ":" (* (any " \t")) (group "#" (= 6 (any "0-9a-fA-F"))))
+                  body hex-start)
             (push (match-string 1 body) colors)
             (setq hex-start (match-end 0)))
           (setq colors (nreverse colors))
@@ -285,9 +288,13 @@ CUSTOM-CSS-TEXT."
 (defun site--yaml-raw-string-field (text key)
   "Return TEXT's top-level KEY value by regex, so a numeric-looking quoted
 scalar stays a string."
-  (or (and (string-match (format "^%s:[ \t]*\"\\([^\"]*\\)\"" (regexp-quote key)) text)
+  (or (and (string-match
+            (rx bol (literal key) ":" (* (any " \t")) "\"" (group (* (not (any "\"")))) "\"")
+            text)
            (match-string 1 text))
-      (and (string-match (format "^%s:[ \t]*\\(.+?\\)[ \t]*$" (regexp-quote key)) text)
+      (and (string-match
+            (rx bol (literal key) ":" (* (any " \t")) (group (+? nonl)) (* (any " \t")) eol)
+            text)
            (match-string 1 text))))
 
 (defun site--yaml-scheme-file-to-entry (file)
@@ -400,7 +407,7 @@ blank output line, so the break still shows as a gap on the card."
      (seq-mapcat (lambda (source-line)
                    (if (string-empty-p source-line)
                        (list "")
-                     (denden-og-wrap-words (replace-regexp-in-string "[ \t]+" " " (string-trim source-line)) 62)))
+                     (denden-og-wrap-words (replace-regexp-in-string (rx (+ (any " \t"))) " " (string-trim source-line)) 62)))
                  (split-string (string-trim excerpt) "\n"))
      5)))
 
@@ -716,7 +723,7 @@ show only in the entry's own dialog, not on the compact card."
     (insert-file-contents filename)
     (org-mode)
     (goto-char (point-min))
-    (when (re-search-forward "^\\*" nil t)
+    (when (re-search-forward (rx bol "*") nil t)
       (narrow-to-region (point-min) (match-beginning 0)))
     (org-export-as 'denden-html nil nil t (denden-export-options-with-pages all-pages filename))))
 
@@ -762,7 +769,9 @@ each entry with its own shareable anchor and expand-to-dialog view."
 (defun site--blank-html-p (html)
   "Non-nil if HTML has no real content once tags and whitespace are stripped."
   (string-empty-p
-   (string-trim (replace-regexp-in-string "[ \t\n\r]+" " " (replace-regexp-in-string "<[^>]+>" " " html)))))
+   (string-trim (replace-regexp-in-string
+                 denden-whitespace-run-regexp " "
+                 (replace-regexp-in-string (rx "<" (+ (not (any ">"))) ">") " " html)))))
 
 (defun site-publish-home-page (plist filename pub-dir)
   "Publish FILENAME as the home page: a title+body page if it has content,
@@ -1267,7 +1276,7 @@ is really an image or its caption; see `site--og-prose-paragraphs'."
 (defun site--meta-description-for-page (page)
   "Return PAGE's meta-description text: its OG excerpt, collapsed to one line
 and capped at 160 characters."
-  (let ((text (replace-regexp-in-string "[ \t\n\r]+" " " (site--og-excerpt-for-page page))))
+  (let ((text (replace-regexp-in-string denden-whitespace-run-regexp " " (site--og-excerpt-for-page page))))
     (if (> (length text) 160) (concat (substring text 0 159) "…") text)))
 
 (cl-defun site-build-og-cards (&key pages card-site-title favicon-path pub-dir word-count-fn)
