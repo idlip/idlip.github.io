@@ -599,7 +599,7 @@ to the remaining link budget."
   "Return FILENAME's table-of-contents node, or nil unless it opts in via
 #+toc: t."
   (when (denden-file-keyword-true-p filename "TOC")
-    (let* ((options (plist-put (copy-sequence (denden-export-options-with-pages all-pages)) :with-toc t))
+    (let* ((options (plist-put (copy-sequence (denden-export-options-with-pages all-pages filename)) :with-toc t))
            (with-toc-html (with-temp-buffer
                              (insert-file-contents filename)
                              (org-mode)
@@ -673,7 +673,7 @@ instead of exporting FILENAME a second time."
          (body-html (with-temp-buffer
                       (insert-file-contents filename)
                       (org-mode)
-                      (org-export-as 'denden-html nil nil t (denden-export-options-with-pages all-pages)))))
+                      (org-export-as 'denden-html nil nil t (denden-export-options-with-pages all-pages filename)))))
     (when this-page (plist-put this-page :content-html body-html))
     (site--assemble-and-write-single-page
      :output output :pub-dir pub-dir :body-html body-html :all-pages all-pages
@@ -700,7 +700,7 @@ show only in the entry's own dialog, not on the compact card."
        (lambda ()
          (when (= (org-current-level) 2)
            (let* ((id (denden-heading-id (org-element-at-point)))
-                  (html (org-export-as 'denden-html t nil t (denden-export-options-with-pages all-pages))))
+                  (html (org-export-as 'denden-html t nil t (denden-export-options-with-pages all-pages filename))))
              (push (list :id id
                          :title (org-get-heading t t t t)
                          :html html
@@ -718,7 +718,7 @@ show only in the entry's own dialog, not on the compact card."
     (goto-char (point-min))
     (when (re-search-forward "^\\*" nil t)
       (narrow-to-region (point-min) (match-beginning 0)))
-    (org-export-as 'denden-html nil nil t (denden-export-options-with-pages all-pages))))
+    (org-export-as 'denden-html nil nil t (denden-export-options-with-pages all-pages filename))))
 
 (defun site--pose-entries-data-script (entries)
   "Return ENTRIES' full title/html, keyed by id, as one <script> tag. The
@@ -772,7 +772,7 @@ else the post listing fallback."
          (body-html (with-temp-buffer
                       (insert-file-contents filename)
                       (org-mode)
-                      (org-export-as 'denden-html nil nil t (denden-export-options-with-pages all-pages))))
+                      (org-export-as 'denden-html nil nil t (denden-export-options-with-pages all-pages filename))))
          (title (or (cadr (assoc "TITLE" (with-temp-buffer
                                             (insert-file-contents filename)
                                             (org-mode)
@@ -861,7 +861,7 @@ card per `site-all-schemes' entry."
                       (insert-file-contents filename)
                       (org-mode)
                       (org-export-as 'denden-html nil nil t
-                                     (denden-export-options-with-pages all-pages)))))
+                                     (denden-export-options-with-pages all-pages filename)))))
     (site--write-page
      (site--wrap-page
       :title title
@@ -918,7 +918,7 @@ the same search box every other topic-list page has."
          (intro-html (with-temp-buffer
                        (insert-file-contents filename)
                        (org-mode)
-                       (org-export-as 'denden-html nil nil t (denden-export-options-with-pages all-pages))))
+                       (org-export-as 'denden-html nil nil t (denden-export-options-with-pages all-pages filename))))
          (groups (mapcar (lambda (g) (list :label (plist-get g :label)
                                             :items (mapcar #'site--page-as-topic-item (plist-get g :pages))))
                          (site--sitemap-groups all-pages this-page))))
@@ -1112,7 +1112,8 @@ real page body is assembled differently from this flat file export."
                                      (insert-file-contents (plist-get page :source))
                                      (org-mode)
                                      (org-export-as 'denden-html nil nil t
-                                                    (denden-export-options-with-pages all-pages))))
+                                                    (denden-export-options-with-pages
+                                                     all-pages (plist-get page :source)))))
                 :permalink (site--page-permalink page base-url)
                 :lastmod (denden-page-lastmod page))))
 

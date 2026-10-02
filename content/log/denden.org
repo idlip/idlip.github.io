@@ -1,0 +1,152 @@
+#+title: Denden: Emacs Lisp SSG based on org-publish
+#+date: 2026-10-02
+#+tags[]: emacs orgmode lisp denden
+
+[[https://github.com/idlip/denden][Denden]] is yet another SSG based on org-publish and utilizing complete Elisp ecosystem. This site is
+built using that. Its not a package per-say, just an helper and building blocks on top of org mode's
+native =ox-publish= and =org-element= for AST.
+
+* Why I even started this
+
+This site used to run on Hugo, with content in Org mode rendered through go-org, and it worked fine
+for years. But I hated looking how ugly =gotempl= looked and lot of regexp to do something, although
+it was fast, it was not human (emacs user) friendly to read at all. When I wrote in org mode, I
+always liked why not elisp somewhere to hack and do stuff. Org is a rich ecosystem and it needs way
+more hackable place to configure, not hugo to regexp parse everything.
+
+Org has a perfectly good parser living right inside Emacs, =org-element=, that turns any =.org= file into a proper tree I can walk, query, and reshape however I like. So the question became obvious, why am I throwing that tree away and going back to regexing strings, when the real structure is sitting right there the whole time.
+
+That annoyance is the entire reason denden exists.
+
+* What denden actually is, and isn't
+
+=denden= is not a package, its more like a tool, helpers and building block on top of org-publish. It
+uses all native org mode libs and =org-publish=, the publishing engine that already ships inside Org mode, plus a small pile of Elisp helper functions sitting on top of it, that's the whole thing. =denden.el= itself is one file, no hidden layers, no magic you can't just =M-x describe-function= your way into.
+
+#+begin_src emacs-lisp
+;; this is roughly the entire mental model
+(require 'denden)
+(setq denden-content-directory "~/my-site/content")
+(setq denden-publishing-directory "~/my-site/public")
+(setq denden-full-build-function #'my-site-build)
+;; now M-x denden-build just works
+#+end_src
+
+Everything else, feeds, sitemap, search index, OG card images, the accessibility linter, is a
+building block you call when you want it, not a framework deciding things for you. If you don't like
+how I did sitemaps, you just don't call =denden-sitemap-xml=, and write your own three lines instead.
+Nobody's stopping you, there's no true "denden way" to acheive it.
+
+* Templates are just lists, the sexp-HTML bit
+
+This is the part I like the most, a denden template is not a template language at all, it's a plain Emacs Lisp list, shaped like this.
+
+#+begin_src emacs-lisp
+(TAG ATTRIBUTE-PLIST . CHILDREN)
+#+end_src
+
+A tag symbol, a plist of attributes, then however many children you want, which can themselves be more nodes or plain strings. Something this small turns into real HTML.
+
+#+begin_src emacs-lisp
+  (list 'div '(:class "card")
+        (list 'h2 nil "Hello")
+        (list 'p '(:class "muted") "Written as a list, not a string template."))
+  ;; C-x C-e => (div (:class "card") (h2 nil "Hello") (p (:class "muted") "Written as a list, not a string template."))
+#+end_src
+
+Run that through =denden-serialize-node= and you get.
+
+#+begin_src html
+<div class="card"><h2>Hello</h2><p class="muted">Written as a list, not a string template.</p></div>
+#+end_src
+
+No Jinja-style =<% if %>= tags, no template DSL to look up in some docs page, it's Lisp, so it's just Lisp. If you need a loop you use =mapcar=, if you need a condition you use =if=, you already know how, because you already know Emacs Lisp, or you're learning it anyway for your config.
+
+Here's a tiny real one, lifted straight from denden's own example site, =denden/example/example-theme.el=, the page header.
+
+#+begin_src emacs-lisp
+(cl-defun example-theme-header (&key site-title menu-items)
+  "The page header: SITE-TITLE linking home, then a MENU-ITEMS nav."
+  (list 'header nil
+        (list 'a '(:class "title" :href "/")
+              (list 'h2 nil site-title))
+        (append (list 'nav nil)
+                (mapcar (lambda (item) (list 'a (list :href (cdr item)) (car item)))
+                        menu-items))))
+#+end_src
+
+That's a whole working nav bar, =menu-items= is just a list of =(label . url)= pairs. Add a link to your site, add one more cons cell, no shortcode, no registering a new partial, nothing to restart.
+
+* How my own site is built with it
+
+My site's own Elisp lives in exactly three files, and I think that's a feature, not something I need to apologize for.
+
+- =denden/denden.el= :: the generic core engine, nothing specific to my site at all.
+- =site/site.el= :: my config and page logic, menu items, badges, feed setup, everything that's /my/ data.
+- =theme/theme.el= :: my actual sexp-HTML templates.
+
+Config is just Elisp data, so it looks like this, shortened from my real =site.el=.
+
+#+begin_src emacs-lisp
+(defconst site-menu-main
+  '((:name "Home" :url "/")
+    (:name "Blog Posts" :url "/log/")
+    (:name "Wander My Small Web" :url "/wander/")
+    (:name "Media" :url "/media/")
+    (:name "Quotes" :url "/quotes/")))
+#+end_src
+
+Want another nav item, add a line. Want a new badge on my footer, same deal, it's one more plist in a list, no new file, no new template syntax to learn.
+
+Everything you're reading right now, the command palette, the colour scheme picker with 305 base16 themes, the [[/wander/][wander console]], the [[/pose/][pose]] quick-thought cards, the accessible dialogs, all of that is just more sexp nodes and a bit of plain JS, sitting on top of the same three files.
+
+* One more cool bit, even the OG card images are sexp
+
+OG cards, the preview image you see when a link gets shared on social media, are usually generated with some headless browser screenshot setup or an image library. In denden it's the exact same =(TAG ATTRIBUTE-PLIST . CHILDREN)= trick, just aimed at =<svg>= instead of =<div>=, from my own =site.el=.
+
+I know IK, by now you might realize and say this is hard to write as well, but thats the cool stuff.
+Own it in lisp way. Direct maintenance of HTML files with no system is also cool tho ;-)
+
+#+begin_src emacs-lisp
+(list 'svg (list :xmlns "http://www.w3.org/2000/svg" :viewBox "0 0 1200 630"
+                  :width "1200" :height "630" :font-family "Code D OnePiece, monospace")
+      (list 'rect '(:width "1200" :height "630" :fill "#000000"))
+      (list 'rect '(:width "1200" :height "68" :fill "#0a0f0a"))
+      (list 'text '(:x "100" :y "46" :fill "#5fd7af" :font-size "30" :font-weight "bold")
+            card-site-title)
+      ;; ... and so on, title lines, tags, excerpt, favicon, all the same nodes
+      )
+#+end_src
+
+Same =denden-serialize-node= call at the end, except this time the string it hands back is an SVG file sitting at =/log/some-post/og.svg=. No separate image-generation step, no Canva template, just more rects and text nodes.
+
+* It's also properly fast
+
+I was bracing for a slow first build, since Emacs isn't exactly famous for being a speed train. It wasn't. A full build of this entire site, every post, every feed, every OG card image, finishes in a couple of seconds. I build it from the terminal like this.
+
+#+begin_src sh
+emacs --batch -Q -L denden -L site -L theme \
+    -l denden/denden.el -l site/site.el -l theme/theme.el \
+    --eval '(setq denden-repository-directory "/path/to/my/site")' \
+    --eval '(site-build t)'
+#+end_src
+
+That's a cold batch Emacs, loading three files, building every page from scratch since =t= skips the
+incremental cache, and it's done before switch two windows. There's also an async build mode and a timestamp cache for day to day editing, so normal single-file saves rebuild near instantly through =denden-preview-current-file=.
+
+* Owning the whole thing
+
+The thing I like most isn't the speed, it's that I own every line of this. I'm an Emacs user, I already spend my [[file:may-i-recommend.org][whole day inside Elisp]] tweaking my config, and now my blog engine runs in the same language, the same editor, the same muscle memory. If I want a new feature, I don't wait for a plugin, I don't learn a templating DSL, I just write a function next to the ones already there and call it. That's a genuinely different feeling from configuring a static site generator, it's closer to how your Emacs config itself grows over the years, one small function at a time, shaped around what you personally want.
+
+If any of this sounds interesting and you're also an Emacs plus Org mode person, go have a look at
+[[https://github.com/idlip/denden][denden project at Git]]. There's a small, complete example site in the repo =example/= directory, a Bear-Blog-style site with a home page, an about page, a blog listing and a couple of posts, one stylesheet, no JavaScript. You can build and serve it yourself with one command, =just example-build= or =just example-serve= from inside =denden/=, and poke around the two small files that make it tick, =example-site.el= and =example-theme.el=, to see the whole pattern in one sitting, before you even think about pointing it at your own content.
+
+* About the name
+
+A =denden mushi= is the snail-shaped transponder phone from One Piece, the way everyone in that world
+talks to each other across the sea. If you've looked around this site even a little, the One Piece
+theme is not exactly subtle here. A static site generator's job is carrying your words from your Org
+files out to the rest of the world, felt fitting enough that I didn't look for a second name,
+although I did consider "dennow" to mimic "Then & Now", alas something had to stay.
+
+Give it a spin, and if you build something with it, I'd genuinely like to hear about it.
