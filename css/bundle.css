@@ -2546,7 +2546,7 @@
     }
 
     /* tables: scroll horizontally if cols > 2 */
-    .post-content table:has(tr :nth-child(3)) {
+    .post-content table:has(tr > :nth-child(3)) {
       display: block;
       width: 100%;
       overflow-x: auto;
