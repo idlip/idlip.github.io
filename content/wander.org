@@ -5,7 +5,7 @@
 #+chip_color: base09
 #+buffer_name: *wander*
 
-The web is vast, but the part worth reading is small. These are the sites I return to personal blog pages, long-form writing, and people building things with care. Mostly consumed and followed by [[/log/rss-web][RSS feeds]].
+The web is vast, but the part worth reading is small. These are the sites I return to personal blog pages, long-form writing, and people building things with care. Mostly consumed and followed by [[file:log/rss-web.org][RSS feeds]].
 
 Wander through them. You might find something worth keeping. (All are minimal lightweight websites)
 

@@ -2,7 +2,7 @@
 #+draft: false
 #+no_comment: t
 
-How this site is made. Please do check [[/prefs][Preferences]] page as well for all features available for you.
+How this site is made. Please do check [[file:prefs.org][Preferences]] page as well for all features available for you.
 
 ------
 

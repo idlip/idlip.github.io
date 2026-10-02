@@ -22,5 +22,5 @@ Words that stayed.
 - [[https://en.wikipedia.org/wiki/Rob_Pike][Rob Pike]] :: A little copying is better than a little dependency. | work: Go Proverbs
 
 * Self
-- [[/about/][Self]] :: Write code you'd be comfortable reading at 3am during an incident.
+- [[file:about.org][Self]] :: Write code you'd be comfortable reading at 3am during an incident.
 - [[.][Self]] :: Prepare for the worst to give out the best!

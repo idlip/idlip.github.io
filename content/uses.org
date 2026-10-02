@@ -6,9 +6,9 @@
 
 What I use everyday, tools, stuff and resources I depend.
 
-Initially I had made blog post on [[/log/tools-readme/][Tools that are best]] which gets easily outdated.
+Initially I had made blog post on [[file:log/tools-readme.org][Tools that are best]] which gets easily outdated.
 
-I also have [[/projects][Projects]] page show tools and projects I like & use as well.
+I also have [[file:projects.org][Projects]] page show tools and projects I like & use as well.
 
 I do have [[https://github.com/idlip/d-nix][public OS config]] which might cover many as well.
 

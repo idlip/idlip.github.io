@@ -6,10 +6,10 @@
 
 - This post was written in BLR Indie Web Club writing session.
 
-As I've spoken on [[/log/consumed-enough][prev post]], I accidentally discovered [[https://blr.indiewebclub.org/][Bengaluru Indie Web Club]] on mastodon by
+As I've spoken on [[file:consumed-enough.org][prev post]], I accidentally discovered [[https://blr.indiewebclub.org/][Bengaluru Indie Web Club]] on mastodon by
 abhinav tushar. And ever since I had a blog site, why did it not occur to me that I should have
 searched for some clubs like these to improve my writing, and get motivated to write more. Maybe I
-was too involved in [[/log/may-i-recommend/][church of Emacs]], and as you see I started [[/log/revamp-blog-2026][revamping this blog site]] from January,
+was too involved in [[file:may-i-recommend.org][church of Emacs]], and as you see I started [[file:revamp-blog-2026.org][revamping this blog site]] from January,
 and till July I did not get another push...?
 
 Nevertheless, _every-time is a right time_ to start the work. So as of I'm writing this post, this is
@@ -32,7 +32,7 @@ always the nature that makes me a take a moment in life, sit back, relax and ref
 happening around me. Day by day life seems so busy that I fail to acknowledge whats even next to me,
 so much focused work is also harming me lol.
 And here's a simple park or a garden that can make me relive a lost moment and make me process my
-living state and always guide me to think [[/log/consumed-enough][what I've been doing and what's actually required]].
+living state and always guide me to think [[file:consumed-enough.org][what I've been doing and what's actually required]].
 
 Apart from main focus on tree in the image, there are two people, a house behind, the one half of a
 gate and so on, I'm not giving opinion on them, those are yours to interpret (if you can!) and

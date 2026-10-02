@@ -20,4 +20,4 @@ reading to continue (/kampai 🍻/)
 
 - Adding many slashpages inspired by https://slashpages.net/
 
-[[/][Home page]] and [[/sitemap][sitemap]] should give more overview.
+[[file:_index.org][Home page]] and [[file:sitemap.org][sitemap]] should give more overview.

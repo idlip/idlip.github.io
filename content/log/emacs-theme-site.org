@@ -3,7 +3,7 @@
 #+tags[]: emacs orgmode
 #+aliases[]: posts/emacs-theme-site
 
-With previous post on [[/log/revamp-blog-2026][revamp my blogs]], I finally today went ahead and upgrades the beautiful [[https://github.com/ArthurHeymans/hugo-emacs-theme/][emacs theme made by Arthur]], and locally forked to add goodies.
+With previous post on [[file:revamp-blog-2026.org][revamp my blogs]], I finally today went ahead and upgrades the beautiful [[https://github.com/ArthurHeymans/hugo-emacs-theme/][emacs theme made by Arthur]], and locally forked to add goodies.
 
 Reflecting on upgrades since beginning it has received, I'm strictly thinking to settle with this, as it looks good, minimal enough and modern looking, adaptive in mobile, has rss support and I can extend as I want and more than all, I can live in my editor - =Emacs=.
 

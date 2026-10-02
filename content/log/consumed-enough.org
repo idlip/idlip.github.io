@@ -29,7 +29,7 @@ I've been doing. You know, that moment or flow state of being self-conscious and
 surrounding you.
 
 Majority of this related to me trying to perfect some PKM (Personal Knowledge Management) system and
-trying to write more blog posts. I tried [[/log/revamp-blog-2026][revamping the blog]] so I'd be posting and writing more here.
+trying to write more blog posts. I tried [[file:revamp-blog-2026.org][revamping the blog]] so I'd be posting and writing more here.
 
 Recently things have changed for good, thanks for me seeing the other side of ocean. Rather
 than looking at the book, I started looking at critics and review of things in negative side. Then
@@ -73,7 +73,7 @@ And Only thing book can give readers is to take a space/moment of time to reflec
 the information in concrete and pragmatic way. I believe =One page a day= only clicks for eliciting an idea or giving space for thoughts and processing.
 
 Even I've not updated my blog site at all, stopped mid during adding media content in pages
-([[/projects][Projects]], [[/media][Media]] and [[/wander][Wander]]). I should start updating them since I read various gems from again
+([[file:../projects.org][Projects]], [[file:../media.org][Media]] and [[file:../wander.org][Wander]]). I should start updating them since I read various gems from again
 recent consumption race.
 
 1. [[https://brennan.day/what-have-note-taking-pkms-accomplished-really/][Brennan's take on PKM]] - Great site to read and writes alot

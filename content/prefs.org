@@ -24,7 +24,7 @@ and watch the page change under you.
 </div>
 #+end_export
 
-[[/wander/][Wander]] is a separate feature, not a theme preference: it launches a small-web console that drops you
+[[file:wander.org][Wander]] is a separate feature, not a theme preference: it launches a small-web console that drops you
 on a random site from a curated list of personal blogs.
 
 #+begin_export html
@@ -187,5 +187,5 @@ Written down mostly because people ask.
   opt-in on it, never forced.
 - Every interactive thing is reachable by keyboard and has a visible focus ring.
 
-More detail on the stack is on the [[/colophon/][Colophon]] page, and the whole source is
+More detail on the stack is on the [[file:colophon.org][Colophon]] page, and the whole source is
 [[https://github.com/idlip/hakimacs][on GitHub]] if you would rather just read it.

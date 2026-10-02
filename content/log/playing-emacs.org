@@ -5,7 +5,7 @@
 
 - This post is my second [[https://www.emacswiki.org/emacs/Carnival][Emacs carnival]] entry, this time for [[https://www.emacswiki.org/emacs/CarnivalSeptember2026][Sept 2026]]. If you're new to this site, FYI I go by =Zororg= in emacs chat/universe.
 
-Coincidentally I just wrote on [[/log/games][games]] in my previous post, but it covers more on what all games I've played till now mostly.
+Coincidentally I just wrote on [[file:games.org][games]] in my previous post, but it covers more on what all games I've played till now mostly.
 
 Every emacs users (>1 YOE to qualify) would know that emacs is the tinkering lisp machine, all you
 do everyday is tweak and play with it. Emacs is like a big playground, the definite workshop to all users.

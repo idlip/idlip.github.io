@@ -4,7 +4,7 @@
 #+date: [2023-03-17 Fri]
 #+aliases[]: posts/tools-readme
 
-Note: This is very outdated from when it was written. Please check [[https://github.com/idlip/d-nix][current config]] file or [[/uses][check Uses
+Note: This is very outdated from when it was written. Please check [[https://github.com/idlip/d-nix][current config]] file or [[file:../uses.org][check Uses
 page]] for updated list.
 
 --------------

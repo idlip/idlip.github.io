@@ -98,7 +98,7 @@ Config is just Elisp data, so it looks like this, shortened from my real =site.e
 
 Want another nav item, add a line. Want a new badge on my footer, same deal, it's one more plist in a list, no new file, no new template syntax to learn.
 
-Everything you're reading right now, the command palette, the colour scheme picker with 305 base16 themes, the [[/wander/][wander console]], the [[/pose/][pose]] quick-thought cards, the accessible dialogs, all of that is just more sexp nodes and a bit of plain JS, sitting on top of the same three files.
+Everything you're reading right now, the command palette, the colour scheme picker with 305 base16 themes, the [[file:../wander.org][wander console]], the [[file:../pose.org][pose]] quick-thought cards, the accessible dialogs, all of that is just more sexp nodes and a bit of plain JS, sitting on top of the same three files.
 
 * One more cool bit, even the OG card images are sexp
 
