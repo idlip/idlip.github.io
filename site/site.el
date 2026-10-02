@@ -1304,13 +1304,14 @@ index, OG cards, 404) into PUB-DIR."
          (regular (site--regular-pages enriched))
          (favicon-path (expand-file-name site-favicon-relative-path
                                          (expand-file-name "static" repository-directory))))
-    (site-write-feed-trio regular pub-dir (site-base-url) site-title site-description
+    ;; Log is the only section meant to be syndicated: the rest (Wander,
+    ;; Media, Quotes, and every standalone page) are for browsing, not RSS.
+    ;; The main feed and /log/'s own feed carry the same Log-only content.
+    (site-write-feed-trio (denden-pages-in-section regular "log") pub-dir (site-base-url) site-title
+                          site-description site-author-name site-author-email nil site-copyright)
+    (site-write-feed-trio (denden-pages-in-section regular "log") (expand-file-name "log" pub-dir)
+                          (site-base-url) site-title site-description
                           site-author-name site-author-email nil site-copyright)
-    (dolist (section (site--distinct-sections regular))
-      (site-write-feed-trio (denden-pages-in-section regular section)
-                            (expand-file-name section pub-dir)
-                            (site-base-url) site-title site-description
-                            site-author-name site-author-email nil site-copyright))
     ;; Per-term (tag/ref) feeds are a deferred cut -- home and every
     ;; section still get one.
     (site-build-sitemap enriched pub-dir)
