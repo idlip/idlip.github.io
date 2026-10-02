@@ -4,15 +4,11 @@
 
 [[https://github.com/idlip/denden][Denden]] is yet another SSG based on org-publish and utilizing complete Elisp ecosystem. This site is
 built using that. Its not a package per-say, just an helper and building blocks on top of org mode's
-native =ox-publish= and =org-element= for AST.
+native [[https://orgmode.org/manual/Publishing.html][ox-publish]] and [[https://orgmode.org/worg/dev/org-element-api.html][org-element]] for AST.
 
 * Why I even started this
 
-This site used to run on Hugo, with content in Org mode rendered through go-org, and it worked fine
-for years. But I hated looking how ugly =gotempl= looked and lot of regexp to do something, although
-it was fast, it was not human (emacs user) friendly to read at all. When I wrote in org mode, I
-always liked why not elisp somewhere to hack and do stuff. Org is a rich ecosystem and it needs way
-more hackable place to configure, not hugo to regexp parse everything.
+This site used to run on [[https://gohugo.io][Hugo]] using same theme called [[https://github.com/idlip/hakimacs][hakimacs]], with content in Org mode rendered through go-org, and it worked fine for months. But I hated looking how ugly [[https://gohugo.io/templates/introduction/][go-template]] looked and lot of regexp to do something, although it was fast, it was not human (emacs user) friendly to read at all. When I wrote in org mode, I always liked why not elisp somewhere to hack and do stuff. Org is a rich ecosystem and it needs way more hackable place to configure, not hugo to regexp parse everything.
 
 Org has a perfectly good parser living right inside Emacs, =org-element=, that turns any =.org= file into a proper tree I can walk, query, and reshape however I like. So the question became obvious, why am I throwing that tree away and going back to regexing strings, when the real structure is sitting right there the whole time.
 
@@ -32,7 +28,7 @@ uses all native org mode libs and =org-publish=, the publishing engine that alre
 ;; now M-x denden-build just works
 #+end_src
 
-Everything else, feeds, sitemap, search index, OG card images, the accessibility linter, is a
+Everything else, [[/rss.xml][feeds]], [[/sitemap.xml][sitemap]], search index, [[/og/denden.png][OG card images]], the accessibility linter, is a
 building block you call when you want it, not a framework deciding things for you. If you don't like
 how I did sitemaps, you just don't call =denden-sitemap-xml=, and write your own three lines instead.
 Nobody's stopping you, there's no true "denden way" to acheive it.
@@ -81,9 +77,9 @@ That's a whole working nav bar, =menu-items= is just a list of =(label . url)= p
 
 My site's own Elisp lives in exactly three files, and I think that's a feature, not something I need to apologize for.
 
-- =denden/denden.el= :: the generic core engine, nothing specific to my site at all.
-- =site/site.el= :: my config and page logic, menu items, badges, feed setup, everything that's /my/ data.
-- =theme/theme.el= :: my actual sexp-HTML templates.
+- =denden/denden.el= : the generic core engine, nothing specific to my site at all.
+- =site/site.el= : my config and page logic, menu items, badges, feed setup, everything that's /my/ data.
+- =theme/theme.el= : my actual sexp-HTML templates.
 
 Config is just Elisp data, so it looks like this, shortened from my real =site.el=.
 
@@ -98,7 +94,7 @@ Config is just Elisp data, so it looks like this, shortened from my real =site.e
 
 Want another nav item, add a line. Want a new badge on my footer, same deal, it's one more plist in a list, no new file, no new template syntax to learn.
 
-Everything you're reading right now, the command palette, the colour scheme picker with 305 base16 themes, the [[file:../wander.org][wander console]], the [[file:../pose.org][pose]] quick-thought cards, the accessible dialogs, all of that is just more sexp nodes and a bit of plain JS, sitting on top of the same three files.
+Everything you're reading right now, the  @@html:<button type="button" class="tag-cloud-btn" data-action="open-palette">Command palette</button>@@, the @@html:<button type="button" class="tag-cloud-btn" data-action="browse-schemes">colour scheme picker with 305 base16 themes</button>@@, the [[file:../wander.org][wander console]], the [[file:../pose.org][pose]] quick-thought cards, the accessible dialogs, all of that is just more sexp nodes and a bit of plain JS, sitting on top of the same three files.
 
 * One more cool bit, even the OG card images are sexp
 
@@ -118,7 +114,7 @@ Own it in lisp way. Direct maintenance of HTML files with no system is also cool
       )
 #+end_src
 
-Same =denden-serialize-node= call at the end, except this time the string it hands back is an SVG file sitting at =/log/some-post/og.svg=. No separate image-generation step, no Canva template, just more rects and text nodes.
+Same =denden-serialize-node= ([[https://github.com/idlip/denden/blob/master/denden.el][check file]]) call at the end, except this time the string it hands back is an SVG file sitting at =/log/some-post/og.svg=. No separate image-generation step, no Canva template, just more rects and text nodes.
 
 * It's also properly fast
 
@@ -139,7 +135,10 @@ incremental cache, and it's done before switch two windows. There's also an asyn
 The thing I like most isn't the speed, it's that I own every line of this. I'm an Emacs user, I already spend my [[file:may-i-recommend.org][whole day inside Elisp]] tweaking my config, and now my blog engine runs in the same language, the same editor, the same muscle memory. If I want a new feature, I don't wait for a plugin, I don't learn a templating DSL, I just write a function next to the ones already there and call it. That's a genuinely different feeling from configuring a static site generator, it's closer to how your Emacs config itself grows over the years, one small function at a time, shaped around what you personally want.
 
 If any of this sounds interesting and you're also an Emacs plus Org mode person, go have a look at
-[[https://github.com/idlip/denden][denden project at Git]]. There's a small, complete example site in the repo =example/= directory, a Bear-Blog-style site with a home page, an about page, a blog listing and a couple of posts, one stylesheet, no JavaScript. You can build and serve it yourself with one command, =just example-build= or =just example-serve= from inside =denden/=, and poke around the two small files that make it tick, =example-site.el= and =example-theme.el=, to see the whole pattern in one sitting, before you even think about pointing it at your own content.
+[[https://github.com/idlip/denden/tree/master/example][denden bearblog example site]]. There's a small, complete example site in the repo =example/= directory, a Bear-Blog-style site with a home page, an about page, a blog listing and a couple of posts, one stylesheet, no JavaScript. You can build and serve it yourself with one command, =just example-build= or =just example-serve= from inside =denden/=, and poke around the two small files that make it tick, =example-site.el= and =example-theme.el=, to see the whole pattern in one sitting, before you even think about pointing it at your own content.
+
+#+caption: Snap of a example bearblog like site built with denden
+[[https://raw.githubusercontent.com/idlip/denden/refs/heads/master/example/screenshot.png]]
 
 * About the name
 
