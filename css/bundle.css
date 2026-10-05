@@ -1264,7 +1264,8 @@
   }
 
   /* Shared by .post-body headings, Pose cards, and the Pose dialog title. */
-  :is(:is(.post-body, .pose-card) :is(h2, h3, h4, h5, h6), #pose-dialog-title) .heading-anchor {
+  :is(:is(.post-body, .pose-card) :is(h2, h3, h4, h5, h6), #pose-dialog-title)
+    .heading-anchor {
     /* Stays above the Pose card's full-card click overlay (.pose-card-trigger). */
     position: relative;
     z-index: 1;
@@ -1277,8 +1278,13 @@
       opacity var(--transition),
       color var(--transition);
   }
-  :is(:is(.post-body, .pose-card) :is(h2, h3, h4, h5, h6), #pose-dialog-title):hover .heading-anchor,
-  :is(.post-body, .pose-card, #pose-dialog-title) .heading-anchor:focus-visible {
+  :is(
+      :is(.post-body, .pose-card) :is(h2, h3, h4, h5, h6),
+      #pose-dialog-title
+    ):hover
+    .heading-anchor,
+  :is(.post-body, .pose-card, #pose-dialog-title)
+    .heading-anchor:focus-visible {
     opacity: 1;
   }
   :is(.post-body, .pose-card, #pose-dialog-title) .heading-anchor:hover {
@@ -1815,6 +1821,16 @@
     /* iOS notch: keep content below the safe-area inset (0 elsewhere). */
     padding-top: env(safe-area-inset-top, 0);
   }
+  .menu-bar-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    max-width: var(--content-max-width, 840px);
+    margin: 0 auto;
+  }
   .menu-items {
     display: flex;
     flex-direction: row;
@@ -2033,6 +2049,36 @@
     }
   }
 
+  /* Gentle name-tag jitter */
+  @keyframes sway {
+    0%,
+    100% {
+      transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    16.7% {
+      transform: translate(-0.5px, -0.5px) rotate(3deg);
+    }
+    33.4% {
+      transform: translate(-0.5px, 0.5px) rotate(-3deg);
+    }
+    50% {
+      transform: translate(0, 0) rotate(0deg) scale(1.1);
+    }
+    67.7% {
+      transform: translate(0.5px, -0.5px) rotate(-3deg);
+    }
+    84.4% {
+      transform: translate(0.5px, 0.5px) rotate(3deg);
+    }
+  }
+  .sway {
+    display: inline-block;
+    animation: sway 0.33s ease-in-out infinite normal;
+    &:hover {
+      border: 1px solid var(--border);
+    }
+  }
+
   /* ── Hamburger ── */
   .menu-hamburger {
     display: none;
@@ -2083,6 +2129,16 @@
       font-size: var(--fs-3xs);
       padding-bottom: max(0.2em, env(safe-area-inset-bottom, 0));
     }
+  }
+
+  .modeline-inner {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    max-width: var(--content-max-width, 840px);
+    margin: 0 auto;
   }
 
   .ml-left {
@@ -2555,7 +2611,6 @@
         white-space: nowrap;
       }
     }
-
   }
 
   /* Small mobile */
@@ -2781,7 +2836,9 @@ h2 {
 h3 {
   color: var(--h3-color);
 }
-h4, h5, h6 {
+h4,
+h5,
+h6 {
   color: var(--h4-color);
 }
 
@@ -2827,10 +2884,14 @@ article h3 {
   color: var(--h3-color);
 }
 
-article h4::before, article h5::before, article h6::before {
+article h4::before,
+article h5::before,
+article h6::before {
   content: "✥ ";
 }
-article h4, article h5, article h6 {
+article h4,
+article h5,
+article h6 {
   color: var(--h4-color);
 }
 
@@ -2892,7 +2953,15 @@ article h4, article h5, article h6 {
 button {
   border: 1px solid transparent;
 }
-:is(.badge, .pose-card, .wander-btn, .tag-cloud-btn, .code-copy-btn, button):is(:hover, :focus-visible),
+:is(
+  .badge,
+  .pose-card,
+  .wander-btn,
+  .tag-cloud-btn,
+  .code-copy-btn,
+  button,
+  .sway
+):is(:hover, :focus-visible),
 .pose-card:focus-within,
 #palette-dialog[open] {
   border-width: 2px;
