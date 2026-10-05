@@ -49,7 +49,7 @@ native <a href="https://orgmode.org/manual/Publishing.html">ox-publish</a> and <
 </p>
 <div id="outline-container-why-i-even-started-this" class="outline-2">
 <h2 id="why-i-even-started-this">Why I even started this</h2>
-<div class="outline-text-2" id="text-org96550cf">
+<div class="outline-text-2" id="text-orgb9b5f91">
 <p>
 This site used to run on <a href="https://gohugo.io">Hugo</a> using same theme called <a href="https://github.com/idlip/hakimacs">hakimacs</a>, with content in Org mode rendered through go-org, and it worked fine for months. But I hated looking how ugly <a href="https://gohugo.io/templates/introduction/">go-template</a> looked and lot of regexp to do something, although it was fast, it was not human (emacs user) friendly to read at all. When I wrote in org mode, I always liked why not elisp somewhere to hack and do stuff. Org is a rich ecosystem and it needs way more hackable place to configure, not hugo to regexp parse everything.
 </p>
@@ -65,7 +65,7 @@ That annoyance is the entire reason denden exists.
 </div>
 <div id="outline-container-what-denden-actually-is-and-isn-t" class="outline-2">
 <h2 id="what-denden-actually-is-and-isn-t">What denden actually is, and isn't</h2>
-<div class="outline-text-2" id="text-orgac571df">
+<div class="outline-text-2" id="text-orgc4b29c8">
 <p>
 <code>denden</code> is not a package, its more like a tool, helpers and building block on top of org-publish. It
 uses all native org mode libs and <code>org-publish</code>, the publishing engine that already ships inside Org mode, plus a small pile of Elisp helper functions sitting on top of it, that's the whole thing. <code>denden.el</code> itself is one file, no hidden layers, no magic you can't just <code>M-x describe-function</code> your way into.
@@ -91,7 +91,7 @@ Nobody's stopping you, there's no true "denden way" to acheive it.
 </div>
 <div id="outline-container-templates-are-just-lists-the-sexp-html-bit" class="outline-2">
 <h2 id="templates-are-just-lists-the-sexp-html-bit">Templates are just lists, the sexp-HTML bit</h2>
-<div class="outline-text-2" id="text-orge4fa53d">
+<div class="outline-text-2" id="text-org6bbe07f">
 <p>
 This is the part I like the most, a denden template is not a template language at all, it's a plain Emacs Lisp list, shaped like this.
 </p>
@@ -149,7 +149,7 @@ That's a whole working nav bar, <code>menu-items</code> is just a list of <code>
 </div>
 <div id="outline-container-how-my-own-site-is-built-with-it" class="outline-2">
 <h2 id="how-my-own-site-is-built-with-it">How my own site is built with it</h2>
-<div class="outline-text-2" id="text-org5101960">
+<div class="outline-text-2" id="text-org29c9e5a">
 <p>
 My site's own Elisp lives in exactly three files, and I think that's a feature, not something I need to apologize for.
 </p>
@@ -185,7 +185,7 @@ Everything you're reading right now, the  <button type="button" class="tag-cloud
 </div>
 <div id="outline-container-one-more-cool-bit-even-the-og-card-images-are-sexp" class="outline-2">
 <h2 id="one-more-cool-bit-even-the-og-card-images-are-sexp">One more cool bit, even the OG card images are sexp</h2>
-<div class="outline-text-2" id="text-org43df2ce">
+<div class="outline-text-2" id="text-org7dcb449">
 <p>
 OG cards, the preview image you see when a link gets shared on social media, are usually generated with some headless browser screenshot setup or an image library. In denden it's the exact same <code>(TAG ATTRIBUTE-PLIST . CHILDREN)</code> trick, just aimed at <code>&lt;svg&gt;</code> instead of <code>&lt;div&gt;</code>, from my own <code>site.el</code>.
 </p>
@@ -214,7 +214,7 @@ Same <code>denden-serialize-node</code> (<a href="https://github.com/idlip/dende
 </div>
 <div id="outline-container-it-s-also-properly-fast" class="outline-2">
 <h2 id="it-s-also-properly-fast">It's also properly fast</h2>
-<div class="outline-text-2" id="text-org12e1f55">
+<div class="outline-text-2" id="text-org8a18d76">
 <p>
 I was bracing for a slow first build, since Emacs isn't exactly famous for being a speed train. It wasn't. A full build of this entire site, every post, every feed, every OG card image, finishes in a couple of seconds. I build it from the terminal like this.
 </p>
@@ -235,7 +235,7 @@ incremental cache, and it's done before switch two windows. There's also an asyn
 </div>
 <div id="outline-container-owning-the-whole-thing" class="outline-2">
 <h2 id="owning-the-whole-thing">Owning the whole thing</h2>
-<div class="outline-text-2" id="text-orga8291d8">
+<div class="outline-text-2" id="text-org2d9d2f8">
 <p>
 The thing I like most isn't the speed, it's that I own every line of this. I'm an Emacs user, I already spend my <a href="/log/may-i-recommend/">May I Recommend EWM</a> tweaking my config, and now my blog engine runs in the same language, the same editor, the same muscle memory. If I want a new feature, I don't wait for a plugin, I don't learn a templating DSL, I just write a function next to the ones already there and call it. That's a genuinely different feeling from configuring a static site generator, it's closer to how your Emacs config itself grows over the years, one small function at a time, shaped around what you personally want.
 </p>
@@ -246,7 +246,7 @@ If any of this sounds interesting and you're also an Emacs plus Org mode person,
 </p>
 
 
-<div id="org4933d27" class="figure">
+<div id="org7291e94" class="figure">
 <p><img src="https://raw.githubusercontent.com/idlip/denden/refs/heads/master/example/screenshot.png" alt="screenshot.png" />
 </p>
 <p>Snap of a example bearblog like site built with denden</p>
@@ -255,7 +255,7 @@ If any of this sounds interesting and you're also an Emacs plus Org mode person,
 </div>
 <div id="outline-container-about-the-name" class="outline-2">
 <h2 id="about-the-name">About the name</h2>
-<div class="outline-text-2" id="text-org5be99e8">
+<div class="outline-text-2" id="text-orgfaa8167">
 <p>
 A <code>denden mushi</code> is the snail-shaped transponder phone from One Piece, the way everyone in that world
 talks to each other across the sea. If you've looked around this site even a little, the One Piece

@@ -2073,7 +2073,7 @@
   }
   .sway {
     display: inline-block;
-    animation: sway 0.33s ease-in-out infinite normal;
+    animation: sway 0.53s ease-in-out infinite normal;
     &:hover {
       border: 1px solid var(--border);
     }
