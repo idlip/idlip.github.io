@@ -60,7 +60,7 @@ optional SHORTCUT shown at right."
   "The Buffers dropdown: MENU-ITEMS (:name :url plists), a Tags link, RSS-URL."
   (list 'details '(:class "menu-item" :name "menu" :role "none")
         '(summary (:role "menuitem" :aria-haspopup "true" :aria-expanded "false")
-                 (span (:class "underline") "B") "uffers")
+                  (span (:class "underline") "B") "uffers")
         (append
          (list 'div '(:class "menu-dropdown" :role "menu"))
          (mapcar (lambda (item) (theme--dropdown-link (plist-get item :url) (plist-get item :name)))
@@ -75,7 +75,7 @@ optional SHORTCUT shown at right."
   "A scheme-picker button for SCHEME (:name :label plist), styled
 SWATCH-STYLE."
   (list 'button (list :class "menu-dropdown-item scheme-option" :role "menuitem"
-                       :data-scheme (plist-get scheme :name) :style swatch-style)
+                      :data-scheme (plist-get scheme :name) :style swatch-style)
         '(span (:class "scheme-dot" :aria-hidden "true"))
         (list 'span nil (plist-get scheme :label))))
 
@@ -84,7 +84,7 @@ SWATCH-STYLE."
 SWATCH-STYLE-FN)."
   (list 'details '(:class "menu-item" :name "menu" :role "none")
         '(summary (:role "menuitem" :aria-haspopup "true" :aria-expanded "false")
-                 (span (:class "underline") "V") "iew")
+                  (span (:class "underline") "V") "iew")
         (append
          (list 'div '(:class "menu-dropdown" :role "menu")
                (theme--dropdown-action "toggle-theme" "Toggle Dark/Light")
@@ -101,7 +101,7 @@ mailto: link."
          (external (not (string-prefix-p "mailto:" url))))
     (append
      (list 'a (list :href url :class "menu-dropdown-item" :role "menuitem"
-                     :target (and external "_blank") :rel (and external rel))
+                    :target (and external "_blank") :rel (and external rel))
            (list 'span '(:class "nf") (plist-get link :icon)))
      (list (list 'span nil (plist-get link :label))))))
 
@@ -129,7 +129,7 @@ variant exists; \"is-grid\" is a separate class."
   (append
    (list 'details '(:class "menu-item" :name "menu" :role "none")
          '(summary (:role "menuitem" :aria-haspopup "true" :aria-expanded "false")
-                  (span (:class "underline") "H") "elp")
+                   (span (:class "underline") "H") "elp")
          (append
           (list 'div '(:class "menu-dropdown" :role "menu")
                 theme--menu-separator
@@ -141,7 +141,7 @@ variant exists; \"is-grid\" is a separate class."
   "The command dropdown: every JS-callable action, static (no site data)."
   (list 'details '(:class "menu-item" :name "menu" :role "none")
         '(summary (:role "menuitem" :aria-haspopup "true" :aria-expanded "false")
-                 (span (:class "underline") "M") "-x")
+                  (span (:class "underline") "M") "-x")
         (list 'div '(:class "menu-dropdown" :role "menu")
               (theme--dropdown-action "open-palette" "Open Command Palette" "x")
               theme--menu-separator
@@ -153,7 +153,7 @@ variant exists; \"is-grid\" is a separate class."
               ;; menuitemcheckbox, not menuitem: this is a toggle, and
               ;; aria-pressed is not valid on a menuitem.
               '(button (:class "menu-dropdown-item" :role "menuitemcheckbox"
-                        :aria-checked "false" :data-action "fix-scheme")
+                               :aria-checked "false" :data-action "fix-scheme")
                        (span nil "Pin / Unpin Scheme"))
               '(button (:class "menu-dropdown-item" :role "menuitem" :data-action "toggle-keys")
                        (span nil "Enable / disable \"x\" shortcut")))))
@@ -165,26 +165,26 @@ buttons, and the scheme popup."
    (list 'div '(:class "menu-bar-right")
          (list 'a '(:href "/log/" :class "menu-bar-title sway") site-title)
          '(button (:class "tag-cloud-btn" :title "Open Search + M-x Command palette Dialog"
-                   :aria-label "Open Search + Command palette Dialog" :data-action "open-palette")
+                          :aria-label "Open Search + Command palette Dialog" :data-action "open-palette")
                   (span (:class "nf" :aria-hidden "true") "󰨈 ")
                   " Log pose "
                   (span (:class "nf" :aria-hidden "true") " 󰠳"))
          '(button (:class "menu-bar-btn" :id "font-cycle-btn"
-                   :title "Cycle font: mono → sans → mixed" :aria-label "Cycle font mode"
-                   :data-action "cycle-font")
+                          :title "Cycle font: mono → sans → mixed" :aria-label "Cycle font mode"
+                          :data-action "cycle-font")
                   (span (:class "nf" :aria-hidden "true") ""))
          '(button (:class "menu-bar-btn" :id "ml-width-btn"
-                   :title "Cycle content width [100% → 80ch → 60ch → 840px]"
-                   :aria-label "Cycle content width" :data-action "cycle-width")
+                          :title "Cycle content width [100% → 80ch → 60ch → 840px]"
+                          :aria-label "Cycle content width" :data-action "cycle-width")
                   (span (:class "nf" :aria-hidden "true") "󰭣 ")))
    (when color-schemes
      (list
       (append
        (list 'details '(:class "scheme-popup-container" :id "scheme-popup-container")
              '(summary (:class "menu-bar-btn scheme-popup-btn" :id "scheme-popup-btn"
-                       :aria-label "Color scheme" :title "Color scheme"
-                       :aria-expanded "false" :aria-haspopup "true")
-                      (span (:class "nf" :aria-hidden "true") "")))
+                               :aria-label "Color scheme" :title "Color scheme"
+                               :aria-expanded "false" :aria-haspopup "true")
+                       (span (:class "nf" :aria-hidden "true") "")))
        (list
         (append
          (list 'div '(:class "scheme-popup" :id "scheme-popup" :role "menu" :aria-label "Color schemes"))
@@ -193,17 +193,17 @@ buttons, and the scheme popup."
          (list theme--menu-separator
                '(div (:class "scheme-popup-actions")
                      (button (:class "scheme-action-btn" :id "pin-scheme-btn" :data-action "fix-scheme"
-                              :aria-pressed "false"
-                              :title "Pin: lock current scheme, or unpin to go random each session")
+                                     :aria-pressed "false"
+                                     :title "Pin: lock current scheme, or unpin to go random each session")
                              (span (:class "nf" :aria-hidden "true") "󰐅 ")
                              (span (:id "pin-scheme-label") "Pin")))))))))
    (list '(button (:class "menu-bar-btn" :aria-label "Toggle dark/light"
-                   :data-action "toggle-theme" :title "Toggle dark/light")
+                          :data-action "toggle-theme" :title "Toggle dark/light")
                   (span (:class "nf theme-icon-dark" :aria-hidden "true") "")
                   (span (:class "nf theme-icon-light" :aria-hidden "true") "")))))
 
 (cl-defun theme-menu-bar (&key menu-items color-schemes social-links site-title rss-url
-                                (swatch-style-fn (lambda (_scheme) "")))
+                               (swatch-style-fn (lambda (_scheme) "")))
   "The full menu-bar header plus its backdrop div, titled SITE-TITLE."
   (let ((nav-node
          (append
@@ -216,9 +216,10 @@ buttons, and the scheme popup."
      (list 'header '(:class "menu-bar")
            '(button (:class "menu-hamburger" :aria-label "Toggle menu" :aria-expanded "false")
                     (span (:aria-hidden "true") "☰"))
-           nav-node
-           (theme--menu-bar-right :site-title site-title :color-schemes color-schemes
-                                   :swatch-style-fn swatch-style-fn))
+           (list 'div '(:class "menu-bar-inner")
+                 nav-node
+                 (theme--menu-bar-right :site-title site-title :color-schemes color-schemes
+                                        :swatch-style-fn swatch-style-fn)))
      '(div (:class "menu-backdrop" :id "menu-backdrop" :aria-hidden "true")))))
 
 (cl-defun theme-modeline (&key buffer title wordcount readingtime date widthtoggle progress)
@@ -232,36 +233,39 @@ BUFFER/TITLE/WORDCOUNT/READINGTIME/DATE/PROGRESS; BUFFER defaults to
      (when progress (list '(div (:class "read-progress" :id "read-progress" :aria-hidden "true"))))
      (list
       (append
-       (list 'div '(:class "ml-left"))
-       (when date
-         (list (list 'span '(:class "ml-group ml-hide-mobile")
-                     (list 'span '(:class "nf ml-date-icon" :aria-hidden "true") " ")
-                     (list 'time (list :class "ml-date" :datetime date) (concat " " date)))
-               '(span (:class "ml-sep ml-hide-mobile" :aria-hidden "true") "·")))
-       (list (list 'span '(:class "ml-group")
-                   (list 'button '(:class "ml-buffer" :data-action "open-palette"
-                                          :title "Open command palette (x)")
-                         (concat " " (truncate-string-to-width (or title buffer) 80)))))
-       (when readingtime
-         (list '(span (:class "ml-sep" :aria-hidden "true") "·")
-               (list 'span '(:class "ml-readtime ml-hide-mobile") (format " %s min" readingtime))))
-       (when wordcount
-         (list '(span (:class "ml-sep" :aria-hidden "true") "·")
-               (list 'span '(:class "ml-wc") (format "%sw" wordcount))))))
-     (list
-      '(span (:class "ml-fill" :aria-hidden "true"))
-      '(div (:class "ml-right")
-            (button (:class "ml-pin-btn ml-hide-mobile" :id "ml-pin-btn" :data-action "fix-scheme"
-                            :aria-pressed "false" :title "Pin / unpin color scheme")
-                    (span (:id "ml-pin-label") "Pin"))
-            )))))
+       (list 'div '(:class "modeline-inner"))
+       (list
+        (append
+         (list 'div '(:class "ml-left"))
+         (when date
+           (list (list 'span '(:class "ml-group ml-hide-mobile")
+                       (list 'span '(:class "nf ml-date-icon" :aria-hidden "true") " ")
+                       (list 'time (list :class "ml-date" :datetime date) (concat " " date)))
+                 '(span (:class "ml-sep ml-hide-mobile" :aria-hidden "true") "·")))
+         (list (list 'span '(:class "ml-group")
+                     (list 'button '(:class "ml-buffer" :data-action "open-palette"
+                                            :title "Open command palette (x)")
+                           (concat " " (truncate-string-to-width (or title buffer) 80)))))
+         (when readingtime
+           (list '(span (:class "ml-sep" :aria-hidden "true") "·")
+                 (list 'span '(:class "ml-readtime ml-hide-mobile") (format " %s min" readingtime))))
+         (when wordcount
+           (list '(span (:class "ml-sep" :aria-hidden "true") "·")
+                 (list 'span '(:class "ml-wc") (format "%sw" wordcount))))))
+       (list
+        '(span (:class "ml-fill" :aria-hidden "true"))
+        '(div (:class "ml-right")
+              (button (:class "ml-pin-btn ml-hide-mobile" :id "ml-pin-btn" :data-action "fix-scheme"
+                              :aria-pressed "false" :title "Pin / unpin color scheme")
+                      (span (:id "ml-pin-label") "Pin"))
+              )))))))
 
 (defconst theme-echo-area
   '(dialog (:id "palette-dialog" :aria-label "Command palette")
            (div (:class "palette-input-wrap")
                 (input (:type "text" :id "palette-input" :class "palette-input"
-                        :placeholder "Search commands and posts…" :autocomplete "off"
-                        :autocapitalize "off" :spellcheck "false")))
+                              :placeholder "Search commands and posts…" :autocomplete "off"
+                              :autocapitalize "off" :spellcheck "false")))
            (div (:id "palette-results" :role "listbox")))
   "The command palette dialog, a native <dialog> element.")
 
@@ -271,12 +275,12 @@ BUFFER/TITLE/WORDCOUNT/READINGTIME/DATE/PROGRESS; BUFFER defaults to
 
 (defconst theme--rain-confetti-spans
   '(span (:class "rain-confetti" :aria-hidden "true")
-    (span nil "0") (span nil "1") (span nil "{") (span nil "}")
-    (span nil "<") (span nil ">") (span nil "/") (span nil "\\")
-    (span nil ";") (span nil ":") (span nil "+") (span nil "~")
-    (span nil "=") (span nil "-") (span nil "_") (span nil "|")
-    (span nil "#") (span nil "$") (span nil "%") (span nil "&")
-    (span nil "(") (span nil ")") (span nil "[") (span nil "]"))
+         (span nil "0") (span nil "1") (span nil "{") (span nil "}")
+         (span nil "<") (span nil ">") (span nil "/") (span nil "\\")
+         (span nil ";") (span nil ":") (span nil "+") (span nil "~")
+         (span nil "=") (span nil "-") (span nil "_") (span nil "|")
+         (span nil "#") (span nil "$") (span nil "%") (span nil "&")
+         (span nil "(") (span nil ")") (span nil "[") (span nil "]"))
   "The ascii-rain hover easter egg. Its text still counts in `dom-texts',
 since aria-hidden is not respected there.")
 
@@ -291,7 +295,7 @@ that reset would outrank theme.css's own hover rule for it."
   (let ((tooltip (or tooltip (and subtitle name (format "%s %s" subtitle name)) subtitle name "")))
     (append
      (list 'a (list :href (or link "#") :class "badge rain-hover" :title tooltip
-                     :style (and color (format "border-style:solid;border-color:%s;--glow:%s" color color))))
+                    :style (and color (format "border-style:solid;border-color:%s;--glow:%s" color color))))
      (list (list 'span '(:class "badge-icon") (list 'img (list :src logo :alt (or name "") :loading "lazy"))))
      (when subtitle (list (list 'span '(:class "badge-subtitle") subtitle)))
      (when name (list (list 'span (list :class "badge-name" :style (and color (format "background:%s" color)))
@@ -368,8 +372,8 @@ picking happens after paint.")
 
 
 (cl-defun theme--seo-head-nodes (&key og-title description canonical-url favicon-href favicon-type
-                                       og-type og-image published-time modified-time tags site-title
-                                       author-name language noindex fediverse-creator)
+                                      og-type og-image published-time modified-time tags site-title
+                                      author-name language noindex fediverse-creator)
   "The page-dependent <head> children: description, canonical, favicon,
 fediverse:creator, OG/Twitter meta, and JSON-LD for articles."
   (let ((og-title (or og-title site-title)))
@@ -437,16 +441,16 @@ else setTimeout(loadUmami,2000);
 </script>" (json-serialize script-url) (json-serialize website-id)))))
 
 (cl-defun theme-baseof (&key language body palette-data-script stylesheet-href script-href page-title
-                              og-title menu-items color-schemes social-links site-title rss-url
-                              schemes-url description canonical-url favicon-href favicon-type og-type
-                              og-image published-time modified-time tags author-name noindex
-                              fediverse-creator analytics-script-url analytics-website-id
-                              (swatch-style-fn (lambda (_scheme) "")))
+                             og-title menu-items color-schemes social-links site-title rss-url
+                             schemes-url description canonical-url favicon-href favicon-type og-type
+                             og-image published-time modified-time tags author-name noindex
+                             fediverse-creator analytics-script-url analytics-website-id
+                             (swatch-style-fn (lambda (_scheme) "")))
   "The page skeleton for LANGUAGE and BODY, as a single <html> node.
 PALETTE-DATA-SCRIPT must be a `(raw-html nil STRING)' node."
   (let ((menu-bar-nodes (theme-menu-bar :menu-items menu-items :color-schemes color-schemes
-                                         :social-links social-links :site-title site-title
-                                         :rss-url rss-url :swatch-style-fn swatch-style-fn)))
+                                        :social-links social-links :site-title site-title
+                                        :rss-url rss-url :swatch-style-fn swatch-style-fn)))
     (list 'html (list :lang language :data-theme "dark" :data-scheme "haki")
           (append (list 'head nil '(meta (:charset "utf-8")))
                   (when schemes-url (list (theme--pre-paint-script color-schemes schemes-url)))
@@ -500,7 +504,7 @@ hides that field."
          (list 'div '(:class "post-meta"))
          (when date
            (list (list 'span '(:class "post-date" :title "Created on")
-                       '(span (:class "nf" :aria-hidden "true") "")
+                       '(span (:class "nf" :aria-hidden "true") " ")
                        '(span (:class "visually-hidden") "Created on: ")
                        (list 'time (list :datetime date) date))))
          (when (and lastmod date (not (equal lastmod date)))
@@ -525,10 +529,10 @@ UNIQUE-ID as its DOM id."
    (list 'div '(:class "post-comment")
          (list 'label (list :class "comment-label" :for (format "comment-%s" unique-id)) "Leave a comment")
          (list 'textarea (list :id (format "comment-%s" unique-id) :class "comment-textarea"
-                                :placeholder "Write your thoughts…" :rows "4"))
+                               :placeholder "Write your thoughts…" :rows "4"))
          (list 'div '(:class "comment-actions")
                (list 'button (list :class "comment-submit" :type "button" :data-email email
-                                    :data-subject (format "Re: %s" title) :data-uid unique-id)
+                                   :data-subject (format "Re: %s" title) :data-uid unique-id)
                      "Comment")))
    (list 'script nil
          (format "(function () {
@@ -564,7 +568,7 @@ for the See Also list."
 (defun theme--related-item (page)
   "One <li> for PAGE (a page-metadata plist), used in the See Also list."
   (list 'li (list :class "article-item" :data-url (concat "/" (plist-get page :url))
-                   :data-title (downcase (plist-get page :title)))
+                  :data-title (downcase (plist-get page :title)))
         (list 'a (list :href (concat "/" (plist-get page :url)) :class "article-link")
               (list 'span '(:class "article-meta")
                     (list 'time (list :class "article-date" :datetime (plist-get page :date))
@@ -602,18 +606,18 @@ RELATED; either omitted when empty."
     (append
      (list 'div nil)
      (when prev (list (list 'a (list :id "post-prev" :href (concat "/" (plist-get prev :url)))
-                             (concat "← " (truncate-string-to-width (plist-get prev :title) 40 nil nil " …")))))
+                            (concat "← " (truncate-string-to-width (plist-get prev :title) 40 nil nil " …")))))
      (list '(span nil))
      (when next (list (list 'a (list :id "post-next" :href (concat "/" (plist-get next :url)))
-                             (concat (truncate-string-to-width (plist-get next :title) 40 nil nil " …") " →"))))))))
+                            (concat (truncate-string-to-width (plist-get next :title) 40 nil nil " …") " →"))))))))
 
 (cl-defun theme-single-page (&key breadcrumbs post-header toc body-html references comment
-                                   post-navigation footer modeline)
+                                  post-navigation footer modeline)
   "Assemble the single-post section from BREADCRUMBS, POST-HEADER, TOC,
 BODY-HTML, and the rest; any can be nil."
   (append
    (list 'section '(:class "buffer buffer-content active" :id "buffer-content"
-                    :role "region" :aria-label "Article content"))
+                           :role "region" :aria-label "Article content"))
    (list
     (append
      (list 'div '(:class "buffer-body" :id "content-body"))
@@ -633,7 +637,7 @@ BODY-HTML, and the rest; any can be nil."
   "The home page for TITLE/BODY-HTML: just title, body, footer and modeline,
 no breadcrumbs or tags."
   (list 'section '(:class "buffer buffer-content active" :id "buffer-content"
-                   :role "region" :aria-label "Home")
+                          :role "region" :aria-label "Home")
         (list 'div '(:class "buffer-body")
               (list 'article '(:class "post-content")
                     (list 'div '(:class "post-header") (list 'h1 '(:class "post-title") title))
@@ -647,14 +651,14 @@ its own shareable heading id and a click-to-expand dialog for its full
 content (ENTRIES-DATA-SCRIPT, a <script> tag, supplies that full content
 to the dialog; see `site--pose-entries-data-script')."
   (let* ((pose-list (append (list 'ul '(:class "pose-list"))
-                             (mapcar
-                              (lambda (entry)
-                                (list 'li '(:class "pose-card")
-                                      (list 'h2 (list :id (plist-get entry :id))
-                                            (list 'button '(:type "button" :class "pose-card-trigger")
-                                                  (plist-get entry :title)))
-                                      (list 'raw-html nil (plist-get entry :teaser-html))))
-                              entries)))
+                            (mapcar
+                             (lambda (entry)
+                               (list 'li '(:class "pose-card")
+                                     (list 'h2 (list :id (plist-get entry :id))
+                                           (list 'button '(:type "button" :class "pose-card-trigger")
+                                                 (plist-get entry :title)))
+                                     (list 'raw-html nil (plist-get entry :teaser-html))))
+                             entries)))
          (article (append
                    (list 'article '(:class "post-content")
                          (list 'div '(:class "post-header") (list 'h1 '(:class "post-title") title)))
@@ -663,7 +667,7 @@ to the dialog; see `site--pose-entries-data-script')."
                    (list pose-list))))
     (append
      (list 'section (list :class "buffer buffer-content active" :id "buffer-content"
-                           :role "region" :aria-label title)
+                          :role "region" :aria-label title)
            (list 'div '(:class "buffer-body")
                  article
                  (append (list 'footer nil) (when footer (list footer))))
@@ -688,9 +692,9 @@ TAG-ICONS."
   (let ((tags (plist-get page :tags)))
     (append
      (list 'li (list :class "article-item" :data-index (number-to-string index)
-                      :data-year (if (plist-get page :date) (substring (plist-get page :date) 0 4) "")
-                      :data-url (concat "/" (plist-get page :url)) :data-title (downcase (plist-get page :title))
-                      :data-tags (mapconcat #'downcase tags ""))
+                     :data-year (if (plist-get page :date) (substring (plist-get page :date) 0 4) "")
+                     :data-url (concat "/" (plist-get page :url)) :data-title (downcase (plist-get page :title))
+                     :data-tags (mapconcat #'downcase tags ""))
            (list 'a (list :href (concat "/" (plist-get page :url)) :class "article-link")
                  (list 'span '(:class "article-meta")
                        (list 'span '(:class "article-reading-time")
@@ -736,7 +740,7 @@ tags via TAG-ICONS."
   "The /tags/ index: every tag from TAG-COUNTS, alphabetically linked, with
 FOOTER/MODELINE."
   (let* ((sorted (sort (copy-sequence tag-counts)
-                        (lambda (a b) (string< (plist-get a :tag) (plist-get b :tag)))))
+                       (lambda (a b) (string< (plist-get a :tag) (plist-get b :tag)))))
          (items (if sorted
                     (mapcar (lambda (tc)
                               (list 'li (list :class "article-item"
@@ -751,7 +755,7 @@ FOOTER/MODELINE."
                   (list '(li (:class "article-item no-articles") "No tags found.")))))
     (append
      (list 'section '(:class "buffer buffer-list active" :id "buffer-list"
-                      :role "region" :aria-label "Tags")
+                             :role "region" :aria-label "Tags")
            (list 'div '(:class "buffer-body")
                  (append (list 'div '(:class "list-content"))
                          (list (append (list 'ul '(:class "article-list" :id "article-list" :role "list"))
@@ -771,8 +775,8 @@ FOOTER/MODELINE."
   '(div (:class "list-search" :role "search")
         (span (:class "list-search-prompt") "Search:")
         (input (:type "text" :id "post-search" :class "list-search-input"
-                :placeholder "search… #emacs  (/ to focus, Esc to clear)"
-                :autocomplete "off" :autocapitalize "off" :spellcheck "false"))
+                      :placeholder "search… #emacs  (/ to focus, Esc to clear)"
+                      :autocomplete "off" :autocapitalize "off" :spellcheck "false"))
         (span (:id "search-count" :class "list-search-count")))
   "The search box markup; filtering behavior comes from
 `theme--post-listing-search-script'.")
@@ -882,7 +886,7 @@ LIST-HEADER, TERM-HEADER, or TAG-CLOUD."
          (buffer-body (list 'div '(:class "buffer-body") list-content)))
     (append
      (list 'section '(:class "buffer buffer-list active" :id "buffer-list"
-                      :role "region" :aria-label "list")
+                             :role "region" :aria-label "list")
            buffer-body)
      (when modeline (list modeline)))))
 
@@ -902,12 +906,12 @@ links to /refs/ only if ALL-PAGES has a match."
      ((string-empty-p value) nil)
      ((equal key "tag")
       (list 'a (list :href (format "/tags/%s/" (downcase value)) :class "project-tag"
-                      :title (format "check posts tagged as %s" value))
+                     :title (format "check posts tagged as %s" value))
             value))
      ((equal key "refs")
       (if (and all-pages (denden-pages-with-ref all-pages value))
           (list 'a (list :href (format "/refs/%s/" (downcase value)) :class "project-tag"
-                          :title (format "check posts referencing %s" value))
+                         :title (format "check posts referencing %s" value))
                 value)
         (list 'span (list :class "project-tag" :title (format "site references %s" value)) value)))
      ((string-prefix-p "http" value)
@@ -950,11 +954,11 @@ where that would be wrong."
          (has-url (and url (not (string-empty-p url))))
          (name (plist-get item :name)))
     (list 'li (list :class "article-item topic-item"
-                     :data-url (and has-url url) :data-external (and has-url "true")
-                     :data-title (downcase (concat name " "
-                                                    (replace-regexp-in-string (rx "<" (+ (not (any ">"))) ">") "" (plist-get item :desc))
-                                                    " " (mapconcat #'identity (plist-get item :parts) " ")))
-                     :style (if chip-color (format "--chip-color: var(--%s)" chip-color) ""))
+                    :data-url (and has-url url) :data-external (and has-url "true")
+                    :data-title (downcase (concat name " "
+                                                  (replace-regexp-in-string (rx "<" (+ (not (any ">"))) ">") "" (plist-get item :desc))
+                                                  " " (mapconcat #'identity (plist-get item :parts) " ")))
+                    :style (if chip-color (format "--chip-color: var(--%s)" chip-color) ""))
           (list 'div '(:class "project-left") (list 'span '(:class "project-icon nf" :aria-hidden "true") icon))
           (append
            (list 'div '(:class "article-link"))
@@ -963,7 +967,7 @@ where that would be wrong."
              (list 'div '(:class "project-header"))
              (list (if has-url
                        (list 'a (list :href url :class "article-title project-name"
-                                       :target (and external "_blank") :rel (and external "noopener"))
+                                      :target (and external "_blank") :rel (and external "noopener"))
                              name)
                      (list 'span '(:class "article-title project-name") name)))
              (when refs-node (list refs-node))))
@@ -1021,7 +1025,7 @@ themes gallery."
                            :autocapitalize "off" :spellcheck "false"))
         (list 'span (list :id "topic-count" :class "list-search-count") (or count-text ""))
         '(input (:type "checkbox" :id "view-toggle" :class "view-toggle-input"
-                 :aria-label "Toggle list / grid view" :title "Toggle list / grid view"))
+                       :aria-label "Toggle list / grid view" :title "Toggle list / grid view"))
         '(label (:for "view-toggle" :class "tag-cloud-btn")
                 (span (:class "nf" :aria-hidden "true") "󰕰 "))))
 
@@ -1134,15 +1138,15 @@ Wander launch link, items, footer."
                           (list 'div '(:class "post-body") (list 'raw-html nil intro-html))))
          (search-node (theme--list-search :placeholder "filter… (/ to focus, Esc to clear)"))
          (article-children (delq nil (list post-header date-node intro-node
-                                            (and show-console theme--wander-launch-button)
-                                            search-node items-node
-                                            theme--topic-list-search-script)))
+                                           (and show-console theme--wander-launch-button)
+                                           search-node items-node
+                                           theme--topic-list-search-script)))
          (article (append (list 'article '(:class "post-content" :id "article-content")) article-children))
          (footer-node (append (list 'footer nil) (and footer (list footer))))
          (buffer-body (list 'div '(:class "buffer-body" :id "content-body") article footer-node))
          (section-children (delq nil (list buffer-body modeline))))
     (append (list 'section '(:class "buffer buffer-content active" :id "buffer-content"
-                             :role "region" :aria-label title))
+                                    :role "region" :aria-label title))
             section-children)))
 
 ;;;; /themes/ gallery
@@ -1159,7 +1163,7 @@ Wander launch link, items, footer."
     (list 'li (list :class "article-item topic-item scheme-card" :data-title search-text)
           (append
            (list 'button (list :class "scheme-card-btn" :data-key (plist-get scheme :key)
-                                :data-name name :data-colors (json-serialize (vconcat colors))))
+                               :data-name name :data-colors (json-serialize (vconcat colors))))
            (list (append (list 'span '(:class "scheme-card-head"))
                          (list (list 'span '(:class "scheme-card-name") name))
                          (when (and variant (not (string-empty-p variant)))
@@ -1181,16 +1185,16 @@ partial), FOOTER, MODELINE."
          (body-node (and body-html (not (string-empty-p body-html))
                          (list 'div '(:class "post-body") (list 'raw-html nil body-html))))
          (search-node (theme--list-search :placeholder "filter by name or author… (/ to focus, Esc to clear)"
-                                           :count-text (format "%d schemes" (length cards))))
+                                          :count-text (format "%d schemes" (length cards))))
          (list-node (append (list 'ul '(:class "article-list" :id "article-list" :role "list"))
-                             (mapcar #'theme--scheme-card cards)))
+                            (mapcar #'theme--scheme-card cards)))
          (article-children (delq nil (list post-header body-node search-node list-node)))
          (article (append (list 'article '(:class "post-content" :id "article-content")) article-children))
          (footer-node (append (list 'footer nil) (and footer (list footer))))
          (buffer-body (list 'div '(:class "buffer-body" :id "content-body") article footer-node))
          (section-children (delq nil (list buffer-body modeline))))
     (append (list 'section '(:class "buffer buffer-content active" :id "buffer-content"
-                             :role "region" :aria-label title))
+                                    :role "region" :aria-label title))
             section-children)))
 
 (provide 'theme)
