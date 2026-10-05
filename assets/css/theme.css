@@ -2033,6 +2033,33 @@
     }
   }
 
+  /* Gentle name-tag jitter */
+  @keyframes sway {
+    0%,
+    100% {
+      transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    16.7% {
+      transform: translate(-0.5px, -0.5px) rotate(3deg);
+    }
+    33.4% {
+      transform: translate(-0.5px, 0.5px) rotate(-3deg);
+    }
+    50% {
+      transform: translate(0, 0) rotate(0deg) scale(1.1);
+    }
+    67.7% {
+      transform: translate(0.5px, -0.5px) rotate(-3deg);
+    }
+    84.4% {
+      transform: translate(0.5px, 0.5px) rotate(3deg);
+    }
+  }
+  .sway {
+    display: inline-block;
+    animation: sway 0.33s ease-in-out infinite normal;
+  }
+
   /* ── Hamburger ── */
   .menu-hamburger {
     display: none;

@@ -163,7 +163,7 @@ variant exists; \"is-grid\" is a separate class."
 buttons, and the scheme popup."
   (append
    (list 'div '(:class "menu-bar-right")
-         (list 'a '(:href "/log/" :class "menu-bar-title") site-title)
+         (list 'a '(:href "/log/" :class "menu-bar-title sway") site-title)
          '(button (:class "tag-cloud-btn" :title "Open Search + M-x Command palette Dialog"
                    :aria-label "Open Search + Command palette Dialog" :data-action "open-palette")
                   (span (:class "nf" :aria-hidden "true") "󰨈 ")
