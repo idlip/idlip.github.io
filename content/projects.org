@@ -2,6 +2,7 @@
 #+layout: topic-list
 #+draft: false
 #+chip_color: base0B
+#+aliases[]: tools
 
 Projects I build, maintain, tools I use, and interesting things worth checking out.
 

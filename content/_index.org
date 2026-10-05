@@ -17,6 +17,7 @@ reading, quotes I keep, and whatever I freshly bake with site.
           (list (cons "Talks & Conferences" " ")
                 (cons "Books & Novels" (cdr (assoc "novel" site-tag-icons)))
                 (cons "Movies" " ")
+                (cons "Series" "󰟴")
                 (cons "Anime" (cdr (assoc "anime" site-tag-icons)))
                 (cons "YouTube" "󰟴 ")
                 (cons "Life & Philosophy" "󱀡 ")
