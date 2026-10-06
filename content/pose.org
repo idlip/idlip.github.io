@@ -2,10 +2,21 @@
 #+layout: pose
 #+draft: false
 #+no_comment: t
+#+desc: Quick thoughts, single lines, mini notes and snippets of journal.
 
 Quick thoughts, single lines, mini notes and snippets of journal.
 
 ------
+
+** 2026-10-06
+When brain gets foggy, staring at a wall for >10 minutes helps alot
+-----
+Might you go into nirvana state
+
+** 2026-10-05
+Emacs has always been my Dopamine reservoir
+-----
+[[file:log/may-i-recommend.org][I live in emacs]]
 
 ** 2026-10-01
 

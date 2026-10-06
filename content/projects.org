@@ -15,10 +15,17 @@ For what I primarily use please check: [[file:uses.org][Uses]] page which lists 
 - [[https://github.com/idlip/haki][Haki]] :: Modern dark color scheme for Emacs, also used on this site | tags: emacs,lisp | web: https://melpa.org/#/haki-theme
 - [[https://github.com/idlip/d-nix][d-nix]] :: NixOS + Org + Emacs machine configuration | tags: nix,emacs,orgmode
 - [[https://github.com/idlip/d-bin][d-bin]] :: Functional shell scripts for Linux | tags: shell,tools
+
 - [[https://github.com/idlip/lncrna][lncRNA]] :: Coding potential and sequence analysis pipeline for long non-coding RNA | tags: bioinformatics,python
 - [[https://github.com/OncoScan/OralPathNet][OralPathNet]] :: Deep learning model for oral cancer detection from histopathology | tags: ml,python
 - [[https://github.com/idlip/alignWrap][alignWrap]] :: R wrapper package for sequence alignment tools | tags: bioinformatics,r
 - [[https://github.com/idlip/QuASeR][QuASeR]] :: Proof-of-concept de novo genome assembler | tags: bioinformatics,python
+
+- [[https://github.com/idlip/jump-pad][Jump Pad]] :: Minimal URL shortener+redirector and pastebin tool
+
+- [[https://github.com/idlip/nnflux][nnflux]] :: Read [[https://miniflux.app/][miniflux]] feeds in emacs Gnus reader
+
+- [[https://github.com/idlip/denden][denden]] :: Emacs + Org mode static site generator based on org-publish | refs: denden
 
 - [[https://github.com/fossunited/fossunited][FossUnited Platform]] :: Frappe based platform that I maintain as my day job | tags: frappe,work | refs: fossunited
 

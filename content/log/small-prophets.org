@@ -1,4 +1,4 @@
-#+title: Small Prophets
+#+title: Small Prophets: A magical peace
 #+date: 2026-10-03
 #+tags[]: series review
 #+refs[]: prophet

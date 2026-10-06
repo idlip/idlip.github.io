@@ -1,6 +1,7 @@
 #+title: Denden: Emacs Lisp SSG based on org-publish
 #+date: 2026-10-02
-#+tags[]: emacs orgmode lisp denden
+#+tags: emacs orgmode lisp denden
+#+refs: denden
 
 [[https://github.com/idlip/denden][Denden]] is yet another SSG based on org-publish and utilizing complete Elisp ecosystem. This site is
 built using that. Its not a package per-say, just an helper and building blocks on top of org mode's
