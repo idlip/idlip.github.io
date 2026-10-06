@@ -642,7 +642,8 @@ to the remaining link budget."
      (site--wrap-page
       :title title
       :url (and this-page (plist-get this-page :url))
-      :description (site--meta-description-for-page (list :content-html body-html))
+      :description (site--meta-description-for-page
+                    (list :content-html body-html :source (and this-page (plist-get this-page :source))))
       :og-type "article" :published-time date
       :modified-time (and lastmod (not (equal lastmod date)) lastmod)
       :tags tags
@@ -1265,13 +1266,25 @@ they would otherwise look like body prose."
    (t (seq-mapcat #'site--og-prose-paragraphs (dom-children node)))))
 
 (defun site--og-excerpt-for-page (page)
-  "Return PAGE's OG-card excerpt: the first two body-prose <p>s of its
-rendered content, as blank-line separated plain text. Skips any <p> that
-is really an image or its caption; see `site--og-prose-paragraphs'."
-  (let* ((dom (with-temp-buffer (insert (plist-get page :content-html))
-                                (libxml-parse-html-region (point-min) (point-max))))
-         (paragraphs (seq-take (site--og-prose-paragraphs dom) 2)))
-    (mapconcat (lambda (p) (string-trim (dom-texts p))) paragraphs "\n\n")))
+  "Return PAGE's OG-card excerpt: its #+description/#+desc/#+og_description:
+keyword if its source sets one, otherwise the first two body-prose <p>s of
+its rendered content, as blank-line separated plain text. Skips any <p>
+that is really an image or its caption; see `site--og-prose-paragraphs'."
+  (let* ((source (plist-get page :source))
+         (keywords (and source (file-exists-p source)
+                        (with-temp-buffer
+                          (insert-file-contents source)
+                          (org-mode)
+                          (org-collect-keywords '("DESCRIPTION" "DESC" "OG_DESCRIPTION")))))
+         (description (and keywords
+                            (or (cadr (assoc "DESCRIPTION" keywords))
+                                (cadr (assoc "DESC" keywords))
+                                (cadr (assoc "OG_DESCRIPTION" keywords))))))
+    (or description
+        (let* ((dom (with-temp-buffer (insert (plist-get page :content-html))
+                                      (libxml-parse-html-region (point-min) (point-max))))
+               (paragraphs (seq-take (site--og-prose-paragraphs dom) 2)))
+          (mapconcat (lambda (p) (string-trim (dom-texts p))) paragraphs "\n\n")))))
 
 (defun site--meta-description-for-page (page)
   "Return PAGE's meta-description text: its OG excerpt, collapsed to one line
