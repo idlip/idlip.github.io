@@ -164,6 +164,9 @@
 
     /* Content width — cycled by the width-toggle button */
     --content-max-width: 840px;
+    /* Horizontal inset shared by .post-content and the menu-bar/modeline inner
+       rows, so all three line up at the same left/right edge. */
+    --content-pad-x: 2em;
 
     /* Body font — cycled by font-mode button */
     --body-font-family: var(--code-font);
@@ -496,9 +499,9 @@
   }
   hr {
     width: 80%;
-    margin: 2em auto;
+    margin: 1em auto;
     border: none;
-    border-top: 1px dashed var(--border-dim);
+    border-top: 1px dashed var(--border-highlight);
   }
   figcaption {
     margin-bottom: 1rem;
@@ -1112,7 +1115,7 @@
   .post-content {
     width: 100%;
     max-width: var(--content-max-width, 840px);
-    padding: 1em 2em;
+    padding: 1em var(--content-pad-x);
     margin: 0 auto;
     box-sizing: border-box;
   }
@@ -1830,6 +1833,8 @@
     width: 100%;
     max-width: var(--content-max-width, 840px);
     margin: 0 auto;
+    padding: 0 var(--content-pad-x);
+    box-sizing: border-box;
   }
   .menu-items {
     display: flex;
@@ -2102,7 +2107,9 @@
     z-index: 100;
     display: flex;
     align-items: center;
-    padding: 0.8em 1.5em 0.8em 0.4em;
+    /* Horizontal inset lives on .modeline-inner instead, so it can match
+       --content-pad-x; this bar only keeps its own vertical padding. */
+    padding: 0.8em 0;
     /* iOS home indicator: keep the bar above the safe-area inset. */
     padding-bottom: max(0.8em, env(safe-area-inset-bottom, 0));
     background-color: color-mix(
@@ -2125,7 +2132,7 @@
     contain: layout paint;
     will-change: transform;
     @media (width <= 768px) {
-      padding: 0.2em 0.5em;
+      padding: 0.2em 0;
       font-size: var(--fs-3xs);
       padding-bottom: max(0.2em, env(safe-area-inset-bottom, 0));
     }
@@ -2139,6 +2146,8 @@
     width: 100%;
     max-width: var(--content-max-width, 840px);
     margin: 0 auto;
+    padding: 0 var(--content-pad-x);
+    box-sizing: border-box;
   }
 
   .ml-left {
@@ -2483,6 +2492,7 @@
        replaces the desktop button row, and .menu-items moves out of flow below. */
     :root {
       --menu-h: calc(3.2rem + env(safe-area-inset-top, 0px));
+      --content-pad-x: 0.75em;
     }
 
     /* Menu: hidden by default, revealed via hamburger */
