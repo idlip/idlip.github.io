@@ -1,5 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/rss.xml" /><id>https://idlip.in/</id><updated>2026-10-05T00:00:00Z</updated><author><name>Dilip | Zororg</name><email>hi@idlip.in</email></author><generator uri="https://gohugo.io/">Hugo</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Taxi: the French Franchise</title><link rel="alternate" type="text/html" href="https://idlip.in/log/taxi-franchise/" /><id>https://idlip.in/log/taxi-franchise/</id><published>2026-10-04T00:00:00Z</published><updated>2026-10-05T00:00:00Z</updated><category term="movies" label="movies" scheme="https://idlip.in/tags/"></category><category term="review" label="review" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/rss.xml" /><id>https://idlip.in/</id><updated>2026-10-07T00:00:00Z</updated><author><name>Dilip | Zororg</name><email>hi@idlip.in</email></author><generator uri="https://gohugo.io/">Hugo</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Org mode is the best OBTF</title><link rel="alternate" type="text/html" href="https://idlip.in/log/obtf/" /><id>https://idlip.in/log/obtf/</id><published>2026-10-07T00:00:00Z</published><updated>2026-10-07T00:00:00Z</updated><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><category term="obtf" label="obtf" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<ul class="org-ul">
+<li>This content is written to be lateral post to <a href="https://redlib.catsarch.com/r/onebigtextfile">r/onebigtextfile</a> and spark the idea to many.</li>
+</ul>
+
+<p>
+I wrote about <a href="/log/obtf-org-mode/">OBTF as Second Brain with Org mode</a> a while back, but that post was mostly "here is my datetree workflow." This one is a direct response to <a href="https://obtf.ru/en">obtf.ru</a>, a site that makes the case for <b>One Big Text File</b> a lot sharper than I did, and argues it against FOMO fatigue I've felt myself.
+</p>
+
+<p>
+OBTF in some sense is a lazy man's system to get things done. But if you feel more lazier to even think of it, I'd highly recommend to read <a href="https://obtf.ru/en">https://obtf.ru/en</a> website, since it helps me as well to stay motivated to achieve its purpose.
+</p>
+<div id="outline-container-obtf-s-philosophy-pitch" class="outline-2">
+<h2 id="obtf-s-philosophy-pitch">OBTF's philosophy pitch</h2>
+<div class="outline-text-2" id="text-org8d73efd">
+<p>
+Their whole argument boils down to a handful of lines:
+</p>
+
+<blockquote>
+<p>
+Your entire life, notes, tasks, ideas, logs, in one text file.
+Just <code>.txt</code>.
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+The best productivity system is the one you actually use. And nothing is simpler than a text file.
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+Search beats categories
+</p>
+</blockquote>
+
+<p>
+No vendor lock-in, speed, offline by default, permanence. All fair, and none of it is specific to a bare <code>.txt</code> file. It's specific to <b>plain text</b>. You make use of many tools to suite your needs instead of you learning and adapting to a system.
+</p>
+
+<p>
+Some posts on OBTF found over internet:
+</p>
+
+<ul class="org-ul">
+<li><a href="https://talk.macpowerusers.com/t/using-one-big-text-file-obtf-for-daily-blogging-and-journal/37546">Forum post on MacPowerUsers</a></li>
+<li><a href="https://mrshll.uk/posts/plain-text-planner/">https://mrshll.uk/posts/plain-text-planner/</a></li>
+<li><a href="https://jeffhuang.com/productivity_text_file/">https://jeffhuang.com/productivity_text_file/</a></li>
+<li><a href="https://mrdizzy.blog/blog/obtf/">https://mrdizzy.blog/blog/obtf/</a></li>
+<li><a href="https://beardystarstuff.net/posts/2024-04-17.html">https://beardystarstuff.net/posts/2024-04-17.html</a></li>
+<li><a href="https://whhone.com/posts/one-line-per-day-diary-in-org-mode/">https://whhone.com/posts/one-line-per-day-diary-in-org-mode/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-where-org-gives-you-more" class="outline-2">
+<h2 id="where-org-gives-you-more">Where Org gives you more</h2>
+<div class="outline-text-2" id="text-org2b23d62">
+<p>
+"Search beats categories" is true until the file gets big enough that search alone stops being enough, and at that point you want <b>structure you can turn on when you need it</b>, not structure forced on you from day one.
+</p>
+
+<p>
+I still keep a <code>datetree</code>, Year &gt; Month &gt; Day &gt; entry, which gives me OBTF's own "newest entries first, just append and go" model:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><code><span class="org-org-level-1">* 2026</span>
+<span class="org-org-level-2">** 2026-10 October</span>
+<span class="org-org-level-3">*** 2026-10-07 Tuesday</span>
+<span class="org-org-level-4">**** &lt;whatever I'm capturing&gt;            </span><span class="org-org-level-4"><span class="org-org-tag">:tag1:tag2:</span></span>
+</code></pre>
+</div>
+
+<p>
+The difference from a flat file is that I'm not stuck with chronology as the <b>only</b> axis. A few things I still reach for on top of the datetree:
+</p>
+
+<ul class="org-ul">
+<li><code>org-sparse-tree</code> (<code>C-c /</code>): narrow the whole tree down to just the headings matching a tag or
+property, without touching the file itself.</li>
+
+<li><code>consult-org-heading</code> / <code>consult-line</code> (from the <code>consult</code> package): fuzzy-jump straight to a
+heading or line, which is the actual "search beats categories" experience, just inside a
+structured file instead of a flat one.</li>
+
+<li><code>org-ql</code>: for queries that are more than a single tag match, closer to a real query language over
+my notes than regexp-over-a-text-file ever was.</li>
+
+<li><code>#+select_tags</code>: export just the headings carrying a given tag into a throwaway buffer, which
+behaves like a temporary, generated "file" scoped to one topic, without ever having to actually
+split the real file.</li>
+
+<li><a href="https://github.com/toshism/org-super-links">org-super-links</a>: Package to backlink org headings to one another.</li>
+
+<li><code>org-agenda</code>: Best way to get organized and plan for time. Paired with note taking, the agenda interface is so powerful that even I've underused it mostly to just get stuff done.</li>
+
+<li>Tags: More detail on the tagging convention I use (the <code>l@=/=n@=/=p@</code> prefixes) is in <a href="/log/obtf-org-mode/">OBTF as Second Brain with Org mode</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-conclude" class="outline-2">
+<h2 id="conclude">Conclude</h2>
+<div class="outline-text-2" id="text-orgcdde916">
+<p>
+These might sound very much tied to emacs, yes thats mostly true. Environment so perfect that it can be called a monolith of emacs. But alas, people have ported org mode inspired modes and packages to various other ecosystem.
+</p>
+
+<ul class="org-ul">
+<li><a href="https://github.com/nvim-orgmode/orgmode">orgmode.nvim</a>: OG clone for neovim</li>
+<li><a href="https://github.com/xheisenbugx/org.nvim">org.nvim</a>: New and AI assisted clone of complete org library</li>
+<li><a href="https://github.com/nvim-neorg/neorg">neorg</a>: Future of organizing life in neovim</li>
+<li><a href="https://github.com/rrajath/grove">grove</a>: Beautiful org mode first task/notes android app</li>
+<li><a href="https://github.com/orgzly-revived/orgzly-android-revived">orgzly-revived</a>: Org in mobile at ease</li>
+<li><a href="https://github.com/amake/orgro">orgro</a>: Good org mode reader for android+IOS</li>
+</ul>
+
+<p>
+PS: I use official <a href="https://www.emacswiki.org/emacs/EmacsOnAndroid">Emacs on Android</a> as well bringing the same environment on the phone (<code>_</code>;)
+</p>
+
+<p>
+Ultimately only thing that is required with note taking or system is to always review, revise, repeat and process them.
+</p>
+</div>
+</div>
+]]></content></entry><entry><title>Taxi: the French Franchise</title><link rel="alternate" type="text/html" href="https://idlip.in/log/taxi-franchise/" /><id>https://idlip.in/log/taxi-franchise/</id><published>2026-10-04T00:00:00Z</published><updated>2026-10-05T00:00:00Z</updated><category term="movies" label="movies" scheme="https://idlip.in/tags/"></category><category term="review" label="review" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
 <a href="https://en.wikipedia.org/wiki/Taxi_(film_series)">Taxi</a> is french movie franchise I discovered by research (🦜). It has amazing comedy and good story.
 All 5 movies are almost the same in story, but the fun gets going. Its all about a taxi driver in Marcielle doing his taxi job and there is a very funny police work and chasing criminal.
 </p>
@@ -68,7 +194,7 @@ native <a href="https://orgmode.org/manual/Publishing.html">ox-publish</a> and <
 </p>
 <div id="outline-container-why-i-even-started-this" class="outline-2">
 <h2 id="why-i-even-started-this">Why I even started this</h2>
-<div class="outline-text-2" id="text-org69e07bf">
+<div class="outline-text-2" id="text-orgaad3663">
 <p>
 This site used to run on <a href="https://gohugo.io">Hugo</a> using same theme called <a href="https://github.com/idlip/hakimacs">hakimacs</a>, with content in Org mode rendered through go-org, and it worked fine for months. But I hated looking how ugly <a href="https://gohugo.io/templates/introduction/">go-template</a> looked and lot of regexp to do something, although it was fast, it was not human (emacs user) friendly to read at all. When I wrote in org mode, I always liked why not elisp somewhere to hack and do stuff. Org is a rich ecosystem and it needs way more hackable place to configure, not hugo to regexp parse everything.
 </p>
@@ -84,7 +210,7 @@ That annoyance is the entire reason denden exists.
 </div>
 <div id="outline-container-what-denden-actually-is-and-isn-t" class="outline-2">
 <h2 id="what-denden-actually-is-and-isn-t">What denden actually is, and isn't</h2>
-<div class="outline-text-2" id="text-orgc559398">
+<div class="outline-text-2" id="text-org24c0a6e">
 <p>
 <code>denden</code> is not a package, its more like a tool, helpers and building block on top of org-publish. It
 uses all native org mode libs and <code>org-publish</code>, the publishing engine that already ships inside Org mode, plus a small pile of Elisp helper functions sitting on top of it, that's the whole thing. <code>denden.el</code> itself is one file, no hidden layers, no magic you can't just <code>M-x describe-function</code> your way into.
@@ -110,7 +236,7 @@ Nobody's stopping you, there's no true "denden way" to acheive it.
 </div>
 <div id="outline-container-templates-are-just-lists-the-sexp-html-bit" class="outline-2">
 <h2 id="templates-are-just-lists-the-sexp-html-bit">Templates are just lists, the sexp-HTML bit</h2>
-<div class="outline-text-2" id="text-orga206065">
+<div class="outline-text-2" id="text-orgc23c63e">
 <p>
 This is the part I like the most, a denden template is not a template language at all, it's a plain Emacs Lisp list, shaped like this.
 </p>
@@ -168,7 +294,7 @@ That's a whole working nav bar, <code>menu-items</code> is just a list of <code>
 </div>
 <div id="outline-container-how-my-own-site-is-built-with-it" class="outline-2">
 <h2 id="how-my-own-site-is-built-with-it">How my own site is built with it</h2>
-<div class="outline-text-2" id="text-org8eac96f">
+<div class="outline-text-2" id="text-orga370043">
 <p>
 My site's own Elisp lives in exactly three files, and I think that's a feature, not something I need to apologize for.
 </p>
@@ -204,7 +330,7 @@ Everything you're reading right now, the  <button type="button" class="tag-cloud
 </div>
 <div id="outline-container-one-more-cool-bit-even-the-og-card-images-are-sexp" class="outline-2">
 <h2 id="one-more-cool-bit-even-the-og-card-images-are-sexp">One more cool bit, even the OG card images are sexp</h2>
-<div class="outline-text-2" id="text-org1dd5117">
+<div class="outline-text-2" id="text-orgf037fb9">
 <p>
 OG cards, the preview image you see when a link gets shared on social media, are usually generated with some headless browser screenshot setup or an image library. In denden it's the exact same <code>(TAG ATTRIBUTE-PLIST . CHILDREN)</code> trick, just aimed at <code>&lt;svg&gt;</code> instead of <code>&lt;div&gt;</code>, from my own <code>site.el</code>.
 </p>
@@ -233,7 +359,7 @@ Same <code>denden-serialize-node</code> (<a href="https://github.com/idlip/dende
 </div>
 <div id="outline-container-it-s-also-properly-fast" class="outline-2">
 <h2 id="it-s-also-properly-fast">It's also properly fast</h2>
-<div class="outline-text-2" id="text-orgb1af450">
+<div class="outline-text-2" id="text-org4742ce9">
 <p>
 I was bracing for a slow first build, since Emacs isn't exactly famous for being a speed train. It wasn't. A full build of this entire site, every post, every feed, every OG card image, finishes in a couple of seconds. I build it from the terminal like this.
 </p>
@@ -254,7 +380,7 @@ incremental cache, and it's done before switch two windows. There's also an asyn
 </div>
 <div id="outline-container-owning-the-whole-thing" class="outline-2">
 <h2 id="owning-the-whole-thing">Owning the whole thing</h2>
-<div class="outline-text-2" id="text-org6e2aeb5">
+<div class="outline-text-2" id="text-org8f689f6">
 <p>
 The thing I like most isn't the speed, it's that I own every line of this. I'm an Emacs user, I already spend my <a href="/log/may-i-recommend/">May I Recommend EWM</a> tweaking my config, and now my blog engine runs in the same language, the same editor, the same muscle memory. If I want a new feature, I don't wait for a plugin, I don't learn a templating DSL, I just write a function next to the ones already there and call it. That's a genuinely different feeling from configuring a static site generator, it's closer to how your Emacs config itself grows over the years, one small function at a time, shaped around what you personally want.
 </p>
@@ -265,7 +391,7 @@ If any of this sounds interesting and you're also an Emacs plus Org mode person,
 </p>
 
 
-<div id="org175eb14" class="figure">
+<div id="org93b73a9" class="figure">
 <p><img src="https://raw.githubusercontent.com/idlip/denden/refs/heads/master/example/screenshot.png" alt="screenshot.png" />
 </p>
 <p>Snap of a example bearblog like site built with denden</p>
@@ -274,7 +400,7 @@ If any of this sounds interesting and you're also an Emacs plus Org mode person,
 </div>
 <div id="outline-container-about-the-name" class="outline-2">
 <h2 id="about-the-name">About the name</h2>
-<div class="outline-text-2" id="text-orgde2b3de">
+<div class="outline-text-2" id="text-orgd080fde">
 <p>
 A <code>denden mushi</code> is the snail-shaped transponder phone from One Piece, the way everyone in that world
 talks to each other across the sea. If you've looked around this site even a little, the One Piece
@@ -467,7 +593,7 @@ community or just kill time playing it.
 </p>
 <div id="outline-container-early-childhood" class="outline-2">
 <h2 id="early-childhood">Early childhood</h2>
-<div class="outline-text-2" id="text-orgdd5351b">
+<div class="outline-text-2" id="text-orgd82b42c">
 <p>
 The best game that really filled my early childhood was <a href="https://www.rockstargames.com/games/vicecity">GTA Vice City</a>, the OG steal car and roam
 around, act as a simulator person immersed in Tony's grant adventure of theft
@@ -480,16 +606,16 @@ love WWE for its entertainment factor and character they had in Attitude era (th
 blog)
 </p>
 
-<div class="grid" id="orga091dd5">
+<div class="grid" id="org71309c0">
 
-<div id="org5c94595" class="figure">
+<div id="orgc216eb1" class="figure">
 <p><img src="https://media.gtanet.com/images/2764.jpg" alt="&quot;GTA Vice City game showing final Mission Passed&quot;" />
 </p>
 <p>GTA Vice City game showing final Mission Passed.</p>
 </div>
 
 
-<div id="org828cce2" class="figure">
+<div id="org1a2dddf" class="figure">
 <p><img src="https://images.launchbox-app.com/02c94837-29ae-4d2d-b0d9-a1e55b08ccd5.png" alt="02c94837-29ae-4d2d-b0d9-a1e55b08ccd5.png" />
 </p>
 <p>WWE Smackdown here comes pain, undertaker choke slamming Brock in Elimination chamber</p>
@@ -507,16 +633,16 @@ Also <a href="https://en.wikipedia.org/wiki/Captain_Claw">Captain Claw</a> was s
 towards Pirates world (One piece). Captain claw was definitely ahead of its time for sure, even today I find the visuals stunning compared to any mobile games.
 </p>
 
-<div class="grid" id="org5527ab4">
+<div class="grid" id="org23e68fe">
 
-<div id="org01e518d" class="figure">
+<div id="orgecce40c" class="figure">
 <p><img src="https://images.sftcdn.net/images/t_app-cover-l,f_auto/p/0c450dd1-e4cb-447c-9d2f-ac3e7aabf75e/1425069087/road-rash-road-rash_5.jpg" alt="road-rash-road-rash_5.jpg" />
 </p>
 <p>Road rash game with cop chasing and one biker about to be kicked</p>
 </div>
 
 
-<div id="org34345d0" class="figure">
+<div id="orga1b761e" class="figure">
 <p><img src="https://static0.xdaimages.com/wordpress/wp-content/uploads/wm/2025/07/captain-claw-level-two-enemies.png" alt="captain-claw-level-two-enemies.png" />
 </p>
 <p>Captain claw about to kill two puppy</p>
@@ -532,7 +658,7 @@ play cricket in the streets and in ground every day. School sports games weren't
 </div>
 <div id="outline-container-adulthood" class="outline-2">
 <h2 id="adulthood">Adulthood</h2>
-<div class="outline-text-2" id="text-org756046a">
+<div class="outline-text-2" id="text-org47a331f">
 <p>
 Most of the adulthood drifted towards using social media; Facebook was peak among socializing, Hike
 was crazy with stickers and there arised the mobile gaming which was at most peak.
@@ -545,16 +671,16 @@ usage and time. Obviously I cannot forget the giant game that was on everyone's 
 Saga</a>, it was just delicious.
 </p>
 
-<div class="grid" id="org7b4d2af">
+<div class="grid" id="org2cb78ce">
 
-<div id="orgdc29d72" class="figure">
+<div id="orgf59df05" class="figure">
 <p><img src="https://i.pinimg.com/originals/f1/76/8f/f1768fc4d935f5b018eeace40dfcb995.jpg" alt="f1768fc4d935f5b018eeace40dfcb995.jpg" />
 </p>
 <p>Subway surfer where boy got caught by cop</p>
 </div>
 
 
-<div id="org3508bd1" class="figure">
+<div id="org3f4c10c" class="figure">
 <p><img src="https://cdn.mobygames.com/screenshots/1175350-candy-crush-saga-android-the-chocolate-candy-covered-with-sprink.jpg" alt="1175350-candy-crush-saga-android-the-chocolate-candy-covered-with-sprink.jpg" />
 </p>
 <p>Candy crush saga. The OG arcase puzzle game.</p>
@@ -578,16 +704,16 @@ to popular clan and ask for "Give me Co or else will leave", yes promotion was l
 there.
 </p>
 
-<div class="grid" id="org73b3c38">
+<div class="grid" id="org971bb12">
 
-<div id="orgec0203f" class="figure">
+<div id="orgcffba24" class="figure">
 <p><img src="https://cocland.com/wp-content/uploads/2015/05/hogowiwi-th9-guide-1.jpg" alt="hogowiwi-th9-guide-1.jpg" />
 </p>
 <p>Clash of Clans TH9 GoHo attack with hogs lvl 5 max</p>
 </div>
 
 
-<div id="orgcb779a3" class="figure">
+<div id="org2dc8a12" class="figure">
 <p><img src="https://upload.wikimedia.org/wikipedia/en/9/9e/Clash_Royale_2v2.jpg" alt="Clash_Royale_2v2.jpg" />
 </p>
 <p>Clash royale training camp attack</p>
@@ -619,7 +745,7 @@ complicated and ruined the games (thanks).
 </div>
 <div id="outline-container-pandemic" class="outline-3">
 <h3 id="pandemic">Pandemic</h3>
-<div class="outline-text-3" id="text-org7161c88">
+<div class="outline-text-3" id="text-org811d841">
 <p>
 Then came the pandemic and home quarantine, this period started more time towards mobile gaming.
 Since all friends had to kill time, we eventually came to one game to play, it was <a href="https://www.mobilelegends.com/">Mobile Legends:
@@ -633,16 +759,16 @@ competitive to play with others. We used to play as team and it was fun to curse
 play many games laughing together.
 </p>
 
-<div class="grid" id="orgc77865c">
+<div class="grid" id="orgdc73d6c">
 
-<div id="org776f8e8" class="figure">
+<div id="orge5cae90" class="figure">
 <p><img src="https://i0.wp.com/gamingonphone.com/wp-content/uploads/2022/02/mobile-legends-lancelot.jpg" alt="mobile-legends-lancelot.jpg" />
 </p>
 <p>Mobile Legends attacking in Enemy base</p>
 </div>
 
 
-<div id="org3bf479e" class="figure">
+<div id="org021c6ac" class="figure">
 <p><img src="https://cdn-www.bluestacks.com/bs-images/Onmyoji-Arena_Bot-Guide_EN_6.png" alt="Onmyoji-Arena_Bot-Guide_EN_6.png" />
 </p>
 <p>Onmyoji Arena, the beauty of MOBA game</p>
@@ -665,7 +791,7 @@ of time occupancy.
 </div>
 <div id="outline-container-adult" class="outline-2">
 <h2 id="adult">Adult</h2>
-<div class="outline-text-2" id="text-org93a1879">
+<div class="outline-text-2" id="text-org455ab8e">
 <p>
 After pandemic and MLBB, I slowly dropped playing any games. Our friends used to play Badminton
 together in park as beginner and slowly shifted to playing only in Indoor court nowadays (novice -&gt;
@@ -696,16 +822,16 @@ As of writing this, I'm really enjoying <a href="https://play.google.com/store/a
 and cozy way to move insects to target.
 </p>
 
-<div class="grid" id="orgc156e39">
+<div class="grid" id="orgaa2628a">
 
-<div id="orgce24e15" class="figure">
+<div id="org0da0f0f" class="figure">
 <p><img src="https://img.skich.io/games/screenshots/637021ce-eee4-4bc7-8d27-b936e25f641a.jpg" alt="637021ce-eee4-4bc7-8d27-b936e25f641a.jpg" />
 </p>
 <p>Humbug 2 gameplay</p>
 </div>
 
 
-<div id="orgac7851b" class="figure">
+<div id="org858c72c" class="figure">
 <p><img src="https://www.levelinfinite.com/wp-content/uploads/2024/02/honor-of-kings-game-image-7.jpg" alt="honor-of-kings-game-image-7.jpg" />
 </p>
 <p>Honor of Kings game</p>
@@ -727,30 +853,30 @@ Linux, I only have some casual native games here as well.
 <li><a href="https://www.openttd.org/">OpenTTD</a> - FOSS Transport tycoon game</li>
 </ol>
 
-<div class="grid" id="orgd963bdb">
+<div class="grid" id="org2e0a8e2">
 
-<div id="orgc7ecf63" class="figure">
+<div id="org176692d" class="figure">
 <p><img src="https://cdn8.gametop.com/download-free-games/fishdom-h2o/b2.jpg" alt="b2.jpg" />
 </p>
 <p>Fishdom H20 find hidden objects</p>
 </div>
 
 
-<div id="orge3b791a" class="figure">
+<div id="org5f904b1" class="figure">
 <p><img src="https://media.dotesports.com/wp-content/uploads/2024/08/Find-all-unit-hotkeys-in-Age-of-Mythology.jpg" alt="Find-all-unit-hotkeys-in-Age-of-Mythology.jpg" />
 </p>
 <p>Age of mythology village cooking</p>
 </div>
 
 
-<div id="org1a74abe" class="figure">
+<div id="org62d10a3" class="figure">
 <p><img src="https://pcgames9505.weebly.com/uploads/1/0/2/1/102119388/nfs2semonolithic.jpg" alt="nfs2semonolithic.jpg" />
 </p>
 <p>NFS SE Racing game</p>
 </div>
 
 
-<div id="org043b9a3" class="figure">
+<div id="org7f096a0" class="figure">
 <p><img src="https://assetsio.gnwcdn.com/openttd-best-management-games.jpg" alt="openttd-best-management-games.jpg" />
 </p>
 <p>OpenTTD land mass</p>
@@ -783,7 +909,7 @@ And look what I found randomly&hellip; Lucky for me it was a tree (garden or par
 </p>
 
 
-<div id="orga093993" class="figure">
+<div id="org5973b1f" class="figure">
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Palazzo_Boncompagni_-_Giornata_nazionale_delle_dimore_storiche_e_WP25BO_01.jpg" alt="&quot;A tree at Palazzo Boncompagni, a historic Italian residence&quot;" width="600px" />
 </p>
 <p>A random image found via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:Palazzo_Boncompagni_-_Giornata_nazionale_delle_dimore_storiche_e_WP25BO_01.jpg">WikiMedia</a></p>
@@ -1024,7 +1150,7 @@ trouble.</li>
 <hr />
 <div id="outline-container-tldr" class="outline-2">
 <h2 id="tldr">TLDR</h2>
-<div class="outline-text-2" id="text-org96e072b">
+<div class="outline-text-2" id="text-org292c5e8">
 <ul class="org-ul">
 <li>For anyone who couldn't grasp this post, What I wanted to say was that, I've wasted too much consuming media and resources all over Internet.</li>
 <li>I've lately realized that I should start writing more or process information than being mindless consumer.</li>
@@ -1079,7 +1205,7 @@ Emacs already has <code>next-buffer</code> - <code>previous-buffer</code> and <c
 
 <div class="org-center">
 
-<div id="org3ae9c9f" class="figure">
+<div id="orgbe6257e" class="figure">
 <p><img src="/images/ewm-desktop.png" alt="ewm-desktop.png" />
 </p>
 <p>Fig: EWM setup with Noctalia shell while writing this blog post. Left is org mode capture buffer, top right is glide browser showing EWM repo and bottom right is foot terminal running hugo server.</p>
@@ -1103,7 +1229,7 @@ I no longer quit/leave emacs, if I'm leaving that means I'm shutting down my mac
 </p>
 <div id="outline-container-may-i-also-recommend-glide-browser-for-emacs-keymappings" class="outline-3">
 <h3 id="may-i-also-recommend-glide-browser-for-emacs-keymappings">May I also Recommend Glide browser for emacs keymappings</h3>
-<div class="outline-text-3" id="text-org5eae447">
+<div class="outline-text-3" id="text-org2628083">
 <p>
 Glide browser came to <a href="https://lobste.rs/s/lm3isi/glide_extensible_keyboard_focused_web">lobste.rs news</a> and showcased as firefox-fork being keyboard centric, and I was badly looking for qutebrowser enhancements with addons. And I made the switch and config was pretty easy.
 </p>
@@ -1127,7 +1253,7 @@ Here's the <a href="https://github.com/glide-browser/glide/discussions/25">discu
 </div>
 <div id="outline-container-2026-07-29-wed" class="outline-2">
 <h2 id="2026-07-29-wed"><span class="timestamp-wrapper"><span class="timestamp">[2026-07-29 Wed]</span></span></h2>
-<div class="outline-text-2" id="text-orgada6eae">
+<div class="outline-text-2" id="text-org3399181">
 <p>
 <a href="https://codeberg.org/ezemtsov">Ezemtsov</a> has made a <a href="https://codeberg.org/ezemtsov/emacs/src/branch/wayland">fork of emacs</a> with <a href="https://codeberg.org/ezemtsov/emacs/commit/6147db532ae4fb462910816e55fab0cc62418269">pure wayland backend</a>, with no gtk or
 cairo toolkit. As I was very excited on this, I immediately jumped and built it with no toolkit.
@@ -1216,7 +1342,7 @@ You can send me email on <a href="mailto:hi@idlip.in">hi@idlip.in</a> (I love em
 <p>
 <i>Read more, write more, give more</i>
 </p>
-]]></content></entry><entry><title>OBTF as Second Brain with Org mode</title><link rel="alternate" type="text/html" href="https://idlip.in/log/obtf-org-mode/" /><id>https://idlip.in/log/obtf-org-mode/</id><published>2025-09-06T00:00:00Z</published><updated>2026-10-02T00:00:00Z</updated><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+]]></content></entry><entry><title>OBTF as Second Brain with Org mode</title><link rel="alternate" type="text/html" href="https://idlip.in/log/obtf-org-mode/" /><id>https://idlip.in/log/obtf-org-mode/</id><published>2025-09-06T00:00:00Z</published><updated>2026-10-07T00:00:00Z</updated><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><category term="obtf" label="obtf" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
 <b>One Big Text File</b> is simply writing down mostly everything in single file to organize or manage data. This single file acts as the source of knowledge and holds all notes.
 </p>
 
@@ -1241,7 +1367,7 @@ This context is also written in favor to post it on r/obtf
 </p>
 <div id="outline-container-org-mode-is-the-best-tool-for-managing-obtf" class="outline-2">
 <h2 id="org-mode-is-the-best-tool-for-managing-obtf">Org mode is the best tool for managing OBTF</h2>
-<div class="outline-text-2" id="text-orgd7d2b18">
+<div class="outline-text-2" id="text-org54f5af7">
 <p>
 Many popular workflow would go by simple format as bullet points with Time date and info, and regexp based searching via CLI (rg, vim, grep, sed&hellip;. bash scripts)
 </p>
@@ -1304,7 +1430,7 @@ This logically acts as an individual file with that tag/category, thus being ato
 </div>
 <div id="outline-container-key-takeaways" class="outline-2">
 <h2 id="key-takeaways">Key takeaways</h2>
-<div class="outline-text-2" id="text-orge47298f">
+<div class="outline-text-2" id="text-org73a60e5">
 <p>
 whatever the system or the tool is, the main takeaways every resource provides is to review the notes and write it for future self. Every capture is to review back and make the fleeting note into and rich information.
 This OBTF with org mode satisfies that needs given that user reviews the notes and visits back to digest it again.
@@ -1327,7 +1453,7 @@ So far all good, and I'm here.
 <hr />
 <div id="outline-container-2026-01-05-mon-update" class="outline-2">
 <h2 id="2026-01-05-mon-update"><span class="timestamp-wrapper"><span class="timestamp">[2026-01-05 Mon]</span></span> Update</h2>
-<div class="outline-text-2" id="text-org8f951cd">
+<div class="outline-text-2" id="text-org837e27e">
 <p>
 I've been working as developer and I must say I got the hang of codebase and complete map of the technical foundation. Its so surprising for me that I can think of like programmer and really going deep in this world. Although I must admit that thanks to having some vibes it helps me to code and think more of proper implementation for future maintenance.
 </p>
@@ -1352,7 +1478,7 @@ June 2025 finally marks the end to my academic journey with completion of my Pos
 </p>
 <div id="outline-container-preface" class="outline-2">
 <h2 id="preface">Preface</h2>
-<div class="outline-text-2" id="text-org42fc999">
+<div class="outline-text-2" id="text-org942ac39">
 <p>
 The story of me here starts with the Covid period, when I was introduced with laptop and when I started using Linux, I wanted my Biology related topics to be involved with Computing, Linux and CLI stuffs. That is where magically I learnt about the domain, <b>Bioinformatics</b>.
 </p>
@@ -1365,7 +1491,7 @@ It's an booming field, but let me tell you, it's an mature field as well. Starti
 </div>
 <div id="outline-container-the-voyage" class="outline-2">
 <h2 id="the-voyage">The voyage</h2>
-<div class="outline-text-2" id="text-orgca07e8c">
+<div class="outline-text-2" id="text-orgabd8608">
 <p>
 I really wanted to either get into IISc or IBAB (Bangalore) institutes, since both very much focused on Bioinformatics research and work and had lot of growth. I could get due to the barrier of entrance tests. But I joined another University which offered this course in Bangalore and which syllabus was very up-to-date and shiny (yeah just like the hype train!).
 </p>
@@ -1407,7 +1533,7 @@ But soon I realized research wasn't my cup of tea, at least in India. They worke
 </div>
 <div id="outline-container-inference" class="outline-2">
 <h2 id="inference">Inference</h2>
-<div class="outline-text-2" id="text-orgc0dbefc">
+<div class="outline-text-2" id="text-org4d3375b">
 <p>
 Bioinformatics is a great domain, holds lot of gaps and needs lot of requirements. This is a promising field that surprise with lot of development and welfare to human. The second largest data produced by field is Bioinformatics, after the giant Astronomy.
 </p>
@@ -1419,7 +1545,7 @@ Most of these works are only predicting event or enriching data to prove that th
 </div>
 <div id="outline-container-career-ahead" class="outline-2">
 <h2 id="career-ahead">Career Ahead</h2>
-<div class="outline-text-2" id="text-orgc0c2309">
+<div class="outline-text-2" id="text-orge5bd317">
 <p>
 This was a hard struck aspect for me. When I started to apply, unfortunately there were not many job opening in Bangalore. Most of it were else, hyd, pune, mumbai, ahmedabad, gurgoan, .. elsewhere all but rarely in bangalore. Although I grinded to apply to most of the companies in bangalore, hardly any clicked or they only offered less. This took a serious toll on me, although I believe I was damn skillful to this field to hasten up higher nobody gave me a chance, at least with good offer.
 </p>
@@ -1431,7 +1557,7 @@ Finally this is where some magic happened and lucky enough, I got a job in tech 
 </div>
 <div id="outline-container-final-words" class="outline-2">
 <h2 id="final-words">Final Words</h2>
-<div class="outline-text-2" id="text-org61bdb1e">
+<div class="outline-text-2" id="text-org8304709">
 <p>
 I highly recommend bioinformatics to any who wants to pursue or think of it. It has a deep research and most of the today's demanding skills align perfectly with the field. r/bioinformatics community has really been helpful and lot of quality discussions, although you will see most of the repeated rants or questions.
 This field has so much potential and it just aint achieving maybe due to bad research and bad approach.
@@ -1482,7 +1608,7 @@ I valued investment and growth. I could see the development and learning of skil
 </p>
 <div id="outline-container-note-taking" class="outline-2">
 <h2 id="note-taking">Note taking</h2>
-<div class="outline-text-2" id="text-org3cc5b15">
+<div class="outline-text-2" id="text-orgd57b17f">
 <p>
 Note-taking is understandable, its just format of text to store and read. And org-mode was superior and helped me alot.
 I later on embraced single big org file, and started using tags heavily with context based tagging.
@@ -1501,7 +1627,7 @@ So on which really helps with narrowing using consult package and org-ql for que
 </div>
 <div id="outline-container-reports-doc" class="outline-2">
 <h2 id="reports-doc">Reports/Doc</h2>
-<div class="outline-text-2" id="text-orgee979d0">
+<div class="outline-text-2" id="text-orgef2f8db">
 <p>
 Org mode can produce pdf via latex or ODT/docx format. That eventually guided me for submission of assignments and documents for sharing.
 Although it was an hassle to get formatting correct as they instructed, where as others just did them in breeze via M$ word and AI crap generated.
@@ -1514,7 +1640,7 @@ Although there was not much work with reports, I had good workflow of storing no
 </div>
 <div id="outline-container-presentations" class="outline-2">
 <h2 id="presentations">Presentations</h2>
-<div class="outline-text-2" id="text-org395854f">
+<div class="outline-text-2" id="text-org29bdb54">
 <p>
 I thought to give presentations in Emacs editor itself, but that did not make the cut for required normie friendly slides. The magically I came across revealJS and observed many people in tech presentations and talks used them. There was active development of org-reveal package as well, in new form from OER gitlab repo.
 </p>
@@ -1530,7 +1656,7 @@ I had local.scss file for color and designing slides, and org generated html fil
 </div>
 <div id="outline-container-thesis" class="outline-2">
 <h2 id="thesis">Thesis</h2>
-<div class="outline-text-2" id="text-orga890e5a">
+<div class="outline-text-2" id="text-orgf0c6141">
 <p>
 The final saga of the journey, since thesis takes time to write, I thought to not bother with complicating this task. My initial thought was to either use Latex, if it was too much headache then simply follow given docx format file and write.
 Thankfully there was another player getting really popular, a new typesetting "Typst". It did the magic and wonders.
@@ -1543,7 +1669,7 @@ The syntax and process was very robust and simple. The documentation was standar
 </div>
 <div id="outline-container-conclusion" class="outline-2">
 <h2 id="conclusion">Conclusion</h2>
-<div class="outline-text-2" id="text-org64e5546">
+<div class="outline-text-2" id="text-org3fac54f">
 <p>
 The main draw from this experience was that investing in tools that allow extending and allow programming to customize and tweak as I require was a major win and good rewards. These were added up skills that makes working with related tasks a breeze ahead.</p>
 </div>
@@ -1646,7 +1772,7 @@ These hidden tests are the good ones, because you need to solve the problems eff
 </p>
 
 
-<div id="org0159157" class="figure">
+<div id="org4352fdb" class="figure">
 <p><img src="/images/biocode-lb.png" alt="biocode-lb.png" width="70%" />
 </p>
 <p>Leaderboard as of third day challenge (I'm at #8)</p>
@@ -1718,7 +1844,7 @@ Soon I jotted down only 3 candidate for reading feeds. Elfeed, Newsticker &amp; 
 </p>
 <div id="outline-container-elfeed" class="outline-2">
 <h2 id="elfeed">Elfeed</h2>
-<div class="outline-text-2" id="text-org2a28dd3">
+<div class="outline-text-2" id="text-orgc7aef50">
 <p>
 As said earlier, it was my choice for about 6+ months, and it worked really well. Was reading and tagging feeds alot. Although with my rss usage, I realized I was only looking forward for the <b>planet emacs</b> feeds (haha; typical emacser).
 </p>
@@ -1734,7 +1860,7 @@ It is still my recommend way to go with the package that just works well. But be
 </div>
 <div id="outline-container-newsticker" class="outline-2">
 <h2 id="newsticker">Newsticker</h2>
-<div class="outline-text-2" id="text-orgad3be44">
+<div class="outline-text-2" id="text-orgeb9c37f">
 <p>
 Firstly, liked the customization it has, and the tree-view how it appeals. But I hit the road blocks very soon. Tree-view was an issue, I need to read each post in single window and navigate to my leisure. I miss tags here. For everytime I launch, <code>newsticker-treeview</code> it fetches the articles from feed. That blocks my usage sometimes. Even tho I can keep <code>newsticker-retrieval-interval</code> to 0, it still fetches when launched with command for first time.
 </p>
@@ -1750,7 +1876,7 @@ Anyway, newsticker is also good, as it is built-in and does just work.
 </div>
 <div id="outline-container-gnus" class="outline-2">
 <h2 id="gnus">gnus</h2>
-<div class="outline-text-2" id="text-orgb82e1ee">
+<div class="outline-text-2" id="text-org120e252">
 <ul class="org-ul">
 <li>I panicked when I came to gnus. Its my..idk.. n<sup>th</sup> time trying it out again.</li>
 </ul>
@@ -1805,7 +1931,7 @@ All these days, some of the thoughts have been echoing inside me, recursively bo
 </p>
 <div id="outline-container-whatever-task-it-is-just-start" class="outline-2">
 <h2 id="whatever-task-it-is-just-start">Whatever task it is, "Just start"</h2>
-<div class="outline-text-2" id="text-org9c30b1a">
+<div class="outline-text-2" id="text-org4d40662">
 <p>
 I realized that just starting anything is not only half done, but its a perfection. Issues and complication start when I don't start and exaggerate thinking about it.
 </p>
@@ -1813,7 +1939,7 @@ I realized that just starting anything is not only half done, but its a perfecti
 </div>
 <div id="outline-container-don-t-follow-the-system-let-it-just-work" class="outline-2">
 <h2 id="don-t-follow-the-system-let-it-just-work">Don't follow the system, Let it just work</h2>
-<div class="outline-text-2" id="text-orga0ccc55">
+<div class="outline-text-2" id="text-org17ff9f5">
 <p>
 Cool trendy, shiny tools and concepts bloom up every morning, cause its how the world is hastening up. But chasing something new, is a huge mistake and leave us nowhere out in the blue. Simply trying to adapt to shiny trends will lead to new issues and new challenges. That is good in some sense, and should be welcome. But we have to know the priorities.
 </p>
@@ -1829,7 +1955,7 @@ Since I'm fond of org-mode, it might be reasonable in my case. So I think sticki
 </div>
 <div id="outline-container-nothing-in-life-makes-sense-after-a-period-of-its-time" class="outline-2">
 <h2 id="nothing-in-life-makes-sense-after-a-period-of-its-time">Nothing in life makes sense, after a period of its time</h2>
-<div class="outline-text-2" id="text-org9330af2">
+<div class="outline-text-2" id="text-org0d7bb64">
 <p>
 Every matter and material has some time in our life, past and post that, its useless and alien to us. For whatever we fight, and chase during that time, is a laughing material for the future you.
 </p>
@@ -1841,7 +1967,7 @@ I believe that, we need to sit down and think properly of what's going on with u
 </div>
 <div id="outline-container-silence-and-no-is-the-best-answer-to-many" class="outline-2">
 <h2 id="silence-and-no-is-the-best-answer-to-many">Silence, and No is the best answer to many</h2>
-<div class="outline-text-2" id="text-org2867c2d">
+<div class="outline-text-2" id="text-org759915f">
 <p>
 Many times, life deviates with noise and nodding "yes" to questions. Some seconds of silence and "No" would elevate life's progress and improve the betterment of life for many.
 </p>
@@ -1849,7 +1975,7 @@ Many times, life deviates with noise and nodding "yes" to questions. Some second
 </div>
 <div id="outline-container-don-t-be-a-judge" class="outline-2">
 <h2 id="don-t-be-a-judge">Don't be a judge</h2>
-<div class="outline-text-2" id="text-orgeceed25">
+<div class="outline-text-2" id="text-orge41c106">
 <p>
 Judging does come with a price, at the end we may lose our own support. As I said, silence and simplicity voyages the person to bright life.
 </p>
@@ -1881,7 +2007,7 @@ Also the site features good blogs, and <a href="https://www.alexmolas.com/blogro
 Probably I might add more sites, or blogroll like page to my site in future. In the mean, I'll plan to share some interesting blogs read in snippets as a list!</p>
 ]]></content></entry><entry><title>NixOS and its Madness</title><link rel="alternate" type="text/html" href="https://idlip.in/log/nixos-madness/" /><id>https://idlip.in/log/nixos-madness/</id><published>2024-02-04T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="nixos" label="nixos" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<div id="outline-container-need-to-update-wip" class="outline-2">
 <h2 id="need-to-update-wip">Need to Update. WIP</h2>
-<div class="outline-text-2" id="text-org4e3d52e">
+<div class="outline-text-2" id="text-org2af21e0">
 <p>
 Too much going on, need some time to wrap up.
 </p>
@@ -1909,7 +2035,7 @@ As on <span class="timestamp-wrapper"><span class="timestamp">[2026-03-19 Thu]</
 </div>
 ]]></content></entry><entry><title>Art of Getting things Done</title><link rel="alternate" type="text/html" href="https://idlip.in/log/art-gtd/" /><id>https://idlip.in/log/art-gtd/</id><published>2024-02-03T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><category term="gtd" label="gtd" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<div id="outline-container-gtd" class="outline-2">
 <h2 id="gtd">GTD</h2>
-<div class="outline-text-2" id="text-orgc28157b">
+<div class="outline-text-2" id="text-orgcb3f555">
 <p>
 The tendency to organize things, and get the workflow in right track is a natural process, and we insist more on that in today's world. The mere idea of finding the "right way", "Best way possible" is a driving opinion for various Internet opinions. People do share what works for them, and they argue.
 </p>
@@ -1984,7 +2110,7 @@ Closing words, Window Managers are definitely great, and changing enhancement, u
 So, just have a share of trial, explore and relax!</p>
 ]]></content></entry><entry><title>Literate org config</title><link rel="alternate" type="text/html" href="https://idlip.in/log/literate-config/" /><id>https://idlip.in/log/literate-config/</id><published>2023-12-29T00:00:00Z</published><updated>2026-10-02T00:00:00Z</updated><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<div id="outline-container-organizing-config" class="outline-2">
 <h2 id="organizing-config">Organizing Config</h2>
-<div class="outline-text-2" id="text-orgab2ca75">
+<div class="outline-text-2" id="text-org00f2508">
 <p>
 Configuration files as we know are the text to instruct the program to modify and tweak to our needs. Every Open-Source, hack-able software or tool has configuration files provided for the choice of user's needs. Most of the tools provide simple and basic configuration with JSON-like formats, <code>Yaml</code> and <code>Toml</code>. For the word, they are not extensible, as <code>ml</code> stands, they are merely for markup to already defined instructions.
 </p>
@@ -2012,7 +2138,7 @@ That's where I'm stopping you can covering up next on writing Literate configura
 </div>
 <div id="outline-container-org-mode-config" class="outline-2">
 <h2 id="org-mode-config">Org-mode Config</h2>
-<div class="outline-text-2" id="text-org553182e">
+<div class="outline-text-2" id="text-org3b2047c">
 <p>
 I won't introduce about org-mode, please do check <a href="https://orgmode.org">here</a>, hopefully it gives you an idea (I mean you should have read whole documentation/manual there). Additionally here is a <a href="https://en.wikipedia.org/wiki/Org-mode">Wikipedia reference</a> which is enough to introduce.
 </p>
@@ -2062,7 +2188,7 @@ In a recent snippet on <a href="/log/organize-file/">Organize File</a>, I was ab
 </div>
 <div id="outline-container-key-takeaways" class="outline-2">
 <h2 id="key-takeaways">Key Takeaways</h2>
-<div class="outline-text-2" id="text-orga44507c">
+<div class="outline-text-2" id="text-org82adf8f">
 <ul class="org-ul">
 <li>Org-mode helps in managing and maintaining configuration files.</li>
 <li>Learning can be stressed, and is the key for writing out Literate programming.</li>
@@ -2461,7 +2587,7 @@ Peasy Nix Versions</a> - Nicolas Mattia</li>
 Nix derivation attributes of runtime dependencies</a> - Nicolas Mattia</li>
 </ul>
 
-<div class="html" id="orgd856a6b">
+<div class="html" id="org4221d6d">
 <p>
 &lt;!&ndash; TODO: add more from their website &ndash;&gt;
 </p>
@@ -2479,7 +2605,7 @@ Example</a> - Susan Potter</li>
 Nix lambda function named arguments</a> - Susan Potter</li>
 </ul>
 
-<div class="html" id="orge356b77">
+<div class="html" id="org08bdc1a">
 <p>
 &lt;!&ndash; TODO: add Tweag Nix flakes &ndash;&gt;
 </p>
@@ -3062,7 +3188,7 @@ I myself have felt this, when I was starting out journey to learn new course (sa
 </p>
 <div id="outline-container-ways-to-stop-imposter-syndrome" class="outline-2">
 <h2 id="ways-to-stop-imposter-syndrome">Ways to stop Imposter Syndrome</h2>
-<div class="outline-text-2" id="text-org828175e">
+<div class="outline-text-2" id="text-org7153a58">
 <blockquote>
 <p>
 <i>Where there is a will, there is a way.</i>
@@ -3072,7 +3198,7 @@ I myself have felt this, when I was starting out journey to learn new course (sa
 </div>
 <div id="outline-container-trust-the-process" class="outline-2">
 <h2 id="trust-the-process">Trust the Process</h2>
-<div class="outline-text-2" id="text-org53d16d5">
+<div class="outline-text-2" id="text-orgee61cab">
 <p>
 Reflect on your actions, see the world praising you. Instead of listening to the negative feeling from your head, listen to the feedback from others.
 </p>
@@ -3090,7 +3216,7 @@ If you doubt yourself, shouldn't you also doubt your judgment of yourself?
 </div>
 <div id="outline-container-look-for-evidence" class="outline-2">
 <h2 id="look-for-evidence">Look for Evidence</h2>
-<div class="outline-text-2" id="text-orgedadebc">
+<div class="outline-text-2" id="text-org12e5ab1">
 <p>
 Fine you feel it that way, see if you can find evidence and measures. Think of some example where you have made some positive impact on others, how much change have you brought them.
 </p>
@@ -3098,7 +3224,7 @@ Fine you feel it that way, see if you can find evidence and measures. Think of s
 </div>
 <div id="outline-container-remember-the-journey" class="outline-2">
 <h2 id="remember-the-journey">Remember the Journey</h2>
-<div class="outline-text-2" id="text-org59722a3">
+<div class="outline-text-2" id="text-org4ff6948">
 <p>
 Look back at the steps you have taken, how was the process of learning from scratch, rock-bottom.
 </p>
@@ -3110,7 +3236,7 @@ Look back at the steps you have taken, how was the process of learning from scra
 </div>
 <div id="outline-container-turn-the-tables" class="outline-2">
 <h2 id="turn-the-tables">Turn the Tables</h2>
-<div class="outline-text-2" id="text-orgb208a22">
+<div class="outline-text-2" id="text-org19cc1ce">
 <p>
 Make it a strenth, refrain from doubts. Those with imposter syndrome are more likely to say "I don't know" when they don't know. This is an advantage. Overconfident people assume they have all the answers, even when they don't.
 </p>
@@ -3122,7 +3248,7 @@ Humility, uncertainty, and self-doubt are part of the learning process. The key 
 </div>
 <div id="outline-container-suggested-reads" class="outline-2">
 <h2 id="suggested-reads">Suggested Reads</h2>
-<div class="outline-text-2" id="text-orgd8d2f35">
+<div class="outline-text-2" id="text-org545fa46">
 <p>
 If you want to explore more on this concepts :
 </p>
@@ -3136,7 +3262,7 @@ If you want to explore more on this concepts :
 </div>
 ]]></content></entry><entry><title>RSS: The better Internet</title><link rel="alternate" type="text/html" href="https://idlip.in/log/rss-web/" /><id>https://idlip.in/log/rss-web/</id><published>2023-03-23T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><category term="news" label="news" scheme="https://idlip.in/tags/"></category><category term="rss" label="rss" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<div id="outline-container-cheesy-internet" class="outline-2">
 <h2 id="cheesy-internet">Cheesy Internet</h2>
-<div class="outline-text-2" id="text-org907eacc">
+<div class="outline-text-2" id="text-orgbee44de">
 <p>
 I don't have to say this, the Internet is hella bloated.. Junks are everywhere, nobody knows that they read shit, they are watching shits whole time.
 </p>
@@ -3154,7 +3280,7 @@ People these days all need ready-made/ready-to-work  stuffs, I wonder how do the
 </div>
 <div id="outline-container-the-hero" class="outline-2">
 <h2 id="the-hero">The Hero</h2>
-<div class="outline-text-2" id="text-orgc1ae9e0">
+<div class="outline-text-2" id="text-org6214039">
 <p>
 Rss stands for <b>Really Simple Syndication</b>, It is a classic on consuming web as supposedly it was built for. Today its all crappy <b>JavaScript</b> (a big bloat of cheese).
 </p>
@@ -3176,7 +3302,7 @@ Actually many of you might know famous news reader called <b>Feedly</b>, it is b
 </div>
 <div id="outline-container-feed-readers" class="outline-2">
 <h2 id="feed-readers">Feed Readers</h2>
-<div class="outline-text-2" id="text-orga381f50">
+<div class="outline-text-2" id="text-orgb19843b">
 <p>
 If you use window there are famous readers like fluent reader.
 On Linux you get <a href="https://newsboat.org/">newsboat</a> (terminal lovers), I use <a href="https://github.com/skeeto/elfeed">elfeed</a> (Emacs way).
@@ -3219,7 +3345,7 @@ Introduction part, you would better have read it on official nixos site (<a href
 </p>
 <div id="outline-container-should-you-try-nixos" class="outline-2">
 <h2 id="should-you-try-nixos">"Should you try NixOS?" ❄️</h2>
-<div class="outline-text-2" id="text-org16f3468">
+<div class="outline-text-2" id="text-orge161044">
 <p>
 Here's an answer from a non-programmer, who just browses and watches media.
 Just don't, if you are looking for small benefit. <b>Don't!</b>
@@ -3244,7 +3370,7 @@ But, if you have decided, go with it. According to me (non-programmer), these po
 </div>
 <div id="outline-container-how-i-manage-my-system" class="outline-2">
 <h2 id="how-i-manage-my-system">How I manage my system 🌲</h2>
-<div class="outline-text-2" id="text-org52b4a54">
+<div class="outline-text-2" id="text-org4d228bf">
 <p>
 I manage my whole system with single org file. Its easy and pretty handy. You can read that file here <b>↬</b> <a href="https://github.com/idlip/d-nix/blob/onepiece/d-setup.org">d-setup.org</a> , its both self documenting and has all source code blocks.
 </p>
@@ -3262,7 +3388,7 @@ Also, I have made files to be <b>symlink</b>, so i can edit them without requiri
 </div>
 <div id="outline-container-credits" class="outline-2">
 <h2 id="credits">Credits 🎖️</h2>
-<div class="outline-text-2" id="text-orge132a98">
+<div class="outline-text-2" id="text-orgdb56240">
 <p>
 These configs were the inspiration and helped to build this way.
 </p>
@@ -3321,7 +3447,7 @@ Note: This is very outdated from when it was written. Please check <a href="http
 <hr />
 <div id="outline-container-utilities-that-are-best" class="outline-2">
 <h2 id="utilities-that-are-best">Utilities that are Best! 🌟</h2>
-<div class="outline-text-2" id="text-org7268453">
+<div class="outline-text-2" id="text-orge150db2">
 <hr />
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
@@ -3463,7 +3589,7 @@ My linux journey was from Linux Mint &gt; EndeavourOS &gt; Arch Linux &gt; and n
 </p>
 <div id="outline-container-the-embark" class="outline-2">
 <h2 id="the-embark">The Embark</h2>
-<div class="outline-text-2" id="text-orgefabec1">
+<div class="outline-text-2" id="text-orge2af84b">
 <p>
 I started to explore some YouTube video on Linux (as a normie at that time), soon I got familiar with good explanation, thankfully CTT had made an Linux Mint playlist and it helped to installing the first and the best <b>Beginner Distro</b>, the <b>Linux Mint</b>.
 </p>

@@ -82,5 +82,7 @@ pages:
   "https://archive.ph/c5RoJ",
   "https://manualdousuario.net/en/page/4/",
   "https://cider.mx/",
+  "https://dustycloud.org/blog/how-decentralized-is-bluesky/",
+  "https://spritely.institute/",
 ],
 styles: ["wander-theme.css"], ignore: [], }
