@@ -1,6 +1,6 @@
 #+title: OBTF as Second Brain with Org mode
 #+date: 2025-09-06
-#+tags[]: orgmode emacs pkm
+#+tags[]: orgmode emacs pkm obtf
 #+draft: false
 #+aliases[]: posts/obtf-org-mode
 

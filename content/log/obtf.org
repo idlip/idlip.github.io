@@ -1,0 +1,86 @@
+#+title: Org mode is the best OBTF
+#+date: 2026-10-07
+#+tags: orgmode emacs pkm obtf
+
+- This content is written to be lateral post to [[https://redlib.catsarch.com/r/onebigtextfile][r/onebigtextfile]] and spark the idea to many.
+
+I wrote about [[file:obtf-org-mode.org][OBTF with Org mode]] a while back, but that post was mostly "here is my datetree workflow." This one is a direct response to [[https://obtf.ru/en][obtf.ru]], a site that makes the case for *One Big Text File* a lot sharper than I did, and argues it against FOMO fatigue I've felt myself.
+
+OBTF in some sense is a lazy man's system to get things done. But if you feel more lazier to even think of it, I'd highly recommend to read https://obtf.ru/en website, since it helps me as well to stay motivated to achieve its purpose.
+
+* OBTF's philosophy pitch
+
+Their whole argument boils down to a handful of lines:
+
+#+begin_quote
+Your entire life, notes, tasks, ideas, logs, in one text file.
+Just =.txt=.
+#+end_quote
+
+#+begin_quote
+The best productivity system is the one you actually use. And nothing is simpler than a text file.
+#+end_quote
+
+#+begin_quote
+Search beats categories
+#+end_quote
+
+No vendor lock-in, speed, offline by default, permanence. All fair, and none of it is specific to a bare =.txt= file. It's specific to *plain text*. You make use of many tools to suite your needs instead of you learning and adapting to a system.
+
+Some posts on OBTF found over internet:
+
+- [[https://talk.macpowerusers.com/t/using-one-big-text-file-obtf-for-daily-blogging-and-journal/37546][Forum post on MacPowerUsers]]
+- https://mrshll.uk/posts/plain-text-planner/
+- https://jeffhuang.com/productivity_text_file/
+- https://mrdizzy.blog/blog/obtf/
+- https://beardystarstuff.net/posts/2024-04-17.html
+- https://whhone.com/posts/one-line-per-day-diary-in-org-mode/
+
+* Where Org gives you more
+
+"Search beats categories" is true until the file gets big enough that search alone stops being enough, and at that point you want *structure you can turn on when you need it*, not structure forced on you from day one.
+
+I still keep a =datetree=, Year > Month > Day > entry, which gives me OBTF's own "newest entries first, just append and go" model:
+
+#+begin_src org
+  ,* 2026
+  ,** 2026-10 October
+  ,*** 2026-10-07 Tuesday
+  ,**** <whatever I'm capturing>            :tag1:tag2:
+#+end_src
+
+The difference from a flat file is that I'm not stuck with chronology as the *only* axis. A few things I still reach for on top of the datetree:
+
+- =org-sparse-tree= (=C-c /=): narrow the whole tree down to just the headings matching a tag or
+  property, without touching the file itself.
+
+- =consult-org-heading= / =consult-line= (from the =consult= package): fuzzy-jump straight to a
+  heading or line, which is the actual "search beats categories" experience, just inside a
+  structured file instead of a flat one.
+
+- =org-ql=: for queries that are more than a single tag match, closer to a real query language over
+  my notes than regexp-over-a-text-file ever was.
+
+- =#+select_tags=: export just the headings carrying a given tag into a throwaway buffer, which
+  behaves like a temporary, generated "file" scoped to one topic, without ever having to actually
+  split the real file.
+
+- [[https://github.com/toshism/org-super-links][org-super-links]]: Package to backlink org headings to one another.
+
+- =org-agenda=: Best way to get organized and plan for time. Paired with note taking, the agenda interface is so powerful that even I've underused it mostly to just get stuff done.
+
+- Tags: More detail on the tagging convention I use (the =l@=/=n@=/=p@= prefixes) is in [[file:obtf-org-mode.org][the older post]].
+
+* Conclude
+These might sound very much tied to emacs, yes thats mostly true. Environment so perfect that it can be called a monolith of emacs. But alas, people have ported org mode inspired modes and packages to various other ecosystem.
+
+- [[https://github.com/nvim-orgmode/orgmode][orgmode.nvim]]: OG clone for neovim
+- [[https://github.com/xheisenbugx/org.nvim][org.nvim]]: New and AI assisted clone of complete org library
+- [[https://github.com/nvim-neorg/neorg][neorg]]: Future of organizing life in neovim
+- [[https://github.com/rrajath/grove][grove]]: Beautiful org mode first task/notes android app
+- [[https://github.com/orgzly-revived/orgzly-android-revived][orgzly-revived]]: Org in mobile at ease
+- [[https://github.com/amake/orgro][orgro]]: Good org mode reader for android+IOS
+
+PS: I use official [[https://www.emacswiki.org/emacs/EmacsOnAndroid][Emacs on Android]] as well bringing the same environment on the phone (~_~;)
+
+Ultimately only thing that is required with note taking or system is to always review, revise, repeat and process them.
