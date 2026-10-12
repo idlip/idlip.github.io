@@ -84,5 +84,8 @@ pages:
   "https://cider.mx/",
   "https://dustycloud.org/blog/how-decentralized-is-bluesky/",
   "https://spritely.institute/",
+  "https://sheets.works/data-viz/holding-up-the-internet/read",
+  "https://delightful.coding.social/delightful-humane-design/",
+  "https://humanebydesign.com/principles/",
 ],
 styles: ["wander-theme.css"], ignore: [], }
