@@ -6,6 +6,13 @@
 
 Quick thoughts, single lines, mini notes and snippets of journal.
 
+** 2026-10-12
+Nix has become a pain to work. Its no longer exciting nor giving me dopamine
+-----
+Its true that nix solves hard problems well, but make easy ones difficult.
+Every update breaks and needs 1 hour of attention, and constant learning of nix way is stupid.
+Only one distro stands true, and its ....
+
 ** 2026-10-08
 Writing things down is almost like 80% work done
 -----
