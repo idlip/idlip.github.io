@@ -2,7 +2,7 @@
 #+date: 2026-10-07
 #+tags: orgmode emacs pkm obtf
 
-- This content is written to be lateral post to [[https://redlib.catsarch.com/r/onebigtextfile][r/onebigtextfile]] and spark the idea to many.
+- This content is written to be lateral post to [[https://www.reddit.com/r/OneBigTextFile/s/5Jy5SUG48h][r/onebigtextfile]] and spark the idea to many.
 
 I wrote about [[file:obtf-org-mode.org][OBTF with Org mode]] a while back, but that post was mostly "here is my datetree workflow." This one is a direct response to [[https://obtf.ru/en][obtf.ru]], a site that makes the case for *One Big Text File* a lot sharper than I did, and argues it against FOMO fatigue I've felt myself.
 

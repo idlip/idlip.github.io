@@ -99,6 +99,9 @@ Inspired and made with: [[https://codeberg.org/susam/wander][Wander by Susam]]
 - [[https://cider.mx/][Cider]] :: Emacs theme package website (wish to learn clojure now)
 - [[https://dustycloud.org/blog/how-decentralized-is-bluesky/][How decentralized is bluesky]] :: A elaborate analysis write-up
 - [[https://spritely.institute/][Spritely Institute]] :: Non-profit research on next gen decentralized tech
+- [[https://sheets.works/data-viz/holding-up-the-internet/read][People holding the Internet]] :: Amazing dependency on internet
+- [[https://delightful.coding.social/delightful-humane-design/][Delightful Digital Commons]] :: Tech, Design, Social welfare
+- [[https://humanebydesign.com/principles/][Humane Design Principles]] :: Good design for humane
 
 
 ------

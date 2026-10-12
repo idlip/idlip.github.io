@@ -54,6 +54,8 @@ I genuinely don't know where i land on all of this yet. But it did make me want 
 Some more amazing resource to check: [[https://www.youtube.com/watch?v=yIPbE7BssOs][Rethinking the Developer Career Path – Randall Koutnik]]
 ([[https://speakerdeck.com/rkoutnik/implementers-solvers-finders-rethinking-the-developer-career-path?slide=14][slides]]) ,[[https://fossunited.org/blog/learning-to-manage/building-a-shared-foundation][Learning to Manage - Building a shared foundation]], [[https://notashelf.dev/posts/taste-is-all-thats-left][Taste is all thats left]] and [[https://vickiboykis.com/2026/08/12/write-for-people/][Write for people]].
 
+- https://sheets.works/data-viz/holding-up-the-internet/read: another cool article on people holding the internet.
+
 -----
 
 Little cheat sheet of everyone the essay talks about, one line each, with a link if you
