@@ -98,10 +98,12 @@ Inspired and made with: [[https://codeberg.org/susam/wander][Wander by Susam]]
 - [[https://manualdousuario.net/en/page/4/][Manual do Usuário]] :: Finding cool stuff made easy
 - [[https://cider.mx/][Cider]] :: Emacs theme package website (wish to learn clojure now)
 - [[https://dustycloud.org/blog/how-decentralized-is-bluesky/][How decentralized is bluesky]] :: A elaborate analysis write-up
-- [[https://spritely.institute/][Spritely Institute]] :: Non-profit research on next gen decentralized tech
+- [[https://spritely.institute/][Spritely Institute]] :: Non-profit research on next gen decentralized tech | tag: lisp
 - [[https://sheets.works/data-viz/holding-up-the-internet/read][People holding the Internet]] :: Amazing dependency on internet
-- [[https://delightful.coding.social/delightful-humane-design/][Delightful Digital Commons]] :: Tech, Design, Social welfare
-- [[https://humanebydesign.com/principles/][Humane Design Principles]] :: Good design for humane
+- [[https://delightful.coding.social/delightful-humane-design/][Delightful Digital Commons]] :: Tech, Design, Social welfare | tag: foss
+- [[https://humanebydesign.com/principles/][Humane Design Principles]] :: Good design for humane | tag: principle
+- [[https://lea.verou.me/][Lea verou]] :: Brief blogs on frontend web | tag: webdev
+- [[https://jelv.is/blog/Structure-your-Errors/][Structure your errors]] :: presenting error
 
 
 ------
