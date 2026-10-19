@@ -16,6 +16,7 @@ Words that stayed.
 - [[.][Herm Albright]] :: A positive attitude may not solve all your problems, but it will annoy enough people to make it worth the effort.
 - [[.][Gustave Flaubert]] :: The art of writing is the art of discovering what you believe.
 - [[.][Samuel Butlet]] :: Let us be grateful to the mirror for revealing to us our appearance only.
+- Mark Twain :: It’s easier to fool people than to convince them that they’ve been fooled.
 
 * Software & Craft
 - [[https://en.wikipedia.org/wiki/Edsger_W._Dijkstra][Dijkstra]] :: Simplicity is a great virtue but it requires hard work to achieve it and education to appreciate it. And to make matters worse, complexity sells better.
@@ -24,3 +25,4 @@ Words that stayed.
 * Self
 - [[file:about.org][Self]] :: Write code you'd be comfortable reading at 3am during an incident.
 - [[.][Self]] :: Prepare for the worst to give out the best!
+- Self :: Easy choices, Hard life. Hard choices, Easy Life.
