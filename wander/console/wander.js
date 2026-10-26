@@ -87,5 +87,13 @@ pages:
   "https://sheets.works/data-viz/holding-up-the-internet/read",
   "https://delightful.coding.social/delightful-humane-design/",
   "https://humanebydesign.com/principles/",
+  "https://lea.verou.me/",
+  "https://jelv.is/blog/Structure-your-Errors/",
+  "https://medium.com/thrive-global/how-technology-hijacks-peoples-minds-from-a-magician-and-google-s-design-ethicist-56d62ef5edf3",
+  "https://nobloat.org/",
+  "https://www.joshwcomeau.com/css/interop-2027/",
+  "https://learnlearn.in/",
+  "https://danluu.com/",
+  "https://peterprevos.com/",
 ],
 styles: ["wander-theme.css"], ignore: [], }

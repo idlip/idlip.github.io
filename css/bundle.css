@@ -508,7 +508,9 @@
     align-items: center;
     text-align: center;
   }
-  .grid-block {
+  /* #+begin_grid ... #+end_grid: org's own special-block export wraps it as
+     <div class="grid"> */
+  .grid {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: minmax(120px, 1fr);
@@ -2246,39 +2248,6 @@
     color: var(--yellow-faint);
     opacity: 0.8;
   }
-
-  /* Echo message — default "? help", flashes on messages */
-  .ml-echo-msg {
-    background: var(--bg-active);
-    border: none;
-    color: var(--blue);
-    font-family: inherit;
-    font-size: inherit;
-    cursor: pointer;
-    padding: 0 0.5ch;
-    opacity: 0.9;
-    white-space: nowrap;
-    overflow: hidden;
-    /* Expand to fit on desktop but never dominate the bar; ellipsis on long messages. */
-    max-width: min(52ch, 45vw);
-    text-overflow: ellipsis;
-    transition:
-      opacity var(--transition),
-      background var(--transition);
-    border-radius: var(--radius);
-    &:hover {
-      opacity: 1;
-    }
-    &.flash {
-      background: var(--blue);
-      color: var(--bg-main);
-      opacity: 1;
-      padding: 0 0.5ch;
-    }
-    @media (width <= 768px) {
-      max-width: 16ch;
-    }
-  }
 }
 
 @layer chrome {
@@ -2465,6 +2434,30 @@
     color: var(--fg-main);
     max-width: min(640px, 92vw);
     overflow-y: auto;
+  }
+  /* Image lightbox only: a column so the caption sits below the image, the
+     image shrinking to whatever height the caption leaves it. */
+  #image-lightbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & img {
+      flex: 1 1 auto;
+      min-height: 0;
+      max-height: none;
+    }
+  }
+  #lightbox-caption {
+    flex: 0 0 auto;
+    margin: 0.6em 0 0;
+    max-width: 92vw;
+    color: var(--fg-dim);
+    font-size: 0.85rem;
+    text-align: center;
+    &:empty {
+      display: none;
+      margin: 0;
+    }
   }
 }
 

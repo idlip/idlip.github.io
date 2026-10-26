@@ -157,10 +157,14 @@
   function initImageLightbox() {
     var dlg = document.getElementById("image-lightbox");
     var lbImg = document.getElementById("lightbox-img");
+    var lbCaption = document.getElementById("lightbox-caption");
     if (!dlg || !lbImg) return;
     initDialog(dlg, document.querySelectorAll(".post-body img"), function (img) {
       lbImg.src = img.currentSrc || img.src;
       lbImg.alt = img.alt || "";
+      // .figure's only text node is its caption <p>, the <img> contributes none.
+      var figure = img.closest(".figure");
+      if (lbCaption) lbCaption.textContent = figure ? figure.textContent.trim() : "";
     });
   }
 
