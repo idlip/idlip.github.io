@@ -23,16 +23,17 @@
 ;;;; Config data: menu, color schemes, social links, palette icons, badges
 
 (defconst site-menu-main
-  '((:name "Home" :url "/")
-    (:name "Blog Posts" :url "/log/")
-    (:name "Projects & Tools" :url "/repo/")
-    (:name "About" :url "/about/")
-    (:name "Now Now Now" :url "/now/")
+  '((:name " Home" :url "/")
+    (:name "󰎕 Blog Posts" :url "/log/")
+    (:name "󰟶 Pose" :url "/pose/")
+    (:name " Projects & Tools" :url "/repo/")
+    (:name " About" :url "/about/")
+    (:name "󰚀 Now Now Now" :url "/now/")
     (:name " Feeds" :url "/index.xml")
-    (:name "Wander My Small Web" :url "/wander/")
-    (:name "Media" :url "/media/")
-    (:name "Quotes" :url "/quotes/")
-    (:name "Color Themes" :url "/themes/"))
+    (:name "󰆋 Wander My Small Web" :url "/wander/")
+    (:name "󰟴 Media" :url "/media/")
+    (:name "󱀢 Quotes" :url "/quotes/")
+    (:name " Color Themes" :url "/themes/"))
   "In :weight order, not declaration order.")
 
 (defconst site-color-schemes

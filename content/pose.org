@@ -4,7 +4,29 @@
 #+no_comment: t
 #+desc: Quick thoughts, single lines, mini notes and snippets of journal.
 
-Quick thoughts, single lines, mini notes and snippets of journal.
+Quick thoughts, single lines, poetic, mini-micro notes and snippets of journal.
+
+** 2026-10-26
+Haste makes servants of us all.
+-----
+We rush to solve problems others barely care about, giving our time before they even value it.
+We mistake being helpful for being needed, and our haste for their urgency, only to learn that not every burden we carry is worth the weight. For time is the one price we all pay equally, regardless of what we own or what we can afford.
+
+** 2026-10-25
+Life is all about transformation, yet we blame karma.
+-----
+We spend our lives turning one desire into another, one purpose into the next, mistaking every new form for an arrival. Those who believe they've achieved it all have merely stopped noticing the transformation.
+
+** 2026-10-24
+Associating Indian language and context to traditional english terms changes the view so much.
+-----
+We need to localize many stuff to appreciate the indian philosophy and associate more.
+
+** 2026-10-22
+I'm so happy that care's befit fitpass works & I can continue booking my gym session
+-----
+From past 1 month it had KYC pending that did not allow me to book.
+I was so frustrated that I thought to join directly, and in nick of many complaints somehow it got resolved.
 
 ** 2026-10-19
 Life is always about regret. One who says "no", is not wise.

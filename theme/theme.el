@@ -304,9 +304,11 @@ that reset would outrank theme.css's own hover rule for it."
 
 (defconst theme-lightbox
   '(dialog (:id "image-lightbox" :aria-label "Image preview")
-           (img (:id "lightbox-img" :src "" :alt "")))
+           (img (:id "lightbox-img" :src "" :alt ""))
+           (p (:id "lightbox-caption")))
   "The image lightbox dialog. :src/:alt stay empty strings, not bare, so
-libxml keeps them for the alt-text lint.")
+libxml keeps them for the alt-text lint. :lightbox-caption stays empty when
+the clicked image has no org #+caption:, and CSS hides it in that case.")
 
 (defconst theme-pose-dialog
   '(dialog (:id "pose-dialog" :aria-label "Pose entry")
@@ -533,7 +535,8 @@ UNIQUE-ID as its DOM id."
          (list 'div '(:class "comment-actions")
                (list 'button (list :class "comment-submit" :type "button" :data-email email
                                    :data-subject (format "Re: %s" title) :data-uid unique-id)
-                     "Comment")))
+                     "Comment")
+               (list 'span '(:class "comment-hint") "Opens your email client, no public comments here")))
    (list 'script nil
          (format "(function () {
   var btn = document.querySelector('.comment-submit[data-uid=\"%s\"]');

@@ -8,6 +8,9 @@
 - This post is written for [[https://www.emacswiki.org/emacs/Carnival][Emacs carnival]] of [[https://www.emacswiki.org/emacs/CarnivalMay2026][May 2026]]. If you're new to this site, FYI I go by
   =Zororg= in emacs chat/universe.
 
+EWM: https://codeberg.org/ezemtsov/ewm/
+Wiki: https://codeberg.org/ezemtsov/ewm/wiki
+
 Emacs along with being a text editor, is a [[https://karthinks.com/software/batteries-included-with-emacs/][battery included software]] that does more things and
 architecturally well designed (thus no rewrite last strong). Emacs has good (in-fact powerful)
 window management, everything as buffer system, self documenting, extensible (upto human brain,
@@ -80,6 +83,16 @@ that I had it installed and yet haven't opened it for >3 months (really!).
 
 I must say these days I'm not tinkering anything, and just use emacs with matured config of mine and
 day to day has been either emacs for notes/task and glide browser for being on Internet.
+
+-----
+
+* [2026-10-23 Fri]
+
+EWM again has matured alot and is almost stable for daily driving for others, although I've been already daily driving it with no issues. Even features have increased alot, every fortnight there has been new cool feature or improvements in codebase. Emacs pwayl backend got background-ext-control which gives blur, EWM has blur now, go see codeberg demo to see it and check wiki for more. =S-e= which calls =ewm-edit= to capture input text from any wayland window and edit in emacs and on closing it pastes it there (inspired by emacs-anywhere & exwm).
+
+EWM even got floating window support, true full screen like Niri, overview like niri - although I use 1 frame and many tabs with =consult-buffer= mostly. Although codebase has increased significantly, its still a good featured WM for emacs thats works as expected. TBH these days I only update emacs and ewm for my whole OS and don't care for any other tools unlike before, this can be boon or bane too. Paired with noctalia it very well completes the need of perfect Desktop setup with Emacs at its core.
+
+Another plug, someone else is writing a wayland compositor with river window protocols with pure emacs lisp and no rust/c dynamic module. https://github.com/thkoch2001/rau sounds cool with efforts to see how well it turns out.
 
 -----
 

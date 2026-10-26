@@ -105,6 +105,11 @@ Inspired and made with: [[https://codeberg.org/susam/wander][Wander by Susam]]
 - [[https://lea.verou.me/][Lea verou]] :: Brief blogs on frontend web | tag: webdev
 - [[https://jelv.is/blog/Structure-your-Errors/][Structure your errors]] :: presenting error
 - [[https://medium.com/thrive-global/how-technology-hijacks-peoples-minds-from-a-magician-and-google-s-design-ethicist-56d62ef5edf3][How technology hijacks our brain]] :: Psychological hijack in our daily life
+- [[https://nobloat.org/][NoBloat]] :: Pragmatic software minimalism
+- [[https://www.joshwcomeau.com/css/interop-2027/][Future of CSS]] :: Cool CSS features for 2026 | tag: webdev
+- [[https://learnlearn.in/][Learn Learn]] :: Amazing way to share notes as Docs site
+- [[https://danluu.com/][Danluu]] :: No BS in-depth articles
+- [[https://peterprevos.com/][Peter prevos]] :: Emacs & org mode | tag: orgmode
 
 
 ------
