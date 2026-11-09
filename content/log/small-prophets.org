@@ -3,7 +3,7 @@
 #+tags[]: series review
 #+refs[]: prophet
 
-[[https://www.imdb.com/title/tt38504111/][Small Prophets]] is a new Apple TV series of 2026. Its more like a mini movie, which only has =6=
+[[https://www.themoviedb.org/tv/312693-small-prophets][Small Prophets]] is a new Apple TV series of 2026. Its more like a mini movie, which only has =6=
 episodes and each runs for 30 mins.
 
 Its a lively & a magical series which is so immersed in small view. You'll just see main character's

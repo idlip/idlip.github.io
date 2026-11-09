@@ -13,22 +13,33 @@ Things I like watching, reading, and remembering.
 
 * Books & Novels
 - [[https://web.mit.edu/6.001/6.037/sicp.pdf][Structure & Interpretation of Computer Programs (SICP)]] :: OG programming book on abstracts | by: Harold Abelson and Gerald Jay Sussman
+- [[https://www.goodreads.com/book/show/9859899-the-pleasures-of-reading-in-an-age-of-distraction][The Pleasures of Reading in an Age of Distraction]] :: To get back & have more fun with reading | by: Alan jacobs
 
 * Movies
-- [[https://www.imdb.com/title/tt0088763/][Back to the future]] :: Just amazing comedy & fun in time-traveling | year: 1985
+- [[https://www.themoviedb.org/movie/105-back-to-the-future][Back to the future]] :: Just amazing comedy & fun in time-traveling | year: 1985
 - [[https://www.themoviedb.org/movie/412862][Ratsasan]] :: Amazing crime thriller that had my assumption wrong every time | year: 2018
 - [[https://www.themoviedb.org/movie/211672-minions][Minions]] :: The OG minions, I'd like to learn there language tbh
 - [[https://www.themoviedb.org/movie/295693-the-boss-baby][Boss Baby]] :: Thats how a boss gotta be
 - [[https://www.themoviedb.org/movie/9470][Kung Fu Hustle]] :: Just wish it was real
 - [[https://www.themoviedb.org/movie/9336-police-academy][Police Academy]] :: Funny the unfunny stuffs
 - [[https://en.wikipedia.org/wiki/Taxi_(film_series)][Taxi Franchise]] :: Comedy in every angle | refs: taxi
+- [[https://www.themoviedb.org/movie/1368337-the-odyssey][The Odyssey]] :: Surely a spectacle, but I expected more. That's why books >>> adaptations
+- [[https://www.themoviedb.org/movie/17888][Dasavatharam]] :: A movie ahead of its time that never can be remade, a phenomenon
+- [[https://www.themoviedb.org/search/movie?query=Johnny%20English][Johnny English]] :: Favorites of all, and best in class
+- [[https://www.themoviedb.org/movie/9414-the-man-who-knew-too-little][The man who knew too little]] :: A comedy gold with surreal flow
 
 * Series
-- [[https://www.imdb.com/title/tt38504111/][Small Prophets]] :: A magical & lively artistic story | refs: prophet
+- [[https://www.themoviedb.org/tv/312693-small-prophets][Small Prophets]] :: A magical & lively artistic story | refs: prophet
+- [[https://www.steinbeckintheschools.com/east-of-eden-reading-guides/synopsis][East of Eden]] :: Amazing act and lively adaptation
+- [[https://stephenking.com/works/novel/carrie.html][Carrie]] :: Subtle telekinetic power related story, nice to know all good ones are novel adaptations
+- [[https://www.themoviedb.org/tv/293607-100][100 Days of Deception]] :: 2026's best series for me, just top-notch amazing IMHO.
+- [[https://www.themoviedb.org/tv/259909-dexter-resurrection][Dexter: Resurrection]] :: Idk how was dexter before, but this series is one of all time favorite.
 
 * Anime
 - [[https://myanimelist.net/anime/21/One_Piece][One Piece]] :: The greatest adventure in manga/anime | year: 1999-present | ep: ongoing | by: G-Oda
+- [[https://beyonder.pages.dev/book/lotm/][Lord of the Mysteries]] :: Magical and complex, and one of high quality anime. Made me start novel.
 
 * YouTube
 - [[https://www.youtube.com/@tsoding][Tsoding Daily]] :: Recreational programming, live | channel: tsoding
 - [[https://www.youtube.com/@ThePrimeagen][ThePrimeagen]] :: Vim, performance, opinions | channel: theprimeagen
+- [[https://www.youtube.com/@MaskedMagicSecretsRevealed][Masked Magic Secret Revealed]] :: When all suprises were lie, but an outstanding skills, amazing voice and in-depth illustrations
