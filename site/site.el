@@ -30,10 +30,12 @@
     (:name " About" :url "/about/")
     (:name "󰚀 Now Now Now" :url "/now/")
     (:name " Feeds" :url "/index.xml")
-    (:name "󰆋 Wander My Small Web" :url "/wander/")
+    (:name "󰆋 Wander/Blogroll" :url "/wander/")
     (:name "󰟴 Media" :url "/media/")
     (:name "󱀢 Quotes" :url "/quotes/")
-    (:name " Color Themes" :url "/themes/"))
+    (:name " Color Themes" :url "/themes/")
+    (:name "󰦃 Sitemap" :url "/sitemap/")
+    )
   "In :weight order, not declaration order.")
 
 (defconst site-color-schemes

@@ -11,6 +11,12 @@ Wander through them. You might find something worth keeping. (All are minimal li
 
 Inspired and made with: [[https://codeberg.org/susam/wander][Wander by Susam]]
 
+#+begin_quote
+Not All Those Who Wander Are Lost
+
+-- J.R.R Tolkein
+#+end_quote
+
 * Neighbour Consoles
 
 - [[https://susam.net/wander/][OG Creator Wander]] :: https://susam.net/wander/
@@ -110,6 +116,10 @@ Inspired and made with: [[https://codeberg.org/susam/wander][Wander by Susam]]
 - [[https://learnlearn.in/][Learn Learn]] :: Amazing way to share notes as Docs site
 - [[https://danluu.com/][Danluu]] :: No BS in-depth articles
 - [[https://peterprevos.com/][Peter prevos]] :: Emacs & org mode | tag: orgmode
+- [[https://endler.dev/][Endler]] :: Proper blog posts as it needs to be
+- [[https://bcantrill.dtrace.org/][Bryan Cantrill]] :: Great talks on leadership
+- [[https://www.seangoedecke.com/software-is-slow-because-of-bad-design-not-slow-languages/][Software is slow because of design]] :: Freq blogs and good insight
+- [[https://planetscale.com/blog/what-is-n-1-query-problem-and-how-to-solve-it][What is N+1 query problem]] :: Insight on SQL N+1
 
 
 ------

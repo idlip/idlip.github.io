@@ -1,6 +1,7 @@
 #+title: Media
 #+layout: topic-list
 #+chip_color: base0E
+#+aliases[]: books movies music watch
 
 Things I like watching, reading, and remembering.
 
