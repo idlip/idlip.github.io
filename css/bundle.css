@@ -1268,31 +1268,14 @@
     }
   }
 
-  /* Shared by .post-body headings, Pose cards, and the Pose dialog title. */
-  :is(:is(.post-body, .pose-card) :is(h2, h3, h4, h5, h6), #pose-dialog-title)
+  :is(.post-body :is(h2, h3, h4, h5, h6), #pose-dialog-title)
     .heading-anchor {
-    /* Stays above the Pose card's full-card click overlay (.pose-card-trigger). */
-    position: relative;
-    z-index: 1;
-    margin-left: 0.4em;
-    font-size: 0.75em;
-    color: var(--fg-dim);
+    color: inherit;
     text-decoration: none;
-    opacity: 0;
-    transition:
-      opacity var(--transition),
-      color var(--transition);
+    transition: color var(--transition);
   }
-  :is(
-      :is(.post-body, .pose-card) :is(h2, h3, h4, h5, h6),
-      #pose-dialog-title
-    ):hover
-    .heading-anchor,
-  :is(.post-body, .pose-card, #pose-dialog-title)
-    .heading-anchor:focus-visible {
-    opacity: 1;
-  }
-  :is(.post-body, .pose-card, #pose-dialog-title) .heading-anchor:hover {
+  :is(.post-body :is(h2, h3, h4, h5, h6), #pose-dialog-title)
+    .heading-anchor:is(:hover, :focus-visible) {
     color: var(--link);
   }
 

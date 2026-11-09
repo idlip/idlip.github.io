@@ -93,11 +93,6 @@
   }
 
   // ── Heading anchor links ─────────────────────────────────────────────────
-  // go-org already assigns sequential ids (headline-N) to post headings; add
-  // a visible, focusable link to each so sections are directly linkable.
-  // Pose cards get the same link, styled by the same CSS rule, but as a
-  // share icon: if the browser has the native Web Share sheet, use it;
-  // otherwise it's just a plain "#id" permalink like any other heading.
   function addHeadingAnchors() {
     document
       .querySelectorAll(".post-body :is(h2, h3, h4, h5, h6)[id]")
@@ -105,31 +100,9 @@
         var a = document.createElement("a");
         a.className = "heading-anchor";
         a.href = "#" + h.id;
-        a.setAttribute("aria-label", "Link to this section");
-        a.textContent = "#";
+        while (h.firstChild) a.appendChild(h.firstChild);
         h.appendChild(a);
       });
-    document.querySelectorAll(".pose-card h2[id]").forEach(function (h) {
-      var a = document.createElement("a");
-      a.className = "heading-anchor";
-      a.href = "#" + h.id;
-      a.setAttribute("aria-label", "Share this entry");
-      a.textContent = "";
-      if (navigator.share) {
-        a.addEventListener("click", function (e) {
-          e.preventDefault();
-          e.stopPropagation();
-          var entry = (window.__poseEntries || {})[h.id];
-          navigator
-            .share({
-              title: entry ? entry.title : h.textContent,
-              url: location.origin + location.pathname + "#" + h.id,
-            })
-            .catch(function () {});
-        });
-      }
-      h.appendChild(a);
-    });
   }
 
   // ── Generic dialog opener ─────────────────────────────────────────────────
@@ -184,44 +157,31 @@
     var dlgContent = document.getElementById("pose-dialog-content");
     if (!dlg || !dlgTitle || !dlgContent) return;
 
+    var dlgTitleLink = document.createElement("a");
+    dlgTitleLink.className = "heading-anchor";
+    dlgTitle.appendChild(dlgTitleLink);
     var dlgTitleText = document.createElement("span");
-    dlgTitle.appendChild(dlgTitleText);
-    var dlgShare = document.createElement("a");
-    dlgShare.className = "heading-anchor";
-    dlgShare.setAttribute("aria-label", "Share this entry");
-    dlgShare.textContent = "";
-    dlgTitle.appendChild(dlgShare);
+    dlgTitleLink.appendChild(dlgTitleText);
 
     function show(id) {
       var entry = entries[id];
       if (!entry) return false;
       dlgTitleText.textContent = entry.title;
       dlgContent.innerHTML = entry.html;
-      dlgShare.href = "#" + id;
+      dlgTitleLink.href = "#" + id;
       return true;
     }
 
     // The title itself is a real <button> (not the whole <li>), so this is
     // keyboard-reachable and activatable (Tab, Enter/Space) for free, and
     // doesn't nest one interactive control (a card "button") inside another
-    // (the share link) the way a whole-card click handler would have.
+    // (the dialog's own title link) the way a whole-card click handler would
+    // have.
     var triggers = document.querySelectorAll(".pose-card-trigger");
     initDialog(dlg, triggers, function (btn) {
       var h2 = btn.closest("h2[id]");
       return h2 && show(h2.id);
     });
-
-    if (navigator.share) {
-      dlgShare.addEventListener("click", function (e) {
-        e.preventDefault();
-        navigator
-          .share({
-            title: dlgTitleText.textContent,
-            url: location.origin + location.pathname + dlgShare.getAttribute("href"),
-          })
-          .catch(function () {});
-      });
-    }
 
     function openFromHash() {
       var id = location.hash.slice(1);

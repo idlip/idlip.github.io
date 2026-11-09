@@ -95,5 +95,9 @@ pages:
   "https://learnlearn.in/",
   "https://danluu.com/",
   "https://peterprevos.com/",
+  "https://endler.dev/",
+  "https://bcantrill.dtrace.org/",
+  "https://www.seangoedecke.com/software-is-slow-because-of-bad-design-not-slow-languages/",
+  "https://planetscale.com/blog/what-is-n-1-query-problem-and-how-to-solve-it",
 ],
 styles: ["wander-theme.css"], ignore: [], }
