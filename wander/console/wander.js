@@ -99,5 +99,6 @@ pages:
   "https://bcantrill.dtrace.org/",
   "https://www.seangoedecke.com/software-is-slow-because-of-bad-design-not-slow-languages/",
   "https://planetscale.com/blog/what-is-n-1-query-problem-and-how-to-solve-it",
+  "https://pablomurad.com/",
 ],
 styles: ["wander-theme.css"], ignore: [], }
