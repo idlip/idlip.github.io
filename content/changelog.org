@@ -9,6 +9,14 @@ Notable changes to this site and theme.
 
 * 2026
 
+** October
+
+Moved from hugo -> [[https://github.com/idlip/denden][denden]] and this site is completely built with Elisp+Org mode.
+
+- Theme has been retained the same and hugo port is archived
+- Site is 1-1 replaced as it is from how it looked with hugo, with more updates and tweaks.
+- For someone living inside emacs, I feel this is best SSG setup one could have.
+
 ** August
 
 Site theme has been moved since it drifted completely from original fork.

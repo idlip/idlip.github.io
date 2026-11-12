@@ -120,6 +120,7 @@ Not All Those Who Wander Are Lost
 - [[https://bcantrill.dtrace.org/][Bryan Cantrill]] :: Great talks on leadership
 - [[https://www.seangoedecke.com/software-is-slow-because-of-bad-design-not-slow-languages/][Software is slow because of design]] :: Freq blogs and good insight
 - [[https://planetscale.com/blog/what-is-n-1-query-problem-and-how-to-solve-it][What is N+1 query problem]] :: Insight on SQL N+1
+- [[https://pablomurad.com/][Pablo Murad]] :: Frequent and typical blogs
 
 
 ------

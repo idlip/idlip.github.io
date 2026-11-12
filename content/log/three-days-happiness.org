@@ -1,9 +1,8 @@
-#+title: Manga: Three days of happiness
+#+title: Three days of happiness
 #+date: 2025-02-21
 #+tags[]: manga novel
 #+draft: false
 #+aliases[]: posts/three-days-happiness
-
 
 A light novel by the name, and manga goes by name *Jumyou wo Kaitotte Moratta. Ichinen ni Tsuki, Ichimanen de* by Sugaru Miaki. His all novels follow similar theme.
 
