@@ -981,7 +981,7 @@ no tag cloud or OG card."
     :title term
     :url url :og-card nil
     :body (theme-post-listing
-           :term-header (theme-term-header :tag term :count count)
+           :term-header (theme-term-header :tag term :count count :rss-url rss-url)
            :article-list (theme-article-list :grouped-pages (denden-group-pages-by-year pages)
                                               :tag-icons site-tag-icons)
            :footer (theme-footer site-footer-content)
@@ -1007,9 +1007,10 @@ into PUB-DIR. Call after the main publish."
                :footer (theme-footer site-footer-content)
                :modeline (theme-modeline :buffer (format "*%s*" section))))
        (expand-file-name (format "%s/index.html" section) pub-dir)))
-    ;; No rss-url anywhere on this page: /tags/ and /refs/ never had one,
-    ;; and every term page under them lost its own per-term feed to a
-    ;; deferred cut -- nothing writes one to link to.
+    ;; /tags/ and /refs/ themselves stay rss-url-less (they list every
+    ;; term, not one feed's worth), but each term page under them now
+    ;; links its own narrower feed; see `site-build-term-feeds' for the
+    ;; actual feed XML.
     (site--write-page
      (site--wrap-page :title "Tags" :url "tags/" :og-card nil
                       :body (theme-terms-list :tag-counts tag-counts :footer (theme-footer site-footer-content)
@@ -1017,7 +1018,8 @@ into PUB-DIR. Call after the main publish."
      (expand-file-name "tags/index.html" pub-dir))
     (dolist (tc tag-counts)
       (let* ((tag (plist-get tc :tag)) (tagged (denden-pages-with-tag all-pages tag)))
-        (site--write-term-page tag (length tagged) tagged (format "*%s*" tag) nil
+        (site--write-term-page tag (length tagged) tagged (format "*%s*" tag)
+                               (format "/tags/%s/rss.xml" (downcase tag))
                                (format "tags/%s/" (downcase tag))
                                (expand-file-name (format "tags/%s/index.html" (downcase tag)) pub-dir))))
     (when ref-counts
@@ -1028,7 +1030,8 @@ into PUB-DIR. Call after the main publish."
        (expand-file-name "refs/index.html" pub-dir))
       (dolist (rc ref-counts)
         (let* ((ref (plist-get rc :tag)) (referring (denden-pages-with-ref all-pages ref)))
-          (site--write-term-page ref (length referring) referring (format "*%s*" ref) nil
+          (site--write-term-page ref (length referring) referring (format "*%s*" ref)
+                                 (format "/refs/%s/rss.xml" (downcase ref))
                                  (format "refs/%s/" (downcase ref))
                                  (expand-file-name (format "refs/%s/index.html" (downcase ref)) pub-dir)))))))
 
@@ -1148,20 +1151,40 @@ UTF-8-encoded unibyte STRING, so a batch build never hangs."
           (denden-sort-pages-by-date-desc pages)))
 
 (defun site-write-feed-trio (pages directory base-url feed-site-title description
-                                    author-name author-email favicon-url copyright)
-  "Write real Atom feed XML to DIRECTORY/index.xml, rss.xml and feed.xml
-alike: three conventional feed URLs, same content, each with its own
-`self' link. A meta-refresh HTML redirect at rss.xml/feed.xml (the
-previous approach) breaks any client that fetches a .xml URL and parses
-the body as XML by extension/MIME type -- a feed reader, or a browser
-rendering it directly -- since that never runs the HTML meta-refresh."
-  (dolist (name '("index.xml" "rss.xml" "feed.xml"))
+                                    author-name author-email favicon-url copyright &optional names)
+  "Write Atom feed XML to DIRECTORY, one file per name in NAMES."
+  ;; Default is the full trio: index.xml, rss.xml and feed.xml, same
+  ;; content, each with its own `self' link. Real feed XML, not an HTML
+  ;; meta-refresh redirect at rss.xml/feed.xml :: that breaks any client
+  ;; that fetches a .xml URL and parses the body as XML by extension or
+  ;; MIME type, since it never runs the HTML meta-refresh.
+  (dolist (name (or names '("index.xml" "rss.xml" "feed.xml")))
     (let* ((self-url (concat (file-name-as-directory base-url) name))
            (xml (denden-atom-feed :pages (site--feed-pages pages) :site-title feed-site-title
                                    :description description :base-url base-url :self-url self-url
                                    :author-name author-name :author-email author-email
                                    :favicon-url favicon-url :copyright copyright)))
       (site--write-string xml (expand-file-name name directory)))))
+
+(defun site-build-term-feeds (pages pub-dir)
+  "Write one rss.xml per tag and per ref in PAGES under PUB-DIR."
+  ;; Just rss.xml, not the main/log feeds' full trio. A tag feed is only
+  ;; ever found by its own rel=alternate link, never typed in by hand, so
+  ;; the rss.xml/feed.xml/index.xml redundancy buys nothing here.
+  (dolist (tag-count (denden-tag-counts pages))
+    (let ((tag (plist-get tag-count :tag)))
+      (site-write-feed-trio (denden-pages-with-tag pages tag)
+                            (expand-file-name (format "tags/%s" (downcase tag)) pub-dir)
+                            (site-base-url) (format "%s: %s" site-title tag)
+                            (format "Posts tagged %s on %s" tag site-title)
+                            site-author-name site-author-email nil site-copyright '("rss.xml"))))
+  (dolist (ref-count (denden-ref-counts pages))
+    (let ((ref (plist-get ref-count :tag)))
+      (site-write-feed-trio (denden-pages-with-ref pages ref)
+                            (expand-file-name (format "refs/%s" (downcase ref)) pub-dir)
+                            (site-base-url) (format "%s: %s" site-title ref)
+                            (format "Posts referencing %s on %s" ref site-title)
+                            site-author-name site-author-email nil site-copyright '("rss.xml")))))
 
 (defun site-build-sitemap (all-pages pub-dir)
   "Write PUB-DIR/sitemap.xml over ALL-PAGES."
