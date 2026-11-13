@@ -199,7 +199,7 @@ Peasy Nix Versions</a> - Nicolas Mattia</li>
 Nix derivation attributes of runtime dependencies</a> - Nicolas Mattia</li>
 </ul>
 
-<div class="html" id="orgbb522f5">
+<div class="html" id="org0415475">
 <p>
 &lt;!&ndash; TODO: add more from their website &ndash;&gt;
 </p>
@@ -217,7 +217,7 @@ Example</a> - Susan Potter</li>
 Nix lambda function named arguments</a> - Susan Potter</li>
 </ul>
 
-<div class="html" id="orge5139e1">
+<div class="html" id="orgbc850d3">
 <p>
 &lt;!&ndash; TODO: add Tweag Nix flakes &ndash;&gt;
 </p>
@@ -407,7 +407,7 @@ Note: This is very outdated from when it was written. Please check <a href="http
 <hr />
 <div id="outline-container-utilities-that-are-best" class="outline-2">
 <h2 id="utilities-that-are-best">Utilities that are Best! 🌟</h2>
-<div class="outline-text-2" id="text-org7f4337e">
+<div class="outline-text-2" id="text-org10887b7">
 <hr />
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
@@ -549,7 +549,7 @@ My linux journey was from Linux Mint &gt; EndeavourOS &gt; Arch Linux &gt; and n
 </p>
 <div id="outline-container-the-embark" class="outline-2">
 <h2 id="the-embark">The Embark</h2>
-<div class="outline-text-2" id="text-orgeed203e">
+<div class="outline-text-2" id="text-org1ae4ffc">
 <p>
 I started to explore some YouTube video on Linux (as a normie at that time), soon I got familiar with good explanation, thankfully CTT had made an Linux Mint playlist and it helped to installing the first and the best <b>Beginner Distro</b>, the <b>Linux Mint</b>.
 </p>

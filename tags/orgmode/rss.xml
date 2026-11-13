@@ -12,7 +12,7 @@ OBTF in some sense is a lazy man's system to get things done. But if you feel mo
 </p>
 <div id="outline-container-obtf-s-philosophy-pitch" class="outline-2">
 <h2 id="obtf-s-philosophy-pitch">OBTF's philosophy pitch</h2>
-<div class="outline-text-2" id="text-org07e3dc5">
+<div class="outline-text-2" id="text-org7e8e60b">
 <p>
 Their whole argument boils down to a handful of lines:
 </p>
@@ -56,7 +56,7 @@ Some posts on OBTF found over internet:
 </div>
 <div id="outline-container-where-org-gives-you-more" class="outline-2">
 <h2 id="where-org-gives-you-more">Where Org gives you more</h2>
-<div class="outline-text-2" id="text-orgdefbcaf">
+<div class="outline-text-2" id="text-org2ec1692">
 <p>
 "Search beats categories" is true until the file gets big enough that search alone stops being enough, and at that point you want <b>structure you can turn on when you need it</b>, not structure forced on you from day one.
 </p>
@@ -102,7 +102,7 @@ split the real file.</li>
 </div>
 <div id="outline-container-conclude" class="outline-2">
 <h2 id="conclude">Conclude</h2>
-<div class="outline-text-2" id="text-org356fd1f">
+<div class="outline-text-2" id="text-orgad7b62d">
 <p>
 These might sound very much tied to emacs, yes thats mostly true. Environment so perfect that it can be called a monolith of emacs. But alas, people have ported org mode inspired modes and packages to various other ecosystem.
 </p>
@@ -132,7 +132,7 @@ native <a href="https://orgmode.org/manual/Publishing.html">ox-publish</a> and <
 </p>
 <div id="outline-container-why-i-even-started-this" class="outline-2">
 <h2 id="why-i-even-started-this">Why I even started this</h2>
-<div class="outline-text-2" id="text-orgb597e3b">
+<div class="outline-text-2" id="text-org5a31bb2">
 <p>
 This site used to run on <a href="https://gohugo.io">Hugo</a> using same theme called <a href="https://github.com/idlip/hakimacs">hakimacs</a>, with content in Org mode rendered through go-org, and it worked fine for months. But I hated looking how ugly <a href="https://gohugo.io/templates/introduction/">go-template</a> looked and lot of regexp to do something, although it was fast, it was not human (emacs user) friendly to read at all. When I wrote in org mode, I always liked why not elisp somewhere to hack and do stuff. Org is a rich ecosystem and it needs way more hackable place to configure, not hugo to regexp parse everything.
 </p>
@@ -148,7 +148,7 @@ That annoyance is the entire reason denden exists.
 </div>
 <div id="outline-container-what-denden-actually-is-and-isn-t" class="outline-2">
 <h2 id="what-denden-actually-is-and-isn-t">What denden actually is, and isn't</h2>
-<div class="outline-text-2" id="text-orgbf6d5f5">
+<div class="outline-text-2" id="text-org5ff8826">
 <p>
 <code>denden</code> is not a package, its more like a tool, helpers and building block on top of org-publish. It
 uses all native org mode libs and <code>org-publish</code>, the publishing engine that already ships inside Org mode, plus a small pile of Elisp helper functions sitting on top of it, that's the whole thing. <code>denden.el</code> itself is one file, no hidden layers, no magic you can't just <code>M-x describe-function</code> your way into.
@@ -174,7 +174,7 @@ Nobody's stopping you, there's no true "denden way" to acheive it.
 </div>
 <div id="outline-container-templates-are-just-lists-the-sexp-html-bit" class="outline-2">
 <h2 id="templates-are-just-lists-the-sexp-html-bit">Templates are just lists, the sexp-HTML bit</h2>
-<div class="outline-text-2" id="text-org6b467c4">
+<div class="outline-text-2" id="text-org04b6c95">
 <p>
 This is the part I like the most, a denden template is not a template language at all, it's a plain Emacs Lisp list, shaped like this.
 </p>
@@ -232,7 +232,7 @@ That's a whole working nav bar, <code>menu-items</code> is just a list of <code>
 </div>
 <div id="outline-container-how-my-own-site-is-built-with-it" class="outline-2">
 <h2 id="how-my-own-site-is-built-with-it">How my own site is built with it</h2>
-<div class="outline-text-2" id="text-orgcf33aad">
+<div class="outline-text-2" id="text-org072d601">
 <p>
 My site's own Elisp lives in exactly three files, and I think that's a feature, not something I need to apologize for.
 </p>
@@ -268,7 +268,7 @@ Everything you're reading right now, the  <button type="button" class="tag-cloud
 </div>
 <div id="outline-container-one-more-cool-bit-even-the-og-card-images-are-sexp" class="outline-2">
 <h2 id="one-more-cool-bit-even-the-og-card-images-are-sexp">One more cool bit, even the OG card images are sexp</h2>
-<div class="outline-text-2" id="text-orgfe5ee60">
+<div class="outline-text-2" id="text-orgdce1d91">
 <p>
 OG cards, the preview image you see when a link gets shared on social media, are usually generated with some headless browser screenshot setup or an image library. In denden it's the exact same <code>(TAG ATTRIBUTE-PLIST . CHILDREN)</code> trick, just aimed at <code>&lt;svg&gt;</code> instead of <code>&lt;div&gt;</code>, from my own <code>site.el</code>.
 </p>
@@ -297,7 +297,7 @@ Same <code>denden-serialize-node</code> (<a href="https://github.com/idlip/dende
 </div>
 <div id="outline-container-it-s-also-properly-fast" class="outline-2">
 <h2 id="it-s-also-properly-fast">It's also properly fast</h2>
-<div class="outline-text-2" id="text-orgfbe25f8">
+<div class="outline-text-2" id="text-orgc38a604">
 <p>
 I was bracing for a slow first build, since Emacs isn't exactly famous for being a speed train. It wasn't. A full build of this entire site, every post, every feed, every OG card image, finishes in a couple of seconds. I build it from the terminal like this.
 </p>
@@ -318,7 +318,7 @@ incremental cache, and it's done before switch two windows. There's also an asyn
 </div>
 <div id="outline-container-owning-the-whole-thing" class="outline-2">
 <h2 id="owning-the-whole-thing">Owning the whole thing</h2>
-<div class="outline-text-2" id="text-org7630f66">
+<div class="outline-text-2" id="text-org852d3e0">
 <p>
 The thing I like most isn't the speed, it's that I own every line of this. I'm an Emacs user, I already spend my <a href="/log/may-i-recommend/">May I Recommend EWM</a> tweaking my config, and now my blog engine runs in the same language, the same editor, the same muscle memory. If I want a new feature, I don't wait for a plugin, I don't learn a templating DSL, I just write a function next to the ones already there and call it. That's a genuinely different feeling from configuring a static site generator, it's closer to how your Emacs config itself grows over the years, one small function at a time, shaped around what you personally want.
 </p>
@@ -329,7 +329,7 @@ If any of this sounds interesting and you're also an Emacs plus Org mode person,
 </p>
 
 
-<div id="orgdf4ce60" class="figure">
+<div id="orgaef9118" class="figure">
 <p><img src="https://raw.githubusercontent.com/idlip/denden/refs/heads/master/example/screenshot.png" alt="screenshot.png" />
 </p>
 <p>Snap of a example bearblog like site built with denden</p>
@@ -338,7 +338,7 @@ If any of this sounds interesting and you're also an Emacs plus Org mode person,
 </div>
 <div id="outline-container-about-the-name" class="outline-2">
 <h2 id="about-the-name">About the name</h2>
-<div class="outline-text-2" id="text-orgef4dbd4">
+<div class="outline-text-2" id="text-org3458251">
 <p>
 A <code>denden mushi</code> is the snail-shaped transponder phone from One Piece, the way everyone in that world
 talks to each other across the sea. If you've looked around this site even a little, the One Piece
@@ -405,7 +405,7 @@ This context is also written in favor to post it on r/obtf
 </p>
 <div id="outline-container-org-mode-is-the-best-tool-for-managing-obtf" class="outline-2">
 <h2 id="org-mode-is-the-best-tool-for-managing-obtf">Org mode is the best tool for managing OBTF</h2>
-<div class="outline-text-2" id="text-org81f8fbf">
+<div class="outline-text-2" id="text-org29c86ca">
 <p>
 Many popular workflow would go by simple format as bullet points with Time date and info, and regexp based searching via CLI (rg, vim, grep, sed&hellip;. bash scripts)
 </p>
@@ -468,7 +468,7 @@ This logically acts as an individual file with that tag/category, thus being ato
 </div>
 <div id="outline-container-key-takeaways" class="outline-2">
 <h2 id="key-takeaways">Key takeaways</h2>
-<div class="outline-text-2" id="text-org1a8d13a">
+<div class="outline-text-2" id="text-org4afb705">
 <p>
 whatever the system or the tool is, the main takeaways every resource provides is to review the notes and write it for future self. Every capture is to review back and make the fleeting note into and rich information.
 This OBTF with org mode satisfies that needs given that user reviews the notes and visits back to digest it again.
@@ -477,7 +477,7 @@ This OBTF with org mode satisfies that needs given that user reviews the notes a
 </div>
 ]]></content></entry><entry><title>Literate org config</title><link rel="alternate" type="text/html" href="https://idlip.in/log/literate-config/" /><id>https://idlip.in/log/literate-config/</id><published>2023-12-29T00:00:00Z</published><updated>2026-10-02T00:00:00Z</updated><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<div id="outline-container-organizing-config" class="outline-2">
 <h2 id="organizing-config">Organizing Config</h2>
-<div class="outline-text-2" id="text-orgebeeb4d">
+<div class="outline-text-2" id="text-orgaea558a">
 <p>
 Configuration files as we know are the text to instruct the program to modify and tweak to our needs. Every Open-Source, hack-able software or tool has configuration files provided for the choice of user's needs. Most of the tools provide simple and basic configuration with JSON-like formats, <code>Yaml</code> and <code>Toml</code>. For the word, they are not extensible, as <code>ml</code> stands, they are merely for markup to already defined instructions.
 </p>
@@ -505,7 +505,7 @@ That's where I'm stopping you can covering up next on writing Literate configura
 </div>
 <div id="outline-container-org-mode-config" class="outline-2">
 <h2 id="org-mode-config">Org-mode Config</h2>
-<div class="outline-text-2" id="text-orgefaa282">
+<div class="outline-text-2" id="text-org50cf3e0">
 <p>
 I won't introduce about org-mode, please do check <a href="https://orgmode.org">here</a>, hopefully it gives you an idea (I mean you should have read whole documentation/manual there). Additionally here is a <a href="https://en.wikipedia.org/wiki/Org-mode">Wikipedia reference</a> which is enough to introduce.
 </p>
@@ -555,7 +555,7 @@ In a recent snippet on <a href="/log/organize-file/">Organize File</a>, I was ab
 </div>
 <div id="outline-container-key-takeaways" class="outline-2">
 <h2 id="key-takeaways">Key Takeaways</h2>
-<div class="outline-text-2" id="text-org356f5e5">
+<div class="outline-text-2" id="text-orgc3402e7">
 <ul class="org-ul">
 <li>Org-mode helps in managing and maintaining configuration files.</li>
 <li>Learning can be stressed, and is the key for writing out Literate programming.</li>

@@ -12,7 +12,7 @@ OBTF in some sense is a lazy man's system to get things done. But if you feel mo
 </p>
 <div id="outline-container-obtf-s-philosophy-pitch" class="outline-2">
 <h2 id="obtf-s-philosophy-pitch">OBTF's philosophy pitch</h2>
-<div class="outline-text-2" id="text-org07e3dc5">
+<div class="outline-text-2" id="text-org7e8e60b">
 <p>
 Their whole argument boils down to a handful of lines:
 </p>
@@ -56,7 +56,7 @@ Some posts on OBTF found over internet:
 </div>
 <div id="outline-container-where-org-gives-you-more" class="outline-2">
 <h2 id="where-org-gives-you-more">Where Org gives you more</h2>
-<div class="outline-text-2" id="text-orgdefbcaf">
+<div class="outline-text-2" id="text-org2ec1692">
 <p>
 "Search beats categories" is true until the file gets big enough that search alone stops being enough, and at that point you want <b>structure you can turn on when you need it</b>, not structure forced on you from day one.
 </p>
@@ -102,7 +102,7 @@ split the real file.</li>
 </div>
 <div id="outline-container-conclude" class="outline-2">
 <h2 id="conclude">Conclude</h2>
-<div class="outline-text-2" id="text-org356fd1f">
+<div class="outline-text-2" id="text-orgad7b62d">
 <p>
 These might sound very much tied to emacs, yes thats mostly true. Environment so perfect that it can be called a monolith of emacs. But alas, people have ported org mode inspired modes and packages to various other ecosystem.
 </p>
@@ -150,7 +150,7 @@ This context is also written in favor to post it on r/obtf
 </p>
 <div id="outline-container-org-mode-is-the-best-tool-for-managing-obtf" class="outline-2">
 <h2 id="org-mode-is-the-best-tool-for-managing-obtf">Org mode is the best tool for managing OBTF</h2>
-<div class="outline-text-2" id="text-org81f8fbf">
+<div class="outline-text-2" id="text-org29c86ca">
 <p>
 Many popular workflow would go by simple format as bullet points with Time date and info, and regexp based searching via CLI (rg, vim, grep, sed&hellip;. bash scripts)
 </p>
@@ -213,7 +213,7 @@ This logically acts as an individual file with that tag/category, thus being ato
 </div>
 <div id="outline-container-key-takeaways" class="outline-2">
 <h2 id="key-takeaways">Key takeaways</h2>
-<div class="outline-text-2" id="text-org1a8d13a">
+<div class="outline-text-2" id="text-org4afb705">
 <p>
 whatever the system or the tool is, the main takeaways every resource provides is to review the notes and write it for future self. Every capture is to review back and make the fleeting note into and rich information.
 This OBTF with org mode satisfies that needs given that user reviews the notes and visits back to digest it again.

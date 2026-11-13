@@ -76,7 +76,7 @@ These hidden tests are the good ones, because you need to solve the problems eff
 </p>
 
 
-<div id="orga288ff8" class="figure">
+<div id="orge3adf75" class="figure">
 <p><img src="/images/biocode-lb.png" alt="biocode-lb.png" width="70%" />
 </p>
 <p>Leaderboard as of third day challenge (I'm at #8)</p>
@@ -115,7 +115,7 @@ Also the site features good blogs, and <a href="https://www.alexmolas.com/blogro
 Probably I might add more sites, or blogroll like page to my site in future. In the mean, I'll plan to share some interesting blogs read in snippets as a list!</p>
 ]]></content></entry><entry><title>Art of Getting things Done</title><link rel="alternate" type="text/html" href="https://idlip.in/log/art-gtd/" /><id>https://idlip.in/log/art-gtd/</id><published>2024-02-03T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><category term="gtd" label="gtd" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<div id="outline-container-gtd" class="outline-2">
 <h2 id="gtd">GTD</h2>
-<div class="outline-text-2" id="text-orgaed7525">
+<div class="outline-text-2" id="text-orge52659d">
 <p>
 The tendency to organize things, and get the workflow in right track is a natural process, and we insist more on that in today's world. The mere idea of finding the "right way", "Best way possible" is a driving opinion for various Internet opinions. People do share what works for them, and they argue.
 </p>
@@ -493,7 +493,7 @@ Visit the snippets again!
 </div>
 ]]></content></entry><entry><title>RSS: The better Internet</title><link rel="alternate" type="text/html" href="https://idlip.in/log/rss-web/" /><id>https://idlip.in/log/rss-web/</id><published>2023-03-23T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><category term="news" label="news" scheme="https://idlip.in/tags/"></category><category term="rss" label="rss" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<div id="outline-container-cheesy-internet" class="outline-2">
 <h2 id="cheesy-internet">Cheesy Internet</h2>
-<div class="outline-text-2" id="text-org94a8897">
+<div class="outline-text-2" id="text-orgb8516ec">
 <p>
 I don't have to say this, the Internet is hella bloated.. Junks are everywhere, nobody knows that they read shit, they are watching shits whole time.
 </p>
@@ -511,7 +511,7 @@ People these days all need ready-made/ready-to-work  stuffs, I wonder how do the
 </div>
 <div id="outline-container-the-hero" class="outline-2">
 <h2 id="the-hero">The Hero</h2>
-<div class="outline-text-2" id="text-orgc71a6ed">
+<div class="outline-text-2" id="text-org440cde8">
 <p>
 Rss stands for <b>Really Simple Syndication</b>, It is a classic on consuming web as supposedly it was built for. Today its all crappy <b>JavaScript</b> (a big bloat of cheese).
 </p>
@@ -533,7 +533,7 @@ Actually many of you might know famous news reader called <b>Feedly</b>, it is b
 </div>
 <div id="outline-container-feed-readers" class="outline-2">
 <h2 id="feed-readers">Feed Readers</h2>
-<div class="outline-text-2" id="text-orgab59d8f">
+<div class="outline-text-2" id="text-org02ffb34">
 <p>
 If you use window there are famous readers like fluent reader.
 On Linux you get <a href="https://newsboat.org/">newsboat</a> (terminal lovers), I use <a href="https://github.com/skeeto/elfeed">elfeed</a> (Emacs way).
