@@ -14,6 +14,8 @@ Things I like watching, reading, and remembering.
 * Books & Novels
 - [[https://web.mit.edu/6.001/6.037/sicp.pdf][Structure & Interpretation of Computer Programs (SICP)]] :: OG programming book on abstracts | by: Harold Abelson and Gerald Jay Sussman
 - [[https://www.goodreads.com/book/show/9859899-the-pleasures-of-reading-in-an-age-of-distraction][The Pleasures of Reading in an Age of Distraction]] :: To get back & have more fun with reading | by: Alan jacobs
+- [[https://www.novelupdates.com/series/three-days-of-happiness/][Three Days of Happiness]] :: Sad but good | refs: 3dh
+- [[https://www.novelupdates.com/series/npc-town-building-game/][The NPCs in this Village Sim Game Must Be Real!]] :: A good self-improvement story | refs: npcs
 
 * Movies
 - [[https://www.themoviedb.org/movie/105-back-to-the-future][Back to the future]] :: Just amazing comedy & fun in time-traveling | year: 1985

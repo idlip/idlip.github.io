@@ -1,6 +1,7 @@
 #+title: Three days of happiness
 #+date: 2025-02-21
 #+tags[]: manga novel
+#+refs: 3dh
 #+draft: false
 #+aliases[]: posts/three-days-happiness
 

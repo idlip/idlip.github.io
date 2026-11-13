@@ -1,6 +1,7 @@
 #+title: The NPCs in this Village Sim Game Must Be Real!
 #+date: 2026-11-10
-#+tags[]: novel
+#+tags: novel
+#+refs: npcs
 
 This is my fourth light novel that I'm reading in a good flow, my first has been [[file:three-days-happiness.org][Three days of happiness]] and then [[file:cats-disappeared-world.org]] and third is Apothecary Diaries (ongoing) and now I've liked on [[https://www.novelupdates.com/series/npc-town-building-game/][NPC Town-building Game]] novel.
 
