@@ -375,9 +375,9 @@ picking happens after paint.")
 
 (cl-defun theme--seo-head-nodes (&key og-title description canonical-url favicon-href favicon-type
                                       og-type og-image published-time modified-time tags site-title
-                                      author-name language noindex fediverse-creator)
+                                      author-name language noindex fediverse-creator rss-url)
   "The page-dependent <head> children: description, canonical, favicon,
-fediverse:creator, OG/Twitter meta, and JSON-LD for articles."
+fediverse:creator, OG/Twitter meta, RSS autodiscovery, and article JSON-LD."
   (let ((og-title (or og-title site-title)))
     (append
      (when description (list (list 'meta (list :name "description" :content description))))
@@ -387,6 +387,12 @@ fediverse:creator, OG/Twitter meta, and JSON-LD for articles."
              (list 'meta (list :property "fediverse:creator" :content fediverse-creator))))
      (when canonical-url (list (list 'link (list :rel "canonical" :href canonical-url))))
      (when favicon-href (list (list 'link (list :rel "icon" :type favicon-type :href favicon-href))))
+     ;; This is the real autodiscovery signal: a feed reader or browser
+     ;; extension finds the feed from this link, not from the Buffers
+     ;; menu's own copy of rss-url.
+     (when rss-url
+       (list (list 'link (list :rel "alternate" :type "application/rss+xml"
+                                :title (format "%s RSS feed" og-title) :href rss-url))))
      (when canonical-url
        (append
         (list (list 'meta (list :property "og:title" :content og-title))
@@ -467,7 +473,7 @@ PALETTE-DATA-SCRIPT must be a `(raw-html nil STRING)' node."
                                          :published-time published-time :modified-time modified-time
                                          :tags tags :site-title site-title :author-name author-name
                                          :language language :noindex noindex
-                                         :fediverse-creator fediverse-creator)
+                                         :fediverse-creator fediverse-creator :rss-url rss-url)
                   (when stylesheet-href (list (list 'link (list :rel "stylesheet" :href stylesheet-href))))
                   (when script-href (list (list 'script (list :src script-href :defer "defer"))))
                   (let ((analytics (theme--analytics-script analytics-script-url analytics-website-id)))
@@ -766,13 +772,16 @@ FOOTER/MODELINE."
                          (list (append (list 'footer '(:class "list-footer")) (when footer (list footer)))))))
      (when modeline (list modeline)))))
 
-(cl-defun theme-term-header (&key tag count)
-  "The /tags/TAG/ page header: tag name, post COUNT, a link back to /tags/."
-  (list 'div '(:class "term-header")
-        (list 'span '(:class "term-tag-name") (concat "#" tag))
-        (list 'span '(:class "article-reading-time")
-              (format "— %d %s" count (if (= count 1) "post" "posts")))
-        '(a (:href "/tags/" :class "term-back") "← all tags")))
+(cl-defun theme-term-header (&key tag count rss-url)
+  "The /tags/TAG/ page header: tag name, post COUNT, an RSS-URL link, a
+link back to /tags/."
+  (append
+   (list 'div '(:class "term-header")
+         (list 'span '(:class "term-tag-name") (concat "#" tag))
+         (list 'span '(:class "article-reading-time")
+               (format ":: %d %s" count (if (= count 1) "post" "posts"))))
+   (when rss-url (list (list 'a (list :href rss-url :class "term-rss") ":: 󰑬 RSS Feed")))
+   (list '(a (:href "/tags/" :class "term-back") "← all tags"))))
 
 (defconst theme--list-search-box
   '(div (:class "list-search" :role "search")
