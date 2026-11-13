@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: philosophy</title><subtitle>Posts tagged philosophy on Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/rss.xml" /><id>https://idlip.in/</id><updated>2026-10-12T00:00:00Z</updated><author><name>Dilip | Zororg</name><email>hi@idlip.in</email></author><generator uri="https://gohugo.io/">Hugo</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Talk is Cheap. Code is Cheap. Show me the Source</title><link rel="alternate" type="text/html" href="https://idlip.in/log/show-me-source/" /><id>https://idlip.in/log/show-me-source/</id><published>2026-08-27T00:00:00Z</published><updated>2026-10-12T00:00:00Z</updated><category term="philosophy" label="philosophy" scheme="https://idlip.in/tags/"></category><category term="programming" label="programming" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<ul class="org-ul">
+<li><a href="https://blainsmith.com/essays/humanities-in-the-machine/">https://blainsmith.com/essays/humanities-in-the-machine/</a></li>
+</ul>
+
+<p>
+I've been meaning to write about this since <span class="timestamp-wrapper"><span class="timestamp">[2026-03-20 Fri]</span></span>. finally doing it.
+</p>
+
+<p>
+Quick note on the title before I get into it. It's riffing on Linus Torvalds' old line, "talk is
+cheap, show me the code". Except these days even that doesn't hold up, talk is cheap sure, but code
+is cheap too now, anyone can get an LLM to spit out a working function in seconds. What's actually
+hard to fake, and what most of what I read (and write) is missing, is the source: the history, the
+reasoning, the "why" behind a piece of code or a life's work, not just the diff. That's what this
+essay is actually about, so show me the source felt more honest than show me the code.
+</p>
+
+<p>
+To put it simply: Business gives us endless <b>Talk</b> for free, AI gives us endless <b>Code</b> for free, but the <b>Source</b>, the real reason behind any of it, can only come from us, Humans.
+</p>
+
+<p>
+So I read this essay by <a href="https://blainsmith.com">Blain smith</a> and it stuck with me for months. The whole point of it is that
+the people who actually built computers as we know them were not "just" engineers. Hoare studied
+classics and philosophy before he ever wrote quicksort. Lovelace called herself a poetical
+scientist. Turing published his most famous paper in a philosophy journal, not a computer science
+one. Dijkstra wrote actual essays, by hand, instead of just writing code comments. None of them were pure "tech pals", they came from somewhere else first.
+</p>
+
+<p>
+Honestly the thing that makes the essay slap me is not just "look, philosophy guy also did tech",
+its that the stuff they built actually held up. Quicksort is still the sort you get taught first,
+decades later. Dijkstra's shortest path algorithm is quietly running every time you open maps and
+ask for directions. C is still the grandparent of basically every language people use today, and
+unix is still under the hood of most servers and phones on earth. hopper's idea, that code should
+read like english (I favor code as docs too), is why every language after her looks the way it does
+instead of staying pure math symbols. None of this stuff got replaced because someone found a
+"better" idea next year, it just kept being the right idea. That's rare. Most code I see in industry
+or tool these days doesn't survive six months, let alone sixty years, every few year they all get
+replaced with better alternative or solution (grander eg: rust hype for everything)
+</p>
+
+<p>
+What got me thinking is, i'm still just a novice in this field. Most of what I read day to day is
+<a href="https://lobste.rs">lobste.rs</a>, <a href="https://fosstodon.org">mastodon</a>, docs, and youtube. Nobody ever tells you to go read philosophy or history to
+get better at writing code. Its always "learn this framework", "learn this language", "here's how to
+solve this", heck nobody even bothers telling how to think of solving.
+</p>
+
+<p>
+The essay also says something that annoyed me a bit, in a good way. It says a lot of today's tech,
+social media, algorithms, all of it, is built by people who never studied ethics or psychology or
+how to write clearly, and thats part of why it feels careless. Like nobody stopped to ask "should we
+build this" and only asked "can we build this", they should've asked "Does it solve a problem",
+instead it went into "We create a problem and then solve it". I don't fully know if i agree with
+that, but it does feel true when i think about doomscrolling or apps that are clearly designed to be
+addictive on purpose, economy &amp; business&hellip;!
+</p>
+
+<p>
+The ending is basically: you don't need a philosophy degree, you just need to actually read stuff
+outside of tech. Books, essays, history. Let it change how we think about what we build, not just how to build it technically.
+</p>
+
+<p>
+I genuinely don't know where i land on all of this yet. But it did make me want to read more outside of programming books, and maybe slow down a bit before shipping things.
+</p>
+
+<p>
+Some more amazing resource to check: <a href="https://www.youtube.com/watch?v=yIPbE7BssOs">Rethinking the Developer Career Path – Randall Koutnik</a>
+(<a href="https://speakerdeck.com/rkoutnik/implementers-solvers-finders-rethinking-the-developer-career-path?slide=14">slides</a>) ,<a href="https://fossunited.org/blog/learning-to-manage/building-a-shared-foundation">Learning to Manage - Building a shared foundation</a>, <a href="https://notashelf.dev/posts/taste-is-all-thats-left">Taste is all thats left</a> and <a href="https://vickiboykis.com/2026/08/12/write-for-people/">Write for people</a>.
+</p>
+
+<ul class="org-ul">
+<li><a href="https://sheets.works/data-viz/holding-up-the-internet/read">https://sheets.works/data-viz/holding-up-the-internet/read</a>: another cool article on people holding the internet.</li>
+</ul>
+
+<hr />
+
+<p>
+Little cheat sheet of everyone the essay talks about, one line each, with a link if you
+want to actually go read them instead of taking blain's word (or mine) for it.
+</p>
+
+<ul class="org-ul">
+<li><a href="https://amturing.acm.org/pdf/HoareTuringTranscript.pdf">Tony Hoare</a> : quicksort person, studied classics and philosophy at oxford before any of that.</li>
+<li><a href="https://nesslabs.com/ada-lovelace">Ada Lovelace</a> : called her own thinking "poetical science", saw that babbage's machine could do more than just crunch numbers.</li>
+<li><a href="https://phil415.pbworks.com/f/TuringComputing.pdf">Alan Turing</a> : published "computing machinery and intelligence" in a philosophy journal, not a cs one.</li>
+<li><a href="https://www.cs.utexas.edu/~EWD/transcriptions/EWD03xx/EWD340.html">Edsger Dijkstra</a> : wrote 1300+ essays by hand (the EWDs), also wrote <a href="https://www.cs.utexas.edu/~EWD/transcriptions/EWD02xx/EWD215.html">"go to statement considered harmful"</a>.</li>
+<li><a href="https://en.wikipedia.org/wiki/Grace_Hopper">Grace Hopper</a> : made compilers speak english instead of math symbols, because "very few people are really symbol manipulators."</li>
+<li><a href="https://www.cnn.com/2011/10/14/tech/innovation/dennis-ritchie-obit-bell-labs/index.html">Dennis Ritchie</a> : made C and unix, died the same week as steve jobs and almost nobody noticed.</li>
+<li><a href="https://engineering.princeton.edu/news/2012/02/07/brian-kernighan-what-intelligent-people-should-know-about-computers">Brian Kernighan</a> : co-wrote the C book, later spent his career trying to connect CS back to liberal arts.</li>
+<li><a href="https://www.gnu.org/gnu/manifesto.en.html">Richard Stallman</a> : founded free software as a moral stance, not just a technical one.</li>
+<li>also worth reading: <a href="http://esr.ibiblio.org/?p=4386">eric raymond's take on stallman</a>, if you want the other side of the free software story.</li>
+</ul>
+
+
+<hr />
+
+<p>
+I know the title was very catchy, and <a href="https://www.alexmolas.com/2023/07/15/nobody-cares-about-your-blog.html">nobody cares about blog</a>, but I honestly didn't expect people to find this post so soon.
+</p>
+
+<p>
+Thanks for the shout-outs:
+</p>
+
+<ul class="org-ul">
+<li><a href="https://lobste.rs/s/idizd1/talk_is_cheap_code_is_cheap_show_me_source">https://lobste.rs/s/idizd1/talk_is_cheap_code_is_cheap_show_me_source</a></li>
+
+<li><a href="https://fosstodon.org/@phoefer@suma-ev.social/117171481544630493">https://fosstodon.org/@phoefer@suma-ev.social/117171481544630493</a></li>
+</ul>
+
+<p>
+I'm just glad my little post got mined 💎
+</p>
+]]></content></entry><entry><title>Stoicism: Way of life</title><link rel="alternate" type="text/html" href="https://idlip.in/log/init-stoicism/" /><id>https://idlip.in/log/init-stoicism/</id><published>2025-04-06T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="philosophy" label="philosophy" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+I've been reading <code>Stoicism 101 by Erick Cloward</code> as a beginner. Although internet suggested <a href="https://plato.stanford.edu/published.html">stanford philosophy</a>, book does have a way to communicate which connects readers mind.
+</p>
+
+<p>
+Initial chapters covered the history of Greek and Roman times, of how prominent philosophers emerged.
+Some prominent works that influence and laid foundation were from
+</p>
+<ol class="org-ol">
+<li>Zeno of Citium</li>
+<li>Socrates</li>
+<li>Epictetus</li>
+<li>Marcus Aurelius</li>
+</ol>
+
+<p>
+The book or in-fact the philosophy, is a thought provoking for sure which not only talks about history, but it provides a realization of how thinkers and people lived in those moments.
+</p>
+
+<p>
+As my first time into actual philosophy, I really align with it and relate the message.
+The most takeaways they pass on are to live good, be virtuous, and all good quality/behaviors you can think of.
+</p>
+
+<p>
+The point I started with philosophy was, unlike mythology, this one connects well with modern day thinkers. Many points in fact remain true.
+Protesilaos stavrou remains one of the good philosophy vlogger along with emacs proponent, his journey has been inspiring and one of my lead thought provoker on philosophy.</p>
+]]></content></entry><entry><title>Resonance: The Echo</title><link rel="alternate" type="text/html" href="https://idlip.in/log/time-resonance/" /><id>https://idlip.in/log/time-resonance/</id><published>2024-03-10T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="psychology" label="psychology" scheme="https://idlip.in/tags/"></category><category term="philosophy" label="philosophy" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+Am at such a career building stage, and learning lot of new things everyday. Every day I wanted to blog and write something, and  even now at the time of writing, I'm enjoying to put up and convey something as a post in my editor, emacs. The point, is "I have to just start".
+</p>
+
+<p>
+<b>The sound</b>
+All these days, some of the thoughts have been echoing inside me, recursively bombarding with same realization and finally coming to the same point. I would like to note down some of the points that are amusing and as a record that exists to realize.
+</p>
+<div id="outline-container-whatever-task-it-is-just-start" class="outline-2">
+<h2 id="whatever-task-it-is-just-start">Whatever task it is, "Just start"</h2>
+<div class="outline-text-2" id="text-org6163a21">
+<p>
+I realized that just starting anything is not only half done, but its a perfection. Issues and complication start when I don't start and exaggerate thinking about it.
+</p>
+</div>
+</div>
+<div id="outline-container-don-t-follow-the-system-let-it-just-work" class="outline-2">
+<h2 id="don-t-follow-the-system-let-it-just-work">Don't follow the system, Let it just work</h2>
+<div class="outline-text-2" id="text-org60d5b46">
+<p>
+Cool trendy, shiny tools and concepts bloom up every morning, cause its how the world is hastening up. But chasing something new, is a huge mistake and leave us nowhere out in the blue. Simply trying to adapt to shiny trends will lead to new issues and new challenges. That is good in some sense, and should be welcome. But we have to know the priorities.
+</p>
+
+<p>
+So better to follow something that works, and adapt and improvise it. As I feel this true for my note taking system. I feel zettelkasten system is not adding any meaning to my workflow. I feel it might only make me feel lost and lose information with FOMO (fear of missing out).
+</p>
+
+<p>
+Since I'm fond of org-mode, it might be reasonable in my case. So I think sticking with few large org files is a go-to and a best strategy, given that I utilize the tools properly and craft my own wizard-ery flow!
+</p>
+</div>
+</div>
+<div id="outline-container-nothing-in-life-makes-sense-after-a-period-of-its-time" class="outline-2">
+<h2 id="nothing-in-life-makes-sense-after-a-period-of-its-time">Nothing in life makes sense, after a period of its time</h2>
+<div class="outline-text-2" id="text-org8299c2d">
+<p>
+Every matter and material has some time in our life, past and post that, its useless and alien to us. For whatever we fight, and chase during that time, is a laughing material for the future you.
+</p>
+
+<p>
+I believe that, we need to sit down and think properly of what's going on with us. Its a good practice to better understand about self. I'm sure many don't notice or feel about themselves these days. Completely lost and being someone they want to be. But lost the person they were born to be.
+</p>
+</div>
+</div>
+<div id="outline-container-silence-and-no-is-the-best-answer-to-many" class="outline-2">
+<h2 id="silence-and-no-is-the-best-answer-to-many">Silence, and No is the best answer to many</h2>
+<div class="outline-text-2" id="text-org2533915">
+<p>
+Many times, life deviates with noise and nodding "yes" to questions. Some seconds of silence and "No" would elevate life's progress and improve the betterment of life for many.
+</p>
+</div>
+</div>
+<div id="outline-container-don-t-be-a-judge" class="outline-2">
+<h2 id="don-t-be-a-judge">Don't be a judge</h2>
+<div class="outline-text-2" id="text-org383a26e">
+<p>
+Judging does come with a price, at the end we may lose our own support. As I said, silence and simplicity voyages the person to bright life.
+</p>
+
+<p>
+Disclaimer: No need to think too much, I'm not a philosopher. <i>Please take it with a pinch of salt</i></p>
+</div>
+</div>
+]]></content></entry></feed>

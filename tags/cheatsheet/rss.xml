@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: cheatsheet</title><subtitle>Posts tagged cheatsheet on Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/rss.xml" /><id>https://idlip.in/</id><updated>2026-09-30T00:00:00Z</updated><author><name>Dilip | Zororg</name><email>hi@idlip.in</email></author><generator uri="https://gohugo.io/">Hugo</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Emacs Efficiency</title><link rel="alternate" type="text/html" href="https://idlip.in/log/emacs-keys/" /><id>https://idlip.in/log/emacs-keys/</id><published>2023-03-29T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="cheatsheet" label="cheatsheet" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+This is straight away from <a href="https://github.com/VernonGrant/discovering-emacs">VernonGrant</a> who hosts a podcast for Emacs called "<a href="https://www.discovering-emacs.com/">Discovering-Emacs</a>".
+It's a great and has very much professional vibes, the explanations are Crisp and Clear!
+I suggest you to check out, he even has made <a href="https://www.youtube.com/@discoveringemacs">YouTube channel</a> for it.
+</p>
+
+<p>
+I have removed some of the common bindings from this table, I have retained some unique one's which isn't discovered generally. I guess that is why the name is made (lol)
+</p>
+
+<p>
+I just wanted to have a cheatsheet for it, so I decided to leave it as a post here.
+</p>
+
+<p>
+You can checkout the source here ⟾ <a href="https://github.com/VernonGrant/emacs-keyboard-shortcuts">https://github.com/VernonGrant/emacs-keyboard-shortcuts</a>
+</p>
+
+<ul class="org-ul">
+<li><a href="https://github.com/VernonGrant/discovering-emacs">https://github.com/VernonGrant/discovering-emacs</a></li>
+</ul>
+]]></content></entry></feed>

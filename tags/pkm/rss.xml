@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: pkm</title><subtitle>Posts tagged pkm on Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/rss.xml" /><id>https://idlip.in/</id><updated>2026-10-12T00:00:00Z</updated><author><name>Dilip | Zororg</name><email>hi@idlip.in</email></author><generator uri="https://gohugo.io/">Hugo</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Org mode is the best OBTF</title><link rel="alternate" type="text/html" href="https://idlip.in/log/obtf/" /><id>https://idlip.in/log/obtf/</id><published>2026-10-07T00:00:00Z</published><updated>2026-10-12T00:00:00Z</updated><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><category term="obtf" label="obtf" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<ul class="org-ul">
+<li>This content is written to be lateral post to <a href="https://www.reddit.com/r/OneBigTextFile/s/5Jy5SUG48h">r/onebigtextfile</a> and spark the idea to many.</li>
+</ul>
+
+<p>
+I wrote about <a href="/log/obtf-org-mode/">OBTF as Second Brain with Org mode</a> a while back, but that post was mostly "here is my datetree workflow." This one is a direct response to <a href="https://obtf.ru/en">obtf.ru</a>, a site that makes the case for <b>One Big Text File</b> a lot sharper than I did, and argues it against FOMO fatigue I've felt myself.
+</p>
+
+<p>
+OBTF in some sense is a lazy man's system to get things done. But if you feel more lazier to even think of it, I'd highly recommend to read <a href="https://obtf.ru/en">https://obtf.ru/en</a> website, since it helps me as well to stay motivated to achieve its purpose.
+</p>
+<div id="outline-container-obtf-s-philosophy-pitch" class="outline-2">
+<h2 id="obtf-s-philosophy-pitch">OBTF's philosophy pitch</h2>
+<div class="outline-text-2" id="text-org07e3dc5">
+<p>
+Their whole argument boils down to a handful of lines:
+</p>
+
+<blockquote>
+<p>
+Your entire life, notes, tasks, ideas, logs, in one text file.
+Just <code>.txt</code>.
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+The best productivity system is the one you actually use. And nothing is simpler than a text file.
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+Search beats categories
+</p>
+</blockquote>
+
+<p>
+No vendor lock-in, speed, offline by default, permanence. All fair, and none of it is specific to a bare <code>.txt</code> file. It's specific to <b>plain text</b>. You make use of many tools to suite your needs instead of you learning and adapting to a system.
+</p>
+
+<p>
+Some posts on OBTF found over internet:
+</p>
+
+<ul class="org-ul">
+<li><a href="https://talk.macpowerusers.com/t/using-one-big-text-file-obtf-for-daily-blogging-and-journal/37546">Forum post on MacPowerUsers</a></li>
+<li><a href="https://mrshll.uk/posts/plain-text-planner/">https://mrshll.uk/posts/plain-text-planner/</a></li>
+<li><a href="https://jeffhuang.com/productivity_text_file/">https://jeffhuang.com/productivity_text_file/</a></li>
+<li><a href="https://mrdizzy.blog/blog/obtf/">https://mrdizzy.blog/blog/obtf/</a></li>
+<li><a href="https://beardystarstuff.net/posts/2024-04-17.html">https://beardystarstuff.net/posts/2024-04-17.html</a></li>
+<li><a href="https://whhone.com/posts/one-line-per-day-diary-in-org-mode/">https://whhone.com/posts/one-line-per-day-diary-in-org-mode/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-where-org-gives-you-more" class="outline-2">
+<h2 id="where-org-gives-you-more">Where Org gives you more</h2>
+<div class="outline-text-2" id="text-orgdefbcaf">
+<p>
+"Search beats categories" is true until the file gets big enough that search alone stops being enough, and at that point you want <b>structure you can turn on when you need it</b>, not structure forced on you from day one.
+</p>
+
+<p>
+I still keep a <code>datetree</code>, Year &gt; Month &gt; Day &gt; entry, which gives me OBTF's own "newest entries first, just append and go" model:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><code><span class="org-org-level-1">* 2026</span>
+<span class="org-org-level-2">** 2026-10 October</span>
+<span class="org-org-level-3">*** 2026-10-07 Tuesday</span>
+<span class="org-org-level-4">**** &lt;whatever I'm capturing&gt;            </span><span class="org-org-level-4"><span class="org-org-tag">:tag1:tag2:</span></span>
+</code></pre>
+</div>
+
+<p>
+The difference from a flat file is that I'm not stuck with chronology as the <b>only</b> axis. A few things I still reach for on top of the datetree:
+</p>
+
+<ul class="org-ul">
+<li><code>org-sparse-tree</code> (<code>C-c /</code>): narrow the whole tree down to just the headings matching a tag or
+property, without touching the file itself.</li>
+
+<li><code>consult-org-heading</code> / <code>consult-line</code> (from the <code>consult</code> package): fuzzy-jump straight to a
+heading or line, which is the actual "search beats categories" experience, just inside a
+structured file instead of a flat one.</li>
+
+<li><code>org-ql</code>: for queries that are more than a single tag match, closer to a real query language over
+my notes than regexp-over-a-text-file ever was.</li>
+
+<li><code>#+select_tags</code>: export just the headings carrying a given tag into a throwaway buffer, which
+behaves like a temporary, generated "file" scoped to one topic, without ever having to actually
+split the real file.</li>
+
+<li><a href="https://github.com/toshism/org-super-links">org-super-links</a>: Package to backlink org headings to one another.</li>
+
+<li><code>org-agenda</code>: Best way to get organized and plan for time. Paired with note taking, the agenda interface is so powerful that even I've underused it mostly to just get stuff done.</li>
+
+<li>Tags: More detail on the tagging convention I use (the <code>l@=/=n@=/=p@</code> prefixes) is in <a href="/log/obtf-org-mode/">OBTF as Second Brain with Org mode</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-conclude" class="outline-2">
+<h2 id="conclude">Conclude</h2>
+<div class="outline-text-2" id="text-org356fd1f">
+<p>
+These might sound very much tied to emacs, yes thats mostly true. Environment so perfect that it can be called a monolith of emacs. But alas, people have ported org mode inspired modes and packages to various other ecosystem.
+</p>
+
+<ul class="org-ul">
+<li><a href="https://github.com/nvim-orgmode/orgmode">orgmode.nvim</a>: OG clone for neovim</li>
+<li><a href="https://github.com/xheisenbugx/org.nvim">org.nvim</a>: New and AI assisted clone of complete org library</li>
+<li><a href="https://github.com/nvim-neorg/neorg">neorg</a>: Future of organizing life in neovim</li>
+<li><a href="https://github.com/rrajath/grove">grove</a>: Beautiful org mode first task/notes android app</li>
+<li><a href="https://github.com/orgzly-revived/orgzly-android-revived">orgzly-revived</a>: Org in mobile at ease</li>
+<li><a href="https://github.com/amake/orgro">orgro</a>: Good org mode reader for android+IOS</li>
+</ul>
+
+<p>
+PS: I use official <a href="https://www.emacswiki.org/emacs/EmacsOnAndroid">Emacs on Android</a> as well bringing the same environment on the phone (<code>_</code>;)
+</p>
+
+<p>
+Ultimately only thing that is required with note taking or system is to always review, revise, repeat and process them.
+</p>
+</div>
+</div>
+]]></content></entry><entry><title>I've Consumed Enough</title><link rel="alternate" type="text/html" href="https://idlip.in/log/consumed-enough/" /><id>https://idlip.in/log/consumed-enough/</id><published>2026-07-20T00:00:00Z</published><updated>2026-10-02T00:00:00Z</updated><category term="webring" label="webring" scheme="https://idlip.in/tags/"></category><category term="gtd" label="gtd" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<blockquote>
+<p>
+I've had enough and Consumed enough these days.
+</p>
+</blockquote>
+
+<p>
+From past days (&hellip;months actually) I've binged alot media and consumed so many free contents (just
+because they're free?). Movies, TV shows, Kdrama, Light Novels, Blog posts, Reviews
+(Movie/Books/Product), Comments on Reddit, Doom scrolling forum threads, Internet research and &hellip; I
+think I've just had enough. In the name of <b>"Know it all person"</b>, I've just consumed and spent so
+much time on being <b>Internet Nerd</b> or <b>Digital Consumer monster</b>.
+</p>
+
+<p>
+Usually every time that we spend has some purpose, and yes I also had purpose to consume each bits.
+But at the end of the day, I finally want some answers, thoughts, moment of realization or insights
+that I'd carry.
+</p>
+
+<p>
+Honest truth, Nothing really answered me, and only thing that kept back firing me was "Regret" on
+trying to do stuff by consuming them. I think I had well researched on things before, but still all
+I was procrastinate and go on consuming streak just so I don't miss on on-going things.
+</p>
+
+<p>
+Eventually I realized that I only trying to kill time by pushing it ahead or trying to get motivated
+by external resources (again be it all media/content I mentioned). Sooner thankfully I finally
+realized that I only needed space and a moment to mindfully think whats actually needed and what
+I've been doing. You know, that moment or flow state of being self-conscious and understand whats
+surrounding you.
+</p>
+
+<p>
+Majority of this related to me trying to perfect some PKM (Personal Knowledge Management) system and
+trying to write more blog posts. I tried <a href="/log/revamp-blog-2026/">Revamp the blogs</a> so I'd be posting and writing more here.
+</p>
+
+<p>
+Recently things have changed for good, thanks for me seeing the other side of ocean. Rather
+than looking at the book, I started looking at critics and review of things in negative side. Then
+it all clicked of whats wrong with current thoughts of people and media, golden tag I realized was
+that everyone is selling some or the other things. And people who buy well, proclaim it well, and
+only when you look at critic or product value we realize its not what it looks like.
+</p>
+
+<p>
+One moment that clicked when I was reading on PKM was that not many successful people claim those
+fancy terms in practice, only people who are sold will advertise them. PKM or note taking has never
+been about a system, it was always about writing, thinking and processing, just that. They all just
+write than complicate or find a system. System comes when need exist, I don't think any practitioner
+has need for those fancy systems at all.
+</p>
+
+<p>
+Another moment that clicked was when I stumbled across <a href="https://lobste.rs/s/69mche/what_is_your_favorite_blog_read_recently">Lobste.rs Favorite Blogs</a> discussion today. It
+showed how diverse poeple write posts and what they seek to communicate by them. Again realized
+here, most of them just write without boasting anything about organization or providing self-host to
+others. They'll just write to get it done, they don't validate with system to work for them.
+I Imagine they all achieve the <b>Flow State</b> while writing content and publishing, that is their
+formula for having it as favorite blogs. That flow state really dictates how quality they give out
+their posts.
+</p>
+
+<p>
+Later this evening I stumbled on <a href="https://fosstodon.org/@abnv@fantastic.earth">Abhinav tushar</a> on mastodon and saw that he is part of <a href="https://blr.indiewebclub.org/">Bangalore
+Indie web club</a>. Did not know it existed at all, If not I'd have definitely made way to attend them
+as much as possible.
+</p>
+
+<p>
+There is one things common from all people in that club, <code>Weekly Posts</code>, they all write weekly post on
+their own blog site. How the heck they write them all without missing or procrastinating?
+I thinking they all just start to write and get it done. Even as of writing this post I'm amazed at
+how everyone writes their every week. Even quality bloggers do only every month for one good post,
+and they all just write good enough.
+</p>
+
+<p>
+I soon want to join their webring so it reminds me to write more so I get engaged in the club more.
+But I'll first try to attend in-person meetup and start getting disciplined myself to write more and
+then officially becomes the keeper.
+</p>
+
+<p>
+Books are very verbose and beat around the bush (just because text is free). All books (from
+reviews) are better off an Article post, or One page or 21 lesson or 30 tips in summary. All books
+do is give out various examples to make readers self-validate the method and convey acceptance. Only
+when I look at critics part I realize the other way round.
+And Only thing book can give readers is to take a space/moment of time to reflect, think and process
+the information in concrete and pragmatic way. I believe <code>One page a day</code> only clicks for eliciting an idea or giving space for thoughts and processing.
+</p>
+
+<p>
+Even I've not updated my blog site at all, stopped mid during adding media content in pages
+(<a href="/projects/">Projects</a>, <a href="/media/">Media</a> and <a href="/wander/">Wander My Small Web</a>). I should start updating them since I read various gems from again
+recent consumption race.
+</p>
+
+<ol class="org-ol">
+<li><a href="https://brennan.day/what-have-note-taking-pkms-accomplished-really/">Brennan's take on PKM</a> - Great site to read and writes alot</li>
+<li><a href="https://blr.indiewebclub.org/">BLR Indie Web Club</a> - All posts + People blog page (so many writers)</li>
+<li><a href="https://dotat.at/@/">Dotat's two Decades of blogs</a> - Good overview of how things changed and what remained constant
+trouble.</li>
+<li>&hellip;and there are more.</li>
+</ol>
+
+<hr />
+<div id="outline-container-tldr" class="outline-2">
+<h2 id="tldr">TLDR</h2>
+<div class="outline-text-2" id="text-org9c41dfd">
+<ul class="org-ul">
+<li>For anyone who couldn't grasp this post, What I wanted to say was that, I've wasted too much consuming media and resources all over Internet.</li>
+<li>I've lately realized that I should start writing more or process information than being mindless consumer.</li>
+<li>This time I'll finally put an end to mindless consumption and keep this post as reminder to do
+daily journal and write blog posts as much as possible.</li>
+<li>I do not know who reads, so all I can do I hope to at-least do writing spree.</li>
+</ul>
+</div>
+</div>
+]]></content></entry><entry><title>OBTF as Second Brain with Org mode</title><link rel="alternate" type="text/html" href="https://idlip.in/log/obtf-org-mode/" /><id>https://idlip.in/log/obtf-org-mode/</id><published>2025-09-06T00:00:00Z</published><updated>2026-10-07T00:00:00Z</updated><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><category term="obtf" label="obtf" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+<b>One Big Text File</b> is simply writing down mostly everything in single file to organize or manage data. This single file acts as the source of knowledge and holds all notes.
+</p>
+
+<p>
+Second brain has been a buzz word, thanks to the sourcing of Zettelkasten method, every productivity freak is on the stance to organize their life and get things done.
+</p>
+
+<p>
+But I soon came to the conclusion by reading many blogs and reddit discussions that, searching is far superior than organizing. On internet all we do is search for information, and not organize or build system just to get info. This is how note taking should work as well. Just for <b>efficient retrieval and storage</b>. 
+</p>
+
+<p>
+Thanks to my introduction to emacs and getting deep into rabbit hole, Org mode has been the great tool to handle plain text file as an Organization platform. Just like emacs (OS), Org mode can also be extended to endless limit (I dare say it). If emacs is OS, Org mode is for me Init system (systemd).
+</p>
+
+<p>
+You can read more about my note taking journey in <a href="/log/wrapup-masters/">Wrap up on my Bioinformatics Masters Journey</a>.
+</p>
+
+<p>
+This context is also written in favor to post it on r/obtf
+</p>
+<div id="outline-container-org-mode-is-the-best-tool-for-managing-obtf" class="outline-2">
+<h2 id="org-mode-is-the-best-tool-for-managing-obtf">Org mode is the best tool for managing OBTF</h2>
+<div class="outline-text-2" id="text-org81f8fbf">
+<p>
+Many popular workflow would go by simple format as bullet points with Time date and info, and regexp based searching via CLI (rg, vim, grep, sed&hellip;. bash scripts)
+</p>
+
+<p>
+Org mode has many bells and whistles (features) that aid in this method. Tags, integration with commands and rich source of documentation (one of the best things of Emacs or org mode). Thanks to emacs and <a href="https://protesilaos.com/">protesilaos stavrou</a> I learnt how important are documentation and writing sensible notes. It means alot for future self to recognize and re-instantiate the thoughts and state.
+</p>
+
+<p>
+Org mode has an <code>datetree</code> method which has file heading hierarchy in the Year &gt; Month &gt; Day and 4th nested heading follows any notes.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><code><span class="org-org-level-1">* 2022</span>
+<span class="org-org-level-2">** 2022-10 October</span>
+<span class="org-org-level-3">*** 2022-10-07 Friday</span>
+<span class="org-org-level-3">*** 2022-10-08 Saturday</span>
+<span class="org-org-level-4">**** &lt;Any notes I'm capturing&gt;            </span><span class="org-org-level-4"><span class="org-org-tag">:tag1:tag2:</span></span>
+</code></pre>
+</div>
+
+<p>
+This gives out the leverage of journaling, but also a lazy man's organization. I use tagging extensively to most of the (4th) heading based on context so as to narrow down to filter.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><code><span class="org-comment"># learning notes --- l@</span>
+<span class="org-org-meta-line">#+tags: l@coding l@emacs l@bioinfo l@nix l@bash l@julia l@rstats l@python l@devnote l@latex l@til</span>
+
+<span class="org-comment"># generic notes to remember or readme --- n@</span>
+<span class="org-org-meta-line">#+tags: n@linux n@shell n@cli n@book n@idea</span>
+
+<span class="org-comment"># projects --- p@</span>
+<span class="org-org-meta-line">#+tags: p@webcli p@cyanate p@scitomep</span>
+</code></pre>
+</div>
+
+<ul class="org-ul">
+<li>These tag help to categorize the heading in some (lazy) way</li>
+</ul>
+
+<p>
+Org mode has <code>org-sparse-tree</code> bound to <code>C-c /</code> which helps to narrow down based on tag or property. Also another emacs package <code>consult</code> helps to take it up further via <code>consult-line</code> and <code>consult-org-heading</code> along with <code>org-ql</code> package. Org mode also has <code>#+select_tags</code> to export headings to file.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><code><span class="org-org-meta-line">#+select_tags: r@book</span>
+</code></pre>
+</div>
+
+<p>
+With that we can <code>C-c C-e</code> (org-export-dispatch) and press "O O" (make sure org is in org-export-backends) to get temporary Org buffer only with those heading.
+This logically acts as an individual file with that tag/category, thus being atomic in my sense. Org-sparse-tree might also be same.
+</p>
+
+<p>
+-&mdash;
+</p>
+</div>
+</div>
+<div id="outline-container-key-takeaways" class="outline-2">
+<h2 id="key-takeaways">Key takeaways</h2>
+<div class="outline-text-2" id="text-org1a8d13a">
+<p>
+whatever the system or the tool is, the main takeaways every resource provides is to review the notes and write it for future self. Every capture is to review back and make the fleeting note into and rich information.
+This OBTF with org mode satisfies that needs given that user reviews the notes and visits back to digest it again.
+</p>
+</div>
+</div>
+]]></content></entry><entry><title>My MSc journey with Emacs Orgmode</title><link rel="alternate" type="text/html" href="https://idlip.in/log/masters-emacs-orgmode/" /><id>https://idlip.in/log/masters-emacs-orgmode/</id><published>2025-06-06T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="bioinformatics" label="bioinformatics" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+<b>I wrote and used emacs orgmode for all of my post-grad Masters classes, presentations, projects and thesis.</b>
+</p>
+
+<p>
+Before post-grad itself I was introduced to Emacs world and enjoyed getting good with it. As I used it, I realized emacs is not just an text editor, its an Personal Development Environment itself and user has power to craft it as they need. This was a worthwhile investment.
+</p>
+
+<p>
+My initial plan when I started Masters (Bioinformatics) was to fully stay organized and be productive. I was a freak at this, I was reading up many blogs and digesting discussion on being productive. I even read books such as,
+</p>
+
+<ol class="org-ol">
+<li>Getting things Done</li>
+<li>How to Smart notes by Sonke Ahrens
+Introduces on Zettelkasten note-taking system. Although hyped up, I believe system does not function as brain.</li>
+<li>Deep Work by Cal Newport
+Insights on focused working and being distraction-less.</li>
+<li>Second Brain by Tiago Forte
+Again, whole thing about Zettelkasten. Popularized the term "Second brain" itself.</li>
+<li>Atomic Habits by James Clear
+Mentions on starting habits in small steps.</li>
+<li>A system for Writing by Bob Doto
+Latest book, emphasis on above all books and zettelkasten.</li>
+</ol>
+
+<p>
+I could have been an normie student like others and be at ease, but why did I choose to burden with Emacs and Orgmode..?
+</p>
+
+<p>
+I valued investment and growth. I could see the development and learning of skills compared to working with traditional GUI applications.
+</p>
+<div id="outline-container-note-taking" class="outline-2">
+<h2 id="note-taking">Note taking</h2>
+<div class="outline-text-2" id="text-org09e605e">
+<p>
+Note-taking is understandable, its just format of text to store and read. And org-mode was superior and helped me alot.
+I later on embraced single big org file, and started using tags heavily with context based tagging.
+</p>
+
+<ul class="org-ul">
+<li>t -&gt; task;         t@shop t@meeting t@work</li>
+<li>p -&gt; project;   p@plan p@lncrna p@thesis</li>
+<li>l -&gt; learn;        l@nix l@python</li>
+</ul>
+
+<p>
+So on which really helps with narrowing using consult package and org-ql for querying. I eventually formed my own second brain with org mode like an zettelkasten system. This became my personal knowledge management (PKM) as well which empowered me to stay organized.
+</p>
+</div>
+</div>
+<div id="outline-container-reports-doc" class="outline-2">
+<h2 id="reports-doc">Reports/Doc</h2>
+<div class="outline-text-2" id="text-org6a71459">
+<p>
+Org mode can produce pdf via latex or ODT/docx format. That eventually guided me for submission of assignments and documents for sharing.
+Although it was an hassle to get formatting correct as they instructed, where as others just did them in breeze via M$ word and AI crap generated.
+</p>
+
+<p>
+Although there was not much work with reports, I had good workflow of storing notes and working with integration and stayed organized.
+</p>
+</div>
+</div>
+<div id="outline-container-presentations" class="outline-2">
+<h2 id="presentations">Presentations</h2>
+<div class="outline-text-2" id="text-org611d41e">
+<p>
+I thought to give presentations in Emacs editor itself, but that did not make the cut for required normie friendly slides. The magically I came across revealJS and observed many people in tech presentations and talks used them. There was active development of org-reveal package as well, in new form from OER gitlab repo.
+</p>
+
+<p>
+This workflow was definitely more painful, to get as they expect. The default works, but tweaking were more. But revealjs and org package provided many options and it sufficed for completing the setup along with power of HTML and CSS.
+</p>
+
+<p>
+I had local.scss file for color and designing slides, and org generated html files.
+</p>
+</div>
+</div>
+<div id="outline-container-thesis" class="outline-2">
+<h2 id="thesis">Thesis</h2>
+<div class="outline-text-2" id="text-org9af57f1">
+<p>
+The final saga of the journey, since thesis takes time to write, I thought to not bother with complicating this task. My initial thought was to either use Latex, if it was too much headache then simply follow given docx format file and write.
+Thankfully there was another player getting really popular, a new typesetting "Typst". It did the magic and wonders.
+</p>
+
+<p>
+The syntax and process was very robust and simple. The documentation was standard and was simple enough to grasp and tweak everything. And here was well someone had made basic org export support for typst format. Although IMHO typst syntax is so easy to understand and I loved to write and learn the syntax. Workflow was bliss with it, I wonder why I did not discover it earlier. Maybe I'm not a mathematician to have it for demand, but it was a good skill to have it in my hands.
+</p>
+</div>
+</div>
+<div id="outline-container-conclusion" class="outline-2">
+<h2 id="conclusion">Conclusion</h2>
+<div class="outline-text-2" id="text-org7b2a996">
+<p>
+The main draw from this experience was that investing in tools that allow extending and allow programming to customize and tweak as I require was a major win and good rewards. These were added up skills that makes working with related tasks a breeze ahead.</p>
+</div>
+</div>
+]]></content></entry></feed>

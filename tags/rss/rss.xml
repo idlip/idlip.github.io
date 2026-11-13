@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: rss</title><subtitle>Posts tagged rss on Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/rss.xml" /><id>https://idlip.in/</id><updated>2026-09-30T00:00:00Z</updated><author><name>Dilip | Zororg</name><email>hi@idlip.in</email></author><generator uri="https://gohugo.io/">Hugo</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>RSS: The better Internet</title><link rel="alternate" type="text/html" href="https://idlip.in/log/rss-web/" /><id>https://idlip.in/log/rss-web/</id><published>2023-03-23T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><category term="news" label="news" scheme="https://idlip.in/tags/"></category><category term="rss" label="rss" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<div id="outline-container-cheesy-internet" class="outline-2">
+<h2 id="cheesy-internet">Cheesy Internet</h2>
+<div class="outline-text-2" id="text-org94a8897">
+<p>
+I don't have to say this, the Internet is hella bloated.. Junks are everywhere, nobody knows that they read shit, they are watching shits whole time.
+</p>
+
+<p>
+Just do a test, How many popups have you closed today, How many cookies (web) have you eaten, How many captchas did you solve, How many minutes did you wait to skip an ad just to watch a video&hellip; Even worse, ads sponsors are embedded within a video (So cruel and harsh world)
+<i>It goes on</i>.
+</p>
+
+<p>
+Internet and digital software's are getting so much bloated, people (normies) have forgotten Unix or say 'minimalism'. People are upgrading RAM like anything, 8GB ain't enough it-seems for them. Here, I do everything with just 4GB RAM.
+People these days all need ready-made/ready-to-work  stuffs, I wonder how do they even watch DIY channels on YouTube.
+</p>
+</div>
+</div>
+<div id="outline-container-the-hero" class="outline-2">
+<h2 id="the-hero">The Hero</h2>
+<div class="outline-text-2" id="text-orgc71a6ed">
+<p>
+Rss stands for <b>Really Simple Syndication</b>, It is a classic on consuming web as supposedly it was built for. Today its all crappy <b>JavaScript</b> (a big bloat of cheese).
+</p>
+
+<p>
+People literally have forgotten to read and embrace the text, everyone wants; YouTube tutorials, or some designed way to make them understand.
+Shit, its a no joke, that's why AI have evolved these days.
+Make our life easy?  Lol
+</p>
+
+<p>
+It can easily fetch content from web and easily showcase the actual content only. If that content is valuable, we should value our way to taking it.
+</p>
+
+<p>
+Actually many of you might know famous news reader called <b>Feedly</b>, it is based on Rss system under-the-hood.
+</p>
+</div>
+</div>
+<div id="outline-container-feed-readers" class="outline-2">
+<h2 id="feed-readers">Feed Readers</h2>
+<div class="outline-text-2" id="text-orgab59d8f">
+<p>
+If you use window there are famous readers like fluent reader.
+On Linux you get <a href="https://newsboat.org/">newsboat</a> (terminal lovers), I use <a href="https://github.com/skeeto/elfeed">elfeed</a> (Emacs way).
+</p>
+
+<p>
+For GUI Linux user you get : (Install with your system's package manager or use AppImage/Flathub)
+</p>
+
+<ul class="org-ul">
+<li><a href="https://github.com/lwindolf/liferea/">Liferea</a></li>
+<li><a href="https://github.com/yang991178/fluent-reader">Fluent-reader</a></li>
+<li><a href="https://www.thunderbird.net/en-US">Thunderbird</a> (Email client + Rss)</li>
+<li><a href="https://gitlab.com/news-flash/news_flash_gtk">NewsFlash</a></li>
+<li><a href="https://apps.kde.org/en/akregator">Kde's Akregator</a></li>
+</ul>
+
+<p>
+Watching YouTube contents is whole lot better in Mpv with sponsorblock (It gives seamless content joy)
+</p>
+
+
+<p>
+Actually elfeed integrates so well with Emacs, I don't have to learn new stuffs for another application or keyboard shortcuts.
+</p>
+
+<p>
+That's one of the reason I call <b>Emacs as the GOAT-E (Editor)</b>.
+</p>
+
+<p>
+I will try to expand more bits on rss feeds value by making a detailed post.
+</p>
+</div>
+</div>
+]]></content></entry></feed>

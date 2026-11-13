@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: wayland</title><subtitle>Posts tagged wayland on Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/rss.xml" /><id>https://idlip.in/</id><updated>2026-10-26T00:00:00Z</updated><author><name>Dilip | Zororg</name><email>hi@idlip.in</email></author><generator uri="https://gohugo.io/">Hugo</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>May I Recommend EWM</title><link rel="alternate" type="text/html" href="https://idlip.in/log/may-i-recommend/" /><id>https://idlip.in/log/may-i-recommend/</id><published>2026-05-04T00:00:00Z</published><updated>2026-10-26T00:00:00Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="carnival" label="carnival" scheme="https://idlip.in/tags/"></category><category term="ewm" label="ewm" scheme="https://idlip.in/tags/"></category><category term="wayland" label="wayland" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<ul class="org-ul">
+<li>This post is written for <a href="https://www.emacswiki.org/emacs/Carnival">Emacs carnival</a> of <a href="https://www.emacswiki.org/emacs/CarnivalMay2026">May 2026</a>. If you're new to this site, FYI I go by
+<code>Zororg</code> in emacs chat/universe.</li>
+</ul>
+
+<p>
+EWM: <a href="https://codeberg.org/ezemtsov/ewm/">https://codeberg.org/ezemtsov/ewm/</a>
+Wiki: <a href="https://codeberg.org/ezemtsov/ewm/wiki">https://codeberg.org/ezemtsov/ewm/wiki</a>
+</p>
+
+<p>
+Emacs along with being a text editor, is a <a href="https://karthinks.com/software/batteries-included-with-emacs/">battery included software</a> that does more things and
+architecturally well designed (thus no rewrite last strong). Emacs has good (in-fact powerful)
+window management, everything as buffer system, self documenting, extensible (upto human brain,
+maybe DNA?) and every user's Personal development environment.
+</p>
+
+<p>
+If you've been a proficient emacs user, you had eventually thought of using emacs to replace tools as
+well, coming down to only requiring [Emacs, Browser and terminal] in an OS of your choice. This has
+been many users experience, phrasing as "Emacs for everything" and eventually it being the OS
+itself.
+</p>
+
+<p>
+Even as I was dealing with this experience, I really wanted an Emacs Window Manager, I had used EXWM
+in X11 way back and was not fully convinced on it (this was before minad took over maintaining
+<a href="https://github.com/emacs-exwm/">emacs-exwm</a>). We really needed it for wayland side, although there was a proposal and some work
+initiated in <a href="https://emacsconf.org/2022/talks/wayland/">2022 via emacs conf talk</a>, there was no progress. Out of the blue the day came where
+<a href="https://codeberg.org/ezemtsov">ezemtsov</a> had posted on <a href="https://redlib.catsarch.com/r/emacs/comments/1rbyoui/introducing_ewm_a_new_generation_wayland_window/">r/emacs introducing EWM</a> (use reddit domain if redlib does not work). Its niri inspired WM, and uses smithay library and works similarly.
+</p>
+
+<p>
+After it was announced there seems to be another brain-coded emacs window manager using <a href="https://isaacfreund.com/blog/river-window-management/">new river
+protocol</a> (v4) called <a href="https://codeberg.org/tazjin/reka">reka</a>. I tried to compile but was discouraged as reka did not seem featureful and ewm already satisfied me a bit.
+</p>
+
+<p>
+Although its pretty minimal it does not ship with every feature niri has. Eventually I made the
+switch and boy-o-boy it worked well and was pretty stable. I've been daily driving EWM without much
+issues (although <a href="https://codeberg.org/ezemtsov/ewm/issues?q=&amp;type=all&amp;sort=relevance&amp;state=all&amp;labels=&amp;milestone=0&amp;project=0&amp;assignee=0&amp;poster=184629&amp;archived=false">I've opened some issues</a> for enhancements), but basic functionality works, and more
+than all, its Emacsy!
+</p>
+
+<p>
+Emacs already has <code>next-buffer</code> - <code>previous-buffer</code> and <code>tab-next</code> - <code>tab-previous</code> for tabs (workspaces in EWM) to navigate quick. Although <code>consult-buffer</code> is way more quicker. After using ewm I discovered consult has <code>consult-preview-excluded-buffers</code>, and thus I just append all side window buffer to exlude preview, but preview can be so helpful with apps to quickly scan if you've more.
+</p>
+
+<div class="org-center">
+
+<div id="orgbc4128c" class="figure">
+<p><img src="/images/ewm-desktop.png" alt="ewm-desktop.png" />
+</p>
+<p>Fig: EWM setup with Noctalia shell while writing this blog post. Left is org mode capture buffer, top right is glide browser showing EWM repo and bottom right is foot terminal running hugo server.</p>
+</div>
+</div>
+
+<p>
+I was using <a href="https://github.com/vicinaehq/vicinae/">vicinae</a> (raycast in linux) launcher as well, but since most of it can be done in emacs
+itself, I replaced launching apps/scripts in emacs itself by using <code>call-process</code> or <code>start-process</code>,
+</p>
+
+<p>
+You might be interested in <a href="https://github.com/idlip/d-nix/blob/gol-d/d-setup.org#ewm-config">reading my EWM config</a> to get more idea. Scroll down to see all functions,
+I grab firefox history via <code>sqlite-select</code> and show in completing-read to insert a link (Emacsy).
+</p>
+
+<p>
+Thanks to emacs window management, every apps (browser, terminal) can be managed as Emacs buffer
+itself. All I see is emacs frame, and I work in Emacs as its my WM itself now. Now my whole session can be even more customized (embrace Elisp), Emacs (EWM) is DIY Desktop Environment or WM or simply just Emacs itself (what is emacs now?).
+I no longer quit/leave emacs, if I'm leaving that means I'm shutting down my machine down ;-)
+</p>
+<div id="outline-container-may-i-also-recommend-glide-browser-for-emacs-keymappings" class="outline-3">
+<h3 id="may-i-also-recommend-glide-browser-for-emacs-keymappings">May I also Recommend Glide browser for emacs keymappings</h3>
+<div class="outline-text-3" id="text-orge12a0e9">
+<p>
+Glide browser came to <a href="https://lobste.rs/s/lm3isi/glide_extensible_keyboard_focused_web">lobste.rs news</a> and showcased as firefox-fork being keyboard centric, and I was badly looking for qutebrowser enhancements with addons. And I made the switch and config was pretty easy.
+</p>
+
+<p>
+Glide supports various firefox API and in browser many Web API can be used in config itself. I've
+remapped all keybindings to Emacs style and have extended glide with some qutebrowser &amp; nyxt
+features to make it completely productive &amp; efficient browsing experience.
+</p>
+
+<p>
+Yes, I can do <code>M-x</code>, <code>C-x C-s</code> to make it work as I wanted. Swap <code>C-c</code> to <code>M-w</code> (yes possible).
+</p>
+
+<p>
+Here's the <a href="https://github.com/glide-browser/glide/discussions/25">discussion thread I raised for Emacs bindings</a>.
+</p>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-2026-07-29-wed" class="outline-2">
+<h2 id="2026-07-29-wed"><span class="timestamp-wrapper"><span class="timestamp">[2026-07-29 Wed]</span></span></h2>
+<div class="outline-text-2" id="text-org8f1a9e1">
+<p>
+<a href="https://codeberg.org/ezemtsov">Ezemtsov</a> has made a <a href="https://codeberg.org/ezemtsov/emacs/src/branch/wayland">fork of emacs</a> with <a href="https://codeberg.org/ezemtsov/emacs/commit/6147db532ae4fb462910816e55fab0cc62418269">pure wayland backend</a>, with no gtk or
+cairo toolkit. As I was very excited on this, I immediately jumped and built it with no toolkit.
+</p>
+
+<p>
+For context, initially he used Skia instead of cairo on top of PGTK and I was using it as well, the
+input delay and lags reduced a bit and was comparivetly faster since it used GPU compared to just Pgtk, but now with pure wayland (<code>pwayl</code> ,
+<code>(pwayl-skia-gl-enabled-p)</code> =&gt; t), its more snappier and faster. Almost feels like native WM and not
+emacs.
+</p>
+
+<p>
+There is no delay in anything whatsoever and ezemtsov was genuine to fix <a href="https://codeberg.org/ezemtsov/emacs/issues/2">a reported issue</a> ASAP as
+well.
+TBH it has elevated the EWM experience more folds and I might finally remove <a href="https://github.com/niri-wm/niri/">Niri</a> and <a href="https://github.com/mangowm/mango/">MangoWM</a>
+that I had it installed and yet haven't opened it for &gt;3 months (really!).
+</p>
+
+<p>
+I must say these days I'm not tinkering anything, and just use emacs with matured config of mine and
+day to day has been either emacs for notes/task and glide browser for being on Internet.
+</p>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-2026-10-23-fri" class="outline-2">
+<h2 id="2026-10-23-fri"><span class="timestamp-wrapper"><span class="timestamp">[2026-10-23 Fri]</span></span></h2>
+<div class="outline-text-2" id="text-org55b993b">
+<p>
+EWM again has matured alot and is almost stable for daily driving for others, although I've been already daily driving it with no issues. Even features have increased alot, every fortnight there has been new cool feature or improvements in codebase. Emacs pwayl backend got background-ext-control which gives blur, EWM has blur now, go see codeberg demo to see it and check wiki for more. <code>S-e</code> which calls <code>ewm-edit</code> to capture input text from any wayland window and edit in emacs and on closing it pastes it there (inspired by emacs-anywhere &amp; exwm).
+</p>
+
+<p>
+EWM even got floating window support, true full screen like Niri, overview like niri - although I use 1 frame and many tabs with <code>consult-buffer</code> mostly. Although codebase has increased significantly, its still a good featured WM for emacs thats works as expected. TBH these days I only update emacs and ewm for my whole OS and don't care for any other tools unlike before, this can be boon or bane too. Paired with noctalia it very well completes the need of perfect Desktop setup with Emacs at its core.
+</p>
+
+<p>
+Another plug, someone else is writing a wayland compositor with river window protocols with pure emacs lisp and no rust/c dynamic module. <a href="https://github.com/thkoch2001/rau">https://github.com/thkoch2001/rau</a> sounds cool with efforts to see how well it turns out.
+</p>
+
+<hr />
+
+<p>
+<i>This post might see update as I think of extending.</i>
+</p>
+</div>
+</div>
+]]></content></entry></feed>

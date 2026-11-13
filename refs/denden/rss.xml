@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: denden</title><subtitle>Posts referencing denden on Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/rss.xml" /><id>https://idlip.in/</id><updated>2026-10-06T00:00:00Z</updated><author><name>Dilip | Zororg</name><email>hi@idlip.in</email></author><generator uri="https://gohugo.io/">Hugo</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Denden: Emacs Lisp SSG based on org-publish</title><link rel="alternate" type="text/html" href="https://idlip.in/log/denden/" /><id>https://idlip.in/log/denden/</id><published>2026-10-02T00:00:00Z</published><updated>2026-10-06T00:00:00Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="lisp" label="lisp" scheme="https://idlip.in/tags/"></category><category term="denden" label="denden" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+<a href="https://github.com/idlip/denden">Denden</a> is yet another SSG based on org-publish and utilizing complete Elisp ecosystem. This site is
+built using that. Its not a package per-say, just an helper and building blocks on top of org mode's
+native <a href="https://orgmode.org/manual/Publishing.html">ox-publish</a> and <a href="https://orgmode.org/worg/dev/org-element-api.html">org-element</a> for AST.
+</p>
+<div id="outline-container-why-i-even-started-this" class="outline-2">
+<h2 id="why-i-even-started-this">Why I even started this</h2>
+<div class="outline-text-2" id="text-orgb597e3b">
+<p>
+This site used to run on <a href="https://gohugo.io">Hugo</a> using same theme called <a href="https://github.com/idlip/hakimacs">hakimacs</a>, with content in Org mode rendered through go-org, and it worked fine for months. But I hated looking how ugly <a href="https://gohugo.io/templates/introduction/">go-template</a> looked and lot of regexp to do something, although it was fast, it was not human (emacs user) friendly to read at all. When I wrote in org mode, I always liked why not elisp somewhere to hack and do stuff. Org is a rich ecosystem and it needs way more hackable place to configure, not hugo to regexp parse everything.
+</p>
+
+<p>
+Org has a perfectly good parser living right inside Emacs, <code>org-element</code>, that turns any <code>.org</code> file into a proper tree I can walk, query, and reshape however I like. So the question became obvious, why am I throwing that tree away and going back to regexing strings, when the real structure is sitting right there the whole time.
+</p>
+
+<p>
+That annoyance is the entire reason denden exists.
+</p>
+</div>
+</div>
+<div id="outline-container-what-denden-actually-is-and-isn-t" class="outline-2">
+<h2 id="what-denden-actually-is-and-isn-t">What denden actually is, and isn't</h2>
+<div class="outline-text-2" id="text-orgbf6d5f5">
+<p>
+<code>denden</code> is not a package, its more like a tool, helpers and building block on top of org-publish. It
+uses all native org mode libs and <code>org-publish</code>, the publishing engine that already ships inside Org mode, plus a small pile of Elisp helper functions sitting on top of it, that's the whole thing. <code>denden.el</code> itself is one file, no hidden layers, no magic you can't just <code>M-x describe-function</code> your way into.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><code><span class="org-comment-delimiter">;; </span><span class="org-comment">this is roughly the entire mental model
+</span>(<span class="org-keyword">require</span> '<span class="org-constant">denden</span>)
+(<span class="org-keyword">setq</span> denden-content-directory <span class="org-string">"~/my-site/content"</span>)
+(<span class="org-keyword">setq</span> denden-publishing-directory <span class="org-string">"~/my-site/public"</span>)
+(<span class="org-keyword">setq</span> denden-full-build-function #'my-site-build)
+<span class="org-comment-delimiter">;; </span><span class="org-comment">now M-x denden-build just works</span>
+</code></pre>
+</div>
+
+<p>
+Everything else, <a href="/rss.xml">feeds</a>, <a href="/sitemap.xml">sitemap</a>, search index, <a href="/og/denden.png">OG card images</a>, the accessibility linter, is a
+building block you call when you want it, not a framework deciding things for you. If you don't like
+how I did sitemaps, you just don't call <code>denden-sitemap-xml</code>, and write your own three lines instead.
+Nobody's stopping you, there's no true "denden way" to acheive it.
+</p>
+</div>
+</div>
+<div id="outline-container-templates-are-just-lists-the-sexp-html-bit" class="outline-2">
+<h2 id="templates-are-just-lists-the-sexp-html-bit">Templates are just lists, the sexp-HTML bit</h2>
+<div class="outline-text-2" id="text-org6b467c4">
+<p>
+This is the part I like the most, a denden template is not a template language at all, it's a plain Emacs Lisp list, shaped like this.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><code>(TAG ATTRIBUTE-PLIST . CHILDREN)
+</code></pre>
+</div>
+
+<p>
+A tag symbol, a plist of attributes, then however many children you want, which can themselves be more nodes or plain strings. Something this small turns into real HTML.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><code>(list 'div '(<span class="org-builtin">:class</span> <span class="org-string">"card"</span>)
+      (list 'h2 nil <span class="org-string">"Hello"</span>)
+      (list 'p '(<span class="org-builtin">:class</span> <span class="org-string">"muted"</span>) <span class="org-string">"Written as a list, not a string template."</span>))
+<span class="org-comment-delimiter">;; </span><span class="org-comment">C-x C-e =&gt; (div (:class "card") (h2 nil "Hello") (p (:class "muted") "Written as a list, not a string template."))</span>
+</code></pre>
+</div>
+
+<p>
+Run that through <code>denden-serialize-node</code> and you get.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html"><code>&lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"card"</span>&gt;&lt;<span class="org-function-name">h2</span>&gt;<span class="org-underline"><span class="org-bold-italic">Hello</span></span>&lt;/<span class="org-function-name">h2</span>&gt;&lt;<span class="org-function-name">p</span> <span class="org-variable-name">class</span>=<span class="org-string">"muted"</span>&gt;Written as a list, not a string template.&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+</code></pre>
+</div>
+
+<p>
+No Jinja-style <code>&lt;% if %&gt;</code> tags, no template DSL to look up in some docs page, it's Lisp, so it's just Lisp. If you need a loop you use <code>mapcar</code>, if you need a condition you use <code>if</code>, you already know how, because you already know Emacs Lisp, or you're learning it anyway for your config.
+</p>
+
+<p>
+Here's a tiny real one, lifted straight from denden's own example site, <code>denden/example/example-theme.el</code>, the page header.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><code>(<span class="org-keyword">cl-defun</span> <span class="org-function-name">example-theme-header</span> (<span class="org-type">&amp;key</span> site-title menu-items)
+  <span class="org-doc">"The page header: SITE-TITLE linking home, then a MENU-ITEMS nav."</span>
+  (list 'header nil
+        (list 'a '(<span class="org-builtin">:class</span> <span class="org-string">"title"</span> <span class="org-builtin">:href</span> <span class="org-string">"/"</span>)
+              (list 'h2 nil site-title))
+        (append (list 'nav nil)
+                (mapcar (<span class="org-keyword">lambda</span> (item) (list 'a (list <span class="org-builtin">:href</span> (cdr item)) (car item)))
+                        menu-items))))
+</code></pre>
+</div>
+
+<p>
+That's a whole working nav bar, <code>menu-items</code> is just a list of <code>(label . url)</code> pairs. Add a link to your site, add one more cons cell, no shortcode, no registering a new partial, nothing to restart.
+</p>
+</div>
+</div>
+<div id="outline-container-how-my-own-site-is-built-with-it" class="outline-2">
+<h2 id="how-my-own-site-is-built-with-it">How my own site is built with it</h2>
+<div class="outline-text-2" id="text-orgcf33aad">
+<p>
+My site's own Elisp lives in exactly three files, and I think that's a feature, not something I need to apologize for.
+</p>
+
+<ul class="org-ul">
+<li><code>denden/denden.el</code> : the generic core engine, nothing specific to my site at all.</li>
+<li><code>site/site.el</code> : my config and page logic, menu items, badges, feed setup, everything that's <i>my</i> data.</li>
+<li><code>theme/theme.el</code> : my actual sexp-HTML templates.</li>
+</ul>
+
+<p>
+Config is just Elisp data, so it looks like this, shortened from my real <code>site.el</code>.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><code>(<span class="org-keyword">defconst</span> <span class="org-variable-name">site-menu-main</span>
+  '((<span class="org-builtin">:name</span> <span class="org-string">"Home"</span> <span class="org-builtin">:url</span> <span class="org-string">"/"</span>)
+    (<span class="org-builtin">:name</span> <span class="org-string">"Blog Posts"</span> <span class="org-builtin">:url</span> <span class="org-string">"/log/"</span>)
+    (<span class="org-builtin">:name</span> <span class="org-string">"Wander My Small Web"</span> <span class="org-builtin">:url</span> <span class="org-string">"/wander/"</span>)
+    (<span class="org-builtin">:name</span> <span class="org-string">"Media"</span> <span class="org-builtin">:url</span> <span class="org-string">"/media/"</span>)
+    (<span class="org-builtin">:name</span> <span class="org-string">"Quotes"</span> <span class="org-builtin">:url</span> <span class="org-string">"/quotes/"</span>)))
+</code></pre>
+</div>
+
+<p>
+Want another nav item, add a line. Want a new badge on my footer, same deal, it's one more plist in a list, no new file, no new template syntax to learn.
+</p>
+
+<p>
+Everything you're reading right now, the  <button type="button" class="tag-cloud-btn" data-action="open-palette">Command palette</button>, the <button type="button" class="tag-cloud-btn" data-action="browse-schemes">colour scheme picker with 305 base16 themes</button>, the <a href="/wander/">Wander My Small Web</a>, the <a href="/pose/">Pose | Vivre Card</a> quick-thought cards, the accessible dialogs, all of that is just more sexp nodes and a bit of plain JS, sitting on top of the same three files.
+</p>
+</div>
+</div>
+<div id="outline-container-one-more-cool-bit-even-the-og-card-images-are-sexp" class="outline-2">
+<h2 id="one-more-cool-bit-even-the-og-card-images-are-sexp">One more cool bit, even the OG card images are sexp</h2>
+<div class="outline-text-2" id="text-orgfe5ee60">
+<p>
+OG cards, the preview image you see when a link gets shared on social media, are usually generated with some headless browser screenshot setup or an image library. In denden it's the exact same <code>(TAG ATTRIBUTE-PLIST . CHILDREN)</code> trick, just aimed at <code>&lt;svg&gt;</code> instead of <code>&lt;div&gt;</code>, from my own <code>site.el</code>.
+</p>
+
+<p>
+I know IK, by now you might realize and say this is hard to write as well, but thats the cool stuff.
+Own it in lisp way. Direct maintenance of HTML files with no system is also cool tho ;-)
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><code>(list 'svg (list <span class="org-builtin">:xmlns</span> <span class="org-string">"http://www.w3.org/2000/svg"</span> <span class="org-builtin">:viewBox</span> <span class="org-string">"0 0 1200 630"</span>
+                  <span class="org-builtin">:width</span> <span class="org-string">"1200"</span> <span class="org-builtin">:height</span> <span class="org-string">"630"</span> <span class="org-builtin">:font-family</span> <span class="org-string">"Code D OnePiece, monospace"</span>)
+      (list 'rect '(<span class="org-builtin">:width</span> <span class="org-string">"1200"</span> <span class="org-builtin">:height</span> <span class="org-string">"630"</span> <span class="org-builtin">:fill</span> <span class="org-string">"#000000"</span>))
+      (list 'rect '(<span class="org-builtin">:width</span> <span class="org-string">"1200"</span> <span class="org-builtin">:height</span> <span class="org-string">"68"</span> <span class="org-builtin">:fill</span> <span class="org-string">"#0a0f0a"</span>))
+      (list 'text '(<span class="org-builtin">:x</span> <span class="org-string">"100"</span> <span class="org-builtin">:y</span> <span class="org-string">"46"</span> <span class="org-builtin">:fill</span> <span class="org-string">"#5fd7af"</span> <span class="org-builtin">:font-size</span> <span class="org-string">"30"</span> <span class="org-builtin">:font-weight</span> <span class="org-string">"bold"</span>)
+            card-site-title)
+      <span class="org-comment-delimiter">;; </span><span class="org-comment">... and so on, title lines, tags, excerpt, favicon, all the same nodes
+</span>      )
+</code></pre>
+</div>
+
+<p>
+Same <code>denden-serialize-node</code> (<a href="https://github.com/idlip/denden/blob/master/denden.el">check file</a>) call at the end, except this time the string it hands back is an SVG file sitting at <code>/log/some-post/og.svg</code>. No separate image-generation step, no Canva template, just more rects and text nodes.
+</p>
+</div>
+</div>
+<div id="outline-container-it-s-also-properly-fast" class="outline-2">
+<h2 id="it-s-also-properly-fast">It's also properly fast</h2>
+<div class="outline-text-2" id="text-orgfbe25f8">
+<p>
+I was bracing for a slow first build, since Emacs isn't exactly famous for being a speed train. It wasn't. A full build of this entire site, every post, every feed, every OG card image, finishes in a couple of seconds. I build it from the terminal like this.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh"><code>emacs --batch -Q -L denden -L site -L theme <span class="org-sh-escaped-newline">\</span>
+    -l denden/denden.el -l site/site.el -l theme/theme.el <span class="org-sh-escaped-newline">\</span>
+    --eval <span class="org-string">'(setq denden-repository-directory "/path/to/my/site")'</span> <span class="org-sh-escaped-newline">\</span>
+    --eval <span class="org-string">'(site-build t)'</span>
+</code></pre>
+</div>
+
+<p>
+That's a cold batch Emacs, loading three files, building every page from scratch since <code>t</code> skips the
+incremental cache, and it's done before switch two windows. There's also an async build mode and a timestamp cache for day to day editing, so normal single-file saves rebuild near instantly through <code>denden-preview-current-file</code>.
+</p>
+</div>
+</div>
+<div id="outline-container-owning-the-whole-thing" class="outline-2">
+<h2 id="owning-the-whole-thing">Owning the whole thing</h2>
+<div class="outline-text-2" id="text-org7630f66">
+<p>
+The thing I like most isn't the speed, it's that I own every line of this. I'm an Emacs user, I already spend my <a href="/log/may-i-recommend/">May I Recommend EWM</a> tweaking my config, and now my blog engine runs in the same language, the same editor, the same muscle memory. If I want a new feature, I don't wait for a plugin, I don't learn a templating DSL, I just write a function next to the ones already there and call it. That's a genuinely different feeling from configuring a static site generator, it's closer to how your Emacs config itself grows over the years, one small function at a time, shaped around what you personally want.
+</p>
+
+<p>
+If any of this sounds interesting and you're also an Emacs plus Org mode person, go have a look at
+<a href="https://github.com/idlip/denden/tree/master/example">denden bearblog example site</a>. There's a small, complete example site in the repo <code>example/</code> directory, a Bear-Blog-style site with a home page, an about page, a blog listing and a couple of posts, one stylesheet, no JavaScript. You can build and serve it yourself with one command, <code>just example-build</code> or <code>just example-serve</code> from inside <code>denden/</code>, and poke around the two small files that make it tick, <code>example-site.el</code> and <code>example-theme.el</code>, to see the whole pattern in one sitting, before you even think about pointing it at your own content.
+</p>
+
+
+<div id="orgdf4ce60" class="figure">
+<p><img src="https://raw.githubusercontent.com/idlip/denden/refs/heads/master/example/screenshot.png" alt="screenshot.png" />
+</p>
+<p>Snap of a example bearblog like site built with denden</p>
+</div>
+</div>
+</div>
+<div id="outline-container-about-the-name" class="outline-2">
+<h2 id="about-the-name">About the name</h2>
+<div class="outline-text-2" id="text-orgef4dbd4">
+<p>
+A <code>denden mushi</code> is the snail-shaped transponder phone from One Piece, the way everyone in that world
+talks to each other across the sea. If you've looked around this site even a little, the One Piece
+theme is not exactly subtle here. A static site generator's job is carrying your words from your Org
+files out to the rest of the world, felt fitting enough that I didn't look for a second name,
+although I did consider "dennow" to mimic "Then &amp; Now", alas something had to stay.
+</p>
+
+<p>
+Give it a spin, and if you build something with it, I'd genuinely like to hear about it.
+</p>
+</div>
+</div>
+]]></content></entry></feed>

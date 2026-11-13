@@ -1,0 +1,1164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: emacs</title><subtitle>Posts tagged emacs on Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/rss.xml" /><id>https://idlip.in/</id><updated>2026-11-12T00:00:00Z</updated><author><name>Dilip | Zororg</name><email>hi@idlip.in</email></author><generator uri="https://gohugo.io/">Hugo</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Discovery of Emacs Features</title><link rel="alternate" type="text/html" href="https://idlip.in/log/discover-emacs/" /><id>https://idlip.in/log/discover-emacs/</id><published>2026-11-12T00:00:00Z</published><updated>2026-11-12T00:00:00Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="carnival" label="carnival" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<ul class="org-ul">
+<li>This post is my third <a href="https://www.emacswiki.org/emacs/Carnival">Emacs carnival</a> entry, this time for <a href="https://www.emacswiki.org/emacs/CarnivalNovember2026">Nov 2026</a>. If you're new to this site, FYI I also go by <code>Zororg</code> in emacs chat/universe.</li>
+</ul>
+
+<p>
+I'm happy that this topic erupted after I poked around in <a href="https://fosstodon.org/@idlip/117557170998056871">mastodon</a>, maybe some day I'd like to hoist as well.
+</p>
+
+<p>
+Before I write up on topic, I'm sure many emacs users might remember that there was a podcast channel called <a href="https://github.com/VernonGrant/discovering-emacs">"Discovering Emacs"</a>, there was a Youtube channel (rip), mastodon presence in emacs.ch (rip) and everywhere in podcast apps. It was very promising and a professional ambience to hear someone speak of dear emacs.
+Thankfully git repo exists, and you see the notes and how good it was, wish it had continued or someone brings similar stuff to our small church of emacs. Obviously we are ever so thankful for <a href="https://sachachua.com/">sacha</a>, <a href="https://protesilaos.com/">protesilaos</a> and <a href="https://lists.gnu.org/archive/html/emacs-devel/">emacs-devel</a> people for their good faith and holding up emacs for what it is today even after 50 years.
+</p>
+
+<p>
+We need more community users to hold the torch, contribute, volunteer and not be behind the shiny tool-era that is making us lazy and degenerate. Me included!
+</p>
+
+<p>
+Back to topic, I usually discovered emacs features based on "good to have" or "cool to have" notion and kept on exploring or adding, sooner came to realize that I've not even grossed the <a href="https://karthinks.com/software/batteries-included-with-emacs/">emacs builtins</a> batteries. Nowadays I only discover features based on need, if not it'd be a <a href="https://redlib.catsarch.com/r/emacs/comments/1w4knk3/question_about_things_that_surprised_you_about/p792xh7/?context=3#p792xh7">aha/TIL moment</a> as always.
+</p>
+
+<p>
+Emacs is one best example of a perfect software for humans, and by humans. Each object or data is so well connected, that by just using emacs you keep discovering new features every now and then. The docs are the greatest feat of any software that, docs exist for humans and code exists as docs for humans too. History of emacs itself is very funny, thanks for the archives gnu mailing list has and some code has many funny comments, this all brings a smile to users at some point when they again "discover" the legacy of emacs.
+</p>
+
+<p>
+Thanks to <b>Alternate Intelligence</b> these days that many people don't recognize the charm of emacs anymore, and thanks to the every busy world that shiny tools keep popping up to be eye candy for all. But for those who recognize or stay, surely emacs got us treat for lifetime. Emacs was almost like <b>Second brain</b> to many users, but now their first brain has been almost replaced by Lazy Learner’s Machine (LLM) and emacs is out of equation now.
+</p>
+
+<hr />
+
+<ol class="org-ol">
+<li><p>
+How often do you discover an Emacs feature?
+</p>
+
+<p>
+Nowadays rarely, even r/emacs has no human posts, and mastodon #emacs seems to be quite. So for now I'm just getting things done using emacs for my needs. Hopefully could find gems via mailing lists now.
+</p></li>
+
+<li><p>
+What was the most recent feature that you adopted?
+</p>
+
+<p>
+A consult function to change buffer font by preview. Which is very cool, just like color theme playing with different font is fun to read as per mood.
+Discovered via <a href="https://www.reddit.com/r/emacs/comments/1w31p3u/what_it_feels_like_to_use_emacs_these_days/">r/emacs</a> and <a href="https://news.ycombinator.com/item?id=49505107">hackernews</a>.
+</p>
+
+<p>
+Except for this I've been using <a href="https://codeberg.org/ezemtsov/emacs">ezemstov</a>'s fork of emacs which builds pure wayland backend using Skia GPU renderer, without GTK or cairo toolkit. Its snappier and 3-5x snappier than PGTK&hellip; <a href="https://codeberg.org/ezemtsov/emacs/issues/8#issuecomment-26078420">read more</a>
+Its even available in <a href="https://github.com/nix-community/emacs-overlay/pull/559/changes">nix emacs-overlay</a> (go try it out with nix shell)
+</p></li>
+
+<li><p>
+Are you a “Set it and forget it” type of user?
+</p>
+
+<p>
+Most config were that way, but later on trimmed them out and only keep essential ones now. Thats the reason I prefer using builtins now unless necessary.
+Config is now at 2K LOC.
+</p></li>
+
+<li><p>
+Do you read Emacs-centric social media trolling for new things to try?
+</p>
+
+<p>
+I wonder where is emacs trolling happening, but I glance actively over r/emacs and #emacs in mastodon, and obviously planet Emacs for all golden nuggets.
+</p></li>
+
+<li><p>
+What’s the next feature that you’d like to try?
+</p>
+
+<p>
+Canvas patch, IGC, and more than all Gnus upgrade to be async and snappier.
+</p></li>
+
+<li><p>
+If you’re a Feature Creator, tell us about that!
+</p>
+
+<p>
+Nope, but I've a <a href="https://github.com/idlip/d-nix/blob/gol-d/foss/configs/d-emacs/init.el">public config</a> that might be of interest.
+Also since I was missing two package needs, I tried building those (ofc with help of second brain).
+</p>
+<ul class="org-ul">
+<li><a href="https://github.com/idlip/nnflux">nnflux</a>: A Gnus backend reader for Miniflux feeds. It works like a charm with all features for RSS reading beauty.</li>
+
+<li><a href="https://github.com/idlip/denden">denden</a>: A ox-publish based helper tool to act as typical SSG for emacs, my site that you reading is built using that and I made it just for this purpose to replace hugo.</li>
+</ul></li>
+</ol>
+]]></content></entry><entry><title>Org mode is the best OBTF</title><link rel="alternate" type="text/html" href="https://idlip.in/log/obtf/" /><id>https://idlip.in/log/obtf/</id><published>2026-10-07T00:00:00Z</published><updated>2026-10-12T00:00:00Z</updated><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><category term="obtf" label="obtf" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<ul class="org-ul">
+<li>This content is written to be lateral post to <a href="https://www.reddit.com/r/OneBigTextFile/s/5Jy5SUG48h">r/onebigtextfile</a> and spark the idea to many.</li>
+</ul>
+
+<p>
+I wrote about <a href="/log/obtf-org-mode/">OBTF as Second Brain with Org mode</a> a while back, but that post was mostly "here is my datetree workflow." This one is a direct response to <a href="https://obtf.ru/en">obtf.ru</a>, a site that makes the case for <b>One Big Text File</b> a lot sharper than I did, and argues it against FOMO fatigue I've felt myself.
+</p>
+
+<p>
+OBTF in some sense is a lazy man's system to get things done. But if you feel more lazier to even think of it, I'd highly recommend to read <a href="https://obtf.ru/en">https://obtf.ru/en</a> website, since it helps me as well to stay motivated to achieve its purpose.
+</p>
+<div id="outline-container-obtf-s-philosophy-pitch" class="outline-2">
+<h2 id="obtf-s-philosophy-pitch">OBTF's philosophy pitch</h2>
+<div class="outline-text-2" id="text-org07e3dc5">
+<p>
+Their whole argument boils down to a handful of lines:
+</p>
+
+<blockquote>
+<p>
+Your entire life, notes, tasks, ideas, logs, in one text file.
+Just <code>.txt</code>.
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+The best productivity system is the one you actually use. And nothing is simpler than a text file.
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+Search beats categories
+</p>
+</blockquote>
+
+<p>
+No vendor lock-in, speed, offline by default, permanence. All fair, and none of it is specific to a bare <code>.txt</code> file. It's specific to <b>plain text</b>. You make use of many tools to suite your needs instead of you learning and adapting to a system.
+</p>
+
+<p>
+Some posts on OBTF found over internet:
+</p>
+
+<ul class="org-ul">
+<li><a href="https://talk.macpowerusers.com/t/using-one-big-text-file-obtf-for-daily-blogging-and-journal/37546">Forum post on MacPowerUsers</a></li>
+<li><a href="https://mrshll.uk/posts/plain-text-planner/">https://mrshll.uk/posts/plain-text-planner/</a></li>
+<li><a href="https://jeffhuang.com/productivity_text_file/">https://jeffhuang.com/productivity_text_file/</a></li>
+<li><a href="https://mrdizzy.blog/blog/obtf/">https://mrdizzy.blog/blog/obtf/</a></li>
+<li><a href="https://beardystarstuff.net/posts/2024-04-17.html">https://beardystarstuff.net/posts/2024-04-17.html</a></li>
+<li><a href="https://whhone.com/posts/one-line-per-day-diary-in-org-mode/">https://whhone.com/posts/one-line-per-day-diary-in-org-mode/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-where-org-gives-you-more" class="outline-2">
+<h2 id="where-org-gives-you-more">Where Org gives you more</h2>
+<div class="outline-text-2" id="text-orgdefbcaf">
+<p>
+"Search beats categories" is true until the file gets big enough that search alone stops being enough, and at that point you want <b>structure you can turn on when you need it</b>, not structure forced on you from day one.
+</p>
+
+<p>
+I still keep a <code>datetree</code>, Year &gt; Month &gt; Day &gt; entry, which gives me OBTF's own "newest entries first, just append and go" model:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><code><span class="org-org-level-1">* 2026</span>
+<span class="org-org-level-2">** 2026-10 October</span>
+<span class="org-org-level-3">*** 2026-10-07 Tuesday</span>
+<span class="org-org-level-4">**** &lt;whatever I'm capturing&gt;            </span><span class="org-org-level-4"><span class="org-org-tag">:tag1:tag2:</span></span>
+</code></pre>
+</div>
+
+<p>
+The difference from a flat file is that I'm not stuck with chronology as the <b>only</b> axis. A few things I still reach for on top of the datetree:
+</p>
+
+<ul class="org-ul">
+<li><code>org-sparse-tree</code> (<code>C-c /</code>): narrow the whole tree down to just the headings matching a tag or
+property, without touching the file itself.</li>
+
+<li><code>consult-org-heading</code> / <code>consult-line</code> (from the <code>consult</code> package): fuzzy-jump straight to a
+heading or line, which is the actual "search beats categories" experience, just inside a
+structured file instead of a flat one.</li>
+
+<li><code>org-ql</code>: for queries that are more than a single tag match, closer to a real query language over
+my notes than regexp-over-a-text-file ever was.</li>
+
+<li><code>#+select_tags</code>: export just the headings carrying a given tag into a throwaway buffer, which
+behaves like a temporary, generated "file" scoped to one topic, without ever having to actually
+split the real file.</li>
+
+<li><a href="https://github.com/toshism/org-super-links">org-super-links</a>: Package to backlink org headings to one another.</li>
+
+<li><code>org-agenda</code>: Best way to get organized and plan for time. Paired with note taking, the agenda interface is so powerful that even I've underused it mostly to just get stuff done.</li>
+
+<li>Tags: More detail on the tagging convention I use (the <code>l@=/=n@=/=p@</code> prefixes) is in <a href="/log/obtf-org-mode/">OBTF as Second Brain with Org mode</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-conclude" class="outline-2">
+<h2 id="conclude">Conclude</h2>
+<div class="outline-text-2" id="text-org356fd1f">
+<p>
+These might sound very much tied to emacs, yes thats mostly true. Environment so perfect that it can be called a monolith of emacs. But alas, people have ported org mode inspired modes and packages to various other ecosystem.
+</p>
+
+<ul class="org-ul">
+<li><a href="https://github.com/nvim-orgmode/orgmode">orgmode.nvim</a>: OG clone for neovim</li>
+<li><a href="https://github.com/xheisenbugx/org.nvim">org.nvim</a>: New and AI assisted clone of complete org library</li>
+<li><a href="https://github.com/nvim-neorg/neorg">neorg</a>: Future of organizing life in neovim</li>
+<li><a href="https://github.com/rrajath/grove">grove</a>: Beautiful org mode first task/notes android app</li>
+<li><a href="https://github.com/orgzly-revived/orgzly-android-revived">orgzly-revived</a>: Org in mobile at ease</li>
+<li><a href="https://github.com/amake/orgro">orgro</a>: Good org mode reader for android+IOS</li>
+</ul>
+
+<p>
+PS: I use official <a href="https://www.emacswiki.org/emacs/EmacsOnAndroid">Emacs on Android</a> as well bringing the same environment on the phone (<code>_</code>;)
+</p>
+
+<p>
+Ultimately only thing that is required with note taking or system is to always review, revise, repeat and process them.
+</p>
+</div>
+</div>
+]]></content></entry><entry><title>Denden: Emacs Lisp SSG based on org-publish</title><link rel="alternate" type="text/html" href="https://idlip.in/log/denden/" /><id>https://idlip.in/log/denden/</id><published>2026-10-02T00:00:00Z</published><updated>2026-10-06T00:00:00Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="lisp" label="lisp" scheme="https://idlip.in/tags/"></category><category term="denden" label="denden" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+<a href="https://github.com/idlip/denden">Denden</a> is yet another SSG based on org-publish and utilizing complete Elisp ecosystem. This site is
+built using that. Its not a package per-say, just an helper and building blocks on top of org mode's
+native <a href="https://orgmode.org/manual/Publishing.html">ox-publish</a> and <a href="https://orgmode.org/worg/dev/org-element-api.html">org-element</a> for AST.
+</p>
+<div id="outline-container-why-i-even-started-this" class="outline-2">
+<h2 id="why-i-even-started-this">Why I even started this</h2>
+<div class="outline-text-2" id="text-orgb597e3b">
+<p>
+This site used to run on <a href="https://gohugo.io">Hugo</a> using same theme called <a href="https://github.com/idlip/hakimacs">hakimacs</a>, with content in Org mode rendered through go-org, and it worked fine for months. But I hated looking how ugly <a href="https://gohugo.io/templates/introduction/">go-template</a> looked and lot of regexp to do something, although it was fast, it was not human (emacs user) friendly to read at all. When I wrote in org mode, I always liked why not elisp somewhere to hack and do stuff. Org is a rich ecosystem and it needs way more hackable place to configure, not hugo to regexp parse everything.
+</p>
+
+<p>
+Org has a perfectly good parser living right inside Emacs, <code>org-element</code>, that turns any <code>.org</code> file into a proper tree I can walk, query, and reshape however I like. So the question became obvious, why am I throwing that tree away and going back to regexing strings, when the real structure is sitting right there the whole time.
+</p>
+
+<p>
+That annoyance is the entire reason denden exists.
+</p>
+</div>
+</div>
+<div id="outline-container-what-denden-actually-is-and-isn-t" class="outline-2">
+<h2 id="what-denden-actually-is-and-isn-t">What denden actually is, and isn't</h2>
+<div class="outline-text-2" id="text-orgbf6d5f5">
+<p>
+<code>denden</code> is not a package, its more like a tool, helpers and building block on top of org-publish. It
+uses all native org mode libs and <code>org-publish</code>, the publishing engine that already ships inside Org mode, plus a small pile of Elisp helper functions sitting on top of it, that's the whole thing. <code>denden.el</code> itself is one file, no hidden layers, no magic you can't just <code>M-x describe-function</code> your way into.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><code><span class="org-comment-delimiter">;; </span><span class="org-comment">this is roughly the entire mental model
+</span>(<span class="org-keyword">require</span> '<span class="org-constant">denden</span>)
+(<span class="org-keyword">setq</span> denden-content-directory <span class="org-string">"~/my-site/content"</span>)
+(<span class="org-keyword">setq</span> denden-publishing-directory <span class="org-string">"~/my-site/public"</span>)
+(<span class="org-keyword">setq</span> denden-full-build-function #'my-site-build)
+<span class="org-comment-delimiter">;; </span><span class="org-comment">now M-x denden-build just works</span>
+</code></pre>
+</div>
+
+<p>
+Everything else, <a href="/rss.xml">feeds</a>, <a href="/sitemap.xml">sitemap</a>, search index, <a href="/og/denden.png">OG card images</a>, the accessibility linter, is a
+building block you call when you want it, not a framework deciding things for you. If you don't like
+how I did sitemaps, you just don't call <code>denden-sitemap-xml</code>, and write your own three lines instead.
+Nobody's stopping you, there's no true "denden way" to acheive it.
+</p>
+</div>
+</div>
+<div id="outline-container-templates-are-just-lists-the-sexp-html-bit" class="outline-2">
+<h2 id="templates-are-just-lists-the-sexp-html-bit">Templates are just lists, the sexp-HTML bit</h2>
+<div class="outline-text-2" id="text-org6b467c4">
+<p>
+This is the part I like the most, a denden template is not a template language at all, it's a plain Emacs Lisp list, shaped like this.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><code>(TAG ATTRIBUTE-PLIST . CHILDREN)
+</code></pre>
+</div>
+
+<p>
+A tag symbol, a plist of attributes, then however many children you want, which can themselves be more nodes or plain strings. Something this small turns into real HTML.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><code>(list 'div '(<span class="org-builtin">:class</span> <span class="org-string">"card"</span>)
+      (list 'h2 nil <span class="org-string">"Hello"</span>)
+      (list 'p '(<span class="org-builtin">:class</span> <span class="org-string">"muted"</span>) <span class="org-string">"Written as a list, not a string template."</span>))
+<span class="org-comment-delimiter">;; </span><span class="org-comment">C-x C-e =&gt; (div (:class "card") (h2 nil "Hello") (p (:class "muted") "Written as a list, not a string template."))</span>
+</code></pre>
+</div>
+
+<p>
+Run that through <code>denden-serialize-node</code> and you get.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html"><code>&lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"card"</span>&gt;&lt;<span class="org-function-name">h2</span>&gt;<span class="org-underline"><span class="org-bold-italic">Hello</span></span>&lt;/<span class="org-function-name">h2</span>&gt;&lt;<span class="org-function-name">p</span> <span class="org-variable-name">class</span>=<span class="org-string">"muted"</span>&gt;Written as a list, not a string template.&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+</code></pre>
+</div>
+
+<p>
+No Jinja-style <code>&lt;% if %&gt;</code> tags, no template DSL to look up in some docs page, it's Lisp, so it's just Lisp. If you need a loop you use <code>mapcar</code>, if you need a condition you use <code>if</code>, you already know how, because you already know Emacs Lisp, or you're learning it anyway for your config.
+</p>
+
+<p>
+Here's a tiny real one, lifted straight from denden's own example site, <code>denden/example/example-theme.el</code>, the page header.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><code>(<span class="org-keyword">cl-defun</span> <span class="org-function-name">example-theme-header</span> (<span class="org-type">&amp;key</span> site-title menu-items)
+  <span class="org-doc">"The page header: SITE-TITLE linking home, then a MENU-ITEMS nav."</span>
+  (list 'header nil
+        (list 'a '(<span class="org-builtin">:class</span> <span class="org-string">"title"</span> <span class="org-builtin">:href</span> <span class="org-string">"/"</span>)
+              (list 'h2 nil site-title))
+        (append (list 'nav nil)
+                (mapcar (<span class="org-keyword">lambda</span> (item) (list 'a (list <span class="org-builtin">:href</span> (cdr item)) (car item)))
+                        menu-items))))
+</code></pre>
+</div>
+
+<p>
+That's a whole working nav bar, <code>menu-items</code> is just a list of <code>(label . url)</code> pairs. Add a link to your site, add one more cons cell, no shortcode, no registering a new partial, nothing to restart.
+</p>
+</div>
+</div>
+<div id="outline-container-how-my-own-site-is-built-with-it" class="outline-2">
+<h2 id="how-my-own-site-is-built-with-it">How my own site is built with it</h2>
+<div class="outline-text-2" id="text-orgcf33aad">
+<p>
+My site's own Elisp lives in exactly three files, and I think that's a feature, not something I need to apologize for.
+</p>
+
+<ul class="org-ul">
+<li><code>denden/denden.el</code> : the generic core engine, nothing specific to my site at all.</li>
+<li><code>site/site.el</code> : my config and page logic, menu items, badges, feed setup, everything that's <i>my</i> data.</li>
+<li><code>theme/theme.el</code> : my actual sexp-HTML templates.</li>
+</ul>
+
+<p>
+Config is just Elisp data, so it looks like this, shortened from my real <code>site.el</code>.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><code>(<span class="org-keyword">defconst</span> <span class="org-variable-name">site-menu-main</span>
+  '((<span class="org-builtin">:name</span> <span class="org-string">"Home"</span> <span class="org-builtin">:url</span> <span class="org-string">"/"</span>)
+    (<span class="org-builtin">:name</span> <span class="org-string">"Blog Posts"</span> <span class="org-builtin">:url</span> <span class="org-string">"/log/"</span>)
+    (<span class="org-builtin">:name</span> <span class="org-string">"Wander My Small Web"</span> <span class="org-builtin">:url</span> <span class="org-string">"/wander/"</span>)
+    (<span class="org-builtin">:name</span> <span class="org-string">"Media"</span> <span class="org-builtin">:url</span> <span class="org-string">"/media/"</span>)
+    (<span class="org-builtin">:name</span> <span class="org-string">"Quotes"</span> <span class="org-builtin">:url</span> <span class="org-string">"/quotes/"</span>)))
+</code></pre>
+</div>
+
+<p>
+Want another nav item, add a line. Want a new badge on my footer, same deal, it's one more plist in a list, no new file, no new template syntax to learn.
+</p>
+
+<p>
+Everything you're reading right now, the  <button type="button" class="tag-cloud-btn" data-action="open-palette">Command palette</button>, the <button type="button" class="tag-cloud-btn" data-action="browse-schemes">colour scheme picker with 305 base16 themes</button>, the <a href="/wander/">Wander My Small Web</a>, the <a href="/pose/">Pose | Vivre Card</a> quick-thought cards, the accessible dialogs, all of that is just more sexp nodes and a bit of plain JS, sitting on top of the same three files.
+</p>
+</div>
+</div>
+<div id="outline-container-one-more-cool-bit-even-the-og-card-images-are-sexp" class="outline-2">
+<h2 id="one-more-cool-bit-even-the-og-card-images-are-sexp">One more cool bit, even the OG card images are sexp</h2>
+<div class="outline-text-2" id="text-orgfe5ee60">
+<p>
+OG cards, the preview image you see when a link gets shared on social media, are usually generated with some headless browser screenshot setup or an image library. In denden it's the exact same <code>(TAG ATTRIBUTE-PLIST . CHILDREN)</code> trick, just aimed at <code>&lt;svg&gt;</code> instead of <code>&lt;div&gt;</code>, from my own <code>site.el</code>.
+</p>
+
+<p>
+I know IK, by now you might realize and say this is hard to write as well, but thats the cool stuff.
+Own it in lisp way. Direct maintenance of HTML files with no system is also cool tho ;-)
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><code>(list 'svg (list <span class="org-builtin">:xmlns</span> <span class="org-string">"http://www.w3.org/2000/svg"</span> <span class="org-builtin">:viewBox</span> <span class="org-string">"0 0 1200 630"</span>
+                  <span class="org-builtin">:width</span> <span class="org-string">"1200"</span> <span class="org-builtin">:height</span> <span class="org-string">"630"</span> <span class="org-builtin">:font-family</span> <span class="org-string">"Code D OnePiece, monospace"</span>)
+      (list 'rect '(<span class="org-builtin">:width</span> <span class="org-string">"1200"</span> <span class="org-builtin">:height</span> <span class="org-string">"630"</span> <span class="org-builtin">:fill</span> <span class="org-string">"#000000"</span>))
+      (list 'rect '(<span class="org-builtin">:width</span> <span class="org-string">"1200"</span> <span class="org-builtin">:height</span> <span class="org-string">"68"</span> <span class="org-builtin">:fill</span> <span class="org-string">"#0a0f0a"</span>))
+      (list 'text '(<span class="org-builtin">:x</span> <span class="org-string">"100"</span> <span class="org-builtin">:y</span> <span class="org-string">"46"</span> <span class="org-builtin">:fill</span> <span class="org-string">"#5fd7af"</span> <span class="org-builtin">:font-size</span> <span class="org-string">"30"</span> <span class="org-builtin">:font-weight</span> <span class="org-string">"bold"</span>)
+            card-site-title)
+      <span class="org-comment-delimiter">;; </span><span class="org-comment">... and so on, title lines, tags, excerpt, favicon, all the same nodes
+</span>      )
+</code></pre>
+</div>
+
+<p>
+Same <code>denden-serialize-node</code> (<a href="https://github.com/idlip/denden/blob/master/denden.el">check file</a>) call at the end, except this time the string it hands back is an SVG file sitting at <code>/log/some-post/og.svg</code>. No separate image-generation step, no Canva template, just more rects and text nodes.
+</p>
+</div>
+</div>
+<div id="outline-container-it-s-also-properly-fast" class="outline-2">
+<h2 id="it-s-also-properly-fast">It's also properly fast</h2>
+<div class="outline-text-2" id="text-orgfbe25f8">
+<p>
+I was bracing for a slow first build, since Emacs isn't exactly famous for being a speed train. It wasn't. A full build of this entire site, every post, every feed, every OG card image, finishes in a couple of seconds. I build it from the terminal like this.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh"><code>emacs --batch -Q -L denden -L site -L theme <span class="org-sh-escaped-newline">\</span>
+    -l denden/denden.el -l site/site.el -l theme/theme.el <span class="org-sh-escaped-newline">\</span>
+    --eval <span class="org-string">'(setq denden-repository-directory "/path/to/my/site")'</span> <span class="org-sh-escaped-newline">\</span>
+    --eval <span class="org-string">'(site-build t)'</span>
+</code></pre>
+</div>
+
+<p>
+That's a cold batch Emacs, loading three files, building every page from scratch since <code>t</code> skips the
+incremental cache, and it's done before switch two windows. There's also an async build mode and a timestamp cache for day to day editing, so normal single-file saves rebuild near instantly through <code>denden-preview-current-file</code>.
+</p>
+</div>
+</div>
+<div id="outline-container-owning-the-whole-thing" class="outline-2">
+<h2 id="owning-the-whole-thing">Owning the whole thing</h2>
+<div class="outline-text-2" id="text-org7630f66">
+<p>
+The thing I like most isn't the speed, it's that I own every line of this. I'm an Emacs user, I already spend my <a href="/log/may-i-recommend/">May I Recommend EWM</a> tweaking my config, and now my blog engine runs in the same language, the same editor, the same muscle memory. If I want a new feature, I don't wait for a plugin, I don't learn a templating DSL, I just write a function next to the ones already there and call it. That's a genuinely different feeling from configuring a static site generator, it's closer to how your Emacs config itself grows over the years, one small function at a time, shaped around what you personally want.
+</p>
+
+<p>
+If any of this sounds interesting and you're also an Emacs plus Org mode person, go have a look at
+<a href="https://github.com/idlip/denden/tree/master/example">denden bearblog example site</a>. There's a small, complete example site in the repo <code>example/</code> directory, a Bear-Blog-style site with a home page, an about page, a blog listing and a couple of posts, one stylesheet, no JavaScript. You can build and serve it yourself with one command, <code>just example-build</code> or <code>just example-serve</code> from inside <code>denden/</code>, and poke around the two small files that make it tick, <code>example-site.el</code> and <code>example-theme.el</code>, to see the whole pattern in one sitting, before you even think about pointing it at your own content.
+</p>
+
+
+<div id="orgdf4ce60" class="figure">
+<p><img src="https://raw.githubusercontent.com/idlip/denden/refs/heads/master/example/screenshot.png" alt="screenshot.png" />
+</p>
+<p>Snap of a example bearblog like site built with denden</p>
+</div>
+</div>
+</div>
+<div id="outline-container-about-the-name" class="outline-2">
+<h2 id="about-the-name">About the name</h2>
+<div class="outline-text-2" id="text-orgef4dbd4">
+<p>
+A <code>denden mushi</code> is the snail-shaped transponder phone from One Piece, the way everyone in that world
+talks to each other across the sea. If you've looked around this site even a little, the One Piece
+theme is not exactly subtle here. A static site generator's job is carrying your words from your Org
+files out to the rest of the world, felt fitting enough that I didn't look for a second name,
+although I did consider "dennow" to mimic "Then &amp; Now", alas something had to stay.
+</p>
+
+<p>
+Give it a spin, and if you build something with it, I'd genuinely like to hear about it.
+</p>
+</div>
+</div>
+]]></content></entry><entry><title>Playing with Emacs</title><link rel="alternate" type="text/html" href="https://idlip.in/log/playing-emacs/" /><id>https://idlip.in/log/playing-emacs/</id><published>2026-09-02T00:00:00Z</published><updated>2026-10-02T00:00:00Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="carnival" label="carnival" scheme="https://idlip.in/tags/"></category><category term="games" label="games" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<ul class="org-ul">
+<li>This post is my second <a href="https://www.emacswiki.org/emacs/Carnival">Emacs carnival</a> entry, this time for <a href="https://www.emacswiki.org/emacs/CarnivalSeptember2026">Sept 2026</a>. If you're new to this site, FYI I go by <code>Zororg</code> in emacs chat/universe.</li>
+</ul>
+
+<p>
+Coincidentally I just wrote on <a href="/log/games/">Games that occupied my life</a> in my previous post, but it covers more on what all games I've played till now mostly.
+</p>
+
+<p>
+Every emacs users (&gt;1 YOE to qualify) would know that emacs is the tinkering lisp machine, all you
+do everyday is tweak and play with it. Emacs is like a big playground, the definite workshop to all users.
+</p>
+
+<p>
+I don't play any game in emacs as such, but one thing that impress me everytime I run is, <code>M-x zone</code>.
+Not the graphical screensaver you'd expect, but the ASCII text dancing around my screen is so
+blissful to watch. Never seen any editor do that, CLI programs can do, but having in emacs is chef's
+kiss for me. IMO it should also be easy to program it to behave like <code>cava</code> (music visualizer) to make
+a package that integrates with mpd/mpv and <code>M-x zone</code> mode dances along!
+</p>
+
+<p>
+<i>wow I'm serious I just got this prompt while writing this, anyone can feel free to go ahead. Even I
+plan to experiment this at some point</i>. Additionally if lyrics can be fetched to dance with you (≧∇≦)/
+</p>
+
+<p>
+Or you can say it was unconscious memory that sparked since I watch <a href="https://www.youtube.com/watch?v=580DxF2M7EE">Tsoding livestream</a> where he has
+been programming a Jai program to play song and show with cool visualization.
+</p>
+
+<p>
+I read alot of epub thanks to <a href="https://depp.brause.cc/nov.el/">nov.el</a> package, embracing ASCII text is always great. I seldom use
+PDFs, in fact I don't use <a href="https://github.com/ahrm/sioyek">sioyek</a> (one of the best software IMO) as well. I really wanna use
+<a href="https://codeberg.org/MonadicSheep/emacs-reader">emacs-reader</a> but I have stopped using pdf altogether 😅
+</p>
+
+<p>
+These days I only Emacs, <a href="https://github.com/glide-browser/glide">Glide browser</a>, terminal, Agentic coding (work) as my four pillars of
+computing interface. Anything else? the answer always been emacs again. Its like a cycle, nothing
+goes out of these 4 honestly.
+</p>
+
+<p>
+This just proves how much playful emacs is, its surely is a small community, but every discussion and
+updates on <a href="https://fosstodon.org/tags/emacs">#emacs</a> always provides a smile on every emacs users (again, &gt;1 YOE to realize). Every
+<a href="https://redlib.catsarch.com/r/emacs/comments/1w4knk3/question_about_things_that_surprised_you_about/p792xh7/?context=3#p792xh7">"aha" moment</a> is always a TIL for someone and remember me notes for all veterans.
+</p>
+
+<p>
+Another game of emacs I like is, how its a swimming pool of texts. You breath text, you see text and
+even you edit the text (please do if not).
+</p>
+
+<p>
+Emacs has always been a playful machine that mends to the user and not make user mend to it.
+</p>
+
+<p>
+Emacs is what every software should be designed as: something that keeps you busy playing with it, so you never get around to actually using it.
+</p>
+]]></content></entry><entry><title>May I Recommend EWM</title><link rel="alternate" type="text/html" href="https://idlip.in/log/may-i-recommend/" /><id>https://idlip.in/log/may-i-recommend/</id><published>2026-05-04T00:00:00Z</published><updated>2026-10-26T00:00:00Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="carnival" label="carnival" scheme="https://idlip.in/tags/"></category><category term="ewm" label="ewm" scheme="https://idlip.in/tags/"></category><category term="wayland" label="wayland" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<ul class="org-ul">
+<li>This post is written for <a href="https://www.emacswiki.org/emacs/Carnival">Emacs carnival</a> of <a href="https://www.emacswiki.org/emacs/CarnivalMay2026">May 2026</a>. If you're new to this site, FYI I go by
+<code>Zororg</code> in emacs chat/universe.</li>
+</ul>
+
+<p>
+EWM: <a href="https://codeberg.org/ezemtsov/ewm/">https://codeberg.org/ezemtsov/ewm/</a>
+Wiki: <a href="https://codeberg.org/ezemtsov/ewm/wiki">https://codeberg.org/ezemtsov/ewm/wiki</a>
+</p>
+
+<p>
+Emacs along with being a text editor, is a <a href="https://karthinks.com/software/batteries-included-with-emacs/">battery included software</a> that does more things and
+architecturally well designed (thus no rewrite last strong). Emacs has good (in-fact powerful)
+window management, everything as buffer system, self documenting, extensible (upto human brain,
+maybe DNA?) and every user's Personal development environment.
+</p>
+
+<p>
+If you've been a proficient emacs user, you had eventually thought of using emacs to replace tools as
+well, coming down to only requiring [Emacs, Browser and terminal] in an OS of your choice. This has
+been many users experience, phrasing as "Emacs for everything" and eventually it being the OS
+itself.
+</p>
+
+<p>
+Even as I was dealing with this experience, I really wanted an Emacs Window Manager, I had used EXWM
+in X11 way back and was not fully convinced on it (this was before minad took over maintaining
+<a href="https://github.com/emacs-exwm/">emacs-exwm</a>). We really needed it for wayland side, although there was a proposal and some work
+initiated in <a href="https://emacsconf.org/2022/talks/wayland/">2022 via emacs conf talk</a>, there was no progress. Out of the blue the day came where
+<a href="https://codeberg.org/ezemtsov">ezemtsov</a> had posted on <a href="https://redlib.catsarch.com/r/emacs/comments/1rbyoui/introducing_ewm_a_new_generation_wayland_window/">r/emacs introducing EWM</a> (use reddit domain if redlib does not work). Its niri inspired WM, and uses smithay library and works similarly.
+</p>
+
+<p>
+After it was announced there seems to be another brain-coded emacs window manager using <a href="https://isaacfreund.com/blog/river-window-management/">new river
+protocol</a> (v4) called <a href="https://codeberg.org/tazjin/reka">reka</a>. I tried to compile but was discouraged as reka did not seem featureful and ewm already satisfied me a bit.
+</p>
+
+<p>
+Although its pretty minimal it does not ship with every feature niri has. Eventually I made the
+switch and boy-o-boy it worked well and was pretty stable. I've been daily driving EWM without much
+issues (although <a href="https://codeberg.org/ezemtsov/ewm/issues?q=&amp;type=all&amp;sort=relevance&amp;state=all&amp;labels=&amp;milestone=0&amp;project=0&amp;assignee=0&amp;poster=184629&amp;archived=false">I've opened some issues</a> for enhancements), but basic functionality works, and more
+than all, its Emacsy!
+</p>
+
+<p>
+Emacs already has <code>next-buffer</code> - <code>previous-buffer</code> and <code>tab-next</code> - <code>tab-previous</code> for tabs (workspaces in EWM) to navigate quick. Although <code>consult-buffer</code> is way more quicker. After using ewm I discovered consult has <code>consult-preview-excluded-buffers</code>, and thus I just append all side window buffer to exlude preview, but preview can be so helpful with apps to quickly scan if you've more.
+</p>
+
+<div class="org-center">
+
+<div id="orgbc4128c" class="figure">
+<p><img src="/images/ewm-desktop.png" alt="ewm-desktop.png" />
+</p>
+<p>Fig: EWM setup with Noctalia shell while writing this blog post. Left is org mode capture buffer, top right is glide browser showing EWM repo and bottom right is foot terminal running hugo server.</p>
+</div>
+</div>
+
+<p>
+I was using <a href="https://github.com/vicinaehq/vicinae/">vicinae</a> (raycast in linux) launcher as well, but since most of it can be done in emacs
+itself, I replaced launching apps/scripts in emacs itself by using <code>call-process</code> or <code>start-process</code>,
+</p>
+
+<p>
+You might be interested in <a href="https://github.com/idlip/d-nix/blob/gol-d/d-setup.org#ewm-config">reading my EWM config</a> to get more idea. Scroll down to see all functions,
+I grab firefox history via <code>sqlite-select</code> and show in completing-read to insert a link (Emacsy).
+</p>
+
+<p>
+Thanks to emacs window management, every apps (browser, terminal) can be managed as Emacs buffer
+itself. All I see is emacs frame, and I work in Emacs as its my WM itself now. Now my whole session can be even more customized (embrace Elisp), Emacs (EWM) is DIY Desktop Environment or WM or simply just Emacs itself (what is emacs now?).
+I no longer quit/leave emacs, if I'm leaving that means I'm shutting down my machine down ;-)
+</p>
+<div id="outline-container-may-i-also-recommend-glide-browser-for-emacs-keymappings" class="outline-3">
+<h3 id="may-i-also-recommend-glide-browser-for-emacs-keymappings">May I also Recommend Glide browser for emacs keymappings</h3>
+<div class="outline-text-3" id="text-orge12a0e9">
+<p>
+Glide browser came to <a href="https://lobste.rs/s/lm3isi/glide_extensible_keyboard_focused_web">lobste.rs news</a> and showcased as firefox-fork being keyboard centric, and I was badly looking for qutebrowser enhancements with addons. And I made the switch and config was pretty easy.
+</p>
+
+<p>
+Glide supports various firefox API and in browser many Web API can be used in config itself. I've
+remapped all keybindings to Emacs style and have extended glide with some qutebrowser &amp; nyxt
+features to make it completely productive &amp; efficient browsing experience.
+</p>
+
+<p>
+Yes, I can do <code>M-x</code>, <code>C-x C-s</code> to make it work as I wanted. Swap <code>C-c</code> to <code>M-w</code> (yes possible).
+</p>
+
+<p>
+Here's the <a href="https://github.com/glide-browser/glide/discussions/25">discussion thread I raised for Emacs bindings</a>.
+</p>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-2026-07-29-wed" class="outline-2">
+<h2 id="2026-07-29-wed"><span class="timestamp-wrapper"><span class="timestamp">[2026-07-29 Wed]</span></span></h2>
+<div class="outline-text-2" id="text-org8f1a9e1">
+<p>
+<a href="https://codeberg.org/ezemtsov">Ezemtsov</a> has made a <a href="https://codeberg.org/ezemtsov/emacs/src/branch/wayland">fork of emacs</a> with <a href="https://codeberg.org/ezemtsov/emacs/commit/6147db532ae4fb462910816e55fab0cc62418269">pure wayland backend</a>, with no gtk or
+cairo toolkit. As I was very excited on this, I immediately jumped and built it with no toolkit.
+</p>
+
+<p>
+For context, initially he used Skia instead of cairo on top of PGTK and I was using it as well, the
+input delay and lags reduced a bit and was comparivetly faster since it used GPU compared to just Pgtk, but now with pure wayland (<code>pwayl</code> ,
+<code>(pwayl-skia-gl-enabled-p)</code> =&gt; t), its more snappier and faster. Almost feels like native WM and not
+emacs.
+</p>
+
+<p>
+There is no delay in anything whatsoever and ezemtsov was genuine to fix <a href="https://codeberg.org/ezemtsov/emacs/issues/2">a reported issue</a> ASAP as
+well.
+TBH it has elevated the EWM experience more folds and I might finally remove <a href="https://github.com/niri-wm/niri/">Niri</a> and <a href="https://github.com/mangowm/mango/">MangoWM</a>
+that I had it installed and yet haven't opened it for &gt;3 months (really!).
+</p>
+
+<p>
+I must say these days I'm not tinkering anything, and just use emacs with matured config of mine and
+day to day has been either emacs for notes/task and glide browser for being on Internet.
+</p>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-2026-10-23-fri" class="outline-2">
+<h2 id="2026-10-23-fri"><span class="timestamp-wrapper"><span class="timestamp">[2026-10-23 Fri]</span></span></h2>
+<div class="outline-text-2" id="text-org55b993b">
+<p>
+EWM again has matured alot and is almost stable for daily driving for others, although I've been already daily driving it with no issues. Even features have increased alot, every fortnight there has been new cool feature or improvements in codebase. Emacs pwayl backend got background-ext-control which gives blur, EWM has blur now, go see codeberg demo to see it and check wiki for more. <code>S-e</code> which calls <code>ewm-edit</code> to capture input text from any wayland window and edit in emacs and on closing it pastes it there (inspired by emacs-anywhere &amp; exwm).
+</p>
+
+<p>
+EWM even got floating window support, true full screen like Niri, overview like niri - although I use 1 frame and many tabs with <code>consult-buffer</code> mostly. Although codebase has increased significantly, its still a good featured WM for emacs thats works as expected. TBH these days I only update emacs and ewm for my whole OS and don't care for any other tools unlike before, this can be boon or bane too. Paired with noctalia it very well completes the need of perfect Desktop setup with Emacs at its core.
+</p>
+
+<p>
+Another plug, someone else is writing a wayland compositor with river window protocols with pure emacs lisp and no rust/c dynamic module. <a href="https://github.com/thkoch2001/rau">https://github.com/thkoch2001/rau</a> sounds cool with efforts to see how well it turns out.
+</p>
+
+<hr />
+
+<p>
+<i>This post might see update as I think of extending.</i>
+</p>
+</div>
+</div>
+]]></content></entry><entry><title>Replenish theme - its Emacsy</title><link rel="alternate" type="text/html" href="https://idlip.in/log/emacs-theme-site/" /><id>https://idlip.in/log/emacs-theme-site/</id><published>2026-03-19T00:00:00Z</published><updated>2026-10-02T00:00:00Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+With previous post on <a href="/log/revamp-blog-2026/">Revamp the blogs</a>, I finally today went ahead and upgrades the beautiful <a href="https://github.com/ArthurHeymans/hugo-emacs-theme/">emacs theme made by Arthur</a>, and locally forked to add goodies.
+</p>
+
+<p>
+Reflecting on upgrades since beginning it has received, I'm strictly thinking to settle with this, as it looks good, minimal enough and modern looking, adaptive in mobile, has rss support and I can extend as I want and more than all, I can live in my editor - <code>Emacs</code>.
+</p>
+
+<p>
+Initially the itch to setup own blog and personal website starting with <a href="https://rudra.dev/">rudra.dev</a> (may no longer be active) site which had simple blog listing made using Hugo. Then I moved to org-mode's <code>org-publish</code>, and had setup replacing the same with full html and css from org. I still have the theme in another branch <a href="https://github.com/idlip/idlip.github.io/tree/voyage">here</a>. But again wanted to extend things and org-publish did not feel clean. So went back to hugo, was exploring plethora of theme and went ahead with <a href="https://gitlab.com/rmaguiar/hugo-theme-color-your-world">Color your world</a>, which looked unique giving color accent for whole page and letting user pick with choice. It had search and katex support, but later realized I dont use any of it and it loaded many JS files. Then began another hunt and was thinking of <a href="https://github.com/Livour/hugo-mana-theme">Mana theme</a>, which seemed cool and was active in development with new features every commit.
+</p>
+
+<p>
+Right at this time, magically the <a href="https://www.reddit.com/r/emacs/comments/1qtvnpl/making_my_blog_look_and_feel_like_emacs/">Emacs theme came by reddit</a> and the path got clear and jumped the ship.
+</p>
+
+<p>
+Enough of history, today I added some improvements to this theme in my fork and hopefully I'll be doing more blogs here with as much information I can spread.
+I've been enjoying reading Light novels - Apothecary Diaries and Ascendance of Bookworm, and skimming hacker news and blog posts from <a href="https://www.feedbase.org/">feedbase</a>, hence its time to give back and share as well.
+</p>
+
+<hr />
+
+<div class="org-center">
+<p>
+<i>Its not always of what you can consume, can be what you give as well.</i>
+</p>
+</div>
+]]></content></entry><entry><title>OBTF as Second Brain with Org mode</title><link rel="alternate" type="text/html" href="https://idlip.in/log/obtf-org-mode/" /><id>https://idlip.in/log/obtf-org-mode/</id><published>2025-09-06T00:00:00Z</published><updated>2026-10-07T00:00:00Z</updated><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><category term="obtf" label="obtf" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+<b>One Big Text File</b> is simply writing down mostly everything in single file to organize or manage data. This single file acts as the source of knowledge and holds all notes.
+</p>
+
+<p>
+Second brain has been a buzz word, thanks to the sourcing of Zettelkasten method, every productivity freak is on the stance to organize their life and get things done.
+</p>
+
+<p>
+But I soon came to the conclusion by reading many blogs and reddit discussions that, searching is far superior than organizing. On internet all we do is search for information, and not organize or build system just to get info. This is how note taking should work as well. Just for <b>efficient retrieval and storage</b>. 
+</p>
+
+<p>
+Thanks to my introduction to emacs and getting deep into rabbit hole, Org mode has been the great tool to handle plain text file as an Organization platform. Just like emacs (OS), Org mode can also be extended to endless limit (I dare say it). If emacs is OS, Org mode is for me Init system (systemd).
+</p>
+
+<p>
+You can read more about my note taking journey in <a href="/log/wrapup-masters/">Wrap up on my Bioinformatics Masters Journey</a>.
+</p>
+
+<p>
+This context is also written in favor to post it on r/obtf
+</p>
+<div id="outline-container-org-mode-is-the-best-tool-for-managing-obtf" class="outline-2">
+<h2 id="org-mode-is-the-best-tool-for-managing-obtf">Org mode is the best tool for managing OBTF</h2>
+<div class="outline-text-2" id="text-org81f8fbf">
+<p>
+Many popular workflow would go by simple format as bullet points with Time date and info, and regexp based searching via CLI (rg, vim, grep, sed&hellip;. bash scripts)
+</p>
+
+<p>
+Org mode has many bells and whistles (features) that aid in this method. Tags, integration with commands and rich source of documentation (one of the best things of Emacs or org mode). Thanks to emacs and <a href="https://protesilaos.com/">protesilaos stavrou</a> I learnt how important are documentation and writing sensible notes. It means alot for future self to recognize and re-instantiate the thoughts and state.
+</p>
+
+<p>
+Org mode has an <code>datetree</code> method which has file heading hierarchy in the Year &gt; Month &gt; Day and 4th nested heading follows any notes.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><code><span class="org-org-level-1">* 2022</span>
+<span class="org-org-level-2">** 2022-10 October</span>
+<span class="org-org-level-3">*** 2022-10-07 Friday</span>
+<span class="org-org-level-3">*** 2022-10-08 Saturday</span>
+<span class="org-org-level-4">**** &lt;Any notes I'm capturing&gt;            </span><span class="org-org-level-4"><span class="org-org-tag">:tag1:tag2:</span></span>
+</code></pre>
+</div>
+
+<p>
+This gives out the leverage of journaling, but also a lazy man's organization. I use tagging extensively to most of the (4th) heading based on context so as to narrow down to filter.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><code><span class="org-comment"># learning notes --- l@</span>
+<span class="org-org-meta-line">#+tags: l@coding l@emacs l@bioinfo l@nix l@bash l@julia l@rstats l@python l@devnote l@latex l@til</span>
+
+<span class="org-comment"># generic notes to remember or readme --- n@</span>
+<span class="org-org-meta-line">#+tags: n@linux n@shell n@cli n@book n@idea</span>
+
+<span class="org-comment"># projects --- p@</span>
+<span class="org-org-meta-line">#+tags: p@webcli p@cyanate p@scitomep</span>
+</code></pre>
+</div>
+
+<ul class="org-ul">
+<li>These tag help to categorize the heading in some (lazy) way</li>
+</ul>
+
+<p>
+Org mode has <code>org-sparse-tree</code> bound to <code>C-c /</code> which helps to narrow down based on tag or property. Also another emacs package <code>consult</code> helps to take it up further via <code>consult-line</code> and <code>consult-org-heading</code> along with <code>org-ql</code> package. Org mode also has <code>#+select_tags</code> to export headings to file.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><code><span class="org-org-meta-line">#+select_tags: r@book</span>
+</code></pre>
+</div>
+
+<p>
+With that we can <code>C-c C-e</code> (org-export-dispatch) and press "O O" (make sure org is in org-export-backends) to get temporary Org buffer only with those heading.
+This logically acts as an individual file with that tag/category, thus being atomic in my sense. Org-sparse-tree might also be same.
+</p>
+
+<p>
+-&mdash;
+</p>
+</div>
+</div>
+<div id="outline-container-key-takeaways" class="outline-2">
+<h2 id="key-takeaways">Key takeaways</h2>
+<div class="outline-text-2" id="text-org1a8d13a">
+<p>
+whatever the system or the tool is, the main takeaways every resource provides is to review the notes and write it for future self. Every capture is to review back and make the fleeting note into and rich information.
+This OBTF with org mode satisfies that needs given that user reviews the notes and visits back to digest it again.
+</p>
+</div>
+</div>
+]]></content></entry><entry><title>My MSc journey with Emacs Orgmode</title><link rel="alternate" type="text/html" href="https://idlip.in/log/masters-emacs-orgmode/" /><id>https://idlip.in/log/masters-emacs-orgmode/</id><published>2025-06-06T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="bioinformatics" label="bioinformatics" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+<b>I wrote and used emacs orgmode for all of my post-grad Masters classes, presentations, projects and thesis.</b>
+</p>
+
+<p>
+Before post-grad itself I was introduced to Emacs world and enjoyed getting good with it. As I used it, I realized emacs is not just an text editor, its an Personal Development Environment itself and user has power to craft it as they need. This was a worthwhile investment.
+</p>
+
+<p>
+My initial plan when I started Masters (Bioinformatics) was to fully stay organized and be productive. I was a freak at this, I was reading up many blogs and digesting discussion on being productive. I even read books such as,
+</p>
+
+<ol class="org-ol">
+<li>Getting things Done</li>
+<li>How to Smart notes by Sonke Ahrens
+Introduces on Zettelkasten note-taking system. Although hyped up, I believe system does not function as brain.</li>
+<li>Deep Work by Cal Newport
+Insights on focused working and being distraction-less.</li>
+<li>Second Brain by Tiago Forte
+Again, whole thing about Zettelkasten. Popularized the term "Second brain" itself.</li>
+<li>Atomic Habits by James Clear
+Mentions on starting habits in small steps.</li>
+<li>A system for Writing by Bob Doto
+Latest book, emphasis on above all books and zettelkasten.</li>
+</ol>
+
+<p>
+I could have been an normie student like others and be at ease, but why did I choose to burden with Emacs and Orgmode..?
+</p>
+
+<p>
+I valued investment and growth. I could see the development and learning of skills compared to working with traditional GUI applications.
+</p>
+<div id="outline-container-note-taking" class="outline-2">
+<h2 id="note-taking">Note taking</h2>
+<div class="outline-text-2" id="text-org09e605e">
+<p>
+Note-taking is understandable, its just format of text to store and read. And org-mode was superior and helped me alot.
+I later on embraced single big org file, and started using tags heavily with context based tagging.
+</p>
+
+<ul class="org-ul">
+<li>t -&gt; task;         t@shop t@meeting t@work</li>
+<li>p -&gt; project;   p@plan p@lncrna p@thesis</li>
+<li>l -&gt; learn;        l@nix l@python</li>
+</ul>
+
+<p>
+So on which really helps with narrowing using consult package and org-ql for querying. I eventually formed my own second brain with org mode like an zettelkasten system. This became my personal knowledge management (PKM) as well which empowered me to stay organized.
+</p>
+</div>
+</div>
+<div id="outline-container-reports-doc" class="outline-2">
+<h2 id="reports-doc">Reports/Doc</h2>
+<div class="outline-text-2" id="text-org6a71459">
+<p>
+Org mode can produce pdf via latex or ODT/docx format. That eventually guided me for submission of assignments and documents for sharing.
+Although it was an hassle to get formatting correct as they instructed, where as others just did them in breeze via M$ word and AI crap generated.
+</p>
+
+<p>
+Although there was not much work with reports, I had good workflow of storing notes and working with integration and stayed organized.
+</p>
+</div>
+</div>
+<div id="outline-container-presentations" class="outline-2">
+<h2 id="presentations">Presentations</h2>
+<div class="outline-text-2" id="text-org611d41e">
+<p>
+I thought to give presentations in Emacs editor itself, but that did not make the cut for required normie friendly slides. The magically I came across revealJS and observed many people in tech presentations and talks used them. There was active development of org-reveal package as well, in new form from OER gitlab repo.
+</p>
+
+<p>
+This workflow was definitely more painful, to get as they expect. The default works, but tweaking were more. But revealjs and org package provided many options and it sufficed for completing the setup along with power of HTML and CSS.
+</p>
+
+<p>
+I had local.scss file for color and designing slides, and org generated html files.
+</p>
+</div>
+</div>
+<div id="outline-container-thesis" class="outline-2">
+<h2 id="thesis">Thesis</h2>
+<div class="outline-text-2" id="text-org9af57f1">
+<p>
+The final saga of the journey, since thesis takes time to write, I thought to not bother with complicating this task. My initial thought was to either use Latex, if it was too much headache then simply follow given docx format file and write.
+Thankfully there was another player getting really popular, a new typesetting "Typst". It did the magic and wonders.
+</p>
+
+<p>
+The syntax and process was very robust and simple. The documentation was standard and was simple enough to grasp and tweak everything. And here was well someone had made basic org export support for typst format. Although IMHO typst syntax is so easy to understand and I loved to write and learn the syntax. Workflow was bliss with it, I wonder why I did not discover it earlier. Maybe I'm not a mathematician to have it for demand, but it was a good skill to have it in my hands.
+</p>
+</div>
+</div>
+<div id="outline-container-conclusion" class="outline-2">
+<h2 id="conclusion">Conclusion</h2>
+<div class="outline-text-2" id="text-org7b2a996">
+<p>
+The main draw from this experience was that investing in tools that allow extending and allow programming to customize and tweak as I require was a major win and good rewards. These were added up skills that makes working with related tasks a breeze ahead.</p>
+</div>
+</div>
+]]></content></entry><entry><title>Using Gnus to read rss feeds</title><link rel="alternate" type="text/html" href="https://idlip.in/log/gnus-joy/" /><id>https://idlip.in/log/gnus-joy/</id><published>2024-03-10T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="gnus" label="gnus" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+Emacs is my editor, and my companion for most of my tasks. Yes, I'd like to call it a second brain extension.
+</p>
+
+<p>
+I'm a rss feed user, to read with coziness, freedom and comfort. Lately I have been experiment with the rss readers choice in Emacs. I feel that <code>gnus</code>, the powerhouse in Emacs is one of the good choice. I mean to say, not with <code>nnrss</code> backend, but with rss to nntp gateway.
+</p>
+
+<p>
+I'm using <code>elfeed</code> as the rss reader for over 6 months. I even setup my phone to use emacs app to read news in sync with PC using syncthing. And it worked as expected flawlessly. But elfeed is unmaintained, but it works without any issues tho. By time someone may fork it, looking at how much love it has. This then lead to me try other ways in Emacs, as I was kinda leaning towards keeping Emacs as close to vanilla as possible. Recently I also replaced <code>flycheck</code> with built-in <code>flymake</code>.
+</p>
+
+<p>
+Soon I jotted down only 3 candidate for reading feeds. Elfeed, Newsticker &amp; gnus. Later two are built-in. There might be others as well, like wanderlust, org based.., but when I tried ig it did not work.
+</p>
+<div id="outline-container-elfeed" class="outline-2">
+<h2 id="elfeed">Elfeed</h2>
+<div class="outline-text-2" id="text-org5eda5fe">
+<p>
+As said earlier, it was my choice for about 6+ months, and it worked really well. Was reading and tagging feeds alot. Although with my rss usage, I realized I was only looking forward for the <b>planet emacs</b> feeds (haha; typical emacser).
+</p>
+
+<p>
+It is good with not much issues, except that its database directory is kinda not intuitive for manual edits, and the files are scattered with some random ids. So you dont know where a feed post is located.
+</p>
+
+<p>
+It is still my recommend way to go with the package that just works well. But being into more emacs, I needed little more.
+</p>
+</div>
+</div>
+<div id="outline-container-newsticker" class="outline-2">
+<h2 id="newsticker">Newsticker</h2>
+<div class="outline-text-2" id="text-org5eeaa89">
+<p>
+Firstly, liked the customization it has, and the tree-view how it appeals. But I hit the road blocks very soon. Tree-view was an issue, I need to read each post in single window and navigate to my leisure. I miss tags here. For everytime I launch, <code>newsticker-treeview</code> it fetches the articles from feed. That blocks my usage sometimes. Even tho I can keep <code>newsticker-retrieval-interval</code> to 0, it still fetches when launched with command for first time.
+</p>
+
+<p>
+With plain view you can filter for feeds very much. With tree view you cannot occupy single widow to read the post.
+</p>
+
+<p>
+Anyway, newsticker is also good, as it is built-in and does just work.
+</p>
+</div>
+</div>
+<div id="outline-container-gnus" class="outline-2">
+<h2 id="gnus">gnus</h2>
+<div class="outline-text-2" id="text-orgdc47e72">
+<ul class="org-ul">
+<li>I panicked when I came to gnus. Its my..idk.. n<sup>th</sup> time trying it out again.</li>
+</ul>
+<p>
+But with little more dedication than last time, I sat down to read the manual.
+</p>
+
+<p>
+Soon I realized, how did I miss reading such a marvelous manual before. Although still I was not able to wrap my head, I some how managed only yo grasp what I wanted for the time being. Note, gnus is a usenet reader, so it can be preferred for mails, but my goal for now is rss feeds.
+</p>
+
+<p>
+I saw there is <code>nnrss</code> backends, it is kinda same as newsticker, the road-block is the not being async to fetch the feeds.
+So if more feeds, it blocks the emacs very much.
+</p>
+
+<p>
+Soon I came to another way of reading rss as newsgroup via rss to nntp gateway. I'm using <code>gwene</code> and <code>feedbase</code> for it, and it gets me most of the feeds in newsgroup format.
+</p>
+
+<p>
+Its my first time reading at newsgroup, and I feel amazed and appreciate how simply and focused this UI is. I have started to enjoy reading mailing lists and follow up stuffs in a unified and good way.
+</p>
+
+<p>
+Although you may find some cons with this way, offline is possible and can download any number of articles/posts. Which is mega-bonus. I download 5k+ articles from a feed, which might be not possible with plain rss feeds.
+</p>
+
+<p>
+The reading in gnus has been a joy, and I would to add more write-ups on it. Yes, I want to write and hope to make some people try it as I feel it. Cause whatever search you do on gnus emacs, people silence and make you use other package. I know I may also hit their issues and end, and realize what they mean. But at the time of writing, I really enjoy it.
+</p>
+
+<p>
+And, it was very easy to me use gnus in sync with android emacs too via syncthing of just one file <code>newsrc.eld</code>, and if downloading any articles, its will be added to <code>gnus-directory</code>.
+</p>
+
+<hr />
+
+<p>
+Finally to say, gnus will be my choice of reading from now. I hope I don't fall into the rabbit hole of gnus now, I just hope to use as is and enjoy reading the content.
+I would like to link my dotfiles for it, maybe will soon add more write-up on it. For now here you go; <a href="https://www.github.com/idlip/d-nix">check d-setup.org</a>.
+</p>
+</div>
+</div>
+]]></content></entry><entry><title>Emacs on Droid</title><link rel="alternate" type="text/html" href="https://idlip.in/log/emacs-droid/" /><id>https://idlip.in/log/emacs-droid/</id><published>2023-12-16T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="android" label="android" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+Emacs is a definite Greatest editor of all time, the extensibility power is unmatched with any other software. Users of Emacs can only know what it is, one who has not used it may not really understand the principles and power it gives us, the users.
+</p>
+
+<p>
+Once settled with it on PC, its not late to think of something similar for our handy pocket phones, at least support for <b>org-mode</b> so we organize our life. The research leads us to find apps, and its unfortunate that market has lots of apps supporting markdown, just for its markup. Even org-mode is good for markup only, Karl voit's <a href="https://karl-voit.at/2017/09/23/orgmode-as-markup-only/">post</a> explains it very well.
+</p>
+
+<p>
+Finally we have some apps for org-mode, namely on Android <a href="https://github.com/orgzly/orgzly-android">Orgzly</a> (maintained: <a href="https://github.com/orgzly-revived/orgzly-android-revived">orgzly-revived</a>), Orgro (read-only app) and there is <a href="https://organice.200ok.ch/">Organice</a> (PWA site, unique, supports desktop).
+Surprisingly IOS has many apps for org-mode, namely <a href="https://beorgapp.com/">beorg</a> and <a href="https://plainorg.com/">plain org</a> (I dont use IOS, so please search app store).
+</p>
+
+<p>
+New project under development <a href="https://github.com/Artawower/orgnote-client">OrgNote</a> also looks promising.
+</p>
+
+<p>
+But it was near February, 2023, that Po Lu, one of the Emacs developer, started and released support for touch-screen devices (including Android) and to our surprise it was <b>the graphical Emacs</b>, available now on Android. But before trying the first doubts and cons expected was that it does not work well with virtual keyboard, so only good option is to carry physical keyboard everywhere?
+That could be solved by getting adjusted to keyboard app called "Hackers Keyboard" (TODO link).
+</p>
+
+<p>
+But as I dug deep, the developer Po Lu, was on telegram channel in disguise, as I pointed that emacs android needed android's share feature (like open-with) to other people, he had seen it and implemented is very quickly. It shows how much of an interesting take-up it is.
+</p>
+
+<p>
+Orgzly actually satisfied org-mode and agenda things with help of syncthing over org directory. But the next bummer came when I fell in love with <a href="https://github.com/skeeto/elfeed">Elfeed</a> (RSS reader) and badly wanted to read feeds in sync with my phone. Since Emacs officially made its way for Android, so why not open some doors, indeed it did gave the power of emacs-lisp!
+</p>
+
+<p>
+Initially I started with bare-bone config, and later tried to incorporate my PC config with android, and it was easy, without much hassle. Just had to define a constant to check if system is on Linux or Android, and use the keyword in condition statements and <code>use-package</code>. Next thought would be to use Unix tools/commands, so it only leads to Termux, and after few days, the developer released Termux signed apk to use in conjunction with emacs, so as to leverage the command line utilities in Android emacs too, namely <code>ripgrep</code>, <code>git</code>. I have not tried <code>image-magick</code>, <code>mupdf</code> for <code>pdf-tools</code>. But frankly <a href="https://github.com/foobnix/LibreraReader">Librera reader</a> is good enough.
+</p>
+
+<p>
+Here is a <a href="https://marek-g.github.io/posts/tips_and_tricks/emacs_on_android/">blog post</a> by marek-g explaining how termux is modified to use with Emacs
+</p>
+
+<p>
+Note: Fdroid emacs apk lacks some support like GnuTLS (so won't be able to install package or use eww), thus the only source to get emacs builds for Android is <a href="https://sourceforge.net/projects/android-ports-for-gnu-emacs">https://sourceforge.net/projects/android-ports-for-gnu-emacs</a>
+</p>
+
+<p>
+For anyone trying it out again or newly, please make sure you go through <code>C-h R android</code> or <code>C-h r m android</code> for frequent issues or things to know for Android build. For any queries to me, please feel free to open up an issue over this <a href="https://github.com/idlip/d-nix">repo</a>.
+</p>
+
+<p>
+Overall with setting only few variables for android specifically, I replicated almost same emacs config on Android. The definite org-mode reader, read Elfeed feeds in sync with PC, whatever emacs packages you use.
+</p>
+
+<p>
+Config just for android exclusively:
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><code><span class="org-comment-delimiter">;; </span><span class="org-comment">define constant to check if system is android
+</span>(<span class="org-keyword">defconst</span> <span class="org-variable-name">d/on-droid</span> (eq system-type 'android))
+<span class="org-comment-delimiter">;; </span><span class="org-comment">if system is android, executes following code
+</span>(<span class="org-keyword">when</span> d/on-droid
+  (custom-set-variables
+   '(touch-screen-precision-scroll t) <span class="org-comment-delimiter">;; </span><span class="org-comment">smooth scrolling
+</span>   '(touch-screen-display-keyboard t)
+   <span class="org-comment-delimiter">;; </span><span class="org-comment">^ display virtual keyboard when touch on phone screen
+</span>   <span class="org-comment-delimiter">;; </span><span class="org-comment">does not work on read-only buffer (dashboard, startup..)
+</span>   '(browse-url-android-share t))
+  <span class="org-comment-delimiter">;; </span><span class="org-comment">open links/urls with android's open-with or share kinda popup
+</span>
+  (<span class="org-keyword">defun</span> <span class="org-function-name">d/key-droid</span>()
+    <span class="org-doc">"To enable touch screen keyboard"</span>
+    (<span class="org-keyword">interactive</span>)
+    (frame-toggle-on-screen-keyboard (selected-frame) nil)
+    )
+  )
+</code></pre>
+</div>
+
+<p>
+I'm not sure how suitable it is for coding environment (with lsp and complexities), but it behaves as expected for reading purpose and for quick note taking. I should probably say, it excels in that segment.
+</p>
+]]></content></entry><entry><title>Emacs Efficiency</title><link rel="alternate" type="text/html" href="https://idlip.in/log/emacs-keys/" /><id>https://idlip.in/log/emacs-keys/</id><published>2023-03-29T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="cheatsheet" label="cheatsheet" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+This is straight away from <a href="https://github.com/VernonGrant/discovering-emacs">VernonGrant</a> who hosts a podcast for Emacs called "<a href="https://www.discovering-emacs.com/">Discovering-Emacs</a>".
+It's a great and has very much professional vibes, the explanations are Crisp and Clear!
+I suggest you to check out, he even has made <a href="https://www.youtube.com/@discoveringemacs">YouTube channel</a> for it.
+</p>
+
+<p>
+I have removed some of the common bindings from this table, I have retained some unique one's which isn't discovered generally. I guess that is why the name is made (lol)
+</p>
+
+<p>
+I just wanted to have a cheatsheet for it, so I decided to leave it as a post here.
+</p>
+
+<p>
+You can checkout the source here ⟾ <a href="https://github.com/VernonGrant/emacs-keyboard-shortcuts">https://github.com/VernonGrant/emacs-keyboard-shortcuts</a>
+</p>
+
+<ul class="org-ul">
+<li><a href="https://github.com/VernonGrant/discovering-emacs">https://github.com/VernonGrant/discovering-emacs</a></li>
+</ul>
+]]></content></entry><entry><title>NixOS : Reproducible - Immutable</title><link rel="alternate" type="text/html" href="https://idlip.in/log/try-nixos/" /><id>https://idlip.in/log/try-nixos/</id><published>2023-03-23T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="nixos" label="nixos" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<hr />
+
+<p>
+Introduction part, you would better have read it on official nixos site (<a href="https://nixos.org">https://nixos.org</a>)
+</p>
+<div id="outline-container-should-you-try-nixos" class="outline-2">
+<h2 id="should-you-try-nixos">"Should you try NixOS?" ❄️</h2>
+<div class="outline-text-2" id="text-orga5ea239">
+<p>
+Here's an answer from a non-programmer, who just browses and watches media.
+Just don't, if you are looking for small benefit. <b>Don't!</b>
+ regret having hard time to figure out petty things, again forget about error, you cannot even search in web.
+</p>
+
+<p>
+But, if you have decided, go with it. According to me (non-programmer), these points are good to consider NixOS
+</p>
+<ul class="org-ul">
+<li>You use Emacs (lol), <b>Emacs</b> ❤️  <b>Nix</b> is Match made in Heaven.</li>
+<li>You want to declare stuffs and get same output, and forget what all you setup, cause its all declared in config.</li>
+<li>You want an isolated environments (shell) to do some stuffs without involving whole system.</li>
+<li>You want to stop troubleshooting and breaking update and are lazy to backup, and want to rollback with ease like with just a reboot.</li>
+<li>You want to say I use <b>Nixos Btw</b>.</li>
+<li>You don't want to worry about breaking your system nor fix something when you are updating system.</li>
+<li>You are willing to learn (advanced) things and fine with steep learning curve.</li>
+</ul>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-how-i-manage-my-system" class="outline-2">
+<h2 id="how-i-manage-my-system">How I manage my system 🌲</h2>
+<div class="outline-text-2" id="text-org34c8a80">
+<p>
+I manage my whole system with single org file. Its easy and pretty handy. You can read that file here <b>↬</b> <a href="https://github.com/idlip/d-nix/blob/onepiece/d-setup.org">d-setup.org</a> , its both self documenting and has all source code blocks.
+</p>
+
+<p>
+Another key feature in my setup is, every file i tangle is at <b>read-only mode</b>. So generally we can avoid editing/touching them. Thus, every action has to be made in <b>d-setup.org</b> only.
+</p>
+
+<p>
+Also, I have made files to be <b>symlink</b>, so i can edit them without requiring to rebuild whole thing!
+</p>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-credits" class="outline-2">
+<h2 id="credits">Credits 🎖️</h2>
+<div class="outline-text-2" id="text-orgcde9131">
+<p>
+These configs were the inspiration and helped to build this way.
+</p>
+
+<p>
+I thank them sincerely.
+</p>
+
+<p>
+<a href="https://github.com/Iron-Shark/Technonomicon">Iron Shark</a> <b>⟹</b> Made migrating to Single org-file config very easy.
+</p>
+
+<p>
+<a href="https://github.com/sioodmy/dotfiles">Sioodmy</a> <b>⟹</b> First config which I understand thoroughly and modified based on this.
+</p>
+
+<hr />
+</div>
+</div>
+]]></content></entry><entry><title>Emacs is OP</title><link rel="alternate" type="text/html" href="https://idlip.in/log/emacs-goat/" /><id>https://idlip.in/log/emacs-goat/</id><published>2023-03-22T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="vim" label="vim" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+Before anyone shouts vim, let me <code>:q!</code>
+I was a vimmer for a year, I played and had a good basic config. Even after an year, I didn't grasp the full potential of vim, it was just handy to use <code>hjkl</code> to move around.
+</p>
+
+<p>
+But When I'm learning Emacs, the experience is immense, it defines how things are meant and the legacy of Emacs for 40 years, is not a joke.
+</p>
+
+<p>
+I cannot just rant to make people ditch vim for Emacs, But once you understand you will realize, that is why people went and made <code>evil</code> mode to emulate Vi layer (vim 100%).
+</p>
+
+<p>
+Now they get the <b>Best</b> of both the World!
+</p>
+
+<p>
+Nonetheless, Emacs is the <b>GOAT</b> !
+</p>
+]]></content></entry></feed>

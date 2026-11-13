@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: orgmode</title><subtitle>Posts tagged orgmode on Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/rss.xml" /><id>https://idlip.in/</id><updated>2026-10-12T00:00:00Z</updated><author><name>Dilip | Zororg</name><email>hi@idlip.in</email></author><generator uri="https://gohugo.io/">Hugo</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Org mode is the best OBTF</title><link rel="alternate" type="text/html" href="https://idlip.in/log/obtf/" /><id>https://idlip.in/log/obtf/</id><published>2026-10-07T00:00:00Z</published><updated>2026-10-12T00:00:00Z</updated><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><category term="obtf" label="obtf" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<ul class="org-ul">
+<li>This content is written to be lateral post to <a href="https://www.reddit.com/r/OneBigTextFile/s/5Jy5SUG48h">r/onebigtextfile</a> and spark the idea to many.</li>
+</ul>
+
+<p>
+I wrote about <a href="/log/obtf-org-mode/">OBTF as Second Brain with Org mode</a> a while back, but that post was mostly "here is my datetree workflow." This one is a direct response to <a href="https://obtf.ru/en">obtf.ru</a>, a site that makes the case for <b>One Big Text File</b> a lot sharper than I did, and argues it against FOMO fatigue I've felt myself.
+</p>
+
+<p>
+OBTF in some sense is a lazy man's system to get things done. But if you feel more lazier to even think of it, I'd highly recommend to read <a href="https://obtf.ru/en">https://obtf.ru/en</a> website, since it helps me as well to stay motivated to achieve its purpose.
+</p>
+<div id="outline-container-obtf-s-philosophy-pitch" class="outline-2">
+<h2 id="obtf-s-philosophy-pitch">OBTF's philosophy pitch</h2>
+<div class="outline-text-2" id="text-org07e3dc5">
+<p>
+Their whole argument boils down to a handful of lines:
+</p>
+
+<blockquote>
+<p>
+Your entire life, notes, tasks, ideas, logs, in one text file.
+Just <code>.txt</code>.
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+The best productivity system is the one you actually use. And nothing is simpler than a text file.
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+Search beats categories
+</p>
+</blockquote>
+
+<p>
+No vendor lock-in, speed, offline by default, permanence. All fair, and none of it is specific to a bare <code>.txt</code> file. It's specific to <b>plain text</b>. You make use of many tools to suite your needs instead of you learning and adapting to a system.
+</p>
+
+<p>
+Some posts on OBTF found over internet:
+</p>
+
+<ul class="org-ul">
+<li><a href="https://talk.macpowerusers.com/t/using-one-big-text-file-obtf-for-daily-blogging-and-journal/37546">Forum post on MacPowerUsers</a></li>
+<li><a href="https://mrshll.uk/posts/plain-text-planner/">https://mrshll.uk/posts/plain-text-planner/</a></li>
+<li><a href="https://jeffhuang.com/productivity_text_file/">https://jeffhuang.com/productivity_text_file/</a></li>
+<li><a href="https://mrdizzy.blog/blog/obtf/">https://mrdizzy.blog/blog/obtf/</a></li>
+<li><a href="https://beardystarstuff.net/posts/2024-04-17.html">https://beardystarstuff.net/posts/2024-04-17.html</a></li>
+<li><a href="https://whhone.com/posts/one-line-per-day-diary-in-org-mode/">https://whhone.com/posts/one-line-per-day-diary-in-org-mode/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-where-org-gives-you-more" class="outline-2">
+<h2 id="where-org-gives-you-more">Where Org gives you more</h2>
+<div class="outline-text-2" id="text-orgdefbcaf">
+<p>
+"Search beats categories" is true until the file gets big enough that search alone stops being enough, and at that point you want <b>structure you can turn on when you need it</b>, not structure forced on you from day one.
+</p>
+
+<p>
+I still keep a <code>datetree</code>, Year &gt; Month &gt; Day &gt; entry, which gives me OBTF's own "newest entries first, just append and go" model:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><code><span class="org-org-level-1">* 2026</span>
+<span class="org-org-level-2">** 2026-10 October</span>
+<span class="org-org-level-3">*** 2026-10-07 Tuesday</span>
+<span class="org-org-level-4">**** &lt;whatever I'm capturing&gt;            </span><span class="org-org-level-4"><span class="org-org-tag">:tag1:tag2:</span></span>
+</code></pre>
+</div>
+
+<p>
+The difference from a flat file is that I'm not stuck with chronology as the <b>only</b> axis. A few things I still reach for on top of the datetree:
+</p>
+
+<ul class="org-ul">
+<li><code>org-sparse-tree</code> (<code>C-c /</code>): narrow the whole tree down to just the headings matching a tag or
+property, without touching the file itself.</li>
+
+<li><code>consult-org-heading</code> / <code>consult-line</code> (from the <code>consult</code> package): fuzzy-jump straight to a
+heading or line, which is the actual "search beats categories" experience, just inside a
+structured file instead of a flat one.</li>
+
+<li><code>org-ql</code>: for queries that are more than a single tag match, closer to a real query language over
+my notes than regexp-over-a-text-file ever was.</li>
+
+<li><code>#+select_tags</code>: export just the headings carrying a given tag into a throwaway buffer, which
+behaves like a temporary, generated "file" scoped to one topic, without ever having to actually
+split the real file.</li>
+
+<li><a href="https://github.com/toshism/org-super-links">org-super-links</a>: Package to backlink org headings to one another.</li>
+
+<li><code>org-agenda</code>: Best way to get organized and plan for time. Paired with note taking, the agenda interface is so powerful that even I've underused it mostly to just get stuff done.</li>
+
+<li>Tags: More detail on the tagging convention I use (the <code>l@=/=n@=/=p@</code> prefixes) is in <a href="/log/obtf-org-mode/">OBTF as Second Brain with Org mode</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-conclude" class="outline-2">
+<h2 id="conclude">Conclude</h2>
+<div class="outline-text-2" id="text-org356fd1f">
+<p>
+These might sound very much tied to emacs, yes thats mostly true. Environment so perfect that it can be called a monolith of emacs. But alas, people have ported org mode inspired modes and packages to various other ecosystem.
+</p>
+
+<ul class="org-ul">
+<li><a href="https://github.com/nvim-orgmode/orgmode">orgmode.nvim</a>: OG clone for neovim</li>
+<li><a href="https://github.com/xheisenbugx/org.nvim">org.nvim</a>: New and AI assisted clone of complete org library</li>
+<li><a href="https://github.com/nvim-neorg/neorg">neorg</a>: Future of organizing life in neovim</li>
+<li><a href="https://github.com/rrajath/grove">grove</a>: Beautiful org mode first task/notes android app</li>
+<li><a href="https://github.com/orgzly-revived/orgzly-android-revived">orgzly-revived</a>: Org in mobile at ease</li>
+<li><a href="https://github.com/amake/orgro">orgro</a>: Good org mode reader for android+IOS</li>
+</ul>
+
+<p>
+PS: I use official <a href="https://www.emacswiki.org/emacs/EmacsOnAndroid">Emacs on Android</a> as well bringing the same environment on the phone (<code>_</code>;)
+</p>
+
+<p>
+Ultimately only thing that is required with note taking or system is to always review, revise, repeat and process them.
+</p>
+</div>
+</div>
+]]></content></entry><entry><title>Denden: Emacs Lisp SSG based on org-publish</title><link rel="alternate" type="text/html" href="https://idlip.in/log/denden/" /><id>https://idlip.in/log/denden/</id><published>2026-10-02T00:00:00Z</published><updated>2026-10-06T00:00:00Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="lisp" label="lisp" scheme="https://idlip.in/tags/"></category><category term="denden" label="denden" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+<a href="https://github.com/idlip/denden">Denden</a> is yet another SSG based on org-publish and utilizing complete Elisp ecosystem. This site is
+built using that. Its not a package per-say, just an helper and building blocks on top of org mode's
+native <a href="https://orgmode.org/manual/Publishing.html">ox-publish</a> and <a href="https://orgmode.org/worg/dev/org-element-api.html">org-element</a> for AST.
+</p>
+<div id="outline-container-why-i-even-started-this" class="outline-2">
+<h2 id="why-i-even-started-this">Why I even started this</h2>
+<div class="outline-text-2" id="text-orgb597e3b">
+<p>
+This site used to run on <a href="https://gohugo.io">Hugo</a> using same theme called <a href="https://github.com/idlip/hakimacs">hakimacs</a>, with content in Org mode rendered through go-org, and it worked fine for months. But I hated looking how ugly <a href="https://gohugo.io/templates/introduction/">go-template</a> looked and lot of regexp to do something, although it was fast, it was not human (emacs user) friendly to read at all. When I wrote in org mode, I always liked why not elisp somewhere to hack and do stuff. Org is a rich ecosystem and it needs way more hackable place to configure, not hugo to regexp parse everything.
+</p>
+
+<p>
+Org has a perfectly good parser living right inside Emacs, <code>org-element</code>, that turns any <code>.org</code> file into a proper tree I can walk, query, and reshape however I like. So the question became obvious, why am I throwing that tree away and going back to regexing strings, when the real structure is sitting right there the whole time.
+</p>
+
+<p>
+That annoyance is the entire reason denden exists.
+</p>
+</div>
+</div>
+<div id="outline-container-what-denden-actually-is-and-isn-t" class="outline-2">
+<h2 id="what-denden-actually-is-and-isn-t">What denden actually is, and isn't</h2>
+<div class="outline-text-2" id="text-orgbf6d5f5">
+<p>
+<code>denden</code> is not a package, its more like a tool, helpers and building block on top of org-publish. It
+uses all native org mode libs and <code>org-publish</code>, the publishing engine that already ships inside Org mode, plus a small pile of Elisp helper functions sitting on top of it, that's the whole thing. <code>denden.el</code> itself is one file, no hidden layers, no magic you can't just <code>M-x describe-function</code> your way into.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><code><span class="org-comment-delimiter">;; </span><span class="org-comment">this is roughly the entire mental model
+</span>(<span class="org-keyword">require</span> '<span class="org-constant">denden</span>)
+(<span class="org-keyword">setq</span> denden-content-directory <span class="org-string">"~/my-site/content"</span>)
+(<span class="org-keyword">setq</span> denden-publishing-directory <span class="org-string">"~/my-site/public"</span>)
+(<span class="org-keyword">setq</span> denden-full-build-function #'my-site-build)
+<span class="org-comment-delimiter">;; </span><span class="org-comment">now M-x denden-build just works</span>
+</code></pre>
+</div>
+
+<p>
+Everything else, <a href="/rss.xml">feeds</a>, <a href="/sitemap.xml">sitemap</a>, search index, <a href="/og/denden.png">OG card images</a>, the accessibility linter, is a
+building block you call when you want it, not a framework deciding things for you. If you don't like
+how I did sitemaps, you just don't call <code>denden-sitemap-xml</code>, and write your own three lines instead.
+Nobody's stopping you, there's no true "denden way" to acheive it.
+</p>
+</div>
+</div>
+<div id="outline-container-templates-are-just-lists-the-sexp-html-bit" class="outline-2">
+<h2 id="templates-are-just-lists-the-sexp-html-bit">Templates are just lists, the sexp-HTML bit</h2>
+<div class="outline-text-2" id="text-org6b467c4">
+<p>
+This is the part I like the most, a denden template is not a template language at all, it's a plain Emacs Lisp list, shaped like this.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><code>(TAG ATTRIBUTE-PLIST . CHILDREN)
+</code></pre>
+</div>
+
+<p>
+A tag symbol, a plist of attributes, then however many children you want, which can themselves be more nodes or plain strings. Something this small turns into real HTML.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><code>(list 'div '(<span class="org-builtin">:class</span> <span class="org-string">"card"</span>)
+      (list 'h2 nil <span class="org-string">"Hello"</span>)
+      (list 'p '(<span class="org-builtin">:class</span> <span class="org-string">"muted"</span>) <span class="org-string">"Written as a list, not a string template."</span>))
+<span class="org-comment-delimiter">;; </span><span class="org-comment">C-x C-e =&gt; (div (:class "card") (h2 nil "Hello") (p (:class "muted") "Written as a list, not a string template."))</span>
+</code></pre>
+</div>
+
+<p>
+Run that through <code>denden-serialize-node</code> and you get.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html"><code>&lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"card"</span>&gt;&lt;<span class="org-function-name">h2</span>&gt;<span class="org-underline"><span class="org-bold-italic">Hello</span></span>&lt;/<span class="org-function-name">h2</span>&gt;&lt;<span class="org-function-name">p</span> <span class="org-variable-name">class</span>=<span class="org-string">"muted"</span>&gt;Written as a list, not a string template.&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+</code></pre>
+</div>
+
+<p>
+No Jinja-style <code>&lt;% if %&gt;</code> tags, no template DSL to look up in some docs page, it's Lisp, so it's just Lisp. If you need a loop you use <code>mapcar</code>, if you need a condition you use <code>if</code>, you already know how, because you already know Emacs Lisp, or you're learning it anyway for your config.
+</p>
+
+<p>
+Here's a tiny real one, lifted straight from denden's own example site, <code>denden/example/example-theme.el</code>, the page header.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><code>(<span class="org-keyword">cl-defun</span> <span class="org-function-name">example-theme-header</span> (<span class="org-type">&amp;key</span> site-title menu-items)
+  <span class="org-doc">"The page header: SITE-TITLE linking home, then a MENU-ITEMS nav."</span>
+  (list 'header nil
+        (list 'a '(<span class="org-builtin">:class</span> <span class="org-string">"title"</span> <span class="org-builtin">:href</span> <span class="org-string">"/"</span>)
+              (list 'h2 nil site-title))
+        (append (list 'nav nil)
+                (mapcar (<span class="org-keyword">lambda</span> (item) (list 'a (list <span class="org-builtin">:href</span> (cdr item)) (car item)))
+                        menu-items))))
+</code></pre>
+</div>
+
+<p>
+That's a whole working nav bar, <code>menu-items</code> is just a list of <code>(label . url)</code> pairs. Add a link to your site, add one more cons cell, no shortcode, no registering a new partial, nothing to restart.
+</p>
+</div>
+</div>
+<div id="outline-container-how-my-own-site-is-built-with-it" class="outline-2">
+<h2 id="how-my-own-site-is-built-with-it">How my own site is built with it</h2>
+<div class="outline-text-2" id="text-orgcf33aad">
+<p>
+My site's own Elisp lives in exactly three files, and I think that's a feature, not something I need to apologize for.
+</p>
+
+<ul class="org-ul">
+<li><code>denden/denden.el</code> : the generic core engine, nothing specific to my site at all.</li>
+<li><code>site/site.el</code> : my config and page logic, menu items, badges, feed setup, everything that's <i>my</i> data.</li>
+<li><code>theme/theme.el</code> : my actual sexp-HTML templates.</li>
+</ul>
+
+<p>
+Config is just Elisp data, so it looks like this, shortened from my real <code>site.el</code>.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><code>(<span class="org-keyword">defconst</span> <span class="org-variable-name">site-menu-main</span>
+  '((<span class="org-builtin">:name</span> <span class="org-string">"Home"</span> <span class="org-builtin">:url</span> <span class="org-string">"/"</span>)
+    (<span class="org-builtin">:name</span> <span class="org-string">"Blog Posts"</span> <span class="org-builtin">:url</span> <span class="org-string">"/log/"</span>)
+    (<span class="org-builtin">:name</span> <span class="org-string">"Wander My Small Web"</span> <span class="org-builtin">:url</span> <span class="org-string">"/wander/"</span>)
+    (<span class="org-builtin">:name</span> <span class="org-string">"Media"</span> <span class="org-builtin">:url</span> <span class="org-string">"/media/"</span>)
+    (<span class="org-builtin">:name</span> <span class="org-string">"Quotes"</span> <span class="org-builtin">:url</span> <span class="org-string">"/quotes/"</span>)))
+</code></pre>
+</div>
+
+<p>
+Want another nav item, add a line. Want a new badge on my footer, same deal, it's one more plist in a list, no new file, no new template syntax to learn.
+</p>
+
+<p>
+Everything you're reading right now, the  <button type="button" class="tag-cloud-btn" data-action="open-palette">Command palette</button>, the <button type="button" class="tag-cloud-btn" data-action="browse-schemes">colour scheme picker with 305 base16 themes</button>, the <a href="/wander/">Wander My Small Web</a>, the <a href="/pose/">Pose | Vivre Card</a> quick-thought cards, the accessible dialogs, all of that is just more sexp nodes and a bit of plain JS, sitting on top of the same three files.
+</p>
+</div>
+</div>
+<div id="outline-container-one-more-cool-bit-even-the-og-card-images-are-sexp" class="outline-2">
+<h2 id="one-more-cool-bit-even-the-og-card-images-are-sexp">One more cool bit, even the OG card images are sexp</h2>
+<div class="outline-text-2" id="text-orgfe5ee60">
+<p>
+OG cards, the preview image you see when a link gets shared on social media, are usually generated with some headless browser screenshot setup or an image library. In denden it's the exact same <code>(TAG ATTRIBUTE-PLIST . CHILDREN)</code> trick, just aimed at <code>&lt;svg&gt;</code> instead of <code>&lt;div&gt;</code>, from my own <code>site.el</code>.
+</p>
+
+<p>
+I know IK, by now you might realize and say this is hard to write as well, but thats the cool stuff.
+Own it in lisp way. Direct maintenance of HTML files with no system is also cool tho ;-)
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><code>(list 'svg (list <span class="org-builtin">:xmlns</span> <span class="org-string">"http://www.w3.org/2000/svg"</span> <span class="org-builtin">:viewBox</span> <span class="org-string">"0 0 1200 630"</span>
+                  <span class="org-builtin">:width</span> <span class="org-string">"1200"</span> <span class="org-builtin">:height</span> <span class="org-string">"630"</span> <span class="org-builtin">:font-family</span> <span class="org-string">"Code D OnePiece, monospace"</span>)
+      (list 'rect '(<span class="org-builtin">:width</span> <span class="org-string">"1200"</span> <span class="org-builtin">:height</span> <span class="org-string">"630"</span> <span class="org-builtin">:fill</span> <span class="org-string">"#000000"</span>))
+      (list 'rect '(<span class="org-builtin">:width</span> <span class="org-string">"1200"</span> <span class="org-builtin">:height</span> <span class="org-string">"68"</span> <span class="org-builtin">:fill</span> <span class="org-string">"#0a0f0a"</span>))
+      (list 'text '(<span class="org-builtin">:x</span> <span class="org-string">"100"</span> <span class="org-builtin">:y</span> <span class="org-string">"46"</span> <span class="org-builtin">:fill</span> <span class="org-string">"#5fd7af"</span> <span class="org-builtin">:font-size</span> <span class="org-string">"30"</span> <span class="org-builtin">:font-weight</span> <span class="org-string">"bold"</span>)
+            card-site-title)
+      <span class="org-comment-delimiter">;; </span><span class="org-comment">... and so on, title lines, tags, excerpt, favicon, all the same nodes
+</span>      )
+</code></pre>
+</div>
+
+<p>
+Same <code>denden-serialize-node</code> (<a href="https://github.com/idlip/denden/blob/master/denden.el">check file</a>) call at the end, except this time the string it hands back is an SVG file sitting at <code>/log/some-post/og.svg</code>. No separate image-generation step, no Canva template, just more rects and text nodes.
+</p>
+</div>
+</div>
+<div id="outline-container-it-s-also-properly-fast" class="outline-2">
+<h2 id="it-s-also-properly-fast">It's also properly fast</h2>
+<div class="outline-text-2" id="text-orgfbe25f8">
+<p>
+I was bracing for a slow first build, since Emacs isn't exactly famous for being a speed train. It wasn't. A full build of this entire site, every post, every feed, every OG card image, finishes in a couple of seconds. I build it from the terminal like this.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh"><code>emacs --batch -Q -L denden -L site -L theme <span class="org-sh-escaped-newline">\</span>
+    -l denden/denden.el -l site/site.el -l theme/theme.el <span class="org-sh-escaped-newline">\</span>
+    --eval <span class="org-string">'(setq denden-repository-directory "/path/to/my/site")'</span> <span class="org-sh-escaped-newline">\</span>
+    --eval <span class="org-string">'(site-build t)'</span>
+</code></pre>
+</div>
+
+<p>
+That's a cold batch Emacs, loading three files, building every page from scratch since <code>t</code> skips the
+incremental cache, and it's done before switch two windows. There's also an async build mode and a timestamp cache for day to day editing, so normal single-file saves rebuild near instantly through <code>denden-preview-current-file</code>.
+</p>
+</div>
+</div>
+<div id="outline-container-owning-the-whole-thing" class="outline-2">
+<h2 id="owning-the-whole-thing">Owning the whole thing</h2>
+<div class="outline-text-2" id="text-org7630f66">
+<p>
+The thing I like most isn't the speed, it's that I own every line of this. I'm an Emacs user, I already spend my <a href="/log/may-i-recommend/">May I Recommend EWM</a> tweaking my config, and now my blog engine runs in the same language, the same editor, the same muscle memory. If I want a new feature, I don't wait for a plugin, I don't learn a templating DSL, I just write a function next to the ones already there and call it. That's a genuinely different feeling from configuring a static site generator, it's closer to how your Emacs config itself grows over the years, one small function at a time, shaped around what you personally want.
+</p>
+
+<p>
+If any of this sounds interesting and you're also an Emacs plus Org mode person, go have a look at
+<a href="https://github.com/idlip/denden/tree/master/example">denden bearblog example site</a>. There's a small, complete example site in the repo <code>example/</code> directory, a Bear-Blog-style site with a home page, an about page, a blog listing and a couple of posts, one stylesheet, no JavaScript. You can build and serve it yourself with one command, <code>just example-build</code> or <code>just example-serve</code> from inside <code>denden/</code>, and poke around the two small files that make it tick, <code>example-site.el</code> and <code>example-theme.el</code>, to see the whole pattern in one sitting, before you even think about pointing it at your own content.
+</p>
+
+
+<div id="orgdf4ce60" class="figure">
+<p><img src="https://raw.githubusercontent.com/idlip/denden/refs/heads/master/example/screenshot.png" alt="screenshot.png" />
+</p>
+<p>Snap of a example bearblog like site built with denden</p>
+</div>
+</div>
+</div>
+<div id="outline-container-about-the-name" class="outline-2">
+<h2 id="about-the-name">About the name</h2>
+<div class="outline-text-2" id="text-orgef4dbd4">
+<p>
+A <code>denden mushi</code> is the snail-shaped transponder phone from One Piece, the way everyone in that world
+talks to each other across the sea. If you've looked around this site even a little, the One Piece
+theme is not exactly subtle here. A static site generator's job is carrying your words from your Org
+files out to the rest of the world, felt fitting enough that I didn't look for a second name,
+although I did consider "dennow" to mimic "Then &amp; Now", alas something had to stay.
+</p>
+
+<p>
+Give it a spin, and if you build something with it, I'd genuinely like to hear about it.
+</p>
+</div>
+</div>
+]]></content></entry><entry><title>Replenish theme - its Emacsy</title><link rel="alternate" type="text/html" href="https://idlip.in/log/emacs-theme-site/" /><id>https://idlip.in/log/emacs-theme-site/</id><published>2026-03-19T00:00:00Z</published><updated>2026-10-02T00:00:00Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+With previous post on <a href="/log/revamp-blog-2026/">Revamp the blogs</a>, I finally today went ahead and upgrades the beautiful <a href="https://github.com/ArthurHeymans/hugo-emacs-theme/">emacs theme made by Arthur</a>, and locally forked to add goodies.
+</p>
+
+<p>
+Reflecting on upgrades since beginning it has received, I'm strictly thinking to settle with this, as it looks good, minimal enough and modern looking, adaptive in mobile, has rss support and I can extend as I want and more than all, I can live in my editor - <code>Emacs</code>.
+</p>
+
+<p>
+Initially the itch to setup own blog and personal website starting with <a href="https://rudra.dev/">rudra.dev</a> (may no longer be active) site which had simple blog listing made using Hugo. Then I moved to org-mode's <code>org-publish</code>, and had setup replacing the same with full html and css from org. I still have the theme in another branch <a href="https://github.com/idlip/idlip.github.io/tree/voyage">here</a>. But again wanted to extend things and org-publish did not feel clean. So went back to hugo, was exploring plethora of theme and went ahead with <a href="https://gitlab.com/rmaguiar/hugo-theme-color-your-world">Color your world</a>, which looked unique giving color accent for whole page and letting user pick with choice. It had search and katex support, but later realized I dont use any of it and it loaded many JS files. Then began another hunt and was thinking of <a href="https://github.com/Livour/hugo-mana-theme">Mana theme</a>, which seemed cool and was active in development with new features every commit.
+</p>
+
+<p>
+Right at this time, magically the <a href="https://www.reddit.com/r/emacs/comments/1qtvnpl/making_my_blog_look_and_feel_like_emacs/">Emacs theme came by reddit</a> and the path got clear and jumped the ship.
+</p>
+
+<p>
+Enough of history, today I added some improvements to this theme in my fork and hopefully I'll be doing more blogs here with as much information I can spread.
+I've been enjoying reading Light novels - Apothecary Diaries and Ascendance of Bookworm, and skimming hacker news and blog posts from <a href="https://www.feedbase.org/">feedbase</a>, hence its time to give back and share as well.
+</p>
+
+<hr />
+
+<div class="org-center">
+<p>
+<i>Its not always of what you can consume, can be what you give as well.</i>
+</p>
+</div>
+]]></content></entry><entry><title>OBTF as Second Brain with Org mode</title><link rel="alternate" type="text/html" href="https://idlip.in/log/obtf-org-mode/" /><id>https://idlip.in/log/obtf-org-mode/</id><published>2025-09-06T00:00:00Z</published><updated>2026-10-07T00:00:00Z</updated><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><category term="obtf" label="obtf" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+<b>One Big Text File</b> is simply writing down mostly everything in single file to organize or manage data. This single file acts as the source of knowledge and holds all notes.
+</p>
+
+<p>
+Second brain has been a buzz word, thanks to the sourcing of Zettelkasten method, every productivity freak is on the stance to organize their life and get things done.
+</p>
+
+<p>
+But I soon came to the conclusion by reading many blogs and reddit discussions that, searching is far superior than organizing. On internet all we do is search for information, and not organize or build system just to get info. This is how note taking should work as well. Just for <b>efficient retrieval and storage</b>. 
+</p>
+
+<p>
+Thanks to my introduction to emacs and getting deep into rabbit hole, Org mode has been the great tool to handle plain text file as an Organization platform. Just like emacs (OS), Org mode can also be extended to endless limit (I dare say it). If emacs is OS, Org mode is for me Init system (systemd).
+</p>
+
+<p>
+You can read more about my note taking journey in <a href="/log/wrapup-masters/">Wrap up on my Bioinformatics Masters Journey</a>.
+</p>
+
+<p>
+This context is also written in favor to post it on r/obtf
+</p>
+<div id="outline-container-org-mode-is-the-best-tool-for-managing-obtf" class="outline-2">
+<h2 id="org-mode-is-the-best-tool-for-managing-obtf">Org mode is the best tool for managing OBTF</h2>
+<div class="outline-text-2" id="text-org81f8fbf">
+<p>
+Many popular workflow would go by simple format as bullet points with Time date and info, and regexp based searching via CLI (rg, vim, grep, sed&hellip;. bash scripts)
+</p>
+
+<p>
+Org mode has many bells and whistles (features) that aid in this method. Tags, integration with commands and rich source of documentation (one of the best things of Emacs or org mode). Thanks to emacs and <a href="https://protesilaos.com/">protesilaos stavrou</a> I learnt how important are documentation and writing sensible notes. It means alot for future self to recognize and re-instantiate the thoughts and state.
+</p>
+
+<p>
+Org mode has an <code>datetree</code> method which has file heading hierarchy in the Year &gt; Month &gt; Day and 4th nested heading follows any notes.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><code><span class="org-org-level-1">* 2022</span>
+<span class="org-org-level-2">** 2022-10 October</span>
+<span class="org-org-level-3">*** 2022-10-07 Friday</span>
+<span class="org-org-level-3">*** 2022-10-08 Saturday</span>
+<span class="org-org-level-4">**** &lt;Any notes I'm capturing&gt;            </span><span class="org-org-level-4"><span class="org-org-tag">:tag1:tag2:</span></span>
+</code></pre>
+</div>
+
+<p>
+This gives out the leverage of journaling, but also a lazy man's organization. I use tagging extensively to most of the (4th) heading based on context so as to narrow down to filter.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><code><span class="org-comment"># learning notes --- l@</span>
+<span class="org-org-meta-line">#+tags: l@coding l@emacs l@bioinfo l@nix l@bash l@julia l@rstats l@python l@devnote l@latex l@til</span>
+
+<span class="org-comment"># generic notes to remember or readme --- n@</span>
+<span class="org-org-meta-line">#+tags: n@linux n@shell n@cli n@book n@idea</span>
+
+<span class="org-comment"># projects --- p@</span>
+<span class="org-org-meta-line">#+tags: p@webcli p@cyanate p@scitomep</span>
+</code></pre>
+</div>
+
+<ul class="org-ul">
+<li>These tag help to categorize the heading in some (lazy) way</li>
+</ul>
+
+<p>
+Org mode has <code>org-sparse-tree</code> bound to <code>C-c /</code> which helps to narrow down based on tag or property. Also another emacs package <code>consult</code> helps to take it up further via <code>consult-line</code> and <code>consult-org-heading</code> along with <code>org-ql</code> package. Org mode also has <code>#+select_tags</code> to export headings to file.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><code><span class="org-org-meta-line">#+select_tags: r@book</span>
+</code></pre>
+</div>
+
+<p>
+With that we can <code>C-c C-e</code> (org-export-dispatch) and press "O O" (make sure org is in org-export-backends) to get temporary Org buffer only with those heading.
+This logically acts as an individual file with that tag/category, thus being atomic in my sense. Org-sparse-tree might also be same.
+</p>
+
+<p>
+-&mdash;
+</p>
+</div>
+</div>
+<div id="outline-container-key-takeaways" class="outline-2">
+<h2 id="key-takeaways">Key takeaways</h2>
+<div class="outline-text-2" id="text-org1a8d13a">
+<p>
+whatever the system or the tool is, the main takeaways every resource provides is to review the notes and write it for future self. Every capture is to review back and make the fleeting note into and rich information.
+This OBTF with org mode satisfies that needs given that user reviews the notes and visits back to digest it again.
+</p>
+</div>
+</div>
+]]></content></entry><entry><title>Literate org config</title><link rel="alternate" type="text/html" href="https://idlip.in/log/literate-config/" /><id>https://idlip.in/log/literate-config/</id><published>2023-12-29T00:00:00Z</published><updated>2026-10-02T00:00:00Z</updated><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<div id="outline-container-organizing-config" class="outline-2">
+<h2 id="organizing-config">Organizing Config</h2>
+<div class="outline-text-2" id="text-orgebeeb4d">
+<p>
+Configuration files as we know are the text to instruct the program to modify and tweak to our needs. Every Open-Source, hack-able software or tool has configuration files provided for the choice of user's needs. Most of the tools provide simple and basic configuration with JSON-like formats, <code>Yaml</code> and <code>Toml</code>. For the word, they are not extensible, as <code>ml</code> stands, they are merely for markup to already defined instructions.
+</p>
+
+<p>
+Tools which are really extensible occupy with the power of a simple or real programming language, to which user gets only sky as the limit to configure. Some tools which are in my mind of this matter are Emacs, neovim, NixOS (home-manager).
+</p>
+
+<p>
+So eventually with more configurations added and tweaked, it becomes evident that it needs to be organized. Humans cannot read a long mass of codes which does not even have basic design principle in it.
+</p>
+
+<p>
+This realization leads to documenting the codes with comments (<i>the grey</i>) and it obviously adds more lines. There after the thoughts lead to modular config, splitting up of files in sensible manner and to import from one stop.
+</p>
+
+<p>
+Now, wait.., This sounds like we are down to creating a file hierarchy for config files, good at the initial days, but sooner or later hierarchy might look alien. I bet it!
+</p>
+
+<p>
+That's where I'm stopping you can covering up next on writing Literate configuration, like with Org-mode.
+</p>
+</div>
+</div>
+<div id="outline-container-org-mode-config" class="outline-2">
+<h2 id="org-mode-config">Org-mode Config</h2>
+<div class="outline-text-2" id="text-orgefaa282">
+<p>
+I won't introduce about org-mode, please do check <a href="https://orgmode.org">here</a>, hopefully it gives you an idea (I mean you should have read whole documentation/manual there). Additionally here is a <a href="https://en.wikipedia.org/wiki/Org-mode">Wikipedia reference</a> which is enough to introduce.
+</p>
+
+<p>
+The concept of <a href="https://en.wikipedia.org/wiki/Literate_programming">Literate programming</a> is having the user's natural language written down in correspondence to code blocks. It adds human-ness to the code, and the instructions we need to understand. Over technical work, it can reduce the usage of manual pages and documentation, wait, that is not a good idea to avoid them, but for something to understand that we wrote ourselves, literate programming helps to add notes.
+</p>
+
+<p>
+The concept is fairly like maintaining a notebook or documentation guide itself, but it also comes with its power.
+</p>
+
+<p>
+Org-mode has tons of features that helps in various categories. Prime use is for maintaining GTD, Notes, Latex, Journaling&hellip; <i>infinity?</i>
+</p>
+
+<p>
+The main topic is, I tried maintaining modular config for Emacs and Nixos, and after some days, I myself was wondering and wasting time on thinking where did I place some content for this categories and was stuck with file hierarchy for several moments. The main obstacle is file hierarchy might turn out to be complex and redundant.
+</p>
+
+<p>
+That's where I decided to move back all to literate config. I came across <a href="https://github.com/rasendubi/dotfiles">rasendubi</a> dotfiles and he also used Literate org config for both Nixos and Emacs. Eventually I did too, here is the <a href="https://github.com/idlip/d-nix">repo</a>.
+</p>
+
+<p>
+The key benefits were, single org file to rule them all. I can integrate well with Emacs, yes, dependency might be Emacs, then too it is plain text format. Org gives us the power to tangle, annotate, add notes, tables, anything with the Source Code Blocks.
+For many configs or code, we forget why we wrote or why it is uniquely required, and nobody likes to waste time digging on why it is there, of course comments are helpful, but not everywhere to make it more head ache?
+Also I don't have navigate over the file hierarchy again and again with paths, simple single org is the stop.
+</p>
+
+<p>
+Org allows us to write notes there, I do manage lot of TODO and plans over the files, and forget everything. When I revisit or when I want to care, I can see what are the plans and I can execute it timely there after. Org literate config acts the source of truth, for information and understanding for my own level.
+</p>
+
+<p>
+As I bestowed this in practice, I noticed that flow of thoughts and expression of it at that time is the crucial thing. Again, for a thought to come and just vanish, its a haze. Even merely <i>sixty seconds</i> is enough to forget. Org could also fill that void, but just capturing the running thought at that time, and later to expand on it.
+</p>
+
+<p>
+Managing time is precious and Org-mode help with that, with plans Todo &amp; Schedules. Also, endless customization does not fetch any fruit. Having a cleaning kind of a day every month or twice a year can help on tweaking or fixing the necessary lines over the Org config.
+</p>
+
+<p>
+In a recent snippet on <a href="/log/organize-file/">Organize File</a>, I was about falling out on maintaining notes. From that scenario also the lesson learned is that, more than maintaining notes, the actual flow of thought and feeling at right time is most important and beats the best organizer anywhere out there. I mean, the goal of note-taking or writing down should be to transcribe the thoughts and knowledge in a approachable manner.
+</p>
+</div>
+</div>
+<div id="outline-container-key-takeaways" class="outline-2">
+<h2 id="key-takeaways">Key Takeaways</h2>
+<div class="outline-text-2" id="text-org356f5e5">
+<ul class="org-ul">
+<li>Org-mode helps in managing and maintaining configuration files.</li>
+<li>Learning can be stressed, and is the key for writing out Literate programming.</li>
+<li>Things are easier to forget, annotating it our own words can help in better understanding and retention of information.</li>
+<li>Org config is the source of truth.</li>
+<li>Notes should be meant to capture the thoughts and feeling at that time of occurence.</li>
+</ul>
+</div>
+</div>
+]]></content></entry><entry><title>Organize File</title><link rel="alternate" type="text/html" href="https://idlip.in/log/organize-file/" /><id>https://idlip.in/log/organize-file/</id><published>2023-12-16T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+From past few days I have been dabbling in the dimension of how to organize files, notes in effective manner. After jumping deep into the rabbit hole, I went on a spree of digesting several blog posts, articles on maintaining files, organizing notes, getting things done, what not, the list goes on.
+</p>
+
+<p>
+With power of <b>org-mode</b> comes the doubt, is it efficient to maintain one big org file or multiple small files. Yes, its personal preference based on users need, there is no set guided rules.
+</p>
+
+<p>
+I stumbled across <code>Zettelkasten</code> system which wasn't new, I was aware of it in the likes of <code>org-roam</code>, although I believe I did not have much matter to use it to some potential to form sensible network. So for now, no hard plans of multiple small files.
+</p>
+
+<p>
+After many reading, especially Karl voit's posts (<a href="https://karl-voit.at">site</a>), I was kinda convinced that file system hierarchy does not make sense, as the file system model I have may change over time, and I would not like to remember and know where I placed something and where to place something. The schema of Zettelkasten is also against this, like you maintain small files and just connect them based on UniqueID or with complexity of SQL database. The simpler alternative would be <code>denote</code> emacs package, then too I don't see the light on using it to the potential. I liked denote way of naming files, and it is format agnostic, does not depend on anything. Just pure elisp to do the job.
+</p>
+
+<p>
+Thus as a safer approach, I renamed some notes files to denote convention (as there is no harm/changes in that).
+</p>
+
+<p>
+Ultimately the fruit to yield is, just go with whatever is easy and that gets the work done. Forgetting people's upfront images, looking at other side proved me that nobody is well organized in every way. Everybody lacks something in one or the other way, like I saw person who maintained file system well organized, but the desk and the room was gross and jam packed. So it depends, but the key takeaway is, if it just works; That's enough. But as time goes, changes and upgrades are required.
+</p>
+]]></content></entry></feed>

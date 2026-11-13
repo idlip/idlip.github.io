@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: foss</title><subtitle>Posts tagged foss on Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/rss.xml" /><id>https://idlip.in/</id><updated>2026-09-30T00:00:00Z</updated><author><name>Dilip | Zororg</name><email>hi@idlip.in</email></author><generator uri="https://gohugo.io/">Hugo</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Embarking in Foss United</title><link rel="alternate" type="text/html" href="https://idlip.in/log/embark-fossunited/" /><id>https://idlip.in/log/embark-fossunited/</id><published>2025-08-24T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="work" label="work" scheme="https://idlip.in/tags/"></category><category term="foss" label="foss" scheme="https://idlip.in/tags/"></category><category term="fossunited" label="fossunited" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+From the previous post, I'm amazed to share that I have started my career in FOSS United Organization (<a href="https://fossunited.org">FossUnted</a>) which focuses on promoting FOSS (Free and Open Source Software) in every day use and every where. Its an NPO, run to conduct events, support students and get this ideology elicited everywhere.
+</p>
+
+<p>
+I just joined before 40 days for <a href="https://fossunited.org/indiafoss/2025">IndiaFoss 2025</a>, which is now a grinding period with work loads. Lot of focus and work aligned up.
+Initially I feared a bit about taking this responsibility but just few weeks in, I'm happy that I grasped the most parts and got a hang of it. Thank to my CLI, Emacs experience, it hastens up by development workflow.
+</p>
+
+<p>
+It has been new learning every day, I'm so excited to be part of it. Everything connects and makes sense to me here, somewhere it feels I belong here.
+So far all good, and I'm here.
+</p>
+<hr />
+<div id="outline-container-2026-01-05-mon-update" class="outline-2">
+<h2 id="2026-01-05-mon-update"><span class="timestamp-wrapper"><span class="timestamp">[2026-01-05 Mon]</span></span> Update</h2>
+<div class="outline-text-2" id="text-orgd6ab1e8">
+<p>
+I've been working as developer and I must say I got the hang of codebase and complete map of the technical foundation. Its so surprising for me that I can think of like programmer and really going deep in this world. Although I must admit that thanks to having some vibes it helps me to code and think more of proper implementation for future maintenance.
+</p>
+
+<p>
+Thanks to many resources online the ocean is very vast and I'm loving it to learn something new everyday (as my perseverance goes). I must admit one thing I hate frontend, I hate making pages and I mostly love keeping backend rock solid (yep!)
+One fear I've with frontend is I might be adding complexity in code (vibed) thinking for practical and modern web use case. Before my time most of the pages were static and Vuejs was used for building some complex pages, and here I've started to bake JS script inside pages to add complexity (I'm scared of maintaining in future tbh as things grow).
+</p>
+
+<p>
+One things I hate is, even during break or afk I keep getting random thoughts on improving platform/codebase, try that; do that; this way; implement that; etc which irritates me (how to escape?)
+which is quite annoying at this time!
+</p>
+
+<ul class="org-ul">
+<li><i>(this post might have updates as days goes on.)</i></li>
+</ul>
+</div>
+</div>
+]]></content></entry></feed>

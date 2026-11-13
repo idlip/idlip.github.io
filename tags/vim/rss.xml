@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: vim</title><subtitle>Posts tagged vim on Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/rss.xml" /><id>https://idlip.in/</id><updated>2026-09-30T00:00:00Z</updated><author><name>Dilip | Zororg</name><email>hi@idlip.in</email></author><generator uri="https://gohugo.io/">Hugo</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Emacs is OP</title><link rel="alternate" type="text/html" href="https://idlip.in/log/emacs-goat/" /><id>https://idlip.in/log/emacs-goat/</id><published>2023-03-22T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="vim" label="vim" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+Before anyone shouts vim, let me <code>:q!</code>
+I was a vimmer for a year, I played and had a good basic config. Even after an year, I didn't grasp the full potential of vim, it was just handy to use <code>hjkl</code> to move around.
+</p>
+
+<p>
+But When I'm learning Emacs, the experience is immense, it defines how things are meant and the legacy of Emacs for 40 years, is not a joke.
+</p>
+
+<p>
+I cannot just rant to make people ditch vim for Emacs, But once you understand you will realize, that is why people went and made <code>evil</code> mode to emulate Vi layer (vim 100%).
+</p>
+
+<p>
+Now they get the <b>Best</b> of both the World!
+</p>
+
+<p>
+Nonetheless, Emacs is the <b>GOAT</b> !
+</p>
+]]></content></entry></feed>

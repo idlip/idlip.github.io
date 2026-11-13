@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: terminal</title><subtitle>Posts tagged terminal on Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/rss.xml" /><id>https://idlip.in/</id><updated>2026-09-30T00:00:00Z</updated><author><name>Dilip | Zororg</name><email>hi@idlip.in</email></author><generator uri="https://gohugo.io/">Hugo</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Linux : The Matrix</title><link rel="alternate" type="text/html" href="https://idlip.in/log/linux-cheatsheet/" /><id>https://idlip.in/log/linux-cheatsheet/</id><published>2023-04-12T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="terminal" label="terminal" scheme="https://idlip.in/tags/"></category><category term="minimal" label="minimal" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+There are tons of linux command line cheatsheet or guides.
+</p>
+
+<p>
+Here are some of the best reads, I suggest you to go throught each of it, <b>It's a gem</b>.
+</p>
+
+
+<ul class="org-ul">
+<li><a href="https://github.com/jlevy/the-art-of-command-line">The Art of Command Line</a> — notes and tips on using the command-line, suitable for both beginners and experienced users.</li>
+<li><a href="https://www.commandlinefu.com/commands/browse/sort-by-votes">commandlinefu</a> — command-line gems, includes a handy search feature.</li>
+<li><a href="https://github.com/tldr-pages/tldr">tldr</a> — collection of community-maintained help pages for command-line tools.</li>
+<li><a href="https://explainshell.com/">explainshell</a> — write down a command-line to see the help text that matches each argument.</li>
+<li><a href="http://www.compciv.org/unix-tools/">General purpose command-line tools</a> — examples for most common usecases.</li>
+<li><a href="https://devmanual.gentoo.org/tools-reference/bash/index.html">Bash reference cheatsheet</a> — nicely formatted and explained well.</li>
+<li><a href="https://devhints.io/bash">Bash scripting cheatsheet</a> — quick reference to getting started with Bash scripting.</li>
+</ul>
+
+<hr />
+
+<div class="org-center">
+<p>
+<b>With that <code>coded</code>, I hope you enjoy the terminal. Unleash the Matrix</b>.
+</p>
+</div>
+]]></content></entry><entry><title>Tools that are Best!</title><link rel="alternate" type="text/html" href="https://idlip.in/log/tools-readme/" /><id>https://idlip.in/log/tools-readme/</id><published>2023-03-17T00:00:00Z</published><updated>2026-10-02T00:00:00Z</updated><category term="terminal" label="terminal" scheme="https://idlip.in/tags/"></category><category term="linux" label="linux" scheme="https://idlip.in/tags/"></category><category term="minimal" label="minimal" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+Note: This is very outdated from when it was written. Please check <a href="https://github.com/idlip/d-nix">current config</a> file or <a href="/uses/">Uses</a> for updated list.
+</p>
+
+<hr />
+<div id="outline-container-utilities-that-are-best" class="outline-2">
+<h2 id="utilities-that-are-best">Utilities that are Best! 🌟</h2>
+<div class="outline-text-2" id="text-org7f4337e">
+<hr />
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Class</th>
+<th scope="col" class="org-left">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Window Manager</td>
+<td class="org-left"><a href="https://hyprland.org/">Hyprland</a> 🌸</td>
+</tr>
+
+<tr>
+<td class="org-left">Text Editor</td>
+<td class="org-left"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 💮</td>
+</tr>
+
+<tr>
+<td class="org-left">Gtk Theme</td>
+<td class="org-left"><a href="https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme">Gruvbox</a> / <a href="https://github.com/vinceliuice/Orchis-theme">Orchis</a> 🎨</td>
+</tr>
+
+<tr>
+<td class="org-left">Font</td>
+<td class="org-left"><a href="https://tosche.net/fonts/comic-code">Comic Code</a> / <a href="https://github.com/dtinth/comic-mono-font">Comic Mono</a> / <a href="https://github.com/tonsky/FiraCode">Fira Code</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Pdf Reader</td>
+<td class="org-left"><a href="https://github.com/ahrm/sioyek">Sioyek</a> 📔 (ditch zathura)</td>
+</tr>
+
+<tr>
+<td class="org-left">Media Player</td>
+<td class="org-left"><a href="https://mpv.io">MPV!</a> 🎬 (its MVP too)</td>
+</tr>
+
+<tr>
+<td class="org-left">Image Viewer</td>
+<td class="org-left"><a href="https://sr.ht/~exec64/imv/">Imv</a> 🖼️</td>
+</tr>
+
+<tr>
+<td class="org-left">RSS Reader</td>
+<td class="org-left"><a href="https://github.com/skeeto/elfeed">Elfeed</a> 📰 (Again, Emacs)</td>
+</tr>
+
+<tr>
+<td class="org-left">Music Player</td>
+<td class="org-left"><a href="https://github.com/ncmpcpp/ncmpcpp">Ncmpcpp</a> or <a href="https://github.com//mingus">Mingus in Emacs</a> 🎶</td>
+</tr>
+
+<tr>
+<td class="org-left">Terminal</td>
+<td class="org-left"><a href="https://codeberg.org/dnkl/foot">Foot</a> via footclient ⚽</td>
+</tr>
+
+<tr>
+<td class="org-left">Menu/Launcher</td>
+<td class="org-left"><a href="https://github.com/davatorium/rofi">Rofi</a> 🚀</td>
+</tr>
+
+<tr>
+<td class="org-left">Notification</td>
+<td class="org-left"><a href="https://github.com/dunst/dunst">Dunst</a>  🛎️</td>
+</tr>
+
+<tr>
+<td class="org-left">Shell</td>
+<td class="org-left"><a href="https://zsh.org">Zshell</a> with <a href="https://starship.rs">Starship</a> 🔰</td>
+</tr>
+
+<tr>
+<td class="org-left">Status Bar</td>
+<td class="org-left"><a href="https://github.com/Alexays/Waybar">Waybar</a>  🍥</td>
+</tr>
+
+<tr>
+<td class="org-left">Favourite Color-Schemes</td>
+<td class="org-left">Modus-Vivendi + Gruvbox</td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p>
+Rest all other stuffs I do in Emacs, tbh I could do everything in Emacs lol.
+</p>
+</blockquote>
+
+
+<p>
+Feel free to comment down and ask me doubts or about some improvements, you wanna inform! I will be glad.
+</p>
+</div>
+</div>
+]]></content></entry></feed>
