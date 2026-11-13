@@ -973,13 +973,12 @@ the same search box every other topic-list page has."
                                  all-pages))))
 
 (defun site--write-term-page (term count pages buffer-name rss-url url output)
-  "Write one term page (/tags/<tag>/ or /refs/<ref>/) for TERM at OUTPUT, with
-no tag cloud or OG card."
+  "Write one term page (/tags/<tag>/ or /refs/<ref>/) for TERM at OUTPUT."
   (site--write-page
    (site--wrap-page
     :rss-url rss-url
     :title term
-    :url url :og-card nil
+    :url url
     :body (theme-post-listing
            :term-header (theme-term-header :tag term :count count :rss-url rss-url)
            :article-list (theme-article-list :grouped-pages (denden-group-pages-by-year pages)
@@ -1012,7 +1011,7 @@ into PUB-DIR. Call after the main publish."
     ;; links its own narrower feed; see `site-build-term-feeds' for the
     ;; actual feed XML.
     (site--write-page
-     (site--wrap-page :title "Tags" :url "tags/" :og-card nil
+     (site--wrap-page :title "Tags" :url "tags/"
                       :body (theme-terms-list :tag-counts tag-counts :footer (theme-footer site-footer-content)
                                               :modeline (theme-modeline :buffer "*tags*")))
      (expand-file-name "tags/index.html" pub-dir))
@@ -1024,7 +1023,7 @@ into PUB-DIR. Call after the main publish."
                                (expand-file-name (format "tags/%s/index.html" (downcase tag)) pub-dir))))
     (when ref-counts
       (site--write-page
-       (site--wrap-page :title "Refs" :url "refs/" :og-card nil
+       (site--wrap-page :title "Refs" :url "refs/"
                         :body (theme-terms-list :tag-counts ref-counts :footer (theme-footer site-footer-content)
                                                 :modeline (theme-modeline :buffer "*refs*")))
        (expand-file-name "refs/index.html" pub-dir))

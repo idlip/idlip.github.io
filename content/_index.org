@@ -142,4 +142,4 @@ Curious about me, or want to reach me? Head to [[file:about.org][About]].
 </div>
 #+end_export
 
-Follow me via [[/rss.xml][RSS]] for every new Log post, or follow just one tag through its own feed, like [[/tags/emacs/rss.xml][tags/emacs/rss.xml]] :: every [[/tags/][tag page]] links its own.
+You may read via [[/rss.xml][RSS]] for every new Log post, or follow just one tag through its own feed, like [[/tags/emacs/rss.xml][tags/emacs/rss.xml]] :: every [[/tags/][tag page]] links its own.
