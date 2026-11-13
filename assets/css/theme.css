@@ -1284,6 +1284,8 @@
     max-width: var(--content-max-width, 840px);
     margin: 0 auto;
     width: 100%;
+    padding: 1em var(--content-pad-x);
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     min-height: 100%;
@@ -1388,8 +1390,8 @@
     font-weight: bold;
     color: var(--cyan-cooler);
   }
-  .term-back {
-    margin-left: auto;
+  .term-back,
+  .term-rss {
     font-size: var(--fs-2xs);
     color: var(--yellow-cooler);
     text-decoration: none;
@@ -1398,6 +1400,9 @@
       opacity: 1;
       text-decoration: underline;
     }
+  }
+  .term-back {
+    margin-left: auto;
   }
 
   .tag-cloud {

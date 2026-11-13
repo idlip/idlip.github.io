@@ -1272,11 +1272,16 @@ never writes these.")
     (file-name-nondirectory (directory-file-name pretty-url))))
 
 (defun site--og-image-url (pretty-url)
-  "Return PRETTY-URL's absolute OG-image URL, or nil if no PNG exists yet."
+  "Return PRETTY-URL's absolute OG-image URL, or nil if none exists."
+  ;; Its own rasterized PNG if one exists (Log posts only), else the
+  ;; site's one common card at /og/home.png.
   (let* ((slug (site--og-slug pretty-url))
-         (png (expand-file-name (concat slug ".png") site-og-png-directory)))
-    (when (file-exists-p png)
-      (concat (string-remove-suffix "/" (site-base-url)) "/og/" slug ".png"))))
+         (own (expand-file-name (concat slug ".png") site-og-png-directory))
+         (common (expand-file-name "home.png" site-og-png-directory))
+         (base (string-remove-suffix "/" (site-base-url))))
+    (cond ((file-exists-p own) (concat base "/og/" slug ".png"))
+          ((file-exists-p common) (concat base "/og/home.png"))
+          (t nil))))
 
 (defun site--og-prose-paragraphs (node)
   "Return every <p> element under NODE, in document order, skipping the
@@ -1331,15 +1336,6 @@ CARD-SITE-TITLE, with FAVICON-PATH embedded."
                         :card-site-title card-site-title :favicon-path favicon-path)
      (site--og-svg-output-path page pub-dir))))
 
-(cl-defun site-build-section-og-card (&key title slug entry-count card-site-title favicon-path output-path)
-  "Write one home/section-shaped OG card for TITLE/SLUG to OUTPUT-PATH, with
-ENTRY-COUNT instead of a word count."
-  (site--write-string
-   (site-og-card-svg :title title :excerpt "" :tags nil :slug slug :date nil
-                      :meta-right (format "%d entries" entry-count)
-                      :card-site-title card-site-title :favicon-path favicon-path)
-   output-path))
-
 (defun site--word-count-meta (page)
   "PAGE's \"N words · M min\" OG-card meta-right, from its own :content-html."
   (let* ((word-count (site--word-count (plist-get page :content-html)))
@@ -1361,8 +1357,7 @@ index, OG cards, 404) into PUB-DIR."
     (site-write-feed-trio (denden-pages-in-section regular "log") (expand-file-name "log" pub-dir)
                           (site-base-url) site-title site-description
                           site-author-name site-author-email nil site-copyright)
-    ;; Per-term (tag/ref) feeds are a deferred cut -- home and every
-    ;; section still get one.
+    (site-build-term-feeds regular pub-dir)
     (site-build-sitemap enriched pub-dir)
     (site-build-robots (site-base-url) pub-dir)
     (site-build-aliases enriched pub-dir)
@@ -1370,16 +1365,24 @@ index, OG cards, 404) into PUB-DIR."
     (site-build-search-index regular pub-dir)
     (site-build-wander-js (expand-file-name "content/wander.org" repository-directory) pub-dir)
     (site-build-wander-theme-css pub-dir)
-    (site-build-og-cards :pages regular :card-site-title site-title :favicon-path favicon-path
-                         :pub-dir pub-dir :word-count-fn #'site--word-count-meta)
-    (site-build-section-og-card :title site-title :slug nil :entry-count (length regular)
-                                :card-site-title site-title :favicon-path favicon-path
-                                :output-path (expand-file-name "og.svg" pub-dir))
-    (dolist (section (site--distinct-sections regular))
-      (site-build-section-og-card :title (capitalize section) :slug section
-                                  :entry-count (length (denden-pages-in-section regular section))
-                                  :card-site-title site-title :favicon-path favicon-path
-                                  :output-path (expand-file-name (format "%s/og.svg" section) pub-dir)))
+    ;; Only Log posts earn their own OG card: a real excerpt and word
+    ;; count is worth the per-post render. Every other page, standalone
+    ;; pages and every section listing like /wander/ or /projects/ alike,
+    ;; shares this one static home card instead, via `site--og-image-url's
+    ;; fallback to og/home.png. No title, no words, never changes.
+    (site-build-og-cards :pages (denden-pages-in-section regular "log") :card-site-title site-title
+                         :favicon-path favicon-path :pub-dir pub-dir :word-count-fn #'site--word-count-meta)
+    ;; The one shared card, built from the home page's own excerpt (its
+    ;; #+description: keyword if index.org sets one, else its own first
+    ;; paragraphs). No slug or meta-right: this card is reused as-is on
+    ;; every non-Log page, so nothing page-specific belongs on it.
+    (let ((home-page (seq-find #'site--home-page-p enriched)))
+      (site--write-string
+       (site-og-card-svg :title site-title
+                          :excerpt (or (and home-page (site--og-excerpt-for-page home-page)) "")
+                          :tags nil :slug nil :date nil :meta-right nil
+                          :card-site-title site-title :favicon-path favicon-path)
+       (expand-file-name "og.svg" pub-dir)))
     (site-build-404-page all-pages pub-dir)))
 
 ;;;; org-publish project definition, real build entry points
@@ -1565,14 +1568,15 @@ refreshes cross-page metadata first."
 ;;;; This site's own M-x commands, via `denden-define-command'
 
 (denden-define-command idlip og-regenerate-all ()
-  "Regenerate every regular page's OG card SVG, without a full rebuild."
+  "Regenerate every Log post's OG card SVG, without a full rebuild."
   (let* ((leaves (org-publish-expand-projects (list (assoc "site" org-publish-project-alist))))
          (all-pages (denden-collect-page-metadata leaves))
          (enriched (mapcar (lambda (p) (site--enrich-page p (site-base-url) all-pages)) all-pages))
          (regular (site--regular-pages enriched))
          (favicon-path (expand-file-name site-favicon-relative-path
                                          (expand-file-name "static" denden-repository-directory))))
-    (site-build-og-cards :pages regular :card-site-title site-title :favicon-path favicon-path
+    (site-build-og-cards :pages (denden-pages-in-section regular "log") :card-site-title site-title
+                          :favicon-path favicon-path
                           :pub-dir site-publishing-directory :word-count-fn #'site--word-count-meta)))
 
 (provide 'site)
