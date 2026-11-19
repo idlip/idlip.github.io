@@ -52,7 +52,7 @@
   "Join PARTS (strings or string lists) into one lowercased data-filter-text value."
   (downcase (string-join (flatten-list parts) " ")))
 
-(defconst theme--list-views '(("list" . "List") ("grid" . "Grid") ("compact" . "Compact"))
+(defconst theme--list-views '(("list" . "󰕲") ("grid" . "󰕰") ("compact" . "󰹫"))
   "The list layouts a reader can pick, default first.")
 
 (cl-defun theme-list-filter (&key target placeholder (views t))
