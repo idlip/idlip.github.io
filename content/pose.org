@@ -6,29 +6,135 @@
 
 Quick thoughts, short bits, single lines, poetic, mini-micro notes and snippets of journal.
 
-** 2026-11-16
-I love animated movie and content creations
+** 2026-09-30                                                   :philosophy:
+Owning something is better than consuming anything
+-----
+Consuming is a trap and well played psychological game intellects created.
+
+Owning stuff adds realization and give more thoughts on why stuff exist in the first place.
+
+** 2026-10-01
+
+Its easy to make money, but not the worth
+-----
+Money and value(tion) are not the same.
+
+** 2026-10-05
+Emacs has always been my Dopamine reservoir
+-----
+[[file:log/may-i-recommend.org][I live in emacs]]
+
+** 2026-10-06
+When brain gets foggy, staring at a wall for >10 minutes helps alot
+-----
+Might you go into nirvana state
+
+** 2026-10-07
+Working and skills are not part of everyday equation
+-----
+Working well is not same as gaining skills. Skills are something that stand out, work is something that is meant to just be done.
+
+** 2026-10-08
+Writing things down is almost like 80% work done
+-----
+Famously known as 80:20 rule, Pareto principle applies to every moment in life. Even jotting down a simple todo is almost like done task for me.
+
+** 2026-10-12
+Nix has become a pain to work. Its no longer exciting nor giving me dopamine
+-----
+Its true that nix solves hard problems well, but make easy ones difficult.
+Every update breaks and needs 1 hour of attention, and constant learning of nix way is stupid.
+Only one distro stands true, and its ....
+
+** 2026-10-15
+Easy choices, Hard life. Hard choices, Easy Life.
+-----
+My (our) current life runs mostly on Instant gratification, which is a short-term and long-term spoiler. The impacts and harm are far more cruel and easy to regret.
+
+** 2026-10-19
+Life is always about regret. One who says "no", is not wise.
+-----
+Grass is always greener on the other side. There is always a better one, not opposite, but a best alternative.
+
+** 2026-10-22
+I'm so happy that care's befit fitpass works & I can continue booking my gym session
+-----
+From past 1 month it had KYC pending that did not allow me to book.
+I was so frustrated that I thought to join directly, and in nick of many complaints somehow it got resolved.
+
+** 2026-10-24
+Associating Indian language and context to traditional english terms changes the view so much.
+-----
+We need to localize many stuff to appreciate the indian philosophy and associate more.
+
+** 2026-10-25
+Life is all about transformation, yet we blame karma.
+-----
+We spend our lives turning one desire into another, one purpose into the next, mistaking every new form for an arrival. Those who believe they've achieved it all have merely stopped noticing the transformation.
+
+** 2026-10-26
+Haste makes servants of us all.
+-----
+We rush to solve problems others barely care about, giving our time before they even value it.
+We mistake being helpful for being needed, and our haste for their urgency, only to learn that not every burden we carry is worth the weight. For time is the one price we all pay equally, regardless of what we own or what we can afford.
+
+** 2026-10-27
+I really wish One Piece was a novel and written more in-depth.
+-----
+Cannot keep imaging more possibility and Oda excellence, and cannot keep waiting every week for new manga release.
+I wanna connect more dots!
+
+Along with this I really wish Kung-Fu Hustle and Shoalin Soccer were real too!
+
+** 2026-11-01
+One's need, another's opportunity.
+-----
+I despise this kind of opportunism, where another's need becomes an excuse to take their time and goodwill for granted. Perhaps exploitation rarely looks the same in every form, but it always finds a way to disguise itself as convenience, favour or simple expectation.
+
+** 2026-11-02
+Good to be back at the gym.
+-----
+The body has a remarkable ability to rebuild what time and neglect have taken away. Fitness, in its many forms, is not some distant ideal reserved for a few; it is within everyone's reach, provided we learn to be as mindful of what we consume as of how we train.
+
+** 2026-11-07
+An echo chamber need not be silent.
+-----
+A room full of ideas does not always make for a meaningful exchange. Sometimes everyone arrives to contribute, but few arrive to reconsider; opinions pile upon opinions, while the more practical questions remain untouched. Not everything that sounds interesting is worth pursuing, nor does every conversation necessarily move us forward.
+
+** 2026-11-08
+Amazing lessons from every moment.
+-----
+Recently came across [[https://www.kashyapsuhas.com/blog/30][30 things at 30]], which led me to [[https://rebeccadai.substack.com/p/50-things-i-know][50 things I know]]. Both are lovely reminders of how much life teaches us along the way. Not every lesson arrives at a particular age or moment; some take years to realize, while others simply need someone else's words to help us see what was already there. Life is less about learning things on time and more about recognizing them when we do.
+
+** 2026-11-09
+The comfort of borrowed choices.
 -------
-It is the only place where people enjoy all imperfections.
-Every animated movie (west) or Anime (asia) is mostly made for comedy and fun. But its suprising how people enjoy it very much and dont get into character shaming
+We have become so accustomed to what is served to us that we rarely pause to question what we actually need.
+From thoughts to food, entertainment to everyday choices, convenience has slowly replaced curiosity, and consumption has taken the place of creation. We mistake having endless options for having freedom, while rarely questioning who made those choices available to us in the first place.
 
-Whereas contrast this in real life, people feel they have imperfect body and thanks to reels and spoiled by big media, we got impression that humans as in "we" must look this way for perfection or just to be seen good. Of course hitting gym is good and staying fit should be goal of all.
+Further reading
+- [[https://www.marxists.org/reference/archive/debord/society.htm][The Society of the Spectacle]] by Guy Debord
+- [[https://en.wikipedia.org/wiki/Amusing_Ourselves_to_Death][Amusing Ourselves to Death]] by Neil Postman
+- [[https://en.wikipedia.org/wiki/Manufacturing_Consent][Manufacturing Consent]] by Edward S. Herman and Noam Chomsky
+- [[https://en.wikipedia.org/wiki/The_Shallows_(book)][The Shallows]] by Nicholas Carr
 
-But what I mean is, why do we not accept imperfection for our human life but enjoy and appreciate on animated contents?
-
-- Every animated character has imperfect shape and bad proportion (some make good memes TBH)
-- We humans in-real-life care so much of good looking or ideals.
-- I hate that even some content creators are spoiled to create these images just to sell well or get more attraction.
-  
-
-** 2026-11-15
-Documenting has never been so fun
+** 2026-11-10
+Earworms are the worst to happen for a silent moment
 -------
-People have been documenting these days in terms of calling it "SKILLs", this is good, but hope many people realize that documentation has always been essential work.
+Stuck song syndrome is the loop of a music bit or tune that keeps rolling into your brain.
+This totally annoys every day life and heck people should listen to more beep noise to counter this.
 
-Obviously I mean the 5-10% who even do that, rest all have gone so rot that they cannot even read a simple short form documentation, because we've limited our cognitive load drastically.
+** 2026-11-12
+Funny for NPCI to think accessibility features cause issue for UPI
+-------
+This sucks, just to prevent gesture hack, they think no developer options and accessibility features need to be turned on.
 
-Everything is a record of time or a documentation of a journey.
+Saar, but one who has them activated knows their phone state and stuff, and even though they are off, we can assume an attacker any anyhow mitigate those. Silly, and we need jokers to stop doing these annoying stuff.
+
+** 2026-11-13
+These days movies does not need brain
+-------
+In fact, I assume theatres will have notice saying to keep your brain out or switched off for the watch time. These are called as rot and we need to appreciate that nowadays people think dumping anything of desperate are treated as fun.
 
 ** 2026-11-14
 How I like/use and also hate AI
@@ -47,133 +153,25 @@ How I like/use and also hate AI
 
 I talk AI in the sense of Agent or assistant as tool only here.
 
-** 2026-11-13
-These days movies does not need brain
+** 2026-11-15
+Documenting has never been so fun
 -------
-In fact, I assume theatres will have notice saying to keep your brain out or switched off for the watch time. These are called as rot and we need to appreciate that nowadays people think dumping anything of desperate are treated as fun.
+People have been documenting these days in terms of calling it "SKILLs", this is good, but hope many people realize that documentation has always been essential work.
 
-** 2026-11-12
-Funny for NPCI to think accessibility features cause issue for UPI
+Obviously I mean the 5-10% who even do that, rest all have gone so rot that they cannot even read a simple short form documentation, because we've limited our cognitive load drastically.
+
+Everything is a record of time or a documentation of a journey.
+
+** 2026-11-16
+I love animated movie and content creations
 -------
-This sucks, just to prevent gesture hack, they think no developer options and accessibility features need to be turned on.
+It is the only place where people enjoy all imperfections.
+Every animated movie (west) or Anime (asia) is mostly made for comedy and fun. But its suprising how people enjoy it very much and dont get into character shaming
 
-Saar, but one who has them activated knows their phone state and stuff, and even though they are off, we can assume an attacker any anyhow mitigate those. Silly, and we need jokers to stop doing these annoying stuff.
+Whereas contrast this in real life, people feel they have imperfect body and thanks to reels and spoiled by big media, we got impression that humans as in "we" must look this way for perfection or just to be seen good. Of course hitting gym is good and staying fit should be goal of all.
 
-** 2026-11-10
-Earworms are the worst to happen for a silent moment
--------
-Stuck song syndrome is the loop of a music bit or tune that keeps rolling into your brain.
-This totally annoys every day life and heck people should listen to more beep noise to counter this.
+But what I mean is, why do we not accept imperfection for our human life but enjoy and appreciate on animated contents?
 
-** 2026-11-09
-The comfort of borrowed choices.
--------
-We have become so accustomed to what is served to us that we rarely pause to question what we actually need.
-From thoughts to food, entertainment to everyday choices, convenience has slowly replaced curiosity, and consumption has taken the place of creation. We mistake having endless options for having freedom, while rarely questioning who made those choices available to us in the first place.
-
-Further reading
-- [[https://www.marxists.org/reference/archive/debord/society.htm][The Society of the Spectacle]] by Guy Debord
-- [[https://en.wikipedia.org/wiki/Amusing_Ourselves_to_Death][Amusing Ourselves to Death]] by Neil Postman
-- [[https://en.wikipedia.org/wiki/Manufacturing_Consent][Manufacturing Consent]] by Edward S. Herman and Noam Chomsky
-- [[https://en.wikipedia.org/wiki/The_Shallows_(book)][The Shallows]] by Nicholas Carr
-
-** 2026-11-08
-Amazing lessons from every moment.
------
-Recently came across [[https://www.kashyapsuhas.com/blog/30][30 things at 30]], which led me to [[https://rebeccadai.substack.com/p/50-things-i-know][50 things I know]]. Both are lovely reminders of how much life teaches us along the way. Not every lesson arrives at a particular age or moment; some take years to realize, while others simply need someone else's words to help us see what was already there. Life is less about learning things on time and more about recognizing them when we do.
-
-** 2026-11-07
-An echo chamber need not be silent.
------
-A room full of ideas does not always make for a meaningful exchange. Sometimes everyone arrives to contribute, but few arrive to reconsider; opinions pile upon opinions, while the more practical questions remain untouched. Not everything that sounds interesting is worth pursuing, nor does every conversation necessarily move us forward.
-
-** 2026-11-02
-Good to be back at the gym.
------
-The body has a remarkable ability to rebuild what time and neglect have taken away. Fitness, in its many forms, is not some distant ideal reserved for a few; it is within everyone's reach, provided we learn to be as mindful of what we consume as of how we train.
-
-** 2026-11-01
-One's need, another's opportunity.
------
-I despise this kind of opportunism, where another's need becomes an excuse to take their time and goodwill for granted. Perhaps exploitation rarely looks the same in every form, but it always finds a way to disguise itself as convenience, favour or simple expectation.
-
-** 2026-10-27
-I really wish One Piece was a novel and written more in-depth.
------
-Cannot keep imaging more possibility and Oda excellence, and cannot keep waiting every week for new manga release.
-I wanna connect more dots!
-
-Along with this I really wish Kung-Fu Hustle and Shoalin Soccer were real too!
-
-** 2026-10-26
-Haste makes servants of us all.
------
-We rush to solve problems others barely care about, giving our time before they even value it.
-We mistake being helpful for being needed, and our haste for their urgency, only to learn that not every burden we carry is worth the weight. For time is the one price we all pay equally, regardless of what we own or what we can afford.
-
-** 2026-10-25
-Life is all about transformation, yet we blame karma.
------
-We spend our lives turning one desire into another, one purpose into the next, mistaking every new form for an arrival. Those who believe they've achieved it all have merely stopped noticing the transformation.
-
-** 2026-10-24
-Associating Indian language and context to traditional english terms changes the view so much.
------
-We need to localize many stuff to appreciate the indian philosophy and associate more.
-
-** 2026-10-22
-I'm so happy that care's befit fitpass works & I can continue booking my gym session
------
-From past 1 month it had KYC pending that did not allow me to book.
-I was so frustrated that I thought to join directly, and in nick of many complaints somehow it got resolved.
-
-** 2026-10-19
-Life is always about regret. One who says "no", is not wise.
------
-Grass is always greener on the other side. There is always a better one, not opposite, but a best alternative.
-
-** 2026-10-15
-Easy choices, Hard life. Hard choices, Easy Life.
------
-My (our) current life runs mostly on Instant gratification, which is a short-term and long-term spoiler. The impacts and harm are far more cruel and easy to regret.
-
-** 2026-10-12
-Nix has become a pain to work. Its no longer exciting nor giving me dopamine
------
-Its true that nix solves hard problems well, but make easy ones difficult.
-Every update breaks and needs 1 hour of attention, and constant learning of nix way is stupid.
-Only one distro stands true, and its ....
-
-** 2026-10-08
-Writing things down is almost like 80% work done
------
-Famously known as 80:20 rule, Pareto principle applies to every moment in life. Even jotting down a simple todo is almost like done task for me.
-
-** 2026-10-07
-Working and skills are not part of everyday equation
------
-Working well is not same as gaining skills. Skills are something that stand out, work is something that is meant to just be done.
-
-** 2026-10-06
-When brain gets foggy, staring at a wall for >10 minutes helps alot
------
-Might you go into nirvana state
-
-** 2026-10-05
-Emacs has always been my Dopamine reservoir
------
-[[file:log/may-i-recommend.org][I live in emacs]]
-
-** 2026-10-01
-
-Its easy to make money, but not the worth
------
-Money and value(tion) are not the same.
-
-** 2026-09-30                                                   :philosophy:
-
-Owning something is better than consuming anything
------
-Consuming is a trap and well played psychological game intellects created.
-
-Owning stuff adds realization and give more thoughts on why stuff exist in the first place.
+- Every animated character has imperfect shape and bad proportion (some make good memes TBH)
+- We humans in-real-life care so much of good looking or ideals.
+- I hate that even some content creators are spoiled to create these images just to sell well or get more attraction.
