@@ -32,7 +32,6 @@ Contents
   * [Custom CSS](#custom-css)
   * [Custom JS](#custom-js)
   * [Customise Ignore List](#customise-ignore-list)
-  * [Customise 'Via' Parameter](#customise-via-parameter)
   * [Customisation Order](#customisation-order)
 * [Caution](#caution)
 * [Wander Console Network](#wander-console-network)
@@ -389,83 +388,6 @@ for the sake of simplicity and brevity in both code and documentation.
 This algorithm takes only 8 lines to implement.  A more sophisticated
 solution that feels more intuitive for all edge cases would take
 significantly more code and would also take longer to explain.
-
-
-### Customise 'via' Parameter
-
-#### Default Behaviour
-
-Since version 0.4.0, Wander Console appends a `via=` query parameter
-when loading a recommended page in the console.  For example, if you
-encounter `https://midnight.pub/` while using a console at
-`https://console.example/wander/`, the console loads the page as:
-
-```
-https://midnight.pub/?via=https://console.example/wander/
-```
-
-This allows the owner of the recommended website to see, via their
-access logs, that the visit originated from a Wander Console.  This is
-the default behaviour but can be customised.
-
-
-#### Pass Name and Version Instead
-
-You can configure your Wander Console to send only the project
-identifier (name and version), e.g. `via=wander-0.4.0`, instead of the
-full console URL.  To do this, set `referral` to `'version'` in your
-`wander.js` file:
-
-```javascript
-const wander = {
-  consoles: [
-    // ...
-  ],
-  pages: [
-    // ...
-  ],
-  referral: 'version',
-}
-```
-
-Now the console will load pages using URLs like:
-
-```
-https://midnight.pub/?via=wander-0.4.0
-```
-
-In this mode, website owners can still recognise Wander traffic but
-cannot see the full URL of your console.  This may prevent them from
-discovering your console.  However, with other signals such as the
-HTTP referrer header, they may still be able to infer its URL.
-
-
-### Disable 'Via' Parameter
-
-To disable the `via=` parameter entirely, set `referral` to `'no'`:
-
-```javascript
-const wander = {
-  consoles: [
-    // ...
-  ],
-  pages: [
-    // ...
-  ],
-  referral: 'no',
-}
-```
-
-Now pages are loaded using their original URLs:
-
-```
-https://midnight.pub/
-```
-
-In this mode, no referral information is shared with the destination
-website.  As a result, your Wander console is less likely to be
-discovered through access logs.  That said, other signals such as the
-HTTP referrer header may still reveal clues about its URL.
 
 
 ### Customisation Order

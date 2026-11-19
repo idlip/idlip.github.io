@@ -11,8 +11,8 @@ I wrote about <a href="/log/obtf-org-mode/">OBTF as Second Brain with Org mode</
 OBTF in some sense is a lazy man's system to get things done. But if you feel more lazier to even think of it, I'd highly recommend to read <a href="https://obtf.ru/en">https://obtf.ru/en</a> website, since it helps me as well to stay motivated to achieve its purpose.
 </p>
 <div id="outline-container-obtf-s-philosophy-pitch" class="outline-2">
-<h2 id="obtf-s-philosophy-pitch">OBTF's philosophy pitch</h2>
-<div class="outline-text-2" id="text-org1d1c18b">
+<h2 id="obtf-s-philosophy-pitch">OBTF's philosophy pitch<a class="heading-anchor" href="#obtf-s-philosophy-pitch" aria-label="Link to this section">#</a></h2>
+<div class="outline-text-2" id="text-orga13619d">
 <p>
 Their whole argument boils down to a handful of lines:
 </p>
@@ -55,8 +55,8 @@ Some posts on OBTF found over internet:
 </div>
 </div>
 <div id="outline-container-where-org-gives-you-more" class="outline-2">
-<h2 id="where-org-gives-you-more">Where Org gives you more</h2>
-<div class="outline-text-2" id="text-org432be78">
+<h2 id="where-org-gives-you-more">Where Org gives you more<a class="heading-anchor" href="#where-org-gives-you-more" aria-label="Link to this section">#</a></h2>
+<div class="outline-text-2" id="text-org911fc30">
 <p>
 "Search beats categories" is true until the file gets big enough that search alone stops being enough, and at that point you want <b>structure you can turn on when you need it</b>, not structure forced on you from day one.
 </p>
@@ -101,8 +101,8 @@ split the real file.</li>
 </div>
 </div>
 <div id="outline-container-conclude" class="outline-2">
-<h2 id="conclude">Conclude</h2>
-<div class="outline-text-2" id="text-org652c3c8">
+<h2 id="conclude">Conclude<a class="heading-anchor" href="#conclude" aria-label="Link to this section">#</a></h2>
+<div class="outline-text-2" id="text-orgb1d4aae">
 <p>
 These might sound very much tied to emacs, yes thats mostly true. Environment so perfect that it can be called a monolith of emacs. But alas, people have ported org mode inspired modes and packages to various other ecosystem.
 </p>
@@ -149,8 +149,8 @@ You can read more about my note taking journey in <a href="/log/wrapup-masters/"
 This context is also written in favor to post it on r/obtf
 </p>
 <div id="outline-container-org-mode-is-the-best-tool-for-managing-obtf" class="outline-2">
-<h2 id="org-mode-is-the-best-tool-for-managing-obtf">Org mode is the best tool for managing OBTF</h2>
-<div class="outline-text-2" id="text-org65041b8">
+<h2 id="org-mode-is-the-best-tool-for-managing-obtf">Org mode is the best tool for managing OBTF<a class="heading-anchor" href="#org-mode-is-the-best-tool-for-managing-obtf" aria-label="Link to this section">#</a></h2>
+<div class="outline-text-2" id="text-org53908b9">
 <p>
 Many popular workflow would go by simple format as bullet points with Time date and info, and regexp based searching via CLI (rg, vim, grep, sed&hellip;. bash scripts)
 </p>
@@ -212,8 +212,8 @@ This logically acts as an individual file with that tag/category, thus being ato
 </div>
 </div>
 <div id="outline-container-key-takeaways" class="outline-2">
-<h2 id="key-takeaways">Key takeaways</h2>
-<div class="outline-text-2" id="text-org8100b49">
+<h2 id="key-takeaways">Key takeaways<a class="heading-anchor" href="#key-takeaways" aria-label="Link to this section">#</a></h2>
+<div class="outline-text-2" id="text-orgf020aad">
 <p>
 whatever the system or the tool is, the main takeaways every resource provides is to review the notes and write it for future self. Every capture is to review back and make the fleeting note into and rich information.
 This OBTF with org mode satisfies that needs given that user reviews the notes and visits back to digest it again.

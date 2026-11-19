@@ -15,8 +15,8 @@ I'm using <code>elfeed</code> as the rss reader for over 6 months. I even setup 
 Soon I jotted down only 3 candidate for reading feeds. Elfeed, Newsticker &amp; gnus. Later two are built-in. There might be others as well, like wanderlust, org based.., but when I tried ig it did not work.
 </p>
 <div id="outline-container-elfeed" class="outline-2">
-<h2 id="elfeed">Elfeed</h2>
-<div class="outline-text-2" id="text-org600603f">
+<h2 id="elfeed">Elfeed<a class="heading-anchor" href="#elfeed" aria-label="Link to this section">#</a></h2>
+<div class="outline-text-2" id="text-org0ffb78a">
 <p>
 As said earlier, it was my choice for about 6+ months, and it worked really well. Was reading and tagging feeds alot. Although with my rss usage, I realized I was only looking forward for the <b>planet emacs</b> feeds (haha; typical emacser).
 </p>
@@ -31,8 +31,8 @@ It is still my recommend way to go with the package that just works well. But be
 </div>
 </div>
 <div id="outline-container-newsticker" class="outline-2">
-<h2 id="newsticker">Newsticker</h2>
-<div class="outline-text-2" id="text-orgeb7523b">
+<h2 id="newsticker">Newsticker<a class="heading-anchor" href="#newsticker" aria-label="Link to this section">#</a></h2>
+<div class="outline-text-2" id="text-orgc6aa7af">
 <p>
 Firstly, liked the customization it has, and the tree-view how it appeals. But I hit the road blocks very soon. Tree-view was an issue, I need to read each post in single window and navigate to my leisure. I miss tags here. For everytime I launch, <code>newsticker-treeview</code> it fetches the articles from feed. That blocks my usage sometimes. Even tho I can keep <code>newsticker-retrieval-interval</code> to 0, it still fetches when launched with command for first time.
 </p>
@@ -47,8 +47,8 @@ Anyway, newsticker is also good, as it is built-in and does just work.
 </div>
 </div>
 <div id="outline-container-gnus" class="outline-2">
-<h2 id="gnus">gnus</h2>
-<div class="outline-text-2" id="text-orga33d6c8">
+<h2 id="gnus">gnus<a class="heading-anchor" href="#gnus" aria-label="Link to this section">#</a></h2>
+<div class="outline-text-2" id="text-orgeb3fadc">
 <ul class="org-ul">
 <li>I panicked when I came to gnus. Its my..idk.. n<sup>th</sup> time trying it out again.</li>
 </ul>

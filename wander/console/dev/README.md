@@ -12,36 +12,45 @@ Release Checklist
 
  3. Update copyright in [LICENCE.md][].
  4. Update [CHANGES.md][]
- 5. Update version number in this file (1 place).
+ 5. Update version number in this file (2 places).
  6. Update version number in [index.html][] (2 places).
  7. Run the following commands:
 
     ```sh
-    make checks
+    make chk
     git status
     git add -p
     ```
 
- 8. Write release page on personal website:
+ 8. Copy updated tool to website:
 
     ```sh
-    cd ~/git/susam.net/
+    make cp
+    ```
+
+ 9. Write release page on personal website:
+
+    ```sh
+    VER=0.6.0
+    cd ../susam.net/
     git checkout main
     em content/tree/code/news/wander/$VER.post.html
     ```
 
- 9. Commit and push personal website.  Test.
+10. Commit and push personal website.
 
-10. Run the following commands:
+11. Confirm <https://susam.net/wander/> works successfully.
+
+12. Run the following commands:
 
     ```sh
-    make checks
+    make chk
     git status
     git add -p
     ```
 
     ```sh
-    VER=0.5.0
+    VER=0.6.0
     git commit -m "Set version to $VER"
     git tag "$VER" -m "Wander $VER"
     make push
@@ -50,11 +59,11 @@ Release Checklist
     make dist
     ```
 
-11. Share on Mastodon.
+13. Share on Mastodon.
 
-12. Share on newsletter.
+14. Share on newsletter.
 
-13. Share on IRC.
+15. Share on IRC.
 
 [LICENCE.md]: ../LICENCE.md
 [CHANGES.md]: ../CHANGES.md

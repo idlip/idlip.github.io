@@ -109,11 +109,11 @@ But once you know Nix* (families), everything will make sense, and you would fee
 These are some of the learning resources, which are rich in content and nonetheless, will be confusing at some point. But engineers do have spared their time in writing these, taking actions, to reach some audience and solve some of the caveats of Nix. So dig through and learn new ;)
 </p>
 <div id="outline-container-nix-learning" class="outline-2">
-<h2 id="nix-learning">nix-learning</h2>
+<h2 id="nix-learning">nix-learning<a class="heading-anchor" href="#nix-learning" aria-label="Link to this section">#</a></h2>
 </div>
 
 <div id="outline-container-uncategorized" class="outline-2">
-<h2 id="uncategorized">Uncategorized</h2>
+<h2 id="uncategorized">Uncategorized<a class="heading-anchor" href="#uncategorized" aria-label="Link to this section">#</a></h2>
 <div class="outline-text-2" id="text-uncategorized">
 <ul class="org-ul">
 <li><a href="https://youtu.be/m4sv2M9jRLg">Nix Fundamentals</a> (Video)</li>
@@ -199,7 +199,7 @@ Peasy Nix Versions</a> - Nicolas Mattia</li>
 Nix derivation attributes of runtime dependencies</a> - Nicolas Mattia</li>
 </ul>
 
-<div class="html" id="orgb1d36e4">
+<div class="html" id="org0be709d">
 <p>
 &lt;!&ndash; TODO: add more from their website &ndash;&gt;
 </p>
@@ -217,7 +217,7 @@ Example</a> - Susan Potter</li>
 Nix lambda function named arguments</a> - Susan Potter</li>
 </ul>
 
-<div class="html" id="org5202244">
+<div class="html" id="orgc136e8e">
 <p>
 &lt;!&ndash; TODO: add Tweag Nix flakes &ndash;&gt;
 </p>
@@ -226,7 +226,7 @@ Nix lambda function named arguments</a> - Susan Potter</li>
 </div>
 </div>
 <div id="outline-container-overview" class="outline-2">
-<h2 id="overview">Overview</h2>
+<h2 id="overview">Overview<a class="heading-anchor" href="#overview" aria-label="Link to this section">#</a></h2>
 <div class="outline-text-2" id="text-overview">
 <ul class="org-ul">
 <li><a href="https://web.archive.org/web/20210123223258/https://ebzzry.io/en/nix/">A
@@ -235,7 +235,7 @@ Gentle Introduction to the Nix Family</a></li>
 </div>
 </div>
 <div id="outline-container-nix-the-language" class="outline-2">
-<h2 id="nix-the-language">Nix the language</h2>
+<h2 id="nix-the-language">Nix the language<a class="heading-anchor" href="#nix-the-language" aria-label="Link to this section">#</a></h2>
 <div class="outline-text-2" id="text-nix-the-language">
 <ul class="org-ul">
 <li><a href="https://nixcloud.io/tour">A tour of Nix</a> - an introduction to the
@@ -244,7 +244,7 @@ Nix Programming Language</li>
 </div>
 </div>
 <div id="outline-container-nix-shell" class="outline-2">
-<h2 id="nix-shell">Nix Shell</h2>
+<h2 id="nix-shell">Nix Shell<a class="heading-anchor" href="#nix-shell" aria-label="Link to this section">#</a></h2>
 <div class="outline-text-2" id="text-nix-shell">
 <ul class="org-ul">
 <li><a href="https://ghedam.at/15978/an-introduction-to-nix-shell">An
@@ -255,7 +255,7 @@ your nix-shell</a> - Farid Zakaria</li>
 </div>
 </div>
 <div id="outline-container-nix-flakes" class="outline-2">
-<h2 id="nix-flakes">Nix Flakes</h2>
+<h2 id="nix-flakes">Nix Flakes<a class="heading-anchor" href="#nix-flakes" aria-label="Link to this section">#</a></h2>
 <div class="outline-text-2" id="text-nix-flakes">
 <ul class="org-ul">
 <li><a href="https://blog.ysndr.de/posts/internals/2021-01-01-flake-ification/">Building
@@ -266,7 +266,7 @@ Chevalier</li>
 </div>
 </div>
 <div id="outline-container-experience" class="outline-2">
-<h2 id="experience">Experience</h2>
+<h2 id="experience">Experience<a class="heading-anchor" href="#experience" aria-label="Link to this section">#</a></h2>
 <div class="outline-text-2" id="text-experience">
 <ul class="org-ul">
 <li><a href="https://catgirl.ai/log/nixos-experience/">Eight Months of NixOS</a> -
@@ -278,12 +278,12 @@ Falco Peijnenburg, Fabian Thorand, and Robert Kreuzer</li>
 </div>
 </div>
 <div id="outline-container-language-specific" class="outline-2">
-<h2 id="language-specific">Language Specific</h2>
+<h2 id="language-specific">Language Specific<a class="heading-anchor" href="#language-specific" aria-label="Link to this section">#</a></h2>
 <div class="outline-text-2" id="text-language-specific">
 </div>
 </div>
 <div id="outline-container-java" class="outline-2">
-<h2 id="java">Java</h2>
+<h2 id="java">Java<a class="heading-anchor" href="#java" aria-label="Link to this section">#</a></h2>
 <div class="outline-text-2" id="text-java">
 <ul class="org-ul">
 <li><a href="https://fzakaria.com/2020/07/20/packaging-a-maven-application-with-nix.html">Packaging
@@ -292,7 +292,7 @@ a Maven application with Nix</a></li>
 </div>
 </div>
 <div id="outline-container-elixir" class="outline-2">
-<h2 id="elixir">Elixir</h2>
+<h2 id="elixir">Elixir<a class="heading-anchor" href="#elixir" aria-label="Link to this section">#</a></h2>
 <div class="outline-text-2" id="text-elixir">
 <ul class="org-ul">
 <li><a href="https://ejpcmac.net/blog/using-nix-in-elixir-projects/">Using Nix in
@@ -301,7 +301,7 @@ Elixir projects</a> - Jean-Philippe</li>
 </div>
 </div>
 <div id="outline-container-c" class="outline-2">
-<h2 id="c">C++</h2>
+<h2 id="c">C++<a class="heading-anchor" href="#c" aria-label="Link to this section">#</a></h2>
 <div class="outline-text-2" id="text-c">
 <ul class="org-ul">
 <li><a href="https://blog.galowicz.de/2019/04/17/tutorial_nix_cpp_setup/">Setting
@@ -310,7 +310,7 @@ up a C++ project environment with nix</a> - Jacek Galowicz</li>
 </div>
 </div>
 <div id="outline-container-rust" class="outline-2">
-<h2 id="rust">Rust</h2>
+<h2 id="rust">Rust<a class="heading-anchor" href="#rust" aria-label="Link to this section">#</a></h2>
 <div class="outline-text-2" id="text-rust">
 <ul class="org-ul">
 <li>Managing Rust Dependencies with Nix - James Kay
@@ -324,7 +324,7 @@ up a C++ project environment with nix</a> - Jacek Galowicz</li>
 </div>
 </div>
 <div id="outline-container-series" class="outline-2">
-<h2 id="series">Series</h2>
+<h2 id="series">Series<a class="heading-anchor" href="#series" aria-label="Link to this section">#</a></h2>
 <div class="outline-text-2" id="text-series">
 <ul class="org-ul">
 <li>Nix by Example - James Fisher
@@ -406,8 +406,8 @@ Note: This is very outdated from when it was written. Please check <a href="http
 
 <hr />
 <div id="outline-container-utilities-that-are-best" class="outline-2">
-<h2 id="utilities-that-are-best">Utilities that are Best! 🌟</h2>
-<div class="outline-text-2" id="text-org6b7dfaf">
+<h2 id="utilities-that-are-best">Utilities that are Best! 🌟<a class="heading-anchor" href="#utilities-that-are-best" aria-label="Link to this section">#</a></h2>
+<div class="outline-text-2" id="text-orgdab8b82">
 <hr />
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
@@ -548,8 +548,8 @@ My reason to switch over to Linux was simple as other had :
 My linux journey was from Linux Mint &gt; EndeavourOS &gt; Arch Linux &gt; and now NixOS.
 </p>
 <div id="outline-container-the-embark" class="outline-2">
-<h2 id="the-embark">The Embark</h2>
-<div class="outline-text-2" id="text-org21df24c">
+<h2 id="the-embark">The Embark<a class="heading-anchor" href="#the-embark" aria-label="Link to this section">#</a></h2>
+<div class="outline-text-2" id="text-org95e1ace">
 <p>
 I started to explore some YouTube video on Linux (as a normie at that time), soon I got familiar with good explanation, thankfully CTT had made an Linux Mint playlist and it helped to installing the first and the best <b>Beginner Distro</b>, the <b>Linux Mint</b>.
 </p>

@@ -1,18 +1,24 @@
 Changelog
 =========
 
-0.6.0 (UNRELEASED)
+0.6.0 (2026-05-08)
 ------------------
 
 #### Changed
 
 - In the console crawler dialog, give expanded link details a slightly
   darker background.
+- Make the **About** dialog concise.
+- Include link to the licence in the **About** dialog.
 
 #### Fixed
 
 - Fix issue that prevented **Console** dialog from opening when either
   `consoles` or `pages` property was missing from `wander.js`.
+
+#### Removed
+
+- Remove referral query parameter (`via`).
 
 
 0.5.0 (2026-04-19)

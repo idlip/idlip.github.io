@@ -1,3 +1,5 @@
+NAME = wander
+
 # Linting
 # -------
 
@@ -46,14 +48,15 @@ code-injection-console:
 # Susam's Personal Make Targets
 # -----------------------------
 
-push:
-	git remote remove cb || :
-	git remote remove gh || :
-	git remote add gh ssh://git@github.com/susam/wander.git
-	git remote add cb ssh://git@codeberg.org/susam/wander.git
-	git remote add origin $$(git remote get-url cb) || :
-	git push cb main
-	git push gh main
+cc:
+	git remote remove cc || :
+	git remote add cc git@codeberg.org:susam/$(NAME).git
+	git remote set-url cc --add git@github.com:susam/$(NAME).git
+	git remote remove origin || :
+	git remote add origin "$$(git remote get-url cc)"
+	git remote -v
+	git push -u origin main
+	git push cc main
 
 dist:
 	git checkout main || :
@@ -62,8 +65,7 @@ dist:
 	git rm -rf *.md Makefile .gitignore dev/
 	VER=$$(grep VERSION index.html | head -n 1 | cut -d "'" -f2); \
 	git commit -m "Create distributable bundle for Wander Console $$VER"
-	git push -f cb wander
-	git push -f gh wander
+	git push -f cc wander
 	git checkout main
 	git ls-tree -rl wander
 

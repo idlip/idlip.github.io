@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: nixos</title><subtitle>Posts tagged nixos on Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/rss.xml" /><id>https://idlip.in/</id><updated>2026-09-30T00:00:00Z</updated><author><name>Dilip | Zororg</name><email>hi@idlip.in</email></author><generator uri="https://gohugo.io/">Hugo</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>NixOS and its Madness</title><link rel="alternate" type="text/html" href="https://idlip.in/log/nixos-madness/" /><id>https://idlip.in/log/nixos-madness/</id><published>2024-02-04T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="nixos" label="nixos" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<div id="outline-container-need-to-update-wip" class="outline-2">
-<h2 id="need-to-update-wip">Need to Update. WIP</h2>
-<div class="outline-text-2" id="text-org38d0e9b">
+<h2 id="need-to-update-wip">Need to Update. WIP<a class="heading-anchor" href="#need-to-update-wip" aria-label="Link to this section">#</a></h2>
+<div class="outline-text-2" id="text-org9d4a84a">
 <p>
 Too much going on, need some time to wrap up.
 </p>
@@ -95,11 +95,11 @@ But once you know Nix* (families), everything will make sense, and you would fee
 These are some of the learning resources, which are rich in content and nonetheless, will be confusing at some point. But engineers do have spared their time in writing these, taking actions, to reach some audience and solve some of the caveats of Nix. So dig through and learn new ;)
 </p>
 <div id="outline-container-nix-learning" class="outline-2">
-<h2 id="nix-learning">nix-learning</h2>
+<h2 id="nix-learning">nix-learning<a class="heading-anchor" href="#nix-learning" aria-label="Link to this section">#</a></h2>
 </div>
 
 <div id="outline-container-uncategorized" class="outline-2">
-<h2 id="uncategorized">Uncategorized</h2>
+<h2 id="uncategorized">Uncategorized<a class="heading-anchor" href="#uncategorized" aria-label="Link to this section">#</a></h2>
 <div class="outline-text-2" id="text-uncategorized">
 <ul class="org-ul">
 <li><a href="https://youtu.be/m4sv2M9jRLg">Nix Fundamentals</a> (Video)</li>
@@ -185,7 +185,7 @@ Peasy Nix Versions</a> - Nicolas Mattia</li>
 Nix derivation attributes of runtime dependencies</a> - Nicolas Mattia</li>
 </ul>
 
-<div class="html" id="orgb1d36e4">
+<div class="html" id="org0be709d">
 <p>
 &lt;!&ndash; TODO: add more from their website &ndash;&gt;
 </p>
@@ -203,7 +203,7 @@ Example</a> - Susan Potter</li>
 Nix lambda function named arguments</a> - Susan Potter</li>
 </ul>
 
-<div class="html" id="org5202244">
+<div class="html" id="orgc136e8e">
 <p>
 &lt;!&ndash; TODO: add Tweag Nix flakes &ndash;&gt;
 </p>
@@ -212,7 +212,7 @@ Nix lambda function named arguments</a> - Susan Potter</li>
 </div>
 </div>
 <div id="outline-container-overview" class="outline-2">
-<h2 id="overview">Overview</h2>
+<h2 id="overview">Overview<a class="heading-anchor" href="#overview" aria-label="Link to this section">#</a></h2>
 <div class="outline-text-2" id="text-overview">
 <ul class="org-ul">
 <li><a href="https://web.archive.org/web/20210123223258/https://ebzzry.io/en/nix/">A
@@ -221,7 +221,7 @@ Gentle Introduction to the Nix Family</a></li>
 </div>
 </div>
 <div id="outline-container-nix-the-language" class="outline-2">
-<h2 id="nix-the-language">Nix the language</h2>
+<h2 id="nix-the-language">Nix the language<a class="heading-anchor" href="#nix-the-language" aria-label="Link to this section">#</a></h2>
 <div class="outline-text-2" id="text-nix-the-language">
 <ul class="org-ul">
 <li><a href="https://nixcloud.io/tour">A tour of Nix</a> - an introduction to the
@@ -230,7 +230,7 @@ Nix Programming Language</li>
 </div>
 </div>
 <div id="outline-container-nix-shell" class="outline-2">
-<h2 id="nix-shell">Nix Shell</h2>
+<h2 id="nix-shell">Nix Shell<a class="heading-anchor" href="#nix-shell" aria-label="Link to this section">#</a></h2>
 <div class="outline-text-2" id="text-nix-shell">
 <ul class="org-ul">
 <li><a href="https://ghedam.at/15978/an-introduction-to-nix-shell">An
@@ -241,7 +241,7 @@ your nix-shell</a> - Farid Zakaria</li>
 </div>
 </div>
 <div id="outline-container-nix-flakes" class="outline-2">
-<h2 id="nix-flakes">Nix Flakes</h2>
+<h2 id="nix-flakes">Nix Flakes<a class="heading-anchor" href="#nix-flakes" aria-label="Link to this section">#</a></h2>
 <div class="outline-text-2" id="text-nix-flakes">
 <ul class="org-ul">
 <li><a href="https://blog.ysndr.de/posts/internals/2021-01-01-flake-ification/">Building
@@ -252,7 +252,7 @@ Chevalier</li>
 </div>
 </div>
 <div id="outline-container-experience" class="outline-2">
-<h2 id="experience">Experience</h2>
+<h2 id="experience">Experience<a class="heading-anchor" href="#experience" aria-label="Link to this section">#</a></h2>
 <div class="outline-text-2" id="text-experience">
 <ul class="org-ul">
 <li><a href="https://catgirl.ai/log/nixos-experience/">Eight Months of NixOS</a> -
@@ -264,12 +264,12 @@ Falco Peijnenburg, Fabian Thorand, and Robert Kreuzer</li>
 </div>
 </div>
 <div id="outline-container-language-specific" class="outline-2">
-<h2 id="language-specific">Language Specific</h2>
+<h2 id="language-specific">Language Specific<a class="heading-anchor" href="#language-specific" aria-label="Link to this section">#</a></h2>
 <div class="outline-text-2" id="text-language-specific">
 </div>
 </div>
 <div id="outline-container-java" class="outline-2">
-<h2 id="java">Java</h2>
+<h2 id="java">Java<a class="heading-anchor" href="#java" aria-label="Link to this section">#</a></h2>
 <div class="outline-text-2" id="text-java">
 <ul class="org-ul">
 <li><a href="https://fzakaria.com/2020/07/20/packaging-a-maven-application-with-nix.html">Packaging
@@ -278,7 +278,7 @@ a Maven application with Nix</a></li>
 </div>
 </div>
 <div id="outline-container-elixir" class="outline-2">
-<h2 id="elixir">Elixir</h2>
+<h2 id="elixir">Elixir<a class="heading-anchor" href="#elixir" aria-label="Link to this section">#</a></h2>
 <div class="outline-text-2" id="text-elixir">
 <ul class="org-ul">
 <li><a href="https://ejpcmac.net/blog/using-nix-in-elixir-projects/">Using Nix in
@@ -287,7 +287,7 @@ Elixir projects</a> - Jean-Philippe</li>
 </div>
 </div>
 <div id="outline-container-c" class="outline-2">
-<h2 id="c">C++</h2>
+<h2 id="c">C++<a class="heading-anchor" href="#c" aria-label="Link to this section">#</a></h2>
 <div class="outline-text-2" id="text-c">
 <ul class="org-ul">
 <li><a href="https://blog.galowicz.de/2019/04/17/tutorial_nix_cpp_setup/">Setting
@@ -296,7 +296,7 @@ up a C++ project environment with nix</a> - Jacek Galowicz</li>
 </div>
 </div>
 <div id="outline-container-rust" class="outline-2">
-<h2 id="rust">Rust</h2>
+<h2 id="rust">Rust<a class="heading-anchor" href="#rust" aria-label="Link to this section">#</a></h2>
 <div class="outline-text-2" id="text-rust">
 <ul class="org-ul">
 <li>Managing Rust Dependencies with Nix - James Kay
@@ -310,7 +310,7 @@ up a C++ project environment with nix</a> - Jacek Galowicz</li>
 </div>
 </div>
 <div id="outline-container-series" class="outline-2">
-<h2 id="series">Series</h2>
+<h2 id="series">Series<a class="heading-anchor" href="#series" aria-label="Link to this section">#</a></h2>
 <div class="outline-text-2" id="text-series">
 <ul class="org-ul">
 <li>Nix by Example - James Fisher
@@ -392,8 +392,8 @@ With that sorted, I hope learning becomes good ;)
 Introduction part, you would better have read it on official nixos site (<a href="https://nixos.org">https://nixos.org</a>)
 </p>
 <div id="outline-container-should-you-try-nixos" class="outline-2">
-<h2 id="should-you-try-nixos">"Should you try NixOS?" ❄️</h2>
-<div class="outline-text-2" id="text-org684b222">
+<h2 id="should-you-try-nixos">"Should you try NixOS?" ❄️<a class="heading-anchor" href="#should-you-try-nixos" aria-label="Link to this section">#</a></h2>
+<div class="outline-text-2" id="text-org1327a1f">
 <p>
 Here's an answer from a non-programmer, who just browses and watches media.
 Just don't, if you are looking for small benefit. <b>Don't!</b>
@@ -417,8 +417,8 @@ But, if you have decided, go with it. According to me (non-programmer), these po
 </div>
 </div>
 <div id="outline-container-how-i-manage-my-system" class="outline-2">
-<h2 id="how-i-manage-my-system">How I manage my system 🌲</h2>
-<div class="outline-text-2" id="text-orgc76262e">
+<h2 id="how-i-manage-my-system">How I manage my system 🌲<a class="heading-anchor" href="#how-i-manage-my-system" aria-label="Link to this section">#</a></h2>
+<div class="outline-text-2" id="text-org42a8ffa">
 <p>
 I manage my whole system with single org file. Its easy and pretty handy. You can read that file here <b>↬</b> <a href="https://github.com/idlip/d-nix/blob/onepiece/d-setup.org">d-setup.org</a> , its both self documenting and has all source code blocks.
 </p>
@@ -435,8 +435,8 @@ Also, I have made files to be <b>symlink</b>, so i can edit them without requiri
 </div>
 </div>
 <div id="outline-container-credits" class="outline-2">
-<h2 id="credits">Credits 🎖️</h2>
-<div class="outline-text-2" id="text-orgb642975">
+<h2 id="credits">Credits 🎖️<a class="heading-anchor" href="#credits" aria-label="Link to this section">#</a></h2>
+<div class="outline-text-2" id="text-org989edd0">
 <p>
 These configs were the inspiration and helped to build this way.
 </p>
