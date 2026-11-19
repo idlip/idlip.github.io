@@ -1,760 +1,391 @@
-/* ---- keyboard.js ---- */
+/* ---- site.js ---- */
 /**
- * Command palette triggers + post-page mouse actions for Emacs Blog Theme.
+ * Small progressive enhancements. The page reads fine without any of this:
+ * controls that need JS render with the hidden attribute and data-requires-js,
+ * and are revealed here.
  */
-
 (function () {
   "use strict";
 
-  let msgTimeout = null;
+  var root = document.documentElement;
 
-  // DOM
-  const articleList = document.getElementById("article-list");
-  const echoMessage = document.getElementById("echo-message");
+  var BASE_KEYS = [
+    "base00",
+    "base01",
+    "base02",
+    "base03",
+    "base04",
+    "base05",
+    "base06",
+    "base07",
+    "base08",
+    "base09",
+    "base0A",
+    "base0B",
+    "base0C",
+    "base0D",
+    "base0E",
+    "base0F",
+  ];
 
-  // Are we on a single post page (no article list)?
-  const isPostPage = !articleList;
+  var FONT_MODES = [
+    { value: "mixed", label: "Mixed" },
+    { value: "serif", label: "Serif" },
+    { value: "sans", label: "Sans" },
+    { value: "mono", label: "Mono" },
+    { value: "default", label: "Browser default" },
+  ];
 
-  // ── Echo area ──────────────────────────────────────────────────────────────
+  var WIDTHS = [
+    { value: "52rem", label: "Normal" },
+    { value: "72rem", label: "Wide" },
+    { value: "100%", label: "Full" },
+    { value: "40rem", label: "Narrow" },
+  ];
 
-  function showMessage(msg) {
-    if (!echoMessage) return;
-    clearTimeout(msgTimeout);
-    echoMessage.textContent = msg;
-    echoMessage.classList.add("flash");
-    msgTimeout = setTimeout(() => {
-      echoMessage.classList.remove("flash");
-      updateEchoHint();
+  // ── Scheme, font, width, dark/light (the pre-paint script in <head> already applied the stored choices) ──
+
+  // Show MESSAGE in the popover toast for a moment; it has role=status, so screen readers hear it too.
+  var toastTimer = null;
+  function announce(message) {
+    var toast = document.querySelector(".toast");
+    if (!toast) return;
+    if (toast.showPopover && !toast.matches(":popover-open")) toast.showPopover();
+    toast.textContent = message;
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () {
+      if (toast.hidePopover && toast.matches(":popover-open")) toast.hidePopover();
     }, 2500);
   }
 
-  function updateEchoHint() {
-    if (!echoMessage) return;
-    echoMessage.textContent = "? help";
+  function applyScheme(name, label) {
+    BASE_KEYS.forEach(function (key) {
+      root.style.removeProperty("--" + key);
+    });
+    localStorage.removeItem("emacs-custom-palette");
+    if (name) root.setAttribute("data-scheme", name);
+    else root.removeAttribute("data-scheme");
+    localStorage.setItem("emacs-scheme-fixed", name);
+    applyVariant();
+    if (label) announce("Scheme: " + label);
   }
 
-  // ── Command palette triggers ─────────────────────────────────────────────
+  // The pre-paint script defines the variant rule: stored choice, else the system, limited to what the scheme has.
+  function applyVariant() {
+    if (window.__applyVariant) window.__applyVariant();
+    saveWanderColors();
+  }
 
-  function handleKeydown(e) {
-    // Ignore when typing
-    if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
+  function next(list, current) {
+    var index = list.findIndex(function (item) {
+      return item.value === current;
+    });
+    return list[(index + 1) % list.length];
+  }
 
-    var ctrl = e.ctrlKey;
-    var meta = e.metaKey;
-    var code = e.code;
+  function applyFont(mode) {
+    root.setAttribute("data-font", mode);
+    localStorage.setItem("emacs-font-mode", mode);
+    var entry = FONT_MODES.find(function (item) {
+      return item.value === mode;
+    });
+    labelButton("cycle-font", "Font mode: " + (entry ? entry.label : mode));
+  }
 
+  function cycleFont() {
+    applyFont(next(FONT_MODES, root.getAttribute("data-font") || "mixed").value);
+  }
+
+  function cycleWidth() {
+    var current = root.style.getPropertyValue("--measure") || WIDTHS[0].value;
+    var width = next(WIDTHS, current);
+    root.style.setProperty("--measure", width.value);
+    localStorage.setItem("emacs-width", width.value);
+    labelButton("cycle-width", "Content width: " + width.label);
+  }
+
+  // A scheme without the wanted variant would not change; then put the old choice back and offer the scheme list.
+  function toggleTheme() {
+    var wanted = root.getAttribute("data-theme") === "light" ? "dark" : "light";
+    var before = getComputedStyle(root).getPropertyValue("--base00");
+    var stored = localStorage.getItem("emacs-theme");
+    localStorage.setItem("emacs-theme", wanted);
+    applyVariant();
     if (
-      ((ctrl || meta) && (code === "KeyK" || code === "KeyS")) ||
-      (e.altKey && code === "KeyX")
+      root.getAttribute("data-theme") !== wanted ||
+      getComputedStyle(root).getPropertyValue("--base00") === before
     ) {
-      window.emacsBlog?.palette?.open();
-      e.preventDefault();
+      if (stored) localStorage.setItem("emacs-theme", stored);
+      else localStorage.removeItem("emacs-theme");
+      applyVariant();
+      announce("This scheme has no " + wanted + " variant. Pick another scheme.");
+      if (window.emacsBlog.palette) window.emacsBlog.palette.open("t ");
       return;
     }
+    labelButton("toggle-theme", "Dark or light: " + wanted);
+  }
 
-    if (e.key === "x" && !localStorage.getItem("emacs-keys-off")) {
-      window.emacsBlog?.palette?.open();
+  // ── Site title: a new random quote in its tooltip on every hover or focus ──
+
+  // Wraps a quote in its toast; any glyph or emoji works here.
+  var QUOTE_MARK = "\u{F075A}";
+
+  function initTitleQuotes() {
+    var title = document.querySelector(".site-title[data-quotes]");
+    if (!title) return;
+    var quotes = JSON.parse(title.dataset.quotes);
+    function pick() {
+      title.title = quotes[Math.floor(Math.random() * quotes.length)];
+    }
+    title.addEventListener("pointerenter", pick);
+    title.addEventListener("focus", pick);
+    // A click leaves the page, so the quote rides along and greets the reader on the next one.
+    title.addEventListener("click", function () {
+      if (!title.title) pick();
+      sessionStorage.setItem("emacs-title-quote", title.title);
+    });
+    var carried = sessionStorage.getItem("emacs-title-quote");
+    if (carried) {
+      sessionStorage.removeItem("emacs-title-quote");
+      announce(QUOTE_MARK + " " + carried + " " + QUOTE_MARK);
+    }
+  }
+
+  function labelButton(action, label) {
+    var button = document.querySelector('.toolbar [data-action="' + action + '"]');
+    if (button) {
+      button.setAttribute("aria-label", label);
+      button.title = label;
+    }
+    announce(label);
+  }
+
+  var ACTIONS = {
+    "open-palette": function () {
+      window.emacsBlog.palette && window.emacsBlog.palette.open();
+    },
+    "open-schemes": function () {
+      window.emacsBlog.palette && window.emacsBlog.palette.open("t ");
+    },
+    "cycle-font": cycleFont,
+    "cycle-width": cycleWidth,
+    "toggle-theme": toggleTheme,
+    "random-page": randomPage,
+    "toggle-keys": toggleKeys,
+    // Older names still used by buttons inside content pages.
+    "browse-schemes": function () {
+      ACTIONS["open-schemes"]();
+    },
+  };
+
+  // ── Keyboard: x, Ctrl/Cmd-K, Ctrl/Cmd-S, Alt-X open the palette (WCAG 2.1.4: x can be turned off) ──
+
+  function toggleKeys() {
+    if (localStorage.getItem("emacs-keys-off")) localStorage.removeItem("emacs-keys-off");
+    else localStorage.setItem("emacs-keys-off", "1");
+    announce(
+      localStorage.getItem("emacs-keys-off") ? "The x shortcut is off" : "The x shortcut is on",
+    );
+  }
+
+  function typing(target) {
+    return target.closest("input, textarea, select, [contenteditable]");
+  }
+
+  function handleKeydown(e) {
+    if (typing(e.target)) return;
+    var palette = window.emacsBlog.palette;
+    if (!palette) return;
+    if (
+      ((e.ctrlKey || e.metaKey) && (e.code === "KeyK" || e.code === "KeyS")) ||
+      (e.altKey && e.code === "KeyX")
+    ) {
+      palette.open();
+      e.preventDefault();
+    } else if (
+      e.key === "x" &&
+      !e.ctrlKey &&
+      !e.metaKey &&
+      !e.altKey &&
+      !localStorage.getItem("emacs-keys-off")
+    ) {
+      palette.open();
       e.preventDefault();
     }
   }
 
-  // ── Code copy buttons ────────────────────────────────────────────────────
-  // Chroma puts data-lang on <code>, not <pre> — the pre::before lang label
-  // (theme.css) reads it from <pre>, so it silently never fired. Copy it up
-  // while we're already walking every code block for the copy button.
-  function addCodeCopyButtons() {
-    document.querySelectorAll(".post-body pre").forEach(function (pre) {
-      var code = pre.querySelector("code");
-      if (!code) return;
-      var lang = code.getAttribute("data-lang");
-      if (lang) pre.setAttribute("data-lang", lang);
+  // ── The one list filter: an input[data-filter] hides rows ([data-filter-text]) inside its target ──
+  // Every query word must appear, in any order. A <section> with no visible rows hides too.
 
-      var btn = document.createElement("button");
-      btn.type = "button";
-      btn.className = "code-copy-btn";
-      btn.textContent = "Copy";
-      btn.setAttribute("aria-label", "Copy code to clipboard");
-      btn.addEventListener("click", function () {
-        navigator.clipboard
-          .writeText(code.textContent)
-          .then(function () {
-            btn.textContent = "Copied!";
-            btn.classList.add("copied");
-            clearTimeout(btn._copyReset);
-            btn._copyReset = setTimeout(function () {
-              btn.textContent = "Copy";
-              btn.classList.remove("copied");
-            }, 1500);
-          })
-          .catch(function () {});
+  function initFilter(input) {
+    var box = document.getElementById(input.dataset.filter);
+    if (!box) return;
+    var rows = box.querySelectorAll("[data-filter-text]");
+    var status = input.parentElement.querySelector("output");
+
+    function run() {
+      var words = input.value.toLowerCase().split(/\s+/).filter(Boolean);
+      var shown = 0;
+      rows.forEach(function (row) {
+        var text = row.dataset.filterText;
+        row.hidden = !words.every(function (word) {
+          return text.indexOf(word) !== -1;
+        });
+        if (!row.hidden) shown++;
       });
-      pre.appendChild(btn);
-    });
-  }
-
-  // ── Heading anchor links ─────────────────────────────────────────────────
-  function addHeadingAnchors() {
-    document
-      .querySelectorAll(".post-body :is(h2, h3, h4, h5, h6)[id]")
-      .forEach(function (h) {
-        var a = document.createElement("a");
-        a.className = "heading-anchor";
-        a.href = "#" + h.id;
-        while (h.firstChild) a.appendChild(h.firstChild);
-        h.appendChild(a);
+      box.querySelectorAll("section").forEach(function (section) {
+        section.hidden = !section.querySelector("[data-filter-text]:not([hidden])");
       });
-  }
-
-  // ── Generic dialog opener ─────────────────────────────────────────────────
-  // Both the image lightbox and the Pose entry dialog are the same shape: a
-  // click on some trigger element fills in a shared <dialog>'s content, then
-  // shows it; a backdrop click closes it. This is the one place that wiring
-  // lives; each caller only supplies its own "how do I fill this in" step.
-  // POPULATE returning false for a given trigger/event skips opening it.
-  function initDialog(dlg, triggers, populate) {
-    if (!dlg || !triggers.length) return;
-    triggers.forEach(function (trigger) {
-      trigger.addEventListener("click", function (e) {
-        if (populate(trigger, e) === false) return;
-        dlg.showModal();
-      });
-    });
-    dlg.addEventListener("click", function (e) {
-      if (e.target === dlg) dlg.close();
-    });
-  }
-
-  // ── Image lightbox ───────────────────────────────────────────────────────
-  // Click a post image to view it full-size. Esc/backdrop-click close it
-  // natively, via initDialog above.
-  function initImageLightbox() {
-    var dlg = document.getElementById("image-lightbox");
-    var lbImg = document.getElementById("lightbox-img");
-    var lbCaption = document.getElementById("lightbox-caption");
-    if (!dlg || !lbImg) return;
-    initDialog(dlg, document.querySelectorAll(".post-body img"), function (img) {
-      lbImg.src = img.currentSrc || img.src;
-      lbImg.alt = img.alt || "";
-      // .figure's only text node is its caption <p>, the <img> contributes none.
-      var figure = img.closest(".figure");
-      if (lbCaption) lbCaption.textContent = figure ? figure.textContent.trim() : "";
-    });
-  }
-
-  // ── Pose cards: expand-to-dialog ──────────────────────────────────────────
-  // Each card's full content lives in window.__poseEntries (site.el, keyed
-  // by the card's own heading id). Clicking a card shows it in the same
-  // dialog the image lightbox uses (theme.css groups the two by selector).
-  // Opening a link that already points at an entry's id (#2026-09-17, from
-  // either share icon, or pasted straight into a browser) opens its dialog
-  // too. The dialog's own title gets a share icon as well, kept in sync with
-  // whichever entry is currently open, so a direct-linked dialog is still
-  // shareable even without going back to its card.
-  function initPoseCards() {
-    var entries = window.__poseEntries || {};
-    var dlg = document.getElementById("pose-dialog");
-    var dlgTitle = document.getElementById("pose-dialog-title");
-    var dlgContent = document.getElementById("pose-dialog-content");
-    if (!dlg || !dlgTitle || !dlgContent) return;
-
-    var dlgTitleLink = document.createElement("a");
-    dlgTitleLink.className = "heading-anchor";
-    dlgTitle.appendChild(dlgTitleLink);
-    var dlgTitleText = document.createElement("span");
-    dlgTitleLink.appendChild(dlgTitleText);
-
-    var cards = Array.prototype.slice.call(document.querySelectorAll(".pose-card"));
-    var newerButton = document.getElementById("pose-dialog-newer");
-    var olderButton = document.getElementById("pose-dialog-older");
-    var currentId = null;
-
-    // Cards the search currently shows, plus the open entry even if the
-    // search has since hidden it, so its own position stays findable.
-    function navigableCards() {
-      return cards.filter(function (card) {
-        return card.style.display !== "none" || card.querySelector("h2[id]").id === currentId;
-      });
+      if (status) status.textContent = words.length ? shown + " of " + rows.length : "";
     }
 
-    // The list runs newest first, so "newer" is the previous card.
-    function neighbour(offset) {
-      var list = navigableCards();
-      var index = list.findIndex(function (card) {
-        return card.querySelector("h2[id]").id === currentId;
-      });
-      var target = list[index + offset];
-      return index === -1 || !target ? null : target.querySelector("h2[id]").id;
-    }
-
-    function show(id) {
-      var entry = entries[id];
-      if (!entry) return false;
-      currentId = id;
-      dlgTitleText.textContent = entry.title;
-      dlgContent.innerHTML = entry.html;
-      dlgTitleLink.href = "#" + id;
-      dlg.scrollTop = 0;
-      if (newerButton) newerButton.disabled = !neighbour(-1);
-      if (olderButton) olderButton.disabled = !neighbour(1);
-      return true;
-    }
-
-    // replaceState, not location.hash, so stepping through entries leaves
-    // one history entry and does not re-trigger hashchange.
-    function step(offset) {
-      var id = neighbour(offset);
-      if (!id || !show(id)) return;
-      history.replaceState(null, "", "#" + id);
-    }
-    if (newerButton) newerButton.addEventListener("click", function () { step(-1); });
-    if (olderButton) olderButton.addEventListener("click", function () { step(1); });
-    dlg.addEventListener("keydown", function (e) {
-      if (e.key === "ArrowLeft") step(-1);
-      if (e.key === "ArrowRight") step(1);
-    });
-
-    // The title itself is a real <button> (not the whole <li>), so this is
-    // keyboard-reachable and activatable (Tab, Enter/Space) for free, and
-    // doesn't nest one interactive control (a card "button") inside another
-    // (the dialog's own title link) the way a whole-card click handler would
-    // have.
-    var triggers = document.querySelectorAll(".pose-card-trigger");
-    initDialog(dlg, triggers, function (btn) {
-      var h2 = btn.closest("h2[id]");
-      return h2 && show(h2.id);
-    });
-
-    function openFromHash() {
-      var id = location.hash.slice(1);
-      if (id && show(id) && !dlg.open) dlg.showModal();
-    }
-    window.addEventListener("hashchange", openFromHash);
-    openFromHash();
-
-    initPoseSearch(cards);
-  }
-
-  // Search over each card's whole entry text (its data-search), not just the
-  // teaser on show. Every word must match, in any order, like topic-list.
-  function initPoseSearch(cards) {
-    var input = document.getElementById("topic-search");
-    var count = document.getElementById("topic-count");
-    if (!input) return;
-
-    function run(raw) {
-      var tokens = raw.toLowerCase().trim().split(/\s+/).filter(Boolean);
-      var matches = 0;
-      cards.forEach(function (card) {
-        var haystack = card.dataset.search || "";
-        var matched = tokens.every(function (token) { return haystack.indexOf(token) !== -1; });
-        card.style.display = matched ? "" : "none";
-        if (matched) matches++;
-      });
-      if (count) {
-        count.textContent = tokens.length
-          ? matches + " match" + (matches !== 1 ? "es" : "")
-          : cards.length + " entries";
+    input.addEventListener("input", run);
+    input.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        input.value = "";
+        run();
+        input.blur();
       }
-    }
-
-    input.addEventListener("input", function () { run(input.value); });
+    });
     document.addEventListener("keydown", function (e) {
-      var tag = document.activeElement.tagName;
-      if (e.key === "/" && tag !== "INPUT" && tag !== "TEXTAREA" && !document.querySelector("dialog[open]")) {
+      if (e.key === "/" && !typing(e.target) && !document.querySelector("dialog[open]")) {
         e.preventDefault();
         input.focus();
         input.select();
       }
-      if (e.key === "Escape" && document.activeElement === input) {
-        input.value = "";
-        run("");
-        input.blur();
-      }
     });
   }
 
-  // ── Init ───────────────────────────────────────────────────────────────────
+  // ── List views: the radios work through CSS :has(); this only remembers the choice ──
+
+  function initViews() {
+    var saved = localStorage.getItem("emacs-list-view");
+    document.querySelectorAll('input[name="list-view"]').forEach(function (radio) {
+      if (radio.value === saved) radio.checked = true;
+      radio.addEventListener("change", function () {
+        localStorage.setItem("emacs-list-view", radio.value);
+        announce("View: " + radio.parentElement.textContent.trim());
+      });
+    });
+  }
+
+  // ── Comment box: mail the text with the subject already filled in ──
+
+  function initComment(form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var body = form.elements.body.value;
+      location.href =
+        "mailto:" +
+        form.dataset.email +
+        "?subject=" +
+        encodeURIComponent(form.dataset.subject) +
+        (body ? "&body=" + encodeURIComponent(body) : "");
+    });
+  }
+
+  // ── Wander console: same origin, so it reads these saved colours (see site--wander-colors-script) ──
+
+  var WANDER_COLORS = {
+    "--wt-bg": "--background",
+    "--wt-bg-dim": "--surface",
+    "--wt-bg-alt": "--base02",
+    "--wt-fg": "--text",
+    "--wt-fg-dim": "--text-faint",
+    "--wt-border": "--border",
+    "--wt-error": "--red",
+  };
+
+  function saveWanderColors() {
+    var style = getComputedStyle(root);
+    var colors = {};
+    Object.keys(WANDER_COLORS).forEach(function (name) {
+      colors[name] = style.getPropertyValue(WANDER_COLORS[name]).trim();
+    });
+    localStorage.setItem("emacs-wander-colors", JSON.stringify(colors));
+    return colors;
+  }
+
+  function shareColors(iframe) {
+    try {
+      var colors = saveWanderColors();
+      var target = iframe.contentDocument.documentElement;
+      Object.keys(colors).forEach(function (name) {
+        target.style.setProperty(name, colors[name]);
+      });
+    } catch (e) {}
+  }
+
+  // ── Random: jump to any page or post from the palette data ──
+
+  function randomPage() {
+    var pages = (window.__posts || []).filter(function (page) {
+      return page.url !== location.pathname;
+    });
+    if (pages.length) location.href = pages[Math.floor(Math.random() * pages.length)].url;
+  }
+
+  // ── Dialog links: a[data-dialog] opens that dialog; its iframe loads on first open ──
+
+  function initDialogLink(link) {
+    var dialog = document.getElementById(link.dataset.dialog);
+    if (!dialog) return;
+    var iframe = dialog.querySelector("iframe[data-src]");
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      if (iframe && !iframe.getAttribute("src")) iframe.src = iframe.dataset.src;
+      else if (iframe) shareColors(iframe);
+      dialog.showModal();
+    });
+    dialog.addEventListener("click", function (e) {
+      if (e.target === dialog) dialog.close();
+    });
+  }
+
+  // ── Pose: following a link to an entry opens its folded details ──
+
+  function openTargetDetails() {
+    var target =
+      location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    var details = target && target.closest("details");
+    if (details) details.open = true;
+  }
 
   function init() {
-    document.addEventListener("keydown", handleKeydown);
-    // Clicking the echo message opens shortcut help in palette
-    echoMessage?.addEventListener("click", function () {
-      window.emacsBlog?.palette?.open("? ");
+    document.querySelectorAll("[data-requires-js]").forEach(function (el) {
+      el.hidden = false;
     });
-
-    if (isPostPage) {
-      addCodeCopyButtons();
-      addHeadingAnchors();
-      initImageLightbox();
-    }
-    initPoseCards();
-
-    updateEchoHint();
+    document.querySelectorAll("[data-action]").forEach(function (button) {
+      var action = ACTIONS[button.dataset.action];
+      if (action) button.addEventListener("click", action);
+    });
+    document.addEventListener("keydown", handleKeydown);
+    document.querySelectorAll("input[data-filter]").forEach(initFilter);
+    document.querySelectorAll("form.comment").forEach(initComment);
+    document.querySelectorAll("a[data-dialog]").forEach(initDialogLink);
+    window.addEventListener("hashchange", openTargetDetails);
+    openTargetDetails();
+    initTitleQuotes();
+    initViews();
+    saveWanderColors();
   }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", init);
-  } else {
-    init();
-  }
-
-  // WCAG 2.1.4: let users turn the "x" shortcut off (persisted).
-  window.toggleKeys = function () {
-    var off = localStorage.getItem("emacs-keys-off");
-    if (off) {
-      localStorage.removeItem("emacs-keys-off");
-      showMessage("Keyboard shortcuts: on");
-    } else {
-      localStorage.setItem("emacs-keys-off", "1");
-      showMessage("Keyboard shortcuts: off");
-    }
-  };
 
   window.emacsBlog = window.emacsBlog || {};
-  window.emacsBlog.keyboard = { showMessage: showMessage };
-})();
-
-/* ---- menu.js ---- */
-/**
- * Menu Bar Interactions for Emacs Blog Theme
- */
-
-(function () {
-  "use strict";
-
-  // ── State ─────────────────────────────────────────────────────────────────
-  let previewScheme = null; // scheme being hovered (for live preview)
-
-  // ── DOM ───────────────────────────────────────────────────────────────────
-  const menuBar = document.querySelector(".menu-bar");
-  const menuItems = document.querySelectorAll(".menu-item");
-  const hamburger = document.querySelector(".menu-hamburger");
-  const backdrop = document.getElementById("menu-backdrop");
-  const schemePopupBtn = document.getElementById("scheme-popup-btn");
-  const schemePopup = document.getElementById("scheme-popup");
-  const schemePopupContainer = document.getElementById(
-    "scheme-popup-container",
-  );
-
-  // ── Theme ─────────────────────────────────────────────────────────────────
-
-  function toggleTheme() {
-    const root = document.documentElement;
-    const cur = root.getAttribute("data-theme") === "light" ? "light" : "dark";
-    const want = cur === "dark" ? "light" : "dark";
-    // Flip only if the current scheme actually defines the wanted variant.
-    // Tentatively switch and check whether the palette changed; if not — a
-    // dark-only preset (e.g. Everforest, Monokai) or a single-variant custom
-    // palette — revert and route to a search for schemes of the wanted mode,
-    // rather than showing an unmapped/broken theme. Self-maintaining: any scheme
-    // that later gains a real variant will just flip.
-    const before = getComputedStyle(root).getPropertyValue("--base00").trim();
-    root.setAttribute("data-theme", want);
-    const after = getComputedStyle(root).getPropertyValue("--base00").trim();
-    if (before === after) {
-      root.setAttribute("data-theme", cur);
-      showMsg("No " + want + " variant for this scheme — pick one");
-      window.emacsBlog?.palette?.open("t " + want);
-      return;
-    }
-    localStorage.setItem("emacs-theme", want);
-    // Name the scheme it switched to, e.g. "Dracula · Light", not just the mode.
-    var opt = document.querySelector(
-      '.scheme-option[data-scheme="' +
-        (root.getAttribute("data-scheme") || "") +
-        '"] span:last-child',
-    );
-    var name = opt ? opt.textContent.trim() : "Modus";
-    showMsg(name + " · " + (want === "dark" ? "Dark" : "Light"));
-  }
-
-  // ── Color Scheme ──────────────────────────────────────────────────────────
-
-  function applyScheme(name) {
-    // Clear any custom palette from palette.js "t " mode
-    window.emacsBlog?.palette?.clearCustomPalette?.();
-    const html = document.documentElement;
-    if (name) html.setAttribute("data-scheme", name);
-    else html.removeAttribute("data-scheme");
-    updateSchemeMarkers(name || "");
-  }
-
-  function updateSchemeMarkers(current) {
-    document.querySelectorAll(".scheme-option").forEach((opt) => {
-      opt.classList.toggle("active", (opt.dataset.scheme || "") === current);
-    });
-  }
-
-  // Scheme state sync. The scheme itself (pinned / custom / fresh random) is
-  // applied BEFORE paint by head.html's inline script, so we must NOT re-apply
-  // here — doing so caused a visible repaint on every page load. We only sync
-  // the menu's active-marker + pin label to whatever is already showing.
-  function initRandomScheme() {
-    const custom = localStorage.getItem("emacs-custom-palette") !== null;
-    const pinned = isPinned();
-    updateSchemeMarkers(
-      document.documentElement.getAttribute("data-scheme") || "",
-    );
-    updatePinLabel(pinned);
-
-    // First-visit only: announce that the scheme is random and pinnable. The
-    // pin control is otherwise invisible until the user opens the menu.
-    if (!pinned && !custom && !localStorage.getItem("emacs-scheme-hint-seen")) {
-      const active = document.querySelector(
-        ".scheme-option.active span:last-child",
-      );
-      const label = (active?.textContent || "random").trim();
-      showMsg("Scheme: " + label + " (random each reload, pin in menu)");
-      localStorage.setItem("emacs-scheme-hint-seen", "1");
-    }
-  }
-
-  // Pinned = either mechanism: emacs-scheme-fixed (menu presets, e.g. haki,
-  // dracula) or emacs-custom-palette (the "t " picker / /themes gallery, any
-  // of the 305+ base16 schemes). Both mean "persists across reloads".
-  function isPinned() {
-    return (
-      localStorage.getItem("emacs-scheme-fixed") !== null ||
-      localStorage.getItem("emacs-custom-palette") !== null
-    );
-  }
-
-  function fixScheme() {
-    if (isPinned()) {
-      // Unpin — go back to random each session. Clear whichever mechanism
-      // is actually active so the two never end up in a conflicting state.
-      if (localStorage.getItem("emacs-custom-palette") !== null) {
-        window.emacsBlog?.palette?.clearCustomPalette?.();
-      } else {
-        localStorage.removeItem("emacs-scheme-fixed");
-      }
-      updatePinLabel(false);
-      showMsg("Scheme unpinned (random each session)");
-    } else {
-      // Pin current scheme
-      const cur = document.documentElement.getAttribute("data-scheme") || "";
-      localStorage.setItem("emacs-scheme-fixed", cur);
-      updatePinLabel(true);
-      showMsg("Scheme pinned: " + (cur || "Modus"));
-    }
-  }
-
-  function updatePinLabel(pinned) {
-    const text = pinned ? "Unpin" : "Pin";
-    const label = document.getElementById("pin-scheme-label");
-    if (label) label.textContent = text;
-    const mlLabel = document.getElementById("ml-pin-label");
-    if (mlLabel) mlLabel.textContent = text;
-    const mlBtn = document.getElementById("ml-pin-btn");
-    if (mlBtn) mlBtn.classList.toggle("pinned", pinned);
-    // Announce toggle state, not just a changed label. Three controls carry
-    // data-action="fix-scheme" (M-x dropdown, scheme popup, modeline) :: all must
-    // stay in sync or two of them read stale. The dropdown one is a
-    // menuitemcheckbox, which takes aria-checked instead of aria-pressed.
-    document.querySelectorAll('[data-action="fix-scheme"]').forEach((btn) => {
-      const attr =
-        btn.getAttribute("role") === "menuitemcheckbox"
-          ? "aria-checked"
-          : "aria-pressed";
-      btn.setAttribute(attr, pinned ? "true" : "false");
-    });
-  }
-
-  // Live hover preview — temporarily apply hovered scheme (~15 LOC)
-  function initSchemeHoverPreview() {
-    document.querySelectorAll(".scheme-option").forEach((opt) => {
-      opt.addEventListener("mouseenter", () => {
-        previewScheme = document.documentElement.getAttribute("data-scheme");
-        const hov = opt.dataset.scheme || "";
-        hov
-          ? document.documentElement.setAttribute("data-scheme", hov)
-          : document.documentElement.removeAttribute("data-scheme");
-      });
-      opt.addEventListener("mouseleave", () => {
-        if (previewScheme !== null) {
-          previewScheme
-            ? document.documentElement.setAttribute(
-                "data-scheme",
-                previewScheme,
-              )
-            : document.documentElement.removeAttribute("data-scheme");
-          previewScheme = null;
-        }
-      });
-    });
-  }
-
-  // ── Scheme Popup ──────────────────────────────────────────────────────────
-  // A <details>; open/closed is native. toggleSchemePopup stays around only
-  // because palette.js's "Color scheme picker" command calls it by name.
-
-  function toggleSchemePopup() {
-    if (schemePopupContainer) schemePopupContainer.open = !schemePopupContainer.open;
-  }
-
-  // Fires on every open/close of the popup, however it happened (click,
-  // Escape via handleKeydown below, or the toggle above) — so a live preview
-  // never survives closing it, the same class of fix as palette.js's own
-  // dialog "close" listener.
-  schemePopupContainer?.addEventListener("toggle", () => {
-    schemePopupBtn?.setAttribute(
-      "aria-expanded",
-      String(schemePopupContainer.open),
-    );
-    if (!schemePopupContainer.open && previewScheme !== null) {
-      previewScheme
-        ? document.documentElement.setAttribute("data-scheme", previewScheme)
-        : document.documentElement.removeAttribute("data-scheme");
-      previewScheme = null;
-    }
-  });
-
-  // ── Font Mode Cycling ─────────────────────────────────────────────────────
-  // Mono → Sans → Serif → Mixed (prose serif, structure/meta sans, code mono)
-  // Mixed is the default for first-time visitors (no saved preference).
-
-  const FONT_STEPS = ["mono", "sans", "serif", "mixed"];
-  const FONT_LABELS = {
-    mono: "Mono",
-    sans: "Sans",
-    serif: "Serif",
-    mixed: "Mixed",
+  window.emacsBlog.BASE_KEYS = BASE_KEYS;
+  window.emacsBlog.site = {
+    applyScheme: applyScheme,
+    applyVariant: applyVariant,
+    announce: announce,
+    applyFont: applyFont,
+    cycleWidth: cycleWidth,
+    randomPage: randomPage,
+    toggleTheme: toggleTheme,
+    toggleKeys: toggleKeys,
+    FONT_MODES: FONT_MODES,
   };
-  const FONT_DEFAULT = "mixed";
-  let fontIdx = FONT_STEPS.indexOf(FONT_DEFAULT);
 
-  function cycleFontMode() {
-    fontIdx = (fontIdx + 1) % FONT_STEPS.length;
-    const f = FONT_STEPS[fontIdx];
-    document.documentElement.setAttribute("data-font", f);
-    localStorage.setItem("emacs-font-mode", f);
-    showMsg("Font: " + FONT_LABELS[f]);
-  }
-
-  function restoreFontMode() {
-    const saved = localStorage.getItem("emacs-font-mode");
-    const mode = saved && FONT_STEPS.includes(saved) ? saved : FONT_DEFAULT;
-    fontIdx = FONT_STEPS.indexOf(mode);
-    document.documentElement.setAttribute("data-font", mode);
-  }
-
-  // ── Content Width Cycle ───────────────────────────────────────────────────
-  // First click → 100%, then cycles 80ch → 60ch → 840px → back
-
-  const WIDTH_STEPS = ["840px", "100%", "80%", "60%"];
-  let widthIdx = 0; // default 840px; first click → idx 1 = 100%
-
-  function cycleWidth() {
-    widthIdx = (widthIdx + 1) % WIDTH_STEPS.length;
-    const w = WIDTH_STEPS[widthIdx];
-    document.documentElement.style.setProperty("--content-max-width", w);
-    localStorage.setItem("emacs-width-idx", widthIdx);
-    showMsg("Width: " + w);
-  }
-
-  function restoreWidth() {
-    const saved = localStorage.getItem("emacs-width-idx");
-    if (saved !== null) {
-      const idx = parseInt(saved, 10);
-      if (idx >= 0 && idx < WIDTH_STEPS.length) {
-        widthIdx = idx;
-        document.documentElement.style.setProperty(
-          "--content-max-width",
-          WIDTH_STEPS[idx],
-        );
-      }
-    }
-  }
-
-  // ── Echo message helper ───────────────────────────────────────────────────
-
-  function showMsg(msg) {
-    window.emacsBlog?.keyboard?.showMessage?.(msg);
-  }
-
-  // ── Mobile hamburger menu ─────────────────────────────────────────────────
-  // Unlike the dropdowns/scheme popup above, this toggles the same .menu-items
-  // nav in and out of a mobile-only overlay layout rather than showing a
-  // hidden-by-default element, so it stays a plain class toggle.
-
-  function toggleMobileMenu() {
-    const isOpen = menuBar?.classList.toggle("menu-open");
-    hamburger?.setAttribute("aria-expanded", String(!!isOpen));
-  }
-
-  function closeMobileMenu() {
-    menuBar?.classList.remove("menu-open");
-    hamburger?.setAttribute("aria-expanded", "false");
-  }
-
-  function handleBackdropClick() {
-    closeMobileMenu();
-    backdrop?.classList.remove("visible");
-  }
-
-  function handleActionClick(e) {
-    const el = e.target.closest("[data-action]");
-    if (!el) return;
-    const action = el.dataset.action;
-    switch (action) {
-      case "toggle-theme":
-        toggleTheme();
-        break;
-      case "cycle-width":
-        cycleWidth();
-        break;
-      case "cycle-font":
-        cycleFontMode();
-        break;
-      case "toggle-keys":
-        window.toggleKeys && window.toggleKeys();
-        break;
-      case "fix-scheme":
-        fixScheme();
-        break;
-      case "open-palette":
-        window.emacsBlog?.palette?.open();
-        break;
-      case "browse-schemes":
-        window.emacsBlog?.palette?.open("t ");
-        break;
-      case "show-help":
-        window.emacsBlog?.palette?.open("? ");
-        break;
-    }
-    document.querySelectorAll(".menu-item[open]").forEach((d) => (d.open = false));
-    if (
-      action !== "cycle-width" &&
-      action !== "cycle-font" &&
-      action !== "fix-scheme" &&
-      action !== "open-palette" &&
-      action !== "browse-schemes" &&
-      schemePopupContainer
-    )
-      schemePopupContainer.open = false;
-  }
-
-  function handleSchemeOptionClick(e) {
-    const el = e.target.closest(".scheme-option");
-    if (!el) return;
-    applyScheme(el.dataset.scheme || "");
-    // Random every load unless the user explicitly Pins. Picking here only
-    // previews for this view; if already pinned, retarget the pin to this pick.
-    if (localStorage.getItem("emacs-scheme-fixed") !== null) {
-      localStorage.setItem("emacs-scheme-fixed", el.dataset.scheme || "");
-    }
-    previewScheme = null; // commit — nothing left to restore when it closes
-    document.querySelectorAll(".menu-item[open]").forEach((d) => (d.open = false));
-    if (schemePopupContainer) schemePopupContainer.open = false;
-  }
-
-  function handleOutsideClick(e) {
-    if (!e.target.closest(".menu-item")) {
-      document.querySelectorAll(".menu-item[open]").forEach((d) => (d.open = false));
-    }
-    if (
-      schemePopupContainer?.open &&
-      !e.target.closest("#scheme-popup-container")
-    )
-      schemePopupContainer.open = false;
-  }
-
-  function handleKeydown(e) {
-    if (e.key === "Escape") {
-      document.querySelectorAll(".menu-item[open]").forEach((d) => (d.open = false));
-      if (schemePopupContainer) schemePopupContainer.open = false;
-      closeMobileMenu();
-    }
-    const dropdown = document.querySelector(".menu-item[open] > .menu-dropdown");
-    if (!dropdown) return;
-    const items = dropdown.querySelectorAll(".menu-dropdown-item:not(.disabled)");
-    if (!items.length) return;
-    const focused = dropdown.querySelector(".menu-dropdown-item:focus");
-    let idx = focused ? Array.from(items).indexOf(focused) : -1;
-    if (e.key === "ArrowDown") {
-      items[(idx + 1) % items.length].focus();
-      e.preventDefault();
-    }
-    if (e.key === "ArrowUp") {
-      items[idx <= 0 ? items.length - 1 : idx - 1].focus();
-      e.preventDefault();
-    }
-    if (e.key === "Enter" && focused) {
-      focused.click();
-      e.preventDefault();
-    }
-  }
-
-  // ── Init ──────────────────────────────────────────────────────────────────
-
-  function init() {
-    // Scheme options (both in View menu and popup)
-    document.querySelectorAll(".scheme-option").forEach((opt) => {
-      opt.addEventListener("click", handleSchemeOptionClick);
-    });
-
-    // Action buttons (toggle-theme, cycle-*, fix-scheme, etc.)
-    document.addEventListener("click", (e) => {
-      if (
-        e.target.closest("[data-action]") &&
-        !e.target.closest(".scheme-option")
-      ) {
-        handleActionClick(e);
-      }
-    });
-
-    // Backdrop
-    backdrop?.addEventListener("click", handleBackdropClick);
-
-    // Hamburger
-    hamburger?.addEventListener("click", toggleMobileMenu);
-
-    // Outside click (dropdowns/scheme popup have native open-toggle, but not
-    // native light-dismiss the way a popover would — this is that piece)
-    document.addEventListener("click", handleOutsideClick);
-
-    // Keyboard: Escape closes everything; arrow keys/Enter roam an open menu
-    document.addEventListener("keydown", handleKeydown);
-
-    // Hover to switch to an adjacent menu while one is already open (desktop
-    // UX). name="menu" grouping means opening one natively closes the rest.
-    menuItems.forEach((item) => {
-      item.addEventListener("mouseenter", () => {
-        if (document.querySelector(".menu-item[open]") && !item.open)
-          item.open = true;
-      });
-    });
-
-    // Restore saved state
-    restoreWidth();
-    restoreFontMode();
-
-    // Random/pinned scheme
-    initRandomScheme();
-
-    // Hover preview for schemes
-    initSchemeHoverPreview();
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", init);
-  } else {
-    init();
-  }
-
-  // Expose globals for palette.js commands
-  window.toggleTheme = toggleTheme;
-  window.cycleWidth = cycleWidth;
-  window.cycleFontMode = cycleFontMode;
-  window.toggleSchemePopup = toggleSchemePopup;
-  window.pinScheme = fixScheme;
-
-  window.emacsBlog = window.emacsBlog || {};
-  window.emacsBlog.menu = {
-    refreshPinState: function () {
-      updatePinLabel(isPinned());
-    },
-  };
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
+  else init();
 })();
 
 /* ---- search.js ---- */
@@ -814,8 +445,8 @@
 /* ---- palette.js ---- */
 /**
  * Command Palette — native <dialog>.
- * Default: commands + posts. "t " prefix: all base16 schemes.
- * Trigger: x / Ctrl-K / Ctrl-S / Alt-X (keyboard.js) or window.emacsBlog.palette.open()
+ * Default: commands + posts. "t " prefix: all base16 schemes. "#" prefix: tags.
+ * Trigger: x / Ctrl-K / Ctrl-S / Alt-X (site.js) or window.emacsBlog.palette.open()
  */
 (function () {
   "use strict";
@@ -825,29 +456,11 @@
   var res = document.getElementById("palette-results");
   if (!dlg || !inp || !res) return;
 
-  var BASE_KEYS = [
-    "base00",
-    "base01",
-    "base02",
-    "base03",
-    "base04",
-    "base05",
-    "base06",
-    "base07",
-    "base08",
-    "base09",
-    "base0A",
-    "base0B",
-    "base0C",
-    "base0D",
-    "base0E",
-    "base0F",
-  ];
+  var BASE_KEYS = window.emacsBlog.BASE_KEYS;
 
   function applyCustomPalette(colors) {
     BASE_KEYS.forEach(function (k, i) {
-      if (colors[i])
-        document.documentElement.style.setProperty("--" + k, colors[i]);
+      if (colors[i]) document.documentElement.style.setProperty("--" + k, colors[i]);
     });
   }
 
@@ -886,94 +499,59 @@
       },
     ]);
 
-  // Commands (nav is dynamic above; these are the explicit action list).
-  var CMDS = NAV.concat([
-    {
-      t: "Toggle dark / light theme",
+  function command(title, action) {
+    return {
+      t: title,
       type: "command",
       a: function () {
         dlg.close();
-        window.toggleTheme && window.toggleTheme();
+        action();
       },
-    },
-    {
-      t: "Cycle font mode",
-      type: "command",
-      a: function () {
-        dlg.close();
-        window.cycleFontMode && window.cycleFontMode();
-      },
-    },
-    {
-      t: "Cycle content width",
-      type: "command",
-      a: function () {
-        dlg.close();
-        window.cycleWidth && window.cycleWidth();
-      },
-    },
-    {
-      t: "Pin / unpin scheme",
-      type: "command",
-      a: function () {
-        dlg.close();
-        window.pinScheme && window.pinScheme();
-      },
-    },
-    {
-      t: "Color scheme picker",
-      type: "command",
-      a: function () {
-        dlg.close();
-        window.toggleSchemePopup && window.toggleSchemePopup();
-      },
-    },
-    {
-      t: "Browse all color schemes",
-      type: "scheme",
-      a: function () {
-        inp.value = "t ";
-        render("t ");
-        inp.focus();
-        inp.setSelectionRange(2, 2);
-      },
-    },
-    {
-      t: "Browse tags",
-      type: "tag",
-      a: function () {
-        inp.value = "#";
-        render("#");
-        inp.focus();
-        inp.setSelectionRange(1, 1);
-      },
-    },
-    {
-      t: "Keyboard shortcuts",
-      type: "help",
-      a: function () {
-        inp.value = "? ";
-        render("? ");
-        inp.focus();
-        inp.setSelectionRange(2, 2);
-      },
-    },
-    {
-      t: "Enable / disable keyboard shortcuts",
-      type: "command",
-      a: function () {
-        dlg.close();
-        window.toggleKeys && window.toggleKeys();
-      },
-    },
-  ]);
+    };
+  }
 
-  var HELP = [
-    {
-      t: "Ctrl/Cmd-K, Ctrl/Cmd-S, Alt-X (M-x), or x  —  Open command palette",
-      a: null,
-    },
-  ];
+  function prefixMode(title, type, prefix) {
+    return {
+      t: title,
+      type: type,
+      a: function () {
+        inp.value = prefix;
+        render(prefix);
+        inp.focus();
+        inp.setSelectionRange(prefix.length, prefix.length);
+      },
+    };
+  }
+
+  var site = window.emacsBlog.site;
+  var CMDS = NAV.concat(
+    [
+      prefixMode("Browse all color schemes", "scheme", "t "),
+      prefixMode("Browse tags", "tag", "#"),
+      command("Default color scheme (Haki)", function () {
+        site.applyScheme("haki", "Haki");
+      }),
+    ],
+    site.FONT_MODES.map(function (mode) {
+      return command("Font: " + mode.label, function () {
+        site.applyFont(mode.value);
+      });
+    }),
+    [
+      command("Random page", function () {
+        site.randomPage();
+      }),
+      command("Toggle dark / light", function () {
+        site.toggleTheme();
+      }),
+      command("Cycle content width", function () {
+        site.cycleWidth();
+      }),
+      command("Enable / disable the x shortcut", function () {
+        site.toggleKeys();
+      }),
+    ],
+  );
 
   var idx = 0,
     items = [];
@@ -981,9 +559,7 @@
     snap = null;
   var searchTimer = null;
 
-  // Picking the page you're already on can't navigate anywhere -- the
-  // browser does nothing, so the dialog just sits there looking unresponsive.
-  // Close it ourselves in that case instead of leaving the user hanging.
+  // Picking the page you're already on can't navigate anywhere, so close the dialog instead.
   function goTo(url) {
     if (url === location.pathname) dlg.close();
     else location.href = url;
@@ -1054,17 +630,13 @@
               i +
               '">' +
               (ic
-                ? '<span class="palette-item-icon nf" aria-hidden="true">' +
-                  ic +
-                  "</span>"
+                ? '<span class="palette-item-icon nf" aria-hidden="true">' + ic + "</span>"
                 : "") +
               '<span class="palette-item-text">' +
               '<span class="palette-item-title">' +
               it.html +
               "</span>" +
-              (it.snippet
-                ? '<span class="palette-item-snippet">' + it.snippet + "</span>"
-                : "") +
+              (it.snippet ? '<span class="palette-item-snippet">' + it.snippet + "</span>" : "") +
               "</span></div>"
             );
           })
@@ -1087,8 +659,11 @@
           return r.json();
         })
         .then(function (data) {
+          // Curated families (light and dark pairs) first, then the rest by name.
           allSchemes = data.sort(function (a, b) {
-            return a.name.localeCompare(b.name);
+            return (
+              (b.family !== undefined) - (a.family !== undefined) || a.name.localeCompare(b.name)
+            );
           });
           renderSchemes(q);
         })
@@ -1103,22 +678,30 @@
     allSchemes.forEach(function (s) {
       var h = match(s.name, q);
       if (h !== null) {
-        var colors = s.colors,
-          key = s.key,
-          name = s.name;
+        var scheme = s;
         items.push({
-          html: h,
-          colors: colors,
+          html: scheme.family !== undefined ? h + " \u00b7 light and dark" : h,
+          colors: scheme.colors,
           action: function () {
-            applyCustomPalette(colors);
-            localStorage.setItem(
-              "emacs-custom-palette",
-              JSON.stringify({ key: key, name: name, colors: colors }),
-            );
-            document.documentElement.removeAttribute("data-scheme");
             snap = null;
+            if (scheme.family !== undefined) {
+              site.applyScheme(scheme.family, scheme.name);
+            } else {
+              applyCustomPalette(scheme.colors);
+              localStorage.setItem(
+                "emacs-custom-palette",
+                JSON.stringify({
+                  key: scheme.key,
+                  name: scheme.name,
+                  variant: scheme.variant,
+                  colors: scheme.colors,
+                }),
+              );
+              document.documentElement.removeAttribute("data-scheme");
+              site.applyVariant();
+              site.announce("Scheme: " + scheme.name);
+            }
             dlg.close();
-            window.emacsBlog?.menu?.refreshPinState?.();
           },
         });
       }
@@ -1130,24 +713,6 @@
     if (v.startsWith("t ")) {
       inp.placeholder = "Color scheme\u2026";
       renderSchemes(v.slice(2).trim());
-    } else if (v.startsWith("? ")) {
-      inp.placeholder = "Search shortcuts\u2026";
-      var q = v.slice(2).trim();
-      items = [];
-      HELP.forEach(function (h) {
-        var ht = match(h.t, q);
-        if (ht !== null)
-          items.push({
-            html: ht,
-            action:
-              h.a ||
-              function () {
-                dlg.close();
-              },
-            type: "help",
-          });
-      });
-      buildList();
     } else if (v.charAt(0) === "#") {
       inp.placeholder = "Jump to a tag\u2026";
       var tq = v.slice(1);
@@ -1169,8 +734,7 @@
       items = items.slice(0, 40);
       buildList();
     } else {
-      inp.placeholder =
-        "Search posts, run commands, browse themes  (M-x \u00b7 Ctrl-K \u00b7 Ctrl-S)\u2026";
+      inp.placeholder = "Search posts, pages and commands (x \u00b7 Ctrl-K)\u2026";
       var q = v.trim();
       items = [];
       var seenUrls = {};
@@ -1229,36 +793,14 @@
               html: esc(r.title),
               snippet: highlightWords(r.snippet, words),
               action: function () {
-                // Text Fragments only scroll-and-highlight on a real
-                // navigation, never on a same-document hash change -- so
-                // searching for a term on the page you're already viewing
-                // would otherwise just update the address bar and do
-                // nothing visible. No reload needed though: we already
-                // know the exact matched text (r.hit), so just find,
-                // select and scroll to it directly on the current page.
+                // Text Fragments only work on a real navigation, so on the
+                // current page select the matched text directly, once the
+                // closed dialog no longer makes the page inert.
                 if (r.url === location.pathname) {
-                  // #palette-dialog fades out over --dialog-transition
-                  // (CSS allow-discrete + @starting-style) rather than
-                  // closing instantly -- the background stays genuinely
-                  // inert for that whole duration, and window.find (like
-                  // real find-in-page) skips inert content, so calling it
-                  // right after .close() returns finds nothing. Wait for
-                  // the fade to actually finish (transitionend), with a
-                  // timeout fallback in case a future style change ever
-                  // removes the transition outright and it never fires.
-                  var done = false;
-                  var runFind = function () {
-                    if (done) return;
-                    done = true;
-                    dlg.removeEventListener("transitionend", onEnd);
-                    if (window.find) window.find(r.hit, false, false, true);
-                  };
-                  var onEnd = function (e) {
-                    if (e.target === dlg && e.propertyName === "opacity") runFind();
-                  };
-                  dlg.addEventListener("transitionend", onEnd);
-                  setTimeout(runFind, 600);
                   dlg.close();
+                  setTimeout(function () {
+                    if (window.find) window.find(r.hit, false, false, true);
+                  }, 0);
                 } else {
                   location.href = r.url + "#:~:text=" + encodeURIComponent(r.hit);
                 }
@@ -1281,8 +823,7 @@
       el.classList.toggle("selected", i === idx);
     });
     els[idx].scrollIntoView({ block: "nearest" });
-    if (snap && items[idx] && items[idx].colors)
-      applyCustomPalette(items[idx].colors);
+    if (snap && items[idx] && items[idx].colors) applyCustomPalette(items[idx].colors);
   }
 
   inp.addEventListener("input", function () {
@@ -1298,10 +839,7 @@
     } else if (e.key === "Enter" && items[idx]) {
       items[idx].action();
       e.preventDefault();
-    } else if (
-      e.key === "Backspace" &&
-      (inp.value === "t " || inp.value === "? ")
-    ) {
+    } else if (e.key === "Backspace" && inp.value === "t ") {
       snapRestore();
       inp.value = "";
       render("");
@@ -1335,102 +873,3 @@
     applyCustomPalette: applyCustomPalette,
   };
 })();
-
-/* ---- themes-gallery.js ---- */
-/**
- * /themes gallery — hover preview + click-to-pin.
- * Reuses palette.js's applyCustomPalette (window.emacsBlog.palette) instead of
- * duplicating the --baseXX assignment logic. No-ops on any page without cards.
- */
-(function () {
-  "use strict";
-
-  var cards = document.querySelectorAll(".scheme-card");
-  if (!cards.length) return;
-
-  var BASE_KEYS = [
-    "base00",
-    "base01",
-    "base02",
-    "base03",
-    "base04",
-    "base05",
-    "base06",
-    "base07",
-    "base08",
-    "base09",
-    "base0A",
-    "base0B",
-    "base0C",
-    "base0D",
-    "base0E",
-    "base0F",
-  ];
-  var snap = null;
-
-  function apply(colors) {
-    window.emacsBlog &&
-      window.emacsBlog.palette &&
-      window.emacsBlog.palette.applyCustomPalette &&
-      window.emacsBlog.palette.applyCustomPalette(colors);
-  }
-
-  function snapshot() {
-    var root = document.documentElement;
-    snap = BASE_KEYS.map(function (k) {
-      return root.style.getPropertyValue("--" + k);
-    });
-  }
-
-  function restore() {
-    if (!snap) return;
-    var root = document.documentElement;
-    BASE_KEYS.forEach(function (k, i) {
-      snap[i]
-        ? root.style.setProperty("--" + k, snap[i])
-        : root.style.removeProperty("--" + k);
-    });
-    snap = null;
-  }
-
-  cards.forEach(function (card) {
-    var btn = card.querySelector(".scheme-card-btn");
-    if (!btn) return;
-    var colors = JSON.parse(btn.dataset.colors);
-    var key = btn.dataset.key;
-    var name = btn.dataset.name;
-
-    // Hover preview covers the whole card (author link included) — mouse-only,
-    // no a11y concern. Keyboard preview + the actual pin action stay scoped to
-    // the button, the card's one real interactive/focusable control.
-    card.addEventListener("mouseenter", function () {
-      if (!snap) snapshot();
-      apply(colors);
-    });
-    card.addEventListener("mouseleave", restore);
-    btn.addEventListener("focus", function () {
-      if (!snap) snapshot();
-      apply(colors);
-    });
-    btn.addEventListener("blur", restore);
-
-    btn.addEventListener("click", function () {
-      apply(colors);
-      localStorage.setItem(
-        "emacs-custom-palette",
-        JSON.stringify({ key: key, name: name, colors: colors }),
-      );
-      document.documentElement.removeAttribute("data-scheme");
-      snap = null;
-      window.emacsBlog &&
-        window.emacsBlog.keyboard &&
-        window.emacsBlog.keyboard.showMessage &&
-        window.emacsBlog.keyboard.showMessage("Pinned: " + name);
-      window.emacsBlog &&
-        window.emacsBlog.menu &&
-        window.emacsBlog.menu.refreshPinState &&
-        window.emacsBlog.menu.refreshPinState();
-    });
-  });
-})();
-

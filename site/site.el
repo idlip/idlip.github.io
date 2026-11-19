@@ -22,21 +22,30 @@
 
 ;;;; Config data: menu, color schemes, social links, palette icons, badges
 
+(defconst site-menu-header
+  '((:name "Log" :url "/log/")
+    (:name "Pose" :url "/pose/")
+    (:name "media" :url "/media/")
+    (:name "Wander" :url "/wander/")
+    (:name "About" :url "/about/")
+    (:name "More…" :url "#all-pages"))
+  "The header links: short labels, no icons, separate from `site-menu-main'.")
+
 (defconst site-menu-main
-  '((:name " Home" :url "/")
+  '(
+    (:name " Home" :url "/")
     (:name "󰎕 Blog Posts" :url "/log/")
     (:name "󰟶 Pose" :url "/pose/")
     (:name " Projects & Tools" :url "/repo/")
+    (:name "󰆋 Wander/Blogroll" :url "/wander/")
     (:name " About" :url "/about/")
     (:name "󰚀 Now Now Now" :url "/now/")
-    (:name " Feeds" :url "/index.xml")
-    (:name "󰆋 Wander/Blogroll" :url "/wander/")
     (:name "󰟴 Media" :url "/media/")
     (:name "󱀢 Quotes" :url "/quotes/")
-    (:name " Color Themes" :url "/themes/")
+    (:name " Feeds" :url "/index.xml")
     (:name "󰦃 Sitemap" :url "/sitemap/")
-    )
-  "In :weight order, not declaration order.")
+    (:name " Tags" :url "/tags/"))
+  "Every page link with its icon, in order, for the footer and the palette.")
 
 (defconst site-color-schemes
   '((:name "haki" :label "Haki" :bg "#000000" :fg "#ffffff" :accent "#5fd7af")
@@ -69,6 +78,25 @@
   '(:nav "󰘍 " :command " " :post " " :tag " " :scheme " " :help "󰘥 "))
 
 (defconst site-title "Dilip's Log")
+
+(defconst site-title-quotes
+  '("My heart beats when you see me..."
+    "Gaming, tinkering and breathing inside Emacs"
+    "Thank you for your time given to my site"
+    "Coffee is bad, Buy Me Protein"
+    "Magic… is all about lie, and skill at play"
+    "Writing it down is 80% work done"
+    "Still reading? You're officially a regular now"
+    "Hovering on titles? You must be a developer"
+    "Judging my CSS? It judged you first"
+    "Shouldn't you be working right now?"
+    "You're here instead of doom-scrolling. Proud of you"
+    "You've been reading for a while. Water break?"
+    "Found a typo? Free chat if you email it to me"
+    "A simple thanks makes both of our day delightful"
+    "Enough touching me, touch the grass now"
+    )
+  "Tiny delights: the site title shows one of these at random on hover.")
 
 (defconst site-description "Dilip's Log")
 
@@ -123,22 +151,21 @@ extended_head.html.")
 (defconst site-footer-content
   (list
    'div nil
-   (list 'p '(:class "webring" :align "center" :style "font-size:0.9em;")
-         '(a (:href "https://blr.indiewebclub.org/webring/idlip-in/previous.html") "=")
+   (list 'p '(:class "webring")
+         '(a (:href "https://blr.indiewebclub.org/webring/idlip-in/previous.html" :aria-label "Previous site") "=")
          " "
          '(a (:href "https://blr.indiewebclub.org/") "IndieWebClub BLR")
          " "
-         '(a (:href "https://blr.indiewebclub.org/webring/idlip-in/next.html") "="))
-   (list 'p '(:class "webring" :align "center" :style "font-size:0.9em;")
-         '(a (:href "https://craftering.systemcrafters.net/@idlip/previous") "")
+         '(a (:href "https://blr.indiewebclub.org/webring/idlip-in/next.html" :aria-label "Next site") "="))
+   (list 'p '(:class "webring")
+         '(a (:href "https://craftering.systemcrafters.net/@idlip/previous" :aria-label "Previous site") "")
          " "
          '(a (:href "https://craftering.systemcrafters.net/") " Craftering ")
          " "
-         '(a (:href "https://craftering.systemcrafters.net/@idlip/next") ""))
-   (list 'p '(:align "center" :style "font-size:0.75em;")
-         (list 'span '(:style "white-space: nowrap;")
-               "- - - - - - -  - - - - - - -  - - - - - - -  - - - - - - -")
-         '(br nil)
+         '(a (:href "https://craftering.systemcrafters.net/@idlip/next" :aria-label "Next site") ""))
+   (list 'span '(:style "white-space: nowrap;")
+         "- - - - - - -  - - - - - - -  - - - - - - -  - - - - - - -")
+   (list 'p nil
          " 2023-2026 " '(b nil "Dilip | Zororg") "  Made with 󰣐  using "
          '(a (:href "https://github.com/idlip/denden") "Denden") " via "
          '(a (:href "https://www.gnu.org/software/emacs/") "Emacs") " "
@@ -169,8 +196,54 @@ extended_head.html.")
   "The (:name :author :variant :palette) plist for base16 scheme KEY, or nil."
   (cdr (assoc key site-schemes-base16)))
 
+(defconst site-contrast-floor
+  '(("base05" . 7) ("base0D" . 4.5)
+    ("base0C" . 3) ("base08" . 3) ("base09" . 3) ("base0B" . 3) ("base0E" . 3))
+  "Least contrast on base00: text 7, links 4.5, accent and headings 3.")
+
+(defun site--relative-luminance (hex)
+  "The WCAG relative luminance of HEX, a \"#rrggbb\" colour."
+  (let ((digits (string-remove-prefix "#" hex)))
+    (apply #'+ (cl-mapcar (lambda (start weight)
+                            (let ((channel (/ (string-to-number (substring digits start (+ start 2)) 16) 255.0)))
+                              (* weight (if (<= channel 0.04045) (/ channel 12.92)
+                                          (expt (/ (+ channel 0.055) 1.055) 2.4)))))
+                          '(0 2 4) '(0.2126 0.7152 0.0722)))))
+
+(defun site-contrast-ratio (first second)
+  "The WCAG contrast ratio between hex colours FIRST and SECOND."
+  (let ((a (site--relative-luminance first)) (b (site--relative-luminance second)))
+    (/ (+ (max a b) 0.05) (+ (min a b) 0.05))))
+
+(defun site-scheme-readable-p (colors)
+  "Non-nil if COLORS, 16 base16 hex strings, meet `site-contrast-floor'."
+  (and (= (length colors) 16)
+       (cl-every (lambda (color) (string-match-p (rx bos (opt "#") (= 6 hex) eos) (or color ""))) colors)
+       (cl-every (lambda (rule)
+                   (>= (site-contrast-ratio (nth (cl-position (car rule) site--base16-keys :test #'equal) colors)
+                                            (car colors))
+                       (cdr rule)))
+                 site-contrast-floor)))
+
+(defun site--base16-colors (yaml-key)
+  "The 16 colours of base16 scheme YAML-KEY, or nil if unknown."
+  (let ((entry (and yaml-key (site--base16-entry yaml-key))))
+    (and entry (mapcar (lambda (key) (site-scheme-palette-value (plist-get entry :palette) key))
+                       site--base16-keys))))
+
+(defun site-light-scheme-names (color-schemes custom-schemes)
+  "COLOR-SCHEMES names with a readable light variant, using CUSTOM-SCHEMES."
+  (delq nil (mapcar (lambda (scheme)
+                      (let* ((name (plist-get scheme :name))
+                             (custom (cl-find (concat name "-light") custom-schemes
+                                              :key (lambda (s) (plist-get s :key)) :test #'equal))
+                             (colors (if custom (plist-get custom :colors)
+                                       (site--base16-colors (plist-get scheme :light)))))
+                        (and (or (string-empty-p name) (site-scheme-readable-p colors)) name)))
+                    color-schemes)))
+
 (defun site-scheme-css (color-schemes)
-  "Return CSS for COLOR-SCHEMES: a [data-scheme=NAME] block per entry's :dark and :light base16 keys."
+  "CSS blocks for each readable :dark and :light variant in COLOR-SCHEMES."
   (mapconcat
    (lambda (scheme)
      (let ((name (plist-get scheme :name)))
@@ -180,7 +253,7 @@ extended_head.html.")
                 (selector (cdr variant-key-and-selector)))
             (if (null yaml-key) ""
               (let ((entry (site--base16-entry yaml-key)))
-                (if (null entry) ""
+                (if (or (null entry) (not (site-scheme-readable-p (site--base16-colors yaml-key)))) ""
                   (let* ((palette (plist-get entry :palette))
                          (vars (mapconcat
                                 (lambda (k)
@@ -192,17 +265,6 @@ extended_head.html.")
               (cons (plist-get scheme :light) (format "[data-scheme=\"%s\"][data-theme=\"light\"]" name)))
         "")))
    color-schemes ""))
-
-(defun site-scheme-swatch-style (scheme)
-  "Return the inline --p-bg/--p-fg/--p-accent swatch style for SCHEME, from
-its base16 palette or explicit colors."
-  (let* ((dark-key (plist-get scheme :dark))
-         (entry (and dark-key (site--base16-entry dark-key)))
-         (palette (and entry (plist-get entry :palette)))
-         (bg (if palette (site-scheme-palette-value palette "base00") (plist-get scheme :bg)))
-         (fg (if palette (site-scheme-palette-value palette "base05") (plist-get scheme :fg)))
-         (accent (if palette (site-scheme-palette-value palette "base0D") (plist-get scheme :accent))))
-    (format "--p-bg:%s;--p-fg:%s;--p-accent:%s" bg fg accent)))
 
 (defun site-parse-author (author)
   "Parse \"Name (URL)\" or plain \"Name\" AUTHOR into (:name :url); :url is
@@ -272,13 +334,32 @@ base16-shaped entries."
 CUSTOM-CSS-TEXT."
   (append (site--base16-all-schemes) (site-parse-custom-css-schemes custom-css-text)))
 
+(defun site--scheme-families (custom-schemes)
+  "Readable `site-color-schemes' as palette families, colours from CUSTOM-SCHEMES."
+  (seq-filter
+   (lambda (family) (or (null (plist-get family :colors)) (site-scheme-readable-p (plist-get family :colors))))
+   (mapcar (lambda (scheme)
+            (let* ((name (plist-get scheme :name))
+                   (custom (cl-find name custom-schemes :key (lambda (s) (plist-get s :key)) :test #'equal)))
+              (list :key name :name (plist-get scheme :label) :family name :variant "dark"
+                    :colors (or (and custom (plist-get custom :colors))
+                                (site--base16-colors (plist-get scheme :dark))))))
+           site-color-schemes)))
+
 (defun site-schemes-json (&optional custom-css-text)
-  "Return the key/name/colors JSON for the command-palette picker, from
-`site-all-schemes'."
-  (json-serialize
-   (vconcat (mapcar (lambda (s) (list :key (plist-get s :key) :name (plist-get s :name)
-                                      :colors (vconcat (plist-get s :colors))))
-                    (site-all-schemes custom-css-text)))))
+  "The palette scheme list as JSON: families first, then readable schemes."
+  (let* ((custom (site-parse-custom-css-schemes custom-css-text))
+         (families (site--scheme-families custom))
+         (family-keys (mapcan (lambda (f) (list (plist-get f :key) (concat (plist-get f :key) "-light"))) families))
+         (others (seq-filter (lambda (s) (and (not (member (plist-get s :key) family-keys))
+                                              (site-scheme-readable-p (plist-get s :colors))))
+                             (site-all-schemes custom-css-text))))
+    (json-serialize
+     (vconcat (mapcar (lambda (s) (append (list :key (plist-get s :key) :name (plist-get s :name)
+                                                :variant (or (plist-get s :variant) "")
+                                                :colors (vconcat (plist-get s :colors)))
+                                          (when (plist-get s :family) (list :family (plist-get s :family)))))
+                      (append families others))))))
 
 ;;;; Generate site-schemes-base16.el from the base16 yaml submodule
 ;;
@@ -374,8 +455,8 @@ committed elisp data file. Run by hand."
 ;;;; This site's OG card template
 ;;
 ;; The reusable wrapping math is `denden-og-wrap-words'/`denden-og-truncate-
-;; lines'; colors and geometry here are this site's own, an
-;; Emacs-window-styled 1200x630 card.
+;; lines'; colors and geometry here are this site's own: a 1200x630 card in
+;; the site's Haki look.
 
 (defconst site--og-media-types
   '(("webp" . "image/webp") ("png" . "image/png") ("jpg" . "image/jpeg")
@@ -394,104 +475,107 @@ committed elisp data file. Run by hand."
       (format "data:%s;base64,%s" media-type (base64-encode-string content t)))))
 
 (defun site--og-title-lines (title)
-  "Return TITLE wrapped to at most 2 lines, plus a font size sized by TITLE's
-length."
-  (let* ((font-size (cond ((> (length title) 52) 38) ((> (length title) 28) 44) (t 50)))
-         (wrap-width (cond ((> (length title) 52) 40) ((> (length title) 28) 34) (t 30))))
+  "TITLE wrapped to at most 3 lines, with a font size picked by its length."
+  (let* ((font-size (cond ((> (length title) 60) 46) ((> (length title) 32) 54) (t 64)))
+         (wrap-width (cond ((> (length title) 60) 38) ((> (length title) 32) 32) (t 27))))
     (list :font-size font-size
-          :lines (denden-og-truncate-lines (denden-og-wrap-words title wrap-width) 2))))
+          :lines (denden-og-truncate-lines (denden-og-wrap-words title wrap-width) 3))))
 
-(defun site--og-excerpt-lines (excerpt)
-  "Return EXCERPT's lines, word-wrapped to 62 characters per paragraph and
-capped to 5 lines. A blank line in EXCERPT (a paragraph break) becomes a
-blank output line, so the break still shows as a gap on the card."
-  (when excerpt
+(defun site--og-excerpt-lines (excerpt max-lines)
+  "EXCERPT wrapped at 64 characters, at most MAX-LINES lines, gaps kept."
+  (when (and excerpt (> max-lines 0))
     (denden-og-truncate-lines
      (seq-mapcat (lambda (source-line)
                    (if (string-empty-p source-line)
                        (list "")
-                     (denden-og-wrap-words (replace-regexp-in-string (rx (+ (any " \t"))) " " (string-trim source-line)) 62)))
+                     (denden-og-wrap-words (replace-regexp-in-string (rx (+ (any " \t"))) " " (string-trim source-line)) 64)))
                  (split-string (string-trim excerpt) "\n"))
-     5)))
+     max-lines)))
+
+(defconst site--og-colors
+  '(:background "#000000" :surface "#0a0f0a" :border "#404040" :text "#ffffff" :faint "#b3b3b3"
+    :accent "#5fd7af" :title "#ab82ff" :link "#2fafff")
+  "The Haki palette the OG card is drawn in, matching the site's default scheme.")
+
+(defun site--og-chips (tags y)
+  "Bordered #tag chips for the first 3 TAGS, text on baseline Y."
+  (let ((x 64) (chips nil))
+    (dolist (tag (seq-take tags 3))
+      (let* ((label (concat "#" tag))
+             (width (+ 32 (* 13 (length label)))))
+        (push (list 'g nil
+                    (list 'rect (list :x (number-to-string x) :y (number-to-string (- y 30))
+                                      :width (number-to-string width) :height "44" :rx "8" :fill "none"
+                                      :stroke (plist-get site--og-colors :link) :stroke-width "2"))
+                    (list 'text (list :x (number-to-string (+ x 16)) :y (number-to-string y)
+                                      :fill (plist-get site--og-colors :link) :font-size "22")
+                          label))
+              chips)
+        (setq x (+ x width 14))))
+    (append (list 'g nil) (nreverse chips))))
 
 (cl-defun site-og-card-svg (&key title excerpt tags slug date meta-right card-site-title favicon-path
                                  (font "Code D OnePiece"))
-  "Return this site's OG card as a full <svg> string, built through
-`denden-serialize-node'."
-  (let* ((title-info (site--og-title-lines title))
+  "This site's 1200x630 OG card for TITLE as an <svg> string, in Haki colours."
+  (let* ((colors site--og-colors)
+         (title-info (site--og-title-lines title))
          (title-lines (plist-get title-info :lines))
-         (title-font-size (plist-get title-info :font-size))
-         (tags-string (mapconcat (lambda (tag) (format "#%s" tag)) (seq-take tags 3) "  "))
-         (excerpt-lines (site--og-excerpt-lines excerpt))
+         (title-size (plist-get title-info :font-size))
+         (title-top 236)
+         (title-step (round (* title-size 1.18)))
+         (title-last (+ title-top (* (1- (length title-lines)) title-step)))
+         (excerpt-top (+ title-last 64))
+         ;; Without a chip or meta row, the excerpt may run down to the edge bar.
+         (excerpt-bottom (if (or tags date meta-right) 486 560))
+         (excerpt-lines (site--og-excerpt-lines excerpt (min 6 (1+ (/ (- excerpt-bottom excerpt-top) 38)))))
          (favicon-data-uri (site--og-favicon-data-uri favicon-path))
-         (title-top 180)
-         (title-last (+ title-top (* (1- (length title-lines)) (+ title-font-size 12))))
-         (tags-y (+ title-last 50))
-         (excerpt-top (if (> (length tags-string) 0) (+ tags-y 52) (+ title-last 56)))
-         (date-x 36) (slug-x (if date (+ date-x 226) date-x))
+         (domain (string-remove-prefix "https://" (string-remove-suffix "/" (site-base-url))))
+         (address (if slug (format "%s/%s" domain (string-remove-suffix "/" slug)) domain))
+         (meta (string-join (delq nil (list date (and meta-right (not (string-empty-p meta-right)) meta-right)))
+                            "  ·  "))
+         (title-x (if favicon-data-uri "132" "64"))
          (tree
           (list 'svg (list :xmlns "http://www.w3.org/2000/svg" :viewBox "0 0 1200 630"
                            :width "1200" :height "630" :font-family (format "%s, monospace" font))
                 (list 'defs nil
-                      (list 'clipPath '(:id "favclip")
-                            (list 'rect '(:x "1074" :y "436" :width "80" :height "80" :rx "14"))))
-                (list 'rect '(:width "1200" :height "630" :fill "#000000"))
-                (list 'rect '(:width "1200" :height "68" :fill "#0a0f0a"))
-                (list 'rect '(:y "68" :width "1200" :height "2" :fill "#111c17"))
-                (list 'text '(:x "36" :y "46" :fill "#b4aeae" :font-size "34")
-                      (list 'raw-html nil "&#x2261;"))
-                (list 'rect '(:x "80" :y "19" :width "2" :height "30" :fill "#248f6c" :opacity "0.6"))
-                (list 'text '(:x "100" :y "46" :fill "#5fd7af" :font-size "30" :font-weight "bold")
+                      '(clipPath (:id "favicon-clip") (rect (:x "64" :y "56" :width "52" :height "52" :rx "12")))
+                      (list 'linearGradient '(:id "edge" :x1 "0" :x2 "1")
+                            (list 'stop (list :offset "0" :stop-color (plist-get colors :accent)))
+                            (list 'stop (list :offset "1" :stop-color (plist-get colors :title)))))
+                (list 'rect (list :width "1200" :height "630" :fill (plist-get colors :background)))
+                (list 'rect (list :x "1" :y "1" :width "1198" :height "628" :fill "none"
+                                  :stroke (plist-get colors :border) :stroke-width "2"))
+                (if favicon-data-uri
+                    (list 'image (list :href favicon-data-uri :x "64" :y "56" :width "52" :height "52"
+                                       :preserveAspectRatio "xMidYMid slice" :clip-path "url(#favicon-clip)"))
+                  '(g nil))
+                (list 'text (list :x title-x :y "93" :fill (plist-get colors :accent) :font-size "30" :font-weight "bold")
                       card-site-title)
-                (list 'text '(:x "1164" :y "46" :fill "#5fd7af" :font-size "22" :text-anchor "end"
-                                 :opacity "0.85")
-                      (list 'raw-html nil "&#xf0a08; Will of D. &#xf0833;"))
+                (list 'text (list :x "1136" :y "93" :fill (plist-get colors :faint) :font-size "22" :text-anchor "end")
+                      address)
                 (append
                  (list 'g nil)
                  (seq-map-indexed
                   (lambda (line index)
-                    (list 'text (list :x "80" :y (number-to-string (+ title-top (* index (+ title-font-size 12))))
-                                      :fill "#ab82ff" :font-weight "bold" :font-size (number-to-string title-font-size))
-                          (if (= index 0) (list 'raw-html nil "<tspan fill=\"#5fd7af\">&#x25C9;</tspan> ") "")
+                    (list 'text (list :x "64" :y (number-to-string (+ title-top (* index title-step)))
+                                      :fill (plist-get colors :title) :font-weight "bold"
+                                      :font-size (number-to-string title-size))
                           line))
                   title-lines))
-                (if (> (length tags-string) 0)
-                    (list 'text (list :x "82" :y (number-to-string tags-y) :fill "#5fd7af"
-                                      :font-size "19" :opacity "0.85")
-                          tags-string)
-                  '(g nil))
                 (append
                  (list 'g nil)
                  (seq-map-indexed
                   (lambda (line index)
-                    (list 'text (list :x "80" :y (number-to-string (+ excerpt-top (* index 40)))
-                                      :fill "#9aa0a6" :font-size "24")
+                    (list 'text (list :x "64" :y (number-to-string (+ excerpt-top (* index 38)))
+                                      :fill (plist-get colors :faint) :font-size "25")
                           line))
                   excerpt-lines))
-                (if favicon-data-uri
-                    (list 'image (list :href favicon-data-uri :x "1074" :y "436" :width "80" :height "80"
-                                       :preserveAspectRatio "xMidYMid slice" :clip-path "url(#favclip)"
-                                       :opacity "0.95"))
-                  '(g nil))
-                (list 'rect '(:y "562" :width "1200" :height "68" :fill "#0a0f0a"))
-                (list 'rect '(:y "562" :width "1200" :height "2" :fill "#248f6c"))
-                (if date
-                    (list 'g nil
-                          (list 'text (list :x (number-to-string date-x) :y "606" :fill "#888888" :font-size "30")
-                                date)
-                          (list 'text (list :x (number-to-string (+ date-x 200)) :y "606" :fill "#3a3a3a"
-                                            :font-size "30")
-                                (list 'raw-html nil "&#xB7;")))
-                  '(g nil))
-                (if slug
-                    (list 'text (list :x (number-to-string slug-x) :y "606" :fill "#5fd7af" :font-size "30"
-                                      :font-weight "bold")
-                          (format "*%s*" slug))
-                  '(g nil))
-                (if (and meta-right (> (length meta-right) 0))
-                    (list 'text '(:x "1164" :y "606" :fill "#888888" :font-size "30" :text-anchor "end")
-                          meta-right)
-                  '(g nil)))))
+                (site--og-chips tags 562)
+                (if (string-empty-p meta)
+                    '(g nil)
+                  (list 'text (list :x "1136" :y "562" :fill (plist-get colors :faint) :font-size "22" :text-anchor "end")
+                        meta))
+                '(rect (:y "620" :width "1200" :height "10" :fill "url(#edge)")))))
     (denden-serialize-node (denden-normalise-node tree))))
 
 ;;;; Wire theme templates into the real build
@@ -554,9 +638,10 @@ for a page with no OG image."
                 :script-href "/js/index.js" :schemes-url "/js/schemes-data.json"
                 :palette-data-script site--palette-data-script-cache
                 :page-title (site--page-title title) :og-title (or title site-title)
-                :menu-items site-menu-main :color-schemes site-color-schemes
-                :social-links site-social-links :site-title site-title :rss-url rss-url
-                :swatch-style-fn #'site-scheme-swatch-style
+                :menu-items site-menu-header :footer-links site-menu-main
+                :site-title site-title :title-quotes site-title-quotes :rss-url rss-url
+                :light-schemes site--light-schemes-cache
+                :footer-content site-footer-content
                 :description (or description site-description)
                 :canonical-url (and url (concat (string-remove-suffix "/" (site-base-url)) "/" url))
                 :favicon-href (concat "/" site-favicon-relative-path)
@@ -617,13 +702,10 @@ to the remaining link budget."
            (dom (with-temp-buffer (insert with-toc-html) (libxml-parse-html-region (point-min) (point-max))))
            (toc-div (car (dom-by-id dom "\\`table-of-contents\\'")))
            (toc-list (car (dom-by-id dom "\\`text-table-of-contents\\'"))))
-      (when toc-div
-        (dom-set-attribute toc-div 'class "table-of-contents")
-        (when toc-list (setcar toc-list 'nav))
-        toc-div))))
+      (when (and toc-div toc-list)
+        (append (list 'details '(:class "toc") '(summary nil "Contents")) (dom-children toc-list))))))
 
-(cl-defun site--assemble-and-write-single-page (&key output pub-dir body-html all-pages lastmod-source
-                                                     unique-id-seed toc modeline-buffer-name)
+(cl-defun site--assemble-and-write-single-page (&key output pub-dir body-html all-pages lastmod-source toc)
   "Assemble and write a themed single-post page at OUTPUT from BODY-HTML."
   (let* ((this-page (seq-find (lambda (p) (equal (plist-get p :url)
                                                  (denden-pretty-url (file-relative-name output pub-dir))))
@@ -631,16 +713,12 @@ to the remaining link budget."
          (title (or (and this-page (plist-get this-page :title)) (file-name-base output)))
          (tags (and this-page (plist-get this-page :tags)))
          (date (and this-page (plist-get this-page :date)))
-         (section (and this-page (plist-get this-page :section)))
          (lastmod (denden-git-lastmod lastmod-source))
          (word-count (site--word-count body-html))
          (reading-time (site--reading-time word-count))
-         (ancestors (when (and section (not (string-empty-p section)))
-                      (list (list :title (capitalize section) :url (format "/%s/" section)))))
          (body-links (denden-collect-body-links body-html))
          (related (and this-page (site--related-pages this-page all-pages body-links)))
-         (prev-next (and this-page (site--prev-next-in-section this-page all-pages)))
-         (unique-id (secure-hash 'md5 unique-id-seed)))
+         (prev-next (and this-page (site--prev-next-in-section this-page all-pages))))
     (site--write-page
      (site--wrap-page
       :title title
@@ -651,7 +729,6 @@ to the remaining link budget."
       :modified-time (and lastmod (not (equal lastmod date)) lastmod)
       :tags tags
       :body (theme-single-page
-             :breadcrumbs (theme-breadcrumbs :ancestors ancestors :title title)
              :post-header (theme-post-header :title title :date date :lastmod lastmod
                                              :wordcount word-count :readingtime reading-time :tags tags)
              :toc toc
@@ -661,14 +738,10 @@ to the remaining link budget."
                                                           :label (plist-get l :text)
                                                           :internal (plist-get l :internal)))
                                         body-links)
-                          :related related)
-             :comment (theme-comment (site--first-mailto site-social-links) title unique-id)
+                          :related related :tag-icons site-tag-icons)
+             :comment (theme-comment (site--first-mailto site-social-links) title)
              :post-navigation (theme-post-navigation :prev (plist-get prev-next :prev)
-                                                     :next (plist-get prev-next :next))
-             :footer (theme-footer site-footer-content)
-             :modeline (theme-modeline :buffer modeline-buffer-name :title title
-                                       :wordcount word-count :readingtime reading-time :date date
-                                       :progress (or (> reading-time 3) (> word-count 500)))))
+                                                     :next (plist-get prev-next :next))))
      output)
     output))
 
@@ -688,9 +761,14 @@ instead of exporting FILENAME a second time."
     (when this-page (plist-put this-page :content-html body-html))
     (site--assemble-and-write-single-page
      :output output :pub-dir pub-dir :body-html body-html :all-pages all-pages
-     :lastmod-source filename :unique-id-seed filename
-     :toc (site--toc-node filename all-pages)
-     :modeline-buffer-name (file-name-nondirectory filename))))
+     :lastmod-source filename
+     :toc (site--toc-node filename all-pages))))
+
+(defun site--pose-entry-rest (html)
+  "Return HTML after its first <hr>, else after its first paragraph, else \"\"."
+  (cond ((string-match (rx "<hr" (* (not (any ">"))) ">") html) (substring html (match-end 0)))
+        ((string-match (rx "</p>") html) (substring html (match-end 0)))
+        (t "")))
 
 (defun site--pose-entry-teaser (html)
   "Return HTML up to its first <hr>, or all of HTML if it has none. An
@@ -706,10 +784,7 @@ show only in the entry's own dialog, not on the compact card."
        (match-string 1 title)))
 
 (defun site--pose-entries (filename all-pages)
-  "Return every level-2 heading in FILENAME, a #+layout: pose file, as a
-(:id :title :date :tags :html :search-text :teaser-html) plist, each its own subtree
-export, newest first. Entries go at the bottom of the file, so equal dates
-keep the later one first."
+  "Return FILENAME's level-2 Pose entries as plists, newest first."
   (with-temp-buffer
     (insert-file-contents filename)
     (org-mode)
@@ -726,8 +801,10 @@ keep the later one first."
                          :tags (org-get-tags nil t)
                          :html html
                          :search-text (downcase (concat title " " (denden-html-plain-text html)))
-                         :teaser-html (site--pose-entry-teaser html))
-                   entries))))
+                         :teaser-html (site--pose-entry-teaser html)
+                         :rest-html (site--pose-entry-rest html))
+                   entries)
+             (plist-put (car entries) :summary-text (site--pose-entry-feed-title (car entries))))))
        nil nil)
       ;; ENTRIES is already in reverse file order, and `sort' is stable.
       (sort entries (lambda (a b) (string> (or (plist-get a :date) "") (or (plist-get b :date) "")))))))
@@ -742,17 +819,6 @@ keep the later one first."
     (when (re-search-forward (rx bol "*") nil t)
       (narrow-to-region (point-min) (match-beginning 0)))
     (org-export-as 'denden-html nil nil t (denden-export-options-with-pages all-pages filename))))
-
-(defun site--pose-entries-data-script (entries)
-  "Return ENTRIES' full title/html, keyed by id, as one <script> tag. The
-Pose page's click-to-expand dialog reads this to show an entry's full
-content, past whatever its card's own teaser cuts off at."
-  (let ((table (make-hash-table :test 'equal)))
-    (dolist (entry entries)
-      (puthash (plist-get entry :id)
-               (list :title (plist-get entry :title) :html (plist-get entry :html))
-               table))
-    (list 'raw-html nil (format "<script>window.__poseEntries=%s;</script>" (json-serialize table)))))
 
 (defun site--pose-entry-feed-title (entry)
   "ENTRY's feed title: the text of its first paragraph, else its heading."
@@ -770,6 +836,20 @@ content, past whatever its card's own teaser cuts off at."
                   :tags (plist-get entry :tags) :content-html (plist-get entry :html)))
           (seq-filter (lambda (entry) (plist-get entry :date)) entries)))
 
+(defun site--pose-feed-pages-for-build (all-pages)
+  "Every Pose entry as feed items, from the pose-layout page in ALL-PAGES."
+  (let ((pose-page (seq-find (lambda (page)
+                               (let ((source (plist-get page :source)) (case-fold-search t))
+                                 ;; Plain text, no Org mode: the keyword sits in the file's head.
+                                 (and source (file-exists-p source)
+                                      (with-temp-buffer
+                                        (insert-file-contents source nil 0 2000)
+                                        (re-search-forward (rx bol "#+layout:" (* blank) "pose" eow) nil t)))))
+                             all-pages)))
+    (when pose-page
+      (site--pose-feed-pages (site--pose-entries (plist-get pose-page :source) all-pages)
+                             (plist-get pose-page :url) (site-base-url)))))
+
 (defun site-publish-pose-page (plist filename pub-dir)
   "Publish FILENAME, a #+layout: pose file, via `theme-pose-page'; one page,
 each entry with its own shareable anchor and expand-to-dialog view."
@@ -781,10 +861,7 @@ each entry with its own shareable anchor and expand-to-dialog view."
                      (org-collect-keywords '("TITLE" "DESC"))))
          (title (or (cadr (assoc "TITLE" keywords)) "Pose"))
          (page-url (denden-pretty-url (file-relative-name output pub-dir)))
-         (this-page (seq-find (lambda (p) (equal (plist-get p :url)
-                                                 (denden-pretty-url (file-relative-name output pub-dir))))
-                              all-pages))
-         (date (and this-page (plist-get this-page :date)))
+         (this-page (seq-find (lambda (p) (equal (plist-get p :url) page-url)) all-pages))
          (entries (site--pose-entries filename all-pages)))
     (site-write-feed-trio (site--pose-feed-pages entries page-url (site-base-url))
                           (file-name-directory output) (site-base-url)
@@ -798,10 +875,7 @@ each entry with its own shareable anchor and expand-to-dialog view."
       :body (theme-pose-page
              :title title
              :intro-html (site--pose-intro-html filename all-pages)
-             :entries entries
-             :entries-data-script (site--pose-entries-data-script entries)
-             :footer (theme-footer site-footer-content)
-             :modeline (theme-modeline :buffer (format "*%s*" (downcase title)) :date date)))
+             :entries entries))
      output)))
 
 (defun site--blank-html-p (html)
@@ -832,14 +906,10 @@ else the post listing fallback."
       :body (if (site--blank-html-p body-html)
                 (let ((home-pages (denden-pages-in-section all-pages "log")))
                   (theme-post-listing
-                   :tag-cloud (theme-tag-cloud :tag-counts (denden-tag-counts all-pages))
+                   :title "Log"
                    :article-list (theme-article-list :grouped-pages (denden-group-pages-by-year home-pages)
-                                                     :tag-icons site-tag-icons)
-                   :footer (theme-footer site-footer-content)
-                   :modeline (theme-modeline :buffer "*log*")))
-              (theme-home-page :title title :body-html body-html
-                               :footer (theme-footer site-footer-content)
-                               :modeline (theme-modeline :buffer "*home*"))))
+                                                     :tag-icons site-tag-icons)))
+              (theme-home-page :title title :body-html body-html)))
      output)
     output))
 
@@ -849,11 +919,6 @@ else the post listing fallback."
                           (insert-file-contents filename)
                           (org-mode)
                           (org-collect-keywords '("LAYOUT"))))))
-
-(defun site--topic-list-buffer-name (title explicit)
-  "Return EXPLICIT #+buffer_name if given, else TITLE's first word lowercased
-and wrapped in *...*."
-  (or explicit (format "*%s*" (downcase (car (split-string title))))))
 
 (defun site--sort-topic-groups (groups)
   "Sort each of GROUPS's :items alphabetically by :name, for #+sort: name."
@@ -870,14 +935,12 @@ quotes, uses), via `theme-topic-list-page'."
          (keywords (with-temp-buffer
                      (insert-file-contents filename)
                      (org-mode)
-                     (org-collect-keywords '("TITLE" "DATE" "SORT" "SHOW_CONSOLE" "CHIP_COLOR" "BUFFER_NAME"))))
+                     (org-collect-keywords '("TITLE" "DATE" "SORT" "SHOW_CONSOLE" "CHIP_COLOR"))))
          (title (or (cadr (assoc "TITLE" keywords)) (file-name-base filename)))
          (date (denden--org-date-to-iso (cadr (assoc "DATE" keywords))))
          (groups (denden-parse-topic-list filename))
          (groups (if (equal (cadr (assoc "SORT" keywords)) "name") (site--sort-topic-groups groups) groups))
-         (all-pages (plist-get plist :denden-all-pages))
-         (chip-color (cadr (assoc "CHIP_COLOR" keywords)))
-         (buffer-name (site--topic-list-buffer-name title (cadr (assoc "BUFFER_NAME" keywords)))))
+         (all-pages (plist-get plist :denden-all-pages)))
     (site--write-page
      (site--wrap-page
       :title title
@@ -887,38 +950,16 @@ quotes, uses), via `theme-topic-list-page'."
              :intro-html (denden-topic-list-intro-html filename)
              :show-console (equal (cadr (assoc "SHOW_CONSOLE" keywords)) "true")
              :items-node (theme-topic-list-items :groups groups :tag-icons site-tag-icons
-                                                 :chip-color chip-color :all-pages all-pages)
-             :footer (theme-footer site-footer-content)
-             :modeline (theme-modeline :buffer buffer-name
-                                       :date (or date (format-time-string "%Y-%m-%d")))))
+                                                 :chip-color (cadr (assoc "CHIP_COLOR" keywords))
+                                                 :all-pages all-pages)))
      output)
     output))
 
-(defun site-publish-themes-page (plist filename pub-dir)
-  "Publish FILENAME (content/themes.org) via `theme-themes-gallery-page', one
-card per `site-all-schemes' entry."
-  (let* ((all-pages (plist-get plist :denden-all-pages))
-         (output (denden-output-file-for filename (cons nil plist)))
-         (title (or (cadr (assoc "TITLE" (with-temp-buffer
-                                           (insert-file-contents filename)
-                                           (org-mode)
-                                           (org-collect-keywords '("TITLE")))))
-                    "Themes"))
-         (body-html (with-temp-buffer
-                      (insert-file-contents filename)
-                      (org-mode)
-                      (org-export-as 'denden-html nil nil t
-                                     (denden-export-options-with-pages all-pages filename)))))
-    (site--write-page
-     (site--wrap-page
-      :title title
-      :url (denden-pretty-url (file-relative-name output pub-dir))
-      :body (theme-themes-gallery-page
-             :title title :body-html body-html
-             :cards (site-all-schemes (plist-get plist :site-custom-css-text))
-             :footer (theme-footer site-footer-content)
-             :modeline (theme-modeline :buffer "*themes*" :date (format-time-string "%Y-%m-%d"))))
-     output)
+(defun site-publish-themes-page (plist filename _pub-dir)
+  "Publish FILENAME (the retired /themes/ gallery) as a redirect to the home page."
+  (let ((output (denden-output-file-for filename (cons nil plist))))
+    (site--write-string (denden-alias-redirect-html (concat (string-remove-suffix "/" (site-base-url)) "/"))
+                        output)
     output))
 
 (defun site--home-page-p (page)
@@ -977,10 +1018,7 @@ the same search box every other topic-list page has."
              :title title
              :intro-html intro-html
              :items-node (theme-topic-list-items :groups groups :tag-icons site-tag-icons
-                                                 :all-pages all-pages :external nil)
-             :footer (theme-footer site-footer-content)
-             :modeline (theme-modeline :buffer "*sitemap*" :title title
-                                       :date (format-time-string "%Y-%m-%d"))))
+                                                 :all-pages all-pages :external nil)))
      output)
     output))
 
@@ -1006,7 +1044,7 @@ the same search box every other topic-list page has."
                                                (and (not (string-empty-p section)) section)))
                                  all-pages))))
 
-(defun site--write-term-page (term count pages buffer-name rss-url url output)
+(defun site--write-term-page (term count pages back-url rss-url url output)
   "Write one term page (/tags/<tag>/ or /refs/<ref>/) for TERM at OUTPUT."
   (site--write-page
    (site--wrap-page
@@ -1014,11 +1052,10 @@ the same search box every other topic-list page has."
     :title term
     :url url
     :body (theme-post-listing
-           :term-header (theme-term-header :tag term :count count :rss-url rss-url)
+           :title (concat "#" term)
+           :term-header (theme-term-header :count count :rss-url rss-url :back-url back-url)
            :article-list (theme-article-list :grouped-pages (denden-group-pages-by-year pages)
-                                             :tag-icons site-tag-icons)
-           :footer (theme-footer site-footer-content)
-           :modeline (theme-modeline :buffer buffer-name)))
+                                             :tag-icons site-tag-icons)))
    output))
 
 (defun site-build-taxonomy-pages (all-pages pub-dir)
@@ -1033,12 +1070,10 @@ into PUB-DIR. Call after the main publish."
         :title (capitalize section)
         :url (format "%s/" section)
         :body (theme-post-listing
-               :tag-cloud (theme-tag-cloud :tag-counts tag-counts)
+               :title (capitalize section)
                :article-list (theme-article-list
                               :grouped-pages (denden-group-pages-by-year (denden-pages-in-section all-pages section))
-                              :tag-icons site-tag-icons)
-               :footer (theme-footer site-footer-content)
-               :modeline (theme-modeline :buffer (format "*%s*" section))))
+                              :tag-icons site-tag-icons)))
        (expand-file-name (format "%s/index.html" section) pub-dir)))
     ;; /tags/ and /refs/ themselves stay rss-url-less (they list every
     ;; term, not one feed's worth), but each term page under them now
@@ -1046,24 +1081,22 @@ into PUB-DIR. Call after the main publish."
     ;; actual feed XML.
     (site--write-page
      (site--wrap-page :title "Tags" :url "tags/"
-                      :body (theme-terms-list :tag-counts tag-counts :footer (theme-footer site-footer-content)
-                                              :modeline (theme-modeline :buffer "*tags*")))
+                      :body (theme-terms-list :title "Tags" :tag-counts tag-counts))
      (expand-file-name "tags/index.html" pub-dir))
     (dolist (tc tag-counts)
       (let* ((tag (plist-get tc :tag)) (tagged (denden-pages-with-tag all-pages tag)))
-        (site--write-term-page tag (length tagged) tagged (format "*%s*" tag)
+        (site--write-term-page tag (length tagged) tagged "/tags/"
                                (format "/tags/%s/rss.xml" (downcase tag))
                                (format "tags/%s/" (downcase tag))
                                (expand-file-name (format "tags/%s/index.html" (downcase tag)) pub-dir))))
     (when ref-counts
       (site--write-page
        (site--wrap-page :title "Refs" :url "refs/"
-                        :body (theme-terms-list :tag-counts ref-counts :footer (theme-footer site-footer-content)
-                                                :modeline (theme-modeline :buffer "*refs*")))
+                        :body (theme-terms-list :title "Refs" :tag-counts ref-counts :base-url "/refs/"))
        (expand-file-name "refs/index.html" pub-dir))
       (dolist (rc ref-counts)
         (let* ((ref (plist-get rc :tag)) (referring (denden-pages-with-ref all-pages ref)))
-          (site--write-term-page ref (length referring) referring (format "*%s*" ref)
+          (site--write-term-page ref (length referring) referring "/refs/"
                                  (format "/refs/%s/rss.xml" (downcase ref))
                                  (format "refs/%s/" (downcase ref))
                                  (expand-file-name (format "refs/%s/index.html" (downcase ref)) pub-dir)))))))
@@ -1083,13 +1116,12 @@ is none."
 
 (defconst site--404-wanted-poster
   '(div (:class "wanted-poster")
-        (p (:class "wanted-poster-heading") "WANTED")
-        (p (:class "wanted-poster-subject") "Page D. Notfound")
-        (p (:class "wanted-poster-tag") "DEAD OR ALIVE")
+        (p nil "WANTED")
+        (p nil "Page D. Notfound")
+        (p nil (strong nil "DEAD OR ALIVE"))
         (p nil "Bounty: 404,069,420")
         (p nil "Last seen: " (code (:id "wanted-lastseen") "parts unknown"))
-        (p (:class "wanted-poster-footer")
-           "Even " (b nil "Roronoa Zoro") " would've found his way here faster."))
+        (p nil (em nil "Even " (b nil "Roronoa Zoro") " would've found his way here faster.")))
   "404 page's WANTED-poster gag box.")
 
 (defconst site--404-wanted-lastseen-script
@@ -1104,7 +1136,7 @@ since static HTML can't know it.")
 (defun site--404-body (all-pages)
   "Return 404.html's body: the void-variable joke, WANTED poster, quick links,
 latest post, and palette hint."
-  (list 'div '(:class "post-body")
+  (list 'div nil
         (list 'p nil (list 'code nil "Symbol's value as variable is void: /404.html"))
         site--404-wanted-poster
         (append
@@ -1112,20 +1144,15 @@ latest post, and palette hint."
                '(li nil (a (:href "/") "Home"))
                '(li nil (a (:href "/log/") "Log")))
          (let ((latest-item (site--404-latest-post-item all-pages))) (when latest-item (list latest-item))))
-        '(p nil "Or open the command palette for everything else:")
-        '(button (:type "button" :class "tag-cloud-btn center" :data-action "open-palette") "M-x (:Command palette)")
+        '(p nil "Or search for everything else: "
+            (button (:type "button" :data-action "open-palette" :hidden t :data-requires-js t) "Search " (kbd nil "x")))
         site--404-wanted-lastseen-script))
 
 (defun site-404-page (all-pages)
-  "Return the 404 page, using ALL-PAGES for the latest-post link, in the usual
-buffer/article/modeline shell."
-  (list 'section '(:class "buffer buffer-content active" :id "buffer-content"
-                          :role "region" :aria-label "Page not found")
-        (list 'div '(:class "buffer-body")
-              (list 'article '(:class "post-content")
-                    '(div (:class "post-header") (h1 (:class "post-title") "Page not found"))
-                    (site--404-body all-pages)))
-        (theme-modeline :buffer "*Messages*")))
+  "Return the 404 page's article, using ALL-PAGES for the latest-post link."
+  (list 'article nil
+        '(header nil (h1 nil "Page not found"))
+        (site--404-body all-pages)))
 
 (defun site-build-404-page (all-pages pub-dir)
   "Write PUB-DIR/404.html, from ALL-PAGES for the latest-post link."
@@ -1259,6 +1286,10 @@ ALIAS/index.html under PUB-DIR."
             all-pages))
    (expand-file-name "search-index.json" pub-dir)))
 
+(defconst site--wander-colors-script
+  "(function(){try{var c=JSON.parse(localStorage.getItem('emacs-wander-colors'));if(c)Object.keys(c).forEach(function(k){document.documentElement.style.setProperty(k,c[k]);});}catch(e){}})();\n"
+  "Appended to wander.js: paints the console in the colours the site saved.")
+
 (defun site-build-wander-js (wander-source-file pub-dir)
   "Write PUB-DIR/wander/console/wander.js from WANDER-SOURCE-FILE, split into
 consoles and pages by H2 label."
@@ -1268,8 +1299,9 @@ consoles and pages by H2 label."
         (dolist (item (plist-get group :items))
           (if is-console (push (plist-get item :url) consoles) (push (plist-get item :url) pages)))))
     (site--write-string
-     (format "const wander = { consoles:\n[%s],\npages:\n[%s],\nstyles: [\"wander-theme.css\"], ignore: [], }\n"
-             (site--wander-js-array (nreverse consoles)) (site--wander-js-array (nreverse pages)))
+     (concat (format "const wander = { consoles:\n[%s],\npages:\n[%s],\nstyles: [\"wander-theme.css\"], ignore: [], }\n"
+                     (site--wander-js-array (nreverse consoles)) (site--wander-js-array (nreverse pages)))
+             site--wander-colors-script)
      (expand-file-name "wander.js" (expand-file-name "wander/console" pub-dir)))))
 
 (defun site--wander-js-array (urls)
@@ -1364,7 +1396,7 @@ CARD-SITE-TITLE, with FAVICON-PATH embedded."
      (site-og-card-svg :title (plist-get page :title)
                        :excerpt (site--og-excerpt-for-page page)
                        :tags (plist-get page :tags)
-                       :slug (file-name-nondirectory (directory-file-name (plist-get page :url)))
+                       :slug (plist-get page :url)
                        :date (plist-get page :date) :meta-right (funcall word-count-fn page)
                        :card-site-title card-site-title :favicon-path favicon-path)
      (site--og-svg-output-path page pub-dir))))
@@ -1382,10 +1414,11 @@ index, OG cards, 404) into PUB-DIR."
          (regular (site--regular-pages enriched))
          (favicon-path (expand-file-name site-favicon-relative-path
                                          (expand-file-name "static" repository-directory))))
-    ;; Log is the only section meant to be syndicated: the rest (Wander,
-    ;; Media, Quotes, and every standalone page) are for browsing, not RSS.
-    ;; The main feed and /log/'s own feed carry the same Log-only content.
-    (site-write-feed-trio (denden-pages-in-section regular "log") pub-dir (site-base-url) site-title
+    ;; Only Log and Pose are syndicated: the rest (Wander, Media, Quotes,
+    ;; every standalone page) are for browsing. The main feed carries both;
+    ;; /log/ and /pose/ each keep a feed of their own.
+    (site-write-feed-trio (append (denden-pages-in-section regular "log") (site--pose-feed-pages-for-build all-pages))
+                          pub-dir (site-base-url) site-title
                           site-description site-author-name site-author-email nil site-copyright)
     (site-write-feed-trio (denden-pages-in-section regular "log") (expand-file-name "log" pub-dir)
                           (site-base-url) site-title site-description
@@ -1420,17 +1453,6 @@ index, OG cards, 404) into PUB-DIR."
 
 ;;;; org-publish project definition, real build entry points
 
-;; sidenote is inline (mid-sentence), unlike note/tip/warn -- Org special
-;; blocks are always block-level, so there's no equivalent syntax for
-;; those. A global macro is the idiomatic fit instead: {{{sidenote(text)}}}
-;; anywhere in a post expands via this @@html:...@@ export snippet, no
-;; per-file #+macro: declaration needed. Text inside is normal Org content
-;; (formatting like *bold* still works), unlike Hugo's {{< sidenote >}}
-;; shortcode, whose .Inner went through markdownify -- a real behaviour
-;; difference from the old mechanism, not just a syntax port.
-(add-to-list 'org-export-global-macros
-             (cons "sidenote" "@@html:<aside class=\"sidenote\">@@$1@@html:</aside>@@"))
-
 (defconst site-async-init-file
   (expand-file-name "site-async-init.el" (expand-file-name "site" denden-repository-directory))
   "Path to site-async-init.el, computed once at load time so any later caller
@@ -1450,6 +1472,8 @@ works, not just site.el's own load.")
              ;; resolve yet. Mark them instead of aborting the whole file's
              ;; export.
              :with-broken-links 'mark
+             ;; Real disabled <input type="checkbox">, not <code>[X]</code>.
+             :html-checkbox-type 'html
              ;; A #+draft: t file is excluded from a non-draft build: this
              ;; site's prod command is `hugo --minify', no -D.
              :exclude (denden-draft-exclude-regexp (expand-file-name "content" denden-repository-directory)))
@@ -1505,6 +1529,9 @@ hand.")
     (make-directory (file-name-directory output) t)
     (write-region (site-schemes-json (site--custom-css-text)) nil output)))
 
+(defvar site--light-schemes-cache nil
+  "Scheme names with a readable light variant, set by `site--inject-all-pages'.")
+
 (defvar site--palette-data-script-cache nil
   "This build's command-palette data script, a `raw-html' node, computed once
 by `site--inject-all-pages'.")
@@ -1519,6 +1546,8 @@ once, stashed for reuse across pages."
     (setcdr entry (plist-put (plist-put (copy-sequence (cdr entry)) :denden-all-pages all-pages)
                              :site-custom-css-text (site--custom-css-text)))
     (setq site--palette-data-script-cache (site--palette-data-script all-pages))
+    (setq site--light-schemes-cache
+          (site-light-scheme-names site-color-schemes (site-parse-custom-css-schemes (site--custom-css-text))))
     all-pages))
 
 (defun site-build (&optional force)
