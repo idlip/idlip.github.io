@@ -6,12 +6,8 @@ configuration as arguments to these functions. See the top-level =README.org= fo
 
 * For everyday edits
 To change how the site looks, edit the CSS files directly. =theme.el=
-never sets colors or a =<style>= block, except for a few small computed
-swatch styles for the scheme-picker dots.
-- The main stylesheet: =assets/css/theme.css=. One file, covering both
-  this theme's own rules and this site's overrides and custom schemes.
-  The two used to be separate files (=theme.css= and =custom.css=),
-  merged 2026-09-30 since this theme only ever serves this one site.
+never sets colors or a =<style>= block.
+- The main stylesheet: =assets/css/theme.css=. The look is called *Kenbun* (reading first), which replaced *Hakimacs* (the fake Emacs frame) on 2026-11-19; see =docs/css-design.org=. Elements get their look from =@layer base=; a short list of primitives covers the rest. Components read only the colour aliases in =@layer tokens=, never raw =--baseXX=.
 - The wander-console stylesheet: =assets/css/wander-theme.css=.
 
 Edit these files with normal CSS tools. Nothing in them is generated.
@@ -27,8 +23,8 @@ only points a =<script src>= at it.
 
 A template in this file is a plain Lisp list:
 =(TAG (:attr "value" ...) CHILD1 CHILD2 ...)=. For example,
-=(a (:href "/" :class "menu-bar-title") "Home")= becomes
-=<a href="/" class="menu-bar-title">Home</a>=. A bare string is a text
+=(a (:href "/" :class "site-title") "Home")= becomes
+=<a href="/" class="site-title">Home</a>=. A bare string is a text
 node, escaped for HTML automatically. =(raw-html nil "<b>already
 html</b>")= inserts already-rendered HTML without escaping it. Post
 bodies from org-export use this. Small template functions build up
@@ -50,15 +46,32 @@ markup as plain HTML first, then converting it in.
 
 ** What is in here, top to bottom
 
-- Emacs-frame chrome. The menu bar, modeline, command-palette dialog,
-  lightbox, footer wrapper, and the =<html>=/=<head>=/=<body>= skeleton
-  (=theme-baseof=).
-- A single post or page. Breadcrumbs, the post header, references and
-  See Also, the comment box, and previous/next navigation.
-- Listing pages. The tag cloud, article list, term pages, and sitemap.
+- The page shell (=theme-baseof=). =body > header= holds the site title (sways on hover, a random quote in its tooltip) and two rows: the =site-menu-header= links, then the icon toolbar (width, font, scheme, dark/light, random, M-x) with the toast. =main= holds the page. =body > footer= lists every page from =site-menu-main= (=nav#all-pages=) and the footer content. Then the command-palette dialog, and the pre-paint script in =<head>= that applies the stored scheme, variant, font and width before the first paint.
+- A single post or page. The post header, references and See Also, the
+  comment box, and previous/next navigation.
+- Listing pages. The article list, the tags page, and term pages.
 - Topic-list pages. The shape used for wander, projects, media, quotes,
-  and uses pages.
-- The =/themes/= gallery. The scheme-card grid.
+  uses, and the sitemap.
+- The Pose page. One folded entry per day ("date :: title" heading, rest in =<details>=), the newest open.
+- The Wander launch link and its console dialog (=theme--wander-launch=, =theme--wander-dialog=).
+
+** Primitives: new pages reuse these
+Every page is built from these and plain elements. A new page or new
+structure must reuse them. If it seems to need new CSS, fix the primitive
+instead of adding a page-specific rule.
+| primitive           | markup                                             | built by                                   |
+|---------------------+----------------------------------------------------+--------------------------------------------|
+| list                | =ul.list= / =ol.list= of rows; groups are =section= + =h2= | =theme--page-row=, =theme-topic-item=          |
+| list controls       | filter =input[data-filter]= + view radios            | =theme-list-filter=                          |
+| heading with # link | =h2[id]= + =a.heading-anchor=                          | =theme--heading=, =denden-headline=            |
+| pager               | =nav.pager= with =rel= prev/next                       | =theme-post-navigation=                      |
+| callout             | =div.callout[role=note][data-callout]=               | =denden-special-block=                       |
+| grid block          | =div.grid=                                           | Org =#+begin_grid=                           |
+| TOC                 | =details.toc=                                        | =site--toc-node=                             |
+| comment             | =form.comment=                                       | =theme-comment=                              |
+| badge               | =a.badge=                                            | =theme-badge=                                |
+| dialog              | =dialog= (palette, Wander console)                   | =theme-palette-dialog=, =theme--wander-dialog= |
+| toast               | =output.toast[popover]=                              | =theme-header=                               |
 
 ** How the CSS pipeline works
 Most CSS is hand-edited, in =theme.css=, named above. Two small parts
@@ -72,13 +85,12 @@ these two generated blocks into =public-denden/css/bundle.css=. Each
 part sits under its own comment banner. Open that file after a build to
 see exactly what shipped.
 
-** Search box, tag cloud, and topic-list filtering
-Two scripts carry this behavior:
-- =theme--post-listing-search-script=. Search and tag-cloud clicks on
-  the post-listing page.
-- =theme--topic-list-search-script=. Search and view-toggle on
-  topic-list pages.
+** JS-only controls
+Controls that need JS (the toolbar, list filters, view radios) render
+with =hidden= and =data-requires-js=; =index.js= reveals them. One
+shared filter in =index.js= serves every list: it hides rows by their
+=data-filter-text= and hides a =section= once all its rows are hidden.
+The view radios (List, Grid, Compact) work through CSS =:has()= alone; JS only remembers the
+choice.
 
-Both match the live Hugo theme's =list-search-js.html= and
-=topic-list-js.html= partials. Both use =raw-html=, because their
-=&&= operators would otherwise get escaped by a plain =script= node.
+Every setting change shows a short toast: a native =popover= with =role=status=, so screen readers hear it too (=announce= in =index.js=). Toolbar buttons and content buttons share one =data-action= table; older action names used inside content pages (=browse-schemes=) still work.

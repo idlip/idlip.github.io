@@ -5,38 +5,28 @@ This file explains =site.el=. Reusable code that any denden site can use lives i
 * For everyday edits
 These are the places to change for common, cosmetic changes. No new Lisp functions are needed for any of them.
 
-- New menu link: edit =site-menu-main=.
-- New color scheme card: edit =site-color-schemes=. It needs a matching
-  entry in =site-schemes-base16.el=, or a =/* @scheme: */= block in
-  =assets/css/theme.css=.
-- New social link: edit =site-social-links=.
-- New badge: edit =site-badges=.
-- New tag icon: edit =site-tag-icons=.
+- Header link: edit =site-menu-header= (short labels, no icons; "More…" jumps to the footer list).
+- Footer and palette link: edit =site-menu-main= (every page, with its icon). The two lists are independent on purpose.
+- Curated color scheme (a light and dark family at the top of the palette list): edit =site-color-schemes=. It needs a matching entry in =site-schemes-base16.el=, or a =/* @scheme: */= block in =assets/css/theme.css=. A variant that fails =site-contrast-floor= is dropped at build time, not shown.
+- Site title quotes (the tooltip and click toast): edit =site-title-quotes=.
+- Social link (shown on the About page through =theme-social-links-grid=): edit =site-social-links=.
+- Badge: edit =site-badges=.
+- Tag icon (log rows and topic lists): edit =site-tag-icons=.
+- Chip colour on one topic-list page: set =#+chip_color: base0E= (any base16 slot) in that file.
 
-* For developers
-** How this file is organized
+* How this file is organized
 Content, from top to bottom of the file:
-- Configuration data. Menu items, color schemes, social links, tag icons,
-  and footer content. These are plain constants. Edit them directly for
-  cosmetic changes.
-- Base16 scheme handling. This builds the CSS for the scheme switcher and
-  the data for the =/themes/= gallery. It also parses custom schemes in
-  =assets/css/theme.css=, using the =/* @scheme: ... */= comment
-  convention.
+- Configuration data. Both menus, color schemes, title quotes, social links, tag icons, badges, and footer content. These are plain constants. Edit them directly for cosmetic changes.
+- Base16 scheme handling. =site-contrast-floor= and =site-scheme-readable-p= check every scheme (text 7:1, links 4.5:1, accent and headings 3:1). =site-scheme-css= writes the CSS for readable variants only, =site-light-scheme-names= tells the pre-paint script which families have a light variant, and =site-schemes-json= writes the palette list (curated families first, then every readable scheme). It also parses custom schemes in =assets/css/theme.css=, using the =/* @scheme: ... */= comment convention.
 - =site-generate-schemes-base16-file=. This regenerates
   =site-schemes-base16.el=, the committed file with 304 base16 entries.
   Run it by hand only when the =data/schemes/= submodule updates. No part
   of the real build calls this function.
 - Base16 code-highlight mapping. This maps each htmlize class to its
   =--baseNN= token.
-- The OG card template. This site's own SVG card layout and colors. The
-  reusable word-wrap and truncate code lives in =denden.el=.
-- Page dispatch (=site-publish-page= and related functions). This is the
-  largest section. It builds the home page, single posts, topic-list
-  pages, the themes gallery, the sitemap, container files for subtree
-  posts, and taxonomy pages such as =/tags/= and =/refs/=.
-- Other outputs. Feeds, =sitemap.xml=, =robots.txt=, aliases, the search
-  index, =wander.js=, OG cards, and =404.html=.
+- The OG card template (=site-og-card-svg=). A 1200x630 card in the Haki colours of =site--og-colors=: favicon and site title, page address, title, excerpt, tag chips, date and reading time. The reusable word-wrap and truncate code lives in =denden.el=. Run =just og= to turn the SVGs into PNGs.
+- Page dispatch (=site-publish-page= and related functions). This is the largest section. It builds the home page, single posts, topic-list pages, the Pose page, the sitemap, and taxonomy pages such as =/tags/= and =/refs/=. The retired =/themes/= page is written as a redirect home.
+- Other outputs. Feeds (the main feed carries Log and Pose; =/log/= and =/pose/= keep their own), =sitemap.xml=, =robots.txt=, aliases, the search index, =wander.js= (with =site--wander-colors-script= appended, so the console takes the site's colours), OG cards, and =404.html=.
 - =org-publish-project-alist= and =site-build=/=site-build-async=. These
   are the real build entry points that =denden-build= calls.
 - The section that connects this site to denden. It sets every
@@ -44,11 +34,12 @@ Content, from top to bottom of the file:
   the content directory, the post directory, the container file, and the
   build functions. Copy this pattern if you point denden at a second
   site.
+- Per-build caches set by =site--inject-all-pages=: the palette data script and the light-scheme names, so each page does not recompute them.
 - This site's own commands, added with =denden-define-command=. Right
   now there is only =denden-idlip-og-regenerate-all=. Add new commands
   here, not in =denden.el=.
 
-** Adding a new page kind
+* Adding a new page kind
 A new page kind needs its own template, not just a new page. To add one,
 write a =site-publish-<kind>-page= function. Then add a clause to the
 =cond= in =site-publish-page=.

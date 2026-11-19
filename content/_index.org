@@ -73,7 +73,7 @@ reading, quotes I keep, and whatever I freshly bake with site.
                       (lambda (group)
                         (let ((last-item (car (last (plist-get group :items)))))
                           (list 'tr nil
-                                (list 'td nil (list 'a '(:href "/quotes/")
+                                (list 'th '(:scope "row") (list 'a '(:href "/quotes/")
                                                     (concat (funcall group-icon (plist-get group :label))
                                                             (plist-get group :label))))
                                 (list 'td nil (if last-item
@@ -87,7 +87,7 @@ reading, quotes I keep, and whatever I freshly bake with site.
                       (lambda (group)
                         (let ((last-item (car (last (plist-get group :items)))))
                           (list 'tr nil
-                                (list 'td nil (list 'a '(:href "/media/")
+                                (list 'th '(:scope "row") (list 'a '(:href "/media/")
                                                     (concat (funcall group-icon (plist-get group :label))
                                                             (plist-get group :label))))
                                 (list 'td nil (if last-item
@@ -112,15 +112,15 @@ reading, quotes I keep, and whatever I freshly bake with site.
                          "none yet"))
          (table (append
                  (list 'table nil
-                       (list 'tr nil (list 'th nil "One") (list 'th nil "Piece"))
-                       (list 'tr nil (list 'td nil (list 'a '(:href "/log/")
+                       (list 'thead nil (list 'tr nil (list 'th '(:scope "col") "One") (list 'th '(:scope "col") "Piece")))
+                       (list 'tr nil (list 'th '(:scope "row") (list 'a '(:href "/log/")
                                                          (concat (cdr (assoc "rss" site-tag-icons)) "Log")))
                              (list 'td nil post-cell))
-                       (list 'tr nil (list 'td nil (list 'a '(:href "/pose/") " Pose")) (list 'td nil pose-cell))
-                       (list 'tr nil (list 'td nil (list 'a '(:href "/wander/") " Wander")) (list 'td nil wander-cell)))
+                       (list 'tr nil (list 'th '(:scope "row") (list 'a '(:href "/pose/") " Pose")) (list 'td nil pose-cell))
+                       (list 'tr nil (list 'th '(:scope "row") (list 'a '(:href "/wander/") " Wander")) (list 'td nil wander-cell)))
                  media-rows
                  quote-rows
-                 (list (list 'tr nil (list 'td nil (list 'a '(:href "/sitemap/") " Recent Edits")) (list 'td nil updated-cell))))))
+                 (list (list 'tr nil (list 'th '(:scope "row") (list 'a '(:href "/sitemap/") " Recent Edits")) (list 'td nil updated-cell))))))
     (denden-serialize-node (denden-normalise-node table)))
 #+end_src
 @@html:<br>@@
