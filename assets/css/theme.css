@@ -1321,28 +1321,42 @@
   }
 
   /* ── References / citations ── */
-  .post-navigation {
-    margin-top: 3em;
-    padding-top: 1em;
-    border-top: 1px solid var(--border-dim);
-    & > div {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1em;
-      /* The lone spacer <span> between prev/next; grows to push a single
-         link to its own side rather than both sitting flush left. */
-      & > span {
-        flex: 1;
-      }
+  /* Pager: one look for every prev/next pair, a <nav class="pager"> holding
+     links or buttons (post footer, Pose dialog, anywhere else). */
+  .pager {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-top: 1.25rem;
+    padding-top: 0.75rem;
+    border-top: 1px dashed var(--border-dim);
+    /* The lone spacer <span> between prev/next; grows to push a single
+       link to its own side rather than both sitting flush left. */
+    & > span {
+      flex: 1;
     }
-    & a {
+    & > :is(a, button) {
+      font: inherit;
       color: var(--link);
       text-decoration: none;
+      background: none;
+      border: 1px solid var(--border-dim);
+      border-radius: 3px;
+      padding: 0.25rem 0.75rem;
+      cursor: pointer;
+      &:is(:hover:not(:disabled), :focus-visible) {
+        color: var(--link-hover);
+        border-color: var(--border-highlight);
+      }
+      &:disabled {
+        opacity: 0.35;
+        cursor: default;
+      }
     }
-    & a:is(:hover, :focus-visible) {
-      color: var(--link-hover);
-    }
+  }
+  article .pager {
+    margin-top: 3em;
   }
 
   .references {

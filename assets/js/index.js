@@ -163,14 +163,55 @@
     var dlgTitleText = document.createElement("span");
     dlgTitleLink.appendChild(dlgTitleText);
 
+    var cards = Array.prototype.slice.call(document.querySelectorAll(".pose-card"));
+    var newerButton = document.getElementById("pose-dialog-newer");
+    var olderButton = document.getElementById("pose-dialog-older");
+    var currentId = null;
+
+    // Cards the search currently shows, plus the open entry even if the
+    // search has since hidden it, so its own position stays findable.
+    function navigableCards() {
+      return cards.filter(function (card) {
+        return card.style.display !== "none" || card.querySelector("h2[id]").id === currentId;
+      });
+    }
+
+    // The list runs newest first, so "newer" is the previous card.
+    function neighbour(offset) {
+      var list = navigableCards();
+      var index = list.findIndex(function (card) {
+        return card.querySelector("h2[id]").id === currentId;
+      });
+      var target = list[index + offset];
+      return index === -1 || !target ? null : target.querySelector("h2[id]").id;
+    }
+
     function show(id) {
       var entry = entries[id];
       if (!entry) return false;
+      currentId = id;
       dlgTitleText.textContent = entry.title;
       dlgContent.innerHTML = entry.html;
       dlgTitleLink.href = "#" + id;
+      dlg.scrollTop = 0;
+      if (newerButton) newerButton.disabled = !neighbour(-1);
+      if (olderButton) olderButton.disabled = !neighbour(1);
       return true;
     }
+
+    // replaceState, not location.hash, so stepping through entries leaves
+    // one history entry and does not re-trigger hashchange.
+    function step(offset) {
+      var id = neighbour(offset);
+      if (!id || !show(id)) return;
+      history.replaceState(null, "", "#" + id);
+    }
+    if (newerButton) newerButton.addEventListener("click", function () { step(-1); });
+    if (olderButton) olderButton.addEventListener("click", function () { step(1); });
+    dlg.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowLeft") step(-1);
+      if (e.key === "ArrowRight") step(1);
+    });
 
     // The title itself is a real <button> (not the whole <li>), so this is
     // keyboard-reachable and activatable (Tab, Enter/Space) for free, and
@@ -185,10 +226,51 @@
 
     function openFromHash() {
       var id = location.hash.slice(1);
-      if (id && show(id)) dlg.showModal();
+      if (id && show(id) && !dlg.open) dlg.showModal();
     }
     window.addEventListener("hashchange", openFromHash);
     openFromHash();
+
+    initPoseSearch(cards);
+  }
+
+  // Search over each card's whole entry text (its data-search), not just the
+  // teaser on show. Every word must match, in any order, like topic-list.
+  function initPoseSearch(cards) {
+    var input = document.getElementById("topic-search");
+    var count = document.getElementById("topic-count");
+    if (!input) return;
+
+    function run(raw) {
+      var tokens = raw.toLowerCase().trim().split(/\s+/).filter(Boolean);
+      var matches = 0;
+      cards.forEach(function (card) {
+        var haystack = card.dataset.search || "";
+        var matched = tokens.every(function (token) { return haystack.indexOf(token) !== -1; });
+        card.style.display = matched ? "" : "none";
+        if (matched) matches++;
+      });
+      if (count) {
+        count.textContent = tokens.length
+          ? matches + " match" + (matches !== 1 ? "es" : "")
+          : cards.length + " entries";
+      }
+    }
+
+    input.addEventListener("input", function () { run(input.value); });
+    document.addEventListener("keydown", function (e) {
+      var tag = document.activeElement.tagName;
+      if (e.key === "/" && tag !== "INPUT" && tag !== "TEXTAREA" && !document.querySelector("dialog[open]")) {
+        e.preventDefault();
+        input.focus();
+        input.select();
+      }
+      if (e.key === "Escape" && document.activeElement === input) {
+        input.value = "";
+        run("");
+        input.blur();
+      }
+    });
   }
 
   // ── Init ───────────────────────────────────────────────────────────────────

@@ -313,11 +313,15 @@ the clicked image has no org #+caption:, and CSS hides it in that case.")
 (defconst theme-pose-dialog
   '(dialog (:id "pose-dialog" :aria-label "Pose entry")
            (h2 (:id "pose-dialog-title"))
-           (div (:id "pose-dialog-content" :class "post-body")))
+           (div (:id "pose-dialog-content" :class "post-body"))
+           (nav (:class "pager" :aria-label "Entries")
+                (button (:type "button" :id "pose-dialog-newer") "← Newer")
+                (button (:type "button" :id "pose-dialog-older") "Older →")))
   "The shared Pose entry dialog: the same look as `theme-lightbox' (CSS
 groups the two by selector, nothing new), content styled by the existing
 `post-body' class rather than a dedicated one. JS fills title/content in
-from `window.__poseEntries', keyed by the clicked card's own heading id.")
+from `window.__poseEntries', keyed by the clicked card's own heading id. The
+two nav buttons step to the neighbouring visible card; JS owns their state.")
 
 
 (defconst theme--base16-keys
@@ -392,7 +396,7 @@ fediverse:creator, OG/Twitter meta, RSS autodiscovery, and article JSON-LD."
      ;; menu's own copy of rss-url.
      (when rss-url
        (list (list 'link (list :rel "alternate" :type "application/rss+xml"
-                                :title (format "%s RSS feed" og-title) :href rss-url))))
+                               :title (format "%s RSS feed" og-title) :href rss-url))))
      (when canonical-url
        (append
         (list (list 'meta (list :property "og:title" :content og-title))
@@ -610,15 +614,12 @@ RELATED; either omitted when empty."
 (cl-defun theme-post-navigation (&key prev next)
   "PREV/NEXT are (:title :url) page-metadata-shaped plists or nil."
   (append
-   (list 'nav '(:class "post-navigation"))
-   (list
-    (append
-     (list 'div nil)
-     (when prev (list (list 'a (list :id "post-prev" :href (concat "/" (plist-get prev :url)))
-                            (concat "← " (truncate-string-to-width (plist-get prev :title) 40 nil nil " …")))))
-     (list '(span nil))
-     (when next (list (list 'a (list :id "post-next" :href (concat "/" (plist-get next :url)))
-                            (concat (truncate-string-to-width (plist-get next :title) 40 nil nil " …") " →"))))))))
+   (list 'nav '(:class "pager" :aria-label "Post navigation"))
+   (when prev (list (list 'a (list :id "post-prev" :href (concat "/" (plist-get prev :url)))
+                          (concat "← " (truncate-string-to-width (plist-get prev :title) 40 nil nil " …")))))
+   (list '(span nil))
+   (when next (list (list 'a (list :id "post-next" :href (concat "/" (plist-get next :url)))
+                          (concat (truncate-string-to-width (plist-get next :title) 40 nil nil " …") " →"))))))
 
 (cl-defun theme-single-page (&key breadcrumbs post-header toc body-html references comment
                                   post-navigation footer modeline)
@@ -662,7 +663,7 @@ to the dialog; see `site--pose-entries-data-script')."
   (let* ((pose-list (append (list 'ul '(:class "pose-list"))
                             (mapcar
                              (lambda (entry)
-                               (list 'li '(:class "pose-card")
+                               (list 'li (list :class "pose-card" :data-search (plist-get entry :search-text))
                                      (list 'h2 (list :id (plist-get entry :id))
                                            (list 'button '(:type "button" :class "pose-card-trigger")
                                                  (plist-get entry :title)))
@@ -673,7 +674,10 @@ to the dialog; see `site--pose-entries-data-script')."
                          (list 'div '(:class "post-header") (list 'h1 '(:class "post-title") title)))
                    (unless (or (null intro-html) (string-empty-p intro-html))
                      (list (list 'div '(:class "post-body") (list 'raw-html nil intro-html))))
-                   (list pose-list))))
+                   (list (theme--list-search :placeholder "search every entry… (/ to focus, Esc to clear)"
+                                             :count-text (format "%d entries" (length entries))
+                                             :view-toggle nil)
+                         pose-list))))
     (append
      (list 'section (list :class "buffer buffer-content active" :id "buffer-content"
                           :role "region" :aria-label title)
@@ -1027,19 +1031,21 @@ site's own pages instead."
               (theme--topic-group-items group tag-icons chip-color all-pages external)))
       groups))))
 
-(cl-defun theme--list-search (&key placeholder count-text)
-  "The search box and list/grid view-toggle shared by topic-list and the
-themes gallery."
-  (list 'div '(:class "list-search" :role "search")
-        '(span (:class "list-search-prompt") "Search:")
-        (list 'input (list :type "text" :id "topic-search" :class "list-search-input"
-                           :placeholder placeholder :autocomplete "off"
-                           :autocapitalize "off" :spellcheck "false"))
-        (list 'span (list :id "topic-count" :class "list-search-count") (or count-text ""))
-        '(input (:type "checkbox" :id "view-toggle" :class "view-toggle-input"
-                       :aria-label "Toggle list / grid view" :title "Toggle list / grid view"))
-        '(label (:for "view-toggle" :class "tag-cloud-btn")
-                (span (:class "nf" :aria-hidden "true") "󰕰 "))))
+(cl-defun theme--list-search (&key placeholder count-text (view-toggle t))
+  "The search box shared by topic-list, the themes gallery and Pose. Also the
+list/grid view-toggle, unless VIEW-TOGGLE is nil."
+  (append
+   (list 'div '(:class "list-search" :role "search")
+         '(span (:class "list-search-prompt") "Search:")
+         (list 'input (list :type "text" :id "topic-search" :class "list-search-input"
+                            :placeholder placeholder :autocomplete "off"
+                            :autocapitalize "off" :spellcheck "false"))
+         (list 'span (list :id "topic-count" :class "list-search-count") (or count-text "")))
+   (when view-toggle
+     (list '(input (:type "checkbox" :id "view-toggle" :class "view-toggle-input"
+                          :aria-label "Toggle list / grid view" :title "Toggle list / grid view"))
+           '(label (:for "view-toggle" :class "tag-cloud-btn")
+                   (span (:class "nf" :aria-hidden "true") "󰕰 "))))))
 
 (defconst theme--topic-list-search-script
   (list 'raw-html nil
