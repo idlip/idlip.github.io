@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: webdev</title><subtitle>Posts tagged webdev on Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/rss.xml" /><id>https://idlip.in/</id><updated>2026-11-20T00:00:00Z</updated><author><name>Dilip | Zororg</name><email>hi@idlip.in</email></author><generator uri="https://gohugo.io/">Hugo</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Remaking the site: Hakimacs to Kenbun</title><link rel="alternate" type="text/html" href="https://idlip.in/log/remake-kenbun/" /><id>https://idlip.in/log/remake-kenbun/</id><published>2026-11-19T00:00:00Z</published><updated>2026-11-20T00:00:00Z</updated><category term="denden" label="denden" scheme="https://idlip.in/tags/"></category><category term="webdev" label="webdev" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
-In January I wrote about <a href="/log/revamp-blog-2026/">Revamp the blogs</a>. Ten months later, here we go once more. <i>Same same, but really different</i>
+In January I wrote about <a href="/log/revamp-blog-2026/">Revamp the blogs</a> and in march about <a href="/log/emacs-theme-site/">Replenish theme - its Emacsy</a>. Now, here we go once more. <i>Same same, but really different</i>
 </p>
 
 <p>
@@ -12,17 +12,17 @@ The new look is <i>Kenbun</i>, named after <a href="https://onepiece.fandom.com/
 </p>
 <div id="outline-container-before-and-after" class="outline-2">
 <h2 id="before-and-after">Before and after<a class="heading-anchor" href="#before-and-after" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-orgdfcf0f9">
-<div class="grid" id="org6c3cc98">
+<div class="outline-text-2" id="text-org4c6aa5b">
+<div class="grid" id="org1f04dc5">
 
-<div id="orgf9cd715" class="figure">
+<div id="org407f1fc" class="figure">
 <p><img src="/images/kenbun/hakimacs-home.webp" alt="hakimacs-home.webp" />
 </p>
 <p>Before: the home page as an Emacs window, with menu bar and modeline</p>
 </div>
 
 
-<div id="org55a950d" class="figure">
+<div id="org7a3c95d" class="figure">
 <p><img src="/images/kenbun/home.webp" alt="home.webp" />
 </p>
 <p>After: the home page in Kenbun, title, links and a plain column</p>
@@ -30,16 +30,16 @@ The new look is <i>Kenbun</i>, named after <a href="https://onepiece.fandom.com/
 
 </div>
 
-<div class="grid" id="org577de1d">
+<div class="grid" id="org8888596">
 
-<div id="orgf3fb1b7" class="figure">
+<div id="org7015d79" class="figure">
 <p><img src="/images/kenbun/hakimacs-list.webp" alt="hakimacs-list.webp" />
 </p>
 <p>Before: the posts listing page</p>
 </div>
 
 
-<div id="orgd520d79" class="figure">
+<div id="org273b4c5" class="figure">
 <p><img src="/images/kenbun/list.webp" alt="list.webp" />
 </p>
 <p>After: the new simple listing page</p>
@@ -48,16 +48,16 @@ The new look is <i>Kenbun</i>, named after <a href="https://onepiece.fandom.com/
 </div>
 
 
-<div class="grid" id="org58f2d9d">
+<div class="grid" id="orgbe18b68">
 
-<div id="org8b6115b" class="figure">
+<div id="orge899ab5" class="figure">
 <p><img src="/images/kenbun/hakimacs-post.webp" alt="hakimacs-post.webp" />
 </p>
 <p>Before: a post inside the Emacs frame</p>
 </div>
 
 
-<div id="orgb86bb53" class="figure">
+<div id="org28c0182" class="figure">
 <p><img src="/images/kenbun/post.webp" alt="post.webp" />
 </p>
 <p>After: the same post, just the words</p>
@@ -68,7 +68,7 @@ The new look is <i>Kenbun</i>, named after <a href="https://onepiece.fandom.com/
 </div>
 <div id="outline-container-what-went" class="outline-2">
 <h2 id="what-went">What went<a class="heading-anchor" href="#what-went" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org8833f13">
+<div class="outline-text-2" id="text-orgd9fb720">
 <ul class="org-ul">
 <li>The fake Emacs frame: menu bar, modeline, echo area, hamburger menu.</li>
 <li>Breadcrumbs, the reading progress bar, sidenotes, code copy buttons, the image lightbox.</li>
@@ -78,7 +78,7 @@ The new look is <i>Kenbun</i>, named after <a href="https://onepiece.fandom.com/
 </div>
 <div id="outline-container-what-stayed-because-i-want-it" class="outline-2">
 <h2 id="what-stayed-because-i-want-it">What stayed, because I want it<a class="heading-anchor" href="#what-stayed-because-i-want-it" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org6943903">
+<div class="outline-text-2" id="text-org5075895">
 <ul class="org-ul">
 <li>My fonts, the heading glyphs, and the five font modes.</li>
 <li>base16 colour schemes, with Haki as the default.</li>
@@ -89,7 +89,7 @@ The new look is <i>Kenbun</i>, named after <a href="https://onepiece.fandom.com/
 </div>
 <div id="outline-container-by-the-numbers" class="outline-2">
 <h2 id="by-the-numbers">By the numbers<a class="heading-anchor" href="#by-the-numbers" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org0690245">
+<div class="outline-text-2" id="text-org78a5a9e">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -131,7 +131,7 @@ The new look is <i>Kenbun</i>, named after <a href="https://onepiece.fandom.com/
 </div>
 <div id="outline-container-what-i-kept-in-mind" class="outline-2">
 <h2 id="what-i-kept-in-mind">What I kept in mind<a class="heading-anchor" href="#what-i-kept-in-mind" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org3b4c2db">
+<div class="outline-text-2" id="text-org69395f2">
 <ul class="org-ul">
 <li>Style plain HTML elements first, and keep a short list of shared pieces. A new page reuses them; it
 never gets its own CSS.</li>
