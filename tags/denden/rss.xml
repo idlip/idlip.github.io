@@ -4,7 +4,7 @@ In January I wrote about <a href="/log/revamp-blog-2026/">Revamp the blogs</a> a
 </p>
 
 <p>
-The old look, <i>Hakimacs</i>, painted every page as an Emacs window: a menu bar on top, a modeline at the bottom, an echo area, dropdowns, frosted glass. I loved how it looked. But over time I kept adding "helpers for reading" and now the helpers look noisier than the reading. I like how <a href="https://bearblog.dev/">Bear Blog</a>, Miniflux <a href="https://lobste.rs/">Lobsters</a> just let you read, with no BS. So this time the rule was simple: the page exists to be read, and the CSS exists to be maintained.
+The old look, <a href="https://github.com/idlip/hakimacs">Hakimacs</a>, painted every page as an Emacs window: a menu bar on top, a modeline at the bottom, an echo area, dropdowns, frosted glass. I loved how it looked. But over time I kept adding "helpers for reading" and now the helpers look noisier than the reading. I like how <a href="https://bearblog.dev/">Bear Blog</a>, Miniflux <a href="https://lobste.rs/">Lobsters</a> just let you read, with no BS. So this time the rule was simple: the page exists to be read, and the CSS exists to be maintained.
 </p>
 
 <p>
@@ -12,17 +12,17 @@ The new look is <i>Kenbun</i>, named after <a href="https://onepiece.fandom.com/
 </p>
 <div id="outline-container-before-and-after" class="outline-2">
 <h2 id="before-and-after">Before and after<a class="heading-anchor" href="#before-and-after" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org4c6aa5b">
-<div class="grid" id="org1f04dc5">
+<div class="outline-text-2" id="text-org3f11470">
+<div class="grid" id="org046f928">
 
-<div id="org407f1fc" class="figure">
+<div id="orgc3c78c0" class="figure">
 <p><img src="/images/kenbun/hakimacs-home.webp" alt="hakimacs-home.webp" />
 </p>
 <p>Before: the home page as an Emacs window, with menu bar and modeline</p>
 </div>
 
 
-<div id="org7a3c95d" class="figure">
+<div id="org07a3a72" class="figure">
 <p><img src="/images/kenbun/home.webp" alt="home.webp" />
 </p>
 <p>After: the home page in Kenbun, title, links and a plain column</p>
@@ -30,16 +30,16 @@ The new look is <i>Kenbun</i>, named after <a href="https://onepiece.fandom.com/
 
 </div>
 
-<div class="grid" id="org8888596">
+<div class="grid" id="orgbc5f976">
 
-<div id="org7015d79" class="figure">
+<div id="orgbbb35fe" class="figure">
 <p><img src="/images/kenbun/hakimacs-list.webp" alt="hakimacs-list.webp" />
 </p>
 <p>Before: the posts listing page</p>
 </div>
 
 
-<div id="org273b4c5" class="figure">
+<div id="org9e65e3d" class="figure">
 <p><img src="/images/kenbun/list.webp" alt="list.webp" />
 </p>
 <p>After: the new simple listing page</p>
@@ -48,16 +48,16 @@ The new look is <i>Kenbun</i>, named after <a href="https://onepiece.fandom.com/
 </div>
 
 
-<div class="grid" id="orgbe18b68">
+<div class="grid" id="org3199aa4">
 
-<div id="orge899ab5" class="figure">
+<div id="org1b37360" class="figure">
 <p><img src="/images/kenbun/hakimacs-post.webp" alt="hakimacs-post.webp" />
 </p>
 <p>Before: a post inside the Emacs frame</p>
 </div>
 
 
-<div id="org28c0182" class="figure">
+<div id="org29be1a0" class="figure">
 <p><img src="/images/kenbun/post.webp" alt="post.webp" />
 </p>
 <p>After: the same post, just the words</p>
@@ -68,7 +68,7 @@ The new look is <i>Kenbun</i>, named after <a href="https://onepiece.fandom.com/
 </div>
 <div id="outline-container-what-went" class="outline-2">
 <h2 id="what-went">What went<a class="heading-anchor" href="#what-went" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-orgd9fb720">
+<div class="outline-text-2" id="text-orga882dbb">
 <ul class="org-ul">
 <li>The fake Emacs frame: menu bar, modeline, echo area, hamburger menu.</li>
 <li>Breadcrumbs, the reading progress bar, sidenotes, code copy buttons, the image lightbox.</li>
@@ -78,7 +78,7 @@ The new look is <i>Kenbun</i>, named after <a href="https://onepiece.fandom.com/
 </div>
 <div id="outline-container-what-stayed-because-i-want-it" class="outline-2">
 <h2 id="what-stayed-because-i-want-it">What stayed, because I want it<a class="heading-anchor" href="#what-stayed-because-i-want-it" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org5075895">
+<div class="outline-text-2" id="text-org46bfc70">
 <ul class="org-ul">
 <li>My fonts, the heading glyphs, and the five font modes.</li>
 <li>base16 colour schemes, with Haki as the default.</li>
@@ -89,7 +89,7 @@ The new look is <i>Kenbun</i>, named after <a href="https://onepiece.fandom.com/
 </div>
 <div id="outline-container-by-the-numbers" class="outline-2">
 <h2 id="by-the-numbers">By the numbers<a class="heading-anchor" href="#by-the-numbers" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org78a5a9e">
+<div class="outline-text-2" id="text-orgf8c3e22">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -131,7 +131,7 @@ The new look is <i>Kenbun</i>, named after <a href="https://onepiece.fandom.com/
 </div>
 <div id="outline-container-what-i-kept-in-mind" class="outline-2">
 <h2 id="what-i-kept-in-mind">What I kept in mind<a class="heading-anchor" href="#what-i-kept-in-mind" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org69395f2">
+<div class="outline-text-2" id="text-org44579eb">
 <ul class="org-ul">
 <li>Style plain HTML elements first, and keep a short list of shared pieces. A new page reuses them; it
 never gets its own CSS.</li>
@@ -151,7 +151,7 @@ native <a href="https://orgmode.org/manual/Publishing.html">ox-publish</a> and <
 </p>
 <div id="outline-container-why-i-even-started-this" class="outline-2">
 <h2 id="why-i-even-started-this">Why I even started this<a class="heading-anchor" href="#why-i-even-started-this" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-orgb23f767">
+<div class="outline-text-2" id="text-org4bbfe27">
 <p>
 This site used to run on <a href="https://gohugo.io">Hugo</a> using same theme called <a href="https://github.com/idlip/hakimacs">hakimacs</a>, with content in Org mode rendered through go-org, and it worked fine for months. But I hated looking how ugly <a href="https://gohugo.io/templates/introduction/">go-template</a> looked and lot of regexp to do something, although it was fast, it was not human (emacs user) friendly to read at all. When I wrote in org mode, I always liked why not elisp somewhere to hack and do stuff. Org is a rich ecosystem and it needs way more hackable place to configure, not hugo to regexp parse everything.
 </p>
@@ -167,7 +167,7 @@ That annoyance is the entire reason denden exists.
 </div>
 <div id="outline-container-what-denden-actually-is-and-isn-t" class="outline-2">
 <h2 id="what-denden-actually-is-and-isn-t">What denden actually is, and isn't<a class="heading-anchor" href="#what-denden-actually-is-and-isn-t" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org651efe3">
+<div class="outline-text-2" id="text-orgb5b850b">
 <p>
 <code>denden</code> is not a package, its more like a tool, helpers and building block on top of org-publish. It
 uses all native org mode libs and <code>org-publish</code>, the publishing engine that already ships inside Org mode, plus a small pile of Elisp helper functions sitting on top of it, that's the whole thing. <code>denden.el</code> itself is one file, no hidden layers, no magic you can't just <code>M-x describe-function</code> your way into.
@@ -193,7 +193,7 @@ Nobody's stopping you, there's no true "denden way" to acheive it.
 </div>
 <div id="outline-container-templates-are-just-lists-the-sexp-html-bit" class="outline-2">
 <h2 id="templates-are-just-lists-the-sexp-html-bit">Templates are just lists, the sexp-HTML bit<a class="heading-anchor" href="#templates-are-just-lists-the-sexp-html-bit" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org7c075a8">
+<div class="outline-text-2" id="text-orgd0f25a1">
 <p>
 This is the part I like the most, a denden template is not a template language at all, it's a plain Emacs Lisp list, shaped like this.
 </p>
@@ -251,7 +251,7 @@ That's a whole working nav bar, <code>menu-items</code> is just a list of <code>
 </div>
 <div id="outline-container-how-my-own-site-is-built-with-it" class="outline-2">
 <h2 id="how-my-own-site-is-built-with-it">How my own site is built with it<a class="heading-anchor" href="#how-my-own-site-is-built-with-it" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org60036c3">
+<div class="outline-text-2" id="text-org1aa04e1">
 <p>
 My site's own Elisp lives in exactly three files, and I think that's a feature, not something I need to apologize for.
 </p>
@@ -287,7 +287,7 @@ Everything you're reading right now, the  <button type="button" class="tag-cloud
 </div>
 <div id="outline-container-one-more-cool-bit-even-the-og-card-images-are-sexp" class="outline-2">
 <h2 id="one-more-cool-bit-even-the-og-card-images-are-sexp">One more cool bit, even the OG card images are sexp<a class="heading-anchor" href="#one-more-cool-bit-even-the-og-card-images-are-sexp" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org4122475">
+<div class="outline-text-2" id="text-org87aac3e">
 <p>
 OG cards, the preview image you see when a link gets shared on social media, are usually generated with some headless browser screenshot setup or an image library. In denden it's the exact same <code>(TAG ATTRIBUTE-PLIST . CHILDREN)</code> trick, just aimed at <code>&lt;svg&gt;</code> instead of <code>&lt;div&gt;</code>, from my own <code>site.el</code>.
 </p>
@@ -316,7 +316,7 @@ Same <code>denden-serialize-node</code> (<a href="https://github.com/idlip/dende
 </div>
 <div id="outline-container-it-s-also-properly-fast" class="outline-2">
 <h2 id="it-s-also-properly-fast">It's also properly fast<a class="heading-anchor" href="#it-s-also-properly-fast" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org09dfd11">
+<div class="outline-text-2" id="text-org39cf7ef">
 <p>
 I was bracing for a slow first build, since Emacs isn't exactly famous for being a speed train. It wasn't. A full build of this entire site, every post, every feed, every OG card image, finishes in a couple of seconds. I build it from the terminal like this.
 </p>
@@ -337,7 +337,7 @@ incremental cache, and it's done before switch two windows. There's also an asyn
 </div>
 <div id="outline-container-owning-the-whole-thing" class="outline-2">
 <h2 id="owning-the-whole-thing">Owning the whole thing<a class="heading-anchor" href="#owning-the-whole-thing" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org99310e0">
+<div class="outline-text-2" id="text-orgd4d57a6">
 <p>
 The thing I like most isn't the speed, it's that I own every line of this. I'm an Emacs user, I already spend my <a href="/log/may-i-recommend/">May I Recommend EWM</a> tweaking my config, and now my blog engine runs in the same language, the same editor, the same muscle memory. If I want a new feature, I don't wait for a plugin, I don't learn a templating DSL, I just write a function next to the ones already there and call it. That's a genuinely different feeling from configuring a static site generator, it's closer to how your Emacs config itself grows over the years, one small function at a time, shaped around what you personally want.
 </p>
@@ -348,7 +348,7 @@ If any of this sounds interesting and you're also an Emacs plus Org mode person,
 </p>
 
 
-<div id="orga78ea09" class="figure">
+<div id="org802a414" class="figure">
 <p><img src="https://raw.githubusercontent.com/idlip/denden/refs/heads/master/example/screenshot.png" alt="screenshot.png" />
 </p>
 <p>Snap of a example bearblog like site built with denden</p>
@@ -357,7 +357,7 @@ If any of this sounds interesting and you're also an Emacs plus Org mode person,
 </div>
 <div id="outline-container-about-the-name" class="outline-2">
 <h2 id="about-the-name">About the name<a class="heading-anchor" href="#about-the-name" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org6954538">
+<div class="outline-text-2" id="text-org97104b0">
 <p>
 A <code>denden mushi</code> is the snail-shaped transponder phone from One Piece, the way everyone in that world
 talks to each other across the sea. If you've looked around this site even a little, the One Piece

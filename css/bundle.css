@@ -497,6 +497,13 @@
     padding-block: 1em 3em;
   }
 
+  /* The footer's decorative dash line: one line, clipped at the edge on narrow screens. */
+  .dashed-rule {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
   body > footer {
     padding-block: 2em;
     border-block-start: 1px solid var(--border);
@@ -664,15 +671,6 @@
       border-radius: var(--radius);
     }
   }
-  main:has(input[name="list-view"][value="compact"]:checked) .list {
-    & :is(p, small) {
-      display: none;
-    }
-    & > li {
-      padding-block: 0.2em;
-      border: 0;
-    }
-  }
 
   nav.pager {
     display: flex;
@@ -758,6 +756,8 @@
   .toast {
     inset: auto 0 1.5rem;
     margin-inline: auto;
+    max-inline-size: calc(100% - 2 * var(--gutter));
+    text-align: center;
     padding: 0.5em 1em;
     background: color-mix(in oklch, var(--accent) 12%, var(--surface));
     color: var(--text);
@@ -765,18 +765,19 @@
     border-radius: var(--radius);
   }
 
+  /* One row on every screen: badges shrink together instead of wrapping. */
   .badge-grid {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 0.5em;
+    gap: clamp(0.25em, 1vw, 0.5em);
   }
   .badge {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
     gap: 0.35em;
-    inline-size: clamp(4.5rem, 15vw, 6.5rem);
+    flex: 0 1 6.5rem;
+    min-inline-size: 0;
     padding: 0.6em 0.4em;
     border: 1px solid var(--border);
     border-radius: var(--radius);
@@ -793,6 +794,9 @@
   }
   .badge-name {
     inline-size: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     padding: 0.15em 0.5em;
     border-radius: var(--radius);
     font-family: var(--heading-font);
@@ -918,19 +922,30 @@
     text-decoration: none;
   }
 
+  /* The 404 joke as a card: WANTED heading, bounty in the accent, the Zoro line faint. */
   .wanted-poster {
     max-inline-size: 22rem;
     margin: 2em auto;
-    padding: 1.25em 1em;
-    border: 0.2rem dashed var(--border);
+    padding: 1em 1.5em;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
     text-align: center;
-    color: var(--text-faint);
+    & p {
+      margin-block: 0.4em;
+    }
     & > :first-child {
       font-family: var(--heading-font);
-      font-size: 1.8em;
+      font-size: 2em;
       font-weight: bold;
-      letter-spacing: 0.2rem;
       color: var(--h1-color);
+    }
+    & > :nth-child(4) {
+      color: var(--accent);
+      font-weight: bold;
+    }
+    & > :last-child {
+      color: var(--text-faint);
     }
   }
 
@@ -964,34 +979,17 @@
     }
   }
 
+  /* Print: the article only, dark text on white. */
   @media print {
     :root {
+      color-scheme: light;
       --background: #ffffff;
       --surface: #ffffff;
       --text: #000000;
-      --text-faint: #333333;
-      --link: #000000;
-      --link-visited: #000000;
     }
-    body > header nav,
-    .toolbar,
-    body > footer,
-    nav.pager,
-    form.comment,
-    .heading-anchor,
-    .list-controls,
-    dialog {
+    body > :not(main),
+    :is(nav.pager, form.comment, .heading-anchor, .list-controls) {
       display: none !important;
-    }
-    main a[href^="http"]::after {
-      content: " (" attr(href) ")";
-      font-size: 0.85em;
-    }
-    pre,
-    blockquote,
-    figure,
-    tr {
-      break-inside: avoid;
     }
   }
 }

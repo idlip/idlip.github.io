@@ -4,7 +4,7 @@ In January I wrote about <a href="/log/revamp-blog-2026/">Revamp the blogs</a> a
 </p>
 
 <p>
-The old look, <i>Hakimacs</i>, painted every page as an Emacs window: a menu bar on top, a modeline at the bottom, an echo area, dropdowns, frosted glass. I loved how it looked. But over time I kept adding "helpers for reading" and now the helpers look noisier than the reading. I like how <a href="https://bearblog.dev/">Bear Blog</a>, Miniflux <a href="https://lobste.rs/">Lobsters</a> just let you read, with no BS. So this time the rule was simple: the page exists to be read, and the CSS exists to be maintained.
+The old look, <a href="https://github.com/idlip/hakimacs">Hakimacs</a>, painted every page as an Emacs window: a menu bar on top, a modeline at the bottom, an echo area, dropdowns, frosted glass. I loved how it looked. But over time I kept adding "helpers for reading" and now the helpers look noisier than the reading. I like how <a href="https://bearblog.dev/">Bear Blog</a>, Miniflux <a href="https://lobste.rs/">Lobsters</a> just let you read, with no BS. So this time the rule was simple: the page exists to be read, and the CSS exists to be maintained.
 </p>
 
 <p>
@@ -12,17 +12,17 @@ The new look is <i>Kenbun</i>, named after <a href="https://onepiece.fandom.com/
 </p>
 <div id="outline-container-before-and-after" class="outline-2">
 <h2 id="before-and-after">Before and after<a class="heading-anchor" href="#before-and-after" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org4c6aa5b">
-<div class="grid" id="org1f04dc5">
+<div class="outline-text-2" id="text-org3f11470">
+<div class="grid" id="org046f928">
 
-<div id="org407f1fc" class="figure">
+<div id="orgc3c78c0" class="figure">
 <p><img src="/images/kenbun/hakimacs-home.webp" alt="hakimacs-home.webp" />
 </p>
 <p>Before: the home page as an Emacs window, with menu bar and modeline</p>
 </div>
 
 
-<div id="org7a3c95d" class="figure">
+<div id="org07a3a72" class="figure">
 <p><img src="/images/kenbun/home.webp" alt="home.webp" />
 </p>
 <p>After: the home page in Kenbun, title, links and a plain column</p>
@@ -30,16 +30,16 @@ The new look is <i>Kenbun</i>, named after <a href="https://onepiece.fandom.com/
 
 </div>
 
-<div class="grid" id="org8888596">
+<div class="grid" id="orgbc5f976">
 
-<div id="org7015d79" class="figure">
+<div id="orgbbb35fe" class="figure">
 <p><img src="/images/kenbun/hakimacs-list.webp" alt="hakimacs-list.webp" />
 </p>
 <p>Before: the posts listing page</p>
 </div>
 
 
-<div id="org273b4c5" class="figure">
+<div id="org9e65e3d" class="figure">
 <p><img src="/images/kenbun/list.webp" alt="list.webp" />
 </p>
 <p>After: the new simple listing page</p>
@@ -48,16 +48,16 @@ The new look is <i>Kenbun</i>, named after <a href="https://onepiece.fandom.com/
 </div>
 
 
-<div class="grid" id="orgbe18b68">
+<div class="grid" id="org3199aa4">
 
-<div id="orge899ab5" class="figure">
+<div id="org1b37360" class="figure">
 <p><img src="/images/kenbun/hakimacs-post.webp" alt="hakimacs-post.webp" />
 </p>
 <p>Before: a post inside the Emacs frame</p>
 </div>
 
 
-<div id="org28c0182" class="figure">
+<div id="org29be1a0" class="figure">
 <p><img src="/images/kenbun/post.webp" alt="post.webp" />
 </p>
 <p>After: the same post, just the words</p>
@@ -68,7 +68,7 @@ The new look is <i>Kenbun</i>, named after <a href="https://onepiece.fandom.com/
 </div>
 <div id="outline-container-what-went" class="outline-2">
 <h2 id="what-went">What went<a class="heading-anchor" href="#what-went" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-orgd9fb720">
+<div class="outline-text-2" id="text-orga882dbb">
 <ul class="org-ul">
 <li>The fake Emacs frame: menu bar, modeline, echo area, hamburger menu.</li>
 <li>Breadcrumbs, the reading progress bar, sidenotes, code copy buttons, the image lightbox.</li>
@@ -78,7 +78,7 @@ The new look is <i>Kenbun</i>, named after <a href="https://onepiece.fandom.com/
 </div>
 <div id="outline-container-what-stayed-because-i-want-it" class="outline-2">
 <h2 id="what-stayed-because-i-want-it">What stayed, because I want it<a class="heading-anchor" href="#what-stayed-because-i-want-it" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org5075895">
+<div class="outline-text-2" id="text-org46bfc70">
 <ul class="org-ul">
 <li>My fonts, the heading glyphs, and the five font modes.</li>
 <li>base16 colour schemes, with Haki as the default.</li>
@@ -89,7 +89,7 @@ The new look is <i>Kenbun</i>, named after <a href="https://onepiece.fandom.com/
 </div>
 <div id="outline-container-by-the-numbers" class="outline-2">
 <h2 id="by-the-numbers">By the numbers<a class="heading-anchor" href="#by-the-numbers" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org78a5a9e">
+<div class="outline-text-2" id="text-orgf8c3e22">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -131,7 +131,7 @@ The new look is <i>Kenbun</i>, named after <a href="https://onepiece.fandom.com/
 </div>
 <div id="outline-container-what-i-kept-in-mind" class="outline-2">
 <h2 id="what-i-kept-in-mind">What I kept in mind<a class="heading-anchor" href="#what-i-kept-in-mind" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org69395f2">
+<div class="outline-text-2" id="text-org44579eb">
 <ul class="org-ul">
 <li>Style plain HTML elements first, and keep a short list of shared pieces. A new page reuses them; it
 never gets its own CSS.</li>

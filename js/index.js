@@ -58,10 +58,20 @@
     }, 2500);
   }
 
-  function applyScheme(name, label) {
-    BASE_KEYS.forEach(function (key) {
-      root.style.removeProperty("--" + key);
+  // Set the 16 base colours inline (a missing colour clears its slot); readPalette snapshots them.
+  function setPalette(colors) {
+    BASE_KEYS.forEach(function (key, index) {
+      if (colors[index]) root.style.setProperty("--" + key, colors[index]);
+      else root.style.removeProperty("--" + key);
     });
+  }
+
+  function readPalette() {
+    return BASE_KEYS.map(function (key) { return root.style.getPropertyValue("--" + key); });
+  }
+
+  function applyScheme(name, label) {
+    setPalette([]);
     localStorage.removeItem("emacs-custom-palette");
     if (name) root.setAttribute("data-scheme", name);
     else root.removeAttribute("data-scheme");
@@ -264,7 +274,7 @@
       if (radio.value === saved) radio.checked = true;
       radio.addEventListener("change", function () {
         localStorage.setItem("emacs-list-view", radio.value);
-        announce("View: " + radio.parentElement.textContent.trim());
+        announce("View: " + radio.getAttribute("aria-label"));
       });
     });
   }
@@ -371,9 +381,10 @@
   }
 
   window.emacsBlog = window.emacsBlog || {};
-  window.emacsBlog.BASE_KEYS = BASE_KEYS;
   window.emacsBlog.site = {
     applyScheme: applyScheme,
+    setPalette: setPalette,
+    readPalette: readPalette,
     applyVariant: applyVariant,
     announce: announce,
     applyFont: applyFont,
@@ -445,7 +456,7 @@
 /* ---- palette.js ---- */
 /**
  * Command Palette — native <dialog>.
- * Default: commands + posts. "t " prefix: all base16 schemes. "#" prefix: tags.
+ * Default: commands, pages, tags and full-text results. "t " prefix: colour schemes.
  * Trigger: x / Ctrl-K / Ctrl-S / Alt-X (site.js) or window.emacsBlog.palette.open()
  */
 (function () {
@@ -456,48 +467,18 @@
   var res = document.getElementById("palette-results");
   if (!dlg || !inp || !res) return;
 
-  var BASE_KEYS = window.emacsBlog.BASE_KEYS;
+  var ICONS = window.__paletteIcons || {};
 
-  function applyCustomPalette(colors) {
-    BASE_KEYS.forEach(function (k, i) {
-      if (colors[i]) document.documentElement.style.setProperty("--" + k, colors[i]);
-    });
-  }
-
-  function clearCustomPalette() {
-    BASE_KEYS.forEach(function (k) {
-      document.documentElement.style.removeProperty("--" + k);
-    });
-    localStorage.removeItem("emacs-custom-palette");
-  }
-
-  // Per-type icons (config: params.paletteIcons), with built-in fallbacks.
-  var ICONS = Object.assign(
-    { nav: "", command: "", post: "", tag: "", scheme: "", help: "" },
-    window.__paletteIcons || {},
-  );
-
-  // Section navigation from the site menu (window.__nav) so it stays in sync,
-  // plus destinations the menu doesn't list.
-  var NAV = (window.__nav || [])
-    .map(function (n) {
-      return {
-        t: n.name,
-        type: "nav",
-        a: function () {
-          goTo(n.url);
-        },
-      };
-    })
-    .concat([
-      {
-        t: "Wander Console",
-        type: "nav",
-        a: function () {
-          goTo("/wander/console/");
-        },
+  // Section navigation from the site menu (window.__nav), so it stays in sync.
+  var NAV = (window.__nav || []).map(function (n) {
+    return {
+      t: n.name,
+      type: "nav",
+      a: function () {
+        goTo(n.url);
       },
-    ]);
+    };
+  });
 
   function command(title, action) {
     return {
@@ -527,7 +508,6 @@
   var CMDS = NAV.concat(
     [
       prefixMode("Browse all color schemes", "scheme", "t "),
-      prefixMode("Browse tags", "tag", "#"),
       command("Default color scheme (Haki)", function () {
         site.applyScheme("haki", "Haki");
       }),
@@ -566,12 +546,7 @@
   }
 
   function snapRestore() {
-    if (snap)
-      BASE_KEYS.forEach(function (k, i) {
-        snap[i]
-          ? document.documentElement.style.setProperty("--" + k, snap[i])
-          : document.documentElement.style.removeProperty("--" + k);
-      });
+    if (snap) site.setPalette(snap);
     snap = null;
   }
 
@@ -670,10 +645,7 @@
         .catch(function () {});
       return;
     }
-    if (!snap)
-      snap = BASE_KEYS.map(function (k) {
-        return document.documentElement.style.getPropertyValue("--" + k);
-      });
+    if (!snap) snap = site.readPalette();
     items = [];
     allSchemes.forEach(function (s) {
       var h = match(s.name, q);
@@ -687,7 +659,7 @@
             if (scheme.family !== undefined) {
               site.applyScheme(scheme.family, scheme.name);
             } else {
-              applyCustomPalette(scheme.colors);
+              site.setPalette(scheme.colors);
               localStorage.setItem(
                 "emacs-custom-palette",
                 JSON.stringify({
@@ -713,26 +685,6 @@
     if (v.startsWith("t ")) {
       inp.placeholder = "Color scheme\u2026";
       renderSchemes(v.slice(2).trim());
-    } else if (v.charAt(0) === "#") {
-      inp.placeholder = "Jump to a tag\u2026";
-      var tq = v.slice(1);
-      items = [];
-      (window.__tags || []).forEach(function (t) {
-        var label = "#" + t.name + (t.count ? "  (" + t.count + ")" : "");
-        var h = match(label, tq);
-        if (h !== null) {
-          var url = t.url;
-          items.push({
-            html: h,
-            action: function () {
-              goTo(url);
-            },
-            type: "tag",
-          });
-        }
-      });
-      items = items.slice(0, 40);
-      buildList();
     } else {
       inp.placeholder = "Search posts, pages and commands (x \u00b7 Ctrl-K)\u2026";
       var q = v.trim();
@@ -823,7 +775,7 @@
       el.classList.toggle("selected", i === idx);
     });
     els[idx].scrollIntoView({ block: "nearest" });
-    if (snap && items[idx] && items[idx].colors) applyCustomPalette(items[idx].colors);
+    if (snap && items[idx] && items[idx].colors) site.setPalette(items[idx].colors);
   }
 
   inp.addEventListener("input", function () {
@@ -869,7 +821,5 @@
     close: function () {
       dlg.close();
     },
-    clearCustomPalette: clearCustomPalette,
-    applyCustomPalette: applyCustomPalette,
   };
 })();

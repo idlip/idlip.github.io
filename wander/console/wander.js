@@ -102,4 +102,4 @@ pages:
   "https://pablomurad.com/",
 ],
 styles: ["wander-theme.css"], ignore: [], }
-(function(){try{var c=JSON.parse(localStorage.getItem('emacs-wander-colors'));if(c)Object.keys(c).forEach(function(k){document.documentElement.style.setProperty(k,c[k]);});}catch(e){}})();
+;(function(){try{var c=JSON.parse(localStorage.getItem('emacs-wander-colors'));if(c)Object.keys(c).forEach(function(k){document.documentElement.style.setProperty(k,c[k]);});}catch(e){}})();
