@@ -324,8 +324,8 @@ PALETTE-DATA-SCRIPT must be a `(raw-html nil STRING)' node."
        (when (and label (not (equal label href)))
          (list " " (list 'small nil (theme--url-domain href))))))))
 
-(defun theme--page-row (page &optional tag-icons)
-  "One row for PAGE: date, an icon from TAG-ICONS, title link and tags."
+(defun theme--page-row (page &optional tag-icons marker)
+  "One row for PAGE: date, MARKER or a TAG-ICONS icon, title and tags."
   (let ((url (concat "/" (plist-get page :url)))
         (date (plist-get page :date))
         (tags (plist-get page :tags)))
@@ -333,21 +333,23 @@ PALETTE-DATA-SCRIPT must be a `(raw-html nil STRING)' node."
      (list 'li (list :data-filter-text (theme--filter-text (plist-get page :title)
                                                            (mapcar (lambda (tag) (concat "#" tag)) tags))))
      (when date (list (list 'time (list :datetime date) (denden-format-iso-date date "%d %b"))))
-     (when tag-icons (list (theme--icon (theme--tag-icon tags tag-icons))))
+     (cond (marker (list (theme--icon marker) '(span (:class "visually-hidden") "Links here: ")))
+           (tag-icons (list (theme--icon (theme--tag-icon tags tag-icons)))))
      (list (list 'a (list :href url) (plist-get page :title)))
      (when tags (list (append (list 'small nil) (theme--tag-links (seq-take tags 3))))))))
 
-(cl-defun theme-references (&key refs related tag-icons)
-  "The References (REFS) and See Also (RELATED, iconed by TAG-ICONS) sections."
+(cl-defun theme-references (&key refs backlinks related tag-icons (backlink-icon "<-"))
+  "References (REFS), then See Also: BACKLINKS first, then RELATED pages."
   (append
    (when refs
      (list (list 'section '(:aria-labelledby "references-heading")
                  (theme--heading "references-heading" "References")
                  (append (list 'ol '(:class "list")) (mapcar #'theme--reference-item refs)))))
-   (when related
+   (when (or backlinks related)
      (list (list 'section '(:aria-labelledby "related-heading")
                  (theme--heading "related-heading" "See Also")
                  (append (list 'ul '(:class "list"))
+                         (mapcar (lambda (page) (theme--page-row page nil backlink-icon)) backlinks)
                          (mapcar (lambda (page) (theme--page-row page tag-icons)) related)))))))
 
 (cl-defun theme-post-navigation (&key prev next)
@@ -455,7 +457,7 @@ PALETTE-DATA-SCRIPT must be a `(raw-html nil STRING)' node."
 
 (defun theme--topic-part-chip (part all-pages)
   "One chip for PART, a \"key: value\" string, checked against ALL-PAGES."
-  (let* ((colon (string-match ":" part))
+  (let* ((colon (string-search ":" part))
          (key (if colon (string-trim (substring part 0 colon)) part))
          (value (if colon (string-trim (substring part (1+ colon))) "")))
     (cond

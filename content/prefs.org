@@ -154,7 +154,7 @@ list is laid out, and the site remembers your pick.
   hands it to your mail client. Embrace email!
 - *Pose* entries are folded under their date and title; the newest one starts
   open, and a link to an entry opens it.
-- *The site title* has a small secret if you hover over it, or click it.
+- *The site title* has a small secret if you hover over it, or click it. Easter egg shows random quote in popup toast.
 
 * What gets stored
 
