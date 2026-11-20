@@ -2,9 +2,9 @@
 #+date: 2026-11-19
 #+tags: denden webdev
 
-In January I wrote about [[file:revamp-blog-2026.org][revamping the blog]]. Ten months later, here we go once more. /Same same, but really different/
+In January I wrote about [[file:revamp-blog-2026.org][revamping the blog]] and in march about [[file:emacs-theme-site.org]]. Now, here we go once more. /Same same, but really different/
 
-The old look, /Hakimacs/, painted every page as an Emacs window: a menu bar on top, a modeline at the bottom, an echo area, dropdowns, frosted glass. I loved how it looked. But over time I kept adding "helpers for reading" and now the helpers look noisier than the reading. I like how [[https://bearblog.dev/][Bear Blog]], Miniflux [[https://lobste.rs/][Lobsters]] just let you read, with no BS. So this time the rule was simple: the page exists to be read, and the CSS exists to be maintained.
+The old look, [[https://github.com/idlip/hakimacs][Hakimacs]], painted every page as an Emacs window: a menu bar on top, a modeline at the bottom, an echo area, dropdowns, frosted glass. I loved how it looked. But over time I kept adding "helpers for reading" and now the helpers look noisier than the reading. I like how [[https://bearblog.dev/][Bear Blog]], Miniflux [[https://lobste.rs/][Lobsters]] just let you read, with no BS. So this time the rule was simple: the page exists to be read, and the CSS exists to be maintained.
 
 The new look is /Kenbun/, named after [[https://onepiece.fandom.com/wiki/Haki/Observation_Haki][Kenbunshoku Haki]], the observation Haki (its all One Piece-d). Sense what matters, drop the noise.
 

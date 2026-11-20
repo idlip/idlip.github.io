@@ -91,7 +91,10 @@
   (list 'header nil
         (list 'a (list :href "/" :class "site-title"
                        :title (and title-quotes (seq-random-elt title-quotes))
-                       :data-quotes (and title-quotes (json-serialize (vconcat title-quotes))))
+                       :data-quotes (and title-quotes
+                                         ;; json-serialize returns UTF-8 bytes; decode them, or any
+                                         ;; non-ASCII quote turns into raw bytes the page cannot save.
+                                         (decode-coding-string (json-serialize (vconcat title-quotes)) 'utf-8)))
               site-title)
         (list 'div nil
               (list 'nav '(:aria-label "Site") (theme--nav-list menu-items))

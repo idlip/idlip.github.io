@@ -25,8 +25,8 @@
 (defconst site-menu-header
   '((:name "Log" :url "/log/")
     (:name "Pose" :url "/pose/")
-    (:name "media" :url "/media/")
     (:name "Wander" :url "/wander/")
+    (:name "Media" :url "/media/")
     (:name "About" :url "/about/")
     (:name "More…" :url "#all-pages"))
   "The header links: short labels, no icons, separate from `site-menu-main'.")
@@ -142,7 +142,7 @@ extended_head.html.")
         (list :name "Org mode" :logo "/images/logos/orgmode.png" :color "#3f6b5e"
               :link "https://orgmode.org/" :subtitle "Swimming in")
         (list :name "Santōryū" :logo "/images/logos/zoro-chibi.webp" :color "#32ae55"
-              :link "/wander/" :subtitle "Wander my web" :tooltip "Find your way over the network")
+              :link "/wander/" :subtitle "Wander web" :tooltip "Find your way over the network")
         (list :name "OnePiece" :logo "/images/logos/onepiece.webp" :color "#D49A00"
               :subtitle "Finding" :link "https://one-piece.com/")
         (list :name "FOSS" :logo "/images/logos/foss.webp" :color "#8AA9BC"
@@ -163,7 +163,7 @@ extended_head.html.")
          '(a (:href "https://craftering.systemcrafters.net/") " Craftering ")
          " "
          '(a (:href "https://craftering.systemcrafters.net/@idlip/next" :aria-label "Next site") ""))
-   (list 'span '(:style "white-space: nowrap;")
+   (list 'span '(:class "dashed-rule" :aria-hidden "true")
          "- - - - - - -  - - - - - - -  - - - - - - -  - - - - - - -")
    (list 'p nil
          " 2023-2026 " '(b nil "Dilip | Zororg") "  Made with 󰣐  using "
@@ -1287,7 +1287,7 @@ ALIAS/index.html under PUB-DIR."
    (expand-file-name "search-index.json" pub-dir)))
 
 (defconst site--wander-colors-script
-  "(function(){try{var c=JSON.parse(localStorage.getItem('emacs-wander-colors'));if(c)Object.keys(c).forEach(function(k){document.documentElement.style.setProperty(k,c[k]);});}catch(e){}})();\n"
+  ";(function(){try{var c=JSON.parse(localStorage.getItem('emacs-wander-colors'));if(c)Object.keys(c).forEach(function(k){document.documentElement.style.setProperty(k,c[k]);});}catch(e){}})();\n"
   "Appended to wander.js: paints the console in the colours the site saved.")
 
 (defun site-build-wander-js (wander-source-file pub-dir)
