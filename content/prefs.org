@@ -127,9 +127,8 @@ fingers already know.
 
 | Type this      | Get                                          |
 |----------------+----------------------------------------------|
-| anything       | pages, commands, and full-text search results |
+| anything       | pages, tags, commands, and full-text results |
 | =t= then space | every readable colour scheme, by name        |
-| =#=            | tags                                         |
 
 =Esc= closes it. Backspace at an empty prefix goes back to the default list.
 
@@ -142,8 +141,8 @@ other open-palette keys keep working either way. This is
 
 Every list on the site (the Log, tags, Wander, Media, Quotes and more) has a
 filter box on top. Type to narrow it down, =#emacs= to match a tag, =/= to jump
-into the box and =Esc= to clear it. Next to it, *List*, *Grid* and *Compact*
-change how the list is laid out, and the site remembers your pick.
+into the box and =Esc= to clear it. Next to it, *List* and *Grid* change how the
+list is laid out, and the site remembers your pick.
 
 * Reading a post
 
@@ -168,7 +167,7 @@ A few keys in =localStorage=, all starting with =emacs-=, and no cookies.
 | =emacs-custom-palette= | any other scheme you picked from the list     |
 | =emacs-font-mode=      | the font mode                                 |
 | =emacs-width=          | the content width                             |
-| =emacs-list-view=      | list, grid or compact                         |
+| =emacs-list-view=      | list or grid                                  |
 | =emacs-keys-off=       | palette shortcut disabled                     |
 | =emacs-wander-colors=  | your scheme's colours, for the Wander console |
 

@@ -52,8 +52,8 @@
   "Join PARTS (strings or string lists) into one lowercased data-filter-text value."
   (downcase (string-join (flatten-list parts) " ")))
 
-(defconst theme--list-views '(("list" . "󰕲") ("grid" . "󰕰") ("compact" . "󰹫"))
-  "The list layouts a reader can pick, default first.")
+(defconst theme--list-views '(("list" "󰕲" "List") ("grid" "󰕰" "Grid"))
+  "The list layouts a reader can pick, default first: value, icon, name.")
 
 (cl-defun theme-list-filter (&key target placeholder (views t))
   "A filter for rows in element id TARGET, with PLACEHOLDER, and VIEWS radios."
@@ -66,10 +66,11 @@
    (when views
      (list (append (list 'fieldset '(:class "views") '(legend (:class "visually-hidden") "View"))
                    (mapcar (lambda (view)
-                             (list 'label nil
+                             (list 'label (list :title (nth 2 view))
                                    (list 'input (list :type "radio" :name "list-view" :value (car view)
+                                                      :aria-label (nth 2 view)
                                                       :checked (and (equal (car view) "list") t)))
-                                   (cdr view)))
+                                   (theme--icon (nth 1 view))))
                            theme--list-views))))))
 
 ;;;; Page shell: header, footer, palette dialog

@@ -75,7 +75,7 @@
   "The fosstodon.org entry's own `rel: me' is for IndieAuth verification.")
 
 (defconst site-palette-icons
-  '(:nav "󰘍 " :command " " :post " " :tag " " :scheme " " :help "󰘥 "))
+  '(:nav "󰘍 " :command " " :post " " :tag " " :scheme " "))
 
 (defconst site-title "Dilip's Log")
 

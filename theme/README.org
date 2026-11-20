@@ -90,7 +90,7 @@ Controls that need JS (the toolbar, list filters, view radios) render
 with =hidden= and =data-requires-js=; =index.js= reveals them. One
 shared filter in =index.js= serves every list: it hides rows by their
 =data-filter-text= and hides a =section= once all its rows are hidden.
-The view radios (List, Grid, Compact) work through CSS =:has()= alone; JS only remembers the
+The view radios (List, Grid) work through CSS =:has()= alone; JS only remembers the
 choice.
 
 Every setting change shows a short toast: a native =popover= with =role=status=, so screen readers hear it too (=announce= in =index.js=). Toolbar buttons and content buttons share one =data-action= table; older action names used inside content pages (=browse-schemes=) still work.
