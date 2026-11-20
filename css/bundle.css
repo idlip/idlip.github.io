@@ -710,6 +710,12 @@
     grid-template-columns: repeat(auto-fit, minmax(min(10rem, 100%), 1fr));
     gap: var(--gap);
     margin-block: 0 1em;
+    /* Equal tiles: the space is reserved before a lazy image loads, and nothing is cropped. */
+    & img {
+      inline-size: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: contain;
+    }
   }
 
   form.comment {
@@ -733,9 +739,6 @@
       display: inline;
       margin: 0;
       font-size: 1.1em;
-    }
-    & details > :not(summary) {
-      margin-inline-start: 1.5em;
     }
     & summary {
       padding-block: 0.4em;
