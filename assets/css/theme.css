@@ -734,9 +734,6 @@
       margin: 0;
       font-size: 1.1em;
     }
-    & details > :not(summary) {
-      margin-inline-start: 1.5em;
-    }
     & summary {
       padding-block: 0.4em;
     }
