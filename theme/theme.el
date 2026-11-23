@@ -159,23 +159,22 @@
   "The 16 base16 custom-property names, in order, as in index.js.")
 
 (defun theme--pre-paint-script (schemes-url light-schemes)
-  "Apply stored theme choices before paint; LIGHT-SCHEMES have a light variant."
+  "Apply stored choices before paint; light only if stored and in LIGHT-SCHEMES."
   (list 'raw-html nil
         (format "<script>
 window.__schemesUrl=%s;
 (function(){
 var r=document.documentElement,s=localStorage,k=%s,light=%s;
-var m=matchMedia('(prefers-color-scheme: light)');
 var cp=s.getItem('emacs-custom-palette');
 if(cp){try{JSON.parse(cp).colors.forEach(function(c,i){if(c)r.style.setProperty('--'+k[i],c);});}catch(e){}}
 else{var x=s.getItem('emacs-scheme-fixed');if(x!==null){if(x)r.setAttribute('data-scheme',x);else r.removeAttribute('data-scheme');}}
 window.__applyVariant=function(){
-var t=s.getItem('emacs-theme')||(m.matches?'light':'dark');
+var t=s.getItem('emacs-theme')||'dark';
 var p=s.getItem('emacs-custom-palette');
 if(p){try{t=JSON.parse(p).variant||t;}catch(e){}}
 else if(t==='light'&&light.indexOf(r.getAttribute('data-scheme')||'')<0)t='dark';
 r.setAttribute('data-theme',t);};
-window.__applyVariant();m.addEventListener('change',window.__applyVariant);
+window.__applyVariant();
 var f=s.getItem('emacs-font-mode');if(f)r.setAttribute('data-font',f);
 var w=s.getItem('emacs-width');if(w)r.style.setProperty('--measure',w);
 })();
@@ -282,7 +281,8 @@ PALETTE-DATA-SCRIPT must be a `(raw-html nil STRING)' node."
         (append (list 'head nil '(meta (:charset "utf-8")))
                 (when schemes-url (list (theme--pre-paint-script schemes-url light-schemes)))
                 (list '(meta (:name "viewport" :content "width=device-width, initial-scale=1.0"))
-                      '(meta (:name "color-scheme" :content "dark light"))
+                      '(meta (:name "color-scheme" :content "dark"))
+                      '(meta (:name "darkreader-lock"))
                       (list 'meta (list :name "theme-color" :content theme-color-meta-value)))
                 (when page-title (list (list 'title nil page-title)))
                 (mapcar (lambda (href)

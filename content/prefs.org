@@ -75,12 +75,16 @@ zoom still works on top of any of them.
 
 * Dark / light
 
-This flips the *variant*, not the scheme. Until you press it, the site follows
-your system setting; once you press it, your choice wins and is remembered.
+The site is designed dark, so it opens dark for everyone, whatever your system or
+browser says. The dark/light button flips the *variant*, not the scheme, and your
+choice is remembered.
 
 If the scheme you are on has both a dark and a light palette, it swaps. If it has
 only one, nothing pretends to work: the page tells you there is no such variant
 and opens the scheme list, so you can pick one that has it.
+
+Extensions like Dark Reader are asked to stay out (=darkreader-lock=): the site is
+already dark, and their filter would only fight its colours.
 
 * Colour schemes
 

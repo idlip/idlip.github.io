@@ -80,7 +80,7 @@
     if (label) announce("Scheme: " + label);
   }
 
-  // The pre-paint script defines the variant rule: stored choice, else the system, limited to what the scheme has.
+  // The pre-paint script defines the variant rule: the stored choice, else dark, limited to what the scheme has.
   function applyVariant() {
     if (window.__applyVariant) window.__applyVariant();
     saveWanderColors();
