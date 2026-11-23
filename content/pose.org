@@ -125,3 +125,26 @@ But what I mean is, why do we not accept imperfection for our human life but enj
 - We humans in-real-life care so much of good looking or ideals.
 - I hate that even some content creators are spoiled to create these images just to sell well or get more attraction.
 
+* [2026-11-22 Sun] Why have I used "Log Pose"
+I used "[[https://onepiece.fandom.com/wiki/Log_Pose][Log Pose]]" to depict the one piece themed site, and I went with naming all my blog posts as "Log(s)" and I made a "Pose" for a shot bits of micro notes, journal, thoughts etc etc for capturing quickly. At the time of creating my only answer was that "Log" would be long writing in-depth and "Pose" would be just some info posted ideally every day without any filter.
+
+But I was so late to realize that "Log Pose" almost mimics the sound of "Blog post", the words are so close. I kept laughing when I re-discovered myself for this easter egg I planted myself into.
+
+Anyway, OnePiece 1200 chapter will coming this week, and spoilers obviously tomorrow on reddit, if its big lore dump or surprise, I might add a pose below tomorrow based on that for real (sorry if its spoils anybody), but that'd be great feat for this year to complete. We literally got 3 new astonishing forms in single chapter, that itself might have been all around internet, but heck GTA VI came, and 3 days I binged YT and got bored there-after.
+
+Anyway OnePiece for life, and rest are doomed to bore.
+
+* [2026-11-23 Mon] Pose page has been reworked
+The page you are looking at is reworked to have weekly grouping, although I strictly want to post small bits everyday like Mastodon posts. The only friction I feel with Mastodon is that like any other social media it still has that "Feedback Craving": when I post, I keep expecting someone to star it and reply. The constant tension of someone overlooking it might demotivate me from writing anything more. Thus here I'm writing on my own site without caring for anything, but whatever it is, this holds as a document for myself to see over the "world wide web". No reaction craving, nor any self-pitfalls.
+
+I should write about my hate towards the reaction system altogether as a blog post, and I should find a way to hide them everywhere. I know it's very useful, but I totally hate it. At least a respectful way to hide them, as a user preference, would help. YouTube did it, but on their end; I'd prefer it on the user (client) end.
+
+Further reading
+- [[https://write.as/addie/likes-ruined-everything][Likes ruined everything]] on Analog Dreams
+- [[https://journal.jatan.space/mastodon-and-the-fediverse-is-noisy/][Mastodon and the Fediverse is too noisy. Why?]] on Jatan's Journal
+- [[https://computationalculture.net/what-do-metrics-want/][What Do Metrics Want?]] by Benjamin Grosser
+
+Anti-meter tools (hide counts on the client end)
+- [[https://bengrosser.com/projects/twitter-demetricator/][Twitter Demetricator]] and [[https://bengrosser.com/projects/instagram-demetricator/][Instagram Demetricator]] by Benjamin Grosser
+- [[https://manualdousuario.net/en/demetrificando-web-userstyle-css/][Hiding metrics from the web]], a userstyle by Manual do Usuário
+- [[https://userstyles.world/style/16993][Hide quantitative stats from Mastodon web]] on UserStyles.world

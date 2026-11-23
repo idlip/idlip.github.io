@@ -38,7 +38,7 @@
     (:name " Home" :url "/")
     (:name "󰎕 Blog Posts" :url "/log/")
     (:name "󰟶 Pose" :url "/pose/")
-    (:name " Projects & Tools" :url "/repo/")
+    (:name " Projects & Tools" :url "/projects/")
     (:name "󰆋 Wander/Blogroll" :url "/wander/")
     (:name " About" :url "/about/")
     (:name "󰚀 Now Now Now" :url "/now/")
