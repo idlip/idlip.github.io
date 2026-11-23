@@ -18,6 +18,16 @@
     --h2-color: var(--base09);
     --h3-color: var(--base0B);
     --h4-color: var(--base08);
+    /* Pose weekdays, Monday first, coloured for the planet each day is named after: Moon silver,
+       Mars red, Mercury green, Jupiter cyan, Venus pink, Saturn blue, Sun saffron. Only
+       contrast-checked colours (site-contrast-floor), so chip text stays readable. */
+    --day-1: var(--text);
+    --day-2: var(--base08);
+    --day-3: var(--base0B);
+    --day-4: var(--base0C);
+    --day-5: var(--base0E);
+    --day-6: var(--base0D);
+    --day-7: var(--base09);
 
     --heading-font: "impress", "nerd-icons", sans-serif;
     --sans-font: "code-ace", "nerd-icons", sans-serif;
@@ -36,6 +46,12 @@
     color-scheme: light;
   }
 
+  @media (prefers-contrast: more) {
+    :root {
+      --text-faint: var(--text);
+      --border: var(--text);
+    }
+  }
   [data-font="mono"] {
     --body-font-family: var(--code-font);
   }
@@ -289,7 +305,11 @@
     font-family: var(--code-font);
     font-size: 0.9em;
   }
+  :where(main p) {
+    hyphens: auto;
+  }
   :where(code) {
+    hyphens: manual;
     background: var(--surface);
     padding: 0.1em 0.3em;
     border-radius: var(--radius);
@@ -365,6 +385,14 @@
 
   :where(details > summary) {
     cursor: pointer;
+  }
+  /* A heading used as a <summary> stays on the marker's line. */
+  :where(summary > h2, summary > h3) {
+    display: inline;
+  }
+  /* An inline h2 drops its own margins, so its summary keeps the h2 spacing. */
+  :where(summary:has(> h2)) {
+    margin-block: 1.6em 0.5em;
   }
 
   /* ox-html output: center blocks, TODO keywords, footnotes. */
@@ -730,12 +758,13 @@
     }
   }
 
+  /* Pose: one section per week; each entry carries its weekday colour on its edge and day chip. */
   #pose-entries {
-    & > article {
+    & article {
       padding-block: 0.5em;
       border-block-end: 1px solid var(--border);
     }
-    & h2 {
+    & h3 {
       display: inline;
       margin: 0;
       font-size: 1.1em;
@@ -747,9 +776,24 @@
       color: var(--text-faint);
       font-variant-numeric: tabular-nums;
     }
+    /* A solid chip in the weekday colour; bold at heading size counts as large text (3:1). */
+    & .day {
+      padding: 0.05em 0.45em;
+      border-radius: var(--radius);
+      background: var(--day-color);
+      color: var(--background);
+      font-weight: bold;
+    }
+    & [data-day="1"] { --day-color: var(--day-1); }
+    & [data-day="2"] { --day-color: var(--day-2); }
+    & [data-day="3"] { --day-color: var(--day-3); }
+    & [data-day="4"] { --day-color: var(--day-4); }
+    & [data-day="5"] { --day-color: var(--day-5); }
+    & [data-day="6"] { --day-color: var(--day-6); }
+    & [data-day="7"] { --day-color: var(--day-7); }
   }
 
-  #pose-entries > article:has(:target) {
+  #pose-entries article:has(:target) {
     background: var(--surface);
     outline: 1px solid var(--border);
     outline-offset: 0.5em;
@@ -966,6 +1010,12 @@
       #palette-dialog
     ) {
     font-family: var(--sans-font);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
   }
 }
 

@@ -12,17 +12,17 @@ The new look is <i>Kenbun</i>, named after <a href="https://onepiece.fandom.com/
 </p>
 <div id="outline-container-before-and-after" class="outline-2">
 <h2 id="before-and-after">Before and after<a class="heading-anchor" href="#before-and-after" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org00373f2">
-<div class="grid" id="org5e3e57d">
+<div class="outline-text-2" id="text-orge3824c8">
+<div class="grid" id="org2195d48">
 
-<div id="org450fb39" class="figure">
+<div id="orgb221018" class="figure">
 <p><img src="/images/kenbun/hakimacs-home.webp" alt="hakimacs-home.webp" loading="lazy" decoding="async" />
 </p>
 <p>Before: the home page as an Emacs window, with menu bar and modeline</p>
 </div>
 
 
-<div id="orgaed306a" class="figure">
+<div id="orgc87401d" class="figure">
 <p><img src="/images/kenbun/home.webp" alt="home.webp" loading="lazy" decoding="async" />
 </p>
 <p>After: the home page in Kenbun, title, links and a plain column</p>
@@ -30,16 +30,16 @@ The new look is <i>Kenbun</i>, named after <a href="https://onepiece.fandom.com/
 
 </div>
 
-<div class="grid" id="orgdd18a85">
+<div class="grid" id="org9bd5021">
 
-<div id="orgafbc613" class="figure">
+<div id="org1c7fd78" class="figure">
 <p><img src="/images/kenbun/hakimacs-list.webp" alt="hakimacs-list.webp" loading="lazy" decoding="async" />
 </p>
 <p>Before: the posts listing page</p>
 </div>
 
 
-<div id="org85875b4" class="figure">
+<div id="org66a07a1" class="figure">
 <p><img src="/images/kenbun/list.webp" alt="list.webp" loading="lazy" decoding="async" />
 </p>
 <p>After: the new simple listing page</p>
@@ -48,16 +48,16 @@ The new look is <i>Kenbun</i>, named after <a href="https://onepiece.fandom.com/
 </div>
 
 
-<div class="grid" id="org0cfe4d4">
+<div class="grid" id="org503bc05">
 
-<div id="orgd14de23" class="figure">
+<div id="org52c1e66" class="figure">
 <p><img src="/images/kenbun/hakimacs-post.webp" alt="hakimacs-post.webp" loading="lazy" decoding="async" />
 </p>
 <p>Before: a post inside the Emacs frame</p>
 </div>
 
 
-<div id="org31297d8" class="figure">
+<div id="orgff6f016" class="figure">
 <p><img src="/images/kenbun/post.webp" alt="post.webp" loading="lazy" decoding="async" />
 </p>
 <p>After: the same post, just the words</p>
@@ -68,7 +68,7 @@ The new look is <i>Kenbun</i>, named after <a href="https://onepiece.fandom.com/
 </div>
 <div id="outline-container-what-went" class="outline-2">
 <h2 id="what-went">What went<a class="heading-anchor" href="#what-went" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-orga796b36">
+<div class="outline-text-2" id="text-org6ee1a42">
 <ul class="org-ul">
 <li>The fake Emacs frame: menu bar, modeline, echo area, hamburger menu.</li>
 <li>Breadcrumbs, the reading progress bar, sidenotes, code copy buttons, the image lightbox.</li>
@@ -78,7 +78,7 @@ The new look is <i>Kenbun</i>, named after <a href="https://onepiece.fandom.com/
 </div>
 <div id="outline-container-what-stayed-because-i-want-it" class="outline-2">
 <h2 id="what-stayed-because-i-want-it">What stayed, because I want it<a class="heading-anchor" href="#what-stayed-because-i-want-it" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org64745e8">
+<div class="outline-text-2" id="text-orgee758b6">
 <ul class="org-ul">
 <li>My fonts, the heading glyphs, and the five font modes.</li>
 <li>base16 colour schemes, with Haki as the default.</li>
@@ -89,7 +89,7 @@ The new look is <i>Kenbun</i>, named after <a href="https://onepiece.fandom.com/
 </div>
 <div id="outline-container-by-the-numbers" class="outline-2">
 <h2 id="by-the-numbers">By the numbers<a class="heading-anchor" href="#by-the-numbers" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org0faa853">
+<div class="outline-text-2" id="text-org36548a2">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -131,7 +131,7 @@ The new look is <i>Kenbun</i>, named after <a href="https://onepiece.fandom.com/
 </div>
 <div id="outline-container-what-i-kept-in-mind" class="outline-2">
 <h2 id="what-i-kept-in-mind">What I kept in mind<a class="heading-anchor" href="#what-i-kept-in-mind" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-orga52a280">
+<div class="outline-text-2" id="text-org4141c63">
 <ul class="org-ul">
 <li>Style plain HTML elements first, and keep a short list of shared pieces. A new page reuses them; it
 never gets its own CSS.</li>
@@ -151,7 +151,7 @@ native <a href="https://orgmode.org/manual/Publishing.html">ox-publish</a> and <
 </p>
 <div id="outline-container-why-i-even-started-this" class="outline-2">
 <h2 id="why-i-even-started-this">Why I even started this<a class="heading-anchor" href="#why-i-even-started-this" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org702b5dd">
+<div class="outline-text-2" id="text-org3bbdc29">
 <p>
 This site used to run on <a href="https://gohugo.io">Hugo</a> using same theme called <a href="https://github.com/idlip/hakimacs">hakimacs</a>, with content in Org mode rendered through go-org, and it worked fine for months. But I hated looking how ugly <a href="https://gohugo.io/templates/introduction/">go-template</a> looked and lot of regexp to do something, although it was fast, it was not human (emacs user) friendly to read at all. When I wrote in org mode, I always liked why not elisp somewhere to hack and do stuff. Org is a rich ecosystem and it needs way more hackable place to configure, not hugo to regexp parse everything.
 </p>
@@ -167,14 +167,14 @@ That annoyance is the entire reason denden exists.
 </div>
 <div id="outline-container-what-denden-actually-is-and-isn-t" class="outline-2">
 <h2 id="what-denden-actually-is-and-isn-t">What denden actually is, and isn't<a class="heading-anchor" href="#what-denden-actually-is-and-isn-t" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-orgf6ce068">
+<div class="outline-text-2" id="text-orgb36658a">
 <p>
 <code>denden</code> is not a package, its more like a tool, helpers and building block on top of org-publish. It
 uses all native org mode libs and <code>org-publish</code>, the publishing engine that already ships inside Org mode, plus a small pile of Elisp helper functions sitting on top of it, that's the whole thing. <code>denden.el</code> itself is one file, no hidden layers, no magic you can't just <code>M-x describe-function</code> your way into.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><code><span class="org-comment-delimiter">;; </span><span class="org-comment">this is roughly the entire mental model
+<pre tabindex="0" class="src src-emacs-lisp"><code><span class="org-comment-delimiter">;; </span><span class="org-comment">this is roughly the entire mental model
 </span>(<span class="org-keyword">require</span> '<span class="org-constant">denden</span>)
 (<span class="org-keyword">setq</span> denden-content-directory <span class="org-string">"~/my-site/content"</span>)
 (<span class="org-keyword">setq</span> denden-publishing-directory <span class="org-string">"~/my-site/public"</span>)
@@ -193,13 +193,13 @@ Nobody's stopping you, there's no true "denden way" to acheive it.
 </div>
 <div id="outline-container-templates-are-just-lists-the-sexp-html-bit" class="outline-2">
 <h2 id="templates-are-just-lists-the-sexp-html-bit">Templates are just lists, the sexp-HTML bit<a class="heading-anchor" href="#templates-are-just-lists-the-sexp-html-bit" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-orgdcf3b1e">
+<div class="outline-text-2" id="text-org33595d4">
 <p>
 This is the part I like the most, a denden template is not a template language at all, it's a plain Emacs Lisp list, shaped like this.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><code>(TAG ATTRIBUTE-PLIST . CHILDREN)
+<pre tabindex="0" class="src src-emacs-lisp"><code>(TAG ATTRIBUTE-PLIST . CHILDREN)
 </code></pre>
 </div>
 
@@ -208,7 +208,7 @@ A tag symbol, a plist of attributes, then however many children you want, which 
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><code>(list 'div '(<span class="org-builtin">:class</span> <span class="org-string">"card"</span>)
+<pre tabindex="0" class="src src-emacs-lisp"><code>(list 'div '(<span class="org-builtin">:class</span> <span class="org-string">"card"</span>)
       (list 'h2 nil <span class="org-string">"Hello"</span>)
       (list 'p '(<span class="org-builtin">:class</span> <span class="org-string">"muted"</span>) <span class="org-string">"Written as a list, not a string template."</span>))
 <span class="org-comment-delimiter">;; </span><span class="org-comment">C-x C-e =&gt; (div (:class "card") (h2 nil "Hello") (p (:class "muted") "Written as a list, not a string template."))</span>
@@ -220,7 +220,7 @@ Run that through <code>denden-serialize-node</code> and you get.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-html"><code>&lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"card"</span>&gt;&lt;<span class="org-function-name">h2</span>&gt;<span class="org-underline"><span class="org-bold-italic">Hello</span></span>&lt;/<span class="org-function-name">h2</span>&gt;&lt;<span class="org-function-name">p</span> <span class="org-variable-name">class</span>=<span class="org-string">"muted"</span>&gt;Written as a list, not a string template.&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+<pre tabindex="0" class="src src-html"><code>&lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"card"</span>&gt;&lt;<span class="org-function-name">h2</span>&gt;<span class="org-underline"><span class="org-bold-italic">Hello</span></span>&lt;/<span class="org-function-name">h2</span>&gt;&lt;<span class="org-function-name">p</span> <span class="org-variable-name">class</span>=<span class="org-string">"muted"</span>&gt;Written as a list, not a string template.&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
 </code></pre>
 </div>
 
@@ -233,7 +233,7 @@ Here's a tiny real one, lifted straight from denden's own example site, <code>de
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><code>(<span class="org-keyword">cl-defun</span> <span class="org-function-name">example-theme-header</span> (<span class="org-type">&amp;key</span> site-title menu-items)
+<pre tabindex="0" class="src src-emacs-lisp"><code>(<span class="org-keyword">cl-defun</span> <span class="org-function-name">example-theme-header</span> (<span class="org-type">&amp;key</span> site-title menu-items)
   <span class="org-doc">"The page header: SITE-TITLE linking home, then a MENU-ITEMS nav."</span>
   (list 'header nil
         (list 'a '(<span class="org-builtin">:class</span> <span class="org-string">"title"</span> <span class="org-builtin">:href</span> <span class="org-string">"/"</span>)
@@ -251,7 +251,7 @@ That's a whole working nav bar, <code>menu-items</code> is just a list of <code>
 </div>
 <div id="outline-container-how-my-own-site-is-built-with-it" class="outline-2">
 <h2 id="how-my-own-site-is-built-with-it">How my own site is built with it<a class="heading-anchor" href="#how-my-own-site-is-built-with-it" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org7a75749">
+<div class="outline-text-2" id="text-org4f76400">
 <p>
 My site's own Elisp lives in exactly three files, and I think that's a feature, not something I need to apologize for.
 </p>
@@ -267,7 +267,7 @@ Config is just Elisp data, so it looks like this, shortened from my real <code>s
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><code>(<span class="org-keyword">defconst</span> <span class="org-variable-name">site-menu-main</span>
+<pre tabindex="0" class="src src-emacs-lisp"><code>(<span class="org-keyword">defconst</span> <span class="org-variable-name">site-menu-main</span>
   '((<span class="org-builtin">:name</span> <span class="org-string">"Home"</span> <span class="org-builtin">:url</span> <span class="org-string">"/"</span>)
     (<span class="org-builtin">:name</span> <span class="org-string">"Blog Posts"</span> <span class="org-builtin">:url</span> <span class="org-string">"/log/"</span>)
     (<span class="org-builtin">:name</span> <span class="org-string">"Wander My Small Web"</span> <span class="org-builtin">:url</span> <span class="org-string">"/wander/"</span>)
@@ -287,7 +287,7 @@ Everything you're reading right now, the  <button type="button" class="tag-cloud
 </div>
 <div id="outline-container-one-more-cool-bit-even-the-og-card-images-are-sexp" class="outline-2">
 <h2 id="one-more-cool-bit-even-the-og-card-images-are-sexp">One more cool bit, even the OG card images are sexp<a class="heading-anchor" href="#one-more-cool-bit-even-the-og-card-images-are-sexp" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org221ca75">
+<div class="outline-text-2" id="text-org44708d1">
 <p>
 OG cards, the preview image you see when a link gets shared on social media, are usually generated with some headless browser screenshot setup or an image library. In denden it's the exact same <code>(TAG ATTRIBUTE-PLIST . CHILDREN)</code> trick, just aimed at <code>&lt;svg&gt;</code> instead of <code>&lt;div&gt;</code>, from my own <code>site.el</code>.
 </p>
@@ -298,7 +298,7 @@ Own it in lisp way. Direct maintenance of HTML files with no system is also cool
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><code>(list 'svg (list <span class="org-builtin">:xmlns</span> <span class="org-string">"http://www.w3.org/2000/svg"</span> <span class="org-builtin">:viewBox</span> <span class="org-string">"0 0 1200 630"</span>
+<pre tabindex="0" class="src src-emacs-lisp"><code>(list 'svg (list <span class="org-builtin">:xmlns</span> <span class="org-string">"http://www.w3.org/2000/svg"</span> <span class="org-builtin">:viewBox</span> <span class="org-string">"0 0 1200 630"</span>
                   <span class="org-builtin">:width</span> <span class="org-string">"1200"</span> <span class="org-builtin">:height</span> <span class="org-string">"630"</span> <span class="org-builtin">:font-family</span> <span class="org-string">"Code D OnePiece, monospace"</span>)
       (list 'rect '(<span class="org-builtin">:width</span> <span class="org-string">"1200"</span> <span class="org-builtin">:height</span> <span class="org-string">"630"</span> <span class="org-builtin">:fill</span> <span class="org-string">"#000000"</span>))
       (list 'rect '(<span class="org-builtin">:width</span> <span class="org-string">"1200"</span> <span class="org-builtin">:height</span> <span class="org-string">"68"</span> <span class="org-builtin">:fill</span> <span class="org-string">"#0a0f0a"</span>))
@@ -316,13 +316,13 @@ Same <code>denden-serialize-node</code> (<a href="https://github.com/idlip/dende
 </div>
 <div id="outline-container-it-s-also-properly-fast" class="outline-2">
 <h2 id="it-s-also-properly-fast">It's also properly fast<a class="heading-anchor" href="#it-s-also-properly-fast" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org4bbad82">
+<div class="outline-text-2" id="text-org7a57218">
 <p>
 I was bracing for a slow first build, since Emacs isn't exactly famous for being a speed train. It wasn't. A full build of this entire site, every post, every feed, every OG card image, finishes in a couple of seconds. I build it from the terminal like this.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh"><code>emacs --batch -Q -L denden -L site -L theme <span class="org-sh-escaped-newline">\</span>
+<pre tabindex="0" class="src src-sh"><code>emacs --batch -Q -L denden -L site -L theme <span class="org-sh-escaped-newline">\</span>
     -l denden/denden.el -l site/site.el -l theme/theme.el <span class="org-sh-escaped-newline">\</span>
     --eval <span class="org-string">'(setq denden-repository-directory "/path/to/my/site")'</span> <span class="org-sh-escaped-newline">\</span>
     --eval <span class="org-string">'(site-build t)'</span>
@@ -337,7 +337,7 @@ incremental cache, and it's done before switch two windows. There's also an asyn
 </div>
 <div id="outline-container-owning-the-whole-thing" class="outline-2">
 <h2 id="owning-the-whole-thing">Owning the whole thing<a class="heading-anchor" href="#owning-the-whole-thing" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org9ba7e1a">
+<div class="outline-text-2" id="text-orgc736eac">
 <p>
 The thing I like most isn't the speed, it's that I own every line of this. I'm an Emacs user, I already spend my <a href="/log/may-i-recommend/">May I Recommend EWM</a> tweaking my config, and now my blog engine runs in the same language, the same editor, the same muscle memory. If I want a new feature, I don't wait for a plugin, I don't learn a templating DSL, I just write a function next to the ones already there and call it. That's a genuinely different feeling from configuring a static site generator, it's closer to how your Emacs config itself grows over the years, one small function at a time, shaped around what you personally want.
 </p>
@@ -348,7 +348,7 @@ If any of this sounds interesting and you're also an Emacs plus Org mode person,
 </p>
 
 
-<div id="orgcc3e569" class="figure">
+<div id="org215fa57" class="figure">
 <p><img src="https://raw.githubusercontent.com/idlip/denden/refs/heads/master/example/screenshot.png" alt="screenshot.png" loading="lazy" decoding="async" />
 </p>
 <p>Snap of a example bearblog like site built with denden</p>
@@ -357,7 +357,7 @@ If any of this sounds interesting and you're also an Emacs plus Org mode person,
 </div>
 <div id="outline-container-about-the-name" class="outline-2">
 <h2 id="about-the-name">About the name<a class="heading-anchor" href="#about-the-name" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org97e78b3">
+<div class="outline-text-2" id="text-org8be242f">
 <p>
 A <code>denden mushi</code> is the snail-shaped transponder phone from One Piece, the way everyone in that world
 talks to each other across the sea. If you've looked around this site even a little, the One Piece

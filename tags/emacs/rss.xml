@@ -101,11 +101,11 @@ I wrote about <a href="/log/obtf-org-mode/">OBTF as Second Brain with Org mode</
 </p>
 
 <p>
-OBTF in some sense is a lazy man's system to get things done. But if you feel more lazier to even think of it, I'd highly recommend to read <a href="https://obtf.ru/en">https://obtf.ru/en</a> website, since it helps me as well to stay motivated to achieve its purpose.
+OBTF in some sense is a lazy man's system to get things done. But if you feel more lazier to even think of it, I'd highly recommend to read <a href="https://obtf.ru/en">obtf.ru/en</a> website, since it helps me as well to stay motivated to achieve its purpose.
 </p>
 <div id="outline-container-obtf-s-philosophy-pitch" class="outline-2">
 <h2 id="obtf-s-philosophy-pitch">OBTF's philosophy pitch<a class="heading-anchor" href="#obtf-s-philosophy-pitch" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org3728b7e">
+<div class="outline-text-2" id="text-org353f360">
 <p>
 Their whole argument boils down to a handful of lines:
 </p>
@@ -139,17 +139,17 @@ Some posts on OBTF found over internet:
 
 <ul class="org-ul">
 <li><a href="https://talk.macpowerusers.com/t/using-one-big-text-file-obtf-for-daily-blogging-and-journal/37546">Forum post on MacPowerUsers</a></li>
-<li><a href="https://mrshll.uk/posts/plain-text-planner/">https://mrshll.uk/posts/plain-text-planner/</a></li>
-<li><a href="https://jeffhuang.com/productivity_text_file/">https://jeffhuang.com/productivity_text_file/</a></li>
-<li><a href="https://mrdizzy.blog/blog/obtf/">https://mrdizzy.blog/blog/obtf/</a></li>
-<li><a href="https://beardystarstuff.net/posts/2024-04-17.html">https://beardystarstuff.net/posts/2024-04-17.html</a></li>
-<li><a href="https://whhone.com/posts/one-line-per-day-diary-in-org-mode/">https://whhone.com/posts/one-line-per-day-diary-in-org-mode/</a></li>
+<li><a href="https://mrshll.uk/posts/plain-text-planner/">mrshll.uk/posts/plain-text-planner</a></li>
+<li><a href="https://jeffhuang.com/productivity_text_file/">jeffhuang.com/productivity_text_file</a></li>
+<li><a href="https://mrdizzy.blog/blog/obtf/">mrdizzy.blog/blog/obtf</a></li>
+<li><a href="https://beardystarstuff.net/posts/2024-04-17.html">beardystarstuff.net/posts/2024-04-17.html</a></li>
+<li><a href="https://whhone.com/posts/one-line-per-day-diary-in-org-mode/">whhone.com/posts/one-line-per-day-diary-in-org-mode</a></li>
 </ul>
 </div>
 </div>
 <div id="outline-container-where-org-gives-you-more" class="outline-2">
 <h2 id="where-org-gives-you-more">Where Org gives you more<a class="heading-anchor" href="#where-org-gives-you-more" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-orge8549f3">
+<div class="outline-text-2" id="text-org20db199">
 <p>
 "Search beats categories" is true until the file gets big enough that search alone stops being enough, and at that point you want <b>structure you can turn on when you need it</b>, not structure forced on you from day one.
 </p>
@@ -159,7 +159,7 @@ I still keep a <code>datetree</code>, Year &gt; Month &gt; Day &gt; entry, which
 </p>
 
 <div class="org-src-container">
-<pre class="src src-org"><code><span class="org-org-level-1">* 2026</span>
+<pre tabindex="0" class="src src-org"><code><span class="org-org-level-1">* 2026</span>
 <span class="org-org-level-2">** 2026-10 October</span>
 <span class="org-org-level-3">*** 2026-10-07 Tuesday</span>
 <span class="org-org-level-4">**** &lt;whatever I'm capturing&gt;            </span><span class="org-org-level-4"><span class="org-org-tag">:tag1:tag2:</span></span>
@@ -195,7 +195,7 @@ split the real file.</li>
 </div>
 <div id="outline-container-conclude" class="outline-2">
 <h2 id="conclude">Conclude<a class="heading-anchor" href="#conclude" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-orgc2a86ac">
+<div class="outline-text-2" id="text-orgd215fe9">
 <p>
 These might sound very much tied to emacs, yes thats mostly true. Environment so perfect that it can be called a monolith of emacs. But alas, people have ported org mode inspired modes and packages to various other ecosystem.
 </p>
@@ -225,7 +225,7 @@ native <a href="https://orgmode.org/manual/Publishing.html">ox-publish</a> and <
 </p>
 <div id="outline-container-why-i-even-started-this" class="outline-2">
 <h2 id="why-i-even-started-this">Why I even started this<a class="heading-anchor" href="#why-i-even-started-this" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org702b5dd">
+<div class="outline-text-2" id="text-org3bbdc29">
 <p>
 This site used to run on <a href="https://gohugo.io">Hugo</a> using same theme called <a href="https://github.com/idlip/hakimacs">hakimacs</a>, with content in Org mode rendered through go-org, and it worked fine for months. But I hated looking how ugly <a href="https://gohugo.io/templates/introduction/">go-template</a> looked and lot of regexp to do something, although it was fast, it was not human (emacs user) friendly to read at all. When I wrote in org mode, I always liked why not elisp somewhere to hack and do stuff. Org is a rich ecosystem and it needs way more hackable place to configure, not hugo to regexp parse everything.
 </p>
@@ -241,14 +241,14 @@ That annoyance is the entire reason denden exists.
 </div>
 <div id="outline-container-what-denden-actually-is-and-isn-t" class="outline-2">
 <h2 id="what-denden-actually-is-and-isn-t">What denden actually is, and isn't<a class="heading-anchor" href="#what-denden-actually-is-and-isn-t" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-orgf6ce068">
+<div class="outline-text-2" id="text-orgb36658a">
 <p>
 <code>denden</code> is not a package, its more like a tool, helpers and building block on top of org-publish. It
 uses all native org mode libs and <code>org-publish</code>, the publishing engine that already ships inside Org mode, plus a small pile of Elisp helper functions sitting on top of it, that's the whole thing. <code>denden.el</code> itself is one file, no hidden layers, no magic you can't just <code>M-x describe-function</code> your way into.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><code><span class="org-comment-delimiter">;; </span><span class="org-comment">this is roughly the entire mental model
+<pre tabindex="0" class="src src-emacs-lisp"><code><span class="org-comment-delimiter">;; </span><span class="org-comment">this is roughly the entire mental model
 </span>(<span class="org-keyword">require</span> '<span class="org-constant">denden</span>)
 (<span class="org-keyword">setq</span> denden-content-directory <span class="org-string">"~/my-site/content"</span>)
 (<span class="org-keyword">setq</span> denden-publishing-directory <span class="org-string">"~/my-site/public"</span>)
@@ -267,13 +267,13 @@ Nobody's stopping you, there's no true "denden way" to acheive it.
 </div>
 <div id="outline-container-templates-are-just-lists-the-sexp-html-bit" class="outline-2">
 <h2 id="templates-are-just-lists-the-sexp-html-bit">Templates are just lists, the sexp-HTML bit<a class="heading-anchor" href="#templates-are-just-lists-the-sexp-html-bit" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-orgdcf3b1e">
+<div class="outline-text-2" id="text-org33595d4">
 <p>
 This is the part I like the most, a denden template is not a template language at all, it's a plain Emacs Lisp list, shaped like this.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><code>(TAG ATTRIBUTE-PLIST . CHILDREN)
+<pre tabindex="0" class="src src-emacs-lisp"><code>(TAG ATTRIBUTE-PLIST . CHILDREN)
 </code></pre>
 </div>
 
@@ -282,7 +282,7 @@ A tag symbol, a plist of attributes, then however many children you want, which 
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><code>(list 'div '(<span class="org-builtin">:class</span> <span class="org-string">"card"</span>)
+<pre tabindex="0" class="src src-emacs-lisp"><code>(list 'div '(<span class="org-builtin">:class</span> <span class="org-string">"card"</span>)
       (list 'h2 nil <span class="org-string">"Hello"</span>)
       (list 'p '(<span class="org-builtin">:class</span> <span class="org-string">"muted"</span>) <span class="org-string">"Written as a list, not a string template."</span>))
 <span class="org-comment-delimiter">;; </span><span class="org-comment">C-x C-e =&gt; (div (:class "card") (h2 nil "Hello") (p (:class "muted") "Written as a list, not a string template."))</span>
@@ -294,7 +294,7 @@ Run that through <code>denden-serialize-node</code> and you get.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-html"><code>&lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"card"</span>&gt;&lt;<span class="org-function-name">h2</span>&gt;<span class="org-underline"><span class="org-bold-italic">Hello</span></span>&lt;/<span class="org-function-name">h2</span>&gt;&lt;<span class="org-function-name">p</span> <span class="org-variable-name">class</span>=<span class="org-string">"muted"</span>&gt;Written as a list, not a string template.&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
+<pre tabindex="0" class="src src-html"><code>&lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"card"</span>&gt;&lt;<span class="org-function-name">h2</span>&gt;<span class="org-underline"><span class="org-bold-italic">Hello</span></span>&lt;/<span class="org-function-name">h2</span>&gt;&lt;<span class="org-function-name">p</span> <span class="org-variable-name">class</span>=<span class="org-string">"muted"</span>&gt;Written as a list, not a string template.&lt;/<span class="org-function-name">p</span>&gt;&lt;/<span class="org-function-name">div</span>&gt;
 </code></pre>
 </div>
 
@@ -307,7 +307,7 @@ Here's a tiny real one, lifted straight from denden's own example site, <code>de
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><code>(<span class="org-keyword">cl-defun</span> <span class="org-function-name">example-theme-header</span> (<span class="org-type">&amp;key</span> site-title menu-items)
+<pre tabindex="0" class="src src-emacs-lisp"><code>(<span class="org-keyword">cl-defun</span> <span class="org-function-name">example-theme-header</span> (<span class="org-type">&amp;key</span> site-title menu-items)
   <span class="org-doc">"The page header: SITE-TITLE linking home, then a MENU-ITEMS nav."</span>
   (list 'header nil
         (list 'a '(<span class="org-builtin">:class</span> <span class="org-string">"title"</span> <span class="org-builtin">:href</span> <span class="org-string">"/"</span>)
@@ -325,7 +325,7 @@ That's a whole working nav bar, <code>menu-items</code> is just a list of <code>
 </div>
 <div id="outline-container-how-my-own-site-is-built-with-it" class="outline-2">
 <h2 id="how-my-own-site-is-built-with-it">How my own site is built with it<a class="heading-anchor" href="#how-my-own-site-is-built-with-it" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org7a75749">
+<div class="outline-text-2" id="text-org4f76400">
 <p>
 My site's own Elisp lives in exactly three files, and I think that's a feature, not something I need to apologize for.
 </p>
@@ -341,7 +341,7 @@ Config is just Elisp data, so it looks like this, shortened from my real <code>s
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><code>(<span class="org-keyword">defconst</span> <span class="org-variable-name">site-menu-main</span>
+<pre tabindex="0" class="src src-emacs-lisp"><code>(<span class="org-keyword">defconst</span> <span class="org-variable-name">site-menu-main</span>
   '((<span class="org-builtin">:name</span> <span class="org-string">"Home"</span> <span class="org-builtin">:url</span> <span class="org-string">"/"</span>)
     (<span class="org-builtin">:name</span> <span class="org-string">"Blog Posts"</span> <span class="org-builtin">:url</span> <span class="org-string">"/log/"</span>)
     (<span class="org-builtin">:name</span> <span class="org-string">"Wander My Small Web"</span> <span class="org-builtin">:url</span> <span class="org-string">"/wander/"</span>)
@@ -361,7 +361,7 @@ Everything you're reading right now, the  <button type="button" class="tag-cloud
 </div>
 <div id="outline-container-one-more-cool-bit-even-the-og-card-images-are-sexp" class="outline-2">
 <h2 id="one-more-cool-bit-even-the-og-card-images-are-sexp">One more cool bit, even the OG card images are sexp<a class="heading-anchor" href="#one-more-cool-bit-even-the-og-card-images-are-sexp" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org221ca75">
+<div class="outline-text-2" id="text-org44708d1">
 <p>
 OG cards, the preview image you see when a link gets shared on social media, are usually generated with some headless browser screenshot setup or an image library. In denden it's the exact same <code>(TAG ATTRIBUTE-PLIST . CHILDREN)</code> trick, just aimed at <code>&lt;svg&gt;</code> instead of <code>&lt;div&gt;</code>, from my own <code>site.el</code>.
 </p>
@@ -372,7 +372,7 @@ Own it in lisp way. Direct maintenance of HTML files with no system is also cool
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><code>(list 'svg (list <span class="org-builtin">:xmlns</span> <span class="org-string">"http://www.w3.org/2000/svg"</span> <span class="org-builtin">:viewBox</span> <span class="org-string">"0 0 1200 630"</span>
+<pre tabindex="0" class="src src-emacs-lisp"><code>(list 'svg (list <span class="org-builtin">:xmlns</span> <span class="org-string">"http://www.w3.org/2000/svg"</span> <span class="org-builtin">:viewBox</span> <span class="org-string">"0 0 1200 630"</span>
                   <span class="org-builtin">:width</span> <span class="org-string">"1200"</span> <span class="org-builtin">:height</span> <span class="org-string">"630"</span> <span class="org-builtin">:font-family</span> <span class="org-string">"Code D OnePiece, monospace"</span>)
       (list 'rect '(<span class="org-builtin">:width</span> <span class="org-string">"1200"</span> <span class="org-builtin">:height</span> <span class="org-string">"630"</span> <span class="org-builtin">:fill</span> <span class="org-string">"#000000"</span>))
       (list 'rect '(<span class="org-builtin">:width</span> <span class="org-string">"1200"</span> <span class="org-builtin">:height</span> <span class="org-string">"68"</span> <span class="org-builtin">:fill</span> <span class="org-string">"#0a0f0a"</span>))
@@ -390,13 +390,13 @@ Same <code>denden-serialize-node</code> (<a href="https://github.com/idlip/dende
 </div>
 <div id="outline-container-it-s-also-properly-fast" class="outline-2">
 <h2 id="it-s-also-properly-fast">It's also properly fast<a class="heading-anchor" href="#it-s-also-properly-fast" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org4bbad82">
+<div class="outline-text-2" id="text-org7a57218">
 <p>
 I was bracing for a slow first build, since Emacs isn't exactly famous for being a speed train. It wasn't. A full build of this entire site, every post, every feed, every OG card image, finishes in a couple of seconds. I build it from the terminal like this.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh"><code>emacs --batch -Q -L denden -L site -L theme <span class="org-sh-escaped-newline">\</span>
+<pre tabindex="0" class="src src-sh"><code>emacs --batch -Q -L denden -L site -L theme <span class="org-sh-escaped-newline">\</span>
     -l denden/denden.el -l site/site.el -l theme/theme.el <span class="org-sh-escaped-newline">\</span>
     --eval <span class="org-string">'(setq denden-repository-directory "/path/to/my/site")'</span> <span class="org-sh-escaped-newline">\</span>
     --eval <span class="org-string">'(site-build t)'</span>
@@ -411,7 +411,7 @@ incremental cache, and it's done before switch two windows. There's also an asyn
 </div>
 <div id="outline-container-owning-the-whole-thing" class="outline-2">
 <h2 id="owning-the-whole-thing">Owning the whole thing<a class="heading-anchor" href="#owning-the-whole-thing" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org9ba7e1a">
+<div class="outline-text-2" id="text-orgc736eac">
 <p>
 The thing I like most isn't the speed, it's that I own every line of this. I'm an Emacs user, I already spend my <a href="/log/may-i-recommend/">May I Recommend EWM</a> tweaking my config, and now my blog engine runs in the same language, the same editor, the same muscle memory. If I want a new feature, I don't wait for a plugin, I don't learn a templating DSL, I just write a function next to the ones already there and call it. That's a genuinely different feeling from configuring a static site generator, it's closer to how your Emacs config itself grows over the years, one small function at a time, shaped around what you personally want.
 </p>
@@ -422,7 +422,7 @@ If any of this sounds interesting and you're also an Emacs plus Org mode person,
 </p>
 
 
-<div id="orgcc3e569" class="figure">
+<div id="org215fa57" class="figure">
 <p><img src="https://raw.githubusercontent.com/idlip/denden/refs/heads/master/example/screenshot.png" alt="screenshot.png" loading="lazy" decoding="async" />
 </p>
 <p>Snap of a example bearblog like site built with denden</p>
@@ -431,7 +431,7 @@ If any of this sounds interesting and you're also an Emacs plus Org mode person,
 </div>
 <div id="outline-container-about-the-name" class="outline-2">
 <h2 id="about-the-name">About the name<a class="heading-anchor" href="#about-the-name" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org97e78b3">
+<div class="outline-text-2" id="text-org8be242f">
 <p>
 A <code>denden mushi</code> is the snail-shaped transponder phone from One Piece, the way everyone in that world
 talks to each other across the sea. If you've looked around this site even a little, the One Piece
@@ -512,8 +512,8 @@ Emacs is what every software should be designed as: something that keeps you bus
 </ul>
 
 <p>
-EWM: <a href="https://codeberg.org/ezemtsov/ewm/">https://codeberg.org/ezemtsov/ewm/</a>
-Wiki: <a href="https://codeberg.org/ezemtsov/ewm/wiki">https://codeberg.org/ezemtsov/ewm/wiki</a>
+EWM: <a href="https://codeberg.org/ezemtsov/ewm/">codeberg:ezemtsov/ewm</a>
+Wiki: <a href="https://codeberg.org/ezemtsov/ewm/wiki">codeberg:ezemtsov/ewm/wiki</a>
 </p>
 
 <p>
@@ -556,7 +556,7 @@ Emacs already has <code>next-buffer</code> - <code>previous-buffer</code> and <c
 
 <div class="org-center">
 
-<div id="org995d9aa" class="figure">
+<div id="org0779fba" class="figure">
 <p><img src="/images/ewm-desktop.png" alt="ewm-desktop.png" loading="lazy" decoding="async" />
 </p>
 <p>Fig: EWM setup with Noctalia shell while writing this blog post. Left is org mode capture buffer, top right is glide browser showing EWM repo and bottom right is foot terminal running hugo server.</p>
@@ -580,7 +580,7 @@ I no longer quit/leave emacs, if I'm leaving that means I'm shutting down my mac
 </p>
 <div id="outline-container-may-i-also-recommend-glide-browser-for-emacs-keymappings" class="outline-3">
 <h3 id="may-i-also-recommend-glide-browser-for-emacs-keymappings">May I also Recommend Glide browser for emacs keymappings<a class="heading-anchor" href="#may-i-also-recommend-glide-browser-for-emacs-keymappings" aria-label="Link to this section">#</a></h3>
-<div class="outline-text-3" id="text-orgb87bb46">
+<div class="outline-text-3" id="text-org25e9980">
 <p>
 Glide browser came to <a href="https://lobste.rs/s/lm3isi/glide_extensible_keyboard_focused_web">lobste.rs news</a> and showcased as firefox-fork being keyboard centric, and I was badly looking for qutebrowser enhancements with addons. And I made the switch and config was pretty easy.
 </p>
@@ -604,7 +604,7 @@ Here's the <a href="https://github.com/glide-browser/glide/discussions/25">discu
 </div>
 <div id="outline-container-2026-07-29-wed" class="outline-2">
 <h2 id="2026-07-29-wed"><span class="timestamp-wrapper"><span class="timestamp">[2026-07-29 Wed]</span></span><a class="heading-anchor" href="#2026-07-29-wed" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org2526900">
+<div class="outline-text-2" id="text-org2a090c5">
 <p>
 <a href="https://codeberg.org/ezemtsov">Ezemtsov</a> has made a <a href="https://codeberg.org/ezemtsov/emacs/src/branch/wayland">fork of emacs</a> with <a href="https://codeberg.org/ezemtsov/emacs/commit/6147db532ae4fb462910816e55fab0cc62418269">pure wayland backend</a>, with no gtk or
 cairo toolkit. As I was very excited on this, I immediately jumped and built it with no toolkit.
@@ -634,7 +634,7 @@ day to day has been either emacs for notes/task and glide browser for being on I
 </div>
 <div id="outline-container-2026-10-23-fri" class="outline-2">
 <h2 id="2026-10-23-fri"><span class="timestamp-wrapper"><span class="timestamp">[2026-10-23 Fri]</span></span><a class="heading-anchor" href="#2026-10-23-fri" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org469517c">
+<div class="outline-text-2" id="text-orge85091e">
 <p>
 EWM again has matured alot and is almost stable for daily driving for others, although I've been already daily driving it with no issues. Even features have increased alot, every fortnight there has been new cool feature or improvements in codebase. Emacs pwayl backend got background-ext-control which gives blur, EWM has blur now, go see codeberg demo to see it and check wiki for more. <code>S-e</code> which calls <code>ewm-edit</code> to capture input text from any wayland window and edit in emacs and on closing it pastes it there (inspired by emacs-anywhere &amp; exwm).
 </p>
@@ -644,7 +644,7 @@ EWM even got floating window support, true full screen like Niri, overview like 
 </p>
 
 <p>
-Another plug, someone else is writing a wayland compositor with river window protocols with pure emacs lisp and no rust/c dynamic module. <a href="https://github.com/thkoch2001/rau">https://github.com/thkoch2001/rau</a> sounds cool with efforts to see how well it turns out.
+Another plug, someone else is writing a wayland compositor with river window protocols with pure emacs lisp and no rust/c dynamic module. <a href="https://github.com/thkoch2001/rau">github:thkoch2001/rau</a> sounds cool with efforts to see how well it turns out.
 </p>
 
 <hr />
@@ -707,7 +707,7 @@ This context is also written in favor to post it on r/obtf
 </p>
 <div id="outline-container-org-mode-is-the-best-tool-for-managing-obtf" class="outline-2">
 <h2 id="org-mode-is-the-best-tool-for-managing-obtf">Org mode is the best tool for managing OBTF<a class="heading-anchor" href="#org-mode-is-the-best-tool-for-managing-obtf" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org85ed3b1">
+<div class="outline-text-2" id="text-org92d3a6d">
 <p>
 Many popular workflow would go by simple format as bullet points with Time date and info, and regexp based searching via CLI (rg, vim, grep, sed&hellip;. bash scripts)
 </p>
@@ -721,7 +721,7 @@ Org mode has an <code>datetree</code> method which has file heading hierarchy in
 </p>
 
 <div class="org-src-container">
-<pre class="src src-org"><code><span class="org-org-level-1">* 2022</span>
+<pre tabindex="0" class="src src-org"><code><span class="org-org-level-1">* 2022</span>
 <span class="org-org-level-2">** 2022-10 October</span>
 <span class="org-org-level-3">*** 2022-10-07 Friday</span>
 <span class="org-org-level-3">*** 2022-10-08 Saturday</span>
@@ -734,7 +734,7 @@ This gives out the leverage of journaling, but also a lazy man's organization. I
 </p>
 
 <div class="org-src-container">
-<pre class="src src-org"><code><span class="org-comment"># learning notes --- l@</span>
+<pre tabindex="0" class="src src-org"><code><span class="org-comment"># learning notes --- l@</span>
 <span class="org-org-meta-line">#+tags: l@coding l@emacs l@bioinfo l@nix l@bash l@julia l@rstats l@python l@devnote l@latex l@til</span>
 
 <span class="org-comment"># generic notes to remember or readme --- n@</span>
@@ -754,7 +754,7 @@ Org mode has <code>org-sparse-tree</code> bound to <code>C-c /</code> which help
 </p>
 
 <div class="org-src-container">
-<pre class="src src-org"><code><span class="org-org-meta-line">#+select_tags: r@book</span>
+<pre tabindex="0" class="src src-org"><code><span class="org-org-meta-line">#+select_tags: r@book</span>
 </code></pre>
 </div>
 
@@ -770,7 +770,7 @@ This logically acts as an individual file with that tag/category, thus being ato
 </div>
 <div id="outline-container-key-takeaways" class="outline-2">
 <h2 id="key-takeaways">Key takeaways<a class="heading-anchor" href="#key-takeaways" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org4f52c5f">
+<div class="outline-text-2" id="text-orgb19a443">
 <p>
 whatever the system or the tool is, the main takeaways every resource provides is to review the notes and write it for future self. Every capture is to review back and make the fleeting note into and rich information.
 This OBTF with org mode satisfies that needs given that user reviews the notes and visits back to digest it again.
@@ -812,7 +812,7 @@ I valued investment and growth. I could see the development and learning of skil
 </p>
 <div id="outline-container-note-taking" class="outline-2">
 <h2 id="note-taking">Note taking<a class="heading-anchor" href="#note-taking" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org503837a">
+<div class="outline-text-2" id="text-org780d816">
 <p>
 Note-taking is understandable, its just format of text to store and read. And org-mode was superior and helped me alot.
 I later on embraced single big org file, and started using tags heavily with context based tagging.
@@ -831,7 +831,7 @@ So on which really helps with narrowing using consult package and org-ql for que
 </div>
 <div id="outline-container-reports-doc" class="outline-2">
 <h2 id="reports-doc">Reports/Doc<a class="heading-anchor" href="#reports-doc" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-orgef930aa">
+<div class="outline-text-2" id="text-orgbcd37fa">
 <p>
 Org mode can produce pdf via latex or ODT/docx format. That eventually guided me for submission of assignments and documents for sharing.
 Although it was an hassle to get formatting correct as they instructed, where as others just did them in breeze via M$ word and AI crap generated.
@@ -844,7 +844,7 @@ Although there was not much work with reports, I had good workflow of storing no
 </div>
 <div id="outline-container-presentations" class="outline-2">
 <h2 id="presentations">Presentations<a class="heading-anchor" href="#presentations" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org79b22ff">
+<div class="outline-text-2" id="text-org9252184">
 <p>
 I thought to give presentations in Emacs editor itself, but that did not make the cut for required normie friendly slides. The magically I came across revealJS and observed many people in tech presentations and talks used them. There was active development of org-reveal package as well, in new form from OER gitlab repo.
 </p>
@@ -860,7 +860,7 @@ I had local.scss file for color and designing slides, and org generated html fil
 </div>
 <div id="outline-container-thesis" class="outline-2">
 <h2 id="thesis">Thesis<a class="heading-anchor" href="#thesis" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-orgf290598">
+<div class="outline-text-2" id="text-org8106c7f">
 <p>
 The final saga of the journey, since thesis takes time to write, I thought to not bother with complicating this task. My initial thought was to either use Latex, if it was too much headache then simply follow given docx format file and write.
 Thankfully there was another player getting really popular, a new typesetting "Typst". It did the magic and wonders.
@@ -873,7 +873,7 @@ The syntax and process was very robust and simple. The documentation was standar
 </div>
 <div id="outline-container-conclusion" class="outline-2">
 <h2 id="conclusion">Conclusion<a class="heading-anchor" href="#conclusion" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org474648c">
+<div class="outline-text-2" id="text-org6420ec2">
 <p>
 The main draw from this experience was that investing in tools that allow extending and allow programming to customize and tweak as I require was a major win and good rewards. These were added up skills that makes working with related tasks a breeze ahead.</p>
 </div>
@@ -895,7 +895,7 @@ Soon I jotted down only 3 candidate for reading feeds. Elfeed, Newsticker &amp; 
 </p>
 <div id="outline-container-elfeed" class="outline-2">
 <h2 id="elfeed">Elfeed<a class="heading-anchor" href="#elfeed" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org1cd1263">
+<div class="outline-text-2" id="text-org2bddb14">
 <p>
 As said earlier, it was my choice for about 6+ months, and it worked really well. Was reading and tagging feeds alot. Although with my rss usage, I realized I was only looking forward for the <b>planet emacs</b> feeds (haha; typical emacser).
 </p>
@@ -911,7 +911,7 @@ It is still my recommend way to go with the package that just works well. But be
 </div>
 <div id="outline-container-newsticker" class="outline-2">
 <h2 id="newsticker">Newsticker<a class="heading-anchor" href="#newsticker" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-orge110992">
+<div class="outline-text-2" id="text-orgcd987e0">
 <p>
 Firstly, liked the customization it has, and the tree-view how it appeals. But I hit the road blocks very soon. Tree-view was an issue, I need to read each post in single window and navigate to my leisure. I miss tags here. For everytime I launch, <code>newsticker-treeview</code> it fetches the articles from feed. That blocks my usage sometimes. Even tho I can keep <code>newsticker-retrieval-interval</code> to 0, it still fetches when launched with command for first time.
 </p>
@@ -927,7 +927,7 @@ Anyway, newsticker is also good, as it is built-in and does just work.
 </div>
 <div id="outline-container-gnus" class="outline-2">
 <h2 id="gnus">gnus<a class="heading-anchor" href="#gnus" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org6f716af">
+<div class="outline-text-2" id="text-org3444817">
 <ul class="org-ul">
 <li>I panicked when I came to gnus. Its my..idk.. n<sup>th</sup> time trying it out again.</li>
 </ul>
@@ -1011,7 +1011,7 @@ Here is a <a href="https://marek-g.github.io/posts/tips_and_tricks/emacs_on_andr
 </p>
 
 <p>
-Note: Fdroid emacs apk lacks some support like GnuTLS (so won't be able to install package or use eww), thus the only source to get emacs builds for Android is <a href="https://sourceforge.net/projects/android-ports-for-gnu-emacs">https://sourceforge.net/projects/android-ports-for-gnu-emacs</a>
+Note: Fdroid emacs apk lacks some support like GnuTLS (so won't be able to install package or use eww), thus the only source to get emacs builds for Android is <a href="https://sourceforge.net/projects/android-ports-for-gnu-emacs">sourceforge.net/projects/android-ports-for-gnu-emacs</a>
 </p>
 
 <p>
@@ -1026,7 +1026,7 @@ Overall with setting only few variables for android specifically, I replicated a
 Config just for android exclusively:
 </p>
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><code><span class="org-comment-delimiter">;; </span><span class="org-comment">define constant to check if system is android
+<pre tabindex="0" class="src src-emacs-lisp"><code><span class="org-comment-delimiter">;; </span><span class="org-comment">define constant to check if system is android
 </span>(<span class="org-keyword">defconst</span> <span class="org-variable-name">d/on-droid</span> (eq system-type 'android))
 <span class="org-comment-delimiter">;; </span><span class="org-comment">if system is android, executes following code
 </span>(<span class="org-keyword">when</span> d/on-droid
@@ -1065,20 +1065,20 @@ I just wanted to have a cheatsheet for it, so I decided to leave it as a post he
 </p>
 
 <p>
-You can checkout the source here ⟾ <a href="https://github.com/VernonGrant/emacs-keyboard-shortcuts">https://github.com/VernonGrant/emacs-keyboard-shortcuts</a>
+You can checkout the source here ⟾ <a href="https://github.com/VernonGrant/emacs-keyboard-shortcuts">github:VernonGrant/emacs-keyboard-shortcuts</a>
 </p>
 
 <ul class="org-ul">
-<li><a href="https://github.com/VernonGrant/discovering-emacs">https://github.com/VernonGrant/discovering-emacs</a></li>
+<li><a href="https://github.com/VernonGrant/discovering-emacs">github:VernonGrant/discovering-emacs</a></li>
 </ul>
 ]]></content></entry><entry><title>NixOS : Reproducible - Immutable</title><link rel="alternate" type="text/html" href="https://idlip.in/log/try-nixos/" /><id>https://idlip.in/log/try-nixos/</id><published>2023-03-23T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="nixos" label="nixos" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<hr />
 
 <p>
-Introduction part, you would better have read it on official nixos site (<a href="https://nixos.org">https://nixos.org</a>)
+Introduction part, you would better have read it on official nixos site (<a href="https://nixos.org">nixos.org</a>)
 </p>
 <div id="outline-container-should-you-try-nixos" class="outline-2">
 <h2 id="should-you-try-nixos">"Should you try NixOS?" ❄️<a class="heading-anchor" href="#should-you-try-nixos" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-orgd34f8d9">
+<div class="outline-text-2" id="text-orgecfbc70">
 <p>
 Here's an answer from a non-programmer, who just browses and watches media.
 Just don't, if you are looking for small benefit. <b>Don't!</b>
@@ -1103,7 +1103,7 @@ But, if you have decided, go with it. According to me (non-programmer), these po
 </div>
 <div id="outline-container-how-i-manage-my-system" class="outline-2">
 <h2 id="how-i-manage-my-system">How I manage my system 🌲<a class="heading-anchor" href="#how-i-manage-my-system" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org1508809">
+<div class="outline-text-2" id="text-org58d89e3">
 <p>
 I manage my whole system with single org file. Its easy and pretty handy. You can read that file here <b>↬</b> <a href="https://github.com/idlip/d-nix/blob/onepiece/d-setup.org">d-setup.org</a> , its both self documenting and has all source code blocks.
 </p>
@@ -1121,7 +1121,7 @@ Also, I have made files to be <b>symlink</b>, so i can edit them without requiri
 </div>
 <div id="outline-container-credits" class="outline-2">
 <h2 id="credits">Credits 🎖️<a class="heading-anchor" href="#credits" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org8661bf4">
+<div class="outline-text-2" id="text-orged0a77a">
 <p>
 These configs were the inspiration and helped to build this way.
 </p>

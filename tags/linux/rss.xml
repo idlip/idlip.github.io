@@ -199,7 +199,7 @@ Peasy Nix Versions</a> - Nicolas Mattia</li>
 Nix derivation attributes of runtime dependencies</a> - Nicolas Mattia</li>
 </ul>
 
-<div class="html" id="org488c75d">
+<div class="html" id="orgdfb30c6">
 <p>
 &lt;!&ndash; TODO: add more from their website &ndash;&gt;
 </p>
@@ -217,7 +217,7 @@ Example</a> - Susan Potter</li>
 Nix lambda function named arguments</a> - Susan Potter</li>
 </ul>
 
-<div class="html" id="orga5d9ebe">
+<div class="html" id="org24ef950">
 <p>
 &lt;!&ndash; TODO: add Tweag Nix flakes &ndash;&gt;
 </p>
@@ -390,7 +390,7 @@ Overlays</a></li>
 <hr />
 
 <p>
-These links are extracted from humancalico's git repo (<a href="https://github.com/humancalico/nix-learning">https://github.com/humancalico/nix-learning</a>).
+These links are extracted from humancalico's git repo (<a href="https://github.com/humancalico/nix-learning">github:humancalico/nix-learning</a>).
 </p>
 
 <div class="org-center">
@@ -407,7 +407,7 @@ Note: This is very outdated from when it was written. Please check <a href="http
 <hr />
 <div id="outline-container-utilities-that-are-best" class="outline-2">
 <h2 id="utilities-that-are-best">Utilities that are Best! 🌟<a class="heading-anchor" href="#utilities-that-are-best" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org62cdf2a">
+<div class="outline-text-2" id="text-orge999875">
 <hr />
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
@@ -549,7 +549,7 @@ My linux journey was from Linux Mint &gt; EndeavourOS &gt; Arch Linux &gt; and n
 </p>
 <div id="outline-container-the-embark" class="outline-2">
 <h2 id="the-embark">The Embark<a class="heading-anchor" href="#the-embark" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org5256b0b">
+<div class="outline-text-2" id="text-org199e665">
 <p>
 I started to explore some YouTube video on Linux (as a normie at that time), soon I got familiar with good explanation, thankfully CTT had made an Linux Mint playlist and it helped to installing the first and the best <b>Beginner Distro</b>, the <b>Linux Mint</b>.
 </p>
