@@ -46,9 +46,9 @@ reading, quotes I keep, and whatever I freshly bake with site.
                          (list 'span nil)
                          (seq-mapcat
                           (lambda (p)
-                            (list (list 'a (list :href (concat "/pose/#" (plist-get p :id))) (plist-get p :title))
+                            (list (list 'a (list :href (concat "/pose/#" (plist-get p :id))) (plist-get p :date))
                                   " :: "
-                                  (funcall truncate-text (denden-html-plain-text (plist-get p :teaser-html)) 100)
+                                  (funcall truncate-text (plist-get p :title) 100)
                                   '(br nil)))
                           recent-poses))
                       "none yet"))

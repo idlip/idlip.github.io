@@ -156,8 +156,11 @@ list is laid out, and the site remembers your pick.
   and only when there is room.
 - *Comments* have no backend at all. The box composes a pre-filled email and
   hands it to your mail client. Embrace email!
-- *Pose* entries are folded under their date and title; the newest one starts
-  open, and a link to an entry opens it.
+- *Pose* entries are grouped by week and folded under their date and title; the
+  newest one starts open, and a link to an entry opens it. Every weekday is named
+  after a planet, in English and in Hindi alike, so each wears its planet's
+  colour: Monday (Somvar, the Moon's day) is silver, Tuesday (Mangalvar, Tyr's
+  day, the Norse Mars) is red. Hover the day to read its names.
 - *The site title* has a small secret if you hover over it, or click it. Easter egg shows random quote in popup toast.
 
 * What gets stored

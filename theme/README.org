@@ -52,7 +52,7 @@ markup as plain HTML first, then converting it in.
 - Listing pages. The article list, the tags page, and term pages.
 - Topic-list pages. The shape used for wander, projects, media, quotes,
   uses, and the sitemap.
-- The Pose page. One folded entry per day ("date :: title" heading, rest in =<details>=), the newest open.
+- The Pose page. One =<section>= per ISO week, each entry folded ("date day :: title" =h3=, body in =<details>=), the newest open. The day chip is solid in the weekday's colour (=--day-1..7=), its names in the tooltip.
 - The Wander launch link and its console dialog (=theme--wander-launch=, =theme--wander-dialog=).
 
 ** Primitives: new pages reuse these

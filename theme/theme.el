@@ -37,11 +37,15 @@
   "A decorative Nerd Font GLYPH span, hidden from screen readers."
   (list 'span '(:class "nf" :aria-hidden "true") glyph))
 
-(defun theme--heading (id &rest content)
-  "An <h2> with ID holding CONTENT, followed by a # link to itself."
-  (append (list 'h2 (list :id id)) content
+(defun theme--heading-at (tag id &rest content)
+  "A TAG heading (h2, h3) with ID holding CONTENT, followed by a # link to itself."
+  (append (list tag (list :id id)) content
           (list (list 'a (list :class "heading-anchor" :href (concat "#" id) :aria-label "Link to this section")
                       "#"))))
+
+(defun theme--heading (id &rest content)
+  "An <h2> with ID holding CONTENT, followed by a # link to itself."
+  (apply #'theme--heading-at 'h2 id content))
 
 (defun theme--tag-links (tags)
   "One #tag link per TAGS entry, separated by spaces."
@@ -403,28 +407,42 @@ PALETTE-DATA-SCRIPT must be a `(raw-html nil STRING)' node."
         (list 'raw-html nil body-html)))
 
 (defun theme--pose-entry (entry &optional open)
-  "One Pose ENTRY: a \"date :: title\" heading, its details below, OPEN or folded."
+  "One Pose ENTRY: \"date day :: title\", its body below, OPEN or folded."
   (let* ((date (plist-get entry :date))
-         (heading (apply #'theme--heading (plist-get entry :id)
-                         (append (if date (list (list 'time (list :datetime date) date) " :: ") nil)
-                                 (list (plist-get entry :summary-text)))))
-         (rest (plist-get entry :rest-html)))
-    (list 'article (list :data-filter-text (plist-get entry :search-text))
-          (if (string-empty-p (string-trim rest))
+         (heading (apply #'theme--heading-at 'h3 (plist-get entry :id)
+                         (append (when date
+                                   (list (list 'time (list :datetime date) date) " "
+                                         (list 'span (list :class "day" :title (plist-get entry :day-title))
+                                               (plist-get entry :day))
+                                         " :: "))
+                                 (list (plist-get entry :title)))))
+         (body (plist-get entry :html)))
+    (list 'article (list :data-filter-text (plist-get entry :search-text)
+                         :data-day (plist-get entry :weekday))
+          (if (string-empty-p (string-trim body))
               heading
-            (list 'details (list :open open) (list 'summary nil heading) (list 'raw-html nil rest))))))
+            (list 'details (list :open open) (list 'summary nil heading) (list 'raw-html nil body))))))
 
-(cl-defun theme-pose-page (&key title intro-html entries)
-  "The Pose page: TITLE, INTRO-HTML, a filter and one folded article per ENTRIES."
-  (append
-   (list 'article nil (list 'header nil (list 'h1 nil title)))
-   (unless (or (null intro-html) (string-empty-p intro-html))
-     (list (list 'raw-html nil intro-html)))
-   (list (theme-list-filter :target "pose-entries" :views nil
-                            :placeholder (format "search %d entries… (/ to focus, Esc to clear)" (length entries)))
-         ;; ENTRIES is newest first, and the newest one starts open.
-         (append (list 'div '(:id "pose-entries"))
-                 (when entries (cons (theme--pose-entry (car entries) t) (mapcar #'theme--pose-entry (cdr entries))))))))
+(cl-defun theme-pose-page (&key title intro-html weeks)
+  "The Pose page: TITLE, INTRO-HTML, a filter and one section per WEEKS group."
+  (let ((count (apply #'+ (mapcar (lambda (week) (length (plist-get week :entries))) weeks)))
+        (first-entry t))
+    (append
+     (list 'article nil (list 'header nil (list 'h1 nil title)))
+     (unless (or (null intro-html) (string-empty-p intro-html))
+       (list (list 'raw-html nil intro-html)))
+     (list (theme-list-filter :target "pose-entries" :views nil
+                              :placeholder (format "search %d entries… (/ to focus, Esc to clear)" count))
+           (append (list 'div '(:id "pose-entries"))
+                   (mapcar (lambda (week)
+                             (append (list 'section nil
+                                           (theme--heading (plist-get week :id) (plist-get week :label)))
+                                     ;; Weeks and entries are newest first; the newest entry starts open.
+                                     (mapcar (lambda (entry)
+                                               (prog1 (theme--pose-entry entry first-entry)
+                                                 (setq first-entry nil)))
+                                             (plist-get week :entries))))
+                           weeks))))))
 
 ;;;; Listing pages
 

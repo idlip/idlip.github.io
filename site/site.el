@@ -16,6 +16,8 @@
 (require 'seq)
 (require 'dom)
 (require 'rx)
+(require 'calendar)
+(require 'cal-iso)
 (require 'denden)
 (require 'theme)
 (require 'site-schemes-base16)
@@ -345,11 +347,11 @@ CUSTOM-CSS-TEXT."
   (seq-filter
    (lambda (family) (or (null (plist-get family :colors)) (site-scheme-readable-p (plist-get family :colors))))
    (mapcar (lambda (scheme)
-            (let* ((name (plist-get scheme :name))
-                   (custom (cl-find name custom-schemes :key (lambda (s) (plist-get s :key)) :test #'equal)))
-              (list :key name :name (plist-get scheme :label) :family name :variant "dark"
-                    :colors (or (and custom (plist-get custom :colors))
-                                (site--base16-colors (plist-get scheme :dark))))))
+             (let* ((name (plist-get scheme :name))
+                    (custom (cl-find name custom-schemes :key (lambda (s) (plist-get s :key)) :test #'equal)))
+               (list :key name :name (plist-get scheme :label) :family name :variant "dark"
+                     :colors (or (and custom (plist-get custom :colors))
+                                 (site--base16-colors (plist-get scheme :dark))))))
            site-color-schemes)))
 
 (defun site-schemes-json (&optional custom-css-text)
@@ -500,7 +502,7 @@ committed elisp data file. Run by hand."
 
 (defconst site--og-colors
   '(:background "#000000" :surface "#0a0f0a" :border "#404040" :text "#ffffff" :faint "#b3b3b3"
-    :accent "#5fd7af" :title "#ab82ff" :link "#2fafff")
+                :accent "#5fd7af" :title "#ab82ff" :link "#2fafff")
   "The Haki palette the OG card is drawn in, matching the site's default scheme.")
 
 (defun site--og-chips (tags y)
@@ -784,50 +786,107 @@ instead of exporting FILENAME a second time."
      :lastmod-source filename
      :toc (site--toc-node filename all-pages))))
 
-(defun site--pose-entry-rest (html)
-  "Return HTML after its first <hr>, else after its first paragraph, else \"\"."
-  (cond ((string-match (rx "<hr" (* (not (any ">"))) ">") html) (substring html (match-end 0)))
-        ((string-match (rx "</p>") html) (substring html (match-end 0)))
-        (t "")))
-
-(defun site--pose-entry-teaser (html)
-  "Return HTML up to its first <hr>, or all of HTML if it has none. An
-entry can put a horizontal rule (five or more dashes on their own line)
-after its opening thought, so extra context/examples after that point
-show only in the entry's own dialog, not on the compact card."
-  (let ((cut (string-search "<hr" html)))
-    (if cut (substring html 0 cut) html)))
-
-(defun site--pose-entry-date (title)
-  "Return the leading YYYY-MM-DD of heading TITLE, or nil if it has none."
-  (and (string-match (rx bos (group (= 4 digit) "-" (= 2 digit) "-" (= 2 digit))) title)
-       (match-string 1 title)))
+(defvar site-pose-weekdays
+  '((:hindi "Somvar" :meaning "Moon's day")
+    (:hindi "Mangalvar" :meaning "Tyr's day, the Norse Mars")
+    (:hindi "Budhvar" :meaning "Woden's day, the Norse Mercury")
+    (:hindi "Guruvar" :meaning "Thor's day, the Norse Jupiter")
+    (:hindi "Shukravar" :meaning "Frigg's day, the Norse Venus")
+    (:hindi "Shanivar" :meaning "Saturn's day")
+    (:hindi "Ravivar" :meaning "Sun's day"))
+  "Pose weekdays, Monday first: Hindi name and what the English name means.
+Every weekday is named after a planet; both show in the day chip's tooltip.
+For my love and curiosity towards astronomy and mythology.")
 
 (defun site--pose-entries (filename all-pages)
-  "Return FILENAME's level-2 Pose entries as plists, newest first."
+  "Return FILENAME's \"* [DATE] Title\" entries as plists, newest first."
   (with-temp-buffer
     (insert-file-contents filename)
     (org-mode)
-    (let (entries)
+    (let ((options (denden-export-options-with-pages all-pages filename))
+          (seen-dates (make-hash-table :test 'equal))
+          entries)
       (org-map-entries
        (lambda ()
-         (when (= (org-current-level) 2)
-           (let* ((id (denden-heading-id (org-element-at-point)))
-                  (title (org-get-heading t t t t))
-                  (html (org-export-as 'denden-html t nil t (denden-export-options-with-pages all-pages filename))))
-             (push (list :id id
-                         :title title
-                         :date (site--pose-entry-date title)
-                         :tags (org-get-tags nil t)
-                         :html html
-                         :search-text (downcase (concat title " " (denden-html-plain-text html)))
-                         :teaser-html (site--pose-entry-teaser html)
-                         :rest-html (site--pose-entry-rest html))
-                   entries)
-             (plist-put (car entries) :summary-text (site--pose-entry-feed-title (car entries))))))
+         (when (= (org-current-level) 1)
+           (let* ((headline (org-element-at-point))
+                  (title-objects (org-element-parse-secondary-string
+                                  (org-element-property :raw-value headline)
+                                  (org-element-restriction 'headline)))
+                  (timestamp (seq-find (lambda (object) (eq (org-element-type object) 'timestamp))
+                                       title-objects))
+                  ;; calendar.el's (MONTH DAY YEAR), straight from the parsed timestamp.
+                  (calendar-date (and timestamp
+                                      (list (org-element-property :month-start timestamp)
+                                            (org-element-property :day-start timestamp)
+                                            (org-element-property :year-start timestamp))))
+                  (date (and calendar-date
+                             (format "%04d-%02d-%02d" (nth 2 calendar-date) (nth 0 calendar-date)
+                                     (nth 1 calendar-date))))
+                  (title (string-trim
+                          (org-link-display-format
+                           (org-element-interpret-data (remq timestamp title-objects)))))
+                  (seen (gethash date seen-dates 0))
+                  ;; The date is the anchor, so links shared before the format change still work.
+                  (id (or (org-element-property :CUSTOM_ID headline)
+                          (if (or (null date) (> seen 0))
+                              (format "%s-%d" (or date "entry") (1+ seen))
+                            date)))
+                  (contents-begin (org-element-property :contents-begin headline))
+                  (html (if contents-begin
+                            (save-restriction
+                              (narrow-to-region contents-begin (org-element-property :contents-end headline))
+                              (org-export-as 'denden-html nil nil t options))
+                          "")))
+             (puthash date (1+ seen) seen-dates)
+             (push (append
+                    (list :id id :title title :date date
+                          :tags (org-get-tags nil t)
+                          :html html
+                          :search-text (downcase (concat title " " (denden-html-plain-text html))))
+                    (when calendar-date
+                      ;; `calendar-day-of-week' counts from Sunday = 0; ISO counts Monday = 1 to Sunday = 7.
+                      (let* ((weekday (let ((day (calendar-day-of-week calendar-date))) (if (zerop day) 7 day)))
+                             (planet (nth (1- weekday) site-pose-weekdays)))
+                        (list :calendar-date calendar-date :weekday (number-to-string weekday)
+                              :day (calendar-day-name calendar-date t)
+                              :day-title (format "%s · %s · %s" (calendar-day-name calendar-date)
+                                                 (plist-get planet :hindi) (plist-get planet :meaning))))))
+                   entries))))
        nil nil)
       ;; ENTRIES is already in reverse file order, and `sort' is stable.
       (sort entries (lambda (a b) (string> (or (plist-get a :date) "") (or (plist-get b :date) "")))))))
+
+(defun site--pose-week-label (calendar-date)
+  "The label for CALENDAR-DATE's ISO week, like \"Week 48 · 23 to 29 Nov 2026\"."
+  (let* ((iso (calendar-iso-from-absolute (calendar-absolute-from-gregorian calendar-date)))
+         (monday-absolute (calendar-iso-to-absolute (list (nth 0 iso) 1 (nth 2 iso))))
+         (monday (calendar-gregorian-from-absolute monday-absolute))
+         (sunday (calendar-gregorian-from-absolute (+ monday-absolute 6)))
+         (day-month-year (lambda (date &optional with-month with-year)
+                           (concat (number-to-string (nth 1 date))
+                                   (and with-month (concat " " (calendar-month-name (nth 0 date) t)))
+                                   (and with-year (format " %d" (nth 2 date))))))
+         (same-year (= (nth 2 monday) (nth 2 sunday)))
+         (same-month (and same-year (= (nth 0 monday) (nth 0 sunday)))))
+    (format "Week %d · %s to %s" (nth 0 iso)
+            (funcall day-month-year monday (not same-month) (not same-year))
+            (funcall day-month-year sunday t t))))
+
+(defun site--pose-weeks (entries)
+  "ENTRIES, newest first, grouped into ISO weeks as (:id :label :entries) plists."
+  (let (weeks)
+    (dolist (entry entries)
+      (let* ((calendar-date (plist-get entry :calendar-date))
+             (iso (and calendar-date (calendar-iso-from-absolute (calendar-absolute-from-gregorian calendar-date))))
+             ;; ISO (WEEK DAY YEAR); the ISO year can differ from the calendar year near New Year.
+             (id (if iso (format "%d-W%02d" (nth 2 iso) (nth 0 iso)) "undated")))
+        (if (equal id (plist-get (car weeks) :id))
+            (plist-put (car weeks) :entries (cons entry (plist-get (car weeks) :entries)))
+          (push (list :id id :label (if iso (site--pose-week-label calendar-date) "Undated")
+                      :entries (list entry))
+                weeks))))
+    (nreverse (mapcar (lambda (week) (plist-put week :entries (nreverse (plist-get week :entries)))) weeks))))
 
 (defun site--pose-intro-html (filename all-pages)
   "Return FILENAME's content before its first heading, exported to HTML, or
@@ -840,17 +899,10 @@ show only in the entry's own dialog, not on the compact card."
       (narrow-to-region (point-min) (match-beginning 0)))
     (org-export-as 'denden-html nil nil t (denden-export-options-with-pages all-pages filename))))
 
-(defun site--pose-entry-feed-title (entry)
-  "ENTRY's feed title: the text of its first paragraph, else its heading."
-  (let ((teaser (plist-get entry :teaser-html)))
-    (if (string-match (rx "<p>" (group (*? anything)) "</p>") teaser)
-        (denden-html-plain-text (match-string 1 teaser))
-      (plist-get entry :title))))
-
 (defun site--pose-feed-pages (entries page-url base-url)
   "ENTRIES as `site--feed-pages' input, each linking its own anchor on PAGE-URL."
   (mapcar (lambda (entry)
-            (list :title (site--pose-entry-feed-title entry)
+            (list :title (plist-get entry :title)
                   :permalink (format "%s%s#%s" base-url page-url (plist-get entry :id))
                   :date (plist-get entry :date) :lastmod (plist-get entry :date)
                   :tags (plist-get entry :tags) :content-html (plist-get entry :html)))
@@ -895,7 +947,7 @@ each entry with its own shareable anchor and expand-to-dialog view."
       :body (theme-pose-page
              :title title
              :intro-html (site--pose-intro-html filename all-pages)
-             :entries entries))
+             :weeks (site--pose-weeks entries)))
      output)))
 
 (defun site--blank-html-p (html)
