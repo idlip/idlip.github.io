@@ -36,6 +36,12 @@
     color-scheme: light;
   }
 
+  @media (prefers-contrast: more) {
+    :root {
+      --text-faint: var(--text);
+      --border: var(--text);
+    }
+  }
   [data-font="mono"] {
     --body-font-family: var(--code-font);
   }
@@ -289,7 +295,11 @@
     font-family: var(--code-font);
     font-size: 0.9em;
   }
+  :where(main p) {
+    hyphens: auto;
+  }
   :where(code) {
+    hyphens: manual;
     background: var(--surface);
     padding: 0.1em 0.3em;
     border-radius: var(--radius);
@@ -966,6 +976,12 @@
       #palette-dialog
     ) {
     font-family: var(--sans-font);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
   }
 }
 

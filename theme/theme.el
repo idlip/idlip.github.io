@@ -18,6 +18,7 @@
 
 (require 'cl-lib)
 (require 'rx)
+(require 'url-parse)
 (require 'denden)
 
 (defun theme--url-domain (url)
@@ -250,17 +251,31 @@ s.src=%s;
 s.setAttribute('data-website-id',%s);
 document.head.appendChild(s);
 }
+function idle(){
 if('requestIdleCallback' in window) requestIdleCallback(loadUmami);
 else setTimeout(loadUmami,2000);
+}
+if(document.prerendering) document.addEventListener('prerenderingchange',idle,{once:true});
+else idle();
 })();
 </script>" (json-serialize script-url) (json-serialize website-id)))))
+
+(defconst theme--speculation-rules
+  (list 'script '(:type "speculationrules")
+        (list 'raw-html nil
+              (json-serialize
+               '((prerender . [((where . ((and . [((href_matches . "/*"))
+                                                  ((not . ((href_matches . "/*.xml"))))
+                                                  ((not . ((selector_matches . "[target=_blank], [download]"))))])))
+                                (eagerness . "moderate"))])))))
+  "Speculation rules: prerender a same-site link the pointer rests on.")
 
 (cl-defun theme-baseof (&key language body palette-data-script stylesheet-href script-href page-title
                              og-title menu-items site-title rss-url
                              schemes-url description canonical-url favicon-href favicon-type og-type
                              og-image published-time modified-time tags author-name noindex
                              fediverse-creator analytics-script-url analytics-website-id footer-content
-                             footer-links title-quotes light-schemes)
+                             footer-links title-quotes light-schemes preload-fonts touch-icon-href)
   "The page skeleton for LANGUAGE and BODY, as a single <html> node.
 PALETTE-DATA-SCRIPT must be a `(raw-html nil STRING)' node."
   (list 'html (list :lang language :data-theme "dark" :data-scheme "haki" :data-font "mixed")
@@ -268,9 +283,18 @@ PALETTE-DATA-SCRIPT must be a `(raw-html nil STRING)' node."
                 (when schemes-url (list (theme--pre-paint-script schemes-url light-schemes)))
                 (list '(meta (:name "viewport" :content "width=device-width, initial-scale=1.0"))
                       '(meta (:name "color-scheme" :content "dark light"))
-                      (list 'meta (list :name "theme-color" :content theme-color-meta-value))
-                      '(meta (:name "view-transition" :content "same-origin")))
+                      (list 'meta (list :name "theme-color" :content theme-color-meta-value)))
                 (when page-title (list (list 'title nil page-title)))
+                (mapcar (lambda (href)
+                          (list 'link (list :rel "preload" :href href :as "font"
+                                            :type "font/woff2" :crossorigin "anonymous")))
+                        preload-fonts)
+                (when analytics-script-url
+                  (let ((url (url-generic-parse-url analytics-script-url)))
+                    (list (list 'link (list :rel "dns-prefetch"
+                                            :href (format "//%s" (url-host url)))))))
+                (when touch-icon-href
+                  (list (list 'link (list :rel "apple-touch-icon" :href touch-icon-href))))
                 (theme--seo-head-nodes :og-title og-title :description description
                                        :canonical-url canonical-url :favicon-href favicon-href
                                        :favicon-type favicon-type :og-type og-type :og-image og-image
@@ -280,6 +304,7 @@ PALETTE-DATA-SCRIPT must be a `(raw-html nil STRING)' node."
                                        :fediverse-creator fediverse-creator :rss-url rss-url)
                 (when stylesheet-href (list (list 'link (list :rel "stylesheet" :href stylesheet-href))))
                 (when script-href (list (list 'script (list :src script-href :defer "defer"))))
+                (list theme--speculation-rules)
                 (let ((analytics (theme--analytics-script analytics-script-url analytics-website-id)))
                   (when analytics (list analytics))))
         (append

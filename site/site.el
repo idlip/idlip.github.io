@@ -127,6 +127,9 @@ extended_head.html.")
 (defconst site-publishing-directory
   (expand-file-name "public-denden" denden-repository-directory))
 
+(defconst site-preload-fonts '("/fonts/impress.woff2" "/fonts/code-haki.woff2")
+  "Fonts the default view paints first, preloaded in <head>.")
+
 (defconst site-favicon-relative-path "images/op-zoro.webp"
   "Relative to static/.")
 
@@ -657,6 +660,8 @@ for a page with no OG image."
                 :canonical-url (and url (concat (string-remove-suffix "/" (site-base-url)) "/" url))
                 :favicon-href (concat "/" site-favicon-relative-path)
                 :favicon-type (site--favicon-mime-type)
+                :touch-icon-href "/images/apple-touch-icon.png"
+                :preload-fonts site-preload-fonts
                 :og-type (or og-type "website") :og-image (and url og-card (site--og-image-url url))
                 :published-time published-time :modified-time modified-time :tags tags
                 :author-name site-author-name :noindex noindex
