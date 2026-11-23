@@ -46,6 +46,7 @@
     (:name "󱀢 Quotes" :url "/quotes/")
     (:name " Feeds" :url "/index.xml")
     (:name "󰦃 Sitemap" :url "/sitemap/")
+    (:name " Links" :url "/links/")
     (:name " Tags" :url "/tags/"))
   "Every page link with its icon, in order, for the footer and the palette.")
 
@@ -136,13 +137,25 @@ extended_head.html.")
   "Relative to static/.")
 
 (defconst site-tag-icons
-  '(("snippets" . " ") ("nixos" . " ") ("nix" . " ") ("emacs" . " ") ("gnus" . " ")
+  `(("snippets" . " ") ("nixos" . " ") ("nix" . " ") ("emacs" . " ") ("gnus" . " ")
     ("orgmode" . " ") ("novel" . " ") ("onepiece" . "󰨈 ") ("anime" . "󰨈 ") ("manga" . "󰨈 ")
     ("linux" . " ") ("foss" . " ") ("rss" . " ") ("games" . " ") ("terminal" . " ")
     ("cli" . " ") ("vim" . " ") ("android" . "") ("fossdroid" . "") ("quotes" . "󱀡 ")
     ("bioinformatics" . "󰚄 ") ("python" . " ") ("r" . "󰟔") ("finance" . " ")
-    ("principle" . " ") ("webdev" . " ") ("lisp" . "󱃺 ") ("git" . " ") ("_default" . " "))
-  "Flat tag -> Nerd Font glyph map, for the article-list type icon.")
+    ("principle" . " ") ("webdev" . " ") ("lisp" . "󱃺 ") ("git" . " ") 
+
+    ;; Link hosts for /links: a key matches a whole host or one dot-separated part of it.
+    (,(rx (or (seq "emacs" (+ nonl)) "gnu" "karthinks" "protesilaos" "karl-voit")) . " ")
+    ("github" . "󰊤") ("gitlab" . "󰮠") ("codeberg" . " ")
+    (,(rx (or "wikipedia" "wikimedia")) . "󰖬") (,(rx (or "reddit" "redlib")) . " ")
+    (,(rx (or "youtube" "youtu")) . "󰑈") (,(rx (or "f-droid" "izzysoft")) . " ")
+    ("medium" . "󱀁")
+    (,(rx (or "fosstodon.org" "lobste.rs" "fossunited.org" "nownownow.com" "miniflux.app")) . "󰚀")
+    (,(rx (or "themoviedb.org" "novelupdates.com" "fandom" "obtf.ru")) . "󰟴")
+    ("_default" . " "))
+  "(KEY . GLYPH) icons for tags and /links hosts; the first non-empty match wins.
+KEY is a regexp (plain word, or `rx' for a family) that must match a whole
+tag, a whole host, or one dot-separated part of a host.")
 
 (defconst site-badges
   (list (list :name "Emacs" :logo "/images/logos/emacs.png" :color "#5b2a85"
@@ -1094,6 +1107,82 @@ the same search box every other topic-list page has."
      output)
     output))
 
+(defun site--link-domain-icon (url)
+  "URL's glyph from `site-tag-icons', matching its host or one part of it."
+  (let ((host (string-remove-prefix "www." (or (url-host (url-generic-parse-url url)) ""))))
+    (or (cl-some (lambda (text) (theme-icon-for text site-tag-icons))
+                 (cons host (split-string host (rx "."))))
+        (cdr (assoc "_default" site-tag-icons)))))
+
+(defun site--links-groups (all-pages)
+  "Every external link in ALL-PAGES as topic-list groups by domain, busiest first.
+Sites cited only once share a last \"Other sites\" group."
+  (let ((by-url (make-hash-table :test 'equal))
+        (own-host (url-host (url-generic-parse-url (site-base-url))))
+        urls)
+    (dolist (page (site--regular-pages all-pages))
+      ;; Full URLs to this site itself are internal links; the sitemap lists those.
+      (dolist (link (seq-remove (lambda (link) (equal (url-host (url-generic-parse-url (plist-get link :url))) own-host))
+                                (plist-get page :external-links)))
+        (let* ((url (plist-get link :url))
+               (entry (gethash url by-url)))
+          (unless entry
+            (setq entry (list :url url :text nil :pages nil))
+            (push url urls))
+          (unless (plist-get entry :text) (setq entry (plist-put entry :text (plist-get link :text))))
+          (setq entry (plist-put entry :pages (cons page (plist-get entry :pages))))
+          (puthash url entry by-url))))
+    (let* ((domains (seq-group-by (lambda (url) (string-remove-prefix "www." (or (url-host (url-generic-parse-url url)) "")))
+                                  urls))
+           (item (lambda (url)
+                   (let* ((entry (gethash url by-url))
+                          (label (denden-link-label url))
+                          (cited (mapconcat (lambda (page)
+                                              (format "<a href=\"/%s\">%s</a>" (plist-get page :url)
+                                                      (org-html-encode-plain-text (plist-get page :title))))
+                                            (denden-sort-pages-by-date-desc (delete-dups (plist-get entry :pages)))
+                                            ", ")))
+                     (list :url url :name (or (plist-get entry :text) label) :parts nil
+                           :icon (site--link-domain-icon url)
+                           :desc (concat (if (plist-get entry :text) (concat (org-html-encode-plain-text label) " · ") "")
+                                         "in " cited)))))
+           (items (lambda (urls)
+                    (sort (mapcar item urls)
+                          (lambda (a b) (string< (downcase (plist-get a :name)) (downcase (plist-get b :name)))))))
+           ;; A site cited once gets no heading of its own; those all share one last section.
+           (shared (seq-filter (lambda (domain) (null (cddr domain))) domains))
+           (own (seq-remove (lambda (domain) (null (cddr domain))) domains)))
+      (append
+       (mapcar (lambda (domain) (list :label (car domain) :items (funcall items (cdr domain))))
+               (sort own (lambda (a b) (or (> (length (cdr a)) (length (cdr b)))
+                                           (and (= (length (cdr a)) (length (cdr b))) (string< (car a) (car b)))))))
+       (when shared
+         (list (list :label "Other sites" :items (funcall items (mapcar #'cadr shared)))))))))
+
+(defun site-publish-links-page (plist filename pub-dir)
+  "Publish FILENAME, a #+layout: links page: every external link, by domain."
+  (let* ((output (denden-output-file-for filename (cons nil plist)))
+         (all-pages (plist-get plist :denden-all-pages))
+         (this-page (seq-find (lambda (p) (equal (plist-get p :url)
+                                                 (denden-pretty-url (file-relative-name output pub-dir))))
+                              all-pages))
+         (title (or (and this-page (plist-get this-page :title)) "Links"))
+         (intro-html (with-temp-buffer
+                       (insert-file-contents filename)
+                       (org-mode)
+                       (org-export-as 'denden-html nil nil t (denden-export-options-with-pages all-pages filename)))))
+    (site--write-page
+     (site--wrap-page
+      :title title
+      :url (and this-page (plist-get this-page :url))
+      :body (theme-topic-list-page
+             :title title
+             :intro-html intro-html
+             :items-node (theme-topic-list-items :groups (site--links-groups all-pages) :all-pages all-pages
+                                                 :collapsed t)))
+     output)
+    output))
+
 (defun site-publish-page (plist filename pub-dir)
   "Dispatch FILENAME to the right site-publish-* function, by filename then
 #+layout:."
@@ -1106,6 +1195,8 @@ the same search box every other topic-list page has."
     (site-publish-themes-page plist filename pub-dir))
    ((equal (site--file-layout filename) "sitemap")
     (site-publish-sitemap-page plist filename pub-dir))
+   ((equal (site--file-layout filename) "links")
+    (site-publish-links-page plist filename pub-dir))
    ((equal (site--file-layout filename) "pose")
     (site-publish-pose-page plist filename pub-dir))
    (t (site-publish-single-page plist filename pub-dir))))
@@ -1695,6 +1786,11 @@ refreshes cross-page metadata first."
 (setq denden-post-directory (expand-file-name "log" denden-content-directory))
 (setq denden-publishing-directory site-publishing-directory)
 (setq denden-project-root-directory denden-repository-directory)
+(setq denden-link-label-rules
+      (list (cons (rx bos "github.com/" (group (+ anything))) "github:\\1")
+            (cons (rx bos "codeberg.org/" (group (+ anything))) "codeberg:\\1")
+            ;; Only a bare subreddit or user; a post link keeps its full path.
+            (cons (rx bos (opt "old.") "reddit.com/" (group (any "ru") "/" (+ (not (any "/")))) eos) "\\1")))
 (setq denden-full-build-function #'site-build)
 (setq denden-build-function #'site-build-async)
 (setq denden-build-file-function #'site-build-file-async)

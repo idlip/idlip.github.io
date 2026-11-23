@@ -27,9 +27,16 @@
    (rx "/" (* nonl) eos) ""
    (replace-regexp-in-string (rx bos "http" (opt "s") "://" (opt "www.")) "" url)))
 
+(defun theme-icon-for (text tag-icons)
+  "The first non-empty TAG-ICONS glyph whose key, a regexp, matches all of TEXT."
+  (cdr (seq-find (lambda (entry)
+                   (and (not (string-empty-p (cdr entry)))
+                        (string-match-p (rx-to-string `(seq bos (regexp ,(car entry)) eos) t) text)))
+                 tag-icons)))
+
 (defun theme--tag-icon (tags tag-icons)
-  "Return the first of TAGS with an entry in TAG-ICONS, else \"_default\", else \"\"."
-  (or (cl-some (lambda (tag) (cdr (assoc (downcase tag) tag-icons))) tags)
+  "Return the first of TAGS with an icon in TAG-ICONS, else \"_default\", else \"\"."
+  (or (cl-some (lambda (tag) (theme-icon-for (downcase tag) tag-icons)) tags)
       (cdr (assoc "_default" tag-icons))
       ""))
 
@@ -555,10 +562,12 @@ PALETTE-DATA-SCRIPT must be a `(raw-html nil STRING)' node."
 
 (defun theme-topic-list-items (&rest args)
   "One section per group from ARGS's :groups, each an h2 and a list of rows.
-:tag-icons picks each row's icon, :chip-color names a base16 slot for the
-chips, :all-pages resolves refs, and :external
-\(default t) opens links in a new tab; pass nil for this site's own pages."
-  (let ((groups (plist-get args :groups))
+:tag-icons picks each row's icon (an item's own :icon wins), :chip-color
+names a base16 slot for the chips, :all-pages resolves refs, and :external
+\(default t) opens links in a new tab; pass nil for this site's own pages.
+:collapsed wraps each group in an open <details>; a heading click folds it."
+  (let ((collapsed (plist-get args :collapsed))
+        (groups (plist-get args :groups))
         (tag-icons (plist-get args :tag-icons))
         (all-pages (plist-get args :all-pages))
         (chip-color (plist-get args :chip-color))
@@ -567,20 +576,23 @@ chips, :all-pages resolves refs, and :external
      (list 'div (list :id "topic-list" :style (and chip-color (format "--chip-color: var(--%s)" chip-color))))
      (mapcar
       (lambda (group)
-        (let ((label (plist-get group :label))
-              (items (plist-get group :items)))
-          (list 'section nil
-                (theme--heading (denden--slugify-heading-text label)
-                                label " " (list 'small nil (format "(%d)" (length items))))
-                (append
-                 (list 'ul '(:class "list"))
-                 (mapcar (lambda (item)
-                           ;; Item-level "tag:" parts win over the group label's own icon.
-                           (theme-topic-item
-                            :item item :all-pages all-pages :external external
-                            :icon (theme--tag-icon (append (theme--topic-item-tags item) (list (downcase label)))
-                                                   tag-icons)))
-                         items)))))
+        (let* ((label (plist-get group :label))
+               (items (plist-get group :items))
+               (heading (theme--heading (denden--slugify-heading-text label)
+                                        label " " (list 'small nil (format "(%d)" (length items)))))
+               (rows (append
+                      (list 'ul '(:class "list"))
+                      (mapcar (lambda (item)
+                                ;; Item-level "tag:" parts win over the group label's own icon.
+                                (theme-topic-item
+                                 :item item :all-pages all-pages :external external
+                                 :icon (or (plist-get item :icon)
+                                           (theme--tag-icon (append (theme--topic-item-tags item) (list (downcase label)))
+                                                            tag-icons))))
+                              items))))
+          (if collapsed
+              (list 'section nil (list 'details '(:open t) (list 'summary nil heading) rows))
+            (list 'section nil heading rows))))
       groups))))
 
 (defconst theme--wander-launch

@@ -386,6 +386,14 @@
   :where(details > summary) {
     cursor: pointer;
   }
+  /* A heading used as a <summary> stays on the marker's line. */
+  :where(summary > h2, summary > h3) {
+    display: inline;
+  }
+  /* An inline h2 drops its own margins, so its summary keeps the h2 spacing. */
+  :where(summary:has(> h2)) {
+    margin-block: 1.6em 0.5em;
+  }
 
   /* ox-html output: center blocks, TODO keywords, footnotes. */
   :where(.org-center) {
