@@ -1,184 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: minimal</title><subtitle>Posts tagged minimal on Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/rss.xml" /><id>https://idlip.in/</id><updated>2026-09-30T00:00:00Z</updated><author><name>Dilip | Zororg</name><email>hi@idlip.in</email></author><generator uri="https://gohugo.io/">Hugo</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Window Managers</title><link rel="alternate" type="text/html" href="https://idlip.in/log/window-managers/" /><id>https://idlip.in/log/window-managers/</id><published>2024-01-03T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="linux" label="linux" scheme="https://idlip.in/tags/"></category><category term="minimal" label="minimal" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: minimal</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/tags/minimal/rss.xml" /><id>https://idlip.in/tags/minimal/rss.xml</id><updated>2026-11-24T00:00:00Z</updated><author><name>Dilip | Zororg</name></author><generator>Denden</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Window Managers</title><link rel="alternate" type="text/html" href="https://idlip.in/log/window-managers/" /><id>https://idlip.in/log/window-managers/</id><published>2024-01-03T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="linux" label="linux" scheme="https://idlip.in/tags/"></category><category term="minimal" label="minimal" scheme="https://idlip.in/tags/"></category><summary>Desktop Environment gives us everything we would like to operate on Desktop with care towards UI and UX, that matches the common paradigm. It is a lot driven by mouse, and seems to fairly make work simpler and easier. It is not like keyboard can always make task quicker, mouse can be ahead of the race.
+
+But I too followed the trend to ditch mouse and embrace the swiftness of keyboard. I like to hear the &quot;clicks&quot; and &quot;tacks&quot;.</summary><content type="html">&lt;p&gt;
 Desktop Environment gives us everything we would like to operate on Desktop with care towards UI and UX, that matches the common paradigm. It is a lot driven by mouse, and seems to fairly make work simpler and easier. It is not like keyboard can always make task quicker, mouse can be ahead of the race.
-</p>
+&lt;/p&gt;
 
-<p>
-But I too followed the trend to ditch mouse and embrace the swiftness of keyboard. I like to hear the "clicks" and "tacks".
-</p>
+&lt;p&gt;
+But I too followed the trend to ditch mouse and embrace the swiftness of keyboard. I like to hear the &quot;clicks&quot; and &quot;tacks&quot;.
+&lt;/p&gt;
 
-<p>
+&lt;p&gt;
 Window Managers are tools which only manage the window alignment and their behavior, with wayland, the compositor acts as both display server and window manager. Typically tho window managers offer keyboard focused, tweakable configuration to suit user's need, but alas it does work for minimal sake, just does offer on managing windows and thats it. It is not a Desktop environment to facilitate for other needs.
-</p>
+&lt;/p&gt;
 
-<p>
+&lt;p&gt;
 After fairly using a lot of window manager, from X11 days to now Wayland years, I stick with window managers only. It gives the feel of unique, self owned customization. My system can only be used by me, how cool !
-</p>
+&lt;/p&gt;
 
-<p>
+&lt;p&gt;
 Back in X11 days, I started with Cinnamon (Linux Mint) and later moved to XFCE to conserve Ram usage. Both were very good, Xfce was very much customization. Later I fell in the rabbit hole for more minimalism, and started looking at Youtube videos and came along the road of Window Managers.
-</p>
+&lt;/p&gt;
 
-<p>
-Tried with <code>i3wm</code>, and boyo boy, it worked and made the workflow like charm, and again I feel into another rabbit hole of World of window managers. The cost I had to pay was, endless customization for my needs, and wasting time. After fair usage, with some free time (pandemic age) I tried out other WMs, like <code>dwm</code>, <code>leftwm</code>, <code>Qtile</code> &amp; <code>bspwm</code> and used them all fairly equally and it was done.
-</p>
+&lt;p&gt;
+Tried with &lt;code&gt;i3wm&lt;/code&gt;, and boyo boy, it worked and made the workflow like charm, and again I feel into another rabbit hole of World of window managers. The cost I had to pay was, endless customization for my needs, and wasting time. After fair usage, with some free time (pandemic age) I tried out other WMs, like &lt;code&gt;dwm&lt;/code&gt;, &lt;code&gt;leftwm&lt;/code&gt;, &lt;code&gt;Qtile&lt;/code&gt; &amp;amp; &lt;code&gt;bspwm&lt;/code&gt; and used them all fairly equally and it was done.
+&lt;/p&gt;
 
-<p>
-With wayland years, I soon discovered <code>sway</code> was popular and drop-in replacement, so was suite of apps needed to replacement for pure wayland integration. Soon listed some and move to <code>sway</code> ship, and reddit showed beautiful blur and animations of <code>hyprland</code>, and finally I settled on with <code>Hyprland</code>.
-</p>
+&lt;p&gt;
+With wayland years, I soon discovered &lt;code&gt;sway&lt;/code&gt; was popular and drop-in replacement, so was suite of apps needed to replacement for pure wayland integration. Soon listed some and move to &lt;code&gt;sway&lt;/code&gt; ship, and reddit showed beautiful blur and animations of &lt;code&gt;hyprland&lt;/code&gt;, and finally I settled on with &lt;code&gt;Hyprland&lt;/code&gt;.
+&lt;/p&gt;
 
-<p>
-So far I have only listen WMs names, and I have not spoken of personal usage and feeling towards each of them, cause, they all just do one thing and they do it well. So except for config file (syntax), there is not much difference for user who wants to use laptop and "<b>do the work</b>". It is a wonderful change to stick with WM, cause easy management of windows and minimal way of using the system, so I can use the saving part for demanding tasks.
-</p>
+&lt;p&gt;
+So far I have only listen WMs names, and I have not spoken of personal usage and feeling towards each of them, cause, they all just do one thing and they do it well. So except for config file (syntax), there is not much difference for user who wants to use laptop and &quot;&lt;b&gt;do the work&lt;/b&gt;&quot;. It is a wonderful change to stick with WM, cause easy management of windows and minimal way of using the system, so I can use the saving part for demanding tasks.
+&lt;/p&gt;
 
-<p>
+&lt;p&gt;
 One peculiar, and best thing WMs offer are Workspace. Which acts like spaces where windows are placed or configured, we get 10 (typically enough) or even more to organize and use our application in a handy way.
-</p>
+&lt;/p&gt;
 
-<p>
+&lt;p&gt;
 Closing words, Window Managers are definitely great, and changing enhancement, users (linux) should give it a try at least once, of course it's not for everyone, but how can anyone tell unless if they have not even tried. It can enhance the workflow for many, and can be worse for others.
-</p>
+&lt;/p&gt;
 
-<p>
-So, just have a share of trial, explore and relax!</p>
-]]></content></entry><entry><title>Linux : The Matrix</title><link rel="alternate" type="text/html" href="https://idlip.in/log/linux-cheatsheet/" /><id>https://idlip.in/log/linux-cheatsheet/</id><published>2023-04-12T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="terminal" label="terminal" scheme="https://idlip.in/tags/"></category><category term="minimal" label="minimal" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+&lt;p&gt;
+So, just have a share of trial, explore and relax!&lt;/p&gt;
+</content></entry><entry><title>Linux : The Matrix</title><link rel="alternate" type="text/html" href="https://idlip.in/log/linux-cheatsheet/" /><id>https://idlip.in/log/linux-cheatsheet/</id><published>2023-04-12T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="terminal" label="terminal" scheme="https://idlip.in/tags/"></category><category term="minimal" label="minimal" scheme="https://idlip.in/tags/"></category><summary>There are tons of linux command line cheatsheet or guides.
+
+Here are some of the best reads, I suggest you to go throught each of it, It's a gem.</summary><content type="html">&lt;p&gt;
 There are tons of linux command line cheatsheet or guides.
-</p>
+&lt;/p&gt;
 
-<p>
-Here are some of the best reads, I suggest you to go throught each of it, <b>It's a gem</b>.
-</p>
-
-
-<ul class="org-ul">
-<li><a href="https://github.com/jlevy/the-art-of-command-line">The Art of Command Line</a> — notes and tips on using the command-line, suitable for both beginners and experienced users.</li>
-<li><a href="https://www.commandlinefu.com/commands/browse/sort-by-votes">commandlinefu</a> — command-line gems, includes a handy search feature.</li>
-<li><a href="https://github.com/tldr-pages/tldr">tldr</a> — collection of community-maintained help pages for command-line tools.</li>
-<li><a href="https://explainshell.com/">explainshell</a> — write down a command-line to see the help text that matches each argument.</li>
-<li><a href="http://www.compciv.org/unix-tools/">General purpose command-line tools</a> — examples for most common usecases.</li>
-<li><a href="https://devmanual.gentoo.org/tools-reference/bash/index.html">Bash reference cheatsheet</a> — nicely formatted and explained well.</li>
-<li><a href="https://devhints.io/bash">Bash scripting cheatsheet</a> — quick reference to getting started with Bash scripting.</li>
-</ul>
-
-<hr />
-
-<div class="org-center">
-<p>
-<b>With that <code>coded</code>, I hope you enjoy the terminal. Unleash the Matrix</b>.
-</p>
-</div>
-]]></content></entry><entry><title>Tools that are Best!</title><link rel="alternate" type="text/html" href="https://idlip.in/log/tools-readme/" /><id>https://idlip.in/log/tools-readme/</id><published>2023-03-17T00:00:00Z</published><updated>2026-10-02T00:00:00Z</updated><category term="terminal" label="terminal" scheme="https://idlip.in/tags/"></category><category term="linux" label="linux" scheme="https://idlip.in/tags/"></category><category term="minimal" label="minimal" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
-Note: This is very outdated from when it was written. Please check <a href="https://github.com/idlip/d-nix">current config</a> file or <a href="/uses/">Uses</a> for updated list.
-</p>
-
-<hr />
-<div id="outline-container-utilities-that-are-best" class="outline-2">
-<h2 id="utilities-that-are-best">Utilities that are Best! 🌟<a class="heading-anchor" href="#utilities-that-are-best" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-orge999875">
-<hr />
-
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+&lt;p&gt;
+Here are some of the best reads, I suggest you to go throught each of it, &lt;b&gt;It's a gem&lt;/b&gt;.
+&lt;/p&gt;
 
 
-<colgroup>
-<col  class="org-left" />
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/jlevy/the-art-of-command-line&quot;&gt;The Art of Command Line&lt;/a&gt; — notes and tips on using the command-line, suitable for both beginners and experienced users.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.commandlinefu.com/commands/browse/sort-by-votes&quot;&gt;commandlinefu&lt;/a&gt; — command-line gems, includes a handy search feature.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/tldr-pages/tldr&quot;&gt;tldr&lt;/a&gt; — collection of community-maintained help pages for command-line tools.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://explainshell.com/&quot;&gt;explainshell&lt;/a&gt; — write down a command-line to see the help text that matches each argument.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.compciv.org/unix-tools/&quot;&gt;General purpose command-line tools&lt;/a&gt; — examples for most common usecases.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://devmanual.gentoo.org/tools-reference/bash/index.html&quot;&gt;Bash reference cheatsheet&lt;/a&gt; — nicely formatted and explained well.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://devhints.io/bash&quot;&gt;Bash scripting cheatsheet&lt;/a&gt; — quick reference to getting started with Bash scripting.&lt;/li&gt;
+&lt;/ul&gt;
 
-<col  class="org-left" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-left">Class</th>
-<th scope="col" class="org-left">Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="org-left">Window Manager</td>
-<td class="org-left"><a href="https://hyprland.org/">Hyprland</a> 🌸</td>
-</tr>
+&lt;hr&gt;
 
-<tr>
-<td class="org-left">Text Editor</td>
-<td class="org-left"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 💮</td>
-</tr>
+&lt;div class=&quot;org-center&quot;&gt;
+&lt;p&gt;
+&lt;b&gt;With that &lt;code&gt;coded&lt;/code&gt;, I hope you enjoy the terminal. Unleash the Matrix&lt;/b&gt;.
+&lt;/p&gt;
+&lt;/div&gt;
+</content></entry><entry><title>Tools that are Best!</title><link rel="alternate" type="text/html" href="https://idlip.in/log/tools-readme/" /><id>https://idlip.in/log/tools-readme/</id><published>2023-03-17T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="terminal" label="terminal" scheme="https://idlip.in/tags/"></category><category term="linux" label="linux" scheme="https://idlip.in/tags/"></category><category term="minimal" label="minimal" scheme="https://idlip.in/tags/"></category><summary>Note: This is very outdated from when it was written. Please check current config file or Uses for updated list.
 
-<tr>
-<td class="org-left">Gtk Theme</td>
-<td class="org-left"><a href="https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme">Gruvbox</a> / <a href="https://github.com/vinceliuice/Orchis-theme">Orchis</a> 🎨</td>
-</tr>
+Rest all other stuffs I do in Emacs, tbh I could do everything in Emacs lol.</summary><content type="html">&lt;p&gt;
+Note: This is very outdated from when it was written. Please check &lt;a href=&quot;https://github.com/idlip/d-nix&quot;&gt;current config&lt;/a&gt; file or &lt;a href=&quot;/uses/&quot;&gt;Uses&lt;/a&gt; for updated list.
+&lt;/p&gt;
 
-<tr>
-<td class="org-left">Font</td>
-<td class="org-left"><a href="https://tosche.net/fonts/comic-code">Comic Code</a> / <a href="https://github.com/dtinth/comic-mono-font">Comic Mono</a> / <a href="https://github.com/tonsky/FiraCode">Fira Code</a></td>
-</tr>
+&lt;hr&gt;
+&lt;div id=&quot;outline-container-utilities-that-are-best&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;utilities-that-are-best&quot;&gt;Utilities that are Best! 🌟&lt;a class=&quot;heading-anchor&quot; href=&quot;#utilities-that-are-best&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-utilities-that-are-best&quot;&gt;
+&lt;hr&gt;
 
-<tr>
-<td class="org-left">Pdf Reader</td>
-<td class="org-left"><a href="https://github.com/ahrm/sioyek">Sioyek</a> 📔 (ditch zathura)</td>
-</tr>
+&lt;table&gt;
 
-<tr>
-<td class="org-left">Media Player</td>
-<td class="org-left"><a href="https://mpv.io">MPV!</a> 🎬 (its MVP too)</td>
-</tr>
 
-<tr>
-<td class="org-left">Image Viewer</td>
-<td class="org-left"><a href="https://sr.ht/~exec64/imv/">Imv</a> 🖼️</td>
-</tr>
+&lt;colgroup&gt;
+&lt;col  class=&quot;org-left&quot;&gt;
 
-<tr>
-<td class="org-left">RSS Reader</td>
-<td class="org-left"><a href="https://github.com/skeeto/elfeed">Elfeed</a> 📰 (Again, Emacs)</td>
-</tr>
+&lt;col  class=&quot;org-left&quot;&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th scope=&quot;col&quot; class=&quot;org-left&quot;&gt;Class&lt;/th&gt;
+&lt;th scope=&quot;col&quot; class=&quot;org-left&quot;&gt;Name&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td class=&quot;org-left&quot;&gt;Window Manager&lt;/td&gt;
+&lt;td class=&quot;org-left&quot;&gt;&lt;a href=&quot;https://hyprland.org/&quot;&gt;Hyprland&lt;/a&gt; 🌸&lt;/td&gt;
+&lt;/tr&gt;
 
-<tr>
-<td class="org-left">Music Player</td>
-<td class="org-left"><a href="https://github.com/ncmpcpp/ncmpcpp">Ncmpcpp</a> or <a href="https://github.com//mingus">Mingus in Emacs</a> 🎶</td>
-</tr>
+&lt;tr&gt;
+&lt;td class=&quot;org-left&quot;&gt;Text Editor&lt;/td&gt;
+&lt;td class=&quot;org-left&quot;&gt;&lt;a href=&quot;https://www.gnu.org/software/emacs/&quot;&gt;Emacs&lt;/a&gt; 💮&lt;/td&gt;
+&lt;/tr&gt;
 
-<tr>
-<td class="org-left">Terminal</td>
-<td class="org-left"><a href="https://codeberg.org/dnkl/foot">Foot</a> via footclient ⚽</td>
-</tr>
+&lt;tr&gt;
+&lt;td class=&quot;org-left&quot;&gt;Gtk Theme&lt;/td&gt;
+&lt;td class=&quot;org-left&quot;&gt;&lt;a href=&quot;https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme&quot;&gt;Gruvbox&lt;/a&gt; / &lt;a href=&quot;https://github.com/vinceliuice/Orchis-theme&quot;&gt;Orchis&lt;/a&gt; 🎨&lt;/td&gt;
+&lt;/tr&gt;
 
-<tr>
-<td class="org-left">Menu/Launcher</td>
-<td class="org-left"><a href="https://github.com/davatorium/rofi">Rofi</a> 🚀</td>
-</tr>
+&lt;tr&gt;
+&lt;td class=&quot;org-left&quot;&gt;Font&lt;/td&gt;
+&lt;td class=&quot;org-left&quot;&gt;&lt;a href=&quot;https://tosche.net/fonts/comic-code&quot;&gt;Comic Code&lt;/a&gt; / &lt;a href=&quot;https://github.com/dtinth/comic-mono-font&quot;&gt;Comic Mono&lt;/a&gt; / &lt;a href=&quot;https://github.com/tonsky/FiraCode&quot;&gt;Fira Code&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
 
-<tr>
-<td class="org-left">Notification</td>
-<td class="org-left"><a href="https://github.com/dunst/dunst">Dunst</a>  🛎️</td>
-</tr>
+&lt;tr&gt;
+&lt;td class=&quot;org-left&quot;&gt;Pdf Reader&lt;/td&gt;
+&lt;td class=&quot;org-left&quot;&gt;&lt;a href=&quot;https://github.com/ahrm/sioyek&quot;&gt;Sioyek&lt;/a&gt; 📔 (ditch zathura)&lt;/td&gt;
+&lt;/tr&gt;
 
-<tr>
-<td class="org-left">Shell</td>
-<td class="org-left"><a href="https://zsh.org">Zshell</a> with <a href="https://starship.rs">Starship</a> 🔰</td>
-</tr>
+&lt;tr&gt;
+&lt;td class=&quot;org-left&quot;&gt;Media Player&lt;/td&gt;
+&lt;td class=&quot;org-left&quot;&gt;&lt;a href=&quot;https://mpv.io&quot;&gt;MPV!&lt;/a&gt; 🎬 (its MVP too)&lt;/td&gt;
+&lt;/tr&gt;
 
-<tr>
-<td class="org-left">Status Bar</td>
-<td class="org-left"><a href="https://github.com/Alexays/Waybar">Waybar</a>  🍥</td>
-</tr>
+&lt;tr&gt;
+&lt;td class=&quot;org-left&quot;&gt;Image Viewer&lt;/td&gt;
+&lt;td class=&quot;org-left&quot;&gt;&lt;a href=&quot;https://sr.ht/~exec64/imv/&quot;&gt;Imv&lt;/a&gt; 🖼️&lt;/td&gt;
+&lt;/tr&gt;
 
-<tr>
-<td class="org-left">Favourite Color-Schemes</td>
-<td class="org-left">Modus-Vivendi + Gruvbox</td>
-</tr>
-</tbody>
-</table>
+&lt;tr&gt;
+&lt;td class=&quot;org-left&quot;&gt;RSS Reader&lt;/td&gt;
+&lt;td class=&quot;org-left&quot;&gt;&lt;a href=&quot;https://github.com/skeeto/elfeed&quot;&gt;Elfeed&lt;/a&gt; 📰 (Again, Emacs)&lt;/td&gt;
+&lt;/tr&gt;
 
-<blockquote>
-<p>
+&lt;tr&gt;
+&lt;td class=&quot;org-left&quot;&gt;Music Player&lt;/td&gt;
+&lt;td class=&quot;org-left&quot;&gt;&lt;a href=&quot;https://github.com/ncmpcpp/ncmpcpp&quot;&gt;Ncmpcpp&lt;/a&gt; or &lt;a href=&quot;https://github.com//mingus&quot;&gt;Mingus in Emacs&lt;/a&gt; 🎶&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td class=&quot;org-left&quot;&gt;Terminal&lt;/td&gt;
+&lt;td class=&quot;org-left&quot;&gt;&lt;a href=&quot;https://codeberg.org/dnkl/foot&quot;&gt;Foot&lt;/a&gt; via footclient ⚽&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td class=&quot;org-left&quot;&gt;Menu/Launcher&lt;/td&gt;
+&lt;td class=&quot;org-left&quot;&gt;&lt;a href=&quot;https://github.com/davatorium/rofi&quot;&gt;Rofi&lt;/a&gt; 🚀&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td class=&quot;org-left&quot;&gt;Notification&lt;/td&gt;
+&lt;td class=&quot;org-left&quot;&gt;&lt;a href=&quot;https://github.com/dunst/dunst&quot;&gt;Dunst&lt;/a&gt;  🛎️&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td class=&quot;org-left&quot;&gt;Shell&lt;/td&gt;
+&lt;td class=&quot;org-left&quot;&gt;&lt;a href=&quot;https://zsh.org&quot;&gt;Zshell&lt;/a&gt; with &lt;a href=&quot;https://starship.rs&quot;&gt;Starship&lt;/a&gt; 🔰&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td class=&quot;org-left&quot;&gt;Status Bar&lt;/td&gt;
+&lt;td class=&quot;org-left&quot;&gt;&lt;a href=&quot;https://github.com/Alexays/Waybar&quot;&gt;Waybar&lt;/a&gt;  🍥&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td class=&quot;org-left&quot;&gt;Favourite Color-Schemes&lt;/td&gt;
+&lt;td class=&quot;org-left&quot;&gt;Modus-Vivendi + Gruvbox&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;
 Rest all other stuffs I do in Emacs, tbh I could do everything in Emacs lol.
-</p>
-</blockquote>
+&lt;/p&gt;
+&lt;/blockquote&gt;
 
 
-<p>
+&lt;p&gt;
 Feel free to comment down and ask me doubts or about some improvements, you wanna inform! I will be glad.
-</p>
-</div>
-</div>
-]]></content></entry></feed>
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content></entry></feed>

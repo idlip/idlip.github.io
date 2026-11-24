@@ -1,80 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: rss</title><subtitle>Posts tagged rss on Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/rss.xml" /><id>https://idlip.in/</id><updated>2026-09-30T00:00:00Z</updated><author><name>Dilip | Zororg</name><email>hi@idlip.in</email></author><generator uri="https://gohugo.io/">Hugo</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>RSS: The better Internet</title><link rel="alternate" type="text/html" href="https://idlip.in/log/rss-web/" /><id>https://idlip.in/log/rss-web/</id><published>2023-03-23T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><category term="news" label="news" scheme="https://idlip.in/tags/"></category><category term="rss" label="rss" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<div id="outline-container-cheesy-internet" class="outline-2">
-<h2 id="cheesy-internet">Cheesy Internet<a class="heading-anchor" href="#cheesy-internet" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org01a32d7">
-<p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: rss</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/tags/rss/rss.xml" /><id>https://idlip.in/tags/rss/rss.xml</id><updated>2026-11-24T00:00:00Z</updated><author><name>Dilip | Zororg</name></author><generator>Denden</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>RSS: The better Internet</title><link rel="alternate" type="text/html" href="https://idlip.in/log/rss-web/" /><id>https://idlip.in/log/rss-web/</id><published>2023-03-23T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><category term="news" label="news" scheme="https://idlip.in/tags/"></category><category term="rss" label="rss" scheme="https://idlip.in/tags/"></category><summary>I don't have to say this, the Internet is hella bloated.. Junks are everywhere, nobody knows that they read shit, they are watching shits whole time.
+
+Just do a test, How many popups have you closed today, How many cookies (web) have you eaten, How many captchas did you solve, How many minutes did you wait to skip an ad just to watch a video… Even worse, ads sponsors are embedded within a video (So cruel and harsh world) It goes on.</summary><content type="html">&lt;div id=&quot;outline-container-cheesy-internet&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;cheesy-internet&quot;&gt;Cheesy Internet&lt;a class=&quot;heading-anchor&quot; href=&quot;#cheesy-internet&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-cheesy-internet&quot;&gt;
+&lt;p&gt;
 I don't have to say this, the Internet is hella bloated.. Junks are everywhere, nobody knows that they read shit, they are watching shits whole time.
-</p>
+&lt;/p&gt;
 
-<p>
-Just do a test, How many popups have you closed today, How many cookies (web) have you eaten, How many captchas did you solve, How many minutes did you wait to skip an ad just to watch a video&hellip; Even worse, ads sponsors are embedded within a video (So cruel and harsh world)
-<i>It goes on</i>.
-</p>
+&lt;p&gt;
+Just do a test, How many popups have you closed today, How many cookies (web) have you eaten, How many captchas did you solve, How many minutes did you wait to skip an ad just to watch a video&amp;hellip; Even worse, ads sponsors are embedded within a video (So cruel and harsh world)
+&lt;i&gt;It goes on&lt;/i&gt;.
+&lt;/p&gt;
 
-<p>
+&lt;p&gt;
 Internet and digital software's are getting so much bloated, people (normies) have forgotten Unix or say 'minimalism'. People are upgrading RAM like anything, 8GB ain't enough it-seems for them. Here, I do everything with just 4GB RAM.
 People these days all need ready-made/ready-to-work  stuffs, I wonder how do they even watch DIY channels on YouTube.
-</p>
-</div>
-</div>
-<div id="outline-container-the-hero" class="outline-2">
-<h2 id="the-hero">The Hero<a class="heading-anchor" href="#the-hero" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org3cdf62c">
-<p>
-Rss stands for <b>Really Simple Syndication</b>, It is a classic on consuming web as supposedly it was built for. Today its all crappy <b>JavaScript</b> (a big bloat of cheese).
-</p>
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-the-hero&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;the-hero&quot;&gt;The Hero&lt;a class=&quot;heading-anchor&quot; href=&quot;#the-hero&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-the-hero&quot;&gt;
+&lt;p&gt;
+Rss stands for &lt;b&gt;Really Simple Syndication&lt;/b&gt;, It is a classic on consuming web as supposedly it was built for. Today its all crappy &lt;b&gt;JavaScript&lt;/b&gt; (a big bloat of cheese).
+&lt;/p&gt;
 
-<p>
+&lt;p&gt;
 People literally have forgotten to read and embrace the text, everyone wants; YouTube tutorials, or some designed way to make them understand.
 Shit, its a no joke, that's why AI have evolved these days.
 Make our life easy?  Lol
-</p>
+&lt;/p&gt;
 
-<p>
+&lt;p&gt;
 It can easily fetch content from web and easily showcase the actual content only. If that content is valuable, we should value our way to taking it.
-</p>
+&lt;/p&gt;
 
-<p>
-Actually many of you might know famous news reader called <b>Feedly</b>, it is based on Rss system under-the-hood.
-</p>
-</div>
-</div>
-<div id="outline-container-feed-readers" class="outline-2">
-<h2 id="feed-readers">Feed Readers<a class="heading-anchor" href="#feed-readers" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org5f0c067">
-<p>
+&lt;p&gt;
+Actually many of you might know famous news reader called &lt;b&gt;Feedly&lt;/b&gt;, it is based on Rss system under-the-hood.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-feed-readers&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;feed-readers&quot;&gt;Feed Readers&lt;a class=&quot;heading-anchor&quot; href=&quot;#feed-readers&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-feed-readers&quot;&gt;
+&lt;p&gt;
 If you use window there are famous readers like fluent reader.
-On Linux you get <a href="https://newsboat.org/">newsboat</a> (terminal lovers), I use <a href="https://github.com/skeeto/elfeed">elfeed</a> (Emacs way).
-</p>
+On Linux you get &lt;a href=&quot;https://newsboat.org/&quot;&gt;newsboat&lt;/a&gt; (terminal lovers), I use &lt;a href=&quot;https://github.com/skeeto/elfeed&quot;&gt;elfeed&lt;/a&gt; (Emacs way).
+&lt;/p&gt;
 
-<p>
+&lt;p&gt;
 For GUI Linux user you get : (Install with your system's package manager or use AppImage/Flathub)
-</p>
+&lt;/p&gt;
 
-<ul class="org-ul">
-<li><a href="https://github.com/lwindolf/liferea/">Liferea</a></li>
-<li><a href="https://github.com/yang991178/fluent-reader">Fluent-reader</a></li>
-<li><a href="https://www.thunderbird.net/en-US">Thunderbird</a> (Email client + Rss)</li>
-<li><a href="https://gitlab.com/news-flash/news_flash_gtk">NewsFlash</a></li>
-<li><a href="https://apps.kde.org/en/akregator">Kde's Akregator</a></li>
-</ul>
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/lwindolf/liferea/&quot;&gt;Liferea&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/yang991178/fluent-reader&quot;&gt;Fluent-reader&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.thunderbird.net/en-US&quot;&gt;Thunderbird&lt;/a&gt; (Email client + Rss)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://gitlab.com/news-flash/news_flash_gtk&quot;&gt;NewsFlash&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://apps.kde.org/en/akregator&quot;&gt;Kde's Akregator&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-<p>
+&lt;p&gt;
 Watching YouTube contents is whole lot better in Mpv with sponsorblock (It gives seamless content joy)
-</p>
+&lt;/p&gt;
 
 
-<p>
+&lt;p&gt;
 Actually elfeed integrates so well with Emacs, I don't have to learn new stuffs for another application or keyboard shortcuts.
-</p>
+&lt;/p&gt;
 
-<p>
-That's one of the reason I call <b>Emacs as the GOAT-E (Editor)</b>.
-</p>
+&lt;p&gt;
+That's one of the reason I call &lt;b&gt;Emacs as the GOAT-E (Editor)&lt;/b&gt;.
+&lt;/p&gt;
 
-<p>
+&lt;p&gt;
 I will try to expand more bits on rss feeds value by making a detailed post.
-</p>
-</div>
-</div>
-]]></content></entry></feed>
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content></entry></feed>

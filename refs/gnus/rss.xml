@@ -1,96 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: gnus</title><subtitle>Posts referencing gnus on Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/rss.xml" /><id>https://idlip.in/</id><updated>2026-09-30T00:00:00Z</updated><author><name>Dilip | Zororg</name><email>hi@idlip.in</email></author><generator uri="https://gohugo.io/">Hugo</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Using Gnus to read rss feeds</title><link rel="alternate" type="text/html" href="https://idlip.in/log/gnus-joy/" /><id>https://idlip.in/log/gnus-joy/</id><published>2024-03-10T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="gnus" label="gnus" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: gnus</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/refs/gnus/rss.xml" /><id>https://idlip.in/refs/gnus/rss.xml</id><updated>2026-11-24T00:00:00Z</updated><author><name>Dilip | Zororg</name></author><generator>Denden</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Using Gnus to read rss feeds</title><link rel="alternate" type="text/html" href="https://idlip.in/log/gnus-joy/" /><id>https://idlip.in/log/gnus-joy/</id><published>2024-03-10T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="gnus" label="gnus" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><summary>Emacs is my editor, and my companion for most of my tasks. Yes, I'd like to call it a second brain extension.
+
+I'm a rss feed user, to read with coziness, freedom and comfort. Lately I have been experiment with the rss readers choice in Emacs. I feel that gnus, the powerhouse in Emacs is one of the good choice. I mean to say, not with nnrss backend, but with rss to nntp gateway.</summary><content type="html">&lt;p&gt;
 Emacs is my editor, and my companion for most of my tasks. Yes, I'd like to call it a second brain extension.
-</p>
+&lt;/p&gt;
 
-<p>
-I'm a rss feed user, to read with coziness, freedom and comfort. Lately I have been experiment with the rss readers choice in Emacs. I feel that <code>gnus</code>, the powerhouse in Emacs is one of the good choice. I mean to say, not with <code>nnrss</code> backend, but with rss to nntp gateway.
-</p>
+&lt;p&gt;
+I'm a rss feed user, to read with coziness, freedom and comfort. Lately I have been experiment with the rss readers choice in Emacs. I feel that &lt;code&gt;gnus&lt;/code&gt;, the powerhouse in Emacs is one of the good choice. I mean to say, not with &lt;code&gt;nnrss&lt;/code&gt; backend, but with rss to nntp gateway.
+&lt;/p&gt;
 
-<p>
-I'm using <code>elfeed</code> as the rss reader for over 6 months. I even setup my phone to use emacs app to read news in sync with PC using syncthing. And it worked as expected flawlessly. But elfeed is unmaintained, but it works without any issues tho. By time someone may fork it, looking at how much love it has. This then lead to me try other ways in Emacs, as I was kinda leaning towards keeping Emacs as close to vanilla as possible. Recently I also replaced <code>flycheck</code> with built-in <code>flymake</code>.
-</p>
+&lt;p&gt;
+I'm using &lt;code&gt;elfeed&lt;/code&gt; as the rss reader for over 6 months. I even setup my phone to use emacs app to read news in sync with PC using syncthing. And it worked as expected flawlessly. But elfeed is unmaintained, but it works without any issues tho. By time someone may fork it, looking at how much love it has. This then lead to me try other ways in Emacs, as I was kinda leaning towards keeping Emacs as close to vanilla as possible. Recently I also replaced &lt;code&gt;flycheck&lt;/code&gt; with built-in &lt;code&gt;flymake&lt;/code&gt;.
+&lt;/p&gt;
 
-<p>
-Soon I jotted down only 3 candidate for reading feeds. Elfeed, Newsticker &amp; gnus. Later two are built-in. There might be others as well, like wanderlust, org based.., but when I tried ig it did not work.
-</p>
-<div id="outline-container-elfeed" class="outline-2">
-<h2 id="elfeed">Elfeed<a class="heading-anchor" href="#elfeed" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org2bddb14">
-<p>
-As said earlier, it was my choice for about 6+ months, and it worked really well. Was reading and tagging feeds alot. Although with my rss usage, I realized I was only looking forward for the <b>planet emacs</b> feeds (haha; typical emacser).
-</p>
+&lt;p&gt;
+Soon I jotted down only 3 candidate for reading feeds. Elfeed, Newsticker &amp;amp; gnus. Later two are built-in. There might be others as well, like wanderlust, org based.., but when I tried ig it did not work.
+&lt;/p&gt;
+&lt;div id=&quot;outline-container-elfeed&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;elfeed&quot;&gt;Elfeed&lt;a class=&quot;heading-anchor&quot; href=&quot;#elfeed&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-elfeed&quot;&gt;
+&lt;p&gt;
+As said earlier, it was my choice for about 6+ months, and it worked really well. Was reading and tagging feeds alot. Although with my rss usage, I realized I was only looking forward for the &lt;b&gt;planet emacs&lt;/b&gt; feeds (haha; typical emacser).
+&lt;/p&gt;
 
-<p>
+&lt;p&gt;
 It is good with not much issues, except that its database directory is kinda not intuitive for manual edits, and the files are scattered with some random ids. So you dont know where a feed post is located.
-</p>
+&lt;/p&gt;
 
-<p>
+&lt;p&gt;
 It is still my recommend way to go with the package that just works well. But being into more emacs, I needed little more.
-</p>
-</div>
-</div>
-<div id="outline-container-newsticker" class="outline-2">
-<h2 id="newsticker">Newsticker<a class="heading-anchor" href="#newsticker" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-orgcd987e0">
-<p>
-Firstly, liked the customization it has, and the tree-view how it appeals. But I hit the road blocks very soon. Tree-view was an issue, I need to read each post in single window and navigate to my leisure. I miss tags here. For everytime I launch, <code>newsticker-treeview</code> it fetches the articles from feed. That blocks my usage sometimes. Even tho I can keep <code>newsticker-retrieval-interval</code> to 0, it still fetches when launched with command for first time.
-</p>
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-newsticker&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;newsticker&quot;&gt;Newsticker&lt;a class=&quot;heading-anchor&quot; href=&quot;#newsticker&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-newsticker&quot;&gt;
+&lt;p&gt;
+Firstly, liked the customization it has, and the tree-view how it appeals. But I hit the road blocks very soon. Tree-view was an issue, I need to read each post in single window and navigate to my leisure. I miss tags here. For everytime I launch, &lt;code&gt;newsticker-treeview&lt;/code&gt; it fetches the articles from feed. That blocks my usage sometimes. Even tho I can keep &lt;code&gt;newsticker-retrieval-interval&lt;/code&gt; to 0, it still fetches when launched with command for first time.
+&lt;/p&gt;
 
-<p>
+&lt;p&gt;
 With plain view you can filter for feeds very much. With tree view you cannot occupy single widow to read the post.
-</p>
+&lt;/p&gt;
 
-<p>
+&lt;p&gt;
 Anyway, newsticker is also good, as it is built-in and does just work.
-</p>
-</div>
-</div>
-<div id="outline-container-gnus" class="outline-2">
-<h2 id="gnus">gnus<a class="heading-anchor" href="#gnus" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org3444817">
-<ul class="org-ul">
-<li>I panicked when I came to gnus. Its my..idk.. n<sup>th</sup> time trying it out again.</li>
-</ul>
-<p>
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-gnus&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;gnus&quot;&gt;gnus&lt;a class=&quot;heading-anchor&quot; href=&quot;#gnus&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-gnus&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;I panicked when I came to gnus. Its my..idk.. n&lt;sup&gt;th&lt;/sup&gt; time trying it out again.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
 But with little more dedication than last time, I sat down to read the manual.
-</p>
+&lt;/p&gt;
 
-<p>
+&lt;p&gt;
 Soon I realized, how did I miss reading such a marvelous manual before. Although still I was not able to wrap my head, I some how managed only yo grasp what I wanted for the time being. Note, gnus is a usenet reader, so it can be preferred for mails, but my goal for now is rss feeds.
-</p>
+&lt;/p&gt;
 
-<p>
-I saw there is <code>nnrss</code> backends, it is kinda same as newsticker, the road-block is the not being async to fetch the feeds.
+&lt;p&gt;
+I saw there is &lt;code&gt;nnrss&lt;/code&gt; backends, it is kinda same as newsticker, the road-block is the not being async to fetch the feeds.
 So if more feeds, it blocks the emacs very much.
-</p>
+&lt;/p&gt;
 
-<p>
-Soon I came to another way of reading rss as newsgroup via rss to nntp gateway. I'm using <code>gwene</code> and <code>feedbase</code> for it, and it gets me most of the feeds in newsgroup format.
-</p>
+&lt;p&gt;
+Soon I came to another way of reading rss as newsgroup via rss to nntp gateway. I'm using &lt;code&gt;gwene&lt;/code&gt; and &lt;code&gt;feedbase&lt;/code&gt; for it, and it gets me most of the feeds in newsgroup format.
+&lt;/p&gt;
 
-<p>
+&lt;p&gt;
 Its my first time reading at newsgroup, and I feel amazed and appreciate how simply and focused this UI is. I have started to enjoy reading mailing lists and follow up stuffs in a unified and good way.
-</p>
+&lt;/p&gt;
 
-<p>
+&lt;p&gt;
 Although you may find some cons with this way, offline is possible and can download any number of articles/posts. Which is mega-bonus. I download 5k+ articles from a feed, which might be not possible with plain rss feeds.
-</p>
+&lt;/p&gt;
 
-<p>
+&lt;p&gt;
 The reading in gnus has been a joy, and I would to add more write-ups on it. Yes, I want to write and hope to make some people try it as I feel it. Cause whatever search you do on gnus emacs, people silence and make you use other package. I know I may also hit their issues and end, and realize what they mean. But at the time of writing, I really enjoy it.
-</p>
+&lt;/p&gt;
 
-<p>
-And, it was very easy to me use gnus in sync with android emacs too via syncthing of just one file <code>newsrc.eld</code>, and if downloading any articles, its will be added to <code>gnus-directory</code>.
-</p>
+&lt;p&gt;
+And, it was very easy to me use gnus in sync with android emacs too via syncthing of just one file &lt;code&gt;newsrc.eld&lt;/code&gt;, and if downloading any articles, its will be added to &lt;code&gt;gnus-directory&lt;/code&gt;.
+&lt;/p&gt;
 
-<hr />
+&lt;hr&gt;
 
-<p>
+&lt;p&gt;
 Finally to say, gnus will be my choice of reading from now. I hope I don't fall into the rabbit hole of gnus now, I just hope to use as is and enjoy reading the content.
-I would like to link my dotfiles for it, maybe will soon add more write-up on it. For now here you go; <a href="https://www.github.com/idlip/d-nix">check d-setup.org</a>.
-</p>
-</div>
-</div>
-]]></content></entry></feed>
+I would like to link my dotfiles for it, maybe will soon add more write-up on it. For now here you go; &lt;a href=&quot;https://www.github.com/idlip/d-nix&quot;&gt;check d-setup.org&lt;/a&gt;.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content></entry></feed>

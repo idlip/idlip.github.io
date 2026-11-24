@@ -1,223 +1,227 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: obtf</title><subtitle>Posts tagged obtf on Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/rss.xml" /><id>https://idlip.in/</id><updated>2026-10-12T00:00:00Z</updated><author><name>Dilip | Zororg</name><email>hi@idlip.in</email></author><generator uri="https://gohugo.io/">Hugo</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Org mode is the best OBTF</title><link rel="alternate" type="text/html" href="https://idlip.in/log/obtf/" /><id>https://idlip.in/log/obtf/</id><published>2026-10-07T00:00:00Z</published><updated>2026-10-12T00:00:00Z</updated><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><category term="obtf" label="obtf" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<ul class="org-ul">
-<li>This content is written to be lateral post to <a href="https://www.reddit.com/r/OneBigTextFile/s/5Jy5SUG48h">r/onebigtextfile</a> and spark the idea to many.</li>
-</ul>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: obtf</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/tags/obtf/rss.xml" /><id>https://idlip.in/tags/obtf/rss.xml</id><updated>2026-11-24T00:00:00Z</updated><author><name>Dilip | Zororg</name></author><generator>Denden</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Org mode is the best OBTF</title><link rel="alternate" type="text/html" href="https://idlip.in/log/obtf/" /><id>https://idlip.in/log/obtf/</id><published>2026-10-07T00:00:00Z</published><updated>2026-10-12T00:00:00Z</updated><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><category term="obtf" label="obtf" scheme="https://idlip.in/tags/"></category><summary>I wrote about OBTF as Second Brain with Org mode a while back, but that post was mostly &quot;here is my datetree workflow.&quot; This one is a direct response to obtf.ru, a site that makes the case for One Big Text File a lot sharper than I did, and argues it against FOMO fatigue I've felt myself.
 
-<p>
-I wrote about <a href="/log/obtf-org-mode/">OBTF as Second Brain with Org mode</a> a while back, but that post was mostly "here is my datetree workflow." This one is a direct response to <a href="https://obtf.ru/en">obtf.ru</a>, a site that makes the case for <b>One Big Text File</b> a lot sharper than I did, and argues it against FOMO fatigue I've felt myself.
-</p>
+OBTF in some sense is a lazy man's system to get things done. But if you feel more lazier to even think of it, I'd highly recommend to read obtf.ru/en website, since it helps me as well to stay motivated to achieve its purpose.</summary><content type="html">&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;This content is written to be lateral post to &lt;a href=&quot;https://www.reddit.com/r/OneBigTextFile/s/5Jy5SUG48h&quot;&gt;r/onebigtextfile&lt;/a&gt; and spark the idea to many.&lt;/li&gt;
+&lt;/ul&gt;
 
-<p>
-OBTF in some sense is a lazy man's system to get things done. But if you feel more lazier to even think of it, I'd highly recommend to read <a href="https://obtf.ru/en">obtf.ru/en</a> website, since it helps me as well to stay motivated to achieve its purpose.
-</p>
-<div id="outline-container-obtf-s-philosophy-pitch" class="outline-2">
-<h2 id="obtf-s-philosophy-pitch">OBTF's philosophy pitch<a class="heading-anchor" href="#obtf-s-philosophy-pitch" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org353f360">
-<p>
+&lt;p&gt;
+I wrote about &lt;a href=&quot;/log/obtf-org-mode/&quot;&gt;OBTF as Second Brain with Org mode&lt;/a&gt; a while back, but that post was mostly &quot;here is my datetree workflow.&quot; This one is a direct response to &lt;a href=&quot;https://obtf.ru/en&quot;&gt;obtf.ru&lt;/a&gt;, a site that makes the case for &lt;b&gt;One Big Text File&lt;/b&gt; a lot sharper than I did, and argues it against FOMO fatigue I've felt myself.
+&lt;/p&gt;
+
+&lt;p&gt;
+OBTF in some sense is a lazy man's system to get things done. But if you feel more lazier to even think of it, I'd highly recommend to read &lt;a href=&quot;https://obtf.ru/en&quot;&gt;obtf.ru/en&lt;/a&gt; website, since it helps me as well to stay motivated to achieve its purpose.
+&lt;/p&gt;
+&lt;div id=&quot;outline-container-obtf-s-philosophy-pitch&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;obtf-s-philosophy-pitch&quot;&gt;OBTF's philosophy pitch&lt;a class=&quot;heading-anchor&quot; href=&quot;#obtf-s-philosophy-pitch&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-obtf-s-philosophy-pitch&quot;&gt;
+&lt;p&gt;
 Their whole argument boils down to a handful of lines:
-</p>
+&lt;/p&gt;
 
-<blockquote>
-<p>
+&lt;blockquote&gt;
+&lt;p&gt;
 Your entire life, notes, tasks, ideas, logs, in one text file.
-Just <code>.txt</code>.
-</p>
-</blockquote>
+Just &lt;code&gt;.txt&lt;/code&gt;.
+&lt;/p&gt;
+&lt;/blockquote&gt;
 
-<blockquote>
-<p>
+&lt;blockquote&gt;
+&lt;p&gt;
 The best productivity system is the one you actually use. And nothing is simpler than a text file.
-</p>
-</blockquote>
+&lt;/p&gt;
+&lt;/blockquote&gt;
 
-<blockquote>
-<p>
+&lt;blockquote&gt;
+&lt;p&gt;
 Search beats categories
-</p>
-</blockquote>
+&lt;/p&gt;
+&lt;/blockquote&gt;
 
-<p>
-No vendor lock-in, speed, offline by default, permanence. All fair, and none of it is specific to a bare <code>.txt</code> file. It's specific to <b>plain text</b>. You make use of many tools to suite your needs instead of you learning and adapting to a system.
-</p>
+&lt;p&gt;
+No vendor lock-in, speed, offline by default, permanence. All fair, and none of it is specific to a bare &lt;code&gt;.txt&lt;/code&gt; file. It's specific to &lt;b&gt;plain text&lt;/b&gt;. You make use of many tools to suite your needs instead of you learning and adapting to a system.
+&lt;/p&gt;
 
-<p>
+&lt;p&gt;
 Some posts on OBTF found over internet:
-</p>
+&lt;/p&gt;
 
-<ul class="org-ul">
-<li><a href="https://talk.macpowerusers.com/t/using-one-big-text-file-obtf-for-daily-blogging-and-journal/37546">Forum post on MacPowerUsers</a></li>
-<li><a href="https://mrshll.uk/posts/plain-text-planner/">mrshll.uk/posts/plain-text-planner</a></li>
-<li><a href="https://jeffhuang.com/productivity_text_file/">jeffhuang.com/productivity_text_file</a></li>
-<li><a href="https://mrdizzy.blog/blog/obtf/">mrdizzy.blog/blog/obtf</a></li>
-<li><a href="https://beardystarstuff.net/posts/2024-04-17.html">beardystarstuff.net/posts/2024-04-17.html</a></li>
-<li><a href="https://whhone.com/posts/one-line-per-day-diary-in-org-mode/">whhone.com/posts/one-line-per-day-diary-in-org-mode</a></li>
-</ul>
-</div>
-</div>
-<div id="outline-container-where-org-gives-you-more" class="outline-2">
-<h2 id="where-org-gives-you-more">Where Org gives you more<a class="heading-anchor" href="#where-org-gives-you-more" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org20db199">
-<p>
-"Search beats categories" is true until the file gets big enough that search alone stops being enough, and at that point you want <b>structure you can turn on when you need it</b>, not structure forced on you from day one.
-</p>
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;https://talk.macpowerusers.com/t/using-one-big-text-file-obtf-for-daily-blogging-and-journal/37546&quot;&gt;Forum post on MacPowerUsers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mrshll.uk/posts/plain-text-planner/&quot;&gt;mrshll.uk/posts/plain-text-planner&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://jeffhuang.com/productivity_text_file/&quot;&gt;jeffhuang.com/productivity_text_file&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mrdizzy.blog/blog/obtf/&quot;&gt;mrdizzy.blog/blog/obtf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://beardystarstuff.net/posts/2024-04-17.html&quot;&gt;beardystarstuff.net/posts/2024-04-17.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://whhone.com/posts/one-line-per-day-diary-in-org-mode/&quot;&gt;whhone.com/posts/one-line-per-day-diary-in-org-mode&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-where-org-gives-you-more&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;where-org-gives-you-more&quot;&gt;Where Org gives you more&lt;a class=&quot;heading-anchor&quot; href=&quot;#where-org-gives-you-more&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-where-org-gives-you-more&quot;&gt;
+&lt;p&gt;
+&quot;Search beats categories&quot; is true until the file gets big enough that search alone stops being enough, and at that point you want &lt;b&gt;structure you can turn on when you need it&lt;/b&gt;, not structure forced on you from day one.
+&lt;/p&gt;
 
-<p>
-I still keep a <code>datetree</code>, Year &gt; Month &gt; Day &gt; entry, which gives me OBTF's own "newest entries first, just append and go" model:
-</p>
+&lt;p&gt;
+I still keep a &lt;code&gt;datetree&lt;/code&gt;, Year &amp;gt; Month &amp;gt; Day &amp;gt; entry, which gives me OBTF's own &quot;newest entries first, just append and go&quot; model:
+&lt;/p&gt;
 
-<div class="org-src-container">
-<pre tabindex="0" class="src src-org"><code><span class="org-org-level-1">* 2026</span>
-<span class="org-org-level-2">** 2026-10 October</span>
-<span class="org-org-level-3">*** 2026-10-07 Tuesday</span>
-<span class="org-org-level-4">**** &lt;whatever I'm capturing&gt;            </span><span class="org-org-level-4"><span class="org-org-tag">:tag1:tag2:</span></span>
-</code></pre>
-</div>
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre tabindex=&quot;0&quot; class=&quot;src src-org&quot;&gt;&lt;code&gt;&lt;span class=&quot;org-org-level-1&quot;&gt;* 2026&lt;/span&gt;
+&lt;span class=&quot;org-org-level-2&quot;&gt;** 2026-10 October&lt;/span&gt;
+&lt;span class=&quot;org-org-level-3&quot;&gt;*** 2026-10-07 Tuesday&lt;/span&gt;
+&lt;span class=&quot;org-org-level-4&quot;&gt;**** &amp;lt;whatever I'm capturing&amp;gt;            &lt;/span&gt;&lt;span class=&quot;org-org-level-4&quot;&gt;&lt;span class=&quot;org-org-tag&quot;&gt;:tag1:tag2:&lt;/span&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-<p>
-The difference from a flat file is that I'm not stuck with chronology as the <b>only</b> axis. A few things I still reach for on top of the datetree:
-</p>
+&lt;p&gt;
+The difference from a flat file is that I'm not stuck with chronology as the &lt;b&gt;only&lt;/b&gt; axis. A few things I still reach for on top of the datetree:
+&lt;/p&gt;
 
-<ul class="org-ul">
-<li><code>org-sparse-tree</code> (<code>C-c /</code>): narrow the whole tree down to just the headings matching a tag or
-property, without touching the file itself.</li>
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&lt;code&gt;org-sparse-tree&lt;/code&gt; (&lt;code&gt;C-c /&lt;/code&gt;): narrow the whole tree down to just the headings matching a tag or
+property, without touching the file itself.&lt;/li&gt;
 
-<li><code>consult-org-heading</code> / <code>consult-line</code> (from the <code>consult</code> package): fuzzy-jump straight to a
-heading or line, which is the actual "search beats categories" experience, just inside a
-structured file instead of a flat one.</li>
+&lt;li&gt;&lt;code&gt;consult-org-heading&lt;/code&gt; / &lt;code&gt;consult-line&lt;/code&gt; (from the &lt;code&gt;consult&lt;/code&gt; package): fuzzy-jump straight to a
+heading or line, which is the actual &quot;search beats categories&quot; experience, just inside a
+structured file instead of a flat one.&lt;/li&gt;
 
-<li><code>org-ql</code>: for queries that are more than a single tag match, closer to a real query language over
-my notes than regexp-over-a-text-file ever was.</li>
+&lt;li&gt;&lt;code&gt;org-ql&lt;/code&gt;: for queries that are more than a single tag match, closer to a real query language over
+my notes than regexp-over-a-text-file ever was.&lt;/li&gt;
 
-<li><code>#+select_tags</code>: export just the headings carrying a given tag into a throwaway buffer, which
-behaves like a temporary, generated "file" scoped to one topic, without ever having to actually
-split the real file.</li>
+&lt;li&gt;&lt;code&gt;#+select_tags&lt;/code&gt;: export just the headings carrying a given tag into a throwaway buffer, which
+behaves like a temporary, generated &quot;file&quot; scoped to one topic, without ever having to actually
+split the real file.&lt;/li&gt;
 
-<li><a href="https://github.com/toshism/org-super-links">org-super-links</a>: Package to backlink org headings to one another.</li>
+&lt;li&gt;&lt;a href=&quot;https://github.com/toshism/org-super-links&quot;&gt;org-super-links&lt;/a&gt;: Package to backlink org headings to one another.&lt;/li&gt;
 
-<li><code>org-agenda</code>: Best way to get organized and plan for time. Paired with note taking, the agenda interface is so powerful that even I've underused it mostly to just get stuff done.</li>
+&lt;li&gt;&lt;code&gt;org-agenda&lt;/code&gt;: Best way to get organized and plan for time. Paired with note taking, the agenda interface is so powerful that even I've underused it mostly to just get stuff done.&lt;/li&gt;
 
-<li>Tags: More detail on the tagging convention I use (the <code>l@=/=n@=/=p@</code> prefixes) is in <a href="/log/obtf-org-mode/">OBTF as Second Brain with Org mode</a>.</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-conclude" class="outline-2">
-<h2 id="conclude">Conclude<a class="heading-anchor" href="#conclude" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-orgd215fe9">
-<p>
+&lt;li&gt;Tags: More detail on the tagging convention I use (the &lt;code&gt;l@=/=n@=/=p@&lt;/code&gt; prefixes) is in &lt;a href=&quot;/log/obtf-org-mode/&quot;&gt;OBTF as Second Brain with Org mode&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-conclude&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;conclude&quot;&gt;Conclude&lt;a class=&quot;heading-anchor&quot; href=&quot;#conclude&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-conclude&quot;&gt;
+&lt;p&gt;
 These might sound very much tied to emacs, yes thats mostly true. Environment so perfect that it can be called a monolith of emacs. But alas, people have ported org mode inspired modes and packages to various other ecosystem.
-</p>
+&lt;/p&gt;
 
-<ul class="org-ul">
-<li><a href="https://github.com/nvim-orgmode/orgmode">orgmode.nvim</a>: OG clone for neovim</li>
-<li><a href="https://github.com/xheisenbugx/org.nvim">org.nvim</a>: New and AI assisted clone of complete org library</li>
-<li><a href="https://github.com/nvim-neorg/neorg">neorg</a>: Future of organizing life in neovim</li>
-<li><a href="https://github.com/rrajath/grove">grove</a>: Beautiful org mode first task/notes android app</li>
-<li><a href="https://github.com/orgzly-revived/orgzly-android-revived">orgzly-revived</a>: Org in mobile at ease</li>
-<li><a href="https://github.com/amake/orgro">orgro</a>: Good org mode reader for android+IOS</li>
-</ul>
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/nvim-orgmode/orgmode&quot;&gt;orgmode.nvim&lt;/a&gt;: OG clone for neovim&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/xheisenbugx/org.nvim&quot;&gt;org.nvim&lt;/a&gt;: New and AI assisted clone of complete org library&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/nvim-neorg/neorg&quot;&gt;neorg&lt;/a&gt;: Future of organizing life in neovim&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/rrajath/grove&quot;&gt;grove&lt;/a&gt;: Beautiful org mode first task/notes android app&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/orgzly-revived/orgzly-android-revived&quot;&gt;orgzly-revived&lt;/a&gt;: Org in mobile at ease&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/amake/orgro&quot;&gt;orgro&lt;/a&gt;: Good org mode reader for android+IOS&lt;/li&gt;
+&lt;/ul&gt;
 
-<p>
-PS: I use official <a href="https://www.emacswiki.org/emacs/EmacsOnAndroid">Emacs on Android</a> as well bringing the same environment on the phone (<code>_</code>;)
-</p>
+&lt;p&gt;
+PS: I use official &lt;a href=&quot;https://www.emacswiki.org/emacs/EmacsOnAndroid&quot;&gt;Emacs on Android&lt;/a&gt; as well bringing the same environment on the phone (&lt;code&gt;_&lt;/code&gt;;)
+&lt;/p&gt;
 
-<p>
+&lt;p&gt;
 Ultimately only thing that is required with note taking or system is to always review, revise, repeat and process them.
-</p>
-</div>
-</div>
-]]></content></entry><entry><title>OBTF as Second Brain with Org mode</title><link rel="alternate" type="text/html" href="https://idlip.in/log/obtf-org-mode/" /><id>https://idlip.in/log/obtf-org-mode/</id><published>2025-09-06T00:00:00Z</published><updated>2026-10-07T00:00:00Z</updated><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><category term="obtf" label="obtf" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
-<b>One Big Text File</b> is simply writing down mostly everything in single file to organize or manage data. This single file acts as the source of knowledge and holds all notes.
-</p>
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content></entry><entry><title>OBTF as Second Brain with Org mode</title><link rel="alternate" type="text/html" href="https://idlip.in/log/obtf-org-mode/" /><id>https://idlip.in/log/obtf-org-mode/</id><published>2025-09-06T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><category term="obtf" label="obtf" scheme="https://idlip.in/tags/"></category><summary>One Big Text File is simply writing down mostly everything in single file to organize or manage data. This single file acts as the source of knowledge and holds all notes.
 
-<p>
+Second brain has been a buzz word, thanks to the sourcing of Zettelkasten method, every productivity freak is on the stance to organize their life and get things done.</summary><content type="html">&lt;p&gt;
+&lt;b&gt;One Big Text File&lt;/b&gt; is simply writing down mostly everything in single file to organize or manage data. This single file acts as the source of knowledge and holds all notes.
+&lt;/p&gt;
+
+&lt;p&gt;
 Second brain has been a buzz word, thanks to the sourcing of Zettelkasten method, every productivity freak is on the stance to organize their life and get things done.
-</p>
+&lt;/p&gt;
 
-<p>
-But I soon came to the conclusion by reading many blogs and reddit discussions that, searching is far superior than organizing. On internet all we do is search for information, and not organize or build system just to get info. This is how note taking should work as well. Just for <b>efficient retrieval and storage</b>. 
-</p>
+&lt;p&gt;
+But I soon came to the conclusion by reading many blogs and reddit discussions that, searching is far superior than organizing. On internet all we do is search for information, and not organize or build system just to get info. This is how note taking should work as well. Just for &lt;b&gt;efficient retrieval and storage&lt;/b&gt;. 
+&lt;/p&gt;
 
-<p>
+&lt;p&gt;
 Thanks to my introduction to emacs and getting deep into rabbit hole, Org mode has been the great tool to handle plain text file as an Organization platform. Just like emacs (OS), Org mode can also be extended to endless limit (I dare say it). If emacs is OS, Org mode is for me Init system (systemd).
-</p>
+&lt;/p&gt;
 
-<p>
-You can read more about my note taking journey in <a href="/log/wrapup-masters/">Wrap up on my Bioinformatics Masters Journey</a>.
-</p>
+&lt;p&gt;
+You can read more about my note taking journey in &lt;a href=&quot;/log/wrapup-masters/&quot;&gt;Wrap up on my Bioinformatics Masters Journey&lt;/a&gt;.
+&lt;/p&gt;
 
-<p>
+&lt;p&gt;
 This context is also written in favor to post it on r/obtf
-</p>
-<div id="outline-container-org-mode-is-the-best-tool-for-managing-obtf" class="outline-2">
-<h2 id="org-mode-is-the-best-tool-for-managing-obtf">Org mode is the best tool for managing OBTF<a class="heading-anchor" href="#org-mode-is-the-best-tool-for-managing-obtf" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-org92d3a6d">
-<p>
-Many popular workflow would go by simple format as bullet points with Time date and info, and regexp based searching via CLI (rg, vim, grep, sed&hellip;. bash scripts)
-</p>
+&lt;/p&gt;
+&lt;div id=&quot;outline-container-org-mode-is-the-best-tool-for-managing-obtf&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org-mode-is-the-best-tool-for-managing-obtf&quot;&gt;Org mode is the best tool for managing OBTF&lt;a class=&quot;heading-anchor&quot; href=&quot;#org-mode-is-the-best-tool-for-managing-obtf&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org-mode-is-the-best-tool-for-managing-obtf&quot;&gt;
+&lt;p&gt;
+Many popular workflow would go by simple format as bullet points with Time date and info, and regexp based searching via CLI (rg, vim, grep, sed&amp;hellip;. bash scripts)
+&lt;/p&gt;
 
-<p>
-Org mode has many bells and whistles (features) that aid in this method. Tags, integration with commands and rich source of documentation (one of the best things of Emacs or org mode). Thanks to emacs and <a href="https://protesilaos.com/">protesilaos stavrou</a> I learnt how important are documentation and writing sensible notes. It means alot for future self to recognize and re-instantiate the thoughts and state.
-</p>
+&lt;p&gt;
+Org mode has many bells and whistles (features) that aid in this method. Tags, integration with commands and rich source of documentation (one of the best things of Emacs or org mode). Thanks to emacs and &lt;a href=&quot;https://protesilaos.com/&quot;&gt;protesilaos stavrou&lt;/a&gt; I learnt how important are documentation and writing sensible notes. It means alot for future self to recognize and re-instantiate the thoughts and state.
+&lt;/p&gt;
 
-<p>
-Org mode has an <code>datetree</code> method which has file heading hierarchy in the Year &gt; Month &gt; Day and 4th nested heading follows any notes.
-</p>
+&lt;p&gt;
+Org mode has an &lt;code&gt;datetree&lt;/code&gt; method which has file heading hierarchy in the Year &amp;gt; Month &amp;gt; Day and 4th nested heading follows any notes.
+&lt;/p&gt;
 
-<div class="org-src-container">
-<pre tabindex="0" class="src src-org"><code><span class="org-org-level-1">* 2022</span>
-<span class="org-org-level-2">** 2022-10 October</span>
-<span class="org-org-level-3">*** 2022-10-07 Friday</span>
-<span class="org-org-level-3">*** 2022-10-08 Saturday</span>
-<span class="org-org-level-4">**** &lt;Any notes I'm capturing&gt;            </span><span class="org-org-level-4"><span class="org-org-tag">:tag1:tag2:</span></span>
-</code></pre>
-</div>
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre tabindex=&quot;0&quot; class=&quot;src src-org&quot;&gt;&lt;code&gt;&lt;span class=&quot;org-org-level-1&quot;&gt;* 2022&lt;/span&gt;
+&lt;span class=&quot;org-org-level-2&quot;&gt;** 2022-10 October&lt;/span&gt;
+&lt;span class=&quot;org-org-level-3&quot;&gt;*** 2022-10-07 Friday&lt;/span&gt;
+&lt;span class=&quot;org-org-level-3&quot;&gt;*** 2022-10-08 Saturday&lt;/span&gt;
+&lt;span class=&quot;org-org-level-4&quot;&gt;**** &amp;lt;Any notes I'm capturing&amp;gt;            &lt;/span&gt;&lt;span class=&quot;org-org-level-4&quot;&gt;&lt;span class=&quot;org-org-tag&quot;&gt;:tag1:tag2:&lt;/span&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-<p>
+&lt;p&gt;
 This gives out the leverage of journaling, but also a lazy man's organization. I use tagging extensively to most of the (4th) heading based on context so as to narrow down to filter.
-</p>
+&lt;/p&gt;
 
-<div class="org-src-container">
-<pre tabindex="0" class="src src-org"><code><span class="org-comment"># learning notes --- l@</span>
-<span class="org-org-meta-line">#+tags: l@coding l@emacs l@bioinfo l@nix l@bash l@julia l@rstats l@python l@devnote l@latex l@til</span>
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre tabindex=&quot;0&quot; class=&quot;src src-org&quot;&gt;&lt;code&gt;&lt;span class=&quot;org-comment&quot;&gt;# learning notes --- l@&lt;/span&gt;
+&lt;span class=&quot;org-org-meta-line&quot;&gt;#+tags: l@coding l@emacs l@bioinfo l@nix l@bash l@julia l@rstats l@python l@devnote l@latex l@til&lt;/span&gt;
 
-<span class="org-comment"># generic notes to remember or readme --- n@</span>
-<span class="org-org-meta-line">#+tags: n@linux n@shell n@cli n@book n@idea</span>
+&lt;span class=&quot;org-comment&quot;&gt;# generic notes to remember or readme --- n@&lt;/span&gt;
+&lt;span class=&quot;org-org-meta-line&quot;&gt;#+tags: n@linux n@shell n@cli n@book n@idea&lt;/span&gt;
 
-<span class="org-comment"># projects --- p@</span>
-<span class="org-org-meta-line">#+tags: p@webcli p@cyanate p@scitomep</span>
-</code></pre>
-</div>
+&lt;span class=&quot;org-comment&quot;&gt;# projects --- p@&lt;/span&gt;
+&lt;span class=&quot;org-org-meta-line&quot;&gt;#+tags: p@webcli p@cyanate p@scitomep&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-<ul class="org-ul">
-<li>These tag help to categorize the heading in some (lazy) way</li>
-</ul>
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;These tag help to categorize the heading in some (lazy) way&lt;/li&gt;
+&lt;/ul&gt;
 
-<p>
-Org mode has <code>org-sparse-tree</code> bound to <code>C-c /</code> which helps to narrow down based on tag or property. Also another emacs package <code>consult</code> helps to take it up further via <code>consult-line</code> and <code>consult-org-heading</code> along with <code>org-ql</code> package. Org mode also has <code>#+select_tags</code> to export headings to file.
-</p>
+&lt;p&gt;
+Org mode has &lt;code&gt;org-sparse-tree&lt;/code&gt; bound to &lt;code&gt;C-c /&lt;/code&gt; which helps to narrow down based on tag or property. Also another emacs package &lt;code&gt;consult&lt;/code&gt; helps to take it up further via &lt;code&gt;consult-line&lt;/code&gt; and &lt;code&gt;consult-org-heading&lt;/code&gt; along with &lt;code&gt;org-ql&lt;/code&gt; package. Org mode also has &lt;code&gt;#+select_tags&lt;/code&gt; to export headings to file.
+&lt;/p&gt;
 
-<div class="org-src-container">
-<pre tabindex="0" class="src src-org"><code><span class="org-org-meta-line">#+select_tags: r@book</span>
-</code></pre>
-</div>
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre tabindex=&quot;0&quot; class=&quot;src src-org&quot;&gt;&lt;code&gt;&lt;span class=&quot;org-org-meta-line&quot;&gt;#+select_tags: r@book&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-<p>
-With that we can <code>C-c C-e</code> (org-export-dispatch) and press "O O" (make sure org is in org-export-backends) to get temporary Org buffer only with those heading.
+&lt;p&gt;
+With that we can &lt;code&gt;C-c C-e&lt;/code&gt; (org-export-dispatch) and press &quot;O O&quot; (make sure org is in org-export-backends) to get temporary Org buffer only with those heading.
 This logically acts as an individual file with that tag/category, thus being atomic in my sense. Org-sparse-tree might also be same.
-</p>
+&lt;/p&gt;
 
-<p>
--&mdash;
-</p>
-</div>
-</div>
-<div id="outline-container-key-takeaways" class="outline-2">
-<h2 id="key-takeaways">Key takeaways<a class="heading-anchor" href="#key-takeaways" aria-label="Link to this section">#</a></h2>
-<div class="outline-text-2" id="text-orgb19a443">
-<p>
+&lt;p&gt;
+-&amp;mdash;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-key-takeaways&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;key-takeaways&quot;&gt;Key takeaways&lt;a class=&quot;heading-anchor&quot; href=&quot;#key-takeaways&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-key-takeaways&quot;&gt;
+&lt;p&gt;
 whatever the system or the tool is, the main takeaways every resource provides is to review the notes and write it for future self. Every capture is to review back and make the fleeting note into and rich information.
 This OBTF with org mode satisfies that needs given that user reviews the notes and visits back to digest it again.
-</p>
-</div>
-</div>
-]]></content></entry></feed>
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content></entry></feed>

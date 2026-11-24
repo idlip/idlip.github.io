@@ -603,6 +603,8 @@
       margin: 0;
       padding-block: 0.6em;
       border-block-end: 1px solid var(--border);
+      /* Lets a long URL wrap; a flex child never shrinks below its longest word otherwise. */
+      overflow-wrap: anywhere;
     }
     & time {
       font-variant-numeric: tabular-nums;
@@ -678,25 +680,33 @@
       opacity: 0;
     }
   }
-  main:has(input[name="list-view"][value="grid"]:checked) .list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(15rem, 100%), 1fr));
-    gap: var(--gap);
-    /* Cards flow as blocks: flex children sized to their content would spill long descriptions and URLs. */
-    & > li {
-      display: block;
-      min-inline-size: 0;
-      overflow-wrap: anywhere;
-      padding: 0.75em 1em;
-      & > time,
-      & > small {
+  /* Grid needs room for two cards; on a narrow screen every list is a list and the toggle hides. */
+  @media (width < 40rem) {
+    .views {
+      display: none;
+    }
+  }
+  @media (width >= 40rem) {
+    main:has(input[name="list-view"][value="grid"]:checked) .list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(15rem, 100%), 1fr));
+      gap: var(--gap);
+      /* Cards flow as blocks: flex children sized to their content would spill long descriptions and URLs. */
+      & > li {
         display: block;
+        min-inline-size: 0;
+        overflow-wrap: anywhere;
+        padding: 0.75em 1em;
+        & > time,
+        & > small {
+          display: block;
+        }
+        & > small {
+          margin-block-start: 0.4em;
+        }
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
       }
-      & > small {
-        margin-block-start: 0.4em;
-      }
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
     }
   }
 
@@ -784,13 +794,27 @@
       color: var(--background);
       font-weight: bold;
     }
-    & [data-day="1"] { --day-color: var(--day-1); }
-    & [data-day="2"] { --day-color: var(--day-2); }
-    & [data-day="3"] { --day-color: var(--day-3); }
-    & [data-day="4"] { --day-color: var(--day-4); }
-    & [data-day="5"] { --day-color: var(--day-5); }
-    & [data-day="6"] { --day-color: var(--day-6); }
-    & [data-day="7"] { --day-color: var(--day-7); }
+    & [data-day="1"] {
+      --day-color: var(--day-1);
+    }
+    & [data-day="2"] {
+      --day-color: var(--day-2);
+    }
+    & [data-day="3"] {
+      --day-color: var(--day-3);
+    }
+    & [data-day="4"] {
+      --day-color: var(--day-4);
+    }
+    & [data-day="5"] {
+      --day-color: var(--day-5);
+    }
+    & [data-day="6"] {
+      --day-color: var(--day-6);
+    }
+    & [data-day="7"] {
+      --day-color: var(--day-7);
+    }
   }
 
   #pose-entries article:has(:target) {

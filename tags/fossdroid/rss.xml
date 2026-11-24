@@ -1,131 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: fossdroid</title><subtitle>Posts tagged fossdroid on Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/rss.xml" /><id>https://idlip.in/</id><updated>2026-09-30T00:00:00Z</updated><author><name>Dilip | Zororg</name><email>hi@idlip.in</email></author><generator uri="https://gohugo.io/">Hugo</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>FOSS : On Droid</title><link rel="alternate" type="text/html" href="https://idlip.in/log/foss-droid/" /><id>https://idlip.in/log/foss-droid/</id><published>2023-04-25T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="fossdroid" label="fossdroid" scheme="https://idlip.in/tags/"></category><category term="android" label="android" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
-As we know, Android is widely popular OS for many phone. But these days its all filled with junks and bloated apps, these are to say so called <b>"Popular Android Apps"</b> or <b>"Trending Apps"</b>. The reason simply would be "everyone in my circle uses it" or "I use it because <span class="underline">they</span> use it".
-</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: fossdroid</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/tags/fossdroid/rss.xml" /><id>https://idlip.in/tags/fossdroid/rss.xml</id><updated>2026-11-24T00:00:00Z</updated><author><name>Dilip | Zororg</name></author><generator>Denden</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>FOSS : On Droid</title><link rel="alternate" type="text/html" href="https://idlip.in/log/foss-droid/" /><id>https://idlip.in/log/foss-droid/</id><published>2023-04-25T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="fossdroid" label="fossdroid" scheme="https://idlip.in/tags/"></category><category term="android" label="android" scheme="https://idlip.in/tags/"></category><summary>As we know, Android is widely popular OS for many phone. But these days its all filled with junks and bloated apps, these are to say so called &quot;Popular Android Apps&quot; or &quot;Trending Apps&quot;. The reason simply would be &quot;everyone in my circle uses it&quot; or &quot;I use it because they use it&quot;.
 
-<p>
-But surely you are not giving yourself some privacy or <b>space</b> that you need for your own <b>personal phone</b>.
-I'm talking about using Free/Libre and Open Source (FOSS) Apps. Free doesn't mean by price, Free means <b>Freedom</b>. Freedom that comes with :
-</p>
-<ul class="org-ul">
-<li>No Trackers.</li>
-<li>No Ads.</li>
-<li>Minimal permission.</li>
-<li>Has customization to users need.</li>
-<li>No Restrictions.</li>
-</ul>
+But surely you are not giving yourself some privacy or space that you need for your own personal phone. I'm talking about using Free/Libre and Open Source (FOSS) Apps. Free doesn't mean by price, Free means Freedom. Freedom that comes with :</summary><content type="html">&lt;p&gt;
+As we know, Android is widely popular OS for many phone. But these days its all filled with junks and bloated apps, these are to say so called &lt;b&gt;&quot;Popular Android Apps&quot;&lt;/b&gt; or &lt;b&gt;&quot;Trending Apps&quot;&lt;/b&gt;. The reason simply would be &quot;everyone in my circle uses it&quot; or &quot;I use it because &lt;span class=&quot;underline&quot;&gt;they&lt;/span&gt; use it&quot;.
+&lt;/p&gt;
 
-<p>
-These can be achieved in this modern time, by Discovering and using FOSS Apps, the best place being <a href="https://f-droid.org">F-droid</a>  or <a href="https://libreddit.kavin.rocks/r/fossdroid">r/fossdroid</a>.
-</p>
+&lt;p&gt;
+But surely you are not giving yourself some privacy or &lt;b&gt;space&lt;/b&gt; that you need for your own &lt;b&gt;personal phone&lt;/b&gt;.
+I'm talking about using Free/Libre and Open Source (FOSS) Apps. Free doesn't mean by price, Free means &lt;b&gt;Freedom&lt;/b&gt;. Freedom that comes with :
+&lt;/p&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;No Trackers.&lt;/li&gt;
+&lt;li&gt;No Ads.&lt;/li&gt;
+&lt;li&gt;Minimal permission.&lt;/li&gt;
+&lt;li&gt;Has customization to users need.&lt;/li&gt;
+&lt;li&gt;No Restrictions.&lt;/li&gt;
+&lt;/ul&gt;
 
-<p>
-There are pretty much all apps under FOSS area for every purpose, they are good looking with <b>Modern UI</b>, <b>Lots of Customizations</b> and <b>friendly with Battery</b>.
-</p>
+&lt;p&gt;
+These can be achieved in this modern time, by Discovering and using FOSS Apps, the best place being &lt;a href=&quot;https://f-droid.org&quot;&gt;F-droid&lt;/a&gt;  or &lt;a href=&quot;https://libreddit.kavin.rocks/r/fossdroid&quot;&gt;r/fossdroid&lt;/a&gt;.
+&lt;/p&gt;
 
-<p>
+&lt;p&gt;
+There are pretty much all apps under FOSS area for every purpose, they are good looking with &lt;b&gt;Modern UI&lt;/b&gt;, &lt;b&gt;Lots of Customizations&lt;/b&gt; and &lt;b&gt;friendly with Battery&lt;/b&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
 I happened to search for book and novel reader and found very good apps there, like QuickNovel.
 There is a Manga reader and lots more for every purpose.
-</p>
+&lt;/p&gt;
 
-<p>
+&lt;p&gt;
 I exclusively use every apps from F-droid, because they are great.
-You should also use it, as you might find something interesting and surely, gets Surprised; and say in your head, <b><i>Gosh I should have known this before</i></b>.
-</p>
+You should also use it, as you might find something interesting and surely, gets Surprised; and say in your head, &lt;b&gt;&lt;i&gt;Gosh I should have known this before&lt;/i&gt;&lt;/b&gt;.
+&lt;/p&gt;
 
-<hr />
+&lt;hr&gt;
 
-<p>
+&lt;p&gt;
 Some of the cool apps I use everyday :
-</p>
+&lt;/p&gt;
 
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+&lt;table&gt;
 
 
-<colgroup>
-<col  class="org-left" />
+&lt;colgroup&gt;
+&lt;col  class=&quot;org-left&quot;&gt;
 
-<col  class="org-left" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-left">Class</th>
-<th scope="col" class="org-left">Apps</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="org-left">Launcher</td>
-<td class="org-left">Kvæsitso (<a href="https://apt.izzysoft.de/fdroid/index/apk/de.mm20.launcher2.release">izzydroid</a>, <a href="https://github.com/MM2-0/Kvaesitso">git</a>)</td>
-</tr>
+&lt;col  class=&quot;org-left&quot;&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th scope=&quot;col&quot; class=&quot;org-left&quot;&gt;Class&lt;/th&gt;
+&lt;th scope=&quot;col&quot; class=&quot;org-left&quot;&gt;Apps&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td class=&quot;org-left&quot;&gt;Launcher&lt;/td&gt;
+&lt;td class=&quot;org-left&quot;&gt;Kvæsitso (&lt;a href=&quot;https://apt.izzysoft.de/fdroid/index/apk/de.mm20.launcher2.release&quot;&gt;izzydroid&lt;/a&gt;, &lt;a href=&quot;https://github.com/MM2-0/Kvaesitso&quot;&gt;git&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
 
-<tr>
-<td class="org-left">F-droid Client</td>
-<td class="org-left">Neo Store (<a href="https://f-droid.org/en/packages/com.machiav3lli.fdroid/">fdroid</a>, <a href="https://github.com/NeoApplications/Neo-Store">git</a>)</td>
-</tr>
+&lt;tr&gt;
+&lt;td class=&quot;org-left&quot;&gt;F-droid Client&lt;/td&gt;
+&lt;td class=&quot;org-left&quot;&gt;Neo Store (&lt;a href=&quot;https://f-droid.org/en/packages/com.machiav3lli.fdroid/&quot;&gt;fdroid&lt;/a&gt;, &lt;a href=&quot;https://github.com/NeoApplications/Neo-Store&quot;&gt;git&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
 
-<tr>
-<td class="org-left">Browser</td>
-<td class="org-left">Mull (<a href="https://f-droid.org/en/packages/us.spotco.fennec_dos/">fdroid</a>, <a href="https://gitlab.com/divested-mobile/mull-fenix">git</a>)</td>
-</tr>
+&lt;tr&gt;
+&lt;td class=&quot;org-left&quot;&gt;Browser&lt;/td&gt;
+&lt;td class=&quot;org-left&quot;&gt;Mull (&lt;a href=&quot;https://f-droid.org/en/packages/us.spotco.fennec_dos/&quot;&gt;fdroid&lt;/a&gt;, &lt;a href=&quot;https://gitlab.com/divested-mobile/mull-fenix&quot;&gt;git&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
 
-<tr>
-<td class="org-left">Rss Reader</td>
-<td class="org-left">Read You (<a href="https://f-droid.org/en/packages/me.ash.reader/">fdroid</a>, <a href="https://github.com/Ashinch/ReadYou">git</a>)</td>
-</tr>
+&lt;tr&gt;
+&lt;td class=&quot;org-left&quot;&gt;Rss Reader&lt;/td&gt;
+&lt;td class=&quot;org-left&quot;&gt;Read You (&lt;a href=&quot;https://f-droid.org/en/packages/me.ash.reader/&quot;&gt;fdroid&lt;/a&gt;, &lt;a href=&quot;https://github.com/Ashinch/ReadYou&quot;&gt;git&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
 
-<tr>
-<td class="org-left">YouTube</td>
-<td class="org-left">LibreTube (<a href="https://f-droid.org/en/packages/com.github.libretube/">fdroid</a>, <a href="https://github.com/libre-tube/LibreTube">git</a>)</td>
-</tr>
+&lt;tr&gt;
+&lt;td class=&quot;org-left&quot;&gt;YouTube&lt;/td&gt;
+&lt;td class=&quot;org-left&quot;&gt;LibreTube (&lt;a href=&quot;https://f-droid.org/en/packages/com.github.libretube/&quot;&gt;fdroid&lt;/a&gt;, &lt;a href=&quot;https://github.com/libre-tube/LibreTube&quot;&gt;git&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
 
-<tr>
-<td class="org-left">PDF/Ebook Reader</td>
-<td class="org-left">Librera Reader (<a href="https://f-droid.org/en/packages/com.foobnix.pro.pdf.reader/">fdroid</a>, <a href="https://github.com/foobnix/LibreraReader">git</a>)</td>
-</tr>
+&lt;tr&gt;
+&lt;td class=&quot;org-left&quot;&gt;PDF/Ebook Reader&lt;/td&gt;
+&lt;td class=&quot;org-left&quot;&gt;Librera Reader (&lt;a href=&quot;https://f-droid.org/en/packages/com.foobnix.pro.pdf.reader/&quot;&gt;fdroid&lt;/a&gt;, &lt;a href=&quot;https://github.com/foobnix/LibreraReader&quot;&gt;git&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
 
-<tr>
-<td class="org-left">Manga Reader</td>
-<td class="org-left">Tachiyomi (<a href="https://f-droid.org/en/packages/eu.kanade.tachiyomi/">fdroid</a>, <a href="https://github.com/tachiyomiorg/tachiyomi">git</a>)</td>
-</tr>
+&lt;tr&gt;
+&lt;td class=&quot;org-left&quot;&gt;Manga Reader&lt;/td&gt;
+&lt;td class=&quot;org-left&quot;&gt;Tachiyomi (&lt;a href=&quot;https://f-droid.org/en/packages/eu.kanade.tachiyomi/&quot;&gt;fdroid&lt;/a&gt;, &lt;a href=&quot;https://github.com/tachiyomiorg/tachiyomi&quot;&gt;git&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
 
-<tr>
-<td class="org-left">Password Manager</td>
-<td class="org-left">KeePassDX (<a href="https://f-droid.org/en/packages/com.kunzisoft.keepass.libre/">fdroid</a>, <a href="https://github.com/Kunzisoft/KeePassDX">git</a>)</td>
-</tr>
+&lt;tr&gt;
+&lt;td class=&quot;org-left&quot;&gt;Password Manager&lt;/td&gt;
+&lt;td class=&quot;org-left&quot;&gt;KeePassDX (&lt;a href=&quot;https://f-droid.org/en/packages/com.kunzisoft.keepass.libre/&quot;&gt;fdroid&lt;/a&gt;, &lt;a href=&quot;https://github.com/Kunzisoft/KeePassDX&quot;&gt;git&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
 
-<tr>
-<td class="org-left">Novel Reader</td>
-<td class="org-left">QuickNovel (<a href="https://apt.izzysoft.de/fdroid/index/apk/com.lagradost.quicknovel">izzydroid</a>, <a href="https://github.com/LagradOst/QuickNovel">git</a>)</td>
-</tr>
+&lt;tr&gt;
+&lt;td class=&quot;org-left&quot;&gt;Novel Reader&lt;/td&gt;
+&lt;td class=&quot;org-left&quot;&gt;QuickNovel (&lt;a href=&quot;https://apt.izzysoft.de/fdroid/index/apk/com.lagradost.quicknovel&quot;&gt;izzydroid&lt;/a&gt;, &lt;a href=&quot;https://github.com/LagradOst/QuickNovel&quot;&gt;git&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
 
-<tr>
-<td class="org-left">Keyboard</td>
-<td class="org-left">Unexpected Keyboard (<a href="https://f-droid.org/en/packages/juloo.keyboard2/">fdroid</a>, <a href="https://github.com/Julow/Unexpected-Keyboard">git</a>)</td>
-</tr>
+&lt;tr&gt;
+&lt;td class=&quot;org-left&quot;&gt;Keyboard&lt;/td&gt;
+&lt;td class=&quot;org-left&quot;&gt;Unexpected Keyboard (&lt;a href=&quot;https://f-droid.org/en/packages/juloo.keyboard2/&quot;&gt;fdroid&lt;/a&gt;, &lt;a href=&quot;https://github.com/Julow/Unexpected-Keyboard&quot;&gt;git&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
 
-<tr>
-<td class="org-left">Media Player</td>
-<td class="org-left">VLC (<a href="https://f-droid.org/en/packages/org.videolan.vlc/">fdroid</a>, <a href="https://code.videolan.org/videolan/vlc-android">git</a>)</td>
-</tr>
+&lt;tr&gt;
+&lt;td class=&quot;org-left&quot;&gt;Media Player&lt;/td&gt;
+&lt;td class=&quot;org-left&quot;&gt;VLC (&lt;a href=&quot;https://f-droid.org/en/packages/org.videolan.vlc/&quot;&gt;fdroid&lt;/a&gt;, &lt;a href=&quot;https://code.videolan.org/videolan/vlc-android&quot;&gt;git&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
 
-<tr>
-<td class="org-left">Gallery + Calendar (many more)</td>
-<td class="org-left">Simple Tools Suite (<a href="https://search.f-droid.org/?lang=en&amp;q=simple+tools">fdroid</a>, <a href="https://github.com/SimpleMobileTools">git</a>, <a href="https://simplemobiletools.com">site</a>)</td>
-</tr>
+&lt;tr&gt;
+&lt;td class=&quot;org-left&quot;&gt;Gallery + Calendar (many more)&lt;/td&gt;
+&lt;td class=&quot;org-left&quot;&gt;Simple Tools Suite (&lt;a href=&quot;https://search.f-droid.org/?lang=en&amp;amp;q=simple+tools&quot;&gt;fdroid&lt;/a&gt;, &lt;a href=&quot;https://github.com/SimpleMobileTools&quot;&gt;git&lt;/a&gt;, &lt;a href=&quot;https://simplemobiletools.com&quot;&gt;site&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
 
-<tr>
-<td class="org-left">Note Taking</td>
-<td class="org-left">Orgzly (<a href="https://f-droid.org/en/packages/com.orgzly/">fdroid</a>, <a href="https://github.com/orgzly/orgzly-android">git</a>)</td>
-</tr>
-</tbody>
-</table>
+&lt;tr&gt;
+&lt;td class=&quot;org-left&quot;&gt;Note Taking&lt;/td&gt;
+&lt;td class=&quot;org-left&quot;&gt;Orgzly (&lt;a href=&quot;https://f-droid.org/en/packages/com.orgzly/&quot;&gt;fdroid&lt;/a&gt;, &lt;a href=&quot;https://github.com/orgzly/orgzly-android&quot;&gt;git&lt;/a&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
-<hr />
+&lt;hr&gt;
 
-<div class="org-center">
-<p>
+&lt;div class=&quot;org-center&quot;&gt;
+&lt;p&gt;
 With that fossed, I hope your phone gets a new life and finally breathes alive!
-</p>
-</div>
-]]></content></entry></feed>
+&lt;/p&gt;
+&lt;/div&gt;
+</content></entry></feed>

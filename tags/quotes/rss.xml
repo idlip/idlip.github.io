@@ -1,324 +1,330 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: quotes</title><subtitle>Posts tagged quotes on Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/rss.xml" /><id>https://idlip.in/</id><updated>2026-09-30T00:00:00Z</updated><author><name>Dilip | Zororg</name><email>hi@idlip.in</email></author><generator uri="https://gohugo.io/">Hugo</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Beyond Ken</title><link rel="alternate" type="text/html" href="https://idlip.in/log/ken-quotes/" /><id>https://idlip.in/log/ken-quotes/</id><published>2023-06-02T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="quotes" label="quotes" scheme="https://idlip.in/tags/"></category><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: quotes</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/tags/quotes/rss.xml" /><id>https://idlip.in/tags/quotes/rss.xml</id><updated>2026-11-24T00:00:00Z</updated><author><name>Dilip | Zororg</name></author><generator>Denden</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Beyond Ken</title><link rel="alternate" type="text/html" href="https://idlip.in/log/ken-quotes/" /><id>https://idlip.in/log/ken-quotes/</id><published>2023-06-02T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="quotes" label="quotes" scheme="https://idlip.in/tags/"></category><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><summary>Welcome to some more snippet of Quotes. Lately I have been busy, kinda dusting off my table. Ooof.. procastination!
+
+Some more laughs, some more values!</summary><content type="html">&lt;p&gt;
 Welcome to some more snippet of Quotes.
-Lately I have been busy, kinda dusting off my table. <i>Ooof.. procastination!</i>
-</p>
+Lately I have been busy, kinda dusting off my table. &lt;i&gt;Ooof.. procastination!&lt;/i&gt;
+&lt;/p&gt;
 
-<p>
+&lt;p&gt;
 Some more laughs, some more values!
-</p>
-<hr />
+&lt;/p&gt;
+&lt;hr&gt;
 
-<ul class="org-ul">
-<li><p>
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&lt;p&gt;
 Napoleon Bonaparte
-</p>
+&lt;/p&gt;
 
-<blockquote>
-<p>
+&lt;blockquote&gt;
+&lt;p&gt;
 If you want a thing done well, do it yourself.
-</p>
-</blockquote></li>
+&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
 
-<li><p>
+&lt;li&gt;&lt;p&gt;
 Henny Youngman
-</p>
+&lt;/p&gt;
 
-<blockquote>
-<p>
+&lt;blockquote&gt;
+&lt;p&gt;
 I once wanted to become an atheist, but I gave up - they have no holidays.
-</p>
-</blockquote></li>
+&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
 
-<li><p>
+&lt;li&gt;&lt;p&gt;
 Lillian Hellman
-</p>
+&lt;/p&gt;
 
-<blockquote>
-<p>
+&lt;blockquote&gt;
+&lt;p&gt;
 Things start out as hopes and end up as habits.
-</p>
-</blockquote></li>
+&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
 
-<li><p>
+&lt;li&gt;&lt;p&gt;
 Dorothy Parker
-</p>
+&lt;/p&gt;
 
-<blockquote>
-<p>
+&lt;blockquote&gt;
+&lt;p&gt;
 The cure for boredom is curiosity. There is no cure for curiosity.
-</p>
-</blockquote></li>
+&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
 
-<li><p>
+&lt;li&gt;&lt;p&gt;
 Randy K. Milholland
-</p>
+&lt;/p&gt;
 
-<blockquote>
-<p>
+&lt;blockquote&gt;
+&lt;p&gt;
 Lies are like children. If you don't nurture them, they'll never be useful later.
-</p>
-</blockquote></li>
+&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
 
-<li><p>
+&lt;li&gt;&lt;p&gt;
 Ralph W. Sockman
-</p>
+&lt;/p&gt;
 
-<blockquote>
-<p>
+&lt;blockquote&gt;
+&lt;p&gt;
 The test of courage comes when we are in the minority. The test of tolerance comes when we are in the majority.
-</p>
-</blockquote></li>
+&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
 
-<li><p>
+&lt;li&gt;&lt;p&gt;
 Ethel Waters
-</p>
+&lt;/p&gt;
 
-<blockquote>
-<p>
+&lt;blockquote&gt;
+&lt;p&gt;
 We are all gifted. That is our inheritance.
-</p>
-</blockquote></li>
+&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
 
-<li><p>
+&lt;li&gt;&lt;p&gt;
 Tom Brokaw
-</p>
+&lt;/p&gt;
 
-<blockquote>
-<p>
-It's easy to make a buck. It's a lot tougher to make a difference."
-</p>
-</blockquote></li>
+&lt;blockquote&gt;
+&lt;p&gt;
+It's easy to make a buck. It's a lot tougher to make a difference.&quot;
+&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
 
-<li><p>
+&lt;li&gt;&lt;p&gt;
 Sonya Parker
-</p>
+&lt;/p&gt;
 
-<blockquote>
-<p>
+&lt;blockquote&gt;
+&lt;p&gt;
 Live your life for you not for anyone else. Don’t let the fear of being judged, rejected or
  disliked stop you from being yourself.
-</p>
-</blockquote></li>
+&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
 
-<li><p>
+&lt;li&gt;&lt;p&gt;
 Wayne Dyer
-</p>
+&lt;/p&gt;
 
-<blockquote>
-<p>
+&lt;blockquote&gt;
+&lt;p&gt;
 If you believe it will work out, you’ll see opportunities. If you believe it won’t, you will see obstacles.
-</p>
-</blockquote></li>
+&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
 
-<li><p>
+&lt;li&gt;&lt;p&gt;
 Anime
-</p>
+&lt;/p&gt;
 
-<blockquote>
-<p>
+&lt;blockquote&gt;
+&lt;p&gt;
 The strongest hearts have the most scars.
-</p>
-</blockquote></li>
-</ul>
+&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-<hr />
+&lt;hr&gt;
 
-<div class="org-center">
-<p>
+&lt;div class=&quot;org-center&quot;&gt;
+&lt;p&gt;
 Hopefully with those melifluous thoughts, I hope you are alright ;)
-</p>
-</div>
-]]></content></entry><entry><title>Cognizance</title><link rel="alternate" type="text/html" href="https://idlip.in/log/cognizance-quotes/" /><id>https://idlip.in/log/cognizance-quotes/</id><published>2023-04-22T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><category term="quotes" label="quotes" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+&lt;/p&gt;
+&lt;/div&gt;
+</content></entry><entry><title>Cognizance</title><link rel="alternate" type="text/html" href="https://idlip.in/log/cognizance-quotes/" /><id>https://idlip.in/log/cognizance-quotes/</id><published>2023-04-22T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><category term="quotes" label="quotes" scheme="https://idlip.in/tags/"></category><summary>Welcome to next snippet of Quotes.
+
+Hope so, it is advising enough to make your day well ;)</summary><content type="html">&lt;p&gt;
 Welcome to next snippet of Quotes.
-</p>
+&lt;/p&gt;
 
-<p>
+&lt;p&gt;
 Hope so, it is advising enough to make your day well ;)
-</p>
+&lt;/p&gt;
 
-<hr />
+&lt;hr&gt;
 
-<ul class="org-ul">
-<li>Psychology Reads</li>
-</ul>
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;Psychology Reads&lt;/li&gt;
+&lt;/ul&gt;
 
-<blockquote>
-<p>
+&lt;blockquote&gt;
+&lt;p&gt;
 People Aren't Better Lie Detectors (50-60%) in More Realistic Settings
-</p>
-</blockquote>
+&lt;/p&gt;
+&lt;/blockquote&gt;
 
-<blockquote>
-<p>
+&lt;blockquote&gt;
+&lt;p&gt;
 Nothing in life is as important as you think it is, while you are thinking about it
-</p>
-</blockquote>
+&lt;/p&gt;
+&lt;/blockquote&gt;
 
-<ul class="org-ul">
-<li><p>
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&lt;p&gt;
 Herm Albright
-</p>
+&lt;/p&gt;
 
-<blockquote>
-<p>
+&lt;blockquote&gt;
+&lt;p&gt;
 A positive attitude may not solve all your problems, but it will annoy enough people to make it worth the effort.
-</p>
-</blockquote></li>
+&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
 
-<li><p>
+&lt;li&gt;&lt;p&gt;
 Bret Harte
-</p>
+&lt;/p&gt;
 
-<blockquote>
-<p>
+&lt;blockquote&gt;
+&lt;p&gt;
 The only sure thing about luck is that it will change.
-</p>
-</blockquote></li>
+&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
 
-<li><p>
+&lt;li&gt;&lt;p&gt;
 Philip G. Hammerton
-</p>
+&lt;/p&gt;
 
-<blockquote>
-<p>
+&lt;blockquote&gt;
+&lt;p&gt;
 Have you ever observed that we pay much more attention to a wise passage when it is quoted than when we read it in the original author?
-</p>
-</blockquote></li>
+&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
 
-<li><p>
+&lt;li&gt;&lt;p&gt;
 Woodrow Wilson
-</p>
+&lt;/p&gt;
 
-<blockquote>
-<p>
+&lt;blockquote&gt;
+&lt;p&gt;
 The man who is swimming against the stream knows the strength of it.
-</p>
-</blockquote></li>
-</ul>
+&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 
-<hr />
+&lt;hr&gt;
 
-<div class="org-center">
-<p>
+&lt;div class=&quot;org-center&quot;&gt;
+&lt;p&gt;
 With these sweet little pies, I hope it does make your day alive ;)
-</p>
-</div>
-]]></content></entry><entry><title>Insightful Quotes</title><link rel="alternate" type="text/html" href="https://idlip.in/log/insight-quotes/" /><id>https://idlip.in/log/insight-quotes/</id><published>2023-03-29T00:00:00Z</published><updated>2026-09-30T00:00:00Z</updated><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><category term="quotes" label="quotes" scheme="https://idlip.in/tags/"></category><content type="html"><![CDATA[<p>
+&lt;/p&gt;
+&lt;/div&gt;
+</content></entry><entry><title>Insightful Quotes</title><link rel="alternate" type="text/html" href="https://idlip.in/log/insight-quotes/" /><id>https://idlip.in/log/insight-quotes/</id><published>2023-03-29T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><category term="quotes" label="quotes" scheme="https://idlip.in/tags/"></category><summary>I will be making few snippets on few quotes which impressed me or made me laugh for the day!
+
+Hope so, it is insightful enough for you also.</summary><content type="html">&lt;p&gt;
 I will be making few snippets on few quotes which impressed me or made me laugh for the day!
-</p>
+&lt;/p&gt;
 
-<p>
+&lt;p&gt;
 Hope so, it is insightful enough for you also.
-</p>
+&lt;/p&gt;
 
-<hr />
+&lt;hr&gt;
 
 
-<ul class="org-ul">
-<li>Self quote</li>
-</ul>
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;Self quote&lt;/li&gt;
+&lt;/ul&gt;
 
-<blockquote>
-<p>
+&lt;blockquote&gt;
+&lt;p&gt;
 Don't just read, Think - Research and Understand!
-</p>
-</blockquote>
+&lt;/p&gt;
+&lt;/blockquote&gt;
 
-<ul class="org-ul">
-<li><p>
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&lt;p&gt;
 Walt Kelly
-</p>
+&lt;/p&gt;
 
-<blockquote>
-<p>
+&lt;blockquote&gt;
+&lt;p&gt;
 Every burden is a blessing.
-</p>
-</blockquote></li>
+&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
 
-<li><p>
+&lt;li&gt;&lt;p&gt;
 Gustave Flaubert
-</p>
+&lt;/p&gt;
 
-<blockquote>
-<p>
+&lt;blockquote&gt;
+&lt;p&gt;
 The art of writing is the art of discovering what you believe.
-</p>
-</blockquote></li>
+&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
 
-<li><p>
+&lt;li&gt;&lt;p&gt;
 Samuel Butlet
-</p>
+&lt;/p&gt;
 
-<blockquote>
-<p>
+&lt;blockquote&gt;
+&lt;p&gt;
 Let us be grateful to the mirror for revealing to us our appearance only.
-</p>
-</blockquote></li>
+&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
 
-<li><p>
+&lt;li&gt;&lt;p&gt;
 Joseph Cossman
-</p>
+&lt;/p&gt;
 
-<blockquote>
-<p>
+&lt;blockquote&gt;
+&lt;p&gt;
 Obstacles are things a person sees when he takes his eyes off his goal.
-</p>
-</blockquote></li>
+&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
 
-<li><p>
+&lt;li&gt;&lt;p&gt;
 Henny Youngman
-</p>
+&lt;/p&gt;
 
-<blockquote>
-<p>
+&lt;blockquote&gt;
+&lt;p&gt;
 I told the doctor I broke my leg in two places. He told me to quit going to those places.
-</p>
-</blockquote></li>
+&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
 
-<li><p>
+&lt;li&gt;&lt;p&gt;
 Barabara Tober
-</p>
+&lt;/p&gt;
 
-<blockquote>
-<p>
+&lt;blockquote&gt;
+&lt;p&gt;
 Traditions are group efforts to keep the unexpected from happening.
-</p>
-</blockquote></li>
+&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
 
-<li><p>
+&lt;li&gt;&lt;p&gt;
 Frank Wilczek
-</p>
+&lt;/p&gt;
 
-<blockquote>
-<p>
+&lt;blockquote&gt;
+&lt;p&gt;
 In physics, you don't have to go around making trouble for yourself - nature does it for you.
-</p>
-</blockquote></li>
+&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
 
-<li><p>
+&lt;li&gt;&lt;p&gt;
 David Coblitz
-</p>
+&lt;/p&gt;
 
-<blockquote>
-<p>
+&lt;blockquote&gt;
+&lt;p&gt;
 A committee can make a decision that is dumber than any of its members.
-</p>
-</blockquote></li>
-</ul>
+&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 
-<hr />
+&lt;hr&gt;
 
 
-<div class="org-center">
-<p>
-With that <b>"quoted"</b>, I hope you have a great day!
-</p>
+&lt;div class=&quot;org-center&quot;&gt;
+&lt;p&gt;
+With that &lt;b&gt;&quot;quoted&quot;&lt;/b&gt;, I hope you have a great day!
+&lt;/p&gt;
 
-<p>
+&lt;p&gt;
 Visit the snippets again!
-</p>
-</div>
-]]></content></entry></feed>
+&lt;/p&gt;
+&lt;/div&gt;
+</content></entry></feed>
