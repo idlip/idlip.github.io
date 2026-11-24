@@ -148,3 +148,31 @@ Anti-meter tools (hide counts on the client end)
 - [[https://bengrosser.com/projects/twitter-demetricator/][Twitter Demetricator]] and [[https://bengrosser.com/projects/instagram-demetricator/][Instagram Demetricator]] by Benjamin Grosser
 - [[https://manualdousuario.net/en/demetrificando-web-userstyle-css/][Hiding metrics from the web]], a userstyle by Manual do Usuário
 - [[https://userstyles.world/style/16993][Hide quantitative stats from Mastodon web]] on UserStyles.world
+
+* [2026-11-24 Tue] Give everything, or only what is asked
+A thought I started and left pending: should someone give everything at one shot and let me take what I need, or give only what I asked for, so the noise stays out? I want both, on different days.
+
+I have not finished thinking it through, so for now I am leaving my open tabs here. If you have the time, read them and decide for yourself.
+
+*Tab log*: I'll be adding more tab logs to the this page on daily/weekly bits. Don't worry, you can catch up on all of them on the [[file:links.org][Links page]].
+
+- [ ] https://blr.indiewebclub.org/archive/ -> To read weekly to get inspired for writing more.
+- [ ] https://chrisburnell.com/html-can-do-that/#example-until-found
+- [ ] https://vickiboykis.com/
+- [ ] https://silktide.com/blog/how-to-write-readable-content/
+- [ ] https://softwareleadweekly.com/issues/
+- [ ] https://www.jvt.me/posts/2026/08/17/hand-write-commits/
+- [ ] https://martinfowler.com/agile.html
+- [ ] https://joecode.com/2026-08-19-sqlite3/
+- [ ] https://www.chiply.dev/post-hyperbole-hyrolo
+- [ ] https://www.tomica.net/
+- [ ] [[https://kedara.eu/organising-feeds-permaculture/][Organising my feeds using Permaculture principles - Kedara.eu]]
+- [ ] https://modernmrsdarcy.com/blog/
+- [ ] [[https://delightful.coding.social/delightful-humane-design/][delightful humane design]]
+- [ ] [[https://humanebydesign.com/principles][Principles | Humane by Design]]
+- [ ] [[https://lea.verou.me/][Home • Lea Verou]]
+- [ ] [[https://jelv.is/blog/Structure-your-Errors/][Structure your Errors | jelv.is]]
+- [ ] [[https://learningtolearnwell.substack.com/p/when-your-mind-moves-faster-than][When Your Mind Moves Faster Than Your Day - by Matt Hutson]]
+- [ ] [[https://endler.dev/2026/advice-to-young-developers/][Advice to Young Developers | Matthias Endler]]
+- [ ] https://pablomurad.com/
+- [ ] https://shellsharks.com/scrolls/scroll/2026-11-10
