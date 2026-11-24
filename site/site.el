@@ -609,14 +609,6 @@ committed elisp data file. Run by hand."
 ;; `site-build-taxonomy-pages', called after the normal publish+sweep so
 ;; the sweep does not delete them as "unexpected".
 
-(defun site--word-count (body-html)
-  "Approximate word count of BODY-HTML: strip tags, split on whitespace."
-  (denden-html-word-count body-html))
-
-(defun site--reading-time (word-count)
-  "Reading time in whole minutes for WORD-COUNT words, minimum 1."
-  (max 1 (round (/ word-count 200.0))))
-
 (defun site--first-mailto (links)
   "First mailto: address in LINKS (site-social-links shape), or \"\"."
   (or (cl-some (lambda (l) (and (string-prefix-p "mailto:" (plist-get l :url))
@@ -726,11 +718,7 @@ to the link budget left after BODY-LINKS and BACKLINKS, skipping BACKLINKS."
   "Return FILENAME's table-of-contents node, or nil unless it opts in via
 #+toc: t."
   (when (denden-file-keyword-true-p filename "TOC")
-    (let* ((options (plist-put (copy-sequence (denden-export-options-with-pages all-pages filename)) :with-toc t))
-           (with-toc-html (with-temp-buffer
-                            (insert-file-contents filename)
-                            (org-mode)
-                            (org-export-as 'denden-html nil nil t options)))
+    (let* ((with-toc-html (denden-export-file-body filename all-pages :with-toc t))
            (dom (with-temp-buffer (insert with-toc-html) (libxml-parse-html-region (point-min) (point-max))))
            (toc-div (car (dom-by-id dom (rx bos "table-of-contents" eos))))
            (toc-list (car (dom-by-id dom (rx bos "text-table-of-contents" eos)))))
@@ -746,8 +734,8 @@ to the link budget left after BODY-LINKS and BACKLINKS, skipping BACKLINKS."
          (tags (and this-page (plist-get this-page :tags)))
          (date (and this-page (plist-get this-page :date)))
          (lastmod (denden-git-lastmod lastmod-source))
-         (word-count (site--word-count body-html))
-         (reading-time (site--reading-time word-count))
+         (word-count (denden-html-word-count body-html))
+         (reading-time (denden-reading-time word-count))
          (body-links (denden-collect-body-links body-html))
          ;; The home page links to nearly everything, so it is no backlink.
          (backlinks (and this-page (site--regular-pages (denden-backlinks this-page all-pages))))
@@ -758,7 +746,7 @@ to the link budget left after BODY-LINKS and BACKLINKS, skipping BACKLINKS."
       :title title
       :url (and this-page (plist-get this-page :url))
       :description (site--meta-description-for-page
-                    (list :content-html body-html :source (and this-page (plist-get this-page :source))))
+                    (list :content-html body-html :description (and this-page (plist-get this-page :description))))
       :og-type "article" :published-time date
       :modified-time (and lastmod (not (equal lastmod date)) lastmod)
       :tags tags
@@ -789,10 +777,7 @@ instead of exporting FILENAME a second time."
          (pub-dir (file-name-as-directory (org-publish-property :publishing-directory (cons nil plist))))
          (all-pages (plist-get plist :denden-all-pages))
          (this-page (seq-find (lambda (p) (equal (plist-get p :source) filename)) all-pages))
-         (body-html (with-temp-buffer
-                      (insert-file-contents filename)
-                      (org-mode)
-                      (org-export-as 'denden-html nil nil t (denden-export-options-with-pages all-pages filename)))))
+         (body-html (denden-export-file-body filename all-pages)))
     (when this-page (plist-put this-page :content-html body-html))
     (site--assemble-and-write-single-page
      :output output :pub-dir pub-dir :body-html body-html :all-pages all-pages
@@ -922,13 +907,8 @@ For my love and curiosity towards astronomy and mythology.")
           (seq-filter (lambda (entry) (plist-get entry :date)) entries)))
 
 (defun site--pose-page-p (page)
-  "Non-nil if PAGE's source declares #+layout: pose."
-  (let ((source (plist-get page :source)) (case-fold-search t))
-    ;; Plain text, no Org mode: the keyword sits in the file's head.
-    (and source (file-exists-p source)
-         (with-temp-buffer
-           (insert-file-contents source nil 0 2000)
-           (re-search-forward (rx bol "#+layout:" (* blank) "pose" eow) nil t)))))
+  "Non-nil if PAGE declares #+layout: pose."
+  (equal (plist-get page :layout) "pose"))
 
 (defun site--pose-feed-pages-for-build (all-pages)
   "Every Pose entry as feed items, from the pose-layout page in ALL-PAGES."
@@ -977,10 +957,7 @@ each entry with its own shareable anchor and expand-to-dialog view."
 else the post listing fallback."
   (let* ((output (denden-output-file-for filename (cons nil plist)))
          (all-pages (plist-get plist :denden-all-pages))
-         (body-html (with-temp-buffer
-                      (insert-file-contents filename)
-                      (org-mode)
-                      (org-export-as 'denden-html nil nil t (denden-export-options-with-pages all-pages filename))))
+         (body-html (denden-export-file-body filename all-pages))
          (title (or (cadr (assoc "TITLE" (with-temp-buffer
                                            (insert-file-contents filename)
                                            (org-mode)
@@ -1090,10 +1067,7 @@ the same search box every other topic-list page has."
                                                  (denden-pretty-url (file-relative-name output pub-dir))))
                               all-pages))
          (title (or (and this-page (plist-get this-page :title)) "Sitemap"))
-         (intro-html (with-temp-buffer
-                       (insert-file-contents filename)
-                       (org-mode)
-                       (org-export-as 'denden-html nil nil t (denden-export-options-with-pages all-pages filename))))
+         (intro-html (denden-export-file-body filename all-pages))
          (groups (mapcar (lambda (g) (list :label (plist-get g :label)
                                            :items (mapcar #'site--page-as-topic-item (plist-get g :pages))))
                          (site--sitemap-groups all-pages this-page))))
@@ -1169,10 +1143,7 @@ Sites cited only once share a last \"Other sites\" group."
                                                  (denden-pretty-url (file-relative-name output pub-dir))))
                               all-pages))
          (title (or (and this-page (plist-get this-page :title)) "Links"))
-         (intro-html (with-temp-buffer
-                       (insert-file-contents filename)
-                       (org-mode)
-                       (org-export-as 'denden-html nil nil t (denden-export-options-with-pages all-pages filename)))))
+         (intro-html (denden-export-file-body filename all-pages)))
     (site--write-page
      (site--wrap-page
       :title title
@@ -1188,20 +1159,16 @@ Sites cited only once share a last \"Other sites\" group."
 (defun site-publish-page (plist filename pub-dir)
   "Dispatch FILENAME to the right site-publish-* function, by filename then
 #+layout:."
-  (cond
-   ((member (file-name-base filename) '("_index" "index"))
-    (site-publish-home-page plist filename pub-dir))
-   ((equal (site--file-layout filename) "topic-list")
-    (site-publish-topic-list-page plist filename pub-dir))
-   ((equal (site--file-layout filename) "themes")
-    (site-publish-themes-page plist filename pub-dir))
-   ((equal (site--file-layout filename) "sitemap")
-    (site-publish-sitemap-page plist filename pub-dir))
-   ((equal (site--file-layout filename) "links")
-    (site-publish-links-page plist filename pub-dir))
-   ((equal (site--file-layout filename) "pose")
-    (site-publish-pose-page plist filename pub-dir))
-   (t (site-publish-single-page plist filename pub-dir))))
+  (funcall (if (member (file-name-base filename) '("_index" "index"))
+               #'site-publish-home-page
+             (pcase (site--file-layout filename)
+               ("topic-list" #'site-publish-topic-list-page)
+               ("themes" #'site-publish-themes-page)
+               ("sitemap" #'site-publish-sitemap-page)
+               ("links" #'site-publish-links-page)
+               ("pose" #'site-publish-pose-page)
+               (_ #'site-publish-single-page)))
+           plist filename pub-dir))
 
 (defun site--distinct-sections (all-pages)
   "Return every non-empty :section value in ALL-PAGES, deduplicated."
@@ -1349,12 +1316,7 @@ publish pass already stashed it (single-post layout); other layouts
 real page body is assembled differently from this flat file export."
   (append page
           (list :content-html (or (plist-get page :content-html)
-                                  (with-temp-buffer
-                                    (insert-file-contents (plist-get page :source))
-                                    (org-mode)
-                                    (org-export-as 'denden-html nil nil t
-                                                   (denden-export-options-with-pages
-                                                    all-pages (plist-get page :source)))))
+                                  (denden-export-file-body (plist-get page :source) all-pages))
                 :permalink (site--page-permalink page base-url)
                 :lastmod (denden-page-lastmod page))))
 
@@ -1527,25 +1489,12 @@ they would otherwise look like body prose."
    (t (seq-mapcat #'site--og-prose-paragraphs (dom-children node)))))
 
 (defun site--og-excerpt-for-page (page)
-  "Return PAGE's OG-card excerpt: its #+description/#+desc/#+og_description:
-keyword if its source sets one, otherwise the first two body-prose <p>s of
-its rendered content, as blank-line separated plain text. Skips any <p>
-that is really an image or its caption; see `site--og-prose-paragraphs'."
-  (let* ((source (plist-get page :source))
-         (keywords (and source (file-exists-p source)
-                        (with-temp-buffer
-                          (insert-file-contents source)
-                          (org-mode)
-                          (org-collect-keywords '("DESCRIPTION" "DESC" "OG_DESCRIPTION")))))
-         (description (and keywords
-                           (or (cadr (assoc "DESCRIPTION" keywords))
-                               (cadr (assoc "DESC" keywords))
-                               (cadr (assoc "OG_DESCRIPTION" keywords))))))
-    (or description
-        (let* ((dom (with-temp-buffer (insert (plist-get page :content-html))
-                                      (libxml-parse-html-region (point-min) (point-max))))
-               (paragraphs (seq-take (site--og-prose-paragraphs dom) 2)))
-          (mapconcat (lambda (p) (string-trim (dom-texts p))) paragraphs "\n\n")))))
+  "Return PAGE's :description, else its first two prose paragraphs as plain text."
+  (or (plist-get page :description)
+      (let* ((dom (with-temp-buffer (insert (plist-get page :content-html))
+                                    (libxml-parse-html-region (point-min) (point-max))))
+             (paragraphs (seq-take (site--og-prose-paragraphs dom) 2)))
+        (mapconcat (lambda (p) (string-trim (dom-texts p))) paragraphs "\n\n"))))
 
 (defun site--meta-description-for-page (page)
   "Return PAGE's meta-description text: its OG excerpt, collapsed to one line
@@ -1574,8 +1523,8 @@ CARD-SITE-TITLE, with FAVICON-PATH embedded."
 
 (defun site--word-count-meta (page)
   "PAGE's \"N words · M min\" OG-card meta-right, from its own :content-html."
-  (let* ((word-count (site--word-count (plist-get page :content-html)))
-         (reading-time (site--reading-time word-count)))
+  (let* ((word-count (denden-html-word-count (plist-get page :content-html)))
+         (reading-time (denden-reading-time word-count)))
     (format "%d words · %d min" word-count reading-time)))
 
 (defun site-build-auxiliary-outputs (all-pages pub-dir repository-directory)
