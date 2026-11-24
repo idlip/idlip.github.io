@@ -123,11 +123,11 @@ list and grid choice."
                 (nav (:aria-label "Site") ,(theme--nav-list menu-items))
                 (p (:class "toolbar" :hidden t :data-requires-js t)
                    ,(theme--tool-button "cycle-width" "Content width" "󰭣")
-                   ,(theme--tool-button "cycle-font" "Font mode" "")
-                   ,(theme--tool-button "open-schemes" "Color scheme" "")
-                   ,(theme--tool-button "toggle-theme" "Dark or light" ""
-                                        '(span (:class "nf" :aria-hidden "true") ""))
-                   ,(theme--tool-button "random-page" "Random page" "")
+                   ,(theme--tool-button "cycle-font" "Font mode" "󰛖")
+                   ,(theme--tool-button "open-schemes" "Color scheme" "󰉦")
+                   ,(theme--tool-button "toggle-theme" "Dark or light" ""
+                                        '(span (:class "nf" :aria-hidden "true") ""))
+                   ,(theme--tool-button "random-page" "Random page" "")
                    (button (:type "button" :data-action "open-palette" :aria-keyshortcuts "x"
                             :title "Search and commands (x)")
                            "M-x " (span (:class "nf" :aria-hidden "true") "󰠳"))
