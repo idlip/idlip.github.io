@@ -1,7 +1,7 @@
 #+title: Small Prophets: A magical peace
 #+date: 2026-10-03
-#+tags[]: series review
-#+refs[]: prophet
+#+tags: series review
+#+refs: prophet
 
 [[https://www.themoviedb.org/tv/312693-small-prophets][Small Prophets]] is a new Apple TV series of 2026. Its more like a mini movie, which only has =6=
 episodes and each runs for 30 mins.

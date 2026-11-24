@@ -1,8 +1,8 @@
 #+title: Nobody Cares about blogs
 #+date: 2024-02-08
-#+tags[]: blog snippets
+#+tags: blog snippets
 #+draft: false
-#+aliases[]: posts/nobody-cares
+#+aliases: posts/nobody-cares
 
 
 This is an obvious statement over this era, that things are moving so fast that people lost the touch of blogs.

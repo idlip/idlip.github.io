@@ -1,8 +1,8 @@
 #+title: Insightful Quotes
-#+tags[]: snippets quotes
+#+tags: snippets quotes
 #+draft: false
 #+date: [2023-03-29 Wed]
-#+aliases[]: posts/insight-quotes
+#+aliases: posts/insight-quotes
 
 I will be making few snippets on few quotes which impressed me or made me laugh for the day!
 

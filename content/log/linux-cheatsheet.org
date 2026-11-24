@@ -1,8 +1,8 @@
 #+title: Linux : The Matrix
-#+tags[]: terminal minimal
+#+tags: terminal minimal
 #+draft: false
 #+date: [2023-04-12 Wed]
-#+aliases[]: posts/linux-cheatsheet
+#+aliases: posts/linux-cheatsheet
 
 There are tons of linux command line cheatsheet or guides.
 

@@ -1,8 +1,8 @@
 #+title: Stoicism: Way of life
 #+date: 2025-04-06
-#+tags[]: philosophy
+#+tags: philosophy
 #+draft: false
-#+aliases[]: posts/init-stoicism
+#+aliases: posts/init-stoicism
 
 
 I've been reading =Stoicism 101 by Erick Cloward= as a beginner. Although internet suggested [[https://plato.stanford.edu/published.html][stanford philosophy]], book does have a way to communicate which connects readers mind.

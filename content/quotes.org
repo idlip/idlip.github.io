@@ -1,7 +1,6 @@
 #+title: Quotes
 #+layout: topic-list
 #+chip_color: base0A
-#+buffer_name: *quotes*
 
 Words that stayed.
 

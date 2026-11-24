@@ -1,8 +1,8 @@
 #+title: Biocode Daily to hack solutions
 #+date: 2025-04-03
-#+tags[]: snippets bioinformatics
+#+tags: snippets bioinformatics
 #+draft: false
-#+aliases[]: posts/biocode-daily
+#+aliases: posts/biocode-daily
 
 - https://www.biocodedaily.com/
 

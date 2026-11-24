@@ -2,7 +2,7 @@
 #+layout: links
 #+draft: false
 #+no_comment: t
-#+desc: Every outside link cited anywhere on this site, grouped by site.
+#+description: Every outside link cited anywhere on this site, grouped by site.
 
 Every external URLs that I have cited anywhere on this site, grouped by the site it points to, sorted by count. Each one says where I used it. For internal pages on this site itself, see the [[file:sitemap.org][Sitemap]].
 

@@ -1,8 +1,8 @@
 #+title: NixOS and its Madness
 #+date: 2024-02-04
-#+tags[]: nixos
+#+tags: nixos
 #+draft: false
-#+aliases[]: posts/nixos-madness
+#+aliases: posts/nixos-madness
 
 
 * Need to Update. WIP

@@ -1,7 +1,7 @@
 #+title: Playing with Emacs
 #+date: 2026-09-02
-#+tags[]: emacs carnival games
-#+aliases[]: posts/playing-emacs
+#+tags: emacs carnival games
+#+aliases: posts/playing-emacs
 
 - This post is my second [[https://www.emacswiki.org/emacs/Carnival][Emacs carnival]] entry, this time for [[https://www.emacswiki.org/emacs/CarnivalSeptember2026][Sept 2026]]. If you're new to this site, FYI I go by =Zororg= in emacs chat/universe.
 

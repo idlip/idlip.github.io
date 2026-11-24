@@ -1,8 +1,8 @@
 #+title: Journey Begins
-#+tags[]: snippets
+#+tags: snippets
 #+draft: false
 #+date: [2023-03-21 Tue]
-#+aliases[]: posts/blogging-journey
+#+aliases: posts/blogging-journey
 
 I have almost set my first static website.
 From here my creativity goes public to the world.

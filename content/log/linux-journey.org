@@ -1,8 +1,8 @@
 #+title: My Linux Journey
-#+tags[]: linux
+#+tags: linux
 #+draft: false
 #+date: [2023-03-10 Fri]
-#+aliases[]: posts/linux-journey
+#+aliases: posts/linux-journey
 
 
 *Small info/log on my linux journey and my experience.*

@@ -1,8 +1,8 @@
 #+title: If cats disappeared from world
 #+date: 2025-04-10
-#+tags[]: novel
+#+tags: novel
 #+draft: false
-#+aliases[]: posts/cats-disappeared-world
+#+aliases: posts/cats-disappeared-world
 
 *If Cats Disappeared from the World* is an light novel by Genki Kawamura.
 

@@ -1,8 +1,8 @@
 #+title: Emacs Efficiency
-#+tags[]: cheatsheet emacs
+#+tags: cheatsheet emacs
 #+draft: false
 #+date: [2023-03-29 Wed]
-#+aliases[]: posts/emacs-keys
+#+aliases: posts/emacs-keys
 
 
 This is straight away from [[https://github.com/VernonGrant/discovering-emacs][VernonGrant]] who hosts a podcast for Emacs called "[[https://www.discovering-emacs.com/][Discovering-Emacs]]".

@@ -1,8 +1,8 @@
 #+title: Tools that are Best!
-#+tags[]: terminal linux minimal
+#+tags: terminal linux minimal
 #+draft: false
 #+date: [2023-03-17 Fri]
-#+aliases[]: posts/tools-readme
+#+aliases: posts/tools-readme
 
 Note: This is very outdated from when it was written. Please check [[https://github.com/idlip/d-nix][current config]] file or [[file:../uses.org][check Uses
 page]] for updated list.

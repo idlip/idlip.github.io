@@ -1,7 +1,7 @@
 #+title: Replenish theme - its Emacsy
 #+date: [2026-03-19 Thu]
-#+tags[]: emacs orgmode
-#+aliases[]: posts/emacs-theme-site
+#+tags: emacs orgmode
+#+aliases: posts/emacs-theme-site
 
 With previous post on [[file:revamp-blog-2026.org][revamp my blogs]], I finally today went ahead and upgrades the beautiful [[https://github.com/ArthurHeymans/hugo-emacs-theme/][emacs theme made by Arthur]], and locally forked to add goodies.
 

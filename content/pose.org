@@ -2,7 +2,7 @@
 #+layout: pose
 #+draft: false
 #+no_comment: t
-#+desc: Quick thoughts, short bits, philosophical, poetic, mini-micro notes and snippets of journal.
+#+description: Quick thoughts, short bits, philosophical, poetic, mini-micro notes and snippets of journal.
 
 Quick thoughts, short bits, philosophical, poetic, mini-micro notes and snippets of journal.
 

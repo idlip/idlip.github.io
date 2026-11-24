@@ -1,8 +1,8 @@
 #+title: I've Consumed Enough
 #+date: 2026-07-20
-#+tags[]: webring gtd pkm 
+#+tags: webring gtd pkm 
 #+draft: false
-#+aliases[]: posts/consumed-enough
+#+aliases: posts/consumed-enough
 
 #+begin_quote
 I've had enough and Consumed enough these days.

@@ -1,8 +1,8 @@
 #+title: Emacs on Droid
-#+tags[]: emacs android
+#+tags: emacs android
 #+draft: false
 #+date: [2023-12-16 Sat]
-#+aliases[]: posts/emacs-droid
+#+aliases: posts/emacs-droid
 
 Emacs is a definite Greatest editor of all time, the extensibility power is unmatched with any other software. Users of Emacs can only know what it is, one who has not used it may not really understand the principles and power it gives us, the users.
 

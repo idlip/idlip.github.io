@@ -1,7 +1,7 @@
 #+title: Changelog
 #+draft: false
 #+no_comment: t
-#+aliases[]: readme updates
+#+aliases: readme updates
 
 Notable changes to this site and theme.
 

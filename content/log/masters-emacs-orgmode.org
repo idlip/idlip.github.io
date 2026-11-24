@@ -1,8 +1,8 @@
 #+title: My MSc journey with Emacs Orgmode
 #+date: 2025-06-06
-#+tags[]: bioinformatics emacs pkm
+#+tags: bioinformatics emacs pkm
 #+draft: false
-#+aliases[]: posts/masters-emacs-orgmode
+#+aliases: posts/masters-emacs-orgmode
 
 *I wrote and used emacs orgmode for all of my post-grad Masters classes, presentations, projects and thesis.*
 

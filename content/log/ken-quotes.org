@@ -1,8 +1,8 @@
 #+title: Beyond Ken
-#+tags[]: quotes snippets
+#+tags: quotes snippets
 #+draft: false
 #+date: [2023-06-02 Fri]
-#+aliases[]: posts/ken-quotes
+#+aliases: posts/ken-quotes
 
 Welcome to some more snippet of Quotes.
 Lately I have been busy, kinda dusting off my table. /Ooof.. procastination!/

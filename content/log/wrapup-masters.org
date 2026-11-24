@@ -1,8 +1,8 @@
 #+title: Wrap up on my Bioinformatics Masters Journey
 #+date: 2025-06-28
-#+tags[]: masters
+#+tags: masters
 #+draft: false
-#+aliases[]: posts/wrapup-masters
+#+aliases: posts/wrapup-masters
 
 
 June 2025 finally marks the end to my academic journey with completion of my Post-graduation Masters of Science in Bioinformatics.

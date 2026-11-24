@@ -1,8 +1,8 @@
 #+title: Literate org config
 #+date: 2023-12-29
-#+tags[]: orgmode
+#+tags: orgmode
 #+draft: false
-#+aliases[]: posts/literate-config
+#+aliases: posts/literate-config
 
 
 * Organizing Config

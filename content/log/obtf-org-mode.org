@@ -1,8 +1,8 @@
 #+title: OBTF as Second Brain with Org mode
 #+date: 2025-09-06
-#+tags[]: orgmode emacs pkm obtf
+#+tags: orgmode emacs pkm obtf
 #+draft: false
-#+aliases[]: posts/obtf-org-mode
+#+aliases: posts/obtf-org-mode
 
 
 *One Big Text File* is simply writing down mostly everything in single file to organize or manage data. This single file acts as the source of knowledge and holds all notes.

@@ -1,8 +1,8 @@
 #+title: Imposter Syndrome : Formula for Success
-#+tags[]: psychology
+#+tags: psychology
 #+draft: false
 #+date: [2023-03-24 Fri]
-#+aliases[]: posts/imposter-syndrome
+#+aliases: posts/imposter-syndrome
 
 - Have you ever felt a fear of losing or doubt your own ability?
 - Have you felt unworthy, lost your self esteem due to a mistake?

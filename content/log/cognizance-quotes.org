@@ -1,8 +1,8 @@
 #+title: Cognizance
-#+tags[]: snippets quotes
+#+tags: snippets quotes
 #+draft: false
 #+date: [2023-04-22 Sat]
-#+aliases[]: posts/cognizance-quotes
+#+aliases: posts/cognizance-quotes
 
 Welcome to next snippet of Quotes.
 

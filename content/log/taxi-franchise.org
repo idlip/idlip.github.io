@@ -1,7 +1,7 @@
 #+title: Taxi: the French Franchise
 #+date: 2026-10-04
-#+tags[]: movies review
-#+refs[]: taxi
+#+tags: movies review
+#+refs: taxi
 
 [[https://en.wikipedia.org/wiki/Taxi_(film_series)][Taxi]] is french movie franchise I discovered by research (🦜). It has amazing comedy and good story.
 All 5 movies are almost the same in story, but the fun gets going. Its all about a taxi driver in Marcielle doing his taxi job and there is a very funny police work and chasing criminal.

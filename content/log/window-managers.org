@@ -1,8 +1,8 @@
 #+title: Window Managers
 #+date: 2024-01-03
-#+tags[]: linux minimal
+#+tags: linux minimal
 #+draft: false
-#+aliases[]: posts/window-managers
+#+aliases: posts/window-managers
 
 
 Desktop Environment gives us everything we would like to operate on Desktop with care towards UI and UX, that matches the common paradigm. It is a lot driven by mouse, and seems to fairly make work simpler and easier. It is not like keyboard can always make task quicker, mouse can be ahead of the race.

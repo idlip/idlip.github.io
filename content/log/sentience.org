@@ -1,7 +1,7 @@
 #+title: TIL a word: Sentience
 #+date: 2026-08-01
-#+tags[]: til mosaic sciencesante meetup
-#+aliases[]: posts/sentience
+#+tags: til mosaic sciencesante meetup
+#+aliases: posts/sentience
 
 - NGL, Its a subtle word among =Sentence= and =Patience=
 

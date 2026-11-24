@@ -1,8 +1,8 @@
 #+title: Overview of Decentralized socials
-#+tags[]: snippets
+#+tags: snippets
 #+draft: false
 #+date: [2025-04-06 Sun]
-#+aliases[]: posts/overview-decentralized-socials
+#+aliases: posts/overview-decentralized-socials
 
 - https://arxiv.org/abs/2504.00071
 

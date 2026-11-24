@@ -1,8 +1,8 @@
 #+title: Resonance: The Echo
 #+date: 2024-03-10
-#+tags[]: psychology philosophy
+#+tags: psychology philosophy
 #+draft: false
-#+aliases[]: posts/time-resonance
+#+aliases: posts/time-resonance
 
 
 Am at such a career building stage, and learning lot of new things everyday. Every day I wanted to blog and write something, and  even now at the time of writing, I'm enjoying to put up and convey something as a post in my editor, emacs. The point, is "I have to just start".

@@ -1,8 +1,8 @@
 #+title: Revamp the blogs
 #+date: 2026-01-06
-#+tags[]: snippets
+#+tags: snippets
 #+draft: false
-#+aliases[]: posts/revamp-blog-2026
+#+aliases: posts/revamp-blog-2026
 
 
 Hello world, again!
