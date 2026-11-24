@@ -1,5 +1,5 @@
 #+title: The Will of D. License
-#+aliases[]: will d D
+#+aliases: will d D
 #+draft: false
 #+no_comment: t
 
@@ -9,9 +9,10 @@ Code license, straight off the =LICENSE= file in [[https://github.com/idlip/haki
 
 #+begin_src emacs-lisp :exports results :results value html
   (denden-serialize-node
-   (denden-normalise-node
-    (list 'pre nil (list 'code nil
-                         (with-temp-buffer
-                           (insert-file-contents (expand-file-name "static/license.txt" denden-repository-directory))
-                           (buffer-string))))))
+   (list 'pre nil (list 'code nil
+                        (with-temp-buffer
+                          (insert-file-contents
+                           (expand-file-name "static/license.txt"
+                                             (denden-site-root-directory denden-current-site)))
+                          (buffer-string)))))
 #+end_src

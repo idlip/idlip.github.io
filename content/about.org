@@ -1,5 +1,5 @@
 #+title: About
-#+aliases[]: contact me
+#+aliases: contact me
 #+draft: false
 #+no_comment: t
 
@@ -49,7 +49,7 @@ Drop me a good ol' email: [[mailto:hi@idlip.in][hi@idlip.in]]
 or find me at:
 
 #+begin_src emacs-lisp :exports results :results value html
-  (denden-serialize-node (denden-normalise-node (theme-social-links-grid site-social-links)))
+  (denden-serialize-node (theme-social-links-grid site-social-links))
 #+end_src
 
 ------

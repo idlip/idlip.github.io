@@ -24,22 +24,26 @@ reading, quotes I keep, and whatever I freshly bake with site.
                 (cons "Software & Craft" " ")
                 (cons "Self" "󱀢 ")))
          (group-icon (lambda (label) (or (cdr (assoc label group-icon-glyphs)) "")))
-         (all-pages (org-publish-property :denden-all-pages (assoc "site-org" org-publish-project-alist)))
+         (all-pages denden-current-pages)
+         (topic-groups (lambda (file)
+                         (site-topic-groups denden-current-site
+                                            (denden-page-for-source (expand-file-name file) all-pages)
+                                            all-pages)))
          ;; Latest 3 Log posts
-         (recent-posts (seq-take (denden-sort-pages-by-date-desc (denden-pages-in-section all-pages "log")) 3))
+         (recent-posts (seq-take (denden-sort-pages-by-date (denden-pages-in-section all-pages "log")) 3))
          (post-cell (if recent-posts
                         (append
                          (list 'span nil)
                          (seq-mapcat
                           (lambda (p)
-                            (list (denden-format-iso-date (plist-get p :date) "%d %b") " :: "
-                                  (list 'a (list :href (concat "/" (plist-get p :url))) (plist-get p :title))
+                            (list (format-time-string "%d %b" (denden-page-date p)) " :: "
+                                  (list 'a (list :href (concat "/" (denden-page-url p))) (denden-page-title p))
                                   '(br nil)))
                           recent-posts))
                       "none yet"))
          ;; Latest 3 Pose entries
          (recent-poses (seq-take
-                        (site--pose-entries (expand-file-name "content/pose.org" denden-repository-directory) all-pages)
+                        (site-pose-entries denden-current-site (site-pose-page all-pages) all-pages)
                         3))
          (pose-cell (if recent-poses
                         (append
@@ -53,7 +57,7 @@ reading, quotes I keep, and whatever I freshly bake with site.
                           recent-poses))
                       "none yet"))
          ;; Last 3 items in wander.org's last group
-         (wander-groups (denden-parse-topic-list (expand-file-name "content/wander.org" denden-repository-directory)))
+         (wander-groups (funcall topic-groups "wander.org"))
          (recent-wanders (reverse (last (plist-get (car (last wander-groups)) :items) 3)))
          (wander-cell (if recent-wanders
                           (append
@@ -62,8 +66,8 @@ reading, quotes I keep, and whatever I freshly bake with site.
                             (lambda (w)
                               (append
                                (list (list 'a (list :href (plist-get w :url)) (plist-get w :name)))
-                               (if (and (plist-get w :desc) (not (string-empty-p (plist-get w :desc))))
-                                   (list " :: " (plist-get w :desc))
+                               (if (and (plist-get w :description) (not (string-empty-p (plist-get w :description))))
+                                   (list " :: " (list 'raw-html nil (plist-get w :description)))
                                  nil)
                                (list '(br nil))))
                             recent-wanders))
@@ -74,13 +78,13 @@ reading, quotes I keep, and whatever I freshly bake with site.
                         (let ((last-item (car (last (plist-get group :items)))))
                           (list 'tr nil
                                 (list 'th '(:scope "row") (list 'a '(:href "/quotes/")
-                                                    (concat (funcall group-icon (plist-get group :label))
-                                                            (plist-get group :label))))
+                                                                (concat (funcall group-icon (plist-get group :label))
+                                                                        (plist-get group :label))))
                                 (list 'td nil (if last-item
                                                   (concat (plist-get last-item :name) " :: "
-                                                          (denden-html-plain-text (plist-get last-item :desc)))
+                                                          (denden-html-plain-text (plist-get last-item :description)))
                                                 "none yet")))))
-                      (denden-parse-topic-list (expand-file-name "content/quotes.org" denden-repository-directory))))
+                      (funcall topic-groups "quotes.org")))
          ;; media.org has several thematic groups (Talks/Books/Movies/
          ;; Anime/YouTube)
          (media-rows (mapcar
@@ -88,13 +92,13 @@ reading, quotes I keep, and whatever I freshly bake with site.
                         (let ((last-item (car (last (plist-get group :items)))))
                           (list 'tr nil
                                 (list 'th '(:scope "row") (list 'a '(:href "/media/")
-                                                    (concat (funcall group-icon (plist-get group :label))
-                                                            (plist-get group :label))))
+                                                                (concat (funcall group-icon (plist-get group :label))
+                                                                        (plist-get group :label))))
                                 (list 'td nil (if last-item
                                                   (list 'a (list :href (plist-get last-item :url))
                                                         (plist-get last-item :name))
                                                 "none yet")))))
-                      (denden-parse-topic-list (expand-file-name "content/media.org" denden-repository-directory))))
+                      (funcall topic-groups "media.org")))
          ;; Freshest edited page, any section, via git lastmod (falls back to
          ;; :date when a page has no git history yet).
          (pages-with-lastmod (delq nil
@@ -102,26 +106,25 @@ reading, quotes I keep, and whatever I freshly bake with site.
                                              (let ((lastmod (denden-page-lastmod p)))
                                                (and lastmod (cons lastmod p))))
                                            all-pages)))
-         (freshest-page (car (sort (copy-sequence pages-with-lastmod)
-                                   (lambda (a b) (string> (car a) (car b))))))
+         (freshest-page (car (sort pages-with-lastmod :key #'car :lessp #'time-less-p :reverse t)))
          (updated-cell (if freshest-page
                            (list 'span nil
-                                 (denden-format-iso-date (car freshest-page) "%d %b") " :: "
-                                 (list 'a (list :href (concat "/" (plist-get (cdr freshest-page) :url)))
-                                       (file-name-nondirectory (plist-get (cdr freshest-page) :source))))
+                                 (format-time-string "%d %b" (car freshest-page)) " :: "
+                                 (list 'a (list :href (concat "/" (denden-page-url (cdr freshest-page))))
+                                       (file-name-nondirectory (denden-page-source (cdr freshest-page)))))
                          "none yet"))
          (table (append
                  (list 'table nil
                        (list 'thead nil (list 'tr nil (list 'th '(:scope "col") "One") (list 'th '(:scope "col") "Piece")))
                        (list 'tr nil (list 'th '(:scope "row") (list 'a '(:href "/log/")
-                                                         (concat (cdr (assoc "rss" site-tag-icons)) "Log")))
+                                                                     (concat (cdr (assoc "rss" site-tag-icons)) "Log")))
                              (list 'td nil post-cell))
                        (list 'tr nil (list 'th '(:scope "row") (list 'a '(:href "/pose/") " Pose")) (list 'td nil pose-cell))
                        (list 'tr nil (list 'th '(:scope "row") (list 'a '(:href "/wander/") " Wander")) (list 'td nil wander-cell)))
                  media-rows
                  quote-rows
                  (list (list 'tr nil (list 'th '(:scope "row") (list 'a '(:href "/sitemap/") " Recent Edits")) (list 'td nil updated-cell))))))
-    (denden-serialize-node (denden-normalise-node table)))
+    (denden-serialize-node table))
 #+end_src
 @@html:<br>@@
 
