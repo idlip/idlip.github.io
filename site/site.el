@@ -921,16 +921,18 @@ For my love and curiosity towards astronomy and mythology.")
                   :tags (plist-get entry :tags) :content-html (plist-get entry :html)))
           (seq-filter (lambda (entry) (plist-get entry :date)) entries)))
 
+(defun site--pose-page-p (page)
+  "Non-nil if PAGE's source declares #+layout: pose."
+  (let ((source (plist-get page :source)) (case-fold-search t))
+    ;; Plain text, no Org mode: the keyword sits in the file's head.
+    (and source (file-exists-p source)
+         (with-temp-buffer
+           (insert-file-contents source nil 0 2000)
+           (re-search-forward (rx bol "#+layout:" (* blank) "pose" eow) nil t)))))
+
 (defun site--pose-feed-pages-for-build (all-pages)
   "Every Pose entry as feed items, from the pose-layout page in ALL-PAGES."
-  (let ((pose-page (seq-find (lambda (page)
-                               (let ((source (plist-get page :source)) (case-fold-search t))
-                                 ;; Plain text, no Org mode: the keyword sits in the file's head.
-                                 (and source (file-exists-p source)
-                                      (with-temp-buffer
-                                        (insert-file-contents source nil 0 2000)
-                                        (re-search-forward (rx bol "#+layout:" (* blank) "pose" eow) nil t)))))
-                             all-pages)))
+  (let ((pose-page (seq-find #'site--pose-page-p all-pages)))
     (when pose-page
       (site--pose-feed-pages (site--pose-entries (plist-get pose-page :source) all-pages)
                              (plist-get pose-page :url) (site-base-url)))))
@@ -1501,7 +1503,7 @@ never writes these.")
 
 (defun site--og-image-url (pretty-url)
   "Return PRETTY-URL's absolute OG-image URL, or nil if none exists."
-  ;; Its own rasterized PNG if one exists (Log posts only), else the
+  ;; Its own rasterized PNG if one exists (Log posts and Pose), else the
   ;; site's one common card at /og/home.png.
   (let* ((slug (site--og-slug pretty-url))
          (own (expand-file-name (concat slug ".png") site-og-png-directory))
@@ -1551,6 +1553,10 @@ and capped at 160 characters."
   (let ((text (replace-regexp-in-string denden-whitespace-run-regexp " " (site--og-excerpt-for-page page))))
     (if (> (length text) 160) (concat (substring text 0 159) "…") text)))
 
+(defun site--og-card-pages (pages)
+  "The PAGES with their own OG card: every Log post, plus the Pose page."
+  (append (denden-pages-in-section pages "log") (seq-filter #'site--pose-page-p pages)))
+
 (cl-defun site-build-og-cards (&key pages card-site-title favicon-path pub-dir word-count-fn)
   "Write one OG-card SVG per page in PAGES under PUB-DIR, titled
 CARD-SITE-TITLE, with FAVICON-PATH embedded."
@@ -1560,7 +1566,9 @@ CARD-SITE-TITLE, with FAVICON-PATH embedded."
                        :excerpt (site--og-excerpt-for-page page)
                        :tags (plist-get page :tags)
                        :slug (plist-get page :url)
-                       :date (plist-get page :date) :meta-right (funcall word-count-fn page)
+                       :date (plist-get page :date)
+                       ;; Pose grows daily; its card skips the word count so it never goes stale.
+                       :meta-right (unless (site--pose-page-p page) (funcall word-count-fn page))
                        :card-site-title card-site-title :favicon-path favicon-path)
      (site--og-svg-output-path page pub-dir))))
 
@@ -1594,12 +1602,11 @@ index, OG cards, 404) into PUB-DIR."
     (site-build-search-index regular pub-dir)
     (site-build-wander-js (expand-file-name "content/wander.org" repository-directory) pub-dir)
     (site-build-wander-theme-css pub-dir)
-    ;; Only Log posts earn their own OG card: a real excerpt and word
-    ;; count is worth the per-post render. Every other page, standalone
-    ;; pages and every section listing like /wander/ or /projects/ alike,
-    ;; shares this one static home card instead, via `site--og-image-url's
-    ;; fallback to og/home.png. No title, no words, never changes.
-    (site-build-og-cards :pages (denden-pages-in-section regular "log") :card-site-title site-title
+    ;; Log posts and the Pose page earn their own OG card. Every other page,
+    ;; standalone pages and section listings like /wander/ alike, shares the
+    ;; one static home card instead, via `site--og-image-url's fallback to
+    ;; og/home.png.
+    (site-build-og-cards :pages (site--og-card-pages regular) :card-site-title site-title
                          :favicon-path favicon-path :pub-dir pub-dir :word-count-fn #'site--word-count-meta)
     ;; The one shared card, built from the home page's own excerpt (its
     ;; #+description: keyword if index.org sets one, else its own first
@@ -1798,14 +1805,14 @@ refreshes cross-page metadata first."
 ;;;; This site's own M-x commands, via `denden-define-command'
 
 (denden-define-command idlip og-regenerate-all ()
-                       "Regenerate every Log post's OG card SVG, without a full rebuild."
+                       "Regenerate the Log and Pose OG card SVGs, without a full rebuild."
                        (let* ((leaves (org-publish-expand-projects (list (assoc "site" org-publish-project-alist))))
                               (all-pages (denden-collect-page-metadata leaves))
                               (enriched (mapcar (lambda (p) (site--enrich-page p (site-base-url) all-pages)) all-pages))
                               (regular (site--regular-pages enriched))
                               (favicon-path (expand-file-name site-favicon-relative-path
                                                               (expand-file-name "static" denden-repository-directory))))
-                         (site-build-og-cards :pages (denden-pages-in-section regular "log") :card-site-title site-title
+                         (site-build-og-cards :pages (site--og-card-pages regular) :card-site-title site-title
                                               :favicon-path favicon-path
                                               :pub-dir site-publishing-directory :word-count-fn #'site--word-count-meta)))
 

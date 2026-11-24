@@ -2,9 +2,9 @@
 #+layout: pose
 #+draft: false
 #+no_comment: t
-#+desc: Quick thoughts, single lines, mini notes and snippets of journal.
+#+desc: Quick thoughts, short bits, philosophical, poetic, mini-micro notes and snippets of journal.
 
-Quick thoughts, short bits, single lines, poetic, mini-micro notes and snippets of journal.
+Quick thoughts, short bits, philosophical, poetic, mini-micro notes and snippets of journal.
 
 * [2026-09-30 Wed] Owning something is better than consuming anything :philosophy:
 Consuming is a trap and well played psychological game intellects created.
