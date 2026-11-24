@@ -27,22 +27,20 @@ A template in this file is a plain Lisp list:
 =<a href="/" class="site-title">Home</a>=. A bare string is a text
 node, escaped for HTML automatically. =(raw-html nil "<b>already
 html</b>")= inserts already-rendered HTML without escaping it. Post
-bodies from org-export use this. Small template functions build up
-bigger sexp trees. Then =denden-serialize-node= (in =denden.el=) turns
-the final tree into an HTML string when the site is published.
+bodies from org-export use this. A nil child is skipped, so
+=(and CONDITION NODE)= works inside a template. Templates are written
+with backquote, and small template functions build up bigger trees.
+Then =denden-serialize-node= (in =denden.el=) turns the final tree into
+HTML when the site is built.
 
 ** Why not plain HTML files with placeholders?
 
 A plain Lisp list is real data. It composes with =append=, =list=, and
 =mapcar=, like any other Lisp value. A malformed list, for example a
-dotted pair where a list of children was meant, is a build-time error
-from =denden-normalise-attributes=. It does not silently break a page.
+dotted pair where a list of attributes was meant, is a build-time error
+from =denden-serialize-node=. It does not silently break a page.
 
-The tradeoff: a template reads less like HTML at first glance. If that
-is a problem, use =denden-convert-html-file= or
-=denden-convert-html-string= (in =denden.el=). These functions turn real
-HTML back into this sexp form. This is useful for sketching a piece of
-markup as plain HTML first, then converting it in.
+The tradeoff: a template reads less like HTML at first glance.
 
 ** What is in here, top to bottom
 
@@ -80,8 +78,8 @@ are generated instead, both in =site.el=:
 - =site-highlight-stylesheet=. The code-highlight color mapping.
 
 Both are short =[data-scheme="x"]{--base00:#...;...}= blocks, one per
-scheme. At build time, =site-build-stylesheet= joins =theme.css= and
-these two generated blocks into =public-denden/css/bundle.css=. Each
+scheme. At build time, the output =site-asset-outputs= joins =theme.css=
+and these two generated blocks into =public-denden/css/bundle.css=. Each
 part sits under its own comment banner. Open that file after a build to
 see exactly what shipped.
 
@@ -94,3 +92,6 @@ The view radios (List, Grid) work through CSS =:has()= alone; JS only remembers 
 choice.
 
 Every setting change shows a short toast: a native =popover= with =role=status=, so screen readers hear it too (=announce= in =index.js=). Toolbar buttons and content buttons share one =data-action= table; older action names used inside content pages (=browse-schemes=) still work.
+
+* Tests
+=theme/test/theme-test.el= renders single templates and checks their HTML; =site/test/site-test.el= checks whole pages. Run them with =just test=.

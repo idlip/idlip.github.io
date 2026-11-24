@@ -29,9 +29,9 @@ web:
     #!/usr/bin/env bash
     set -euo pipefail
     if command -v static-web-server >/dev/null; then
-        static-web-server --root {{public}} --port {{port}} --page404 {{public}}/404.html
+        static-web-server --root {{public}} --port {{port}}
     else
-        nix run nixpkgs#static-web-server -- --root {{public}} --port {{port}} --page404 {{public}}/404.html
+        nix run nixpkgs#static-web-server -- --root {{public}} --port {{port}}
     fi
 
 # Build, then publish public-denden/ on the gh-pages branch.
@@ -87,11 +87,8 @@ check: && test
     emacs --batch -Q -L denden -l tools/lint/xr.el -l tools/lint/relint.el \
         -f relint-batch denden/denden.el
 
-# Lay out the Emacs Lisp, CSS, JS, JSON and YAML files (layout only).
+# Format CSS, JS, JSON and YAML with treefmt.
 format:
-    emacs --batch -Q -L denden -L site -L theme -l tools/format-elisp.el \
-        denden/denden.el denden/example/example-site.el site/site.el theme/theme.el \
-        tools/format-elisp.el denden/test/*.el site/test/*.el theme/test/*.el
     treefmt
 
 # Make the favicons from an image. Usage: just favicon ~/zoro.png zoro

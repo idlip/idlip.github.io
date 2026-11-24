@@ -15,31 +15,23 @@ These are the places to change for common, cosmetic changes. No new Lisp functio
 - Chip colour on one topic-list page: set =#+chip_color: base0E= (any base16 slot) in that file.
 
 * How this file is organized
-Content, from top to bottom of the file:
+=site.el= is idlip.in on Denden. From top to bottom:
 - Configuration data. Both menus, color schemes, title quotes, social links, tag icons, badges, and footer content. These are plain constants. Edit them directly for cosmetic changes.
 - Base16 scheme handling. =site-contrast-floor= and =site-scheme-readable-p= check every scheme (text 7:1, links 4.5:1, accent and headings 3:1). =site-scheme-css= writes the CSS for readable variants only, =site-light-scheme-names= tells the pre-paint script which families have a light variant, and =site-schemes-json= writes the palette list (curated families first, then every readable scheme). It also parses custom schemes in =assets/css/theme.css=, using the =/* @scheme: ... */= comment convention.
-- =site-generate-schemes-base16-file=. This regenerates
-  =site-schemes-base16.el=, the committed file with 304 base16 entries.
-  Run it by hand only when the =data/schemes/= submodule updates. No part
-  of the real build calls this function.
-- Base16 code-highlight mapping. This maps each htmlize class to its
-  =--baseNN= token.
-- The OG card template (=site-og-card-svg=). A 1200x630 card in the Haki colours of =site--og-colors=: favicon and site title, page address, title, excerpt, tag chips, date and reading time. The reusable word-wrap and truncate code lives in =denden.el=. Run =just og= to turn the SVGs into PNGs.
-- Page dispatch (=site-publish-page= and related functions). This is the largest section. It builds the home page, single posts, topic-list pages, the Pose page, the sitemap, and taxonomy pages such as =/tags/= and =/refs/=. The retired =/themes/= page is written as a redirect home.
-- Other outputs. Feeds (the main feed carries Log and Pose; =/log/= and =/pose/= keep their own), =sitemap.xml=, =robots.txt=, aliases, the search index, =wander.js= (with =site--wander-colors-script= appended, so the console takes the site's colours), OG cards, and =404.html=.
-- =org-publish-project-alist= and =site-build=/=site-build-async=. These
-  are the real build entry points that =denden-build= calls.
-- The section that connects this site to denden. It sets every
-  =denden-*= customize variable that =denden.el= needs. This includes
-  the content directory, the post directory, the container file, and the
-  build functions. Copy this pattern if you point denden at a second
-  site.
-- Per-build caches set by =site--inject-all-pages=: the palette data script and the light-scheme names, so each page does not recompute them.
-- This site's own commands, added with =denden-define-command=. Right
-  now there is only =denden-idlip-og-regenerate-all=. Add new commands
-  here, not in =denden.el=.
+- =site-generate-schemes-base16-file=. This regenerates =site-schemes-base16.el=, the committed file with 304 base16 entries. Run it by hand only when the =data/schemes/= submodule updates. No part of the build calls it.
+- Code colours (=site-highlight-stylesheet=). This maps each htmlize class to its =--baseNN= token.
+- The OG card template (=site-og-card-svg=). A 1200x630 card in the Haki colours of =site--og-colors=: favicon and site title, page address, title, excerpt, tag chips, date and reading time. Run =just og= after a build to turn the SVGs into PNGs.
+- Topic lists (=site-topic-groups=) and Pose (=site-pose-entries=). Both read the page's text once with =org-element=, export every description or entry in one batch, and keep the result in the page for the rest of the build.
+- Data every page shares (=site--build-data=): the palette script, the light-scheme names and the CSS text, computed once per build.
+- The page shell (=site-page-shell=), which calls =theme-baseof= with this site's head and chrome.
+- Layouts. =site-render-page= is the default (the home page, or a single page with its TOC, References, See Also, comment box and pager); =site-render-pose-page=, =site-render-topic-list-page=, =site-render-sitemap-page= and =site-render-links-page= serve =#+layout: pose=, =topic-list=, =sitemap= and =links=. Pages with no Org file (section lists, =/tags/=, =/refs/= and their terms, =404.html=) are made in =site-listing-outputs= and rendered with =site-render-section-listing=, =site-render-terms=, =site-render-term= and =site-render-not-found=.
+- Outputs. Feeds (=site-feed-outputs=: the main feed carries Log and Pose; =/log/= and =/pose/= keep their own; each tag and ref has an =rss.xml=), legacy redirects (=/posts/= and =/themes/=), the search index, the Wander console files (=wander.js= with =site--wander-colors-script= appended, and =wander-theme.css=), the style sheet bundle with the script and scheme data (=site-asset-outputs=), and OG cards.
+- The site itself: one =denden-define-site= form, =idlip-site=, which names the layouts and outputs above.
 
-* Adding a new page kind
-A new page kind needs its own template, not just a new page. To add one,
-write a =site-publish-<kind>-page= function. Then add a clause to the
-=cond= in =site-publish-page=.
+* Adding things
+- A new page kind: write a layout =(defun site-render-KIND (site page pages) ...)= that returns the page's main node, add =("KIND" . site-render-KIND)= to =:layouts= in =idlip-site=, and set =#+layout: KIND= in the Org file.
+- A new generated file: write an output =(defun site-NAME-outputs (site pages) ...)= that returns a list of =(URL . TEXT)=, and add it to =:outputs=.
+- Code blocks in content can read =denden-current-site=, =denden-current-page= and =denden-current-pages=, and should call only public (=site-=, =theme-=, =denden-=) functions.
+
+* Tests
+=site/test/=: =site-test.el= renders a small fixture site through =idlip-site='s own layouts and outputs, in memory; the other files test scheme handling and the OG card. Run them with =just test=, or everything with =just check=.

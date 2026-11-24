@@ -1,14 +1,14 @@
-;;; site.el --- idlip.in: config, content wiring, site-specific rendering -*- lexical-binding: t; -*-
+;;; site.el --- idlip.in: site data, layouts and outputs -*- lexical-binding: t; -*-
 
 ;;; Commentary:
 
-;; This site's config, content and site-specific rendering: the org-publish
-;; project definition, the Emacs-frame chrome data, wander, the themes
-;; gallery, topic-list with chips and icons, references and the link
-;; budget, the OG card template, base16 scheme handling, command palette
-;; data.
+;; idlip.in on Denden: the site's data (menus, colour schemes, social
+;; links, icons, badges), its layouts (single pages, home, Pose, topic
+;; lists, sitemap, links, generated lists of sections and tags, 404),
+;; and its outputs (feeds, redirects, search index, the Wander console
+;; files, the style sheet bundle, OG cards).  Templates live in theme.el.
 ;;
-;; Builds to public-denden/, separate from Hugo's own public/ output.
+;; Build it with M-x denden-build, or `just build' from a shell.
 
 ;;; Code:
 
@@ -18,9 +18,20 @@
 (require 'rx)
 (require 'calendar)
 (require 'cal-iso)
+(require 'url-parse)
 (require 'denden)
 (require 'theme)
 (require 'site-schemes-base16)
+
+(defconst site-root-directory
+  (file-name-directory (directory-file-name (file-name-directory (or load-file-name buffer-file-name))))
+  "Root folder of the site: the folder above the one that holds site.el.")
+
+(defconst site-js-source-file "assets/js/index.js"
+  "The site's one hand-edited script, relative to the site's root.")
+
+(defconst site-css-source-file "assets/css/theme.css"
+  "The site's one hand-edited style sheet, relative to the site's root.")
 
 ;;;; Config data: menu, color schemes, social links, palette icons, badges
 
@@ -116,19 +127,9 @@
   "This site's fediverse:creator meta value, ported from Hugo's
 extended_head.html.")
 
-(defconst site-base-url-production "https://idlip.in/")
-
-(defun site-base-url ()
-  "Return the base URL for links, canonical, feeds, and sitemap:
-`site-base-url-production', or the preview env var when set."
-  (or (getenv "DENDEN_PREVIEW_BASE_URL") site-base-url-production))
-
 (defconst site-umami-script-url "https://analytics.fossunited.org/script.js")
 
 (defconst site-umami-website-id "64825a51-be1b-416e-b1ec-895aa541dcab")
-
-(defconst site-publishing-directory
-  (expand-file-name "public-denden" denden-repository-directory))
 
 (defconst site-preload-fonts '("/fonts/impress.woff2" "/fonts/code-haki.woff2")
   "Fonts the default view paints first, preloaded in <head>.")
@@ -142,7 +143,7 @@ extended_head.html.")
     ("linux" . " ") ("foss" . " ") ("rss" . " ") ("games" . " ") ("terminal" . " ")
     ("cli" . " ") ("vim" . " ") ("android" . "") ("fossdroid" . "") ("quotes" . "󱀡 ")
     ("bioinformatics" . "󰚄 ") ("python" . " ") ("r" . "󰟔") ("finance" . " ")
-    ("principle" . " ") ("webdev" . " ") ("lisp" . "󱃺 ") ("git" . " ") 
+    ("principle" . " ") ("webdev" . " ") ("lisp" . "󱃺 ") ("git" . " ")
 
     ;; Link hosts for /links: a key matches a whole host or one dot-separated part of it.
     (,(rx (or (seq "emacs" (+ nonl)) "gnu" "karthinks" "protesilaos" "karl-voit")) . " ")
@@ -402,6 +403,8 @@ scalar stays a string."
             text)
            (match-string 1 text))))
 
+(declare-function yaml-parse-string "yaml" (string &rest args))
+
 (defun site--yaml-scheme-file-to-entry (file)
   "Parse one base16 yaml FILE into (KEY . (:name :author :variant :palette))."
   (require 'yaml)
@@ -417,17 +420,17 @@ scalar stays a string."
                 :variant (site--yaml-raw-string-field text "variant")
                 :palette (nreverse palette)))))
 
-(defun site-generate-schemes-base16-file (&optional source-directory output-file)
-  "Parse every base16 yaml under SOURCE-DIRECTORY and write OUTPUT-FILE, a
+(defun site-generate-schemes-base16-file (&optional schemes-directory output-file)
+  "Parse every base16 yaml under SCHEMES-DIRECTORY and write OUTPUT-FILE, a
 committed elisp data file. Run by hand."
   (interactive)
-  (let* ((source-directory (or source-directory
-                               (expand-file-name "data/schemes/base16/" denden-repository-directory)))
+  (let* ((schemes-directory (or schemes-directory
+                                (expand-file-name "data/schemes/base16/" site-root-directory)))
          (output-file (or output-file
                           (expand-file-name "site-schemes-base16.el"
                                             (file-name-directory (or load-file-name buffer-file-name)))))
          (entries (mapcar #'site--yaml-scheme-file-to-entry
-                          (sort (directory-files source-directory t (rx ".yaml" eos)) #'string<))))
+                          (sort (directory-files schemes-directory t (rx ".yaml" eos)) #'string<))))
     (with-temp-file output-file
       (insert ";;; site-schemes-base16.el --- generated base16 scheme data -*- lexical-binding: t; -*-\n\n")
       (insert ";; Do not hand-edit. Generated by `site-generate-schemes-base16-file'\n")
@@ -470,14 +473,14 @@ committed elisp data file. Run by hand."
   "Base16 styling-guidelines mapping for htmlize's font-lock-derived classes.")
 
 (defun site-highlight-stylesheet ()
-  "Return the CSS stylesheet mapping highlighted code onto base16 tokens."
-  (denden-highlight-stylesheet site-highlight-class-colors))
+  "Return the CSS that colours highlighted code with the base16 variables."
+  (mapconcat (lambda (entry) (format ".%s { color: %s; }" (car entry) (cdr entry)))
+             site-highlight-class-colors "\n"))
 
 ;;;; This site's OG card template
 ;;
-;; The reusable wrapping math is `denden-og-wrap-words'/`denden-og-truncate-
-;; lines'; colors and geometry here are this site's own: a 1200x630 card in
-;; the site's Haki look.
+;; A 1200x630 card in the site's Haki look, written as SVG.  `just og'
+;; turns each card into a PNG by hand.
 
 (defconst site--og-media-types
   '(("webp" . "image/webp") ("png" . "image/png") ("jpg" . "image/jpeg")
@@ -500,22 +503,22 @@ committed elisp data file. Run by hand."
   (let* ((font-size (cond ((> (length title) 60) 46) ((> (length title) 32) 54) (t 64)))
          (wrap-width (cond ((> (length title) 60) 38) ((> (length title) 32) 32) (t 27))))
     (list :font-size font-size
-          :lines (denden-og-truncate-lines (denden-og-wrap-words title wrap-width) 3))))
+          :lines (site--truncate-lines (site--wrap-words title wrap-width) 3))))
 
 (defun site--og-excerpt-lines (excerpt max-lines)
   "EXCERPT wrapped at 64 characters, at most MAX-LINES lines, gaps kept."
   (when (and excerpt (> max-lines 0))
-    (denden-og-truncate-lines
+    (site--truncate-lines
      (seq-mapcat (lambda (source-line)
                    (if (string-empty-p source-line)
                        (list "")
-                     (denden-og-wrap-words (replace-regexp-in-string (rx (+ (any " \t"))) " " (string-trim source-line)) 64)))
+                     (site--wrap-words (replace-regexp-in-string (rx (+ (any " \t"))) " " (string-trim source-line)) 64)))
                  (split-string (string-trim excerpt) "\n"))
      max-lines)))
 
 (defconst site--og-colors
   '(:background "#000000" :surface "#0a0f0a" :border "#404040" :text "#ffffff" :faint "#b3b3b3"
-                :accent "#5fd7af" :title "#ab82ff" :link "#2fafff")
+    :accent "#5fd7af" :title "#ab82ff" :link "#2fafff")
   "The Haki palette the OG card is drawn in, matching the site's default scheme.")
 
 (defun site--og-chips (tags y)
@@ -536,8 +539,11 @@ committed elisp data file. Run by hand."
     (append (list 'g nil) (nreverse chips))))
 
 (cl-defun site-og-card-svg (&key title excerpt tags slug date meta-right card-site-title favicon-path
-                                 (font "Code D OnePiece"))
-  "This site's 1200x630 OG card for TITLE as an <svg> string, in Haki colours."
+                                 base-url (font "Code D OnePiece"))
+  "Return the 1200x630 OG card of TITLE as SVG text, in Haki colours.
+EXCERPT, TAGS, SLUG, DATE and META-RIGHT fill the card; CARD-SITE-TITLE
+and the image at FAVICON-PATH head it; BASE-URL gives the address
+shown; FONT is the font family."
   (let* ((colors site--og-colors)
          (title-info (site--og-title-lines title))
          (title-lines (plist-get title-info :lines))
@@ -550,7 +556,7 @@ committed elisp data file. Run by hand."
          (excerpt-bottom (if (or tags date meta-right) 486 560))
          (excerpt-lines (site--og-excerpt-lines excerpt (min 6 (1+ (/ (- excerpt-bottom excerpt-top) 38)))))
          (favicon-data-uri (site--og-favicon-data-uri favicon-path))
-         (domain (string-remove-prefix "https://" (string-remove-suffix "/" (site-base-url))))
+         (domain (string-remove-prefix "https://" (string-remove-suffix "/" (or base-url ""))))
          (address (if slug (format "%s/%s" domain (string-remove-suffix "/" slug)) domain))
          (meta (string-join (delq nil (list date (and meta-right (not (string-empty-p meta-right)) meta-right)))
                             "  ·  "))
@@ -597,192 +603,174 @@ committed elisp data file. Run by hand."
                   (list 'text (list :x "1136" :y "562" :fill (plist-get colors :faint) :font-size "22" :text-anchor "end")
                         meta))
                 '(rect (:y "620" :width "1200" :height "10" :fill "url(#edge)")))))
-    (denden-serialize-node (denden-normalise-node tree))))
+    (denden-serialize-node tree)))
 
-;;;; Wire theme templates into the real build
+;;;; Text helpers
+
+(defun site--wrap-words (text max-width)
+  "Return TEXT wrapped greedily into lines of at most MAX-WIDTH characters."
+  (let ((lines nil)
+        (current ""))
+    (dolist (word (split-string text " " t))
+      (let ((candidate (if (string-empty-p current) word (concat current " " word))))
+        (if (> (length candidate) max-width)
+            (progn (unless (string-empty-p current) (push current lines))
+                   (setq current word))
+          (setq current candidate))))
+    (unless (string-empty-p current) (push current lines))
+    (nreverse lines)))
+
+(defun site--truncate-lines (lines max-lines)
+  "Return at most MAX-LINES of LINES, with an ellipsis when some were cut."
+  (if (<= (length lines) max-lines)
+      lines
+    (let ((kept (seq-take lines max-lines)))
+      (append (seq-take kept (1- max-lines))
+              (list (concat (car (last kept)) "…"))))))
+
+(defun site--word-count (page)
+  "Return the number of words in the body of PAGE."
+  (length (split-string (denden-html-plain-text (or (denden-page-body page) "")) nil t)))
+
+(defun site--reading-time (word-count)
+  "Return the reading time in whole minutes for WORD-COUNT words, at least 1."
+  (max 1 (round (/ word-count 200.0))))
+
+(defun site--true-p (value)
+  "Return non-nil when the keyword VALUE means true, such as t or true."
+  (and value (member (downcase (string-trim value)) '("t" "true" "yes"))))
+
+(defun site--meta (page key)
+  "Return the value of KEY in the meta plist of PAGE."
+  (plist-get (denden-page-meta page) key))
+
+(defun site--remember (page key compute)
+  "Return the value stored under KEY in PAGE, calling COMPUTE once to make it.
+The value lives in the page's meta plist, so it lasts for one build."
+  (or (site--meta page key)
+      (let ((value (funcall compute)))
+        (setf (denden-page-meta page) (plist-put (denden-page-meta page) key value))
+        value)))
+
+(defun site--tags (page)
+  "Return the tags of PAGE."
+  (denden-page-taxonomy-terms page "tags"))
+
+(defun site--refs (page)
+  "Return the refs of PAGE."
+  (denden-page-taxonomy-terms page "refs"))
+
+(defun site--intro-html (page)
+  "Return the body of PAGE before its first section, as HTML."
+  (let* ((body (or (denden-page-body page) ""))
+         (split-point (string-search "<div id=\"outline-container-" body)))
+    (if split-point (substring body 0 split-point) body)))
+
+(defun site--strip-paragraph (html)
+  "Return HTML without the one paragraph element around it, if it has one."
+  (let ((html (string-trim html)))
+    (if (and (string-prefix-p "<p>" html) (string-suffix-p "</p>" html))
+        (string-trim (substring html 3 -4))
+      html)))
+
+(defun site--home-page-p (page)
+  "Return non-nil if PAGE is the home page."
+  (string-empty-p (denden-page-url page)))
+
+(defun site--regular-pages (pages)
+  "Return PAGES without the home page."
+  (seq-remove #'site--home-page-p pages))
+
+(defun site-pose-page (pages)
+  "Return the page of PAGES whose layout is pose, or nil."
+  (seq-find (lambda (page) (equal (denden-page-layout page) "pose")) pages))
+
+;;;; Topic lists (wander, projects, media, quotes, uses)
 ;;
-;; Page-kind routing: a source file named _index.org (or index.org) is a
-;; listing page (only content/_index.org exists today -> home); a file
-;; whose #+layout: is "topic-list" or "themes" routes to that template;
-;; everything else is a single page. /tags/ and every /tags/<tag>/ have no
-;; source file at all -- synthesized purely from taxonomy data by
-;; `site-build-taxonomy-pages', called after the normal publish+sweep so
-;; the sweep does not delete them as "unexpected".
+;; A topic-list page is Org with one heading per group and a descriptive
+;; list of items under it: "- [[URL][Name]] :: description | key: value".
+;; The parts after " | " become chips.
 
-(defun site--first-mailto (links)
-  "First mailto: address in LINKS (site-social-links shape), or \"\"."
-  (or (cl-some (lambda (l) (and (string-prefix-p "mailto:" (plist-get l :url))
-                                (substring (plist-get l :url) 7)))
-               links)
-      ""))
+(defun site--topic-item (item)
+  "Return the parts of the descriptive list ITEM, before any export.
+The result is a plist with :url, :name, :description-text and
+:parts, each part a plist with :key and :value."
+  (let* ((link (car (org-element-map (org-element-property :tag item) 'link #'identity)))
+         (begin (org-element-contents-begin item))
+         (end (org-element-contents-end item))
+         (raw (if (and begin end) (string-trim (buffer-substring-no-properties begin end)) ""))
+         (segments (mapcar #'string-trim (split-string raw " | "))))
+    (list :url (if link (org-element-property :raw-link link) "")
+          :name (if link
+                    (let ((link-begin (org-element-contents-begin link))
+                          (link-end (org-element-contents-end link)))
+                      (if (and link-begin link-end)
+                          (string-trim (buffer-substring-no-properties link-begin link-end))
+                        (org-element-property :raw-link link)))
+                  "")
+          :description-text (or (car segments) "")
+          :parts (mapcar (lambda (segment)
+                           (let ((colon (string-search ":" segment)))
+                             (list :key (if colon (string-trim (substring segment 0 colon)) segment)
+                                   :value (if colon (string-trim (substring segment (1+ colon))) ""))))
+                         (cdr segments)))))
 
-(defun site--page-title (title)
-  "Return the <title> tag text for TITLE, or `site-title' alone if TITLE is
-nil."
-  (if title (format "%s | %s" title site-title) site-title))
+(defun site--parse-topic-groups (page)
+  "Return the groups of the topic-list PAGE, before any export.
+Each group is a plist with :label and :items."
+  (with-temp-buffer
+    (insert (denden-page-text page))
+    (delay-mode-hooks (org-mode))
+    (org-element-map (org-element-parse-buffer) 'headline
+      (lambda (headline)
+        (list :label (org-element-property :raw-value headline)
+              :items (mapcan (lambda (plain-list)
+                               (and (eq (org-element-property :type plain-list) 'descriptive)
+                                    (mapcar #'site--topic-item
+                                            (org-element-map plain-list 'item #'identity))))
+                             (org-element-map (org-element-contents headline) 'plain-list
+                               #'identity nil nil 'headline))))
+      nil nil 'headline)))
 
-(defun site--palette-data-script (all-pages)
-  "Return the command palette's post/tag/nav/icon data from ALL-PAGES, as one
-<script> tag."
-  (let ((posts (append
-                (mapcar (lambda (p) (list :title (plist-get p :title)
-                                          :url (concat "/" (plist-get p :url))
-                                          :date (plist-get p :date)
-                                          :tags (vconcat (plist-get p :tags))))
-                        all-pages)
-                ;; Pose entries too, so palette search and Random can land on a daily note.
-                (mapcar (lambda (entry)
-                          (let ((address (url-generic-parse-url (plist-get entry :permalink))))
-                            (list :title (plist-get entry :title)
-                                  :url (format "%s#%s" (url-filename address) (url-target address))
-                                  :date (plist-get entry :date) :tags (vconcat (plist-get entry :tags)))))
-                        (site--pose-feed-pages-for-build all-pages))))
-        (tags (mapcar (lambda (tc) (list :name (plist-get tc :tag) :count (plist-get tc :count)
-                                         :url (format "/tags/%s/" (downcase (plist-get tc :tag)))))
-                      (denden-tag-counts all-pages))))
-    (list 'raw-html nil
-          (format "<script>window.__posts=%s;window.__tags=%s;window.__nav=%s;window.__paletteIcons=%s;</script>"
-                  (json-serialize (vconcat posts)) (json-serialize (vconcat tags))
-                  (json-serialize (vconcat site-menu-main)) (json-serialize site-palette-icons)))))
+(defun site-topic-groups (site page pages)
+  "Return the groups of the topic-list PAGE of SITE, given all PAGES.
+Each group is a plist with :label and :items.  Each item is a plist
+with :url, :name, :description (HTML) and :parts, each part a plist
+with :key, :value and :html.  Every description and part is exported
+in one batch, and the result is kept in PAGE for the rest of the
+build.  With #+sort: name, items are sorted by name."
+  (site--remember
+   page :site-topic-groups
+   (lambda ()
+     (let* ((groups (site--parse-topic-groups page))
+            (items (mapcan (lambda (group) (copy-sequence (plist-get group :items))) groups))
+            (texts (mapcan (lambda (item)
+                             (cons (plist-get item :description-text)
+                                   (mapcar (lambda (part) (plist-get part :value))
+                                           (plist-get item :parts))))
+                           items))
+            ;; One HTML piece per text, in the order of TEXTS.
+            (html (mapcar #'site--strip-paragraph
+                          (and texts (denden-export-org-strings site texts pages page))))
+            (by-name (equal (site--meta page :sort) "name")))
+       (mapcar (lambda (group)
+                 (let ((items (mapcar (lambda (item)
+                                        (list :url (plist-get item :url)
+                                              :name (plist-get item :name)
+                                              :description (pop html)
+                                              :parts (mapcar (lambda (part)
+                                                               (list :key (plist-get part :key)
+                                                                     :value (plist-get part :value)
+                                                                     :html (pop html)))
+                                                             (plist-get item :parts))))
+                                      (plist-get group :items))))
+                   (list :label (plist-get group :label)
+                         :items (if by-name
+                                    (sort items :key (lambda (item) (plist-get item :name)))
+                                  items))))
+               groups)))))
 
-(defun site--favicon-mime-type ()
-  "`site-favicon-relative-path''s MIME type, via `site--og-media-types'."
-  (or (cdr (assoc (downcase (or (file-name-extension site-favicon-relative-path) ""))
-                  site--og-media-types))
-      "application/octet-stream"))
-
-(cl-defun site--wrap-page (&key body rss-url title url (og-card t) description og-type
-                                published-time modified-time tags noindex)
-  "Wrap BODY in `theme-baseof' with this site's chrome data; pass OG-CARD nil
-for a page with no OG image."
-  (theme-baseof :language "en" :body body :stylesheet-href "/css/bundle.css"
-                :script-href "/js/index.js" :schemes-url "/js/schemes-data.json"
-                :palette-data-script site--palette-data-script-cache
-                :page-title (site--page-title title) :og-title (or title site-title)
-                :menu-items site-menu-header :footer-links site-menu-main
-                :site-title site-title :title-quotes site-title-quotes :rss-url rss-url
-                :light-schemes site--light-schemes-cache
-                :footer-content site-footer-content
-                :description (or description site-description)
-                :canonical-url (and url (concat (string-remove-suffix "/" (site-base-url)) "/" url))
-                :favicon-href (concat "/" site-favicon-relative-path)
-                :favicon-type (site--favicon-mime-type)
-                :touch-icon-href "/images/apple-touch-icon.png"
-                :preload-fonts site-preload-fonts
-                :og-type (or og-type "website") :og-image (and url og-card (site--og-image-url url))
-                :published-time published-time :modified-time modified-time :tags tags
-                :author-name site-author-name :noindex noindex
-                :fediverse-creator site-fediverse-creator
-                :analytics-script-url site-umami-script-url
-                :analytics-website-id site-umami-website-id))
-
-(defun site--write-page (page output)
-  "Serialize PAGE (a theme-baseof node) to OUTPUT, doctype included."
-  (make-directory (file-name-directory output) t)
-  (with-temp-file output
-    (insert "<!doctype html>")
-    (insert (denden-serialize-node (denden-normalise-node page)))))
-
-(defun site--related-pages (this-page all-pages body-links &optional backlinks)
-  "Return pages from ALL-PAGES sharing THIS-PAGE's first two tags or refs, up
-to the link budget left after BODY-LINKS and BACKLINKS, skipping BACKLINKS."
-  (let* ((budget 7)
-         ;; References and backlinks both use the budget; backlinks still always show.
-         (n (+ (length body-links) (length backlinks)))
-         (already (mapcar (lambda (l) (string-remove-suffix "/" (plist-get l :href)))
-                          (seq-filter (lambda (l) (plist-get l :internal)) body-links)))
-         (remaining (max 0 (- budget n)))
-         (tags (seq-take (plist-get this-page :tags) 2))
-         (refs (seq-take (plist-get this-page :refs) 2)))
-    (if (or (>= n budget) (and (null tags) (null refs)))
-        nil
-      (seq-take
-       (seq-filter (lambda (p) (and (not (eq p this-page)) (not (memq p backlinks))
-                                    (not (member (string-remove-suffix "/" (concat "/" (plist-get p :url))) already))
-                                    (or (seq-intersection (plist-get p :tags) tags)
-                                        (seq-intersection (plist-get p :refs) refs))))
-                   (denden-sort-pages-by-date-desc all-pages))
-       remaining))))
-
-(defun site--prev-next-in-section (this-page all-pages)
-  "Return THIS-PAGE's (:prev :next) date-ordered neighbors within its own
-:section, from ALL-PAGES."
-  (let* ((siblings (denden-sort-pages-by-date-desc
-                    (denden-pages-in-section all-pages (plist-get this-page :section))))
-         (index (seq-position siblings this-page)))
-    (when index
-      (list :prev (nth (1+ index) siblings)
-            :next (and (> index 0) (nth (1- index) siblings))))))
-
-(defun site--toc-node (filename all-pages)
-  "Return FILENAME's table-of-contents node, or nil unless it opts in via
-#+toc: t."
-  (when (denden-file-keyword-true-p filename "TOC")
-    (let* ((with-toc-html (denden-export-file-body filename all-pages :with-toc t))
-           (dom (with-temp-buffer (insert with-toc-html) (libxml-parse-html-region (point-min) (point-max))))
-           (toc-div (car (dom-by-id dom (rx bos "table-of-contents" eos))))
-           (toc-list (car (dom-by-id dom (rx bos "text-table-of-contents" eos)))))
-      (when (and toc-div toc-list)
-        (append (list 'details '(:class "toc") '(summary nil "Contents")) (dom-children toc-list))))))
-
-(cl-defun site--assemble-and-write-single-page (&key output pub-dir body-html all-pages lastmod-source toc)
-  "Assemble and write a themed single-post page at OUTPUT from BODY-HTML."
-  (let* ((this-page (seq-find (lambda (p) (equal (plist-get p :url)
-                                                 (denden-pretty-url (file-relative-name output pub-dir))))
-                              all-pages))
-         (title (or (and this-page (plist-get this-page :title)) (file-name-base output)))
-         (tags (and this-page (plist-get this-page :tags)))
-         (date (and this-page (plist-get this-page :date)))
-         (lastmod (denden-git-lastmod lastmod-source))
-         (word-count (denden-html-word-count body-html))
-         (reading-time (denden-reading-time word-count))
-         (body-links (denden-collect-body-links body-html))
-         ;; The home page links to nearly everything, so it is no backlink.
-         (backlinks (and this-page (site--regular-pages (denden-backlinks this-page all-pages))))
-         (related (and this-page (site--related-pages this-page all-pages body-links backlinks)))
-         (prev-next (and this-page (site--prev-next-in-section this-page all-pages))))
-    (site--write-page
-     (site--wrap-page
-      :title title
-      :url (and this-page (plist-get this-page :url))
-      :description (site--meta-description-for-page
-                    (list :content-html body-html :description (and this-page (plist-get this-page :description))))
-      :og-type "article" :published-time date
-      :modified-time (and lastmod (not (equal lastmod date)) lastmod)
-      :tags tags
-      :body (theme-single-page
-             :post-header (theme-post-header :title title :date date :lastmod lastmod
-                                             :wordcount word-count :readingtime reading-time :tags tags)
-             :toc toc
-             :body-html body-html
-             :references (theme-references
-                          :refs (mapcar (lambda (l) (list :href (plist-get l :href)
-                                                          :label (plist-get l :text)
-                                                          :internal (plist-get l :internal)))
-                                        body-links)
-                          :backlinks backlinks :related related :tag-icons site-tag-icons
-                          :backlink-icon site-backlink-icon)
-             :comment (theme-comment (site--first-mailto site-social-links) title)
-             :post-navigation (theme-post-navigation :prev (plist-get prev-next :prev)
-                                                     :next (plist-get prev-next :next))))
-     output)
-    output))
-
-(defun site-publish-single-page (plist filename _pub-dir)
-  "Publish FILENAME as a full themed single page, via
-`site--assemble-and-write-single-page'. Stashes the rendered body onto
-FILENAME's own entry in ALL-PAGES, so `site--enrich-page' can reuse it
-instead of exporting FILENAME a second time."
-  (let* ((output (denden-output-file-for filename (cons nil plist)))
-         (pub-dir (file-name-as-directory (org-publish-property :publishing-directory (cons nil plist))))
-         (all-pages (plist-get plist :denden-all-pages))
-         (this-page (seq-find (lambda (p) (equal (plist-get p :source) filename)) all-pages))
-         (body-html (denden-export-file-body filename all-pages)))
-    (when this-page (plist-put this-page :content-html body-html))
-    (site--assemble-and-write-single-page
-     :output output :pub-dir pub-dir :body-html body-html :all-pages all-pages
-     :lastmod-source filename
-     :toc (site--toc-node filename all-pages))))
+;;;; Pose
 
 (defvar site-pose-weekdays
   '((:hindi "Somvar" :meaning "Moon's day")
@@ -796,67 +784,80 @@ instead of exporting FILENAME a second time."
 Every weekday is named after a planet; both show in the day chip's tooltip.
 For my love and curiosity towards astronomy and mythology.")
 
-(defun site--pose-entries (filename all-pages)
-  "Return FILENAME's \"* [DATE] Title\" entries as plists, newest first."
-  (with-temp-buffer
-    (insert-file-contents filename)
-    (org-mode)
-    (let ((options (denden-export-options-with-pages all-pages filename))
-          (seen-dates (make-hash-table :test 'equal))
-          entries)
-      (org-map-entries
-       (lambda ()
-         (when (= (org-current-level) 1)
-           (let* ((headline (org-element-at-point))
-                  (title-objects (org-element-parse-secondary-string
-                                  (org-element-property :raw-value headline)
-                                  (org-element-restriction 'headline)))
-                  (timestamp (seq-find (lambda (object) (eq (org-element-type object) 'timestamp))
-                                       title-objects))
-                  ;; calendar.el's (MONTH DAY YEAR), straight from the parsed timestamp.
-                  (calendar-date (and timestamp
-                                      (list (org-element-property :month-start timestamp)
-                                            (org-element-property :day-start timestamp)
-                                            (org-element-property :year-start timestamp))))
-                  (date (and calendar-date
-                             (format "%04d-%02d-%02d" (nth 2 calendar-date) (nth 0 calendar-date)
-                                     (nth 1 calendar-date))))
-                  (title (string-trim
-                          (org-link-display-format
-                           (org-element-interpret-data (remq timestamp title-objects)))))
-                  (seen (gethash date seen-dates 0))
-                  ;; The date is the anchor, so links shared before the format change still work.
-                  (id (or (org-element-property :CUSTOM_ID headline)
-                          (if (or (null date) (> seen 0))
-                              (format "%s-%d" (or date "entry") (1+ seen))
-                            date)))
-                  (contents-begin (org-element-property :contents-begin headline))
-                  (html (if contents-begin
-                            (save-restriction
-                              (narrow-to-region contents-begin (org-element-property :contents-end headline))
-                              (org-export-as 'denden-html nil nil t options))
-                          "")))
-             (puthash date (1+ seen) seen-dates)
-             (push (append
-                    (list :id id :title title :date date
-                          :tags (org-get-tags nil t)
-                          :html html
-                          :search-text (downcase (concat title " " (denden-html-plain-text html))))
-                    (when calendar-date
-                      ;; `calendar-day-of-week' counts from Sunday = 0; ISO counts Monday = 1 to Sunday = 7.
-                      (let* ((weekday (let ((day (calendar-day-of-week calendar-date))) (if (zerop day) 7 day)))
-                             (planet (nth (1- weekday) site-pose-weekdays)))
-                        (list :calendar-date calendar-date :weekday (number-to-string weekday)
-                              :day (calendar-day-name calendar-date t)
-                              :day-title (format "%s · %s · %s" (calendar-day-name calendar-date)
-                                                 (plist-get planet :hindi) (plist-get planet :meaning))))))
-                   entries))))
-       nil nil)
-      ;; ENTRIES is already in reverse file order, and `sort' is stable.
-      (sort entries (lambda (a b) (string> (or (plist-get a :date) "") (or (plist-get b :date) "")))))))
+(defun site--pose-entry (headline)
+  "Return the Pose entry of HEADLINE, a top-level heading, before export.
+The plist has :id, :title, :date, :tags, :body-text, and for a dated
+entry :calendar-date, :weekday, :day and :day-title."
+  (let* ((title-objects (org-element-parse-secondary-string
+                         (org-element-property :raw-value headline)
+                         (org-element-restriction 'headline)))
+         (timestamp (seq-find (lambda (object) (org-element-type-p object 'timestamp))
+                              title-objects))
+         ;; calendar.el's (MONTH DAY YEAR), straight from the parsed timestamp.
+         (calendar-date (and timestamp
+                             (list (org-element-property :month-start timestamp)
+                                   (org-element-property :day-start timestamp)
+                                   (org-element-property :year-start timestamp))))
+         (begin (org-element-contents-begin headline))
+         (end (org-element-contents-end headline)))
+    (append
+     (list :custom-id (org-element-property :CUSTOM_ID headline)
+           :title (string-trim (org-no-properties
+                                (org-link-display-format
+                                 (org-element-interpret-data (remq timestamp title-objects)))))
+           :date (and calendar-date
+                      (format "%04d-%02d-%02d" (nth 2 calendar-date) (nth 0 calendar-date)
+                              (nth 1 calendar-date)))
+           :tags (org-element-property :tags headline)
+           :body-text (if (and begin end) (buffer-substring-no-properties begin end) ""))
+     (and calendar-date
+          ;; `calendar-day-of-week' counts from Sunday = 0; ISO counts Monday = 1 to Sunday = 7.
+          (let* ((weekday (let ((day (calendar-day-of-week calendar-date))) (if (zerop day) 7 day)))
+                 (planet (nth (1- weekday) site-pose-weekdays)))
+            (list :calendar-date calendar-date
+                  :weekday (number-to-string weekday)
+                  :day (calendar-day-name calendar-date t)
+                  :day-title (format "%s · %s · %s" (calendar-day-name calendar-date)
+                                     (plist-get planet :hindi) (plist-get planet :meaning))))))))
+
+(defun site-pose-entries (site page pages)
+  "Return the entries of the Pose PAGE of SITE, newest first.
+PAGES are all pages.  Each entry is a top-level heading
+\"* [DATE] Title\", as a plist with :id (the date, or date-2 for a
+second entry that day), :title, :date, :tags, :html, :search-text
+and the day fields.  All bodies are exported in one batch, and the
+result is kept in PAGE for the rest of the build."
+  (site--remember
+   page :site-pose-entries
+   (lambda ()
+     (let* ((entries (with-temp-buffer
+                       (insert (denden-page-text page))
+                       (delay-mode-hooks (org-mode))
+                       (org-element-map (org-element-parse-buffer) 'headline
+                         #'site--pose-entry nil nil 'headline)))
+            (html (denden-export-org-strings
+                   site (mapcar (lambda (entry) (plist-get entry :body-text)) entries) pages page))
+            (seen (make-hash-table :test #'equal)))
+       ;; Newest first; entries of one day keep their file order.
+       (sort (cl-mapcar
+              (lambda (entry body)
+                (let* ((date (plist-get entry :date))
+                       (count (cl-incf (gethash date seen 0))))
+                  (append entry
+                          ;; The date is the anchor, so links shared before still work.
+                          (list :id (or (plist-get entry :custom-id)
+                                        (if (or (null date) (> count 1))
+                                            (format "%s-%d" (or date "entry") count)
+                                          date))
+                                :html body
+                                :search-text (downcase (concat (plist-get entry :title) " "
+                                                               (denden-html-plain-text body)))))))
+              entries html)
+             :key (lambda (entry) (or (plist-get entry :date) "")) :reverse t)))))
 
 (defun site--pose-week-label (calendar-date)
-  "The label for CALENDAR-DATE's ISO week, like \"Week 48 · 23 to 29 Nov 2026\"."
+  "Return the label of the ISO week of CALENDAR-DATE.
+For example, \"Week 48 · 23 to 29 Nov 2026\"."
   (let* ((iso (calendar-iso-from-absolute (calendar-absolute-from-gregorian calendar-date)))
          (monday-absolute (calendar-iso-to-absolute (list (nth 0 iso) 1 (nth 2 iso))))
          (monday (calendar-gregorian-from-absolute monday-absolute))
@@ -872,379 +873,480 @@ For my love and curiosity towards astronomy and mythology.")
             (funcall day-month-year sunday t t))))
 
 (defun site--pose-weeks (entries)
-  "ENTRIES, newest first, grouped into ISO weeks as (:id :label :entries) plists."
-  (let (weeks)
+  "Return ENTRIES, newest first, grouped into ISO weeks.
+Each week is a plist with :id, :label and :entries."
+  (let ((weeks nil))
     (dolist (entry entries)
       (let* ((calendar-date (plist-get entry :calendar-date))
-             (iso (and calendar-date (calendar-iso-from-absolute (calendar-absolute-from-gregorian calendar-date))))
+             (iso (and calendar-date
+                       (calendar-iso-from-absolute (calendar-absolute-from-gregorian calendar-date))))
              ;; ISO (WEEK DAY YEAR); the ISO year can differ from the calendar year near New Year.
              (id (if iso (format "%d-W%02d" (nth 2 iso) (nth 0 iso)) "undated")))
         (if (equal id (plist-get (car weeks) :id))
-            (plist-put (car weeks) :entries (cons entry (plist-get (car weeks) :entries)))
+            (push entry (plist-get (car weeks) :entries))
           (push (list :id id :label (if iso (site--pose-week-label calendar-date) "Undated")
                       :entries (list entry))
                 weeks))))
-    (nreverse (mapcar (lambda (week) (plist-put week :entries (nreverse (plist-get week :entries)))) weeks))))
+    (nreverse (mapcar (lambda (week) (plist-put week :entries (nreverse (plist-get week :entries))))
+                      weeks))))
 
-(defun site--pose-intro-html (filename all-pages)
-  "Return FILENAME's content before its first heading, exported to HTML, or
-\"\" if there is none."
+(defun site--pose-feed-pages (site pages)
+  "Return the dated Pose entries of PAGES as page records for feeds.
+Each record links to the entry's own anchor on the Pose page of SITE."
+  (let ((pose-page (site-pose-page pages)))
+    (and pose-page
+         (mapcan (lambda (entry)
+                   (let ((date (plist-get entry :date)))
+                     (and date
+                          (let ((time (date-to-time date)))
+                            (list (denden-page-create
+                                   :url (format "%s#%s" (denden-page-url pose-page) (plist-get entry :id))
+                                   :title (plist-get entry :title)
+                                   :date time :lastmod time
+                                   :terms (list (cons "tags" (plist-get entry :tags)))
+                                   :body (plist-get entry :html)))))))
+                 (site-pose-entries site pose-page pages)))))
+
+;;;; Data shared by every page of one build
+
+(defvar site--build-data nil
+  "Data every page of one build shares, as (PAGES . PLIST).
+It is computed for the first page of a build and reused while the
+page list is the same object, so a new build always recomputes it.")
+
+(defun site--read-file (file)
+  "Return the text of FILE, relative to the site's root folder."
   (with-temp-buffer
-    (insert-file-contents filename)
-    (org-mode)
-    (goto-char (point-min))
-    (when (re-search-forward (rx bol "*") nil t)
-      (narrow-to-region (point-min) (match-beginning 0)))
-    (org-export-as 'denden-html nil nil t (denden-export-options-with-pages all-pages filename))))
+    (insert-file-contents (expand-file-name file site-root-directory))
+    (buffer-string)))
 
-(defun site--pose-feed-pages (entries page-url base-url)
-  "ENTRIES as `site--feed-pages' input, each linking its own anchor on PAGE-URL."
-  (mapcar (lambda (entry)
-            (list :title (plist-get entry :title)
-                  :permalink (format "%s%s#%s" base-url page-url (plist-get entry :id))
-                  :date (plist-get entry :date) :lastmod (plist-get entry :date)
-                  :tags (plist-get entry :tags) :content-html (plist-get entry :html)))
-          (seq-filter (lambda (entry) (plist-get entry :date)) entries)))
+(defun site--palette-data-script (site pages)
+  "Return the command palette's data script for SITE and PAGES, a raw-html node."
+  (let ((posts (append
+                (mapcar (lambda (page)
+                          (list :title (denden-page-title page)
+                                :url (concat "/" (denden-page-url page))
+                                :date (and (denden-page-date page)
+                                           (format-time-string "%F" (denden-page-date page)))
+                                :tags (vconcat (site--tags page))))
+                        pages)
+                ;; Pose entries too, so palette search and Random can land on a daily note.
+                (mapcar (lambda (entry)
+                          (list :title (denden-page-title entry)
+                                :url (concat "/" (denden-page-url entry))
+                                :date (format-time-string "%F" (denden-page-date entry))
+                                :tags (vconcat (site--tags entry))))
+                        (site--pose-feed-pages site pages))))
+        (tags (mapcar (lambda (entry)
+                        (list :name (car entry) :count (cdr entry)
+                              :url (format "/tags/%s/" (downcase (car entry)))))
+                      (denden-term-counts pages "tags"))))
+    (list 'raw-html nil
+          (format "<script>window.__posts=%s;window.__tags=%s;window.__nav=%s;window.__paletteIcons=%s;</script>"
+                  (json-serialize (vconcat posts)) (json-serialize (vconcat tags))
+                  (json-serialize (vconcat site-menu-main)) (json-serialize site-palette-icons)))))
 
-(defun site--pose-page-p (page)
-  "Non-nil if PAGE declares #+layout: pose."
-  (equal (plist-get page :layout) "pose"))
+(defun site--build-data (site pages)
+  "Return the data every page of this build of SITE shares, given its PAGES.
+The plist has :palette-script, :custom-css and :light-schemes."
+  (unless (eq (car site--build-data) pages)
+    (let ((custom-css (site--read-file site-css-source-file)))
+      (setq site--build-data
+            (cons pages
+                  (list :palette-script (site--palette-data-script site pages)
+                        :custom-css custom-css
+                        :light-schemes (site-light-scheme-names
+                                        site-color-schemes
+                                        (site-parse-custom-css-schemes custom-css)))))))
+  (cdr site--build-data))
 
-(defun site--pose-feed-pages-for-build (all-pages)
-  "Every Pose entry as feed items, from the pose-layout page in ALL-PAGES."
-  (let ((pose-page (seq-find #'site--pose-page-p all-pages)))
-    (when pose-page
-      (site--pose-feed-pages (site--pose-entries (plist-get pose-page :source) all-pages)
-                             (plist-get pose-page :url) (site-base-url)))))
+;;;; Page shell
 
-(defun site-publish-pose-page (plist filename pub-dir)
-  "Publish FILENAME, a #+layout: pose file, via `theme-pose-page'; one page,
-each entry with its own shareable anchor and expand-to-dialog view."
-  (let* ((output (denden-output-file-for filename (cons nil plist)))
-         (all-pages (plist-get plist :denden-all-pages))
-         (keywords (with-temp-buffer
-                     (insert-file-contents filename)
-                     (org-mode)
-                     (org-collect-keywords '("TITLE" "DESC"))))
-         (title (or (cadr (assoc "TITLE" keywords)) "Pose"))
-         (page-url (denden-pretty-url (file-relative-name output pub-dir)))
-         (this-page (seq-find (lambda (p) (equal (plist-get p :url) page-url)) all-pages))
-         (entries (site--pose-entries filename all-pages)))
-    (site-write-feed-trio (site--pose-feed-pages entries page-url (site-base-url))
-                          (file-name-directory output) (site-base-url)
-                          (format "%s: Pose" site-title) (or (cadr (assoc "DESC" keywords)) site-description)
-                          site-author-name site-author-email nil site-copyright '("rss.xml"))
-    (site--write-page
-     (site--wrap-page
-      :title title
-      :url (and this-page (plist-get this-page :url))
-      :rss-url (concat "/" page-url "rss.xml")
-      :body (theme-pose-page
-             :title title
-             :intro-html (site--pose-intro-html filename all-pages)
-             :weeks (site--pose-weeks entries)))
-     output)))
+(defconst site-og-png-directory "static/og"
+  "Folder of the rasterized OG cards, relative to the site's root.
+Run `just og' by hand to make them; the build never writes them.")
 
-(defun site--blank-html-p (html)
-  "Non-nil if HTML has no real content once tags and whitespace are stripped."
-  (string-empty-p
-   (string-trim (replace-regexp-in-string
-                 denden-whitespace-run-regexp " "
-                 (replace-regexp-in-string (rx "<" (+ (not (any ">"))) ">") " " html)))))
+(defun site--og-slug (url)
+  "Return the OG card name of the page at URL: its last part, or \"home\"."
+  (if (string-empty-p url) "home" (file-name-nondirectory (directory-file-name url))))
 
-(defun site-publish-home-page (plist filename pub-dir)
-  "Publish FILENAME as the home page: a title+body page if it has content,
-else the post listing fallback."
-  (let* ((output (denden-output-file-for filename (cons nil plist)))
-         (all-pages (plist-get plist :denden-all-pages))
-         (body-html (denden-export-file-body filename all-pages))
-         (title (or (cadr (assoc "TITLE" (with-temp-buffer
-                                           (insert-file-contents filename)
-                                           (org-mode)
-                                           (org-collect-keywords '("TITLE")))))
-                    "Home")))
-    (site--write-page
-     (site--wrap-page
-      :rss-url "/index.xml"
-      :url ""
-      :body (if (site--blank-html-p body-html)
-                (let ((home-pages (denden-pages-in-section all-pages "log")))
-                  (theme-post-listing
-                   :title "Log"
-                   :article-list (theme-article-list :grouped-pages (denden-group-pages-by-year home-pages)
-                                                     :tag-icons site-tag-icons)))
-              (theme-home-page :title title :body-html body-html)))
-     output)
-    output))
+(defun site--og-image-url (site url)
+  "Return the full address of the OG image of the page at URL in SITE, or nil.
+A page uses its own card when one was made, else the site's common
+card at /og/home.png."
+  (let* ((slug (site--og-slug url))
+         (directory (expand-file-name site-og-png-directory site-root-directory)))
+    (cond ((file-exists-p (expand-file-name (concat slug ".png") directory))
+           (concat (denden-base-url site) "og/" slug ".png"))
+          ((file-exists-p (expand-file-name "home.png" directory))
+           (concat (denden-base-url site) "og/home.png")))))
 
-(defun site--file-layout (filename)
-  "FILENAME's #+layout: keyword value, or nil."
-  (cadr (assoc "LAYOUT" (with-temp-buffer
-                          (insert-file-contents filename)
-                          (org-mode)
-                          (org-collect-keywords '("LAYOUT"))))))
+(defun site--feed-url (page)
+  "Return the address of the feed that PAGE links in its head, or nil."
+  (let ((url (denden-page-url page)))
+    (cond ((string-empty-p url) "/index.xml")
+          ((equal (denden-page-layout page) "pose") (concat "/" url "rss.xml"))
+          ((equal (denden-page-layout page) "section-listing") (concat "/" url "index.xml"))
+          ((equal (denden-page-layout page) "term") (concat "/" url "rss.xml")))))
 
-(defun site--sort-topic-groups (groups)
-  "Sort each of GROUPS's :items alphabetically by :name, for #+sort: name."
-  (mapcar (lambda (group)
-            (list :label (plist-get group :label)
-                  :items (sort (copy-sequence (plist-get group :items))
-                               (lambda (a b) (string< (plist-get a :name) (plist-get b :name))))))
-          groups))
+(defun site--favicon-mime-type ()
+  "Return the MIME type of the favicon, from its file extension."
+  (or (cdr (assoc (downcase (or (file-name-extension site-favicon-relative-path) ""))
+                  site--og-media-types))
+      "application/octet-stream"))
 
-(defun site-publish-topic-list-page (plist filename pub-dir)
-  "Publish FILENAME, a #+layout: topic-list file (wander, projects, media,
-quotes, uses), via `theme-topic-list-page'."
-  (let* ((output (denden-output-file-for filename (cons nil plist)))
-         (keywords (with-temp-buffer
-                     (insert-file-contents filename)
-                     (org-mode)
-                     (org-collect-keywords '("TITLE" "DATE" "SORT" "SHOW_CONSOLE" "CHIP_COLOR"))))
-         (title (or (cadr (assoc "TITLE" keywords)) (file-name-base filename)))
-         (date (denden--org-date-to-iso (cadr (assoc "DATE" keywords))))
-         (groups (denden-parse-topic-list filename))
-         (groups (if (equal (cadr (assoc "SORT" keywords)) "name") (site--sort-topic-groups groups) groups))
-         (all-pages (plist-get plist :denden-all-pages)))
-    (site--write-page
-     (site--wrap-page
-      :title title
-      :url (denden-pretty-url (file-relative-name output pub-dir))
-      :body (theme-topic-list-page
-             :title title :date date
-             :intro-html (denden-topic-list-intro-html filename)
-             :show-console (equal (cadr (assoc "SHOW_CONSOLE" keywords)) "true")
-             :items-node (theme-topic-list-items :groups groups :tag-icons site-tag-icons
-                                                 :chip-color (cadr (assoc "CHIP_COLOR" keywords))
-                                                 :all-pages all-pages)))
-     output)
-    output))
+(defun site-page-shell (site page main pages)
+  "Return the whole page of PAGE of SITE around MAIN, given all PAGES."
+  (let ((data (site--build-data site pages))
+        (title (denden-page-title page)))
+    (theme-baseof
+     :language (denden-page-language site page) :body main
+     :page-title (if (site--home-page-p page)
+                     site-title
+                   (format denden-page-title-format title site-title))
+     :head-nodes (denden-seo-head-nodes site page (and (not (site--meta page :noindex))
+                                                       (site--og-image-url site (denden-page-url page))))
+     :palette-data-script (plist-get data :palette-script)
+     :stylesheet-href "/css/bundle.css" :script-href "/js/index.js"
+     :schemes-url "/js/schemes-data.json"
+     :menu-items site-menu-header :footer-links site-menu-main
+     :site-title site-title :title-quotes site-title-quotes
+     :feed-url (site--feed-url page) :feed-title (format "%s RSS feed" title)
+     :light-schemes (plist-get data :light-schemes)
+     :footer-content site-footer-content
+     :favicon-href (concat "/" site-favicon-relative-path)
+     :favicon-type (site--favicon-mime-type)
+     :touch-icon-href "/images/apple-touch-icon.png"
+     :preload-fonts site-preload-fonts
+     :noindex (site--meta page :noindex)
+     :fediverse-creator site-fediverse-creator
+     :analytics-script-url site-umami-script-url
+     :analytics-website-id site-umami-website-id)))
 
-(defun site-publish-themes-page (plist filename _pub-dir)
-  "Publish FILENAME (the retired /themes/ gallery) as a redirect to the home page."
-  (let ((output (denden-output-file-for filename (cons nil plist))))
-    (site--write-string (denden-alias-redirect-html (concat (string-remove-suffix "/" (site-base-url)) "/"))
-                        output)
-    output))
+;;;; Single pages
 
-(defun site--home-page-p (page)
-  "Return non-nil if PAGE is the home page, content/index.org."
-  (member (file-name-base (plist-get page :source)) '("_index" "index")))
+(defun site--first-mailto (links)
+  "Return the first mailto address in LINKS, `site-social-links' in shape, or \"\"."
+  (or (cl-some (lambda (link) (and (string-prefix-p "mailto:" (plist-get link :url))
+                                   (substring (plist-get link :url) (length "mailto:"))))
+               links)
+      ""))
 
-(defun site--regular-pages (pages)
-  "PAGES minus the home page."
-  (seq-remove #'site--home-page-p pages))
+(defun site--body-links (html)
+  "Return the links in HTML to other sites and to this site, each once.
+Each is a plist with :href, :text and :internal."
+  (let ((seen (make-hash-table :test #'equal))
+        (links nil))
+    (dolist (anchor (dom-by-tag (denden--parse-html html) 'a))
+      (let ((href (dom-attr anchor 'href)))
+        (when (and href
+                   (or (string-prefix-p "http://" href) (string-prefix-p "https://" href)
+                       (string-prefix-p "/" href))
+                   (not (gethash href seen)))
+          (puthash href t seen)
+          (push (list :href href :text (denden--dom-text anchor) :internal (string-prefix-p "/" href))
+                links))))
+    (nreverse links)))
 
-(defun site--sitemap-groups (all-pages exclude-page)
-  "Return ALL-PAGES grouped for the sitemap as (:label :count :pages) plists,
-sectionless bucket first."
-  (let ((sectionless (denden-sort-pages-by-title
-                      (remove exclude-page
-                              (site--regular-pages (denden-pages-in-section all-pages ""))))))
-    (append
-     (when sectionless (list (list :label "Pages" :count nil :pages sectionless)))
-     (mapcar (lambda (section)
-               (let ((pages (denden-sort-pages-by-title (denden-pages-in-section all-pages section))))
-                 (list :label (capitalize section) :count (length pages) :pages pages)))
-             (sort (copy-sequence (site--distinct-sections all-pages)) #'string<)))))
+(defun site--related-pages (page pages body-links backlinks)
+  "Return pages of PAGES that share one of the first two tags or refs of PAGE.
+They fill the link budget of 7 left after BODY-LINKS and BACKLINKS,
+newest first, skipping BACKLINKS and pages the body already links."
+  (let* ((budget 7)
+         ;; References and backlinks both use the budget; backlinks still always show.
+         (used (+ (length body-links) (length backlinks)))
+         (already (mapcar (lambda (link) (string-remove-suffix "/" (plist-get link :href)))
+                          (seq-filter (lambda (link) (plist-get link :internal)) body-links)))
+         (tags (seq-take (site--tags page) 2))
+         (refs (seq-take (site--refs page) 2)))
+    (unless (or (>= used budget) (and (null tags) (null refs)))
+      (seq-take
+       (seq-filter (lambda (other)
+                     (and (not (eq other page)) (not (memq other backlinks))
+                          (not (member (string-remove-suffix "/" (concat "/" (denden-page-url other)))
+                                       already))
+                          (or (seq-intersection (site--tags other) tags)
+                              (seq-intersection (site--refs other) refs))))
+                   (denden-sort-pages-by-date pages))
+       (- budget used)))))
+
+(defun site--toc-list (headings)
+  "Return a nested ul for HEADINGS, a list of (LEVEL ID TEXT), and the rest.
+The result is (NODE . REST): NODE lists the headings at the level of
+the first one and those below it, and REST the headings after them."
+  (let ((level (car (car headings)))
+        (items nil))
+    (while (and headings (>= (car (car headings)) level))
+      (pcase-let ((`(,_level ,id ,text) (pop headings)))
+        (let ((children nil))
+          (when (and headings (> (car (car headings)) level))
+            (pcase-let ((`(,node . ,rest) (site--toc-list headings)))
+              (setq children (list node) headings rest)))
+          (push `(li nil (a (:href ,(concat "#" id)) ,text) ,@children) items))))
+    (cons `(ul nil ,@(nreverse items)) headings)))
+
+(defun site--toc-node (page)
+  "Return the table of contents of PAGE, or nil unless it sets #+toc: t.
+It lists the headings of the exported body, so no second export is
+needed."
+  (when (site--true-p (site--meta page :toc))
+    (let* ((dom (denden--parse-html (or (denden-page-body page) "")))
+           (headings (mapcan (lambda (node)
+                               (and (memq (dom-tag node) '(h2 h3 h4 h5 h6)) (dom-attr node 'id)
+                                    (progn
+                                      (dolist (anchor (dom-by-class node (rx bos "heading-anchor" eos)))
+                                        (dom-remove-node node anchor))
+                                      (list (list (string-to-number (substring (symbol-name (dom-tag node)) 1))
+                                                  (dom-attr node 'id)
+                                                  (denden--dom-text node))))))
+                             (dom-search dom (lambda (node) (memq (dom-tag node) '(h2 h3 h4 h5 h6)))))))
+      (and headings
+           `(details (:class "toc") (summary nil "Contents") ,(car (site--toc-list headings)))))))
+
+(defun site-render-single-page (_site page pages)
+  "Return the main part of PAGE, an ordinary page, given all PAGES.
+_SITE is not used."
+  (let* ((title (denden-page-title page))
+         (body (or (denden-page-body page) ""))
+         (word-count (site--word-count page))
+         (body-links (site--body-links body))
+         ;; The home page links to nearly everything, so it is no backlink.
+         (backlinks (site--regular-pages (denden-backlinks page pages)))
+         (neighbours (denden-previous-and-next page pages)))
+    (theme-single-page
+     :post-header (theme-post-header :title title :date (denden-page-date page)
+                                     :lastmod (denden-page-lastmod page)
+                                     :word-count word-count
+                                     :reading-time (site--reading-time word-count)
+                                     :tags (site--tags page))
+     :toc (site--toc-node page)
+     :body-html body
+     :references (theme-references
+                  :references (mapcar (lambda (link) (list :href (plist-get link :href)
+                                                           :label (plist-get link :text)
+                                                           :internal (plist-get link :internal)))
+                                      body-links)
+                  :backlinks backlinks
+                  :related (site--related-pages page pages body-links backlinks)
+                  :tag-icons site-tag-icons :backlink-icon site-backlink-icon)
+     :comment (unless (site--true-p (site--meta page :no-comment))
+                (theme-comment (site--first-mailto site-social-links) title))
+     :post-navigation (theme-post-navigation :previous (car neighbours) :next (cdr neighbours)))))
+
+;;;; Home, Pose and topic-list pages
+
+(defun site-render-page (site page pages)
+  "Return the main part of PAGE of SITE, given all PAGES.
+This is the site's default layout: the home page gets
+`site-render-home-page', every other page `site-render-single-page'."
+  (if (site--home-page-p page)
+      (site-render-home-page site page pages)
+    (site-render-single-page site page pages)))
+
+(defun site-render-home-page (_site page pages)
+  "Return the main part of the home PAGE: its title and body.
+A home page with no body lists the Log from PAGES instead."
+  (let ((body (or (denden-page-body page) "")))
+    (if (string-empty-p (denden-html-plain-text body))
+        (theme-post-listing
+         :title "Log"
+         :article-list (theme-article-list
+                        :grouped-pages (denden-group-pages-by-year (denden-pages-in-section pages "log"))
+                        :tag-icons site-tag-icons))
+      (theme-home-page :title (denden-page-title page) :body-html body))))
+
+(defun site-render-pose-page (site page pages)
+  "Return the main part of the Pose PAGE of SITE, given all PAGES."
+  (theme-pose-page :title (denden-page-title page)
+                   :intro-html (site--intro-html page)
+                   :weeks (site--pose-weeks (site-pose-entries site page pages))))
+
+(defun site-render-topic-list-page (site page pages)
+  "Return the main part of the topic-list PAGE of SITE, given all PAGES."
+  (theme-topic-list-page
+   :title (denden-page-title page)
+   :date (denden-page-date page)
+   :intro-html (site--intro-html page)
+   :show-console (site--true-p (site--meta page :show-console))
+   :items-node (theme-topic-list-items :groups (site-topic-groups site page pages)
+                                       :tag-icons site-tag-icons
+                                       :chip-color (site--meta page :chip-color)
+                                       :pages pages)))
 
 (defun site--page-as-topic-item (page)
-  "Return PAGE (`denden-collect-page-metadata' shape) as a topic-list item
-plist, so `site--sitemap-groups' output can go straight through
-`theme-topic-list-items' instead of its own separate template."
-  (list :url (concat "/" (plist-get page :url))
-        :name (plist-get page :title)
-        :desc ""
-        :parts (append (mapcar (lambda (tag) (format "tag: %s" tag)) (plist-get page :tags))
-                       (mapcar (lambda (ref) (format "refs: %s" ref)) (plist-get page :refs)))))
+  "Return PAGE as a topic-list item, with its tags and refs as chips."
+  (list :url (concat "/" (denden-page-url page))
+        :name (denden-page-title page)
+        :description ""
+        :parts (append (mapcar (lambda (tag) (list :key "tag" :value tag)) (site--tags page))
+                       (mapcar (lambda (ref) (list :key "refs" :value ref)) (site--refs page)))))
 
-(defun site-publish-sitemap-page (plist filename pub-dir)
-  "Publish FILENAME (content/sitemap.org) via `theme-topic-list-page': one
-topic-list group per section, every page's own tags/refs as chips, and
-the same search box every other topic-list page has."
-  (let* ((output (denden-output-file-for filename (cons nil plist)))
-         (all-pages (plist-get plist :denden-all-pages))
-         (this-page (seq-find (lambda (p) (equal (plist-get p :url)
-                                                 (denden-pretty-url (file-relative-name output pub-dir))))
-                              all-pages))
-         (title (or (and this-page (plist-get this-page :title)) "Sitemap"))
-         (intro-html (denden-export-file-body filename all-pages))
-         (groups (mapcar (lambda (g) (list :label (plist-get g :label)
-                                           :items (mapcar #'site--page-as-topic-item (plist-get g :pages))))
-                         (site--sitemap-groups all-pages this-page))))
-    (site--write-page
-     (site--wrap-page
-      :title title
-      :url (and this-page (plist-get this-page :url))
-      :body (theme-topic-list-page
-             :title title
-             :intro-html intro-html
-             :items-node (theme-topic-list-items :groups groups :tag-icons site-tag-icons
-                                                 :all-pages all-pages :external nil)))
-     output)
-    output))
+(defun site--sitemap-groups (page pages)
+  "Return PAGES grouped for the sitemap PAGE, pages without a section first.
+Each group is a plist with :label and :items."
+  (let ((sectionless (denden-sort-pages-by-title
+                      (remove page (site--regular-pages (denden-pages-in-section pages ""))))))
+    (append
+     (and sectionless (list (list :label "Pages" :pages sectionless)))
+     (mapcar (lambda (section)
+               (list :label (capitalize section)
+                     :pages (denden-sort-pages-by-title (denden-pages-in-section pages section))))
+             (sort (denden-sections pages))))))
+
+(defun site-render-sitemap-page (_site page pages)
+  "Return the main part of the sitemap PAGE: every page of PAGES by section."
+  (theme-topic-list-page
+   :title (denden-page-title page)
+   :intro-html (denden-page-body page)
+   :items-node (theme-topic-list-items
+                :groups (mapcar (lambda (group)
+                                  (list :label (plist-get group :label)
+                                        :items (mapcar #'site--page-as-topic-item
+                                                       (plist-get group :pages))))
+                                (site--sitemap-groups page pages))
+                :tag-icons site-tag-icons :pages pages :external nil)))
 
 (defun site--link-domain-icon (url)
-  "URL's glyph from `site-tag-icons', matching its host or one part of it."
+  "Return the glyph of URL from `site-tag-icons', by its host or a part of it."
   (let ((host (string-remove-prefix "www." (or (url-host (url-generic-parse-url url)) ""))))
     (or (cl-some (lambda (text) (theme-icon-for text site-tag-icons))
                  (cons host (split-string host (rx "."))))
         (cdr (assoc "_default" site-tag-icons)))))
 
-(defun site--links-groups (all-pages)
-  "Every external link in ALL-PAGES as topic-list groups by domain, busiest first.
-Sites cited only once share a last \"Other sites\" group."
-  (let ((by-url (make-hash-table :test 'equal))
-        (own-host (url-host (url-generic-parse-url (site-base-url))))
-        urls)
-    (dolist (page (site--regular-pages all-pages))
-      ;; Full URLs to this site itself are internal links; the sitemap lists those.
-      (dolist (link (seq-remove (lambda (link) (equal (url-host (url-generic-parse-url (plist-get link :url))) own-host))
-                                (plist-get page :external-links)))
-        (let* ((url (plist-get link :url))
-               (entry (gethash url by-url)))
-          (unless entry
-            (setq entry (list :url url :text nil :pages nil))
-            (push url urls))
-          (unless (plist-get entry :text) (setq entry (plist-put entry :text (plist-get link :text))))
-          (setq entry (plist-put entry :pages (cons page (plist-get entry :pages))))
-          (puthash url entry by-url))))
-    (let* ((domains (seq-group-by (lambda (url) (string-remove-prefix "www." (or (url-host (url-generic-parse-url url)) "")))
-                                  urls))
+(defconst site-recent-link-count 15
+  "How many of the most recently cited links the links page shows first.")
+
+(defun site--link-dates-from-log (lines)
+  "Return a hash table from each URL added in LINES to the date it was first added.
+LINES is the output of git log -p with a \"commit:DATE\" line before
+each commit, newest commit first, so the last date seen for a URL is
+the oldest.  Trailing punctuation is not part of a URL, as in Org."
+  (let ((dates (make-hash-table :test #'equal))
+        (date nil))
+    (dolist (line lines)
+      (cond
+       ((string-prefix-p "commit:" line)
+        (setq date (substring line (length "commit:"))))
+       ((and date (string-prefix-p "+" line) (not (string-prefix-p "+++" line)))
+        (let ((start 0))
+          (while (string-match (rx "http" (opt "s") "://" (+ (not (in " \t\"'<>[]{}|\\^`"))))
+                               line start)
+            (setq start (match-end 0))
+            (puthash (string-trim-right (match-string 0 line) (rx (+ (in ".,;:!?)"))))
+                     date dates))))))
+    dates))
+
+(defun site--link-dates (site)
+  "Return when each link in the content of SITE was first added, from git.
+The result is a hash table from URL to a \"YYYY-MM-DD\" date, or nil
+when the site is not in git or `denden-lastmod-from-git' is nil."
+  (and denden-lastmod-from-git
+       (condition-case nil
+           (let ((default-directory (denden-site-root-directory site)))
+             (site--link-dates-from-log
+              (process-lines "git" "log" "--format=commit:%cs" "-p" "-U0" "--no-color"
+                             "--" (denden-site-content-directory site))))
+         (error nil))))
+
+(defun site--links-groups (site pages)
+  "Return every link of PAGES to another site, grouped by domain, busiest first.
+Sites cited only once share a last \"Other sites\" group.  Links to
+SITE itself are left out; the sitemap lists those."
+  (let ((by-url (make-hash-table :test #'equal))
+        (own-host (url-host (url-generic-parse-url (denden-base-url site))))
+        (urls nil))
+    (dolist (page (site--regular-pages pages))
+      (pcase-dolist (`(,url . ,text) (denden-page-external-links page))
+        (unless (equal (url-host (url-generic-parse-url url)) own-host)
+          (let ((entry (or (gethash url by-url)
+                           (progn (push url urls) (list :text nil :pages nil)))))
+            (unless (plist-get entry :text) (setq entry (plist-put entry :text text)))
+            (puthash url (plist-put entry :pages (cons page (plist-get entry :pages))) by-url)))))
+    (let* ((domains (seq-group-by (lambda (url)
+                                    (string-remove-prefix "www." (or (url-host (url-generic-parse-url url)) "")))
+                                  (nreverse urls)))
            (item (lambda (url)
                    (let* ((entry (gethash url by-url))
-                          (label (denden-link-label url))
+                          (label (denden-link-label site url))
                           (cited (mapconcat (lambda (page)
-                                              (format "<a href=\"/%s\">%s</a>" (plist-get page :url)
-                                                      (org-html-encode-plain-text (plist-get page :title))))
-                                            (denden-sort-pages-by-date-desc (delete-dups (plist-get entry :pages)))
+                                              (format "<a href=\"/%s\">%s</a>" (denden-page-url page)
+                                                      (org-html-encode-plain-text (denden-page-title page))))
+                                            (denden-sort-pages-by-date (delete-dups (plist-get entry :pages)))
                                             ", ")))
                      (list :url url :name (or (plist-get entry :text) label) :parts nil
                            :icon (site--link-domain-icon url)
-                           :desc (concat (if (plist-get entry :text) (concat (org-html-encode-plain-text label) " · ") "")
-                                         "in " cited)))))
-           (items (lambda (urls)
-                    (sort (mapcar item urls)
-                          (lambda (a b) (string< (downcase (plist-get a :name)) (downcase (plist-get b :name)))))))
+                           :description (concat (if (plist-get entry :text)
+                                                    (concat (org-html-encode-plain-text label) " · ")
+                                                  "")
+                                                "in " cited)))))
+           (items (lambda (urls) (sort (mapcar item urls) :key (lambda (item) (downcase (plist-get item :name))))))
            ;; A site cited once gets no heading of its own; those all share one last section.
            (shared (seq-filter (lambda (domain) (null (cddr domain))) domains))
            (own (seq-remove (lambda (domain) (null (cddr domain))) domains)))
       (append
+       (site--recent-links-group site (hash-table-keys by-url) item)
        (mapcar (lambda (domain) (list :label (car domain) :items (funcall items (cdr domain))))
-               (sort own (lambda (a b) (or (> (length (cdr a)) (length (cdr b)))
-                                           (and (= (length (cdr a)) (length (cdr b))) (string< (car a) (car b)))))))
-       (when shared
-         (list (list :label "Other sites" :items (funcall items (mapcar #'cadr shared)))))))))
+               (sort own :key (lambda (domain) (list (- (length (cdr domain))) (car domain)))))
+       (and shared (list (list :label "Other sites" :items (funcall items (mapcar #'cadr shared)))))))))
 
-(defun site-publish-links-page (plist filename pub-dir)
-  "Publish FILENAME, a #+layout: links page: every external link, by domain."
-  (let* ((output (denden-output-file-for filename (cons nil plist)))
-         (all-pages (plist-get plist :denden-all-pages))
-         (this-page (seq-find (lambda (p) (equal (plist-get p :url)
-                                                 (denden-pretty-url (file-relative-name output pub-dir))))
-                              all-pages))
-         (title (or (and this-page (plist-get this-page :title)) "Links"))
-         (intro-html (denden-export-file-body filename all-pages)))
-    (site--write-page
-     (site--wrap-page
-      :title title
-      :url (and this-page (plist-get this-page :url))
-      :body (theme-topic-list-page
-             :title title
-             :intro-html intro-html
-             :items-node (theme-topic-list-items :groups (site--links-groups all-pages) :all-pages all-pages
-                                                 :collapsed t)))
-     output)
-    output))
+(defun site--recent-links-group (site urls item)
+  "Return a list of one group of the newest of URLS, or nil.
+The newest are those first added to the content of SITE most
+recently, by git history; a link not in git yet counts as newest.
+ITEM makes the topic-list item of a URL."
+  (let ((dates (site--link-dates site)))
+    (and dates urls
+         (let ((today (format-time-string "%F")))
+           (list (list :label "Recently cited"
+                       :items (mapcar item
+                                      (seq-take (sort urls
+                                                      :key (lambda (url)
+                                                             (list (gethash url dates today) url))
+                                                      :reverse t)
+                                                site-recent-link-count))))))))
 
-(defun site-publish-page (plist filename pub-dir)
-  "Dispatch FILENAME to the right site-publish-* function, by filename then
-#+layout:."
-  (funcall (if (member (file-name-base filename) '("_index" "index"))
-               #'site-publish-home-page
-             (pcase (site--file-layout filename)
-               ("topic-list" #'site-publish-topic-list-page)
-               ("themes" #'site-publish-themes-page)
-               ("sitemap" #'site-publish-sitemap-page)
-               ("links" #'site-publish-links-page)
-               ("pose" #'site-publish-pose-page)
-               (_ #'site-publish-single-page)))
-           plist filename pub-dir))
+(defun site-render-links-page (site page pages)
+  "Return the main part of the links PAGE of SITE: every link to another site."
+  (theme-topic-list-page
+   :title (denden-page-title page)
+   :intro-html (denden-page-body page)
+   :items-node (theme-topic-list-items :groups (site--links-groups site pages) :pages pages
+                                       :collapsed t)))
 
-(defun site--distinct-sections (all-pages)
-  "Return every non-empty :section value in ALL-PAGES, deduplicated."
-  (delete-dups (delq nil (mapcar (lambda (p) (let ((section (plist-get p :section)))
-                                               (and (not (string-empty-p section)) section)))
-                                 all-pages))))
+;;;; Pages with no Org file: section lists, tags, refs, 404
 
-(defun site--write-term-page (term count pages back-url rss-url url output)
-  "Write one term page (/tags/<tag>/ or /refs/<ref>/) for TERM at OUTPUT."
-  (site--write-page
-   (site--wrap-page
-    :rss-url rss-url
-    :title term
-    :url url
-    :body (theme-post-listing
-           :title (concat "#" term)
-           :term-header (theme-term-header :count count :rss-url rss-url :back-url back-url)
-           :article-list (theme-article-list :grouped-pages (denden-group-pages-by-year pages)
-                                             :tag-icons site-tag-icons)))
-   output))
+(defun site--listing-page (url title layout &rest meta)
+  "Return a page record for a generated page at URL with TITLE and LAYOUT.
+META is its meta plist, read by the layout."
+  (denden-page-create :url url :title title :layout layout :meta meta))
 
-(defun site-build-taxonomy-pages (all-pages pub-dir)
-  "Write one listing page per section, plus /tags/, /refs/ and their terms,
-into PUB-DIR. Call after the main publish."
-  (let ((tag-counts (denden-tag-counts all-pages))
-        (ref-counts (denden-ref-counts all-pages)))
-    (dolist (section (site--distinct-sections all-pages))
-      (site--write-page
-       (site--wrap-page
-        :rss-url (format "/%s/index.xml" section)
-        :title (capitalize section)
-        :url (format "%s/" section)
-        :body (theme-post-listing
-               :title (capitalize section)
-               :article-list (theme-article-list
-                              :grouped-pages (denden-group-pages-by-year (denden-pages-in-section all-pages section))
-                              :tag-icons site-tag-icons)))
-       (expand-file-name (format "%s/index.html" section) pub-dir)))
-    ;; /tags/ and /refs/ themselves stay rss-url-less (they list every
-    ;; term, not one feed's worth), but each term page under them now
-    ;; links its own narrower feed; see `site-build-term-feeds' for the
-    ;; actual feed XML.
-    (site--write-page
-     (site--wrap-page :title "Tags" :url "tags/"
-                      :body (theme-terms-list :title "Tags" :tag-counts tag-counts))
-     (expand-file-name "tags/index.html" pub-dir))
-    (dolist (tc tag-counts)
-      (let* ((tag (plist-get tc :tag)) (tagged (denden-pages-with-tag all-pages tag)))
-        (site--write-term-page tag (length tagged) tagged "/tags/"
-                               (format "/tags/%s/rss.xml" (downcase tag))
-                               (format "tags/%s/" (downcase tag))
-                               (expand-file-name (format "tags/%s/index.html" (downcase tag)) pub-dir))))
-    (when ref-counts
-      (site--write-page
-       (site--wrap-page :title "Refs" :url "refs/"
-                        :body (theme-terms-list :title "Refs" :tag-counts ref-counts :base-url "/refs/"))
-       (expand-file-name "refs/index.html" pub-dir))
-      (dolist (rc ref-counts)
-        (let* ((ref (plist-get rc :tag)) (referring (denden-pages-with-ref all-pages ref)))
-          (site--write-term-page ref (length referring) referring "/refs/"
-                                 (format "/refs/%s/rss.xml" (downcase ref))
-                                 (format "refs/%s/" (downcase ref))
-                                 (expand-file-name (format "refs/%s/index.html" (downcase ref)) pub-dir)))))))
+(defun site-render-section-listing (_site page pages)
+  "Return the main part of the section list PAGE: its section's pages by year."
+  (theme-post-listing
+   :title (denden-page-title page)
+   :article-list (theme-article-list
+                  :grouped-pages (denden-group-pages-by-year
+                                  (denden-pages-in-section pages (site--meta page :section)))
+                  :tag-icons site-tag-icons)))
 
-(defun site--latest-post (all-pages)
-  "The single newest page in ALL-PAGES's \"log\" section, or nil."
-  (car (denden-sort-pages-by-date-desc (denden-pages-in-section all-pages "log"))))
+(defun site-render-terms (_site page pages)
+  "Return the main part of the PAGE that lists every term of a taxonomy of PAGES."
+  (let ((taxonomy (site--meta page :taxonomy)))
+    (theme-terms-list :title (denden-page-title page)
+                      :term-counts (denden-term-counts pages taxonomy)
+                      :base-url (format "/%s/" taxonomy))))
 
-(defun site--404-latest-post-item (all-pages)
-  "Return the \"Latest: <link> (date)\" <li> from ALL-PAGES, or nil if there
-is none."
-  (let ((latest (site--latest-post all-pages)))
-    (when latest
-      (list 'li nil "Latest: "
-            (list 'a (list :href (concat "/" (plist-get latest :url))) (plist-get latest :title))
-            (format " (%s)" (plist-get latest :date))))))
+(defun site-render-term (_site page pages)
+  "Return the main part of the PAGE that lists the pages of PAGES with one term."
+  (let* ((taxonomy (site--meta page :taxonomy))
+         (term-pages (denden-pages-with-term pages taxonomy (site--meta page :term))))
+    (theme-post-listing
+     :title (concat "#" (site--meta page :term))
+     :term-header (theme-term-header :count (length term-pages)
+                                     :feed-url (concat "/" (denden-page-url page) "rss.xml")
+                                     :back-url (format "/%s/" taxonomy))
+     :article-list (theme-article-list :grouped-pages (denden-group-pages-by-year term-pages)
+                                       :tag-icons site-tag-icons))))
 
 (defconst site--404-wanted-poster
   '(div (:class "wanted-poster")
@@ -1254,516 +1356,214 @@ is none."
         (p nil "Bounty: 404,069,420")
         (p nil "Last seen: " (code (:id "wanted-lastseen") "parts unknown"))
         (p nil (em nil "Even " (b nil "Roronoa Zoro") " would've found his way here faster.")))
-  "404 page's WANTED-poster gag box.")
+  "The WANTED poster of the 404 page.")
 
 (defconst site--404-wanted-lastseen-script
-  ;; A plain 'script' text child, not raw-html: no `&&'/`<'/`>' in this one
-  ;; line for `denden--escape-text' to mangle (contrast `theme--topic-list-
-  ;; search-script', which does need raw-html for exactly that reason).
   '(script nil "document.getElementById('wanted-lastseen').textContent = window.location.pathname;")
-  "Fills the WANTED poster's \"Last seen\" line with the actual mistyped path,
-since static HTML can't know it.")
+  "Script that fills the poster's \"Last seen\" line with the mistyped path,
+since a static page cannot know it.")
 
+(defun site-render-not-found (_site _page pages)
+  "Return the main part of the 404 page, with the newest Log post of PAGES."
+  (let ((latest (car (denden-sort-pages-by-date (denden-pages-in-section pages "log")))))
+    `(article nil
+              (header nil (h1 nil "Page not found"))
+              (div nil
+                   (p nil (code nil "Symbol's value as variable is void: /404.html"))
+                   ,site--404-wanted-poster
+                   (ul nil
+                       (li nil (a (:href "/") "Home"))
+                       (li nil (a (:href "/log/") "Log"))
+                       ,(and latest
+                             `(li nil "Latest: "
+                                  (a (:href ,(concat "/" (denden-page-url latest))) ,(denden-page-title latest))
+                                  ,(format " (%s)" (format-time-string "%F" (denden-page-date latest))))))
+                   (p nil "Or search for everything else: "
+                      (button (:type "button" :data-action "open-palette" :hidden t :data-requires-js t)
+                              "Search " (kbd nil "x")))
+                   ,site--404-wanted-lastseen-script))))
 
-(defun site--404-body (all-pages)
-  "Return 404.html's body: the void-variable joke, WANTED poster, quick links,
-latest post, and palette hint."
-  (list 'div nil
-        (list 'p nil (list 'code nil "Symbol's value as variable is void: /404.html"))
-        site--404-wanted-poster
-        (append
-         (list 'ul nil
-               '(li nil (a (:href "/") "Home"))
-               '(li nil (a (:href "/log/") "Log")))
-         (let ((latest-item (site--404-latest-post-item all-pages))) (when latest-item (list latest-item))))
-        '(p nil "Or search for everything else: "
-            (button (:type "button" :data-action "open-palette" :hidden t :data-requires-js t) "Search " (kbd nil "x")))
-        site--404-wanted-lastseen-script))
+(defun site-listing-outputs (site pages)
+  "Return the section lists, tag and ref pages and the 404 page of SITE.
+They are rendered from PAGES through the site's page shell."
+  (let ((render (lambda (page) (cons (denden-page-url page) (denden-render-page site page pages)))))
+    (mapcar render
+            (append
+             (mapcar (lambda (section)
+                       (site--listing-page (concat section "/") (capitalize section) "section-listing"
+                                           :section section))
+                     (denden-sections pages))
+             (mapcan (lambda (taxonomy)
+                       (let ((counts (denden-term-counts pages taxonomy)))
+                         (and counts
+                              (cons (site--listing-page (concat taxonomy "/") (capitalize taxonomy) "terms"
+                                                        :taxonomy taxonomy)
+                                    (mapcar (lambda (entry)
+                                              (site--listing-page
+                                               (format "%s/%s/" taxonomy (downcase (car entry)))
+                                               (car entry) "term" :taxonomy taxonomy :term (car entry)))
+                                            counts)))))
+                     '("tags" "refs"))
+             (list (site--listing-page "404.html" "Page not found" "not-found" :noindex t))))))
 
-(defun site-404-page (all-pages)
-  "Return the 404 page's article, using ALL-PAGES for the latest-post link."
-  (list 'article nil
-        '(header nil (h1 nil "Page not found"))
-        (site--404-body all-pages)))
+;;;; Feeds
 
-(defun site-build-404-page (all-pages pub-dir)
-  "Write PUB-DIR/404.html, from ALL-PAGES for the latest-post link."
-  (site--write-page (site--wrap-page :body (site-404-page all-pages) :noindex t)
-                    (expand-file-name "404.html" pub-dir)))
+(defun site--feed (site pages url &optional title)
+  "Return the Atom feed of PAGES at URL of SITE, newest first, as (URL . TEXT).
+TITLE is the feed title, the site title by default."
+  (cons url (denden-atom-feed site (denden-sort-pages-by-date pages)
+                              :title (or title site-title)
+                              :self-url (concat (denden-base-url site) url)
+                              :rights site-copyright)))
 
-;;;; Auxiliary build outputs: feeds, sitemap, robots, aliases, search
-;;;; index, wander.js, OG cards, 404
-;;
-;; :content-html/:permalink/:lastmod are not part of `denden-collect-page-
-;; metadata's own plist -- they are each expensive enough (a full
-;; org-export, or a git shell-out) that no caller should pay for them until
-;; it actually needs them. `site--enrich-page' computes all three once,
-;; shared by every function below that needs them.
-;;
-;; Permalinks are base-url plus the page's own pretty :url (log/foo/).
-;; Per-page OG cards follow the same shape -- a sibling og.svg inside the
-;; page's own pretty-URL directory.
+(defun site-feed-outputs (site pages)
+  "Return every feed of SITE as (URL . TEXT), given its PAGES.
+The main feed carries Log posts and Pose entries; /log/ and /pose/
+keep their own, and each tag and ref has an rss.xml.  The main and
+Log feeds are written three times, as index.xml, rss.xml and
+feed.xml, so readers find them under any usual name."
+  (let* ((log (denden-pages-in-section (site--regular-pages pages) "log"))
+         (pose (site--pose-feed-pages site pages))
+         (pose-page (site-pose-page pages))
+         (names '("index.xml" "rss.xml" "feed.xml")))
+    (append
+     (mapcar (lambda (name) (site--feed site (append log pose) name)) names)
+     (mapcar (lambda (name) (site--feed site log (concat "log/" name))) names)
+     (and pose-page
+          (list (site--feed site pose (concat (denden-page-url pose-page) "rss.xml")
+                            (format "%s: Pose" site-title))))
+     (mapcan (lambda (taxonomy)
+               (mapcar (lambda (entry)
+                         (site--feed site (denden-pages-with-term pages taxonomy (car entry))
+                                     (format "%s/%s/rss.xml" taxonomy (downcase (car entry)))
+                                     (format "%s: %s" site-title (car entry))))
+                       (denden-term-counts (site--regular-pages pages) taxonomy)))
+             '("tags" "refs")))))
 
-(defun site--page-permalink (page base-url)
-  "PAGE's absolute permalink: BASE-URL plus its pretty :url."
-  (concat base-url (plist-get page :url)))
+;;;; Other outputs
 
-(defun site--enrich-page (page base-url all-pages)
-  "Return PAGE plus :content-html, :permalink and :lastmod, computed via
-BASE-URL and ALL-PAGES. Reuses PAGE's own :content-html if the main
-publish pass already stashed it (single-post layout); other layouts
-(pose, topic-list, themes, home) still export it fresh here, since their
-real page body is assembled differently from this flat file export."
-  (append page
-          (list :content-html (or (plist-get page :content-html)
-                                  (denden-export-file-body (plist-get page :source) all-pages))
-                :permalink (site--page-permalink page base-url)
-                :lastmod (denden-page-lastmod page))))
+(defconst site-legacy-redirects
+  '(("posts/" . "log/") ("themes/" . ""))
+  "Old URL to current URL, for pages that moved or were retired.")
 
-(defun site--write-string (string output)
-  "Write STRING to OUTPUT, creating its directory. Handles multibyte and
-UTF-8-encoded unibyte STRING, so a batch build never hangs."
-  (make-directory (file-name-directory output) t)
-  (if (multibyte-string-p string)
-      (let ((coding-system-for-write 'utf-8-unix))
-        (with-temp-file output (insert string)))
-    (let ((coding-system-for-write 'no-conversion))
-      (write-region string nil output))))
+(defun site-legacy-redirect-outputs (site pages)
+  "Return a redirect page of SITE for each of `site-legacy-redirects'.
+The target page comes from PAGES, or is the generated list of its section."
+  (mapcar (lambda (redirect)
+            (let ((target (or (seq-find (lambda (page) (equal (denden-page-url page) (cdr redirect))) pages)
+                              (site--listing-page (cdr redirect)
+                                                  (capitalize (string-remove-suffix "/" (cdr redirect)))
+                                                  "section-listing"))))
+              (cons (car redirect) (denden-redirect-html site target))))
+          site-legacy-redirects))
 
-(defun site--feed-pages (pages)
-  "PAGES projected to `denden-atom-feed's own page shape."
-  (mapcar (lambda (page) (list :title (plist-get page :title) :permalink (plist-get page :permalink)
-                               :date (plist-get page :date) :lastmod (plist-get page :lastmod)
-                               :tags (plist-get page :tags) :content-html (plist-get page :content-html)))
-          (denden-sort-pages-by-date-desc pages)))
-
-(defun site-write-feed-trio (pages directory base-url feed-site-title description
-                                   author-name author-email favicon-url copyright &optional names)
-  "Write Atom feed XML to DIRECTORY, one file per name in NAMES."
-  ;; Default is the full trio: index.xml, rss.xml and feed.xml, same
-  ;; content, each with its own `self' link. Real feed XML, not an HTML
-  ;; meta-refresh redirect at rss.xml/feed.xml :: that breaks any client
-  ;; that fetches a .xml URL and parses the body as XML by extension or
-  ;; MIME type, since it never runs the HTML meta-refresh.
-  (dolist (name (or names '("index.xml" "rss.xml" "feed.xml")))
-    (let* ((self-url (concat (file-name-as-directory base-url) name))
-           (xml (denden-atom-feed :pages (site--feed-pages pages) :site-title feed-site-title
-                                  :description description :base-url base-url :self-url self-url
-                                  :author-name author-name :author-email author-email
-                                  :favicon-url favicon-url :copyright copyright)))
-      (site--write-string xml (expand-file-name name directory)))))
-
-(defun site-build-term-feeds (pages pub-dir)
-  "Write one rss.xml per tag and per ref in PAGES under PUB-DIR."
-  ;; Just rss.xml, not the main/log feeds' full trio. A tag feed is only
-  ;; ever found by its own rel=alternate link, never typed in by hand, so
-  ;; the rss.xml/feed.xml/index.xml redundancy buys nothing here.
-  (dolist (tag-count (denden-tag-counts pages))
-    (let ((tag (plist-get tag-count :tag)))
-      (site-write-feed-trio (denden-pages-with-tag pages tag)
-                            (expand-file-name (format "tags/%s" (downcase tag)) pub-dir)
-                            (site-base-url) (format "%s: %s" site-title tag)
-                            (format "Posts tagged %s on %s" tag site-title)
-                            site-author-name site-author-email nil site-copyright '("rss.xml"))))
-  (dolist (ref-count (denden-ref-counts pages))
-    (let ((ref (plist-get ref-count :tag)))
-      (site-write-feed-trio (denden-pages-with-ref pages ref)
-                            (expand-file-name (format "refs/%s" (downcase ref)) pub-dir)
-                            (site-base-url) (format "%s: %s" site-title ref)
-                            (format "Posts referencing %s on %s" ref site-title)
-                            site-author-name site-author-email nil site-copyright '("rss.xml")))))
-
-(defun site-build-sitemap (all-pages pub-dir)
-  "Write PUB-DIR/sitemap.xml over ALL-PAGES."
-  (site--write-string
-   (denden-sitemap-xml (mapcar (lambda (p) (list :permalink (plist-get p :permalink) :lastmod (plist-get p :lastmod)))
-                               all-pages))
-   (expand-file-name "sitemap.xml" pub-dir)))
-
-(defun site-build-robots (base-url pub-dir)
-  "Write PUB-DIR/robots.txt, pointing at the sitemap under BASE-URL."
-  (site--write-string (denden-robots-txt base-url) (expand-file-name "robots.txt" pub-dir)))
-
-(defun site-build-aliases (all-pages pub-dir)
-  "For every page in ALL-PAGES with :aliases, write a redirect at
-ALIAS/index.html under PUB-DIR."
-  (dolist (page all-pages)
-    (dolist (alias (plist-get page :aliases))
-      (site--write-string (denden-alias-redirect-html (plist-get page :permalink))
-                          (expand-file-name (format "%s/index.html" alias) pub-dir)))))
-
-(defconst site-legacy-section-redirects
-  '(("posts" . "log"))
-  "Old section slug -> new, for a renamed section's own listing page.")
-
-(defun site-build-legacy-redirects (base-url pub-dir)
-  "Write a redirect for every old section listing page in PUB-DIR, per
-`site-legacy-section-redirects'."
-  (dolist (rename site-legacy-section-redirects)
-    (site--write-string
-     (denden-alias-redirect-html (format "%s/%s/" (string-remove-suffix "/" base-url) (cdr rename)))
-     (expand-file-name (format "%s/index.html" (car rename)) pub-dir))))
-
-(defun site-build-search-index (all-pages pub-dir)
-  "Write PUB-DIR/search-index.json over every page in ALL-PAGES."
-  (site--write-string
-   (denden-search-index-json
-    (mapcar (lambda (p) (list :title (plist-get p :title) :url (concat "/" (plist-get p :url))
-                              :plain-text (denden-html-plain-text (plist-get p :content-html))))
-            all-pages))
-   (expand-file-name "search-index.json" pub-dir)))
+(defun site-search-index-output (site pages)
+  "Return the search index of SITE over every page of PAGES but the home page."
+  (denden-search-index-output site (site--regular-pages pages)))
 
 (defconst site--wander-colors-script
   ";(function(){try{var c=JSON.parse(localStorage.getItem('emacs-wander-colors'));if(c)Object.keys(c).forEach(function(k){document.documentElement.style.setProperty(k,c[k]);});}catch(e){}})();\n"
-  "Appended to wander.js: paints the console in the colours the site saved.")
+  "Added to wander.js: paints the console in the colours the site saved.")
 
-(defun site-build-wander-js (wander-source-file pub-dir)
-  "Write PUB-DIR/wander/console/wander.js from WANDER-SOURCE-FILE, split into
-consoles and pages by H2 label."
-  (let (consoles pages)
-    (dolist (group (denden-parse-topic-list wander-source-file))
-      (let ((is-console (string-search "console" (downcase (plist-get group :label)))))
-        (dolist (item (plist-get group :items))
-          (if is-console (push (plist-get item :url) consoles) (push (plist-get item :url) pages)))))
-    (site--write-string
-     (concat (format "const wander = { consoles:\n[%s],\npages:\n[%s],\nstyles: [\"wander-theme.css\"], ignore: [], }\n"
-                     (site--wander-js-array (nreverse consoles)) (site--wander-js-array (nreverse pages)))
-             site--wander-colors-script)
-     (expand-file-name "wander.js" (expand-file-name "wander/console" pub-dir)))))
+(defun site-wander-outputs (site pages)
+  "Return wander.js and wander-theme.css of the Wander console of SITE.
+wander.js lists the links of the wander page in PAGES: groups whose
+label names a console are consoles, the rest are pages."
+  (let ((wander (seq-find (lambda (page) (equal (denden-page-url page) "wander/")) pages))
+        (consoles nil)
+        (links nil))
+    (when wander
+      (dolist (group (site-topic-groups site wander pages))
+        (let ((console (string-search "console" (downcase (plist-get group :label)))))
+          (dolist (item (plist-get group :items))
+            (if console (push (plist-get item :url) consoles) (push (plist-get item :url) links))))))
+    (let ((array (lambda (urls) (mapconcat (lambda (url) (format "  %s,\n" (json-serialize url)))
+                                           (nreverse urls) ""))))
+      (list (cons "wander/console/wander.js"
+                  (concat (format "const wander = { consoles:\n[%s],\npages:\n[%s],\nstyles: [\"wander-theme.css\"], ignore: [], }\n"
+                                  (funcall array consoles) (funcall array links))
+                          site--wander-colors-script))
+            (cons "wander/console/wander-theme.css" (site--read-file "assets/css/wander-theme.css"))))))
 
-(defun site--wander-js-array (urls)
-  "Return URLS as wander.js's one-per-line jsonified array body."
-  (mapconcat (lambda (url) (format "  %s,\n" (json-serialize url))) urls ""))
-
-(defconst site-wander-theme-css-source
-  (expand-file-name "assets/css/wander-theme.css" denden-repository-directory)
-  "This site's wander-console theme override, copied by hand since
-static/wander/console/ is a submodule checkout.")
-
-
-(defun site-build-wander-theme-css (pub-dir)
-  "Copy `site-wander-theme-css-source' to PUB-DIR/wander/console/ verbatim."
-  (let ((output (expand-file-name "wander-theme.css" (expand-file-name "wander/console" pub-dir))))
-    (make-directory (file-name-directory output) t)
-    (copy-file site-wander-theme-css-source output t)))
-
-(defun site--og-svg-output-path (page pub-dir)
-  "PAGE's OG SVG output path under PUB-DIR: og.svg in its own pretty-URL dir."
-  (expand-file-name (concat (plist-get page :url) "og.svg") pub-dir))
-
-(defconst site-og-png-directory
-  (expand-file-name "static/og" denden-repository-directory)
-  "Where rasterized OG-card PNGs live. Run `just og' by hand; the Elisp build
-never writes these.")
-
-
-(defun site--og-slug (pretty-url)
-  "PRETTY-URL's OG slug: its last path segment, or \"home\" for none."
-  (if (string-empty-p pretty-url)
-      "home"
-    (file-name-nondirectory (directory-file-name pretty-url))))
-
-(defun site--og-image-url (pretty-url)
-  "Return PRETTY-URL's absolute OG-image URL, or nil if none exists."
-  ;; Its own rasterized PNG if one exists (Log posts and Pose), else the
-  ;; site's one common card at /og/home.png.
-  (let* ((slug (site--og-slug pretty-url))
-         (own (expand-file-name (concat slug ".png") site-og-png-directory))
-         (common (expand-file-name "home.png" site-og-png-directory))
-         (base (string-remove-suffix "/" (site-base-url))))
-    (cond ((file-exists-p own) (concat base "/og/" slug ".png"))
-          ((file-exists-p common) (concat base "/og/home.png"))
-          (t nil))))
-
-(defun site--og-prose-paragraphs (node)
-  "Return every <p> element under NODE, in document order, skipping the
-contents of any <div class=\"figure\"> or <figure> element. Those hold an
-image and its caption, both rendered as plain <p> tags with no class of
-their own once `denden-paragraph' strips the \"Figure N:\" prefix, so
-they would otherwise look like body prose."
-  (cond
-   ((not (consp node)) nil)
-   ((eq (dom-tag node) 'figure) nil)
-   ((and (eq (dom-tag node) 'div) (equal (dom-attr node 'class) "figure")) nil)
-   ((eq (dom-tag node) 'p) (list node))
-   (t (seq-mapcat #'site--og-prose-paragraphs (dom-children node)))))
-
-(defun site--og-excerpt-for-page (page)
-  "Return PAGE's :description, else its first two prose paragraphs as plain text."
-  (or (plist-get page :description)
-      (let* ((dom (with-temp-buffer (insert (plist-get page :content-html))
-                                    (libxml-parse-html-region (point-min) (point-max))))
-             (paragraphs (seq-take (site--og-prose-paragraphs dom) 2)))
-        (mapconcat (lambda (p) (string-trim (dom-texts p))) paragraphs "\n\n"))))
-
-(defun site--meta-description-for-page (page)
-  "Return PAGE's meta-description text: its OG excerpt, collapsed to one line
-and capped at 160 characters."
-  (let ((text (replace-regexp-in-string denden-whitespace-run-regexp " " (site--og-excerpt-for-page page))))
-    (if (> (length text) 160) (concat (substring text 0 159) "…") text)))
+(defun site-asset-outputs (site pages)
+  "Return the style sheet bundle, the script and the scheme data of SITE.
+The bundle is the hand-edited style sheet, then the colour scheme
+variables, then the code colours.  PAGES identify the build."
+  (let ((custom-css (plist-get (site--build-data site pages) :custom-css)))
+    (list (cons "css/bundle.css"
+                (concat custom-css
+                        "\n/* ---- generated: base16 scheme variables (site-scheme-css) ---- */\n"
+                        (site-scheme-css site-color-schemes)
+                        "\n/* ---- generated: code-highlight colors (site-highlight-stylesheet) ---- */\n"
+                        (site-highlight-stylesheet)))
+          (cons "js/index.js" (site--read-file site-js-source-file))
+          (cons "js/schemes-data.json" (site-schemes-json custom-css)))))
 
 (defun site--og-card-pages (pages)
-  "The PAGES with their own OG card: every Log post, plus the Pose page."
-  (append (denden-pages-in-section pages "log") (seq-filter #'site--pose-page-p pages)))
+  "Return the PAGES with their own OG card: every Log post, and the Pose page."
+  (append (denden-pages-in-section pages "log")
+          (seq-filter (lambda (page) (equal (denden-page-layout page) "pose")) pages)))
 
-(cl-defun site-build-og-cards (&key pages card-site-title favicon-path pub-dir word-count-fn)
-  "Write one OG-card SVG per page in PAGES under PUB-DIR, titled
-CARD-SITE-TITLE, with FAVICON-PATH embedded."
-  (dolist (page pages)
-    (site--write-string
-     (site-og-card-svg :title (plist-get page :title)
-                       :excerpt (site--og-excerpt-for-page page)
-                       :tags (plist-get page :tags)
-                       :slug (plist-get page :url)
-                       :date (plist-get page :date)
-                       ;; Pose grows daily; its card skips the word count so it never goes stale.
-                       :meta-right (unless (site--pose-page-p page) (funcall word-count-fn page))
-                       :card-site-title card-site-title :favicon-path favicon-path)
-     (site--og-svg-output-path page pub-dir))))
+(defun site-og-card-outputs (site pages)
+  "Return the OG card SVG of each Log post and the Pose page of SITE, and the
+site's common card, from PAGES.  `just og' turns them into PNG files."
+  (let ((favicon (expand-file-name (concat "static/" site-favicon-relative-path) site-root-directory))
+        (home (seq-find #'site--home-page-p pages)))
+    (cons
+     (cons "og.svg"
+           (site-og-card-svg :title site-title :base-url (denden-base-url site)
+                             :excerpt (or (and home (denden-page-excerpt home)) "")
+                             :card-site-title site-title :favicon-path favicon))
+     (mapcar (lambda (page)
+               (let ((word-count (site--word-count page))
+                     (pose (equal (denden-page-layout page) "pose")))
+                 (cons (concat (denden-page-url page) "og.svg")
+                       (site-og-card-svg
+                        :title (denden-page-title page) :base-url (denden-base-url site)
+                        :excerpt (denden-page-excerpt page)
+                        :tags (site--tags page)
+                        :slug (denden-page-url page)
+                        :date (and (denden-page-date page) (format-time-string "%F" (denden-page-date page)))
+                        ;; Pose grows daily; its card has no word count, so it never goes stale.
+                        :meta-right (unless pose
+                                      (format "%d words · %d min" word-count (site--reading-time word-count)))
+                        :card-site-title site-title :favicon-path favicon))))
+             (site--og-card-pages (site--regular-pages pages))))))
 
-(defun site--word-count-meta (page)
-  "PAGE's \"N words · M min\" OG-card meta-right, from its own :content-html."
-  (let* ((word-count (denden-html-word-count (plist-get page :content-html)))
-         (reading-time (denden-reading-time word-count)))
-    (format "%d words · %d min" word-count reading-time)))
+;;;; The site
 
-(defun site-build-auxiliary-outputs (all-pages pub-dir repository-directory)
-  "Write every auxiliary output (feeds, sitemap, robots.txt, redirects, search
-index, OG cards, 404) into PUB-DIR."
-  (let* ((enriched (mapcar (lambda (p) (site--enrich-page p (site-base-url) all-pages)) all-pages))
-         (regular (site--regular-pages enriched))
-         (favicon-path (expand-file-name site-favicon-relative-path
-                                         (expand-file-name "static" repository-directory))))
-    ;; Only Log and Pose are syndicated: the rest (Wander, Media, Quotes,
-    ;; every standalone page) are for browsing. The main feed carries both;
-    ;; /log/ and /pose/ each keep a feed of their own.
-    (site-write-feed-trio (append (denden-pages-in-section regular "log") (site--pose-feed-pages-for-build all-pages))
-                          pub-dir (site-base-url) site-title
-                          site-description site-author-name site-author-email nil site-copyright)
-    (site-write-feed-trio (denden-pages-in-section regular "log") (expand-file-name "log" pub-dir)
-                          (site-base-url) site-title site-description
-                          site-author-name site-author-email nil site-copyright)
-    (site-build-term-feeds regular pub-dir)
-    (site-build-sitemap enriched pub-dir)
-    (site-build-robots (site-base-url) pub-dir)
-    (site-build-aliases enriched pub-dir)
-    (site-build-legacy-redirects (site-base-url) pub-dir)
-    (site-build-search-index regular pub-dir)
-    (site-build-wander-js (expand-file-name "content/wander.org" repository-directory) pub-dir)
-    (site-build-wander-theme-css pub-dir)
-    ;; Log posts and the Pose page earn their own OG card. Every other page,
-    ;; standalone pages and section listings like /wander/ alike, shares the
-    ;; one static home card instead, via `site--og-image-url's fallback to
-    ;; og/home.png.
-    (site-build-og-cards :pages (site--og-card-pages regular) :card-site-title site-title
-                         :favicon-path favicon-path :pub-dir pub-dir :word-count-fn #'site--word-count-meta)
-    ;; The one shared card, built from the home page's own excerpt (its
-    ;; #+description: keyword if index.org sets one, else its own first
-    ;; paragraphs). No slug or meta-right: this card is reused as-is on
-    ;; every non-Log page, so nothing page-specific belongs on it.
-    (let ((home-page (seq-find #'site--home-page-p enriched)))
-      (site--write-string
-       (site-og-card-svg :title site-title
-                         :excerpt (or (and home-page (site--og-excerpt-for-page home-page)) "")
-                         :tags nil :slug nil :date nil :meta-right nil
-                         :card-site-title site-title :favicon-path favicon-path)
-       (expand-file-name "og.svg" pub-dir)))
-    (site-build-404-page all-pages pub-dir)))
+(setq denden-figure-numbers nil)
 
-;;;; org-publish project definition, real build entry points
-
-(defconst site-async-init-file
-  (expand-file-name "site-async-init.el" (expand-file-name "site" denden-repository-directory))
-  "Path to site-async-init.el, computed once at load time so any later caller
-works, not just site.el's own load.")
-
-
-(setq org-publish-project-alist
-      (list
-       (list "site-org"
-             :base-directory (expand-file-name "content" denden-repository-directory)
-             :base-extension "org"
-             :recursive t
-             :publishing-directory site-publishing-directory
-             :publishing-function 'site-publish-page
-             :denden-output-extension ".html"
-             ;; Real content has links our placeholder link transcoder can't
-             ;; resolve yet. Mark them instead of aborting the whole file's
-             ;; export.
-             :with-broken-links 'mark
-             ;; Real disabled <input type="checkbox">, not <code>[X]</code>.
-             :html-checkbox-type 'html
-             ;; A #+draft: t file is excluded from a non-draft build: this
-             ;; site's prod command is `hugo --minify', no -D.
-             :exclude (denden-draft-exclude-regexp (expand-file-name "content" denden-repository-directory)))
-       (list "site-static"
-             :base-directory (expand-file-name "static" denden-repository-directory)
-             :base-extension 'any
-             :recursive t
-             :publishing-directory site-publishing-directory
-             :publishing-function 'org-publish-attachment)
-       (list "site" :components '("site-org" "site-static"))))
-
-(defconst site-css-source-file
-  (expand-file-name "assets/css/theme.css" denden-repository-directory)
-  "This site's one real, hand-edited CSS file.")
-
-
-(defun site--custom-css-text ()
-  "Return `site-css-source-file''s content, for `site-all-schemes' to parse
-its @scheme comments."
-  (with-temp-buffer
-    (insert-file-contents site-css-source-file)
-    (buffer-string)))
-
-(defun site-build-stylesheet (pub-dir)
-  "Concatenate the real CSS file plus generated scheme and highlight CSS into
-PUB-DIR/css/bundle.css."
-  (let ((output (expand-file-name "css/bundle.css" pub-dir)))
-    (make-directory (file-name-directory output) t)
-    (with-temp-file output
-      (insert-file-contents site-css-source-file)
-      (goto-char (point-max))
-      (insert "\n/* ---- generated: base16 scheme variables (site-scheme-css) ---- */\n")
-      (insert (site-scheme-css site-color-schemes))
-      (insert "\n/* ---- generated: code-highlight colors (site-highlight-stylesheet) ---- */\n")
-      (insert (site-highlight-stylesheet)))))
-
-(defconst site-js-source-file
-  (expand-file-name "assets/js/index.js" denden-repository-directory)
-  "The site's real JS: one hand-edited file, kept in sync with Hugo's copy by
-hand.")
-
-
-(defun site-build-scripts (pub-dir)
-  "Copy `site-js-source-file' to PUB-DIR/js/index.js verbatim."
-  (let ((output (expand-file-name "js/index.js" pub-dir)))
-    (make-directory (file-name-directory output) t)
-    (copy-file site-js-source-file output t)))
-
-(defun site-build-schemes-json (pub-dir)
-  "Write PUB-DIR/js/schemes-data.json, the command-palette's data source."
-  (let ((output (expand-file-name "js/schemes-data.json" pub-dir))
-        (coding-system-for-write 'no-conversion))
-    (make-directory (file-name-directory output) t)
-    (write-region (site-schemes-json (site--custom-css-text)) nil output)))
-
-(defvar site--light-schemes-cache nil
-  "Scheme names with a readable light variant, set by `site--inject-all-pages'.")
-
-(defvar site--palette-data-script-cache nil
-  "This build's command-palette data script, a `raw-html' node, computed once
-by `site--inject-all-pages'.")
-
-
-(defun site--inject-all-pages ()
-  "Compute this build's page metadata, custom.css text, and palette script
-once, stashed for reuse across pages."
-  (let* ((leaves (org-publish-expand-projects (list (assoc "site-org" org-publish-project-alist))))
-         (all-pages (denden-collect-page-metadata leaves))
-         (entry (assoc "site-org" org-publish-project-alist)))
-    (setcdr entry (plist-put (plist-put (copy-sequence (cdr entry)) :denden-all-pages all-pages)
-                             :site-custom-css-text (site--custom-css-text)))
-    (setq site--palette-data-script-cache (site--palette-data-script all-pages))
-    (setq site--light-schemes-cache
-          (site-light-scheme-names site-color-schemes (site-parse-custom-css-schemes (site--custom-css-text))))
-    all-pages))
-
-(defun site-build (&optional force)
-  "Build the site synchronously, plus taxonomy pages and every auxiliary
-output, using the cache unless FORCE."
-  (let* ((coding-system-for-read 'utf-8-unix)
-         (coding-system-for-write 'utf-8-unix)
-         (org-confirm-babel-evaluate nil)
-         (denden--git-lastmod-table (denden-git-lastmod-table denden-repository-directory))
-         (all-pages (site--inject-all-pages)))
-    (denden-build-project (assoc "site" org-publish-project-alist) force)
-    (site-build-taxonomy-pages all-pages site-publishing-directory)
-    (site-build-stylesheet site-publishing-directory)
-    (site-build-scripts site-publishing-directory)
-    (site-build-schemes-json site-publishing-directory)
-    (site-build-auxiliary-outputs all-pages site-publishing-directory denden-repository-directory)))
-
-(defcustom site-dev-include-drafts t
-  "Non-nil: dev-only rebuilds include drafts; the real production build never does.
-`site-build-async'/`site-build-file-async' (never `site-build') clear
-the \"site-org\" project's draft :exclude for that one child process, so
-a page you're actively drafting rebuilds live too. Matches Hugo's own
-`-D' dev-serve flag: drafts still never appear in a real build, only in
-the live-preview loop."
-  :type 'boolean :group 'denden)
-
-(defun site--maybe-clear-draft-exclude ()
-  "Clear the draft :exclude when `site-dev-include-drafts' is non-nil, once
-early in a dev-build async child."
-  (when site-dev-include-drafts
-    (let ((entry (assoc "site-org" org-publish-project-alist)))
-      (setcdr entry (plist-put (copy-sequence (cdr entry)) :exclude nil)))))
-
-(defun site-build-async (&optional force on-done)
-  "Build the site in a separate process, non-blocking; page-metadata
-collection runs inside the child, not the parent."
-  (let ((pub-dir site-publishing-directory)
-        (repository-directory denden-repository-directory)
-        (org-export-async-init-file site-async-init-file)
-        (include-drafts site-dev-include-drafts))
-    (org-export-async-start
-        (or on-done (lambda (_) nil))
-      `(progn
-         (setq site-dev-include-drafts ,include-drafts)
-         (site--maybe-clear-draft-exclude)
-         (let ((denden--git-lastmod-table (denden-git-lastmod-table ,repository-directory))
-               (all-pages (site--inject-all-pages)))
-           (denden-build-project (assoc "site" org-publish-project-alist) ,force)
-           (site-build-taxonomy-pages all-pages ,pub-dir)
-           (site-build-stylesheet ,pub-dir)
-           (site-build-scripts ,pub-dir)
-           (site-build-schemes-json ,pub-dir)
-           (site-build-auxiliary-outputs all-pages ,pub-dir ,repository-directory))))))
-
-(defun site-build-file-async (file on-done)
-  "Rebuild just FILE in a separate process, skipping CSS/JS/feeds/OG cards;
-refreshes cross-page metadata first."
-  (let ((org-export-async-init-file site-async-init-file)
-        (include-drafts site-dev-include-drafts))
-    (org-export-async-start
-        (or on-done (lambda (_) nil))
-      `(progn
-         (setq site-dev-include-drafts ,include-drafts)
-         (site--maybe-clear-draft-exclude)
-         (site--inject-all-pages)
-         (let ((org-publish-use-timestamps-flag nil))
-           (org-publish-file ,file (assoc "site-org" org-publish-project-alist)))
-         nil))))
-
-;;;; Wire this site into denden's generic customize/command surface
-
-(setq denden-content-directory (expand-file-name "content" denden-repository-directory))
-(setq denden-post-directory (expand-file-name "log" denden-content-directory))
-(setq denden-publishing-directory site-publishing-directory)
-(setq denden-project-root-directory denden-repository-directory)
-(setq denden-link-label-rules
-      (list (cons (rx bos "github.com/" (group (+ anything))) "github:\\1")
-            (cons (rx bos "codeberg.org/" (group (+ anything))) "codeberg:\\1")
-            ;; Only a bare subreddit or user; a post link keeps its full path.
-            (cons (rx bos (opt "old.") "reddit.com/" (group (any "ru") "/" (+ (not (any "/")))) eos) "\\1")))
-(setq denden-full-build-function #'site-build)
-(setq denden-build-function #'site-build-async)
-(setq denden-build-file-function #'site-build-file-async)
-
-;;;; This site's own M-x commands, via `denden-define-command'
-
-(denden-define-command idlip og-regenerate-all ()
-                       "Regenerate the Log and Pose OG card SVGs, without a full rebuild."
-                       (let* ((leaves (org-publish-expand-projects (list (assoc "site" org-publish-project-alist))))
-                              (all-pages (denden-collect-page-metadata leaves))
-                              (enriched (mapcar (lambda (p) (site--enrich-page p (site-base-url) all-pages)) all-pages))
-                              (regular (site--regular-pages enriched))
-                              (favicon-path (expand-file-name site-favicon-relative-path
-                                                              (expand-file-name "static" denden-repository-directory))))
-                         (site-build-og-cards :pages (site--og-card-pages regular) :card-site-title site-title
-                                              :favicon-path favicon-path
-                                              :pub-dir site-publishing-directory :word-count-fn #'site--word-count-meta)))
+(denden-define-site idlip-site
+  "idlip.in, Dilip's Log."
+  :title site-title
+  :description site-description
+  :author site-author-name
+  :base-url "https://idlip.in/"
+  :root-directory site-root-directory
+  :publishing-directory "public-denden"
+  :taxonomies '("tags" "refs")
+  :evaluate-code t
+  :default-layout #'site-render-page
+  :page-shell #'site-page-shell
+  :layouts '(("pose" . site-render-pose-page)
+             ("topic-list" . site-render-topic-list-page)
+             ("sitemap" . site-render-sitemap-page)
+             ("links" . site-render-links-page)
+             ("section-listing" . site-render-section-listing)
+             ("terms" . site-render-terms)
+             ("term" . site-render-term)
+             ("not-found" . site-render-not-found))
+  :outputs (list #'site-listing-outputs #'site-feed-outputs
+                 #'denden-sitemap-output #'denden-robots-output
+                 #'denden-redirect-outputs #'site-legacy-redirect-outputs
+                 #'site-search-index-output #'site-wander-outputs
+                 #'site-asset-outputs #'site-og-card-outputs)
+  :link-label-rules
+  (list (cons (rx bos "github.com/" (group (+ anything))) "github:\\1")
+        (cons (rx bos "codeberg.org/" (group (+ anything))) "codeberg:\\1")
+        ;; Only a bare subreddit or user; a post link keeps its full path.
+        (cons (rx bos (opt "old.") "reddit.com/" (group (in "ru") "/" (+ (not (in "/")))) eos) "\\1")))
 
 (provide 'site)
 ;;; site.el ends here
