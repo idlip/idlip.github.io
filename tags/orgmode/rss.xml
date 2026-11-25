@@ -1,5 +1,180 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: orgmode</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/tags/orgmode/rss.xml" /><id>https://idlip.in/tags/orgmode/rss.xml</id><updated>2026-11-24T00:00:00Z</updated><author><name>Dilip | Zororg</name></author><generator>Denden</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Org mode is the best OBTF</title><link rel="alternate" type="text/html" href="https://idlip.in/log/obtf/" /><id>https://idlip.in/log/obtf/</id><published>2026-10-07T00:00:00Z</published><updated>2026-10-12T00:00:00Z</updated><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><category term="obtf" label="obtf" scheme="https://idlip.in/tags/"></category><summary>I wrote about OBTF as Second Brain with Org mode a while back, but that post was mostly &quot;here is my datetree workflow.&quot; This one is a direct response to obtf.ru, a site that makes the case for One Big Text File a lot sharper than I did, and argues it against FOMO fatigue I've felt myself.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: orgmode</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/tags/orgmode/rss.xml" /><id>https://idlip.in/tags/orgmode/rss.xml</id><updated>2026-11-26T00:00:00Z</updated><author><name>Dilip | Zororg</name></author><generator>Denden</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Power of Habit</title><link rel="alternate" type="text/html" href="https://idlip.in/log/power-of-habit/" /><id>https://idlip.in/log/power-of-habit/</id><published>2026-11-25T00:00:00Z</published><updated>2026-11-26T00:00:00Z</updated><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="gtd" label="gtd" scheme="https://idlip.in/tags/"></category><category term="habit" label="habit" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><summary>Every good thing should be a habit, and every bad thing turns out to be a habit as well.
+
+Habit is such a great quirk. I lately realised that whatever productivity hunt or anti-procrastination drive we go on, habit is the only de-facto solution there.</summary><content type="html">&lt;p&gt;
+Every good thing should be a habit, and every bad thing turns out to be a habit as well.
+&lt;/p&gt;
+
+&lt;p&gt;
+Habit is such a great quirk. I lately realised that whatever productivity hunt or anti-procrastination drive we go on, habit is the only de-facto solution there.
+&lt;/p&gt;
+&lt;div id=&quot;outline-container-how-i-noticed-it&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;how-i-noticed-it&quot;&gt;How I noticed it&lt;a class=&quot;heading-anchor&quot; href=&quot;#how-i-noticed-it&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-how-i-noticed-it&quot;&gt;
+&lt;p&gt;
+I started realising this after reading the &lt;a href=&quot;https://github.com/yantar92/emacsconf-2026-tasks/blob/master/presentation.pdf&quot;&gt;slides&lt;/a&gt; by yantar92 (Ihor Radchenko) for his &lt;a href=&quot;https://emacsconf.org/2026/talks/&quot;&gt;EmacsConf 2026 talk&lt;/a&gt;, &lt;a href=&quot;https://emacsconf.org/2026/talks/tasks/&quot;&gt;Personal task management under stress (with Org mode)&lt;/a&gt;. He is the &lt;a href=&quot;https://orgmode.org/&quot;&gt;Org mode&lt;/a&gt; maintainer, and he does it in his spare time alongside a day job. I have been following him and attending the &lt;a href=&quot;https://orgmode.org/worg/orgmeetup.html&quot;&gt;monthly Org meetup&lt;/a&gt;, and I am always astonished by how he even manages his life: so many emails on the Org mailing list that only he can take care of most of the time, work life, personal life, pending tasks and patches to review.
+&lt;/p&gt;
+
+&lt;p&gt;
+In the talk he outlines how tasks cannot be spread across different places like apps, the browser, email, your head, a notebook and maybe a phone call. They need one home. His first rule is simply &quot;If you manage tasks in Org, do it in Org&quot;, and the second one is the one that stuck with me:
+&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;
+Task management won't work unless it becomes habit. Ever!
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;
+This is where Org mode and habit come into the picture.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-the-habit-i-already-had&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;the-habit-i-already-had&quot;&gt;The habit I already had&lt;a class=&quot;heading-anchor&quot; href=&quot;#the-habit-i-already-had&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-the-habit-i-already-had&quot;&gt;
+&lt;p&gt;
+I noticed that I often open reddit (r/emacs, r/OnePiece and so on), lobste.rs, mastodon and many more tabs to catch up every day and see what is happening. This has become so habituated that every day, without any effort, my hands naturally takes me there. It is a three times a day thing: morning, lunch and late night. That can be put down to media craving, but that is another topic.
+&lt;/p&gt;
+
+&lt;p&gt;
+The key thing to notice is that it has no obstacle. It is never missed, there is no holding back, and even at the busiest time there is at least a glance over it. That is my &lt;b&gt;habit&lt;/b&gt;, and it connected all my GTD thoughts, productivity, self-help and everything else. From that moment I made sure, and even configured my system, to make it a thorough habit to capture notes, schedule tasks every day and just get on with them.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-what-a-habit-is-made-of&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;what-a-habit-is-made-of&quot;&gt;What a habit is made of&lt;a class=&quot;heading-anchor&quot; href=&quot;#what-a-habit-is-made-of&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-what-a-habit-is-made-of&quot;&gt;
+&lt;p&gt;
+Both popular books on this say roughly the same thing in simple words:
+&lt;/p&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;In &lt;a href=&quot;https://charlesduhigg.com/the-power-of-habit/&quot;&gt;The Power of Habit&lt;/a&gt;, Charles Duhigg describes a loop: a &lt;b&gt;cue&lt;/b&gt; triggers a &lt;b&gt;routine&lt;/b&gt;, and a &lt;b&gt;reward&lt;/b&gt; tells the brain the loop is worth remembering. To change a habit, keep the cue and the reward and swap the routine.&lt;/li&gt;
+
+&lt;li&gt;In &lt;a href=&quot;https://tinyhabits.com/&quot;&gt;Tiny Habits&lt;/a&gt;, BJ Fogg says to make the new behaviour so small it needs no motivation, attach it to something you already do (an &lt;i&gt;anchor&lt;/i&gt;: &quot;After I &amp;hellip;, I will &amp;hellip;&quot;), and celebrate it right away so it feels good.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+Yantar's slides put the same idea in his own words: &quot;Build new habits using existing habits&quot;. My tab ritual is a ready-made anchor. The cue (morning, lunch, night) and the reward (catching up) are already there, so the task habit only has to ride along with it.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-habits-in-emacs-and-org-mode&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;habits-in-emacs-and-org-mode&quot;&gt;Habits in Emacs and Org mode&lt;a class=&quot;heading-anchor&quot; href=&quot;#habits-in-emacs-and-org-mode&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-habits-in-emacs-and-org-mode&quot;&gt;
+&lt;p&gt;
+This is what that looks like in plain Org, nothing fancy. It is the same idea as my &lt;a href=&quot;/log/art-gtd/&quot;&gt;Art of Getting things Done&lt;/a&gt; post: start with defaults and let the system evolve.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-capture-everything-into-one-inbox&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;capture-everything-into-one-inbox&quot;&gt;Capture everything into one inbox&lt;a class=&quot;heading-anchor&quot; href=&quot;#capture-everything-into-one-inbox&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-capture-everything-into-one-inbox&quot;&gt;
+&lt;p&gt;
+The cheapest habit is capture. One key, one file, no thinking about where it goes. &lt;code&gt;org-capture&lt;/code&gt; does this from anywhere in Emacs, and you sort it later.
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre tabindex=&quot;0&quot; class=&quot;src src-emacs-lisp&quot;&gt;&lt;code&gt;(&lt;span class=&quot;org-keyword&quot;&gt;setq&lt;/span&gt; org-capture-templates
+      '((&lt;span class=&quot;org-string&quot;&gt;&quot;i&quot;&lt;/span&gt; &lt;span class=&quot;org-string&quot;&gt;&quot;Inbox&quot;&lt;/span&gt; entry (file &lt;span class=&quot;org-string&quot;&gt;&quot;~/inbox.org&quot;&lt;/span&gt;)
+         &lt;span class=&quot;org-string&quot;&gt;&quot;* TODO %?\n%U&quot;&lt;/span&gt;)))
+(keymap-global-set &lt;span class=&quot;org-string&quot;&gt;&quot;C-c c&quot;&lt;/span&gt; #'org-capture)
+(keymap-global-set &lt;span class=&quot;org-string&quot;&gt;&quot;M-k c&quot;&lt;/span&gt; #'org-capture)
+(keymap-global-set &lt;span class=&quot;org-string&quot;&gt;&quot;s-k c&quot;&lt;/span&gt; #'org-capture)
+&lt;span class=&quot;org-comment-delimiter&quot;&gt;;; &lt;/span&gt;&lt;span class=&quot;org-comment&quot;&gt;*-k since sounds like `&lt;/span&gt;&lt;span class=&quot;org-comment&quot;&gt;&lt;span class=&quot;org-constant&quot;&gt;K&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;org-comment&quot;&gt;'apture
+&lt;/span&gt;
+(keymap-global-set &lt;span class=&quot;org-string&quot;&gt;&quot;M-j&quot;&lt;/span&gt; #'org-agenda)
+(keymap-global-set &lt;span class=&quot;org-string&quot;&gt;&quot;s-j&quot;&lt;/span&gt; #'org-agenda)
+&lt;span class=&quot;org-comment-delimiter&quot;&gt;;; &lt;/span&gt;&lt;span class=&quot;org-comment&quot;&gt;*-j since sounds like A`&lt;/span&gt;&lt;span class=&quot;org-comment&quot;&gt;&lt;span class=&quot;org-constant&quot;&gt;J&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;org-comment&quot;&gt;'enda&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+The same inbox works on the phone with &lt;a href=&quot;https://www.emacswiki.org/emacs/EmacsOnAndroid&quot;&gt;Emacs on Android&lt;/a&gt; or an Org app (&lt;a href=&quot;https://bloom.rrajath.com/&quot;&gt;bloom&lt;/a&gt;), and from the browser or &lt;a href=&quot;https://github.com/skeeto/elfeed&quot;&gt;elfeed&lt;/a&gt; or &lt;a href=&quot;https://succulentoats.com/email_notes&quot;&gt;email notes&lt;/a&gt;.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-open-the-agenda-before-the-tabs&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;open-the-agenda-before-the-tabs&quot;&gt;Open the agenda before the tabs&lt;a class=&quot;heading-anchor&quot; href=&quot;#open-the-agenda-before-the-tabs&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-open-the-agenda-before-the-tabs&quot;&gt;
+&lt;p&gt;
+This is the anchor. Before reddit, open &lt;code&gt;org-agenda&lt;/code&gt; (&lt;code&gt;M-j&lt;/code&gt;). It takes a few seconds and it tells you what today actually needs. Yantar splits his day view into &quot;Must do today&quot;, &quot;May do today&quot; and &quot;Can do on a good day&quot;, which keeps a bad day from turning into a guilty one.
+&lt;/p&gt;
+
+&lt;p&gt;
+Open it anywhere, everywhere and anytime, make it a rhythm and make it a habit
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-track-the-habit-itself-with-org-habit&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;track-the-habit-itself-with-org-habit&quot;&gt;Track the habit itself with org-habit&lt;a class=&quot;heading-anchor&quot; href=&quot;#track-the-habit-itself-with-org-habit&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-track-the-habit-itself-with-org-habit&quot;&gt;
+&lt;p&gt;
+Org has a built-in &lt;a href=&quot;https://orgmode.org/manual/Tracking-your-habits.html&quot;&gt;habit tracker&lt;/a&gt;. A habit is a &lt;code&gt;TODO&lt;/code&gt; with a &lt;code&gt;STYLE&lt;/code&gt; of &lt;code&gt;habit&lt;/code&gt; and a repeater, and the agenda draws a small consistency graph next to it, so a broken streak is visible at a glance.
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre tabindex=&quot;0&quot; class=&quot;src src-emacs-lisp&quot;&gt;&lt;code&gt;(&lt;span class=&quot;org-keyword&quot;&gt;with-eval-after-load&lt;/span&gt; 'org
+  (&lt;span class=&quot;org-keyword&quot;&gt;require&lt;/span&gt; '&lt;span class=&quot;org-constant&quot;&gt;org-habit&lt;/span&gt;))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre tabindex=&quot;0&quot; class=&quot;src src-org&quot;&gt;&lt;code&gt;&lt;span class=&quot;org-org-level-1&quot;&gt;* &lt;/span&gt;&lt;span class=&quot;org-org-level-1&quot;&gt;&lt;span class=&quot;org-org-todo&quot;&gt;TODO&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;org-org-level-1&quot;&gt; Process inbox.org&lt;/span&gt;
+  &lt;span class=&quot;org-org-special-keyword&quot;&gt;SCHEDULED:&lt;/span&gt; &lt;span class=&quot;org-org-date&quot;&gt;&amp;lt;2026-11-26 Thu .+1d&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;org-org-drawer&quot;&gt;:PROPERTIES:&lt;/span&gt;
+  &lt;span class=&quot;org-org-special-keyword&quot;&gt;:STYLE:&lt;/span&gt;    &lt;span class=&quot;org-org-property-value&quot;&gt;habit&lt;/span&gt;
+  &lt;span class=&quot;org-org-drawer&quot;&gt;:END:&lt;/span&gt;
+&lt;span class=&quot;org-org-level-1&quot;&gt;* &lt;/span&gt;&lt;span class=&quot;org-org-level-1&quot;&gt;&lt;span class=&quot;org-org-todo&quot;&gt;TODO&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;org-org-level-1&quot;&gt; Catch up: r/emacs, lobste.rs&lt;/span&gt;
+  &lt;span class=&quot;org-org-special-keyword&quot;&gt;SCHEDULED:&lt;/span&gt; &lt;span class=&quot;org-org-date&quot;&gt;&amp;lt;2026-11-26 Thu .+1d&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;org-org-drawer&quot;&gt;:PROPERTIES:&lt;/span&gt;
+  &lt;span class=&quot;org-org-special-keyword&quot;&gt;:STYLE:&lt;/span&gt;    &lt;span class=&quot;org-org-property-value&quot;&gt;habit&lt;/span&gt;
+  &lt;span class=&quot;org-org-special-keyword&quot;&gt;:Effort:&lt;/span&gt;   &lt;span class=&quot;org-org-property-value&quot;&gt;0:20&lt;/span&gt;
+  &lt;span class=&quot;org-org-drawer&quot;&gt;:END:&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+The second entry is my favourite idea from the talk: instead of fighting the distraction, give it its own habit with a time limit (&quot;check social media (daily, once per day, 20 min max!)&quot;). Clock in with &lt;code&gt;C-c C-x C-i&lt;/code&gt;, and the &lt;code&gt;Effort&lt;/code&gt; estimate tells you when to stop. A &lt;code&gt;.+1d&lt;/code&gt; repeater means &quot;one day after I last did it&quot;, and something like &lt;code&gt;.+2d/4d&lt;/code&gt; allows a little slack for habits that are not strictly daily.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-review-weekly-and-plan-to-fall-off&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;review-weekly-and-plan-to-fall-off&quot;&gt;Review weekly, and plan to fall off&lt;a class=&quot;heading-anchor&quot; href=&quot;#review-weekly-and-plan-to-fall-off&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-review-weekly-and-plan-to-fall-off&quot;&gt;
+&lt;p&gt;
+Daily habits keep things moving, and a weekly review keeps the list honest. Group the &lt;i&gt;someday&lt;/i&gt; tasks under projects or topics so the review stays short, and trim what no longer matters.
+&lt;/p&gt;
+
+&lt;p&gt;
+Habits also break: a trip, an illness, a busy month. Yantar's fourth rule covers exactly this: &quot;First, go back to the habit of using your task management&quot;. Do not rebuild the system, just open the agenda again tomorrow.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-closing&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;closing&quot;&gt;Closing&lt;a class=&quot;heading-anchor&quot; href=&quot;#closing&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-closing&quot;&gt;
+&lt;p&gt;
+None of this needs a new app or a perfect setup. One plain text file (see &lt;a href=&quot;/log/obtf/&quot;&gt;Org mode is the best OBTF&lt;/a&gt;), one capture key, one agenda glance tied to a habit I already had. The tools only help once the habit is there.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-further-reading&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;further-reading&quot;&gt;Further reading&lt;a class=&quot;heading-anchor&quot; href=&quot;#further-reading&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-further-reading&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;https://emacsconf.org/2026/talks/tasks/&quot;&gt;Personal task management under stress (with Org mode)&lt;/a&gt; by Ihor Radchenko, EmacsConf 2026 (&lt;a href=&quot;https://github.com/yantar92/emacsconf-2026-tasks&quot;&gt;slides source&lt;/a&gt;, &lt;a href=&quot;https://github.com/yantar92/emacs-config&quot;&gt;his Emacs config&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://charlesduhigg.com/the-power-of-habit/&quot;&gt;The Power of Habit&lt;/a&gt; by Charles Duhigg&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://tinyhabits.com/&quot;&gt;Tiny Habits&lt;/a&gt; by BJ Fogg&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://jamesclear.com/habit-stacking&quot;&gt;Habit Stacking&lt;/a&gt; by James Clear&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://orgmode.org/worg/org-tutorials/tracking-habits.html&quot;&gt;Tracking Habits with Org-mode&lt;/a&gt; on Worg&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://sachachua.com/blog/2012/05/org-mode-and-habits/&quot;&gt;Org-mode and habits&lt;/a&gt; by Sacha Chua&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://cpbotha.net/2019/11/02/forming-and-maintaining-habits-using-orgmode/&quot;&gt;Forming and maintaining habits using Orgmode&lt;/a&gt; by Charl P. Botha&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content></entry><entry><title>Org mode is the best OBTF</title><link rel="alternate" type="text/html" href="https://idlip.in/log/obtf/" /><id>https://idlip.in/log/obtf/</id><published>2026-10-07T00:00:00Z</published><updated>2026-10-12T00:00:00Z</updated><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><category term="obtf" label="obtf" scheme="https://idlip.in/tags/"></category><summary>I wrote about OBTF as Second Brain with Org mode a while back, but that post was mostly &quot;here is my datetree workflow.&quot; This one is a direct response to obtf.ru, a site that makes the case for One Big Text File a lot sharper than I did, and argues it against FOMO fatigue I've felt myself.
 
 OBTF in some sense is a lazy man's system to get things done. But if you feel more lazier to even think of it, I'd highly recommend to read obtf.ru/en website, since it helps me as well to stay motivated to achieve its purpose.</summary><content type="html">&lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;This content is written to be lateral post to &lt;a href=&quot;https://www.reddit.com/r/OneBigTextFile/s/5Jy5SUG48h&quot;&gt;r/onebigtextfile&lt;/a&gt; and spark the idea to many.&lt;/li&gt;
@@ -333,7 +508,7 @@ If any of this sounds interesting and you're also an Emacs plus Org mode person,
 &lt;/p&gt;
 
 
-&lt;figure id=&quot;org233277f&quot;&gt;
+&lt;figure id=&quot;org24a5101&quot;&gt;
 &lt;img src=&quot;https://raw.githubusercontent.com/idlip/denden/refs/heads/master/example/screenshot.png&quot; alt=&quot;screenshot.png&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;Snap of a example bearblog like site built with denden&lt;/figcaption&gt;

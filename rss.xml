@@ -1,5 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/rss.xml" /><id>https://idlip.in/rss.xml</id><updated>2026-11-24T00:00:00Z</updated><author><name>Dilip | Zororg</name></author><generator>Denden</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Give everything, or only what is asked</title><link rel="alternate" type="text/html" href="https://idlip.in/pose/#2026-11-24" /><id>https://idlip.in/pose/#2026-11-24</id><published>2026-11-24T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><summary>A thought I started and left pending: should someone give everything at one shot and let me take what I need, or give only what I asked for, so the noise stays out? I want both, on different days.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/rss.xml" /><id>https://idlip.in/rss.xml</id><updated>2026-11-26T00:00:00Z</updated><author><name>Dilip | Zororg</name></author><generator>Denden</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Power of Habit</title><link rel="alternate" type="text/html" href="https://idlip.in/log/power-of-habit/" /><id>https://idlip.in/log/power-of-habit/</id><published>2026-11-25T00:00:00Z</published><updated>2026-11-26T00:00:00Z</updated><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="gtd" label="gtd" scheme="https://idlip.in/tags/"></category><category term="habit" label="habit" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><summary>Every good thing should be a habit, and every bad thing turns out to be a habit as well.
+
+Habit is such a great quirk. I lately realised that whatever productivity hunt or anti-procrastination drive we go on, habit is the only de-facto solution there.</summary><content type="html">&lt;p&gt;
+Every good thing should be a habit, and every bad thing turns out to be a habit as well.
+&lt;/p&gt;
+
+&lt;p&gt;
+Habit is such a great quirk. I lately realised that whatever productivity hunt or anti-procrastination drive we go on, habit is the only de-facto solution there.
+&lt;/p&gt;
+&lt;div id=&quot;outline-container-how-i-noticed-it&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;how-i-noticed-it&quot;&gt;How I noticed it&lt;a class=&quot;heading-anchor&quot; href=&quot;#how-i-noticed-it&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-how-i-noticed-it&quot;&gt;
+&lt;p&gt;
+I started realising this after reading the &lt;a href=&quot;https://github.com/yantar92/emacsconf-2026-tasks/blob/master/presentation.pdf&quot;&gt;slides&lt;/a&gt; by yantar92 (Ihor Radchenko) for his &lt;a href=&quot;https://emacsconf.org/2026/talks/&quot;&gt;EmacsConf 2026 talk&lt;/a&gt;, &lt;a href=&quot;https://emacsconf.org/2026/talks/tasks/&quot;&gt;Personal task management under stress (with Org mode)&lt;/a&gt;. He is the &lt;a href=&quot;https://orgmode.org/&quot;&gt;Org mode&lt;/a&gt; maintainer, and he does it in his spare time alongside a day job. I have been following him and attending the &lt;a href=&quot;https://orgmode.org/worg/orgmeetup.html&quot;&gt;monthly Org meetup&lt;/a&gt;, and I am always astonished by how he even manages his life: so many emails on the Org mailing list that only he can take care of most of the time, work life, personal life, pending tasks and patches to review.
+&lt;/p&gt;
+
+&lt;p&gt;
+In the talk he outlines how tasks cannot be spread across different places like apps, the browser, email, your head, a notebook and maybe a phone call. They need one home. His first rule is simply &quot;If you manage tasks in Org, do it in Org&quot;, and the second one is the one that stuck with me:
+&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;
+Task management won't work unless it becomes habit. Ever!
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;
+This is where Org mode and habit come into the picture.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-the-habit-i-already-had&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;the-habit-i-already-had&quot;&gt;The habit I already had&lt;a class=&quot;heading-anchor&quot; href=&quot;#the-habit-i-already-had&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-the-habit-i-already-had&quot;&gt;
+&lt;p&gt;
+I noticed that I often open reddit (r/emacs, r/OnePiece and so on), lobste.rs, mastodon and many more tabs to catch up every day and see what is happening. This has become so habituated that every day, without any effort, my hands naturally takes me there. It is a three times a day thing: morning, lunch and late night. That can be put down to media craving, but that is another topic.
+&lt;/p&gt;
+
+&lt;p&gt;
+The key thing to notice is that it has no obstacle. It is never missed, there is no holding back, and even at the busiest time there is at least a glance over it. That is my &lt;b&gt;habit&lt;/b&gt;, and it connected all my GTD thoughts, productivity, self-help and everything else. From that moment I made sure, and even configured my system, to make it a thorough habit to capture notes, schedule tasks every day and just get on with them.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-what-a-habit-is-made-of&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;what-a-habit-is-made-of&quot;&gt;What a habit is made of&lt;a class=&quot;heading-anchor&quot; href=&quot;#what-a-habit-is-made-of&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-what-a-habit-is-made-of&quot;&gt;
+&lt;p&gt;
+Both popular books on this say roughly the same thing in simple words:
+&lt;/p&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;In &lt;a href=&quot;https://charlesduhigg.com/the-power-of-habit/&quot;&gt;The Power of Habit&lt;/a&gt;, Charles Duhigg describes a loop: a &lt;b&gt;cue&lt;/b&gt; triggers a &lt;b&gt;routine&lt;/b&gt;, and a &lt;b&gt;reward&lt;/b&gt; tells the brain the loop is worth remembering. To change a habit, keep the cue and the reward and swap the routine.&lt;/li&gt;
+
+&lt;li&gt;In &lt;a href=&quot;https://tinyhabits.com/&quot;&gt;Tiny Habits&lt;/a&gt;, BJ Fogg says to make the new behaviour so small it needs no motivation, attach it to something you already do (an &lt;i&gt;anchor&lt;/i&gt;: &quot;After I &amp;hellip;, I will &amp;hellip;&quot;), and celebrate it right away so it feels good.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+Yantar's slides put the same idea in his own words: &quot;Build new habits using existing habits&quot;. My tab ritual is a ready-made anchor. The cue (morning, lunch, night) and the reward (catching up) are already there, so the task habit only has to ride along with it.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-habits-in-emacs-and-org-mode&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;habits-in-emacs-and-org-mode&quot;&gt;Habits in Emacs and Org mode&lt;a class=&quot;heading-anchor&quot; href=&quot;#habits-in-emacs-and-org-mode&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-habits-in-emacs-and-org-mode&quot;&gt;
+&lt;p&gt;
+This is what that looks like in plain Org, nothing fancy. It is the same idea as my &lt;a href=&quot;/log/art-gtd/&quot;&gt;Art of Getting things Done&lt;/a&gt; post: start with defaults and let the system evolve.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-capture-everything-into-one-inbox&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;capture-everything-into-one-inbox&quot;&gt;Capture everything into one inbox&lt;a class=&quot;heading-anchor&quot; href=&quot;#capture-everything-into-one-inbox&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-capture-everything-into-one-inbox&quot;&gt;
+&lt;p&gt;
+The cheapest habit is capture. One key, one file, no thinking about where it goes. &lt;code&gt;org-capture&lt;/code&gt; does this from anywhere in Emacs, and you sort it later.
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre tabindex=&quot;0&quot; class=&quot;src src-emacs-lisp&quot;&gt;&lt;code&gt;(&lt;span class=&quot;org-keyword&quot;&gt;setq&lt;/span&gt; org-capture-templates
+      '((&lt;span class=&quot;org-string&quot;&gt;&quot;i&quot;&lt;/span&gt; &lt;span class=&quot;org-string&quot;&gt;&quot;Inbox&quot;&lt;/span&gt; entry (file &lt;span class=&quot;org-string&quot;&gt;&quot;~/inbox.org&quot;&lt;/span&gt;)
+         &lt;span class=&quot;org-string&quot;&gt;&quot;* TODO %?\n%U&quot;&lt;/span&gt;)))
+(keymap-global-set &lt;span class=&quot;org-string&quot;&gt;&quot;C-c c&quot;&lt;/span&gt; #'org-capture)
+(keymap-global-set &lt;span class=&quot;org-string&quot;&gt;&quot;M-k c&quot;&lt;/span&gt; #'org-capture)
+(keymap-global-set &lt;span class=&quot;org-string&quot;&gt;&quot;s-k c&quot;&lt;/span&gt; #'org-capture)
+&lt;span class=&quot;org-comment-delimiter&quot;&gt;;; &lt;/span&gt;&lt;span class=&quot;org-comment&quot;&gt;*-k since sounds like `&lt;/span&gt;&lt;span class=&quot;org-comment&quot;&gt;&lt;span class=&quot;org-constant&quot;&gt;K&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;org-comment&quot;&gt;'apture
+&lt;/span&gt;
+(keymap-global-set &lt;span class=&quot;org-string&quot;&gt;&quot;M-j&quot;&lt;/span&gt; #'org-agenda)
+(keymap-global-set &lt;span class=&quot;org-string&quot;&gt;&quot;s-j&quot;&lt;/span&gt; #'org-agenda)
+&lt;span class=&quot;org-comment-delimiter&quot;&gt;;; &lt;/span&gt;&lt;span class=&quot;org-comment&quot;&gt;*-j since sounds like A`&lt;/span&gt;&lt;span class=&quot;org-comment&quot;&gt;&lt;span class=&quot;org-constant&quot;&gt;J&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;org-comment&quot;&gt;'enda&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+The same inbox works on the phone with &lt;a href=&quot;https://www.emacswiki.org/emacs/EmacsOnAndroid&quot;&gt;Emacs on Android&lt;/a&gt; or an Org app (&lt;a href=&quot;https://bloom.rrajath.com/&quot;&gt;bloom&lt;/a&gt;), and from the browser or &lt;a href=&quot;https://github.com/skeeto/elfeed&quot;&gt;elfeed&lt;/a&gt; or &lt;a href=&quot;https://succulentoats.com/email_notes&quot;&gt;email notes&lt;/a&gt;.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-open-the-agenda-before-the-tabs&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;open-the-agenda-before-the-tabs&quot;&gt;Open the agenda before the tabs&lt;a class=&quot;heading-anchor&quot; href=&quot;#open-the-agenda-before-the-tabs&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-open-the-agenda-before-the-tabs&quot;&gt;
+&lt;p&gt;
+This is the anchor. Before reddit, open &lt;code&gt;org-agenda&lt;/code&gt; (&lt;code&gt;M-j&lt;/code&gt;). It takes a few seconds and it tells you what today actually needs. Yantar splits his day view into &quot;Must do today&quot;, &quot;May do today&quot; and &quot;Can do on a good day&quot;, which keeps a bad day from turning into a guilty one.
+&lt;/p&gt;
+
+&lt;p&gt;
+Open it anywhere, everywhere and anytime, make it a rhythm and make it a habit
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-track-the-habit-itself-with-org-habit&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;track-the-habit-itself-with-org-habit&quot;&gt;Track the habit itself with org-habit&lt;a class=&quot;heading-anchor&quot; href=&quot;#track-the-habit-itself-with-org-habit&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-track-the-habit-itself-with-org-habit&quot;&gt;
+&lt;p&gt;
+Org has a built-in &lt;a href=&quot;https://orgmode.org/manual/Tracking-your-habits.html&quot;&gt;habit tracker&lt;/a&gt;. A habit is a &lt;code&gt;TODO&lt;/code&gt; with a &lt;code&gt;STYLE&lt;/code&gt; of &lt;code&gt;habit&lt;/code&gt; and a repeater, and the agenda draws a small consistency graph next to it, so a broken streak is visible at a glance.
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre tabindex=&quot;0&quot; class=&quot;src src-emacs-lisp&quot;&gt;&lt;code&gt;(&lt;span class=&quot;org-keyword&quot;&gt;with-eval-after-load&lt;/span&gt; 'org
+  (&lt;span class=&quot;org-keyword&quot;&gt;require&lt;/span&gt; '&lt;span class=&quot;org-constant&quot;&gt;org-habit&lt;/span&gt;))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre tabindex=&quot;0&quot; class=&quot;src src-org&quot;&gt;&lt;code&gt;&lt;span class=&quot;org-org-level-1&quot;&gt;* &lt;/span&gt;&lt;span class=&quot;org-org-level-1&quot;&gt;&lt;span class=&quot;org-org-todo&quot;&gt;TODO&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;org-org-level-1&quot;&gt; Process inbox.org&lt;/span&gt;
+  &lt;span class=&quot;org-org-special-keyword&quot;&gt;SCHEDULED:&lt;/span&gt; &lt;span class=&quot;org-org-date&quot;&gt;&amp;lt;2026-11-26 Thu .+1d&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;org-org-drawer&quot;&gt;:PROPERTIES:&lt;/span&gt;
+  &lt;span class=&quot;org-org-special-keyword&quot;&gt;:STYLE:&lt;/span&gt;    &lt;span class=&quot;org-org-property-value&quot;&gt;habit&lt;/span&gt;
+  &lt;span class=&quot;org-org-drawer&quot;&gt;:END:&lt;/span&gt;
+&lt;span class=&quot;org-org-level-1&quot;&gt;* &lt;/span&gt;&lt;span class=&quot;org-org-level-1&quot;&gt;&lt;span class=&quot;org-org-todo&quot;&gt;TODO&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;org-org-level-1&quot;&gt; Catch up: r/emacs, lobste.rs&lt;/span&gt;
+  &lt;span class=&quot;org-org-special-keyword&quot;&gt;SCHEDULED:&lt;/span&gt; &lt;span class=&quot;org-org-date&quot;&gt;&amp;lt;2026-11-26 Thu .+1d&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;org-org-drawer&quot;&gt;:PROPERTIES:&lt;/span&gt;
+  &lt;span class=&quot;org-org-special-keyword&quot;&gt;:STYLE:&lt;/span&gt;    &lt;span class=&quot;org-org-property-value&quot;&gt;habit&lt;/span&gt;
+  &lt;span class=&quot;org-org-special-keyword&quot;&gt;:Effort:&lt;/span&gt;   &lt;span class=&quot;org-org-property-value&quot;&gt;0:20&lt;/span&gt;
+  &lt;span class=&quot;org-org-drawer&quot;&gt;:END:&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+The second entry is my favourite idea from the talk: instead of fighting the distraction, give it its own habit with a time limit (&quot;check social media (daily, once per day, 20 min max!)&quot;). Clock in with &lt;code&gt;C-c C-x C-i&lt;/code&gt;, and the &lt;code&gt;Effort&lt;/code&gt; estimate tells you when to stop. A &lt;code&gt;.+1d&lt;/code&gt; repeater means &quot;one day after I last did it&quot;, and something like &lt;code&gt;.+2d/4d&lt;/code&gt; allows a little slack for habits that are not strictly daily.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-review-weekly-and-plan-to-fall-off&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;review-weekly-and-plan-to-fall-off&quot;&gt;Review weekly, and plan to fall off&lt;a class=&quot;heading-anchor&quot; href=&quot;#review-weekly-and-plan-to-fall-off&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-review-weekly-and-plan-to-fall-off&quot;&gt;
+&lt;p&gt;
+Daily habits keep things moving, and a weekly review keeps the list honest. Group the &lt;i&gt;someday&lt;/i&gt; tasks under projects or topics so the review stays short, and trim what no longer matters.
+&lt;/p&gt;
+
+&lt;p&gt;
+Habits also break: a trip, an illness, a busy month. Yantar's fourth rule covers exactly this: &quot;First, go back to the habit of using your task management&quot;. Do not rebuild the system, just open the agenda again tomorrow.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-closing&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;closing&quot;&gt;Closing&lt;a class=&quot;heading-anchor&quot; href=&quot;#closing&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-closing&quot;&gt;
+&lt;p&gt;
+None of this needs a new app or a perfect setup. One plain text file (see &lt;a href=&quot;/log/obtf/&quot;&gt;Org mode is the best OBTF&lt;/a&gt;), one capture key, one agenda glance tied to a habit I already had. The tools only help once the habit is there.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-further-reading&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;further-reading&quot;&gt;Further reading&lt;a class=&quot;heading-anchor&quot; href=&quot;#further-reading&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-further-reading&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;https://emacsconf.org/2026/talks/tasks/&quot;&gt;Personal task management under stress (with Org mode)&lt;/a&gt; by Ihor Radchenko, EmacsConf 2026 (&lt;a href=&quot;https://github.com/yantar92/emacsconf-2026-tasks&quot;&gt;slides source&lt;/a&gt;, &lt;a href=&quot;https://github.com/yantar92/emacs-config&quot;&gt;his Emacs config&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://charlesduhigg.com/the-power-of-habit/&quot;&gt;The Power of Habit&lt;/a&gt; by Charles Duhigg&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://tinyhabits.com/&quot;&gt;Tiny Habits&lt;/a&gt; by BJ Fogg&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://jamesclear.com/habit-stacking&quot;&gt;Habit Stacking&lt;/a&gt; by James Clear&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://orgmode.org/worg/org-tutorials/tracking-habits.html&quot;&gt;Tracking Habits with Org-mode&lt;/a&gt; on Worg&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://sachachua.com/blog/2012/05/org-mode-and-habits/&quot;&gt;Org-mode and habits&lt;/a&gt; by Sacha Chua&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://cpbotha.net/2019/11/02/forming-and-maintaining-habits-using-orgmode/&quot;&gt;Forming and maintaining habits using Orgmode&lt;/a&gt; by Charl P. Botha&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content></entry><entry><title>Veg protein is all bloat</title><link rel="alternate" type="text/html" href="https://idlip.in/pose/#2026-11-25" /><id>https://idlip.in/pose/#2026-11-25</id><published>2026-11-25T00:00:00Z</published><updated>2026-11-25T00:00:00Z</updated><summary>Rajma, dal, horsegram, tofu, chana, soya chunks. I have tried them all, and every one of them leaves me bloated for the whole day. Walking does not help, water does not help, and I spend the evening carrying a balloon I never ordered. If it does not affect you, you are lucky, so go build yourself better then, I'm not happy for you cause I'm bloat.
+
+Eggs and chicken just work, no drama. Milk is the only veg protein I would still consider, but it brings its own fat along. The rest of my plate is sorted: carbs, fruits for fibre, vitamins and minerals. Protein is the only fight left, and with veg sources I end up bloated, not goated nor shredded.</summary><content type="html">&lt;p&gt;
+Rajma, dal, horsegram, tofu, chana, soya chunks. I have tried them all, and every one of them leaves me bloated for the whole day. Walking does not help, water does not help, and I spend the evening carrying a balloon I never ordered. If it does not affect you, you are lucky, so go build yourself better then, I'm not happy for you cause I'm bloat.
+&lt;/p&gt;
+
+&lt;p&gt;
+Eggs and chicken just work, no drama. Milk is the only veg protein I would still consider, but it brings its own fat along. The rest of my plate is sorted: carbs, fruits for fibre, vitamins and minerals. Protein is the only fight left, and with veg sources I end up bloated, not goated nor shredded.
+&lt;/p&gt;</content></entry><entry><title>Give everything, or only what is asked</title><link rel="alternate" type="text/html" href="https://idlip.in/pose/#2026-11-24" /><id>https://idlip.in/pose/#2026-11-24</id><published>2026-11-24T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><summary>A thought I started and left pending: should someone give everything at one shot and let me take what I need, or give only what I asked for, so the noise stays out? I want both, on different days.
 
 I have not finished thinking it through, so for now I am leaving my open tabs here. If you have the time, read them and decide for yourself.</summary><content type="html">&lt;p&gt;
 A thought I started and left pending: should someone give everything at one shot and let me take what I need, or give only what I asked for, so the noise stays out? I want both, on different days.
@@ -92,16 +275,16 @@ The new look is &lt;i&gt;Kenbun&lt;/i&gt;, named after &lt;a href=&quot;https://
 &lt;div id=&quot;outline-container-before-and-after&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;before-and-after&quot;&gt;Before and after&lt;a class=&quot;heading-anchor&quot; href=&quot;#before-and-after&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-before-and-after&quot;&gt;
-&lt;div class=&quot;grid&quot; id=&quot;org0b46f44&quot;&gt;
+&lt;div class=&quot;grid&quot; id=&quot;org49dfd1f&quot;&gt;
 
-&lt;figure id=&quot;org2b2f4f6&quot;&gt;
+&lt;figure id=&quot;org7a6c5f7&quot;&gt;
 &lt;img src=&quot;/images/kenbun/hakimacs-home.webp&quot; alt=&quot;hakimacs-home.webp&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;Before: the home page as an Emacs window, with menu bar and modeline&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 
-&lt;figure id=&quot;org0005586&quot;&gt;
+&lt;figure id=&quot;org0ac48c2&quot;&gt;
 &lt;img src=&quot;/images/kenbun/home.webp&quot; alt=&quot;home.webp&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;After: the home page in Kenbun, title, links and a plain column&lt;/figcaption&gt;
@@ -109,16 +292,16 @@ The new look is &lt;i&gt;Kenbun&lt;/i&gt;, named after &lt;a href=&quot;https://
 
 &lt;/div&gt;
 
-&lt;div class=&quot;grid&quot; id=&quot;orgffbc061&quot;&gt;
+&lt;div class=&quot;grid&quot; id=&quot;org16bacd6&quot;&gt;
 
-&lt;figure id=&quot;org426954e&quot;&gt;
+&lt;figure id=&quot;org7b2373c&quot;&gt;
 &lt;img src=&quot;/images/kenbun/hakimacs-list.webp&quot; alt=&quot;hakimacs-list.webp&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;Before: the posts listing page&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 
-&lt;figure id=&quot;org74cbfa9&quot;&gt;
+&lt;figure id=&quot;org8f2f595&quot;&gt;
 &lt;img src=&quot;/images/kenbun/list.webp&quot; alt=&quot;list.webp&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;After: the new simple listing page&lt;/figcaption&gt;
@@ -127,16 +310,16 @@ The new look is &lt;i&gt;Kenbun&lt;/i&gt;, named after &lt;a href=&quot;https://
 &lt;/div&gt;
 
 
-&lt;div class=&quot;grid&quot; id=&quot;orgd950d24&quot;&gt;
+&lt;div class=&quot;grid&quot; id=&quot;orgf473dc5&quot;&gt;
 
-&lt;figure id=&quot;org56d49ab&quot;&gt;
+&lt;figure id=&quot;orgb2c7204&quot;&gt;
 &lt;img src=&quot;/images/kenbun/hakimacs-post.webp&quot; alt=&quot;hakimacs-post.webp&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;Before: a post inside the Emacs frame&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 
-&lt;figure id=&quot;org7e3e38a&quot;&gt;
+&lt;figure id=&quot;orgb8bbc3d&quot;&gt;
 &lt;img src=&quot;/images/kenbun/post.webp&quot; alt=&quot;post.webp&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;After: the same post, just the words&lt;/figcaption&gt;
@@ -915,7 +1098,7 @@ If any of this sounds interesting and you're also an Emacs plus Org mode person,
 &lt;/p&gt;
 
 
-&lt;figure id=&quot;org233277f&quot;&gt;
+&lt;figure id=&quot;org24a5101&quot;&gt;
 &lt;img src=&quot;https://raw.githubusercontent.com/idlip/denden/refs/heads/master/example/screenshot.png&quot; alt=&quot;screenshot.png&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;Snap of a example bearblog like site built with denden&lt;/figcaption&gt;
@@ -1150,16 +1333,16 @@ love WWE for its entertainment factor and character they had in Attitude era (th
 blog)
 &lt;/p&gt;
 
-&lt;div class=&quot;grid&quot; id=&quot;org80de458&quot;&gt;
+&lt;div class=&quot;grid&quot; id=&quot;orgd41fdb7&quot;&gt;
 
-&lt;figure id=&quot;orge007072&quot;&gt;
+&lt;figure id=&quot;org4463055&quot;&gt;
 &lt;img src=&quot;https://media.gtanet.com/images/2764.jpg&quot; alt=&quot;&amp;quot;GTA Vice City game showing final Mission Passed&amp;quot;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;GTA Vice City game showing final Mission Passed.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 
-&lt;figure id=&quot;org3223065&quot;&gt;
+&lt;figure id=&quot;orgdd085b1&quot;&gt;
 &lt;img src=&quot;https://images.launchbox-app.com/02c94837-29ae-4d2d-b0d9-a1e55b08ccd5.png&quot; alt=&quot;02c94837-29ae-4d2d-b0d9-a1e55b08ccd5.png&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;WWE Smackdown here comes pain, undertaker choke slamming Brock in Elimination chamber&lt;/figcaption&gt;
@@ -1177,16 +1360,16 @@ Also &lt;a href=&quot;https://en.wikipedia.org/wiki/Captain_Claw&quot;&gt;Captai
 towards Pirates world (One piece). Captain claw was definitely ahead of its time for sure, even today I find the visuals stunning compared to any mobile games.
 &lt;/p&gt;
 
-&lt;div class=&quot;grid&quot; id=&quot;org70a879c&quot;&gt;
+&lt;div class=&quot;grid&quot; id=&quot;org22f1c86&quot;&gt;
 
-&lt;figure id=&quot;org9c7f358&quot;&gt;
+&lt;figure id=&quot;orgd8dd17e&quot;&gt;
 &lt;img src=&quot;https://images.sftcdn.net/images/t_app-cover-l,f_auto/p/0c450dd1-e4cb-447c-9d2f-ac3e7aabf75e/1425069087/road-rash-road-rash_5.jpg&quot; alt=&quot;road-rash-road-rash_5.jpg&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;Road rash game with cop chasing and one biker about to be kicked&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 
-&lt;figure id=&quot;orga989ccd&quot;&gt;
+&lt;figure id=&quot;org652afb0&quot;&gt;
 &lt;img src=&quot;https://static0.xdaimages.com/wordpress/wp-content/uploads/wm/2025/07/captain-claw-level-two-enemies.png&quot; alt=&quot;captain-claw-level-two-enemies.png&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;Captain claw about to kill two puppy&lt;/figcaption&gt;
@@ -1215,16 +1398,16 @@ usage and time. Obviously I cannot forget the giant game that was on everyone's 
 Saga&lt;/a&gt;, it was just delicious.
 &lt;/p&gt;
 
-&lt;div class=&quot;grid&quot; id=&quot;org8a8965a&quot;&gt;
+&lt;div class=&quot;grid&quot; id=&quot;org552f5a8&quot;&gt;
 
-&lt;figure id=&quot;org7ebab3b&quot;&gt;
+&lt;figure id=&quot;org53daf18&quot;&gt;
 &lt;img src=&quot;https://i.pinimg.com/originals/f1/76/8f/f1768fc4d935f5b018eeace40dfcb995.jpg&quot; alt=&quot;f1768fc4d935f5b018eeace40dfcb995.jpg&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;Subway surfer where boy got caught by cop&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 
-&lt;figure id=&quot;org25dfb0d&quot;&gt;
+&lt;figure id=&quot;orgc145932&quot;&gt;
 &lt;img src=&quot;https://cdn.mobygames.com/screenshots/1175350-candy-crush-saga-android-the-chocolate-candy-covered-with-sprink.jpg&quot; alt=&quot;1175350-candy-crush-saga-android-the-chocolate-candy-covered-with-sprink.jpg&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;Candy crush saga. The OG arcase puzzle game.&lt;/figcaption&gt;
@@ -1248,16 +1431,16 @@ to popular clan and ask for &quot;Give me Co or else will leave&quot;, yes promo
 there.
 &lt;/p&gt;
 
-&lt;div class=&quot;grid&quot; id=&quot;org577dbcc&quot;&gt;
+&lt;div class=&quot;grid&quot; id=&quot;org6ebe20f&quot;&gt;
 
-&lt;figure id=&quot;org9adfc79&quot;&gt;
+&lt;figure id=&quot;org0592c05&quot;&gt;
 &lt;img src=&quot;https://cocland.com/wp-content/uploads/2015/05/hogowiwi-th9-guide-1.jpg&quot; alt=&quot;hogowiwi-th9-guide-1.jpg&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;Clash of Clans TH9 GoHo attack with hogs lvl 5 max&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 
-&lt;figure id=&quot;org0ad37ea&quot;&gt;
+&lt;figure id=&quot;org9ae17c3&quot;&gt;
 &lt;img src=&quot;https://upload.wikimedia.org/wikipedia/en/9/9e/Clash_Royale_2v2.jpg&quot; alt=&quot;Clash_Royale_2v2.jpg&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;Clash royale training camp attack&lt;/figcaption&gt;
@@ -1303,16 +1486,16 @@ competitive to play with others. We used to play as team and it was fun to curse
 play many games laughing together.
 &lt;/p&gt;
 
-&lt;div class=&quot;grid&quot; id=&quot;org79ac995&quot;&gt;
+&lt;div class=&quot;grid&quot; id=&quot;org74a3989&quot;&gt;
 
-&lt;figure id=&quot;org039f8b4&quot;&gt;
+&lt;figure id=&quot;org35e8847&quot;&gt;
 &lt;img src=&quot;https://i0.wp.com/gamingonphone.com/wp-content/uploads/2022/02/mobile-legends-lancelot.jpg&quot; alt=&quot;mobile-legends-lancelot.jpg&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;Mobile Legends attacking in Enemy base&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 
-&lt;figure id=&quot;org8afb1e2&quot;&gt;
+&lt;figure id=&quot;org7a8066b&quot;&gt;
 &lt;img src=&quot;https://cdn-www.bluestacks.com/bs-images/Onmyoji-Arena_Bot-Guide_EN_6.png&quot; alt=&quot;Onmyoji-Arena_Bot-Guide_EN_6.png&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;Onmyoji Arena, the beauty of MOBA game&lt;/figcaption&gt;
@@ -1366,16 +1549,16 @@ As of writing this, I'm really enjoying &lt;a href=&quot;https://play.google.com
 and cozy way to move insects to target.
 &lt;/p&gt;
 
-&lt;div class=&quot;grid&quot; id=&quot;orgad68f01&quot;&gt;
+&lt;div class=&quot;grid&quot; id=&quot;org2f5c48c&quot;&gt;
 
-&lt;figure id=&quot;orgdceb587&quot;&gt;
+&lt;figure id=&quot;org417d8d6&quot;&gt;
 &lt;img src=&quot;https://img.skich.io/games/screenshots/637021ce-eee4-4bc7-8d27-b936e25f641a.jpg&quot; alt=&quot;637021ce-eee4-4bc7-8d27-b936e25f641a.jpg&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;Humbug 2 gameplay&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 
-&lt;figure id=&quot;org340d362&quot;&gt;
+&lt;figure id=&quot;org6771e1d&quot;&gt;
 &lt;img src=&quot;https://www.levelinfinite.com/wp-content/uploads/2024/02/honor-of-kings-game-image-7.jpg&quot; alt=&quot;honor-of-kings-game-image-7.jpg&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;Honor of Kings game&lt;/figcaption&gt;
@@ -1397,30 +1580,30 @@ Linux, I only have some casual native games here as well.
 &lt;li&gt;&lt;a href=&quot;https://www.openttd.org/&quot;&gt;OpenTTD&lt;/a&gt; - FOSS Transport tycoon game&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;div class=&quot;grid&quot; id=&quot;orgc167d70&quot;&gt;
+&lt;div class=&quot;grid&quot; id=&quot;orgd2631ec&quot;&gt;
 
-&lt;figure id=&quot;orgaf87e79&quot;&gt;
+&lt;figure id=&quot;org6a154bd&quot;&gt;
 &lt;img src=&quot;https://cdn8.gametop.com/download-free-games/fishdom-h2o/b2.jpg&quot; alt=&quot;b2.jpg&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;Fishdom H20 find hidden objects&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 
-&lt;figure id=&quot;orga3ac6f9&quot;&gt;
+&lt;figure id=&quot;org8aacee3&quot;&gt;
 &lt;img src=&quot;https://media.dotesports.com/wp-content/uploads/2024/08/Find-all-unit-hotkeys-in-Age-of-Mythology.jpg&quot; alt=&quot;Find-all-unit-hotkeys-in-Age-of-Mythology.jpg&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;Age of mythology village cooking&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 
-&lt;figure id=&quot;org4611996&quot;&gt;
+&lt;figure id=&quot;org2437fa4&quot;&gt;
 &lt;img src=&quot;https://pcgames9505.weebly.com/uploads/1/0/2/1/102119388/nfs2semonolithic.jpg&quot; alt=&quot;nfs2semonolithic.jpg&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;NFS SE Racing game&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 
-&lt;figure id=&quot;org1cfa0e7&quot;&gt;
+&lt;figure id=&quot;org7dc7e37&quot;&gt;
 &lt;img src=&quot;https://assetsio.gnwcdn.com/openttd-best-management-games.jpg&quot; alt=&quot;openttd-best-management-games.jpg&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;OpenTTD land mass&lt;/figcaption&gt;
@@ -1455,7 +1638,7 @@ And look what I found randomly&amp;hellip; Lucky for me it was a tree (garden or
 &lt;/p&gt;
 
 
-&lt;figure id=&quot;org28f3d5c&quot;&gt;
+&lt;figure id=&quot;orgd000d6c&quot;&gt;
 &lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/c/cd/Palazzo_Boncompagni_-_Giornata_nazionale_delle_dimore_storiche_e_WP25BO_01.jpg&quot; alt=&quot;&amp;quot;A tree at Palazzo Boncompagni, a historic Italian residence&amp;quot;&quot; width=&quot;600px&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;A random image found via Wikimedia Commons. Source: &lt;a href=&quot;https://commons.wikimedia.org/wiki/File:Palazzo_Boncompagni_-_Giornata_nazionale_delle_dimore_storiche_e_WP25BO_01.jpg&quot;&gt;WikiMedia&lt;/a&gt;&lt;/figcaption&gt;
@@ -1762,7 +1945,7 @@ Emacs already has &lt;code&gt;next-buffer&lt;/code&gt; - &lt;code&gt;previous-bu
 
 &lt;div class=&quot;org-center&quot;&gt;
 
-&lt;figure id=&quot;orgce1dd9a&quot;&gt;
+&lt;figure id=&quot;org802e1ce&quot;&gt;
 &lt;img src=&quot;/images/ewm-desktop.png&quot; alt=&quot;ewm-desktop.png&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;Fig: EWM setup with Noctalia shell while writing this blog post. Left is org mode capture buffer, top right is glide browser showing EWM repo and bottom right is foot terminal running hugo server.&lt;/figcaption&gt;
@@ -2369,7 +2552,7 @@ These hidden tests are the good ones, because you need to solve the problems eff
 &lt;/p&gt;
 
 
-&lt;figure id=&quot;org13fcd5e&quot;&gt;
+&lt;figure id=&quot;org89c476e&quot;&gt;
 &lt;img src=&quot;/images/biocode-lb.png&quot; alt=&quot;biocode-lb.png&quot; width=&quot;70%&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;Leaderboard as of third day challenge (I'm at #8)&lt;/figcaption&gt;
@@ -3210,7 +3393,7 @@ Peasy Nix Versions&lt;/a&gt; - Nicolas Mattia&lt;/li&gt;
 Nix derivation attributes of runtime dependencies&lt;/a&gt; - Nicolas Mattia&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;html&quot; id=&quot;orgaafd150&quot;&gt;
+&lt;div class=&quot;html&quot; id=&quot;orgd9624e0&quot;&gt;
 &lt;p&gt;
 &amp;lt;!&amp;ndash; TODO: add more from their website &amp;ndash;&amp;gt;
 &lt;/p&gt;
@@ -3228,7 +3411,7 @@ Example&lt;/a&gt; - Susan Potter&lt;/li&gt;
 Nix lambda function named arguments&lt;/a&gt; - Susan Potter&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;html&quot; id=&quot;org03dc219&quot;&gt;
+&lt;div class=&quot;html&quot; id=&quot;org4cf0677&quot;&gt;
 &lt;p&gt;
 &amp;lt;!&amp;ndash; TODO: add Tweag Nix flakes &amp;ndash;&amp;gt;
 &lt;/p&gt;

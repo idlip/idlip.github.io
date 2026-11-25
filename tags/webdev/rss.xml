@@ -15,16 +15,16 @@ The new look is &lt;i&gt;Kenbun&lt;/i&gt;, named after &lt;a href=&quot;https://
 &lt;div id=&quot;outline-container-before-and-after&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;before-and-after&quot;&gt;Before and after&lt;a class=&quot;heading-anchor&quot; href=&quot;#before-and-after&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-before-and-after&quot;&gt;
-&lt;div class=&quot;grid&quot; id=&quot;org0b46f44&quot;&gt;
+&lt;div class=&quot;grid&quot; id=&quot;org49dfd1f&quot;&gt;
 
-&lt;figure id=&quot;org2b2f4f6&quot;&gt;
+&lt;figure id=&quot;org7a6c5f7&quot;&gt;
 &lt;img src=&quot;/images/kenbun/hakimacs-home.webp&quot; alt=&quot;hakimacs-home.webp&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;Before: the home page as an Emacs window, with menu bar and modeline&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 
-&lt;figure id=&quot;org0005586&quot;&gt;
+&lt;figure id=&quot;org0ac48c2&quot;&gt;
 &lt;img src=&quot;/images/kenbun/home.webp&quot; alt=&quot;home.webp&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;After: the home page in Kenbun, title, links and a plain column&lt;/figcaption&gt;
@@ -32,16 +32,16 @@ The new look is &lt;i&gt;Kenbun&lt;/i&gt;, named after &lt;a href=&quot;https://
 
 &lt;/div&gt;
 
-&lt;div class=&quot;grid&quot; id=&quot;orgffbc061&quot;&gt;
+&lt;div class=&quot;grid&quot; id=&quot;org16bacd6&quot;&gt;
 
-&lt;figure id=&quot;org426954e&quot;&gt;
+&lt;figure id=&quot;org7b2373c&quot;&gt;
 &lt;img src=&quot;/images/kenbun/hakimacs-list.webp&quot; alt=&quot;hakimacs-list.webp&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;Before: the posts listing page&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 
-&lt;figure id=&quot;org74cbfa9&quot;&gt;
+&lt;figure id=&quot;org8f2f595&quot;&gt;
 &lt;img src=&quot;/images/kenbun/list.webp&quot; alt=&quot;list.webp&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;After: the new simple listing page&lt;/figcaption&gt;
@@ -50,16 +50,16 @@ The new look is &lt;i&gt;Kenbun&lt;/i&gt;, named after &lt;a href=&quot;https://
 &lt;/div&gt;
 
 
-&lt;div class=&quot;grid&quot; id=&quot;orgd950d24&quot;&gt;
+&lt;div class=&quot;grid&quot; id=&quot;orgf473dc5&quot;&gt;
 
-&lt;figure id=&quot;org56d49ab&quot;&gt;
+&lt;figure id=&quot;orgb2c7204&quot;&gt;
 &lt;img src=&quot;/images/kenbun/hakimacs-post.webp&quot; alt=&quot;hakimacs-post.webp&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;Before: a post inside the Emacs frame&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 
-&lt;figure id=&quot;org7e3e38a&quot;&gt;
+&lt;figure id=&quot;orgb8bbc3d&quot;&gt;
 &lt;img src=&quot;/images/kenbun/post.webp&quot; alt=&quot;post.webp&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;After: the same post, just the words&lt;/figcaption&gt;

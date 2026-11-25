@@ -34,6 +34,7 @@ pages:
   "https://davidpoblador.com/deep-dives/what-happened-to-the-frontend/",
   "https://www.joshwcomeau.com/css/interop-2027/",
   "https://piechowski.io/post/git-commands-before-reading-code/",
+  "https://paulgraham.com/greatwork.html",
   "https://ianthehenry.com/",
   "https://dustycloud.org/blog/how-decentralized-is-bluesky/",
   "https://medium.com/thrive-global/how-technology-hijacks-peoples-minds-from-a-magician-and-google-s-design-ethicist-56d62ef5edf3",
@@ -100,6 +101,7 @@ pages:
   "https://yihui.org/en/",
   "https://arne.me/blog/we-need-more-zero-config-tools",
   "https://ooh.directory/",
+  "https://softwareleadweekly.com/issues/",
 ],
 styles: ["wander-theme.css"], ignore: [], }
 ;(function(){try{var c=JSON.parse(localStorage.getItem('emacs-wander-colors'));if(c)Object.keys(c).forEach(function(k){document.documentElement.style.setProperty(k,c[k]);});}catch(e){}})();

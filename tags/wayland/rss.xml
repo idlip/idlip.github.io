@@ -51,7 +51,7 @@ Emacs already has &lt;code&gt;next-buffer&lt;/code&gt; - &lt;code&gt;previous-bu
 
 &lt;div class=&quot;org-center&quot;&gt;
 
-&lt;figure id=&quot;orgce1dd9a&quot;&gt;
+&lt;figure id=&quot;org802e1ce&quot;&gt;
 &lt;img src=&quot;/images/ewm-desktop.png&quot; alt=&quot;ewm-desktop.png&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;Fig: EWM setup with Noctalia shell while writing this blog post. Left is org mode capture buffer, top right is glide browser showing EWM repo and bottom right is foot terminal running hugo server.&lt;/figcaption&gt;
