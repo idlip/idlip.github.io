@@ -1,0 +1,100 @@
+#+title: Power of Habit
+#+date: 2026-11-25
+#+tags: orgmode gtd habit emacs
+
+Every good thing should be a habit, and every bad thing turns out to be a habit as well.
+
+Habit is such a great quirk. I lately realised that whatever productivity hunt or anti-procrastination drive we go on, habit is the only de-facto solution there.
+
+* How I noticed it
+I started realising this after reading the [[https://github.com/yantar92/emacsconf-2026-tasks/blob/master/presentation.pdf][slides]] by yantar92 (Ihor Radchenko) for his [[https://emacsconf.org/2026/talks/][EmacsConf 2026 talk]], [[https://emacsconf.org/2026/talks/tasks/][Personal task management under stress (with Org mode)]]. He is the [[https://orgmode.org/][Org mode]] maintainer, and he does it in his spare time alongside a day job. I have been following him and attending the [[https://orgmode.org/worg/orgmeetup.html][monthly Org meetup]], and I am always astonished by how he even manages his life: so many emails on the Org mailing list that only he can take care of most of the time, work life, personal life, pending tasks and patches to review.
+
+In the talk he outlines how tasks cannot be spread across different places like apps, the browser, email, your head, a notebook and maybe a phone call. They need one home. His first rule is simply "If you manage tasks in Org, do it in Org", and the second one is the one that stuck with me:
+
+#+begin_quote
+Task management won't work unless it becomes habit. Ever!
+#+end_quote
+
+This is where Org mode and habit come into the picture.
+
+* The habit I already had
+I noticed that I often open reddit (r/emacs, r/OnePiece and so on), lobste.rs, mastodon and many more tabs to catch up every day and see what is happening. This has become so habituated that every day, without any effort, my hands naturally takes me there. It is a three times a day thing: morning, lunch and late night. That can be put down to media craving, but that is another topic.
+
+The key thing to notice is that it has no obstacle. It is never missed, there is no holding back, and even at the busiest time there is at least a glance over it. That is my *habit*, and it connected all my GTD thoughts, productivity, self-help and everything else. From that moment I made sure, and even configured my system, to make it a thorough habit to capture notes, schedule tasks every day and just get on with them.
+
+* What a habit is made of
+Both popular books on this say roughly the same thing in simple words:
+
+- In [[https://charlesduhigg.com/the-power-of-habit/][The Power of Habit]], Charles Duhigg describes a loop: a *cue* triggers a *routine*, and a *reward* tells the brain the loop is worth remembering. To change a habit, keep the cue and the reward and swap the routine.
+
+- In [[https://tinyhabits.com/][Tiny Habits]], BJ Fogg says to make the new behaviour so small it needs no motivation, attach it to something you already do (an /anchor/: "After I ..., I will ..."), and celebrate it right away so it feels good.
+
+Yantar's slides put the same idea in his own words: "Build new habits using existing habits". My tab ritual is a ready-made anchor. The cue (morning, lunch, night) and the reward (catching up) are already there, so the task habit only has to ride along with it.
+
+* Habits in Emacs and Org mode
+This is what that looks like in plain Org, nothing fancy. It is the same idea as my [[file:art-gtd.org][Art of Getting things Done]] post: start with defaults and let the system evolve.
+
+** Capture everything into one inbox
+The cheapest habit is capture. One key, one file, no thinking about where it goes. =org-capture= does this from anywhere in Emacs, and you sort it later.
+
+#+begin_src emacs-lisp
+  (setq org-capture-templates
+        '(("i" "Inbox" entry (file "~/inbox.org")
+           "* TODO %?\n%U")))
+  (keymap-global-set "C-c c" #'org-capture)
+  (keymap-global-set "M-k c" #'org-capture)
+  (keymap-global-set "s-k c" #'org-capture)
+  ;; *-k since sounds like `K'apture
+
+  (keymap-global-set "M-j" #'org-agenda)
+  (keymap-global-set "s-j" #'org-agenda)
+  ;; *-j since sounds like A`J'enda
+#+end_src
+
+The same inbox works on the phone with [[https://www.emacswiki.org/emacs/EmacsOnAndroid][Emacs on Android]] or an Org app ([[https://bloom.rrajath.com/][bloom]]), and from the browser or [[https://github.com/skeeto/elfeed][elfeed]] or [[https://succulentoats.com/email_notes][email notes]].
+
+** Open the agenda before the tabs
+This is the anchor. Before reddit, open =org-agenda= (=M-j=). It takes a few seconds and it tells you what today actually needs. Yantar splits his day view into "Must do today", "May do today" and "Can do on a good day", which keeps a bad day from turning into a guilty one.
+
+Open it anywhere, everywhere and anytime, make it a rhythm and make it a habit
+
+** Track the habit itself with org-habit
+Org has a built-in [[https://orgmode.org/manual/Tracking-your-habits.html][habit tracker]]. A habit is a =TODO= with a =STYLE= of =habit= and a repeater, and the agenda draws a small consistency graph next to it, so a broken streak is visible at a glance.
+
+#+begin_src emacs-lisp
+  (with-eval-after-load 'org
+    (require 'org-habit))
+#+end_src
+
+#+begin_src org
+  ,* TODO Process inbox.org
+    SCHEDULED: <2026-11-26 Thu .+1d>
+    :PROPERTIES:
+    :STYLE:    habit
+    :END:
+  ,* TODO Catch up: r/emacs, lobste.rs
+    SCHEDULED: <2026-11-26 Thu .+1d>
+    :PROPERTIES:
+    :STYLE:    habit
+    :Effort:   0:20
+    :END:
+#+end_src
+
+The second entry is my favourite idea from the talk: instead of fighting the distraction, give it its own habit with a time limit ("check social media (daily, once per day, 20 min max!)"). Clock in with =C-c C-x C-i=, and the =Effort= estimate tells you when to stop. A =.+1d= repeater means "one day after I last did it", and something like =.+2d/4d= allows a little slack for habits that are not strictly daily.
+
+** Review weekly, and plan to fall off
+Daily habits keep things moving, and a weekly review keeps the list honest. Group the /someday/ tasks under projects or topics so the review stays short, and trim what no longer matters.
+
+Habits also break: a trip, an illness, a busy month. Yantar's fourth rule covers exactly this: "First, go back to the habit of using your task management". Do not rebuild the system, just open the agenda again tomorrow.
+
+* Closing
+None of this needs a new app or a perfect setup. One plain text file (see [[file:obtf.org][Org mode is the best OBTF]]), one capture key, one agenda glance tied to a habit I already had. The tools only help once the habit is there.
+
+* Further reading
+- [[https://emacsconf.org/2026/talks/tasks/][Personal task management under stress (with Org mode)]] by Ihor Radchenko, EmacsConf 2026 ([[https://github.com/yantar92/emacsconf-2026-tasks][slides source]], [[https://github.com/yantar92/emacs-config][his Emacs config]])
+- [[https://charlesduhigg.com/the-power-of-habit/][The Power of Habit]] by Charles Duhigg
+- [[https://tinyhabits.com/][Tiny Habits]] by BJ Fogg
+- [[https://jamesclear.com/habit-stacking][Habit Stacking]] by James Clear
+- [[https://orgmode.org/worg/org-tutorials/tracking-habits.html][Tracking Habits with Org-mode]] on Worg
+- [[https://sachachua.com/blog/2012/05/org-mode-and-habits/][Org-mode and habits]] by Sacha Chua
+- [[https://cpbotha.net/2019/11/02/forming-and-maintaining-habits-using-orgmode/][Forming and maintaining habits using Orgmode]] by Charl P. Botha

@@ -29,9 +29,9 @@ web:
     #!/usr/bin/env bash
     set -euo pipefail
     if command -v static-web-server >/dev/null; then
-        static-web-server --root {{public}} --port {{port}}
+        static-web-server --root {{public}} --port {{port}} --cache-control-headers false
     else
-        nix run nixpkgs#static-web-server -- --root {{public}} --port {{port}}
+        nix run nixpkgs#static-web-server -- --root {{public}} --port {{port}} --cache-control-headers false
     fi
 
 # Build, then publish public-denden/ on the gh-pages branch.
