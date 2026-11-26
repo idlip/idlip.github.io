@@ -17,12 +17,14 @@
     ("content/log/alpha.org" . "#+title: Alpha\n#+date: [2026-01-05 Mon]\n#+tags: emacs org\n#+refs: book\n#+toc: t\n\nSee [[https://github.com/idlip][my code]] and [[file:beta.org]].\n\n* First part\nText.\n** Inner part\nMore.\n")
     ("content/log/beta.org" . "#+title: Beta\n#+date: [2026-02-10 Tue]\n#+tags: emacs\n#+no_comment: t\n\nA second post on https://example.org/page.\n")
     ("content/pose.org" . "#+title: Pose\n#+layout: pose\n\nShort notes.\n\n* [2026-03-02 Mon] First note :life:\nBody one.\n* [2026-03-02 Mon] Second note\nBody *two*.\n* [2026-03-09 Mon] Later note\n")
-    ("content/wander.org" . "#+title: Wander\n#+layout: topic-list\n#+sort: name\n\nSites I read.\n\n* Consoles\n- [[https://c.example/][Console]] :: A console\n* Blogs\n- [[https://z.example/][Zed]] :: Last /one/ | tag: emacs\n- [[https://a.example/][Ann]] :: First | refs: book | author: =Ann=\n")
+    ("content/wander.org" . "#+title: Wander\n#+layout: topic-list\n#+sort: name\n\nSites I read.\n\n* Consoles\n- [[https://c.example/][Console]] :: A console\n* Blogs\n- [[https://z.example/][Zed]] :: Last /one/ | tag: emacs\n- [[https://a.example/][Ann]] :: First | refs: book | author: =Ann=\n- Plain Name :: Not a link\n")
     ("content/sitemap.org" . "#+title: Sitemap\n#+layout: sitemap\n\nEvery page.\n")
     ("content/links.org" . "#+title: Links\n#+layout: links\n\nEvery link.\n")
     ("assets/css/theme.css" . "body {}\n")
     ("assets/css/wander-theme.css" . ".wander {}\n")
-    ("assets/js/index.js" . "// script\n"))
+    ("assets/js/index.js" . "// script\n")
+    ("static/og/alpha.png" . "png")
+    ("static/og/home.png" . "png"))
   "Files of the fixture site, relative to its root, and their text.")
 
 (defmacro site-test--with-site (&rest body)
@@ -65,8 +67,10 @@
                    "tags/emacs/rss.xml" "refs/book/rss.xml" "sitemap.xml" "robots.txt"
                    "posts/" "themes/" "search-index.json" "wander/console/wander.js"
                    "wander/console/wander-theme.css" "css/bundle.css" "js/index.js"
-                   "js/schemes-data.json" "og.svg" "log/alpha/og.svg" "pose/og.svg"))
-      (should (assoc url files)))))
+                   "js/schemes-data.json" "log/alpha/og.svg"))
+      (should (assoc url files)))
+    (should-not (assoc "og.svg" files))
+    (should-not (assoc "pose/og.svg" files))))
 
 (ert-deftest site-test-pages-are-well-formed ()
   "Every HTML page but the redirects has one h1 and image alt text."
@@ -112,8 +116,10 @@
            (groups (site-topic-groups site wander pages))
            (blogs (plist-get (nth 1 groups) :items)))
       (should (equal (mapcar (lambda (group) (plist-get group :label)) groups) '("Consoles" "Blogs")))
-      (should (equal (mapcar (lambda (item) (plist-get item :name)) blogs) '("Ann" "Zed")))
-      (should (equal (plist-get (nth 1 blogs) :description) "Last <i>one</i>"))
+      (should (equal (mapcar (lambda (item) (plist-get item :name)) blogs) '("Ann" "Plain Name" "Zed")))
+      (should (equal (plist-get (nth 1 blogs) :url) ""))
+      (should (string-search "<span>Plain Name</span>" (site-test--file "wander/" files)))
+      (should (equal (plist-get (nth 2 blogs) :description) "Last <i>one</i>"))
       (should (equal (plist-get (nth 1 (plist-get (car blogs) :parts)) :html) "<code>Ann</code>"))
       (let ((script (site-test--file "wander/console/wander.js" files)))
         (should (string-search "consoles:\n[  \"https://c.example/\",\n]" script))))))
@@ -140,6 +146,33 @@
     (should (equal (gethash "https://a.example/x" dates) "2026-01-02"))
     (should (equal (gethash "https://b.example/y" dates) "2026-11-20"))
     (should-not (gethash "https://c.example/" dates))))
+
+(ert-deftest site-test-og-image-only-on-posts ()
+  "A Log post with a card gets og:image; the home and Pose pages never do."
+  (site-test--with-site
+    (should (string-search "<meta property=\"og:image\" content=\"https://idlip.in/og/alpha.png\" />"
+                           (site-test--file "log/alpha/" files)))
+    (should (string-search "summary_large_image" (site-test--file "log/alpha/" files)))
+    (dolist (url '("" "pose/" "log/beta/"))
+      (should-not (string-search "og:image" (site-test--file url files)))
+      (should (string-search "content=\"summary\"" (site-test--file url files))))))
+
+(ert-deftest site-test-pose-entry-time ()
+  "A Pose entry's time: its own clock, a same-day commit, else 22:00."
+  (let ((denden-default-time "22:00")
+        (commits (make-hash-table)))
+    (puthash 5 (date-to-time "2026-03-02 18:40") commits)
+    (puthash 9 (date-to-time "2026-03-03 00:20") commits)
+    (should (equal (format-time-string "%F %H:%M"
+                                       (site--pose-entry-time '(:date "2026-03-02" :line 5) commits))
+                   "2026-03-02 18:40"))
+    (should (equal (format-time-string "%F %H:%M"
+                                       (site--pose-entry-time '(:date "2026-03-02" :line 9) commits))
+                   "2026-03-02 22:00"))
+    (should (equal (format-time-string "%F %H:%M"
+                                       (site--pose-entry-time '(:date "2026-03-02" :clock (7 5) :line 5)
+                                                              commits))
+                   "2026-03-02 07:05"))))
 
 (provide 'site-test)
 ;;; site-test.el ends here

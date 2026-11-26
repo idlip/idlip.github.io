@@ -694,20 +694,24 @@ The value lives in the page's meta plist, so it lasts for one build."
 (defun site--topic-item (item)
   "Return the parts of the descriptive list ITEM, before any export.
 The result is a plist with :url, :name, :description-text and
-:parts, each part a plist with :key and :value."
+:parts, each part a plist with :key and :value.  The name is the
+link's text, or the term itself when it has no link; :url is then
+empty."
   (let* ((link (car (org-element-map (org-element-property :tag item) 'link #'identity)))
          (begin (org-element-contents-begin item))
          (end (org-element-contents-end item))
          (raw (if (and begin end) (string-trim (buffer-substring-no-properties begin end)) ""))
          (segments (mapcar #'string-trim (split-string raw " | "))))
     (list :url (if link (org-element-property :raw-link link) "")
+          ;; A term without a link is shown as its own text.
           :name (if link
                     (let ((link-begin (org-element-contents-begin link))
                           (link-end (org-element-contents-end link)))
                       (if (and link-begin link-end)
                           (string-trim (buffer-substring-no-properties link-begin link-end))
                         (org-element-property :raw-link link)))
-                  "")
+                  (string-trim (org-no-properties
+                                (org-element-interpret-data (org-element-property :tag item)))))
           :description-text (or (car segments) "")
           :parts (mapcar (lambda (segment)
                            (let ((colon (string-search ":" segment)))
@@ -786,8 +790,10 @@ For my love and curiosity towards astronomy and mythology.")
 
 (defun site--pose-entry (headline)
   "Return the Pose entry of HEADLINE, a top-level heading, before export.
-The plist has :id, :title, :date, :tags, :body-text, and for a dated
-entry :calendar-date, :weekday, :day and :day-title."
+The plist has :custom-id, :title, :date, :tags, :clock (hour and
+minute, when the heading's timestamp has them), :line (the heading's
+line in the file), :body-text, and for a dated entry :calendar-date,
+:weekday, :day and :day-title."
   (let* ((title-objects (org-element-parse-secondary-string
                          (org-element-property :raw-value headline)
                          (org-element-restriction 'headline)))
@@ -809,6 +815,10 @@ entry :calendar-date, :weekday, :day and :day-title."
                       (format "%04d-%02d-%02d" (nth 2 calendar-date) (nth 0 calendar-date)
                               (nth 1 calendar-date)))
            :tags (org-element-property :tags headline)
+           :clock (and timestamp (org-element-property :hour-start timestamp)
+                       (list (org-element-property :hour-start timestamp)
+                             (org-element-property :minute-start timestamp)))
+           :line (line-number-at-pos (org-element-begin headline))
            :body-text (if (and begin end) (buffer-substring-no-properties begin end) ""))
      (and calendar-date
           ;; `calendar-day-of-week' counts from Sunday = 0; ISO counts Monday = 1 to Sunday = 7.
@@ -820,12 +830,49 @@ entry :calendar-date, :weekday, :day and :day-title."
                   :day-title (format "%s · %s · %s" (calendar-day-name calendar-date)
                                      (plist-get planet :hindi) (plist-get planet :meaning))))))))
 
+(defun site--line-commit-times (file)
+  "Return a hash table from each line number of FILE to its commit time.
+The time is that of the commit that last changed the line, from one
+git blame.  Lines not committed yet are left out.  Return nil when
+FILE is not in git or `denden-lastmod-from-git' is nil."
+  (and denden-lastmod-from-git
+       (condition-case nil
+           (let ((default-directory (file-name-directory file))
+                 (times (make-hash-table))
+                 (line nil))
+             (dolist (text (process-lines "git" "blame" "--line-porcelain" "--"
+                                          (file-name-nondirectory file)))
+               (cond
+                ((string-match (rx bos (group (= 40 hex)) " " (+ digit) " " (group (+ digit)))
+                               text)
+                 (setq line (and (not (string-match-p (rx bos (+ "0") eos) (match-string 1 text)))
+                                 (string-to-number (match-string 2 text)))))
+                ((and line (string-prefix-p "committer-time " text))
+                 (puthash line (seconds-to-time
+                                (string-to-number (substring text (length "committer-time "))))
+                          times))))
+             times)
+         (error nil))))
+
+(defun site--pose-entry-time (entry commit-times)
+  "Return the full time of the dated Pose ENTRY.
+The heading's own time wins; then the commit time of its line in
+COMMIT-TIMES, when on the same day; then `denden-default-time'."
+  (let ((clock (plist-get entry :clock)))
+    (denden-resolve-time
+     (date-to-time (if clock
+                       (format "%s %02d:%02d" (plist-get entry :date) (car clock) (cadr clock))
+                     (plist-get entry :date)))
+     clock
+     (and commit-times (gethash (plist-get entry :line) commit-times)))))
+
 (defun site-pose-entries (site page pages)
   "Return the entries of the Pose PAGE of SITE, newest first.
 PAGES are all pages.  Each entry is a top-level heading
 \"* [DATE] Title\", as a plist with :id (the date, or date-2 for a
-second entry that day), :title, :date, :tags, :html, :search-text
-and the day fields.  All bodies are exported in one batch, and the
+second entry that day), :title, :date, :time (see
+`site--pose-entry-time'), :tags, :html, :search-text and the day
+fields.  All bodies are exported in one batch, and the
 result is kept in PAGE for the rest of the build."
   (site--remember
    page :site-pose-entries
@@ -837,6 +884,7 @@ result is kept in PAGE for the rest of the build."
                          #'site--pose-entry nil nil 'headline)))
             (html (denden-export-org-strings
                    site (mapcar (lambda (entry) (plist-get entry :body-text)) entries) pages page))
+            (commit-times (site--line-commit-times (denden-page-source page)))
             (seen (make-hash-table :test #'equal)))
        ;; Newest first; entries of one day keep their file order.
        (sort (cl-mapcar
@@ -849,6 +897,7 @@ result is kept in PAGE for the rest of the build."
                                         (if (or (null date) (> count 1))
                                             (format "%s-%d" (or date "entry") count)
                                           date))
+                                :time (and date (site--pose-entry-time entry commit-times))
                                 :html body
                                 :search-text (downcase (concat (plist-get entry :title) " "
                                                                (denden-html-plain-text body)))))))
@@ -898,7 +947,7 @@ Each record links to the entry's own anchor on the Pose page of SITE."
          (mapcan (lambda (entry)
                    (let ((date (plist-get entry :date)))
                      (and date
-                          (let ((time (date-to-time date)))
+                          (let ((time (plist-get entry :time)))
                             (list (denden-page-create
                                    :url (format "%s#%s" (denden-page-url pose-page) (plist-get entry :id))
                                    :title (plist-get entry :title)
@@ -970,16 +1019,21 @@ Run `just og' by hand to make them; the build never writes them.")
   "Return the OG card name of the page at URL: its last part, or \"home\"."
   (if (string-empty-p url) "home" (file-name-nondirectory (directory-file-name url))))
 
-(defun site--og-image-url (site url)
-  "Return the full address of the OG image of the page at URL in SITE, or nil.
-A page uses its own card when one was made, else the site's common
-card at /og/home.png."
-  (let* ((slug (site--og-slug url))
-         (directory (expand-file-name site-og-png-directory site-root-directory)))
-    (cond ((file-exists-p (expand-file-name (concat slug ".png") directory))
-           (concat (denden-base-url site) "og/" slug ".png"))
-          ((file-exists-p (expand-file-name "home.png" directory))
-           (concat (denden-base-url site) "og/home.png")))))
+(defun site--post-p (page)
+  "Return non-nil when PAGE is a Log post, a page with its own OG card."
+  (equal (denden-page-section page) "log"))
+
+(defun site--og-image-url (site page)
+  "Return the full address of the OG image of PAGE in SITE, or nil.
+Only a Log post has one, once `just og' has made its PNG.  Other
+pages have no image, so link previews show their title, description
+and the site's icon."
+  (let ((slug (site--og-slug (denden-page-url page))))
+    (and (site--post-p page)
+         (file-exists-p (expand-file-name (concat slug ".png")
+                                          (expand-file-name site-og-png-directory
+                                                            site-root-directory)))
+         (concat (denden-base-url site) "og/" slug ".png"))))
 
 (defun site--feed-url (page)
   "Return the address of the feed that PAGE links in its head, or nil."
@@ -1004,8 +1058,7 @@ card at /og/home.png."
      :page-title (if (site--home-page-p page)
                      site-title
                    (format denden-page-title-format title site-title))
-     :head-nodes (denden-seo-head-nodes site page (and (not (site--meta page :noindex))
-                                                       (site--og-image-url site (denden-page-url page))))
+     :head-nodes (denden-seo-head-nodes site page (site--og-image-url site page))
      :palette-data-script (plist-get data :palette-script)
      :stylesheet-href "/css/bundle.css" :script-href "/js/index.js"
      :schemes-url "/js/schemes-data.json"
@@ -1499,40 +1552,31 @@ variables, then the code colours.  PAGES identify the build."
           (cons "js/index.js" (site--read-file site-js-source-file))
           (cons "js/schemes-data.json" (site-schemes-json custom-css)))))
 
-(defun site--og-card-pages (pages)
-  "Return the PAGES with their own OG card: every Log post, and the Pose page."
-  (append (denden-pages-in-section pages "log")
-          (seq-filter (lambda (page) (equal (denden-page-layout page) "pose")) pages)))
-
 (defun site-og-card-outputs (site pages)
-  "Return the OG card SVG of each Log post and the Pose page of SITE, and the
-site's common card, from PAGES.  `just og' turns them into PNG files."
-  (let ((favicon (expand-file-name (concat "static/" site-favicon-relative-path) site-root-directory))
-        (home (seq-find #'site--home-page-p pages)))
-    (cons
-     (cons "og.svg"
-           (site-og-card-svg :title site-title :base-url (denden-base-url site)
-                             :excerpt (or (and home (denden-page-excerpt home)) "")
-                             :card-site-title site-title :favicon-path favicon))
-     (mapcar (lambda (page)
-               (let ((word-count (site--word-count page))
-                     (pose (equal (denden-page-layout page) "pose")))
-                 (cons (concat (denden-page-url page) "og.svg")
-                       (site-og-card-svg
-                        :title (denden-page-title page) :base-url (denden-base-url site)
-                        :excerpt (denden-page-excerpt page)
-                        :tags (site--tags page)
-                        :slug (denden-page-url page)
-                        :date (and (denden-page-date page) (format-time-string "%F" (denden-page-date page)))
-                        ;; Pose grows daily; its card has no word count, so it never goes stale.
-                        :meta-right (unless pose
-                                      (format "%d words · %d min" word-count (site--reading-time word-count)))
-                        :card-site-title site-title :favicon-path favicon))))
-             (site--og-card-pages (site--regular-pages pages))))))
+  "Return the OG card SVG of each Log post of SITE, from PAGES.
+`just og' turns them into PNG files."
+  (let ((favicon (expand-file-name (concat "static/" site-favicon-relative-path)
+                                   site-root-directory)))
+    (mapcar (lambda (page)
+              (let ((word-count (site--word-count page)))
+                (cons (concat (denden-page-url page) "og.svg")
+                      (site-og-card-svg
+                       :title (denden-page-title page) :base-url (denden-base-url site)
+                       :excerpt (denden-page-excerpt page)
+                       :tags (site--tags page)
+                       :slug (denden-page-url page)
+                       :date (and (denden-page-date page)
+                                  (format-time-string "%F" (denden-page-date page)))
+                       :meta-right (format "%d words · %d min"
+                                           word-count (site--reading-time word-count))
+                       :card-site-title site-title :favicon-path favicon))))
+            (seq-filter #'site--post-p pages))))
 
 ;;;; The site
 
-(setq denden-figure-numbers nil)
+(setq denden-figure-numbers nil
+      ;; A date without a time is published at 22:00, unless git knows better.
+      denden-default-time "22:00")
 
 (denden-define-site idlip-site
   "idlip.in, Dilip's Log."
