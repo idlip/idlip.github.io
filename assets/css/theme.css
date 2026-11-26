@@ -288,12 +288,41 @@
   :where(li:has(> input[type="checkbox"])) {
     list-style: none;
   }
+  /* A quote is something to stop and read: a raised card, an accent bar, a large mark. */
   :where(blockquote) {
+    position: relative;
     margin-inline: 0;
-    padding-inline-start: 1em;
-    border-inline-start: 3px solid var(--border);
+    padding: 1em 1em 1em 2.6em;
+    background: var(--surface);
+    border-inline-start: 4px solid var(--accent);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    font-size: 1.05em;
+  }
+  /* The card's padding is the only gap; the last paragraph's margin would double it. */
+  :where(blockquote > :last-child) {
+    margin-block-end: 0;
+  }
+  :where(blockquote)::before {
+    content: "󱀢" / "";
+    position: absolute;
+    inset-block-start: 0.85em;
+    inset-inline-start: 0.6em;
+    font-family: "nerd-icons";
+    font-size: 1.4em;
+    line-height: 1;
+    color: var(--accent);
+  }
+  /* The one-item list written right after a quote ("+ Name") is its attribution. */
+  :where(blockquote + ul:has(> li:only-child)) {
+    list-style: none;
+    padding: 0;
+    margin-block: -0.4em 1.5em;
+    text-align: end;
     color: var(--text-faint);
-    font-style: italic;
+    font-size: 0.9em;
+  }
+  :where(blockquote + ul:has(> li:only-child) > li)::before {
+    content: "󰛓 " / "";
   }
   :where(hr) {
     border: none;
