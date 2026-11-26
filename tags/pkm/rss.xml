@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: pkm</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/tags/pkm/rss.xml" /><id>https://idlip.in/tags/pkm/rss.xml</id><updated>2026-11-24T00:00:00Z</updated><author><name>Dilip | Zororg</name></author><generator>Denden</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Org mode is the best OBTF</title><link rel="alternate" type="text/html" href="https://idlip.in/log/obtf/" /><id>https://idlip.in/log/obtf/</id><published>2026-10-07T00:00:00Z</published><updated>2026-10-12T00:00:00Z</updated><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><category term="obtf" label="obtf" scheme="https://idlip.in/tags/"></category><summary>I wrote about OBTF as Second Brain with Org mode a while back, but that post was mostly &quot;here is my datetree workflow.&quot; This one is a direct response to obtf.ru, a site that makes the case for One Big Text File a lot sharper than I did, and argues it against FOMO fatigue I've felt myself.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: pkm</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/tags/pkm/rss.xml" /><id>https://idlip.in/tags/pkm/rss.xml</id><updated>2026-11-24T17:08:54Z</updated><author><name>Dilip | Zororg</name></author><generator>Denden</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Org mode is the best OBTF</title><link rel="alternate" type="text/html" href="https://idlip.in/log/obtf/" /><id>https://idlip.in/log/obtf/</id><published>2026-10-07T17:48:39Z</published><updated>2026-10-12T17:52:37Z</updated><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><category term="obtf" label="obtf" scheme="https://idlip.in/tags/"></category><summary>I wrote about OBTF as Second Brain with Org mode a while back, but that post was mostly &quot;here is my datetree workflow.&quot; This one is a direct response to obtf.ru, a site that makes the case for One Big Text File a lot sharper than I did, and argues it against FOMO fatigue I've felt myself.
 
 OBTF in some sense is a lazy man's system to get things done. But if you feel more lazier to even think of it, I'd highly recommend to read obtf.ru/en website, since it helps me as well to stay motivated to achieve its purpose.</summary><content type="html">&lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;This content is written to be lateral post to &lt;a href=&quot;https://www.reddit.com/r/OneBigTextFile/s/5Jy5SUG48h&quot;&gt;r/onebigtextfile&lt;/a&gt; and spark the idea to many.&lt;/li&gt;
@@ -13,7 +13,7 @@ I wrote about &lt;a href=&quot;/log/obtf-org-mode/&quot;&gt;OBTF as Second Brain
 OBTF in some sense is a lazy man's system to get things done. But if you feel more lazier to even think of it, I'd highly recommend to read &lt;a href=&quot;https://obtf.ru/en&quot;&gt;obtf.ru/en&lt;/a&gt; website, since it helps me as well to stay motivated to achieve its purpose.
 &lt;/p&gt;
 &lt;div id=&quot;outline-container-obtf-s-philosophy-pitch&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;obtf-s-philosophy-pitch&quot;&gt;OBTF's philosophy pitch&lt;a class=&quot;heading-anchor&quot; href=&quot;#obtf-s-philosophy-pitch&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;obtf-s-philosophy-pitch&quot;&gt;OBTF's philosophy pitch&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-obtf-s-philosophy-pitch&quot;&gt;
 &lt;p&gt;
 Their whole argument boils down to a handful of lines:
@@ -57,7 +57,7 @@ Some posts on OBTF found over internet:
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-where-org-gives-you-more&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;where-org-gives-you-more&quot;&gt;Where Org gives you more&lt;a class=&quot;heading-anchor&quot; href=&quot;#where-org-gives-you-more&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;where-org-gives-you-more&quot;&gt;Where Org gives you more&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-where-org-gives-you-more&quot;&gt;
 &lt;p&gt;
 &quot;Search beats categories&quot; is true until the file gets big enough that search alone stops being enough, and at that point you want &lt;b&gt;structure you can turn on when you need it&lt;/b&gt;, not structure forced on you from day one.
@@ -103,7 +103,7 @@ split the real file.&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-conclude&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;conclude&quot;&gt;Conclude&lt;a class=&quot;heading-anchor&quot; href=&quot;#conclude&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;conclude&quot;&gt;Conclude&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-conclude&quot;&gt;
 &lt;p&gt;
 These might sound very much tied to emacs, yes thats mostly true. Environment so perfect that it can be called a monolith of emacs. But alas, people have ported org mode inspired modes and packages to various other ecosystem.
@@ -127,7 +127,7 @@ Ultimately only thing that is required with note taking or system is to always r
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</content></entry><entry><title>I've Consumed Enough</title><link rel="alternate" type="text/html" href="https://idlip.in/log/consumed-enough/" /><id>https://idlip.in/log/consumed-enough/</id><published>2026-07-20T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="webring" label="webring" scheme="https://idlip.in/tags/"></category><category term="gtd" label="gtd" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><summary>I've had enough and Consumed enough these days.
+</content></entry><entry><title>I've Consumed Enough</title><link rel="alternate" type="text/html" href="https://idlip.in/log/consumed-enough/" /><id>https://idlip.in/log/consumed-enough/</id><published>2026-07-20T16:30:00Z</published><updated>2026-11-24T17:08:54Z</updated><category term="webring" label="webring" scheme="https://idlip.in/tags/"></category><category term="gtd" label="gtd" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><summary>I've had enough and Consumed enough these days.
 
 From past days (…months actually) I've binged alot media and consumed so many free contents (just because they're free?). Movies, TV shows, Kdrama, Light Novels, Blog posts, Reviews (Movie/Books/Product), Comments on Reddit, Doom scrolling forum threads, Internet research and … I think I've just had enough. In the name of &quot;Know it all person&quot;, I've just consumed and spent so much time on being Internet Nerd or Digital Consumer monster.</summary><content type="html">&lt;blockquote&gt;
 &lt;p&gt;
@@ -239,7 +239,7 @@ trouble.&lt;/li&gt;
 
 &lt;hr&gt;
 &lt;div id=&quot;outline-container-tldr&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;tldr&quot;&gt;TLDR&lt;a class=&quot;heading-anchor&quot; href=&quot;#tldr&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;tldr&quot;&gt;TLDR&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-tldr&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;For anyone who couldn't grasp this post, What I wanted to say was that, I've wasted too much consuming media and resources all over Internet.&lt;/li&gt;
@@ -250,7 +250,7 @@ daily journal and write blog posts as much as possible.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</content></entry><entry><title>OBTF as Second Brain with Org mode</title><link rel="alternate" type="text/html" href="https://idlip.in/log/obtf-org-mode/" /><id>https://idlip.in/log/obtf-org-mode/</id><published>2025-09-06T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><category term="obtf" label="obtf" scheme="https://idlip.in/tags/"></category><summary>One Big Text File is simply writing down mostly everything in single file to organize or manage data. This single file acts as the source of knowledge and holds all notes.
+</content></entry><entry><title>OBTF as Second Brain with Org mode</title><link rel="alternate" type="text/html" href="https://idlip.in/log/obtf-org-mode/" /><id>https://idlip.in/log/obtf-org-mode/</id><published>2025-09-06T16:30:00Z</published><updated>2026-11-24T17:08:54Z</updated><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><category term="obtf" label="obtf" scheme="https://idlip.in/tags/"></category><summary>One Big Text File is simply writing down mostly everything in single file to organize or manage data. This single file acts as the source of knowledge and holds all notes.
 
 Second brain has been a buzz word, thanks to the sourcing of Zettelkasten method, every productivity freak is on the stance to organize their life and get things done.</summary><content type="html">&lt;p&gt;
 &lt;b&gt;One Big Text File&lt;/b&gt; is simply writing down mostly everything in single file to organize or manage data. This single file acts as the source of knowledge and holds all notes.
@@ -276,7 +276,7 @@ You can read more about my note taking journey in &lt;a href=&quot;/log/wrapup-m
 This context is also written in favor to post it on r/obtf
 &lt;/p&gt;
 &lt;div id=&quot;outline-container-org-mode-is-the-best-tool-for-managing-obtf&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org-mode-is-the-best-tool-for-managing-obtf&quot;&gt;Org mode is the best tool for managing OBTF&lt;a class=&quot;heading-anchor&quot; href=&quot;#org-mode-is-the-best-tool-for-managing-obtf&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;org-mode-is-the-best-tool-for-managing-obtf&quot;&gt;Org mode is the best tool for managing OBTF&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-org-mode-is-the-best-tool-for-managing-obtf&quot;&gt;
 &lt;p&gt;
 Many popular workflow would go by simple format as bullet points with Time date and info, and regexp based searching via CLI (rg, vim, grep, sed&amp;hellip;. bash scripts)
@@ -339,7 +339,7 @@ This logically acts as an individual file with that tag/category, thus being ato
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-key-takeaways&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;key-takeaways&quot;&gt;Key takeaways&lt;a class=&quot;heading-anchor&quot; href=&quot;#key-takeaways&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;key-takeaways&quot;&gt;Key takeaways&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-key-takeaways&quot;&gt;
 &lt;p&gt;
 whatever the system or the tool is, the main takeaways every resource provides is to review the notes and write it for future self. Every capture is to review back and make the fleeting note into and rich information.
@@ -347,7 +347,7 @@ This OBTF with org mode satisfies that needs given that user reviews the notes a
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</content></entry><entry><title>My MSc journey with Emacs Orgmode</title><link rel="alternate" type="text/html" href="https://idlip.in/log/masters-emacs-orgmode/" /><id>https://idlip.in/log/masters-emacs-orgmode/</id><published>2025-06-06T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="bioinformatics" label="bioinformatics" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><summary>I wrote and used emacs orgmode for all of my post-grad Masters classes, presentations, projects and thesis.
+</content></entry><entry><title>My MSc journey with Emacs Orgmode</title><link rel="alternate" type="text/html" href="https://idlip.in/log/masters-emacs-orgmode/" /><id>https://idlip.in/log/masters-emacs-orgmode/</id><published>2025-06-06T16:30:00Z</published><updated>2026-11-24T17:08:54Z</updated><category term="bioinformatics" label="bioinformatics" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><summary>I wrote and used emacs orgmode for all of my post-grad Masters classes, presentations, projects and thesis.
 
 Before post-grad itself I was introduced to Emacs world and enjoyed getting good with it. As I used it, I realized emacs is not just an text editor, its an Personal Development Environment itself and user has power to craft it as they need. This was a worthwhile investment.</summary><content type="html">&lt;p&gt;
 &lt;b&gt;I wrote and used emacs orgmode for all of my post-grad Masters classes, presentations, projects and thesis.&lt;/b&gt;
@@ -383,7 +383,7 @@ I could have been an normie student like others and be at ease, but why did I ch
 I valued investment and growth. I could see the development and learning of skills compared to working with traditional GUI applications.
 &lt;/p&gt;
 &lt;div id=&quot;outline-container-note-taking&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;note-taking&quot;&gt;Note taking&lt;a class=&quot;heading-anchor&quot; href=&quot;#note-taking&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;note-taking&quot;&gt;Note taking&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-note-taking&quot;&gt;
 &lt;p&gt;
 Note-taking is understandable, its just format of text to store and read. And org-mode was superior and helped me alot.
@@ -402,7 +402,7 @@ So on which really helps with narrowing using consult package and org-ql for que
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-reports-doc&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;reports-doc&quot;&gt;Reports/Doc&lt;a class=&quot;heading-anchor&quot; href=&quot;#reports-doc&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;reports-doc&quot;&gt;Reports/Doc&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-reports-doc&quot;&gt;
 &lt;p&gt;
 Org mode can produce pdf via latex or ODT/docx format. That eventually guided me for submission of assignments and documents for sharing.
@@ -415,7 +415,7 @@ Although there was not much work with reports, I had good workflow of storing no
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-presentations&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;presentations&quot;&gt;Presentations&lt;a class=&quot;heading-anchor&quot; href=&quot;#presentations&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;presentations&quot;&gt;Presentations&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-presentations&quot;&gt;
 &lt;p&gt;
 I thought to give presentations in Emacs editor itself, but that did not make the cut for required normie friendly slides. The magically I came across revealJS and observed many people in tech presentations and talks used them. There was active development of org-reveal package as well, in new form from OER gitlab repo.
@@ -431,7 +431,7 @@ I had local.scss file for color and designing slides, and org generated html fil
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-thesis&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;thesis&quot;&gt;Thesis&lt;a class=&quot;heading-anchor&quot; href=&quot;#thesis&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;thesis&quot;&gt;Thesis&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-thesis&quot;&gt;
 &lt;p&gt;
 The final saga of the journey, since thesis takes time to write, I thought to not bother with complicating this task. My initial thought was to either use Latex, if it was too much headache then simply follow given docx format file and write.
@@ -444,7 +444,7 @@ The syntax and process was very robust and simple. The documentation was standar
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-conclusion&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;a class=&quot;heading-anchor&quot; href=&quot;#conclusion&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-conclusion&quot;&gt;
 &lt;p&gt;
 The main draw from this experience was that investing in tools that allow extending and allow programming to customize and tweak as I require was a major win and good rewards. These were added up skills that makes working with related tasks a breeze ahead.&lt;/p&gt;

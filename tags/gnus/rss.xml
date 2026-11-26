@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: gnus</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/tags/gnus/rss.xml" /><id>https://idlip.in/tags/gnus/rss.xml</id><updated>2026-11-24T00:00:00Z</updated><author><name>Dilip | Zororg</name></author><generator>Denden</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Using Gnus to read rss feeds</title><link rel="alternate" type="text/html" href="https://idlip.in/log/gnus-joy/" /><id>https://idlip.in/log/gnus-joy/</id><published>2024-03-10T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="gnus" label="gnus" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><summary>Emacs is my editor, and my companion for most of my tasks. Yes, I'd like to call it a second brain extension.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: gnus</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/tags/gnus/rss.xml" /><id>https://idlip.in/tags/gnus/rss.xml</id><updated>2026-11-24T17:08:54Z</updated><author><name>Dilip | Zororg</name></author><generator>Denden</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Using Gnus to read rss feeds</title><link rel="alternate" type="text/html" href="https://idlip.in/log/gnus-joy/" /><id>https://idlip.in/log/gnus-joy/</id><published>2024-03-10T16:30:00Z</published><updated>2026-11-24T17:08:54Z</updated><category term="gnus" label="gnus" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><summary>Emacs is my editor, and my companion for most of my tasks. Yes, I'd like to call it a second brain extension.
 
 I'm a rss feed user, to read with coziness, freedom and comfort. Lately I have been experiment with the rss readers choice in Emacs. I feel that gnus, the powerhouse in Emacs is one of the good choice. I mean to say, not with nnrss backend, but with rss to nntp gateway.</summary><content type="html">&lt;p&gt;
 Emacs is my editor, and my companion for most of my tasks. Yes, I'd like to call it a second brain extension.
@@ -17,7 +17,7 @@ I'm using &lt;code&gt;elfeed&lt;/code&gt; as the rss reader for over 6 months. I
 Soon I jotted down only 3 candidate for reading feeds. Elfeed, Newsticker &amp;amp; gnus. Later two are built-in. There might be others as well, like wanderlust, org based.., but when I tried ig it did not work.
 &lt;/p&gt;
 &lt;div id=&quot;outline-container-elfeed&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;elfeed&quot;&gt;Elfeed&lt;a class=&quot;heading-anchor&quot; href=&quot;#elfeed&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;elfeed&quot;&gt;Elfeed&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-elfeed&quot;&gt;
 &lt;p&gt;
 As said earlier, it was my choice for about 6+ months, and it worked really well. Was reading and tagging feeds alot. Although with my rss usage, I realized I was only looking forward for the &lt;b&gt;planet emacs&lt;/b&gt; feeds (haha; typical emacser).
@@ -33,7 +33,7 @@ It is still my recommend way to go with the package that just works well. But be
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-newsticker&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;newsticker&quot;&gt;Newsticker&lt;a class=&quot;heading-anchor&quot; href=&quot;#newsticker&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;newsticker&quot;&gt;Newsticker&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-newsticker&quot;&gt;
 &lt;p&gt;
 Firstly, liked the customization it has, and the tree-view how it appeals. But I hit the road blocks very soon. Tree-view was an issue, I need to read each post in single window and navigate to my leisure. I miss tags here. For everytime I launch, &lt;code&gt;newsticker-treeview&lt;/code&gt; it fetches the articles from feed. That blocks my usage sometimes. Even tho I can keep &lt;code&gt;newsticker-retrieval-interval&lt;/code&gt; to 0, it still fetches when launched with command for first time.
@@ -49,7 +49,7 @@ Anyway, newsticker is also good, as it is built-in and does just work.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-gnus&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;gnus&quot;&gt;gnus&lt;a class=&quot;heading-anchor&quot; href=&quot;#gnus&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;gnus&quot;&gt;gnus&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-gnus&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;I panicked when I came to gnus. Its my..idk.. n&lt;sup&gt;th&lt;/sup&gt; time trying it out again.&lt;/li&gt;

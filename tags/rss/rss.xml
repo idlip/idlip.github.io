@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: rss</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/tags/rss/rss.xml" /><id>https://idlip.in/tags/rss/rss.xml</id><updated>2026-11-24T00:00:00Z</updated><author><name>Dilip | Zororg</name></author><generator>Denden</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>RSS: The better Internet</title><link rel="alternate" type="text/html" href="https://idlip.in/log/rss-web/" /><id>https://idlip.in/log/rss-web/</id><published>2023-03-23T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><category term="news" label="news" scheme="https://idlip.in/tags/"></category><category term="rss" label="rss" scheme="https://idlip.in/tags/"></category><summary>I don't have to say this, the Internet is hella bloated.. Junks are everywhere, nobody knows that they read shit, they are watching shits whole time.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: rss</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/tags/rss/rss.xml" /><id>https://idlip.in/tags/rss/rss.xml</id><updated>2026-11-24T17:08:54Z</updated><author><name>Dilip | Zororg</name></author><generator>Denden</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>RSS: The better Internet</title><link rel="alternate" type="text/html" href="https://idlip.in/log/rss-web/" /><id>https://idlip.in/log/rss-web/</id><published>2023-03-23T16:30:00Z</published><updated>2026-11-24T17:08:54Z</updated><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><category term="news" label="news" scheme="https://idlip.in/tags/"></category><category term="rss" label="rss" scheme="https://idlip.in/tags/"></category><summary>I don't have to say this, the Internet is hella bloated.. Junks are everywhere, nobody knows that they read shit, they are watching shits whole time.
 
 Just do a test, How many popups have you closed today, How many cookies (web) have you eaten, How many captchas did you solve, How many minutes did you wait to skip an ad just to watch a video… Even worse, ads sponsors are embedded within a video (So cruel and harsh world) It goes on.</summary><content type="html">&lt;div id=&quot;outline-container-cheesy-internet&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;cheesy-internet&quot;&gt;Cheesy Internet&lt;a class=&quot;heading-anchor&quot; href=&quot;#cheesy-internet&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;cheesy-internet&quot;&gt;Cheesy Internet&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-cheesy-internet&quot;&gt;
 &lt;p&gt;
 I don't have to say this, the Internet is hella bloated.. Junks are everywhere, nobody knows that they read shit, they are watching shits whole time.
@@ -20,7 +20,7 @@ People these days all need ready-made/ready-to-work  stuffs, I wonder how do the
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-the-hero&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;the-hero&quot;&gt;The Hero&lt;a class=&quot;heading-anchor&quot; href=&quot;#the-hero&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;the-hero&quot;&gt;The Hero&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-the-hero&quot;&gt;
 &lt;p&gt;
 Rss stands for &lt;b&gt;Really Simple Syndication&lt;/b&gt;, It is a classic on consuming web as supposedly it was built for. Today its all crappy &lt;b&gt;JavaScript&lt;/b&gt; (a big bloat of cheese).
@@ -42,7 +42,7 @@ Actually many of you might know famous news reader called &lt;b&gt;Feedly&lt;/b&
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-feed-readers&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;feed-readers&quot;&gt;Feed Readers&lt;a class=&quot;heading-anchor&quot; href=&quot;#feed-readers&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;feed-readers&quot;&gt;Feed Readers&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-feed-readers&quot;&gt;
 &lt;p&gt;
 If you use window there are famous readers like fluent reader.

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: wayland</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/tags/wayland/rss.xml" /><id>https://idlip.in/tags/wayland/rss.xml</id><updated>2026-11-24T00:00:00Z</updated><author><name>Dilip | Zororg</name></author><generator>Denden</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>May I Recommend EWM</title><link rel="alternate" type="text/html" href="https://idlip.in/log/may-i-recommend/" /><id>https://idlip.in/log/may-i-recommend/</id><published>2026-05-04T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="carnival" label="carnival" scheme="https://idlip.in/tags/"></category><category term="ewm" label="ewm" scheme="https://idlip.in/tags/"></category><category term="wayland" label="wayland" scheme="https://idlip.in/tags/"></category><summary>EWM: codeberg:ezemtsov/ewm Wiki: codeberg:ezemtsov/ewm/wiki
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: wayland</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/tags/wayland/rss.xml" /><id>https://idlip.in/tags/wayland/rss.xml</id><updated>2026-11-24T17:08:54Z</updated><author><name>Dilip | Zororg</name></author><generator>Denden</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>May I Recommend EWM</title><link rel="alternate" type="text/html" href="https://idlip.in/log/may-i-recommend/" /><id>https://idlip.in/log/may-i-recommend/</id><published>2026-05-04T16:30:00Z</published><updated>2026-11-24T17:08:54Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="carnival" label="carnival" scheme="https://idlip.in/tags/"></category><category term="ewm" label="ewm" scheme="https://idlip.in/tags/"></category><category term="wayland" label="wayland" scheme="https://idlip.in/tags/"></category><summary>EWM: codeberg:ezemtsov/ewm Wiki: codeberg:ezemtsov/ewm/wiki
 
 Emacs along with being a text editor, is a battery included software that does more things and architecturally well designed (thus no rewrite last strong). Emacs has good (in-fact powerful) window management, everything as buffer system, self documenting, extensible (upto human brain, maybe DNA?) and every user's Personal development environment.</summary><content type="html">&lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;This post is written for &lt;a href=&quot;https://www.emacswiki.org/emacs/Carnival&quot;&gt;Emacs carnival&lt;/a&gt; of &lt;a href=&quot;https://www.emacswiki.org/emacs/CarnivalMay2026&quot;&gt;May 2026&lt;/a&gt;. If you're new to this site, FYI I go by
@@ -51,7 +51,7 @@ Emacs already has &lt;code&gt;next-buffer&lt;/code&gt; - &lt;code&gt;previous-bu
 
 &lt;div class=&quot;org-center&quot;&gt;
 
-&lt;figure id=&quot;org802e1ce&quot;&gt;
+&lt;figure id=&quot;org40f16cd&quot;&gt;
 &lt;img src=&quot;/images/ewm-desktop.png&quot; alt=&quot;ewm-desktop.png&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;Fig: EWM setup with Noctalia shell while writing this blog post. Left is org mode capture buffer, top right is glide browser showing EWM repo and bottom right is foot terminal running hugo server.&lt;/figcaption&gt;
@@ -74,7 +74,7 @@ itself. All I see is emacs frame, and I work in Emacs as its my WM itself now. N
 I no longer quit/leave emacs, if I'm leaving that means I'm shutting down my machine down ;-)
 &lt;/p&gt;
 &lt;div id=&quot;outline-container-may-i-also-recommend-glide-browser-for-emacs-keymappings&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;may-i-also-recommend-glide-browser-for-emacs-keymappings&quot;&gt;May I also Recommend Glide browser for emacs keymappings&lt;a class=&quot;heading-anchor&quot; href=&quot;#may-i-also-recommend-glide-browser-for-emacs-keymappings&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;may-i-also-recommend-glide-browser-for-emacs-keymappings&quot;&gt;May I also Recommend Glide browser for emacs keymappings&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-may-i-also-recommend-glide-browser-for-emacs-keymappings&quot;&gt;
 &lt;p&gt;
 Glide browser came to &lt;a href=&quot;https://lobste.rs/s/lm3isi/glide_extensible_keyboard_focused_web&quot;&gt;lobste.rs news&lt;/a&gt; and showcased as firefox-fork being keyboard centric, and I was badly looking for qutebrowser enhancements with addons. And I made the switch and config was pretty easy.
@@ -98,7 +98,7 @@ Here's the &lt;a href=&quot;https://github.com/glide-browser/glide/discussions/2
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-2026-07-29-wed&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;2026-07-29-wed&quot;&gt;&lt;span class=&quot;timestamp-wrapper&quot;&gt;&lt;time class=&quot;timestamp&quot; datetime=&quot;2026-07-29&quot;&gt;[2026-07-29 Wed]&lt;/time&gt;&lt;/span&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;#2026-07-29-wed&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;2026-07-29-wed&quot;&gt;&lt;span class=&quot;timestamp-wrapper&quot;&gt;&lt;time class=&quot;timestamp&quot; datetime=&quot;2026-07-29&quot;&gt;[2026-07-29 Wed]&lt;/time&gt;&lt;/span&gt;&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-2026-07-29-wed&quot;&gt;
 &lt;p&gt;
 &lt;a href=&quot;https://codeberg.org/ezemtsov&quot;&gt;Ezemtsov&lt;/a&gt; has made a &lt;a href=&quot;https://codeberg.org/ezemtsov/emacs/src/branch/wayland&quot;&gt;fork of emacs&lt;/a&gt; with &lt;a href=&quot;https://codeberg.org/ezemtsov/emacs/commit/6147db532ae4fb462910816e55fab0cc62418269&quot;&gt;pure wayland backend&lt;/a&gt;, with no gtk or
@@ -128,7 +128,7 @@ day to day has been either emacs for notes/task and glide browser for being on I
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-2026-10-23-fri&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;2026-10-23-fri&quot;&gt;&lt;span class=&quot;timestamp-wrapper&quot;&gt;&lt;time class=&quot;timestamp&quot; datetime=&quot;2026-10-23&quot;&gt;[2026-10-23 Fri]&lt;/time&gt;&lt;/span&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;#2026-10-23-fri&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;2026-10-23-fri&quot;&gt;&lt;span class=&quot;timestamp-wrapper&quot;&gt;&lt;time class=&quot;timestamp&quot; datetime=&quot;2026-10-23&quot;&gt;[2026-10-23 Fri]&lt;/time&gt;&lt;/span&gt;&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-2026-10-23-fri&quot;&gt;
 &lt;p&gt;
 EWM again has matured alot and is almost stable for daily driving for others, although I've been already daily driving it with no issues. Even features have increased alot, every fortnight there has been new cool feature or improvements in codebase. Emacs pwayl backend got background-ext-control which gives blur, EWM has blur now, go see codeberg demo to see it and check wiki for more. &lt;code&gt;S-e&lt;/code&gt; which calls &lt;code&gt;ewm-edit&lt;/code&gt; to capture input text from any wayland window and edit in emacs and on closing it pastes it there (inspired by emacs-anywhere &amp;amp; exwm).

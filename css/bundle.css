@@ -288,12 +288,41 @@
   :where(li:has(> input[type="checkbox"])) {
     list-style: none;
   }
+  /* A quote is something to stop and read: a raised card, an accent bar, a large mark. */
   :where(blockquote) {
+    position: relative;
     margin-inline: 0;
-    padding-inline-start: 1em;
-    border-inline-start: 3px solid var(--border);
+    padding: 1em 1em 1em 2.6em;
+    background: var(--surface);
+    border-inline-start: 4px solid var(--accent);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    font-size: 1.05em;
+  }
+  /* The card's padding is the only gap; the last paragraph's margin would double it. */
+  :where(blockquote > :last-child) {
+    margin-block-end: 0;
+  }
+  :where(blockquote)::before {
+    content: "󱀢" / "";
+    position: absolute;
+    inset-block-start: 0.85em;
+    inset-inline-start: 0.6em;
+    font-family: "nerd-icons";
+    font-size: 1.4em;
+    line-height: 1;
+    color: var(--accent);
+  }
+  /* The one-item list written right after a quote ("+ Name") is its attribution. */
+  :where(blockquote + ul:has(> li:only-child)) {
+    list-style: none;
+    padding: 0;
+    margin-block: -0.4em 1.5em;
+    text-align: end;
     color: var(--text-faint);
-    font-style: italic;
+    font-size: 0.9em;
+  }
+  :where(blockquote + ul:has(> li:only-child) > li)::before {
+    content: "󰛓 " / "";
   }
   :where(hr) {
     border: none;
@@ -782,9 +811,55 @@
     & summary {
       padding-block: 0.4em;
     }
+    /* The heading row: heading, then tags pushed to the far end, all centred on one line.
+       A flex summary loses the browser's marker, so it draws the same triangle itself. */
+    & :is(summary, article:not(:has(> details))) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      column-gap: 0.5em;
+    }
+    & summary {
+      list-style: none;
+      &::-webkit-details-marker {
+        display: none;
+      }
+      &::before {
+        content: "▸";
+      }
+    }
+    & details[open] > summary::before {
+      content: "▾";
+    }
     & time {
       color: var(--text-faint);
       font-variant-numeric: tabular-nums;
+    }
+    /* Date at 0.8 of the title; tags at 0.7. */
+    & h3 time {
+      font-size: 0.8em;
+    }
+    /* Tags sit at the far end of the heading row, wrapping onto a row of their own. */
+    & .tags {
+      margin-inline-start: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3em;
+      font-size: calc(1.1em * 0.7);
+    }
+    /* A solid chip in the link colour, its text in the page colour (the link pair, swapped). */
+    & .tags a {
+      display: inline-flex;
+      align-items: center;
+      min-block-size: 24px;
+      padding-inline: 0.45em;
+      border-radius: var(--radius);
+      background: var(--link);
+      color: var(--background);
+      text-decoration: none;
+    }
+    & .tags a:is(:hover, :focus-visible) {
+      text-decoration: underline;
     }
     /* A solid chip in the weekday colour; bold at heading size counts as large text (3:1). */
     & .day {
@@ -793,6 +868,7 @@
       background: var(--day-color);
       color: var(--background);
       font-weight: bold;
+      font-size: 0.9em;
     }
     & [data-day="1"] {
       --day-color: var(--day-1);

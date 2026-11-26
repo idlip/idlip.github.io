@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: socialmedia</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/tags/socialmedia/rss.xml" /><id>https://idlip.in/tags/socialmedia/rss.xml</id><updated>2026-11-23T16:30:00Z</updated><author><name>Dilip | Zororg</name></author><generator>Denden</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Pose page has been reworked</title><link rel="alternate" type="text/html" href="https://idlip.in/pose/#2026-11-23" /><id>https://idlip.in/pose/#2026-11-23</id><published>2026-11-23T16:30:00Z</published><updated>2026-11-23T16:30:00Z</updated><category term="socialmedia" label="socialmedia" scheme="https://idlip.in/tags/"></category><category term="indieweb" label="indieweb" scheme="https://idlip.in/tags/"></category><summary>The page you are looking at is reworked to have weekly grouping, although I strictly want to post small bits everyday like Mastodon posts. The only friction I feel with Mastodon is that like any other social media it still has that &quot;Feedback Craving&quot;: when I post, I keep expecting someone to star it and reply. The constant tension of someone overlooking it might demotivate me from writing anything more. Thus here I'm writing on my own site without caring for anything, but whatever it is, this holds as a document for myself to see over the &quot;world wide web&quot;. No reaction craving, nor any self-pitfalls.
+
+I should write about my hate towards the reaction system altogether as a blog post, and I should find a way to hide them everywhere. I know it's very useful, but I totally hate it. At least a respectful way to hide them, as a user preference, would help. YouTube did it, but on their end; I'd prefer it on the user (client) end.</summary><content type="html">&lt;p&gt;
+The page you are looking at is reworked to have weekly grouping, although I strictly want to post small bits everyday like Mastodon posts. The only friction I feel with Mastodon is that like any other social media it still has that &quot;Feedback Craving&quot;: when I post, I keep expecting someone to star it and reply. The constant tension of someone overlooking it might demotivate me from writing anything more. Thus here I'm writing on my own site without caring for anything, but whatever it is, this holds as a document for myself to see over the &quot;world wide web&quot;. No reaction craving, nor any self-pitfalls.
+&lt;/p&gt;
+
+&lt;p&gt;
+I should write about my hate towards the reaction system altogether as a blog post, and I should find a way to hide them everywhere. I know it's very useful, but I totally hate it. At least a respectful way to hide them, as a user preference, would help. YouTube did it, but on their end; I'd prefer it on the user (client) end.
+&lt;/p&gt;
+
+&lt;p&gt;
+Further reading
+&lt;/p&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;https://write.as/addie/likes-ruined-everything&quot;&gt;Likes ruined everything&lt;/a&gt; on Analog Dreams&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://journal.jatan.space/mastodon-and-the-fediverse-is-noisy/&quot;&gt;Mastodon and the Fediverse is too noisy. Why?&lt;/a&gt; on Jatan's Journal&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://computationalculture.net/what-do-metrics-want/&quot;&gt;What Do Metrics Want?&lt;/a&gt; by Benjamin Grosser&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+Anti-meter tools (hide counts on the client end)
+&lt;/p&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;https://bengrosser.com/projects/twitter-demetricator/&quot;&gt;Twitter Demetricator&lt;/a&gt; and &lt;a href=&quot;https://bengrosser.com/projects/instagram-demetricator/&quot;&gt;Instagram Demetricator&lt;/a&gt; by Benjamin Grosser&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://manualdousuario.net/en/demetrificando-web-userstyle-css/&quot;&gt;Hiding metrics from the web&lt;/a&gt;, a userstyle by Manual do Usuário&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://userstyles.world/style/16993&quot;&gt;Hide quantitative stats from Mastodon web&lt;/a&gt; on UserStyles.world&lt;/li&gt;
+&lt;/ul&gt;</content></entry></feed>

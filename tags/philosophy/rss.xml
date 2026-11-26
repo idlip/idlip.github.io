@@ -1,5 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: philosophy</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/tags/philosophy/rss.xml" /><id>https://idlip.in/tags/philosophy/rss.xml</id><updated>2026-11-24T00:00:00Z</updated><author><name>Dilip | Zororg</name></author><generator>Denden</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Talk is Cheap. Code is Cheap. Show me the Source</title><link rel="alternate" type="text/html" href="https://idlip.in/log/show-me-source/" /><id>https://idlip.in/log/show-me-source/</id><published>2026-08-27T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="philosophy" label="philosophy" scheme="https://idlip.in/tags/"></category><category term="programming" label="programming" scheme="https://idlip.in/tags/"></category><summary>I've been meaning to write about this since [2026-03-20 Fri]. finally doing it.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: philosophy</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/tags/philosophy/rss.xml" /><id>https://idlip.in/tags/philosophy/rss.xml</id><updated>2026-11-24T17:08:54Z</updated><author><name>Dilip | Zororg</name></author><generator>Denden</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Give everything, or only what is asked</title><link rel="alternate" type="text/html" href="https://idlip.in/pose/#2026-11-24" /><id>https://idlip.in/pose/#2026-11-24</id><published>2026-11-24T16:30:00Z</published><updated>2026-11-24T16:30:00Z</updated><category term="philosophy" label="philosophy" scheme="https://idlip.in/tags/"></category><category term="tablog" label="tablog" scheme="https://idlip.in/tags/"></category><summary>A thought I started and left pending: should someone give everything at one shot and let me take what I need, or give only what I asked for, so the noise stays out? I want both, on different days.
+
+I have not finished thinking it through, so for now I am leaving my open tabs here. If you have the time, read them and decide for yourself.</summary><content type="html">&lt;p&gt;
+A thought I started and left pending: should someone give everything at one shot and let me take what I need, or give only what I asked for, so the noise stays out? I want both, on different days.
+&lt;/p&gt;
+
+&lt;p&gt;
+I have not finished thinking it through, so for now I am leaving my open tabs here. If you have the time, read them and decide for yourself.
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;b&gt;Tab log&lt;/b&gt;: I'll be adding more tab logs to the this page on daily/weekly bits. Don't worry, you can catch up on all of them on the &lt;a href=&quot;/links/&quot;&gt;Links&lt;/a&gt;.
+&lt;/p&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li class=&quot;off&quot;&gt;&lt;input type='checkbox' /&gt; &lt;a href=&quot;https://blr.indiewebclub.org/archive/&quot;&gt;blr.indiewebclub.org/archive&lt;/a&gt; -&amp;gt; To read weekly to get inspired for writing more.&lt;/li&gt;
+&lt;li class=&quot;off&quot;&gt;&lt;input type='checkbox' /&gt; &lt;a href=&quot;https://chrisburnell.com/html-can-do-that/#example-until-found&quot;&gt;chrisburnell.com/html-can-do-that#example-until-found&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;off&quot;&gt;&lt;input type='checkbox' /&gt; &lt;a href=&quot;https://vickiboykis.com/&quot;&gt;vickiboykis.com&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;off&quot;&gt;&lt;input type='checkbox' /&gt; &lt;a href=&quot;https://silktide.com/blog/how-to-write-readable-content/&quot;&gt;silktide.com/blog/how-to-write-readable-content&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;off&quot;&gt;&lt;input type='checkbox' /&gt; &lt;a href=&quot;https://softwareleadweekly.com/issues/&quot;&gt;softwareleadweekly.com/issues&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;off&quot;&gt;&lt;input type='checkbox' /&gt; &lt;a href=&quot;https://www.jvt.me/posts/2026/08/17/hand-write-commits/&quot;&gt;jvt.me/posts/2026/08/17/hand-write-commits&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;off&quot;&gt;&lt;input type='checkbox' /&gt; &lt;a href=&quot;https://martinfowler.com/agile.html&quot;&gt;martinfowler.com/agile.html&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;off&quot;&gt;&lt;input type='checkbox' /&gt; &lt;a href=&quot;https://joecode.com/2026-08-19-sqlite3/&quot;&gt;joecode.com/2026-08-19-sqlite3&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;off&quot;&gt;&lt;input type='checkbox' /&gt; &lt;a href=&quot;https://www.chiply.dev/post-hyperbole-hyrolo&quot;&gt;chiply.dev/post-hyperbole-hyrolo&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;off&quot;&gt;&lt;input type='checkbox' /&gt; &lt;a href=&quot;https://www.tomica.net/&quot;&gt;tomica.net&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;off&quot;&gt;&lt;input type='checkbox' /&gt; &lt;a href=&quot;https://kedara.eu/organising-feeds-permaculture/&quot;&gt;Organising my feeds using Permaculture principles - Kedara.eu&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;off&quot;&gt;&lt;input type='checkbox' /&gt; &lt;a href=&quot;https://modernmrsdarcy.com/blog/&quot;&gt;modernmrsdarcy.com/blog&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;off&quot;&gt;&lt;input type='checkbox' /&gt; &lt;a href=&quot;https://delightful.coding.social/delightful-humane-design/&quot;&gt;delightful humane design&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;off&quot;&gt;&lt;input type='checkbox' /&gt; &lt;a href=&quot;https://humanebydesign.com/principles&quot;&gt;Principles | Humane by Design&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;off&quot;&gt;&lt;input type='checkbox' /&gt; &lt;a href=&quot;https://lea.verou.me/&quot;&gt;Home • Lea Verou&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;off&quot;&gt;&lt;input type='checkbox' /&gt; &lt;a href=&quot;https://jelv.is/blog/Structure-your-Errors/&quot;&gt;Structure your Errors | jelv.is&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;off&quot;&gt;&lt;input type='checkbox' /&gt; &lt;a href=&quot;https://learningtolearnwell.substack.com/p/when-your-mind-moves-faster-than&quot;&gt;When Your Mind Moves Faster Than Your Day - by Matt Hutson&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;off&quot;&gt;&lt;input type='checkbox' /&gt; &lt;a href=&quot;https://endler.dev/2026/advice-to-young-developers/&quot;&gt;Advice to Young Developers | Matthias Endler&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;off&quot;&gt;&lt;input type='checkbox' /&gt; &lt;a href=&quot;https://pablomurad.com/&quot;&gt;pablomurad.com&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;off&quot;&gt;&lt;input type='checkbox' /&gt; &lt;a href=&quot;https://shellsharks.com/scrolls/scroll/2026-11-10&quot;&gt;shellsharks.com/scrolls/scroll/2026-11-10&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content></entry><entry><title>The comfort of borrowed choices.</title><link rel="alternate" type="text/html" href="https://idlip.in/pose/#2026-11-09" /><id>https://idlip.in/pose/#2026-11-09</id><published>2026-11-09T16:30:00Z</published><updated>2026-11-09T16:30:00Z</updated><category term="philosophy" label="philosophy" scheme="https://idlip.in/tags/"></category><category term="consumerism" label="consumerism" scheme="https://idlip.in/tags/"></category><summary>We have become so accustomed to what is served to us that we rarely pause to question what we actually need. From thoughts to food, entertainment to everyday choices, convenience has slowly replaced curiosity, and consumption has taken the place of creation. We mistake having endless options for having freedom, while rarely questioning who made those choices available to us in the first place.
+
+Further reading</summary><content type="html">&lt;p&gt;
+We have become so accustomed to what is served to us that we rarely pause to question what we actually need.
+From thoughts to food, entertainment to everyday choices, convenience has slowly replaced curiosity, and consumption has taken the place of creation. We mistake having endless options for having freedom, while rarely questioning who made those choices available to us in the first place.
+&lt;/p&gt;
+
+&lt;p&gt;
+Further reading
+&lt;/p&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.marxists.org/reference/archive/debord/society.htm&quot;&gt;The Society of the Spectacle&lt;/a&gt; by Guy Debord&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Amusing_Ourselves_to_Death&quot;&gt;Amusing Ourselves to Death&lt;/a&gt; by Neil Postman&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Manufacturing_Consent&quot;&gt;Manufacturing Consent&lt;/a&gt; by Edward S. Herman and Noam Chomsky&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/The_Shallows_(book)&quot;&gt;The Shallows&lt;/a&gt; by Nicholas Carr&lt;/li&gt;
+&lt;/ul&gt;</content></entry><entry><title>Amazing lessons from every moment.</title><link rel="alternate" type="text/html" href="https://idlip.in/pose/#2026-11-08" /><id>https://idlip.in/pose/#2026-11-08</id><published>2026-11-08T16:30:00Z</published><updated>2026-11-08T16:30:00Z</updated><category term="philosophy" label="philosophy" scheme="https://idlip.in/tags/"></category><summary>Recently came across 30 things at 30, which led me to 50 things I know. Both are lovely reminders of how much life teaches us along the way. Not every lesson arrives at a particular age or moment; some take years to realize, while others simply need someone else's words to help us see what was already there. Life is less about learning things on time and more about recognizing them when we do.</summary><content type="html">&lt;p&gt;
+Recently came across &lt;a href=&quot;https://www.kashyapsuhas.com/blog/30&quot;&gt;30 things at 30&lt;/a&gt;, which led me to &lt;a href=&quot;https://rebeccadai.substack.com/p/50-things-i-know&quot;&gt;50 things I know&lt;/a&gt;. Both are lovely reminders of how much life teaches us along the way. Not every lesson arrives at a particular age or moment; some take years to realize, while others simply need someone else's words to help us see what was already there. Life is less about learning things on time and more about recognizing them when we do.
+&lt;/p&gt;</content></entry><entry><title>Haste makes servants of us all.</title><link rel="alternate" type="text/html" href="https://idlip.in/pose/#2026-10-26" /><id>https://idlip.in/pose/#2026-10-26</id><published>2026-10-26T16:30:00Z</published><updated>2026-10-26T16:30:00Z</updated><category term="philosophy" label="philosophy" scheme="https://idlip.in/tags/"></category><summary>We rush to solve problems others barely care about, giving our time before they even value it. We mistake being helpful for being needed, and our haste for their urgency, only to learn that not every burden we carry is worth the weight. For time is the one price we all pay equally, regardless of what we own or what we can afford.</summary><content type="html">&lt;p&gt;
+We rush to solve problems others barely care about, giving our time before they even value it.
+We mistake being helpful for being needed, and our haste for their urgency, only to learn that not every burden we carry is worth the weight. For time is the one price we all pay equally, regardless of what we own or what we can afford.
+&lt;/p&gt;</content></entry><entry><title>Owning something is better than consuming anything</title><link rel="alternate" type="text/html" href="https://idlip.in/pose/#2026-09-30" /><id>https://idlip.in/pose/#2026-09-30</id><published>2026-09-30T16:30:00Z</published><updated>2026-09-30T16:30:00Z</updated><category term="philosophy" label="philosophy" scheme="https://idlip.in/tags/"></category><summary>Consuming is a trap and well played psychological game intellects created.
+
+Owning stuff adds realization and give more thoughts on why stuff exist in the first place.</summary><content type="html">&lt;p&gt;
+Consuming is a trap and well played psychological game intellects created.
+&lt;/p&gt;
+
+&lt;p&gt;
+Owning stuff adds realization and give more thoughts on why stuff exist in the first place.
+&lt;/p&gt;</content></entry><entry><title>Talk is Cheap. Code is Cheap. Show me the Source</title><link rel="alternate" type="text/html" href="https://idlip.in/log/show-me-source/" /><id>https://idlip.in/log/show-me-source/</id><published>2026-08-27T16:30:00Z</published><updated>2026-11-24T17:08:54Z</updated><category term="philosophy" label="philosophy" scheme="https://idlip.in/tags/"></category><category term="programming" label="programming" scheme="https://idlip.in/tags/"></category><summary>I've been meaning to write about this since [2026-03-20 Fri]. finally doing it.
 
 Quick note on the title before I get into it. It's riffing on Linus Torvalds' old line, &quot;talk is cheap, show me the code&quot;. Except these days even that doesn't hold up, talk is cheap sure, but code is cheap too now, anyone can get an LLM to spit out a working function in seconds. What's actually hard to fake, and what most of what I read (and write) is missing, is the source: the history, the reasoning, the &quot;why&quot; behind a piece of code or a life's work, not just the diff. That's what this essay is actually about, so show me the source felt more honest than show me the code.</summary><content type="html">&lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;&lt;a href=&quot;https://blainsmith.com/essays/humanities-in-the-machine/&quot;&gt;blainsmith.com/essays/humanities-in-the-machine&lt;/a&gt;&lt;/li&gt;
@@ -117,7 +180,7 @@ Thanks for the shout-outs:
 &lt;p&gt;
 I'm just glad my little post got mined 💎
 &lt;/p&gt;
-</content></entry><entry><title>Stoicism: Way of life</title><link rel="alternate" type="text/html" href="https://idlip.in/log/init-stoicism/" /><id>https://idlip.in/log/init-stoicism/</id><published>2025-04-06T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="philosophy" label="philosophy" scheme="https://idlip.in/tags/"></category><summary>I've been reading Stoicism 101 by Erick Cloward as a beginner. Although internet suggested stanford philosophy, book does have a way to communicate which connects readers mind.
+</content></entry><entry><title>Stoicism: Way of life</title><link rel="alternate" type="text/html" href="https://idlip.in/log/init-stoicism/" /><id>https://idlip.in/log/init-stoicism/</id><published>2025-04-06T16:30:00Z</published><updated>2026-11-24T17:08:54Z</updated><category term="philosophy" label="philosophy" scheme="https://idlip.in/tags/"></category><summary>I've been reading Stoicism 101 by Erick Cloward as a beginner. Although internet suggested stanford philosophy, book does have a way to communicate which connects readers mind.
 
 Initial chapters covered the history of Greek and Roman times, of how prominent philosophers emerged. Some prominent works that influence and laid foundation were from</summary><content type="html">&lt;p&gt;
 I've been reading &lt;code&gt;Stoicism 101 by Erick Cloward&lt;/code&gt; as a beginner. Although internet suggested &lt;a href=&quot;https://plato.stanford.edu/published.html&quot;&gt;stanford philosophy&lt;/a&gt;, book does have a way to communicate which connects readers mind.
@@ -146,7 +209,7 @@ The most takeaways they pass on are to live good, be virtuous, and all good qual
 &lt;p&gt;
 The point I started with philosophy was, unlike mythology, this one connects well with modern day thinkers. Many points in fact remain true.
 Protesilaos stavrou remains one of the good philosophy vlogger along with emacs proponent, his journey has been inspiring and one of my lead thought provoker on philosophy.&lt;/p&gt;
-</content></entry><entry><title>Resonance: The Echo</title><link rel="alternate" type="text/html" href="https://idlip.in/log/time-resonance/" /><id>https://idlip.in/log/time-resonance/</id><published>2024-03-10T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="psychology" label="psychology" scheme="https://idlip.in/tags/"></category><category term="philosophy" label="philosophy" scheme="https://idlip.in/tags/"></category><summary>Am at such a career building stage, and learning lot of new things everyday. Every day I wanted to blog and write something, and even now at the time of writing, I'm enjoying to put up and convey something as a post in my editor, emacs. The point, is &quot;I have to just start&quot;.
+</content></entry><entry><title>Resonance: The Echo</title><link rel="alternate" type="text/html" href="https://idlip.in/log/time-resonance/" /><id>https://idlip.in/log/time-resonance/</id><published>2024-03-10T16:30:00Z</published><updated>2026-11-24T17:08:54Z</updated><category term="psychology" label="psychology" scheme="https://idlip.in/tags/"></category><category term="philosophy" label="philosophy" scheme="https://idlip.in/tags/"></category><summary>Am at such a career building stage, and learning lot of new things everyday. Every day I wanted to blog and write something, and even now at the time of writing, I'm enjoying to put up and convey something as a post in my editor, emacs. The point, is &quot;I have to just start&quot;.
 
 The sound All these days, some of the thoughts have been echoing inside me, recursively bombarding with same realization and finally coming to the same point. I would like to note down some of the points that are amusing and as a record that exists to realize.</summary><content type="html">&lt;p&gt;
 Am at such a career building stage, and learning lot of new things everyday. Every day I wanted to blog and write something, and  even now at the time of writing, I'm enjoying to put up and convey something as a post in my editor, emacs. The point, is &quot;I have to just start&quot;.
@@ -157,7 +220,7 @@ Am at such a career building stage, and learning lot of new things everyday. Eve
 All these days, some of the thoughts have been echoing inside me, recursively bombarding with same realization and finally coming to the same point. I would like to note down some of the points that are amusing and as a record that exists to realize.
 &lt;/p&gt;
 &lt;div id=&quot;outline-container-whatever-task-it-is-just-start&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;whatever-task-it-is-just-start&quot;&gt;Whatever task it is, &quot;Just start&quot;&lt;a class=&quot;heading-anchor&quot; href=&quot;#whatever-task-it-is-just-start&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;whatever-task-it-is-just-start&quot;&gt;Whatever task it is, &quot;Just start&quot;&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-whatever-task-it-is-just-start&quot;&gt;
 &lt;p&gt;
 I realized that just starting anything is not only half done, but its a perfection. Issues and complication start when I don't start and exaggerate thinking about it.
@@ -165,7 +228,7 @@ I realized that just starting anything is not only half done, but its a perfecti
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-don-t-follow-the-system-let-it-just-work&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;don-t-follow-the-system-let-it-just-work&quot;&gt;Don't follow the system, Let it just work&lt;a class=&quot;heading-anchor&quot; href=&quot;#don-t-follow-the-system-let-it-just-work&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;don-t-follow-the-system-let-it-just-work&quot;&gt;Don't follow the system, Let it just work&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-don-t-follow-the-system-let-it-just-work&quot;&gt;
 &lt;p&gt;
 Cool trendy, shiny tools and concepts bloom up every morning, cause its how the world is hastening up. But chasing something new, is a huge mistake and leave us nowhere out in the blue. Simply trying to adapt to shiny trends will lead to new issues and new challenges. That is good in some sense, and should be welcome. But we have to know the priorities.
@@ -181,7 +244,7 @@ Since I'm fond of org-mode, it might be reasonable in my case. So I think sticki
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-nothing-in-life-makes-sense-after-a-period-of-its-time&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;nothing-in-life-makes-sense-after-a-period-of-its-time&quot;&gt;Nothing in life makes sense, after a period of its time&lt;a class=&quot;heading-anchor&quot; href=&quot;#nothing-in-life-makes-sense-after-a-period-of-its-time&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;nothing-in-life-makes-sense-after-a-period-of-its-time&quot;&gt;Nothing in life makes sense, after a period of its time&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-nothing-in-life-makes-sense-after-a-period-of-its-time&quot;&gt;
 &lt;p&gt;
 Every matter and material has some time in our life, past and post that, its useless and alien to us. For whatever we fight, and chase during that time, is a laughing material for the future you.
@@ -193,7 +256,7 @@ I believe that, we need to sit down and think properly of what's going on with u
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-silence-and-no-is-the-best-answer-to-many&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;silence-and-no-is-the-best-answer-to-many&quot;&gt;Silence, and No is the best answer to many&lt;a class=&quot;heading-anchor&quot; href=&quot;#silence-and-no-is-the-best-answer-to-many&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;silence-and-no-is-the-best-answer-to-many&quot;&gt;Silence, and No is the best answer to many&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-silence-and-no-is-the-best-answer-to-many&quot;&gt;
 &lt;p&gt;
 Many times, life deviates with noise and nodding &quot;yes&quot; to questions. Some seconds of silence and &quot;No&quot; would elevate life's progress and improve the betterment of life for many.
@@ -201,7 +264,7 @@ Many times, life deviates with noise and nodding &quot;yes&quot; to questions. S
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-don-t-be-a-judge&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;don-t-be-a-judge&quot;&gt;Don't be a judge&lt;a class=&quot;heading-anchor&quot; href=&quot;#don-t-be-a-judge&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;don-t-be-a-judge&quot;&gt;Don't be a judge&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-don-t-be-a-judge&quot;&gt;
 &lt;p&gt;
 Judging does come with a price, at the end we may lose our own support. As I said, silence and simplicity voyages the person to bright life.

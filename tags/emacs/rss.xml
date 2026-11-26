@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: emacs</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/tags/emacs/rss.xml" /><id>https://idlip.in/tags/emacs/rss.xml</id><updated>2026-11-26T00:00:00Z</updated><author><name>Dilip | Zororg</name></author><generator>Denden</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Power of Habit</title><link rel="alternate" type="text/html" href="https://idlip.in/log/power-of-habit/" /><id>https://idlip.in/log/power-of-habit/</id><published>2026-11-25T00:00:00Z</published><updated>2026-11-26T00:00:00Z</updated><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="gtd" label="gtd" scheme="https://idlip.in/tags/"></category><category term="habit" label="habit" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><summary>Every good thing should be a habit, and every bad thing turns out to be a habit as well.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: emacs</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/tags/emacs/rss.xml" /><id>https://idlip.in/tags/emacs/rss.xml</id><updated>2026-11-25T18:34:44Z</updated><author><name>Dilip | Zororg</name></author><generator>Denden</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Power of Habit</title><link rel="alternate" type="text/html" href="https://idlip.in/log/power-of-habit/" /><id>https://idlip.in/log/power-of-habit/</id><published>2026-11-25T16:30:00Z</published><updated>2026-11-25T18:34:44Z</updated><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="gtd" label="gtd" scheme="https://idlip.in/tags/"></category><category term="habit" label="habit" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><summary>Every good thing should be a habit, and every bad thing turns out to be a habit as well.
 
 Habit is such a great quirk. I lately realised that whatever productivity hunt or anti-procrastination drive we go on, habit is the only de-facto solution there.</summary><content type="html">&lt;p&gt;
 Every good thing should be a habit, and every bad thing turns out to be a habit as well.
@@ -9,7 +9,7 @@ Every good thing should be a habit, and every bad thing turns out to be a habit 
 Habit is such a great quirk. I lately realised that whatever productivity hunt or anti-procrastination drive we go on, habit is the only de-facto solution there.
 &lt;/p&gt;
 &lt;div id=&quot;outline-container-how-i-noticed-it&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;how-i-noticed-it&quot;&gt;How I noticed it&lt;a class=&quot;heading-anchor&quot; href=&quot;#how-i-noticed-it&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;how-i-noticed-it&quot;&gt;How I noticed it&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-how-i-noticed-it&quot;&gt;
 &lt;p&gt;
 I started realising this after reading the &lt;a href=&quot;https://github.com/yantar92/emacsconf-2026-tasks/blob/master/presentation.pdf&quot;&gt;slides&lt;/a&gt; by yantar92 (Ihor Radchenko) for his &lt;a href=&quot;https://emacsconf.org/2026/talks/&quot;&gt;EmacsConf 2026 talk&lt;/a&gt;, &lt;a href=&quot;https://emacsconf.org/2026/talks/tasks/&quot;&gt;Personal task management under stress (with Org mode)&lt;/a&gt;. He is the &lt;a href=&quot;https://orgmode.org/&quot;&gt;Org mode&lt;/a&gt; maintainer, and he does it in his spare time alongside a day job. I have been following him and attending the &lt;a href=&quot;https://orgmode.org/worg/orgmeetup.html&quot;&gt;monthly Org meetup&lt;/a&gt;, and I am always astonished by how he even manages his life: so many emails on the Org mailing list that only he can take care of most of the time, work life, personal life, pending tasks and patches to review.
@@ -31,7 +31,7 @@ This is where Org mode and habit come into the picture.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-the-habit-i-already-had&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;the-habit-i-already-had&quot;&gt;The habit I already had&lt;a class=&quot;heading-anchor&quot; href=&quot;#the-habit-i-already-had&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;the-habit-i-already-had&quot;&gt;The habit I already had&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-the-habit-i-already-had&quot;&gt;
 &lt;p&gt;
 I noticed that I often open reddit (r/emacs, r/OnePiece and so on), lobste.rs, mastodon and many more tabs to catch up every day and see what is happening. This has become so habituated that every day, without any effort, my hands naturally takes me there. It is a three times a day thing: morning, lunch and late night. That can be put down to media craving, but that is another topic.
@@ -43,7 +43,7 @@ The key thing to notice is that it has no obstacle. It is never missed, there is
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-what-a-habit-is-made-of&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;what-a-habit-is-made-of&quot;&gt;What a habit is made of&lt;a class=&quot;heading-anchor&quot; href=&quot;#what-a-habit-is-made-of&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;what-a-habit-is-made-of&quot;&gt;What a habit is made of&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-what-a-habit-is-made-of&quot;&gt;
 &lt;p&gt;
 Both popular books on this say roughly the same thing in simple words:
@@ -61,14 +61,14 @@ Yantar's slides put the same idea in his own words: &quot;Build new habits using
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-habits-in-emacs-and-org-mode&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;habits-in-emacs-and-org-mode&quot;&gt;Habits in Emacs and Org mode&lt;a class=&quot;heading-anchor&quot; href=&quot;#habits-in-emacs-and-org-mode&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;habits-in-emacs-and-org-mode&quot;&gt;Habits in Emacs and Org mode&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-habits-in-emacs-and-org-mode&quot;&gt;
 &lt;p&gt;
 This is what that looks like in plain Org, nothing fancy. It is the same idea as my &lt;a href=&quot;/log/art-gtd/&quot;&gt;Art of Getting things Done&lt;/a&gt; post: start with defaults and let the system evolve.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-capture-everything-into-one-inbox&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;capture-everything-into-one-inbox&quot;&gt;Capture everything into one inbox&lt;a class=&quot;heading-anchor&quot; href=&quot;#capture-everything-into-one-inbox&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;capture-everything-into-one-inbox&quot;&gt;Capture everything into one inbox&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-capture-everything-into-one-inbox&quot;&gt;
 &lt;p&gt;
 The cheapest habit is capture. One key, one file, no thinking about where it goes. &lt;code&gt;org-capture&lt;/code&gt; does this from anywhere in Emacs, and you sort it later.
@@ -95,7 +95,7 @@ The same inbox works on the phone with &lt;a href=&quot;https://www.emacswiki.or
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-open-the-agenda-before-the-tabs&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;open-the-agenda-before-the-tabs&quot;&gt;Open the agenda before the tabs&lt;a class=&quot;heading-anchor&quot; href=&quot;#open-the-agenda-before-the-tabs&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;open-the-agenda-before-the-tabs&quot;&gt;Open the agenda before the tabs&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-open-the-agenda-before-the-tabs&quot;&gt;
 &lt;p&gt;
 This is the anchor. Before reddit, open &lt;code&gt;org-agenda&lt;/code&gt; (&lt;code&gt;M-j&lt;/code&gt;). It takes a few seconds and it tells you what today actually needs. Yantar splits his day view into &quot;Must do today&quot;, &quot;May do today&quot; and &quot;Can do on a good day&quot;, which keeps a bad day from turning into a guilty one.
@@ -107,7 +107,7 @@ Open it anywhere, everywhere and anytime, make it a rhythm and make it a habit
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-track-the-habit-itself-with-org-habit&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;track-the-habit-itself-with-org-habit&quot;&gt;Track the habit itself with org-habit&lt;a class=&quot;heading-anchor&quot; href=&quot;#track-the-habit-itself-with-org-habit&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;track-the-habit-itself-with-org-habit&quot;&gt;Track the habit itself with org-habit&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-track-the-habit-itself-with-org-habit&quot;&gt;
 &lt;p&gt;
 Org has a built-in &lt;a href=&quot;https://orgmode.org/manual/Tracking-your-habits.html&quot;&gt;habit tracker&lt;/a&gt;. A habit is a &lt;code&gt;TODO&lt;/code&gt; with a &lt;code&gt;STYLE&lt;/code&gt; of &lt;code&gt;habit&lt;/code&gt; and a repeater, and the agenda draws a small consistency graph next to it, so a broken streak is visible at a glance.
@@ -140,7 +140,7 @@ The second entry is my favourite idea from the talk: instead of fighting the dis
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-review-weekly-and-plan-to-fall-off&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;review-weekly-and-plan-to-fall-off&quot;&gt;Review weekly, and plan to fall off&lt;a class=&quot;heading-anchor&quot; href=&quot;#review-weekly-and-plan-to-fall-off&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;review-weekly-and-plan-to-fall-off&quot;&gt;Review weekly, and plan to fall off&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-review-weekly-and-plan-to-fall-off&quot;&gt;
 &lt;p&gt;
 Daily habits keep things moving, and a weekly review keeps the list honest. Group the &lt;i&gt;someday&lt;/i&gt; tasks under projects or topics so the review stays short, and trim what no longer matters.
@@ -153,7 +153,7 @@ Habits also break: a trip, an illness, a busy month. Yantar's fourth rule covers
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-closing&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;closing&quot;&gt;Closing&lt;a class=&quot;heading-anchor&quot; href=&quot;#closing&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;closing&quot;&gt;Closing&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-closing&quot;&gt;
 &lt;p&gt;
 None of this needs a new app or a perfect setup. One plain text file (see &lt;a href=&quot;/log/obtf/&quot;&gt;Org mode is the best OBTF&lt;/a&gt;), one capture key, one agenda glance tied to a habit I already had. The tools only help once the habit is there.
@@ -161,7 +161,7 @@ None of this needs a new app or a perfect setup. One plain text file (see &lt;a 
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-further-reading&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;further-reading&quot;&gt;Further reading&lt;a class=&quot;heading-anchor&quot; href=&quot;#further-reading&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;further-reading&quot;&gt;Further reading&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-further-reading&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;&lt;a href=&quot;https://emacsconf.org/2026/talks/tasks/&quot;&gt;Personal task management under stress (with Org mode)&lt;/a&gt; by Ihor Radchenko, EmacsConf 2026 (&lt;a href=&quot;https://github.com/yantar92/emacsconf-2026-tasks&quot;&gt;slides source&lt;/a&gt;, &lt;a href=&quot;https://github.com/yantar92/emacs-config&quot;&gt;his Emacs config&lt;/a&gt;)&lt;/li&gt;
@@ -174,7 +174,7 @@ None of this needs a new app or a perfect setup. One plain text file (see &lt;a 
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</content></entry><entry><title>Discovery of Emacs Features</title><link rel="alternate" type="text/html" href="https://idlip.in/log/discover-emacs/" /><id>https://idlip.in/log/discover-emacs/</id><published>2026-11-12T00:00:00Z</published><updated>2026-11-12T00:00:00Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="carnival" label="carnival" scheme="https://idlip.in/tags/"></category><summary>I'm happy that this topic erupted after I poked around in mastodon, maybe some day I'd like to hoist as well.
+</content></entry><entry><title>Discovery of Emacs Features</title><link rel="alternate" type="text/html" href="https://idlip.in/log/discover-emacs/" /><id>https://idlip.in/log/discover-emacs/</id><published>2026-11-12T15:08:12Z</published><updated>2026-11-12T15:08:12Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="carnival" label="carnival" scheme="https://idlip.in/tags/"></category><summary>I'm happy that this topic erupted after I poked around in mastodon, maybe some day I'd like to hoist as well.
 
 Before I write up on topic, I'm sure many emacs users might remember that there was a podcast channel called &quot;Discovering Emacs&quot;, there was a Youtube channel (rip), mastodon presence in emacs.ch (rip) and everywhere in podcast apps. It was very promising and a professional ambience to hear someone speak of dear emacs. Thankfully git repo exists, and you see the notes and how good it was, wish it had continued or someone brings similar stuff to our small church of emacs. Obviously we are ever so thankful for sacha, protesilaos and emacs-devel people for their good faith and holding up emacs for what it is today even after 50 years.</summary><content type="html">&lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;This post is my third &lt;a href=&quot;https://www.emacswiki.org/emacs/Carnival&quot;&gt;Emacs carnival&lt;/a&gt; entry, this time for &lt;a href=&quot;https://www.emacswiki.org/emacs/CarnivalNovember2026&quot;&gt;Nov 2026&lt;/a&gt;. If you're new to this site, FYI I also go by &lt;code&gt;Zororg&lt;/code&gt; in emacs chat/universe.&lt;/li&gt;
@@ -269,7 +269,7 @@ Also since I was missing two package needs, I tried building those (ofc with hel
 &lt;li&gt;&lt;a href=&quot;https://github.com/idlip/denden&quot;&gt;denden&lt;/a&gt;: A ox-publish based helper tool to act as typical SSG for emacs, my site that you reading is built using that and I made it just for this purpose to replace hugo.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ol&gt;
-</content></entry><entry><title>Org mode is the best OBTF</title><link rel="alternate" type="text/html" href="https://idlip.in/log/obtf/" /><id>https://idlip.in/log/obtf/</id><published>2026-10-07T00:00:00Z</published><updated>2026-10-12T00:00:00Z</updated><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><category term="obtf" label="obtf" scheme="https://idlip.in/tags/"></category><summary>I wrote about OBTF as Second Brain with Org mode a while back, but that post was mostly &quot;here is my datetree workflow.&quot; This one is a direct response to obtf.ru, a site that makes the case for One Big Text File a lot sharper than I did, and argues it against FOMO fatigue I've felt myself.
+</content></entry><entry><title>Org mode is the best OBTF</title><link rel="alternate" type="text/html" href="https://idlip.in/log/obtf/" /><id>https://idlip.in/log/obtf/</id><published>2026-10-07T17:48:39Z</published><updated>2026-10-12T17:52:37Z</updated><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><category term="obtf" label="obtf" scheme="https://idlip.in/tags/"></category><summary>I wrote about OBTF as Second Brain with Org mode a while back, but that post was mostly &quot;here is my datetree workflow.&quot; This one is a direct response to obtf.ru, a site that makes the case for One Big Text File a lot sharper than I did, and argues it against FOMO fatigue I've felt myself.
 
 OBTF in some sense is a lazy man's system to get things done. But if you feel more lazier to even think of it, I'd highly recommend to read obtf.ru/en website, since it helps me as well to stay motivated to achieve its purpose.</summary><content type="html">&lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;This content is written to be lateral post to &lt;a href=&quot;https://www.reddit.com/r/OneBigTextFile/s/5Jy5SUG48h&quot;&gt;r/onebigtextfile&lt;/a&gt; and spark the idea to many.&lt;/li&gt;
@@ -283,7 +283,7 @@ I wrote about &lt;a href=&quot;/log/obtf-org-mode/&quot;&gt;OBTF as Second Brain
 OBTF in some sense is a lazy man's system to get things done. But if you feel more lazier to even think of it, I'd highly recommend to read &lt;a href=&quot;https://obtf.ru/en&quot;&gt;obtf.ru/en&lt;/a&gt; website, since it helps me as well to stay motivated to achieve its purpose.
 &lt;/p&gt;
 &lt;div id=&quot;outline-container-obtf-s-philosophy-pitch&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;obtf-s-philosophy-pitch&quot;&gt;OBTF's philosophy pitch&lt;a class=&quot;heading-anchor&quot; href=&quot;#obtf-s-philosophy-pitch&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;obtf-s-philosophy-pitch&quot;&gt;OBTF's philosophy pitch&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-obtf-s-philosophy-pitch&quot;&gt;
 &lt;p&gt;
 Their whole argument boils down to a handful of lines:
@@ -327,7 +327,7 @@ Some posts on OBTF found over internet:
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-where-org-gives-you-more&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;where-org-gives-you-more&quot;&gt;Where Org gives you more&lt;a class=&quot;heading-anchor&quot; href=&quot;#where-org-gives-you-more&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;where-org-gives-you-more&quot;&gt;Where Org gives you more&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-where-org-gives-you-more&quot;&gt;
 &lt;p&gt;
 &quot;Search beats categories&quot; is true until the file gets big enough that search alone stops being enough, and at that point you want &lt;b&gt;structure you can turn on when you need it&lt;/b&gt;, not structure forced on you from day one.
@@ -373,7 +373,7 @@ split the real file.&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-conclude&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;conclude&quot;&gt;Conclude&lt;a class=&quot;heading-anchor&quot; href=&quot;#conclude&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;conclude&quot;&gt;Conclude&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-conclude&quot;&gt;
 &lt;p&gt;
 These might sound very much tied to emacs, yes thats mostly true. Environment so perfect that it can be called a monolith of emacs. But alas, people have ported org mode inspired modes and packages to various other ecosystem.
@@ -397,7 +397,7 @@ Ultimately only thing that is required with note taking or system is to always r
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</content></entry><entry><title>Denden: Emacs Lisp SSG based on org-publish</title><link rel="alternate" type="text/html" href="https://idlip.in/log/denden/" /><id>https://idlip.in/log/denden/</id><published>2026-10-02T00:00:00Z</published><updated>2026-10-06T00:00:00Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="lisp" label="lisp" scheme="https://idlip.in/tags/"></category><category term="denden" label="denden" scheme="https://idlip.in/tags/"></category><summary>Denden is yet another SSG based on org-publish and utilizing complete Elisp ecosystem. This site is built using that. Its not a package per-say, just an helper and building blocks on top of org mode's native ox-publish and org-element for AST.
+</content></entry><entry><title>Denden: Emacs Lisp SSG based on org-publish</title><link rel="alternate" type="text/html" href="https://idlip.in/log/denden/" /><id>https://idlip.in/log/denden/</id><published>2026-10-02T12:00:11Z</published><updated>2026-10-06T15:00:55Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="lisp" label="lisp" scheme="https://idlip.in/tags/"></category><category term="denden" label="denden" scheme="https://idlip.in/tags/"></category><summary>Denden is yet another SSG based on org-publish and utilizing complete Elisp ecosystem. This site is built using that. Its not a package per-say, just an helper and building blocks on top of org mode's native ox-publish and org-element for AST.
 
 This site used to run on Hugo using same theme called hakimacs, with content in Org mode rendered through go-org, and it worked fine for months. But I hated looking how ugly go-template looked and lot of regexp to do something, although it was fast, it was not human (emacs user) friendly to read at all. When I wrote in org mode, I always liked why not elisp somewhere to hack and do stuff. Org is a rich ecosystem and it needs way more hackable place to configure, not hugo to regexp parse everything.</summary><content type="html">&lt;p&gt;
 &lt;a href=&quot;https://github.com/idlip/denden&quot;&gt;Denden&lt;/a&gt; is yet another SSG based on org-publish and utilizing complete Elisp ecosystem. This site is
@@ -405,7 +405,7 @@ built using that. Its not a package per-say, just an helper and building blocks 
 native &lt;a href=&quot;https://orgmode.org/manual/Publishing.html&quot;&gt;ox-publish&lt;/a&gt; and &lt;a href=&quot;https://orgmode.org/worg/dev/org-element-api.html&quot;&gt;org-element&lt;/a&gt; for AST.
 &lt;/p&gt;
 &lt;div id=&quot;outline-container-why-i-even-started-this&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;why-i-even-started-this&quot;&gt;Why I even started this&lt;a class=&quot;heading-anchor&quot; href=&quot;#why-i-even-started-this&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;why-i-even-started-this&quot;&gt;Why I even started this&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-why-i-even-started-this&quot;&gt;
 &lt;p&gt;
 This site used to run on &lt;a href=&quot;https://gohugo.io&quot;&gt;Hugo&lt;/a&gt; using same theme called &lt;a href=&quot;https://github.com/idlip/hakimacs&quot;&gt;hakimacs&lt;/a&gt;, with content in Org mode rendered through go-org, and it worked fine for months. But I hated looking how ugly &lt;a href=&quot;https://gohugo.io/templates/introduction/&quot;&gt;go-template&lt;/a&gt; looked and lot of regexp to do something, although it was fast, it was not human (emacs user) friendly to read at all. When I wrote in org mode, I always liked why not elisp somewhere to hack and do stuff. Org is a rich ecosystem and it needs way more hackable place to configure, not hugo to regexp parse everything.
@@ -421,7 +421,7 @@ That annoyance is the entire reason denden exists.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-what-denden-actually-is-and-isn-t&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;what-denden-actually-is-and-isn-t&quot;&gt;What denden actually is, and isn't&lt;a class=&quot;heading-anchor&quot; href=&quot;#what-denden-actually-is-and-isn-t&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;what-denden-actually-is-and-isn-t&quot;&gt;What denden actually is, and isn't&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-what-denden-actually-is-and-isn-t&quot;&gt;
 &lt;p&gt;
 &lt;code&gt;denden&lt;/code&gt; is not a package, its more like a tool, helpers and building block on top of org-publish. It
@@ -447,7 +447,7 @@ Nobody's stopping you, there's no true &quot;denden way&quot; to acheive it.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-templates-are-just-lists-the-sexp-html-bit&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;templates-are-just-lists-the-sexp-html-bit&quot;&gt;Templates are just lists, the sexp-HTML bit&lt;a class=&quot;heading-anchor&quot; href=&quot;#templates-are-just-lists-the-sexp-html-bit&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;templates-are-just-lists-the-sexp-html-bit&quot;&gt;Templates are just lists, the sexp-HTML bit&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-templates-are-just-lists-the-sexp-html-bit&quot;&gt;
 &lt;p&gt;
 This is the part I like the most, a denden template is not a template language at all, it's a plain Emacs Lisp list, shaped like this.
@@ -505,7 +505,7 @@ That's a whole working nav bar, &lt;code&gt;menu-items&lt;/code&gt; is just a li
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-how-my-own-site-is-built-with-it&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;how-my-own-site-is-built-with-it&quot;&gt;How my own site is built with it&lt;a class=&quot;heading-anchor&quot; href=&quot;#how-my-own-site-is-built-with-it&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;how-my-own-site-is-built-with-it&quot;&gt;How my own site is built with it&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-how-my-own-site-is-built-with-it&quot;&gt;
 &lt;p&gt;
 My site's own Elisp lives in exactly three files, and I think that's a feature, not something I need to apologize for.
@@ -541,7 +541,7 @@ Everything you're reading right now, the  &lt;button type=&quot;button&quot; cla
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-one-more-cool-bit-even-the-og-card-images-are-sexp&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;one-more-cool-bit-even-the-og-card-images-are-sexp&quot;&gt;One more cool bit, even the OG card images are sexp&lt;a class=&quot;heading-anchor&quot; href=&quot;#one-more-cool-bit-even-the-og-card-images-are-sexp&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;one-more-cool-bit-even-the-og-card-images-are-sexp&quot;&gt;One more cool bit, even the OG card images are sexp&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-one-more-cool-bit-even-the-og-card-images-are-sexp&quot;&gt;
 &lt;p&gt;
 OG cards, the preview image you see when a link gets shared on social media, are usually generated with some headless browser screenshot setup or an image library. In denden it's the exact same &lt;code&gt;(TAG ATTRIBUTE-PLIST . CHILDREN)&lt;/code&gt; trick, just aimed at &lt;code&gt;&amp;lt;svg&amp;gt;&lt;/code&gt; instead of &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt;, from my own &lt;code&gt;site.el&lt;/code&gt;.
@@ -570,7 +570,7 @@ Same &lt;code&gt;denden-serialize-node&lt;/code&gt; (&lt;a href=&quot;https://gi
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-it-s-also-properly-fast&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;it-s-also-properly-fast&quot;&gt;It's also properly fast&lt;a class=&quot;heading-anchor&quot; href=&quot;#it-s-also-properly-fast&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;it-s-also-properly-fast&quot;&gt;It's also properly fast&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-it-s-also-properly-fast&quot;&gt;
 &lt;p&gt;
 I was bracing for a slow first build, since Emacs isn't exactly famous for being a speed train. It wasn't. A full build of this entire site, every post, every feed, every OG card image, finishes in a couple of seconds. I build it from the terminal like this.
@@ -591,7 +591,7 @@ incremental cache, and it's done before switch two windows. There's also an asyn
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-owning-the-whole-thing&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;owning-the-whole-thing&quot;&gt;Owning the whole thing&lt;a class=&quot;heading-anchor&quot; href=&quot;#owning-the-whole-thing&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;owning-the-whole-thing&quot;&gt;Owning the whole thing&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-owning-the-whole-thing&quot;&gt;
 &lt;p&gt;
 The thing I like most isn't the speed, it's that I own every line of this. I'm an Emacs user, I already spend my &lt;a href=&quot;/log/may-i-recommend/&quot;&gt;May I Recommend EWM&lt;/a&gt; tweaking my config, and now my blog engine runs in the same language, the same editor, the same muscle memory. If I want a new feature, I don't wait for a plugin, I don't learn a templating DSL, I just write a function next to the ones already there and call it. That's a genuinely different feeling from configuring a static site generator, it's closer to how your Emacs config itself grows over the years, one small function at a time, shaped around what you personally want.
@@ -603,7 +603,7 @@ If any of this sounds interesting and you're also an Emacs plus Org mode person,
 &lt;/p&gt;
 
 
-&lt;figure id=&quot;org24a5101&quot;&gt;
+&lt;figure id=&quot;org1febd35&quot;&gt;
 &lt;img src=&quot;https://raw.githubusercontent.com/idlip/denden/refs/heads/master/example/screenshot.png&quot; alt=&quot;screenshot.png&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;Snap of a example bearblog like site built with denden&lt;/figcaption&gt;
@@ -611,7 +611,7 @@ If any of this sounds interesting and you're also an Emacs plus Org mode person,
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-about-the-name&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;about-the-name&quot;&gt;About the name&lt;a class=&quot;heading-anchor&quot; href=&quot;#about-the-name&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;about-the-name&quot;&gt;About the name&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-about-the-name&quot;&gt;
 &lt;p&gt;
 A &lt;code&gt;denden mushi&lt;/code&gt; is the snail-shaped transponder phone from One Piece, the way everyone in that world
@@ -626,7 +626,7 @@ Give it a spin, and if you build something with it, I'd genuinely like to hear a
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</content></entry><entry><title>Playing with Emacs</title><link rel="alternate" type="text/html" href="https://idlip.in/log/playing-emacs/" /><id>https://idlip.in/log/playing-emacs/</id><published>2026-09-02T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="carnival" label="carnival" scheme="https://idlip.in/tags/"></category><category term="games" label="games" scheme="https://idlip.in/tags/"></category><summary>Coincidentally I just wrote on Games that occupied my life in my previous post, but it covers more on what all games I've played till now mostly.
+</content></entry><entry><title>Playing with Emacs</title><link rel="alternate" type="text/html" href="https://idlip.in/log/playing-emacs/" /><id>https://idlip.in/log/playing-emacs/</id><published>2026-09-02T16:30:00Z</published><updated>2026-11-24T17:08:54Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="carnival" label="carnival" scheme="https://idlip.in/tags/"></category><category term="games" label="games" scheme="https://idlip.in/tags/"></category><summary>Coincidentally I just wrote on Games that occupied my life in my previous post, but it covers more on what all games I've played till now mostly.
 
 Every emacs users (&gt;1 YOE to qualify) would know that emacs is the tinkering lisp machine, all you do everyday is tweak and play with it. Emacs is like a big playground, the definite workshop to all users.</summary><content type="html">&lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;This post is my second &lt;a href=&quot;https://www.emacswiki.org/emacs/Carnival&quot;&gt;Emacs carnival&lt;/a&gt; entry, this time for &lt;a href=&quot;https://www.emacswiki.org/emacs/CarnivalSeptember2026&quot;&gt;Sept 2026&lt;/a&gt;. If you're new to this site, FYI I go by &lt;code&gt;Zororg&lt;/code&gt; in emacs chat/universe.&lt;/li&gt;
@@ -689,7 +689,7 @@ Emacs has always been a playful machine that mends to the user and not make user
 &lt;p&gt;
 Emacs is what every software should be designed as: something that keeps you busy playing with it, so you never get around to actually using it.
 &lt;/p&gt;
-</content></entry><entry><title>May I Recommend EWM</title><link rel="alternate" type="text/html" href="https://idlip.in/log/may-i-recommend/" /><id>https://idlip.in/log/may-i-recommend/</id><published>2026-05-04T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="carnival" label="carnival" scheme="https://idlip.in/tags/"></category><category term="ewm" label="ewm" scheme="https://idlip.in/tags/"></category><category term="wayland" label="wayland" scheme="https://idlip.in/tags/"></category><summary>EWM: codeberg:ezemtsov/ewm Wiki: codeberg:ezemtsov/ewm/wiki
+</content></entry><entry><title>May I Recommend EWM</title><link rel="alternate" type="text/html" href="https://idlip.in/log/may-i-recommend/" /><id>https://idlip.in/log/may-i-recommend/</id><published>2026-05-04T16:30:00Z</published><updated>2026-11-24T17:08:54Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="carnival" label="carnival" scheme="https://idlip.in/tags/"></category><category term="ewm" label="ewm" scheme="https://idlip.in/tags/"></category><category term="wayland" label="wayland" scheme="https://idlip.in/tags/"></category><summary>EWM: codeberg:ezemtsov/ewm Wiki: codeberg:ezemtsov/ewm/wiki
 
 Emacs along with being a text editor, is a battery included software that does more things and architecturally well designed (thus no rewrite last strong). Emacs has good (in-fact powerful) window management, everything as buffer system, self documenting, extensible (upto human brain, maybe DNA?) and every user's Personal development environment.</summary><content type="html">&lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;This post is written for &lt;a href=&quot;https://www.emacswiki.org/emacs/Carnival&quot;&gt;Emacs carnival&lt;/a&gt; of &lt;a href=&quot;https://www.emacswiki.org/emacs/CarnivalMay2026&quot;&gt;May 2026&lt;/a&gt;. If you're new to this site, FYI I go by
@@ -741,7 +741,7 @@ Emacs already has &lt;code&gt;next-buffer&lt;/code&gt; - &lt;code&gt;previous-bu
 
 &lt;div class=&quot;org-center&quot;&gt;
 
-&lt;figure id=&quot;org802e1ce&quot;&gt;
+&lt;figure id=&quot;org40f16cd&quot;&gt;
 &lt;img src=&quot;/images/ewm-desktop.png&quot; alt=&quot;ewm-desktop.png&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;Fig: EWM setup with Noctalia shell while writing this blog post. Left is org mode capture buffer, top right is glide browser showing EWM repo and bottom right is foot terminal running hugo server.&lt;/figcaption&gt;
@@ -764,7 +764,7 @@ itself. All I see is emacs frame, and I work in Emacs as its my WM itself now. N
 I no longer quit/leave emacs, if I'm leaving that means I'm shutting down my machine down ;-)
 &lt;/p&gt;
 &lt;div id=&quot;outline-container-may-i-also-recommend-glide-browser-for-emacs-keymappings&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;may-i-also-recommend-glide-browser-for-emacs-keymappings&quot;&gt;May I also Recommend Glide browser for emacs keymappings&lt;a class=&quot;heading-anchor&quot; href=&quot;#may-i-also-recommend-glide-browser-for-emacs-keymappings&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;may-i-also-recommend-glide-browser-for-emacs-keymappings&quot;&gt;May I also Recommend Glide browser for emacs keymappings&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-may-i-also-recommend-glide-browser-for-emacs-keymappings&quot;&gt;
 &lt;p&gt;
 Glide browser came to &lt;a href=&quot;https://lobste.rs/s/lm3isi/glide_extensible_keyboard_focused_web&quot;&gt;lobste.rs news&lt;/a&gt; and showcased as firefox-fork being keyboard centric, and I was badly looking for qutebrowser enhancements with addons. And I made the switch and config was pretty easy.
@@ -788,7 +788,7 @@ Here's the &lt;a href=&quot;https://github.com/glide-browser/glide/discussions/2
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-2026-07-29-wed&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;2026-07-29-wed&quot;&gt;&lt;span class=&quot;timestamp-wrapper&quot;&gt;&lt;time class=&quot;timestamp&quot; datetime=&quot;2026-07-29&quot;&gt;[2026-07-29 Wed]&lt;/time&gt;&lt;/span&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;#2026-07-29-wed&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;2026-07-29-wed&quot;&gt;&lt;span class=&quot;timestamp-wrapper&quot;&gt;&lt;time class=&quot;timestamp&quot; datetime=&quot;2026-07-29&quot;&gt;[2026-07-29 Wed]&lt;/time&gt;&lt;/span&gt;&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-2026-07-29-wed&quot;&gt;
 &lt;p&gt;
 &lt;a href=&quot;https://codeberg.org/ezemtsov&quot;&gt;Ezemtsov&lt;/a&gt; has made a &lt;a href=&quot;https://codeberg.org/ezemtsov/emacs/src/branch/wayland&quot;&gt;fork of emacs&lt;/a&gt; with &lt;a href=&quot;https://codeberg.org/ezemtsov/emacs/commit/6147db532ae4fb462910816e55fab0cc62418269&quot;&gt;pure wayland backend&lt;/a&gt;, with no gtk or
@@ -818,7 +818,7 @@ day to day has been either emacs for notes/task and glide browser for being on I
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-2026-10-23-fri&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;2026-10-23-fri&quot;&gt;&lt;span class=&quot;timestamp-wrapper&quot;&gt;&lt;time class=&quot;timestamp&quot; datetime=&quot;2026-10-23&quot;&gt;[2026-10-23 Fri]&lt;/time&gt;&lt;/span&gt;&lt;a class=&quot;heading-anchor&quot; href=&quot;#2026-10-23-fri&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;2026-10-23-fri&quot;&gt;&lt;span class=&quot;timestamp-wrapper&quot;&gt;&lt;time class=&quot;timestamp&quot; datetime=&quot;2026-10-23&quot;&gt;[2026-10-23 Fri]&lt;/time&gt;&lt;/span&gt;&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-2026-10-23-fri&quot;&gt;
 &lt;p&gt;
 EWM again has matured alot and is almost stable for daily driving for others, although I've been already daily driving it with no issues. Even features have increased alot, every fortnight there has been new cool feature or improvements in codebase. Emacs pwayl backend got background-ext-control which gives blur, EWM has blur now, go see codeberg demo to see it and check wiki for more. &lt;code&gt;S-e&lt;/code&gt; which calls &lt;code&gt;ewm-edit&lt;/code&gt; to capture input text from any wayland window and edit in emacs and on closing it pastes it there (inspired by emacs-anywhere &amp;amp; exwm).
@@ -839,7 +839,7 @@ Another plug, someone else is writing a wayland compositor with river window pro
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</content></entry><entry><title>Replenish theme - its Emacsy</title><link rel="alternate" type="text/html" href="https://idlip.in/log/emacs-theme-site/" /><id>https://idlip.in/log/emacs-theme-site/</id><published>2026-03-19T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><summary>With previous post on Revamp the blogs, I finally today went ahead and upgrades the beautiful emacs theme made by Arthur, and locally forked to add goodies.
+</content></entry><entry><title>Replenish theme - its Emacsy</title><link rel="alternate" type="text/html" href="https://idlip.in/log/emacs-theme-site/" /><id>https://idlip.in/log/emacs-theme-site/</id><published>2026-03-19T16:30:00Z</published><updated>2026-11-24T17:08:54Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><summary>With previous post on Revamp the blogs, I finally today went ahead and upgrades the beautiful emacs theme made by Arthur, and locally forked to add goodies.
 
 Reflecting on upgrades since beginning it has received, I'm strictly thinking to settle with this, as it looks good, minimal enough and modern looking, adaptive in mobile, has rss support and I can extend as I want and more than all, I can live in my editor - Emacs.</summary><content type="html">&lt;p&gt;
 With previous post on &lt;a href=&quot;/log/revamp-blog-2026/&quot;&gt;Revamp the blogs&lt;/a&gt;, I finally today went ahead and upgrades the beautiful &lt;a href=&quot;https://github.com/ArthurHeymans/hugo-emacs-theme/&quot;&gt;emacs theme made by Arthur&lt;/a&gt;, and locally forked to add goodies.
@@ -869,7 +869,7 @@ I've been enjoying reading Light novels - Apothecary Diaries and Ascendance of B
 &lt;i&gt;Its not always of what you can consume, can be what you give as well.&lt;/i&gt;
 &lt;/p&gt;
 &lt;/div&gt;
-</content></entry><entry><title>OBTF as Second Brain with Org mode</title><link rel="alternate" type="text/html" href="https://idlip.in/log/obtf-org-mode/" /><id>https://idlip.in/log/obtf-org-mode/</id><published>2025-09-06T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><category term="obtf" label="obtf" scheme="https://idlip.in/tags/"></category><summary>One Big Text File is simply writing down mostly everything in single file to organize or manage data. This single file acts as the source of knowledge and holds all notes.
+</content></entry><entry><title>OBTF as Second Brain with Org mode</title><link rel="alternate" type="text/html" href="https://idlip.in/log/obtf-org-mode/" /><id>https://idlip.in/log/obtf-org-mode/</id><published>2025-09-06T16:30:00Z</published><updated>2026-11-24T17:08:54Z</updated><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><category term="obtf" label="obtf" scheme="https://idlip.in/tags/"></category><summary>One Big Text File is simply writing down mostly everything in single file to organize or manage data. This single file acts as the source of knowledge and holds all notes.
 
 Second brain has been a buzz word, thanks to the sourcing of Zettelkasten method, every productivity freak is on the stance to organize their life and get things done.</summary><content type="html">&lt;p&gt;
 &lt;b&gt;One Big Text File&lt;/b&gt; is simply writing down mostly everything in single file to organize or manage data. This single file acts as the source of knowledge and holds all notes.
@@ -895,7 +895,7 @@ You can read more about my note taking journey in &lt;a href=&quot;/log/wrapup-m
 This context is also written in favor to post it on r/obtf
 &lt;/p&gt;
 &lt;div id=&quot;outline-container-org-mode-is-the-best-tool-for-managing-obtf&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org-mode-is-the-best-tool-for-managing-obtf&quot;&gt;Org mode is the best tool for managing OBTF&lt;a class=&quot;heading-anchor&quot; href=&quot;#org-mode-is-the-best-tool-for-managing-obtf&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;org-mode-is-the-best-tool-for-managing-obtf&quot;&gt;Org mode is the best tool for managing OBTF&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-org-mode-is-the-best-tool-for-managing-obtf&quot;&gt;
 &lt;p&gt;
 Many popular workflow would go by simple format as bullet points with Time date and info, and regexp based searching via CLI (rg, vim, grep, sed&amp;hellip;. bash scripts)
@@ -958,7 +958,7 @@ This logically acts as an individual file with that tag/category, thus being ato
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-key-takeaways&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;key-takeaways&quot;&gt;Key takeaways&lt;a class=&quot;heading-anchor&quot; href=&quot;#key-takeaways&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;key-takeaways&quot;&gt;Key takeaways&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-key-takeaways&quot;&gt;
 &lt;p&gt;
 whatever the system or the tool is, the main takeaways every resource provides is to review the notes and write it for future self. Every capture is to review back and make the fleeting note into and rich information.
@@ -966,7 +966,7 @@ This OBTF with org mode satisfies that needs given that user reviews the notes a
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</content></entry><entry><title>My MSc journey with Emacs Orgmode</title><link rel="alternate" type="text/html" href="https://idlip.in/log/masters-emacs-orgmode/" /><id>https://idlip.in/log/masters-emacs-orgmode/</id><published>2025-06-06T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="bioinformatics" label="bioinformatics" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><summary>I wrote and used emacs orgmode for all of my post-grad Masters classes, presentations, projects and thesis.
+</content></entry><entry><title>My MSc journey with Emacs Orgmode</title><link rel="alternate" type="text/html" href="https://idlip.in/log/masters-emacs-orgmode/" /><id>https://idlip.in/log/masters-emacs-orgmode/</id><published>2025-06-06T16:30:00Z</published><updated>2026-11-24T17:08:54Z</updated><category term="bioinformatics" label="bioinformatics" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><summary>I wrote and used emacs orgmode for all of my post-grad Masters classes, presentations, projects and thesis.
 
 Before post-grad itself I was introduced to Emacs world and enjoyed getting good with it. As I used it, I realized emacs is not just an text editor, its an Personal Development Environment itself and user has power to craft it as they need. This was a worthwhile investment.</summary><content type="html">&lt;p&gt;
 &lt;b&gt;I wrote and used emacs orgmode for all of my post-grad Masters classes, presentations, projects and thesis.&lt;/b&gt;
@@ -1002,7 +1002,7 @@ I could have been an normie student like others and be at ease, but why did I ch
 I valued investment and growth. I could see the development and learning of skills compared to working with traditional GUI applications.
 &lt;/p&gt;
 &lt;div id=&quot;outline-container-note-taking&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;note-taking&quot;&gt;Note taking&lt;a class=&quot;heading-anchor&quot; href=&quot;#note-taking&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;note-taking&quot;&gt;Note taking&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-note-taking&quot;&gt;
 &lt;p&gt;
 Note-taking is understandable, its just format of text to store and read. And org-mode was superior and helped me alot.
@@ -1021,7 +1021,7 @@ So on which really helps with narrowing using consult package and org-ql for que
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-reports-doc&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;reports-doc&quot;&gt;Reports/Doc&lt;a class=&quot;heading-anchor&quot; href=&quot;#reports-doc&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;reports-doc&quot;&gt;Reports/Doc&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-reports-doc&quot;&gt;
 &lt;p&gt;
 Org mode can produce pdf via latex or ODT/docx format. That eventually guided me for submission of assignments and documents for sharing.
@@ -1034,7 +1034,7 @@ Although there was not much work with reports, I had good workflow of storing no
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-presentations&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;presentations&quot;&gt;Presentations&lt;a class=&quot;heading-anchor&quot; href=&quot;#presentations&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;presentations&quot;&gt;Presentations&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-presentations&quot;&gt;
 &lt;p&gt;
 I thought to give presentations in Emacs editor itself, but that did not make the cut for required normie friendly slides. The magically I came across revealJS and observed many people in tech presentations and talks used them. There was active development of org-reveal package as well, in new form from OER gitlab repo.
@@ -1050,7 +1050,7 @@ I had local.scss file for color and designing slides, and org generated html fil
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-thesis&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;thesis&quot;&gt;Thesis&lt;a class=&quot;heading-anchor&quot; href=&quot;#thesis&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;thesis&quot;&gt;Thesis&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-thesis&quot;&gt;
 &lt;p&gt;
 The final saga of the journey, since thesis takes time to write, I thought to not bother with complicating this task. My initial thought was to either use Latex, if it was too much headache then simply follow given docx format file and write.
@@ -1063,13 +1063,13 @@ The syntax and process was very robust and simple. The documentation was standar
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-conclusion&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;a class=&quot;heading-anchor&quot; href=&quot;#conclusion&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-conclusion&quot;&gt;
 &lt;p&gt;
 The main draw from this experience was that investing in tools that allow extending and allow programming to customize and tweak as I require was a major win and good rewards. These were added up skills that makes working with related tasks a breeze ahead.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</content></entry><entry><title>Using Gnus to read rss feeds</title><link rel="alternate" type="text/html" href="https://idlip.in/log/gnus-joy/" /><id>https://idlip.in/log/gnus-joy/</id><published>2024-03-10T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="gnus" label="gnus" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><summary>Emacs is my editor, and my companion for most of my tasks. Yes, I'd like to call it a second brain extension.
+</content></entry><entry><title>Using Gnus to read rss feeds</title><link rel="alternate" type="text/html" href="https://idlip.in/log/gnus-joy/" /><id>https://idlip.in/log/gnus-joy/</id><published>2024-03-10T16:30:00Z</published><updated>2026-11-24T17:08:54Z</updated><category term="gnus" label="gnus" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><summary>Emacs is my editor, and my companion for most of my tasks. Yes, I'd like to call it a second brain extension.
 
 I'm a rss feed user, to read with coziness, freedom and comfort. Lately I have been experiment with the rss readers choice in Emacs. I feel that gnus, the powerhouse in Emacs is one of the good choice. I mean to say, not with nnrss backend, but with rss to nntp gateway.</summary><content type="html">&lt;p&gt;
 Emacs is my editor, and my companion for most of my tasks. Yes, I'd like to call it a second brain extension.
@@ -1087,7 +1087,7 @@ I'm using &lt;code&gt;elfeed&lt;/code&gt; as the rss reader for over 6 months. I
 Soon I jotted down only 3 candidate for reading feeds. Elfeed, Newsticker &amp;amp; gnus. Later two are built-in. There might be others as well, like wanderlust, org based.., but when I tried ig it did not work.
 &lt;/p&gt;
 &lt;div id=&quot;outline-container-elfeed&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;elfeed&quot;&gt;Elfeed&lt;a class=&quot;heading-anchor&quot; href=&quot;#elfeed&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;elfeed&quot;&gt;Elfeed&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-elfeed&quot;&gt;
 &lt;p&gt;
 As said earlier, it was my choice for about 6+ months, and it worked really well. Was reading and tagging feeds alot. Although with my rss usage, I realized I was only looking forward for the &lt;b&gt;planet emacs&lt;/b&gt; feeds (haha; typical emacser).
@@ -1103,7 +1103,7 @@ It is still my recommend way to go with the package that just works well. But be
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-newsticker&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;newsticker&quot;&gt;Newsticker&lt;a class=&quot;heading-anchor&quot; href=&quot;#newsticker&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;newsticker&quot;&gt;Newsticker&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-newsticker&quot;&gt;
 &lt;p&gt;
 Firstly, liked the customization it has, and the tree-view how it appeals. But I hit the road blocks very soon. Tree-view was an issue, I need to read each post in single window and navigate to my leisure. I miss tags here. For everytime I launch, &lt;code&gt;newsticker-treeview&lt;/code&gt; it fetches the articles from feed. That blocks my usage sometimes. Even tho I can keep &lt;code&gt;newsticker-retrieval-interval&lt;/code&gt; to 0, it still fetches when launched with command for first time.
@@ -1119,7 +1119,7 @@ Anyway, newsticker is also good, as it is built-in and does just work.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-gnus&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;gnus&quot;&gt;gnus&lt;a class=&quot;heading-anchor&quot; href=&quot;#gnus&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;gnus&quot;&gt;gnus&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-gnus&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;I panicked when I came to gnus. Its my..idk.. n&lt;sup&gt;th&lt;/sup&gt; time trying it out again.&lt;/li&gt;
@@ -1165,7 +1165,7 @@ I would like to link my dotfiles for it, maybe will soon add more write-up on it
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</content></entry><entry><title>Emacs on Droid</title><link rel="alternate" type="text/html" href="https://idlip.in/log/emacs-droid/" /><id>https://idlip.in/log/emacs-droid/</id><published>2023-12-16T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="android" label="android" scheme="https://idlip.in/tags/"></category><summary>Emacs is a definite Greatest editor of all time, the extensibility power is unmatched with any other software. Users of Emacs can only know what it is, one who has not used it may not really understand the principles and power it gives us, the users.
+</content></entry><entry><title>Emacs on Droid</title><link rel="alternate" type="text/html" href="https://idlip.in/log/emacs-droid/" /><id>https://idlip.in/log/emacs-droid/</id><published>2023-12-16T16:30:00Z</published><updated>2026-11-24T17:08:54Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="android" label="android" scheme="https://idlip.in/tags/"></category><summary>Emacs is a definite Greatest editor of all time, the extensibility power is unmatched with any other software. Users of Emacs can only know what it is, one who has not used it may not really understand the principles and power it gives us, the users.
 
 Once settled with it on PC, its not late to think of something similar for our handy pocket phones, at least support for org-mode so we organize our life. The research leads us to find apps, and its unfortunate that market has lots of apps supporting markdown, just for its markup. Even org-mode is good for markup only, Karl voit's post explains it very well.</summary><content type="html">&lt;p&gt;
 Emacs is a definite Greatest editor of all time, the extensibility power is unmatched with any other software. Users of Emacs can only know what it is, one who has not used it may not really understand the principles and power it gives us, the users.
@@ -1245,7 +1245,7 @@ Config just for android exclusively:
 &lt;p&gt;
 I'm not sure how suitable it is for coding environment (with lsp and complexities), but it behaves as expected for reading purpose and for quick note taking. I should probably say, it excels in that segment.
 &lt;/p&gt;
-</content></entry><entry><title>Emacs Efficiency</title><link rel="alternate" type="text/html" href="https://idlip.in/log/emacs-keys/" /><id>https://idlip.in/log/emacs-keys/</id><published>2023-03-29T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="cheatsheet" label="cheatsheet" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><summary>This is straight away from VernonGrant who hosts a podcast for Emacs called &quot;Discovering-Emacs&quot;. It's a great and has very much professional vibes, the explanations are Crisp and Clear! I suggest you to check out, he even has made YouTube channel for it.
+</content></entry><entry><title>Emacs Efficiency</title><link rel="alternate" type="text/html" href="https://idlip.in/log/emacs-keys/" /><id>https://idlip.in/log/emacs-keys/</id><published>2023-03-29T16:30:00Z</published><updated>2026-11-24T17:08:54Z</updated><category term="cheatsheet" label="cheatsheet" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><summary>This is straight away from VernonGrant who hosts a podcast for Emacs called &quot;Discovering-Emacs&quot;. It's a great and has very much professional vibes, the explanations are Crisp and Clear! I suggest you to check out, he even has made YouTube channel for it.
 
 I have removed some of the common bindings from this table, I have retained some unique one's which isn't discovered generally. I guess that is why the name is made (lol)</summary><content type="html">&lt;p&gt;
 This is straight away from &lt;a href=&quot;https://github.com/VernonGrant/discovering-emacs&quot;&gt;VernonGrant&lt;/a&gt; who hosts a podcast for Emacs called &quot;&lt;a href=&quot;https://www.discovering-emacs.com/&quot;&gt;Discovering-Emacs&lt;/a&gt;&quot;.
@@ -1268,7 +1268,7 @@ You can checkout the source here ⟾ &lt;a href=&quot;https://github.com/VernonG
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/VernonGrant/discovering-emacs&quot;&gt;github:VernonGrant/discovering-emacs&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content></entry><entry><title>NixOS : Reproducible - Immutable</title><link rel="alternate" type="text/html" href="https://idlip.in/log/try-nixos/" /><id>https://idlip.in/log/try-nixos/</id><published>2023-03-23T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="nixos" label="nixos" scheme="https://idlip.in/tags/"></category><summary>Introduction part, you would better have read it on official nixos site (nixos.org)
+</content></entry><entry><title>NixOS : Reproducible - Immutable</title><link rel="alternate" type="text/html" href="https://idlip.in/log/try-nixos/" /><id>https://idlip.in/log/try-nixos/</id><published>2023-03-23T16:30:00Z</published><updated>2026-11-24T17:08:54Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="nixos" label="nixos" scheme="https://idlip.in/tags/"></category><summary>Introduction part, you would better have read it on official nixos site (nixos.org)
 
 Here's an answer from a non-programmer, who just browses and watches media. Just don't, if you are looking for small benefit. Don't! regret having hard time to figure out petty things, again forget about error, you cannot even search in web.</summary><content type="html">&lt;hr&gt;
 
@@ -1276,7 +1276,7 @@ Here's an answer from a non-programmer, who just browses and watches media. Just
 Introduction part, you would better have read it on official nixos site (&lt;a href=&quot;https://nixos.org&quot;&gt;nixos.org&lt;/a&gt;)
 &lt;/p&gt;
 &lt;div id=&quot;outline-container-should-you-try-nixos&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;should-you-try-nixos&quot;&gt;&quot;Should you try NixOS?&quot; ❄️&lt;a class=&quot;heading-anchor&quot; href=&quot;#should-you-try-nixos&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;should-you-try-nixos&quot;&gt;&quot;Should you try NixOS?&quot; ❄️&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-should-you-try-nixos&quot;&gt;
 &lt;p&gt;
 Here's an answer from a non-programmer, who just browses and watches media.
@@ -1301,7 +1301,7 @@ But, if you have decided, go with it. According to me (non-programmer), these po
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-how-i-manage-my-system&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;how-i-manage-my-system&quot;&gt;How I manage my system 🌲&lt;a class=&quot;heading-anchor&quot; href=&quot;#how-i-manage-my-system&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;how-i-manage-my-system&quot;&gt;How I manage my system 🌲&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-how-i-manage-my-system&quot;&gt;
 &lt;p&gt;
 I manage my whole system with single org file. Its easy and pretty handy. You can read that file here &lt;b&gt;↬&lt;/b&gt; &lt;a href=&quot;https://github.com/idlip/d-nix/blob/onepiece/d-setup.org&quot;&gt;d-setup.org&lt;/a&gt; , its both self documenting and has all source code blocks.
@@ -1319,7 +1319,7 @@ Also, I have made files to be &lt;b&gt;symlink&lt;/b&gt;, so i can edit them wit
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-credits&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;credits&quot;&gt;Credits 🎖️&lt;a class=&quot;heading-anchor&quot; href=&quot;#credits&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;credits&quot;&gt;Credits 🎖️&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-credits&quot;&gt;
 &lt;p&gt;
 These configs were the inspiration and helped to build this way.
@@ -1340,7 +1340,7 @@ I thank them sincerely.
 &lt;hr&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</content></entry><entry><title>Emacs is OP</title><link rel="alternate" type="text/html" href="https://idlip.in/log/emacs-goat/" /><id>https://idlip.in/log/emacs-goat/</id><published>2023-03-22T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="vim" label="vim" scheme="https://idlip.in/tags/"></category><summary>Before anyone shouts vim, let me :q! I was a vimmer for a year, I played and had a good basic config. Even after an year, I didn't grasp the full potential of vim, it was just handy to use hjkl to move around.
+</content></entry><entry><title>Emacs is OP</title><link rel="alternate" type="text/html" href="https://idlip.in/log/emacs-goat/" /><id>https://idlip.in/log/emacs-goat/</id><published>2023-03-22T16:30:00Z</published><updated>2026-11-24T17:08:54Z</updated><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="vim" label="vim" scheme="https://idlip.in/tags/"></category><summary>Before anyone shouts vim, let me :q! I was a vimmer for a year, I played and had a good basic config. Even after an year, I didn't grasp the full potential of vim, it was just handy to use hjkl to move around.
 
 But When I'm learning Emacs, the experience is immense, it defines how things are meant and the legacy of Emacs for 40 years, is not a joke.</summary><content type="html">&lt;p&gt;
 Before anyone shouts vim, let me &lt;code&gt;:q!&lt;/code&gt;

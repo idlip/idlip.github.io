@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: terminal</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/tags/terminal/rss.xml" /><id>https://idlip.in/tags/terminal/rss.xml</id><updated>2026-11-24T00:00:00Z</updated><author><name>Dilip | Zororg</name></author><generator>Denden</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Linux : The Matrix</title><link rel="alternate" type="text/html" href="https://idlip.in/log/linux-cheatsheet/" /><id>https://idlip.in/log/linux-cheatsheet/</id><published>2023-04-12T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="terminal" label="terminal" scheme="https://idlip.in/tags/"></category><category term="minimal" label="minimal" scheme="https://idlip.in/tags/"></category><summary>There are tons of linux command line cheatsheet or guides.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: terminal</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/tags/terminal/rss.xml" /><id>https://idlip.in/tags/terminal/rss.xml</id><updated>2026-11-24T17:08:54Z</updated><author><name>Dilip | Zororg</name></author><generator>Denden</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Linux : The Matrix</title><link rel="alternate" type="text/html" href="https://idlip.in/log/linux-cheatsheet/" /><id>https://idlip.in/log/linux-cheatsheet/</id><published>2023-04-12T16:30:00Z</published><updated>2026-11-24T17:08:54Z</updated><category term="terminal" label="terminal" scheme="https://idlip.in/tags/"></category><category term="minimal" label="minimal" scheme="https://idlip.in/tags/"></category><summary>There are tons of linux command line cheatsheet or guides.
 
 Here are some of the best reads, I suggest you to go throught each of it, It's a gem.</summary><content type="html">&lt;p&gt;
 There are tons of linux command line cheatsheet or guides.
@@ -27,7 +27,7 @@ Here are some of the best reads, I suggest you to go throught each of it, &lt;b&
 &lt;b&gt;With that &lt;code&gt;coded&lt;/code&gt;, I hope you enjoy the terminal. Unleash the Matrix&lt;/b&gt;.
 &lt;/p&gt;
 &lt;/div&gt;
-</content></entry><entry><title>Tools that are Best!</title><link rel="alternate" type="text/html" href="https://idlip.in/log/tools-readme/" /><id>https://idlip.in/log/tools-readme/</id><published>2023-03-17T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="terminal" label="terminal" scheme="https://idlip.in/tags/"></category><category term="linux" label="linux" scheme="https://idlip.in/tags/"></category><category term="minimal" label="minimal" scheme="https://idlip.in/tags/"></category><summary>Note: This is very outdated from when it was written. Please check current config file or Uses for updated list.
+</content></entry><entry><title>Tools that are Best!</title><link rel="alternate" type="text/html" href="https://idlip.in/log/tools-readme/" /><id>https://idlip.in/log/tools-readme/</id><published>2023-03-17T16:30:00Z</published><updated>2026-11-24T17:08:54Z</updated><category term="terminal" label="terminal" scheme="https://idlip.in/tags/"></category><category term="linux" label="linux" scheme="https://idlip.in/tags/"></category><category term="minimal" label="minimal" scheme="https://idlip.in/tags/"></category><summary>Note: This is very outdated from when it was written. Please check current config file or Uses for updated list.
 
 Rest all other stuffs I do in Emacs, tbh I could do everything in Emacs lol.</summary><content type="html">&lt;p&gt;
 Note: This is very outdated from when it was written. Please check &lt;a href=&quot;https://github.com/idlip/d-nix&quot;&gt;current config&lt;/a&gt; file or &lt;a href=&quot;/uses/&quot;&gt;Uses&lt;/a&gt; for updated list.
@@ -35,7 +35,7 @@ Note: This is very outdated from when it was written. Please check &lt;a href=&q
 
 &lt;hr&gt;
 &lt;div id=&quot;outline-container-utilities-that-are-best&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;utilities-that-are-best&quot;&gt;Utilities that are Best! 🌟&lt;a class=&quot;heading-anchor&quot; href=&quot;#utilities-that-are-best&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;utilities-that-are-best&quot;&gt;Utilities that are Best! 🌟&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-utilities-that-are-best&quot;&gt;
 &lt;hr&gt;
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: linux</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/tags/linux/rss.xml" /><id>https://idlip.in/tags/linux/rss.xml</id><updated>2026-11-24T00:00:00Z</updated><author><name>Dilip | Zororg</name></author><generator>Denden</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Window Managers</title><link rel="alternate" type="text/html" href="https://idlip.in/log/window-managers/" /><id>https://idlip.in/log/window-managers/</id><published>2024-01-03T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="linux" label="linux" scheme="https://idlip.in/tags/"></category><category term="minimal" label="minimal" scheme="https://idlip.in/tags/"></category><summary>Desktop Environment gives us everything we would like to operate on Desktop with care towards UI and UX, that matches the common paradigm. It is a lot driven by mouse, and seems to fairly make work simpler and easier. It is not like keyboard can always make task quicker, mouse can be ahead of the race.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: linux</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/tags/linux/rss.xml" /><id>https://idlip.in/tags/linux/rss.xml</id><updated>2026-11-24T17:08:54Z</updated><author><name>Dilip | Zororg</name></author><generator>Denden</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Window Managers</title><link rel="alternate" type="text/html" href="https://idlip.in/log/window-managers/" /><id>https://idlip.in/log/window-managers/</id><published>2024-01-03T16:30:00Z</published><updated>2026-11-24T17:08:54Z</updated><category term="linux" label="linux" scheme="https://idlip.in/tags/"></category><category term="minimal" label="minimal" scheme="https://idlip.in/tags/"></category><summary>Desktop Environment gives us everything we would like to operate on Desktop with care towards UI and UX, that matches the common paradigm. It is a lot driven by mouse, and seems to fairly make work simpler and easier. It is not like keyboard can always make task quicker, mouse can be ahead of the race.
 
 But I too followed the trend to ditch mouse and embrace the swiftness of keyboard. I like to hear the &quot;clicks&quot; and &quot;tacks&quot;.</summary><content type="html">&lt;p&gt;
 Desktop Environment gives us everything we would like to operate on Desktop with care towards UI and UX, that matches the common paradigm. It is a lot driven by mouse, and seems to fairly make work simpler and easier. It is not like keyboard can always make task quicker, mouse can be ahead of the race.
@@ -43,7 +43,7 @@ Closing words, Window Managers are definitely great, and changing enhancement, u
 
 &lt;p&gt;
 So, just have a share of trial, explore and relax!&lt;/p&gt;
-</content></entry><entry><title>Nix: Home for Acer</title><link rel="alternate" type="text/html" href="https://idlip.in/log/nix-acer/" /><id>https://idlip.in/log/nix-acer/</id><published>2023-10-21T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="linux" label="linux" scheme="https://idlip.in/tags/"></category><category term="nixos" label="nixos" scheme="https://idlip.in/tags/"></category><summary>In this post am sharing some of the experience of using my new laptop, Acer swift Go Oled. Compact, Premium ultra-book with Oled, Yes, a good hand made mobile laptop.
+</content></entry><entry><title>Nix: Home for Acer</title><link rel="alternate" type="text/html" href="https://idlip.in/log/nix-acer/" /><id>https://idlip.in/log/nix-acer/</id><published>2023-10-21T16:30:00Z</published><updated>2026-11-24T17:08:54Z</updated><category term="linux" label="linux" scheme="https://idlip.in/tags/"></category><category term="nixos" label="nixos" scheme="https://idlip.in/tags/"></category><summary>In this post am sharing some of the experience of using my new laptop, Acer swift Go Oled. Compact, Premium ultra-book with Oled, Yes, a good hand made mobile laptop.
 
 As expected and as usual, it got windows 11 and first major encounter was heating and battery issue. It got me scared as it felt wrong decision. Since many claimed windows gives better battery life than Linux. It gave me nightmare of installing Linux too, really, new laptop with 4-5 hours of battery, for oled with black screens?</summary><content type="html">&lt;p&gt;
 In this post am sharing some of the experience of using my new laptop, &lt;b&gt;Acer swift Go Oled&lt;/b&gt;. Compact, Premium ultra-book with Oled, Yes, a good hand made mobile laptop.
@@ -100,7 +100,7 @@ Ultimately one more thing making all experience better is the &lt;b&gt;GOAT Emac
 &lt;p&gt;
 This has become another embark of a journey, where the todo's are just piling even more, and it looks fun to explore more and utilize efficiently for learning.
 &lt;/p&gt;
-</content></entry><entry><title>Nix Learning</title><link rel="alternate" type="text/html" href="https://idlip.in/log/nix-learning/" /><id>https://idlip.in/log/nix-learning/</id><published>2023-05-03T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="linux" label="linux" scheme="https://idlip.in/tags/"></category><category term="nixos" label="nixos" scheme="https://idlip.in/tags/"></category><summary>NixOS is definitely an advanced Linux distro, but it ain't easy to understand overnight or like Archlinux to have easy manual, but it sure has alot on the table. There is whole bunch of families like Nix functional language, Nix package manager… so and on with the prefix &quot;nix&quot;.
+</content></entry><entry><title>Nix Learning</title><link rel="alternate" type="text/html" href="https://idlip.in/log/nix-learning/" /><id>https://idlip.in/log/nix-learning/</id><published>2023-05-03T16:30:00Z</published><updated>2026-11-24T17:08:54Z</updated><category term="linux" label="linux" scheme="https://idlip.in/tags/"></category><category term="nixos" label="nixos" scheme="https://idlip.in/tags/"></category><summary>NixOS is definitely an advanced Linux distro, but it ain't easy to understand overnight or like Archlinux to have easy manual, but it sure has alot on the table. There is whole bunch of families like Nix functional language, Nix package manager… so and on with the prefix &quot;nix&quot;.
 
 This is really confusing, many hate nix and are not convinced to go long run just because of this difficulty (mess?). To make a simple thing work as expected, you need to go through such a rabbit hole. But once you know Nix* (families), everything will make sense, and you would feel bad to go back to old traditional Linux manners.</summary><content type="html">&lt;p&gt;
 NixOS is definitely an advanced Linux distro, but it ain't easy to understand overnight or like Archlinux to have easy manual, but it sure has alot on the table. There is whole bunch of families like Nix functional language, Nix package manager&amp;hellip; so and on with the prefix &quot;nix&quot;.
@@ -115,11 +115,11 @@ But once you know Nix* (families), everything will make sense, and you would fee
 These are some of the learning resources, which are rich in content and nonetheless, will be confusing at some point. But engineers do have spared their time in writing these, taking actions, to reach some audience and solve some of the caveats of Nix. So dig through and learn new ;)
 &lt;/p&gt;
 &lt;div id=&quot;outline-container-nix-learning&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;nix-learning&quot;&gt;nix-learning&lt;a class=&quot;heading-anchor&quot; href=&quot;#nix-learning&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;nix-learning&quot;&gt;nix-learning&lt;/h2&gt;
 &lt;/div&gt;
 
 &lt;div id=&quot;outline-container-uncategorized&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;uncategorized&quot;&gt;Uncategorized&lt;a class=&quot;heading-anchor&quot; href=&quot;#uncategorized&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;uncategorized&quot;&gt;Uncategorized&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-uncategorized&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;&lt;a href=&quot;https://youtu.be/m4sv2M9jRLg&quot;&gt;Nix Fundamentals&lt;/a&gt; (Video)&lt;/li&gt;
@@ -205,7 +205,7 @@ Peasy Nix Versions&lt;/a&gt; - Nicolas Mattia&lt;/li&gt;
 Nix derivation attributes of runtime dependencies&lt;/a&gt; - Nicolas Mattia&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;html&quot; id=&quot;orgd9624e0&quot;&gt;
+&lt;div class=&quot;html&quot; id=&quot;org716abbe&quot;&gt;
 &lt;p&gt;
 &amp;lt;!&amp;ndash; TODO: add more from their website &amp;ndash;&amp;gt;
 &lt;/p&gt;
@@ -223,7 +223,7 @@ Example&lt;/a&gt; - Susan Potter&lt;/li&gt;
 Nix lambda function named arguments&lt;/a&gt; - Susan Potter&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;html&quot; id=&quot;org4cf0677&quot;&gt;
+&lt;div class=&quot;html&quot; id=&quot;org842d246&quot;&gt;
 &lt;p&gt;
 &amp;lt;!&amp;ndash; TODO: add Tweag Nix flakes &amp;ndash;&amp;gt;
 &lt;/p&gt;
@@ -232,7 +232,7 @@ Nix lambda function named arguments&lt;/a&gt; - Susan Potter&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-overview&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;a class=&quot;heading-anchor&quot; href=&quot;#overview&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-overview&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;&lt;a href=&quot;https://web.archive.org/web/20210123223258/https://ebzzry.io/en/nix/&quot;&gt;A
@@ -241,7 +241,7 @@ Gentle Introduction to the Nix Family&lt;/a&gt;&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-nix-the-language&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;nix-the-language&quot;&gt;Nix the language&lt;a class=&quot;heading-anchor&quot; href=&quot;#nix-the-language&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;nix-the-language&quot;&gt;Nix the language&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-nix-the-language&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;&lt;a href=&quot;https://nixcloud.io/tour&quot;&gt;A tour of Nix&lt;/a&gt; - an introduction to the
@@ -250,7 +250,7 @@ Nix Programming Language&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-nix-shell&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;nix-shell&quot;&gt;Nix Shell&lt;a class=&quot;heading-anchor&quot; href=&quot;#nix-shell&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;nix-shell&quot;&gt;Nix Shell&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-nix-shell&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;&lt;a href=&quot;https://ghedam.at/15978/an-introduction-to-nix-shell&quot;&gt;An
@@ -261,7 +261,7 @@ your nix-shell&lt;/a&gt; - Farid Zakaria&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-nix-flakes&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;nix-flakes&quot;&gt;Nix Flakes&lt;a class=&quot;heading-anchor&quot; href=&quot;#nix-flakes&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;nix-flakes&quot;&gt;Nix Flakes&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-nix-flakes&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;&lt;a href=&quot;https://blog.ysndr.de/posts/internals/2021-01-01-flake-ification/&quot;&gt;Building
@@ -272,7 +272,7 @@ Chevalier&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-experience&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;experience&quot;&gt;Experience&lt;a class=&quot;heading-anchor&quot; href=&quot;#experience&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;experience&quot;&gt;Experience&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-experience&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;&lt;a href=&quot;https://catgirl.ai/log/nixos-experience/&quot;&gt;Eight Months of NixOS&lt;/a&gt; -
@@ -284,12 +284,12 @@ Falco Peijnenburg, Fabian Thorand, and Robert Kreuzer&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-language-specific&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;language-specific&quot;&gt;Language Specific&lt;a class=&quot;heading-anchor&quot; href=&quot;#language-specific&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;language-specific&quot;&gt;Language Specific&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-language-specific&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-java&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;java&quot;&gt;Java&lt;a class=&quot;heading-anchor&quot; href=&quot;#java&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;java&quot;&gt;Java&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-java&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;&lt;a href=&quot;https://fzakaria.com/2020/07/20/packaging-a-maven-application-with-nix.html&quot;&gt;Packaging
@@ -298,7 +298,7 @@ a Maven application with Nix&lt;/a&gt;&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-elixir&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;elixir&quot;&gt;Elixir&lt;a class=&quot;heading-anchor&quot; href=&quot;#elixir&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;elixir&quot;&gt;Elixir&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-elixir&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;&lt;a href=&quot;https://ejpcmac.net/blog/using-nix-in-elixir-projects/&quot;&gt;Using Nix in
@@ -307,7 +307,7 @@ Elixir projects&lt;/a&gt; - Jean-Philippe&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-c&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;c&quot;&gt;C++&lt;a class=&quot;heading-anchor&quot; href=&quot;#c&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;c&quot;&gt;C++&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-c&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;&lt;a href=&quot;https://blog.galowicz.de/2019/04/17/tutorial_nix_cpp_setup/&quot;&gt;Setting
@@ -316,7 +316,7 @@ up a C++ project environment with nix&lt;/a&gt; - Jacek Galowicz&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-rust&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;rust&quot;&gt;Rust&lt;a class=&quot;heading-anchor&quot; href=&quot;#rust&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;rust&quot;&gt;Rust&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-rust&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;Managing Rust Dependencies with Nix - James Kay
@@ -330,7 +330,7 @@ up a C++ project environment with nix&lt;/a&gt; - Jacek Galowicz&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-series&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;series&quot;&gt;Series&lt;a class=&quot;heading-anchor&quot; href=&quot;#series&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;series&quot;&gt;Series&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-series&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;Nix by Example - James Fisher
@@ -406,7 +406,7 @@ With that sorted, I hope learning becomes good ;)
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</content></entry><entry><title>Tools that are Best!</title><link rel="alternate" type="text/html" href="https://idlip.in/log/tools-readme/" /><id>https://idlip.in/log/tools-readme/</id><published>2023-03-17T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="terminal" label="terminal" scheme="https://idlip.in/tags/"></category><category term="linux" label="linux" scheme="https://idlip.in/tags/"></category><category term="minimal" label="minimal" scheme="https://idlip.in/tags/"></category><summary>Note: This is very outdated from when it was written. Please check current config file or Uses for updated list.
+</content></entry><entry><title>Tools that are Best!</title><link rel="alternate" type="text/html" href="https://idlip.in/log/tools-readme/" /><id>https://idlip.in/log/tools-readme/</id><published>2023-03-17T16:30:00Z</published><updated>2026-11-24T17:08:54Z</updated><category term="terminal" label="terminal" scheme="https://idlip.in/tags/"></category><category term="linux" label="linux" scheme="https://idlip.in/tags/"></category><category term="minimal" label="minimal" scheme="https://idlip.in/tags/"></category><summary>Note: This is very outdated from when it was written. Please check current config file or Uses for updated list.
 
 Rest all other stuffs I do in Emacs, tbh I could do everything in Emacs lol.</summary><content type="html">&lt;p&gt;
 Note: This is very outdated from when it was written. Please check &lt;a href=&quot;https://github.com/idlip/d-nix&quot;&gt;current config&lt;/a&gt; file or &lt;a href=&quot;/uses/&quot;&gt;Uses&lt;/a&gt; for updated list.
@@ -414,7 +414,7 @@ Note: This is very outdated from when it was written. Please check &lt;a href=&q
 
 &lt;hr&gt;
 &lt;div id=&quot;outline-container-utilities-that-are-best&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;utilities-that-are-best&quot;&gt;Utilities that are Best! 🌟&lt;a class=&quot;heading-anchor&quot; href=&quot;#utilities-that-are-best&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;utilities-that-are-best&quot;&gt;Utilities that are Best! 🌟&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-utilities-that-are-best&quot;&gt;
 &lt;hr&gt;
 
@@ -522,7 +522,7 @@ Feel free to comment down and ask me doubts or about some improvements, you wann
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</content></entry><entry><title>My Linux Journey</title><link rel="alternate" type="text/html" href="https://idlip.in/log/linux-journey/" /><id>https://idlip.in/log/linux-journey/</id><published>2023-03-10T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="linux" label="linux" scheme="https://idlip.in/tags/"></category><summary>Small info/log on my linux journey and my experience.
+</content></entry><entry><title>My Linux Journey</title><link rel="alternate" type="text/html" href="https://idlip.in/log/linux-journey/" /><id>https://idlip.in/log/linux-journey/</id><published>2023-03-10T16:30:00Z</published><updated>2026-11-24T17:08:54Z</updated><category term="linux" label="linux" scheme="https://idlip.in/tags/"></category><summary>Small info/log on my linux journey and my experience.
 
 If you are reading this, I encourage you to write blogs like this and have it in your git repo. Don't forget to tag or inform me, I'd be glad to read your journey too!</summary><content type="html">&lt;p&gt;
 &lt;b&gt;Small info/log on my linux journey and my experience.&lt;/b&gt;
@@ -558,7 +558,7 @@ My reason to switch over to Linux was simple as other had :
 My linux journey was from Linux Mint &amp;gt; EndeavourOS &amp;gt; Arch Linux &amp;gt; and now NixOS.
 &lt;/p&gt;
 &lt;div id=&quot;outline-container-the-embark&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;the-embark&quot;&gt;The Embark&lt;a class=&quot;heading-anchor&quot; href=&quot;#the-embark&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;the-embark&quot;&gt;The Embark&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-the-embark&quot;&gt;
 &lt;p&gt;
 I started to explore some YouTube video on Linux (as a normie at that time), soon I got familiar with good explanation, thankfully CTT had made an Linux Mint playlist and it helped to installing the first and the best &lt;b&gt;Beginner Distro&lt;/b&gt;, the &lt;b&gt;Linux Mint&lt;/b&gt;.

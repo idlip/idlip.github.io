@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: bioinformatics</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/tags/bioinformatics/rss.xml" /><id>https://idlip.in/tags/bioinformatics/rss.xml</id><updated>2026-11-24T00:00:00Z</updated><author><name>Dilip | Zororg</name></author><generator>Denden</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>My MSc journey with Emacs Orgmode</title><link rel="alternate" type="text/html" href="https://idlip.in/log/masters-emacs-orgmode/" /><id>https://idlip.in/log/masters-emacs-orgmode/</id><published>2025-06-06T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="bioinformatics" label="bioinformatics" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><summary>I wrote and used emacs orgmode for all of my post-grad Masters classes, presentations, projects and thesis.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: bioinformatics</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/tags/bioinformatics/rss.xml" /><id>https://idlip.in/tags/bioinformatics/rss.xml</id><updated>2026-11-24T17:08:54Z</updated><author><name>Dilip | Zororg</name></author><generator>Denden</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>My MSc journey with Emacs Orgmode</title><link rel="alternate" type="text/html" href="https://idlip.in/log/masters-emacs-orgmode/" /><id>https://idlip.in/log/masters-emacs-orgmode/</id><published>2025-06-06T16:30:00Z</published><updated>2026-11-24T17:08:54Z</updated><category term="bioinformatics" label="bioinformatics" scheme="https://idlip.in/tags/"></category><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="pkm" label="pkm" scheme="https://idlip.in/tags/"></category><summary>I wrote and used emacs orgmode for all of my post-grad Masters classes, presentations, projects and thesis.
 
 Before post-grad itself I was introduced to Emacs world and enjoyed getting good with it. As I used it, I realized emacs is not just an text editor, its an Personal Development Environment itself and user has power to craft it as they need. This was a worthwhile investment.</summary><content type="html">&lt;p&gt;
 &lt;b&gt;I wrote and used emacs orgmode for all of my post-grad Masters classes, presentations, projects and thesis.&lt;/b&gt;
@@ -35,7 +35,7 @@ I could have been an normie student like others and be at ease, but why did I ch
 I valued investment and growth. I could see the development and learning of skills compared to working with traditional GUI applications.
 &lt;/p&gt;
 &lt;div id=&quot;outline-container-note-taking&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;note-taking&quot;&gt;Note taking&lt;a class=&quot;heading-anchor&quot; href=&quot;#note-taking&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;note-taking&quot;&gt;Note taking&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-note-taking&quot;&gt;
 &lt;p&gt;
 Note-taking is understandable, its just format of text to store and read. And org-mode was superior and helped me alot.
@@ -54,7 +54,7 @@ So on which really helps with narrowing using consult package and org-ql for que
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-reports-doc&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;reports-doc&quot;&gt;Reports/Doc&lt;a class=&quot;heading-anchor&quot; href=&quot;#reports-doc&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;reports-doc&quot;&gt;Reports/Doc&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-reports-doc&quot;&gt;
 &lt;p&gt;
 Org mode can produce pdf via latex or ODT/docx format. That eventually guided me for submission of assignments and documents for sharing.
@@ -67,7 +67,7 @@ Although there was not much work with reports, I had good workflow of storing no
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-presentations&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;presentations&quot;&gt;Presentations&lt;a class=&quot;heading-anchor&quot; href=&quot;#presentations&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;presentations&quot;&gt;Presentations&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-presentations&quot;&gt;
 &lt;p&gt;
 I thought to give presentations in Emacs editor itself, but that did not make the cut for required normie friendly slides. The magically I came across revealJS and observed many people in tech presentations and talks used them. There was active development of org-reveal package as well, in new form from OER gitlab repo.
@@ -83,7 +83,7 @@ I had local.scss file for color and designing slides, and org generated html fil
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-thesis&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;thesis&quot;&gt;Thesis&lt;a class=&quot;heading-anchor&quot; href=&quot;#thesis&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;thesis&quot;&gt;Thesis&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-thesis&quot;&gt;
 &lt;p&gt;
 The final saga of the journey, since thesis takes time to write, I thought to not bother with complicating this task. My initial thought was to either use Latex, if it was too much headache then simply follow given docx format file and write.
@@ -96,13 +96,13 @@ The syntax and process was very robust and simple. The documentation was standar
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-conclusion&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;a class=&quot;heading-anchor&quot; href=&quot;#conclusion&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-conclusion&quot;&gt;
 &lt;p&gt;
 The main draw from this experience was that investing in tools that allow extending and allow programming to customize and tweak as I require was a major win and good rewards. These were added up skills that makes working with related tasks a breeze ahead.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</content></entry><entry><title>Biocode Daily to hack solutions</title><link rel="alternate" type="text/html" href="https://idlip.in/log/biocode-daily/" /><id>https://idlip.in/log/biocode-daily/</id><published>2025-04-03T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><category term="bioinformatics" label="bioinformatics" scheme="https://idlip.in/tags/"></category><summary>Biocode Daily is a new platform like rosalind, which offers daily bio-related coding challenges.
+</content></entry><entry><title>Biocode Daily to hack solutions</title><link rel="alternate" type="text/html" href="https://idlip.in/log/biocode-daily/" /><id>https://idlip.in/log/biocode-daily/</id><published>2025-04-03T16:30:00Z</published><updated>2026-11-24T17:08:54Z</updated><category term="snippets" label="snippets" scheme="https://idlip.in/tags/"></category><category term="bioinformatics" label="bioinformatics" scheme="https://idlip.in/tags/"></category><summary>Biocode Daily is a new platform like rosalind, which offers daily bio-related coding challenges.
 
 Its python oriented currently, which basically gives problems and expects a solution on given example and also on hidden tests.</summary><content type="html">&lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.biocodedaily.com/&quot;&gt;biocodedaily.com&lt;/a&gt;&lt;/li&gt;
@@ -121,7 +121,7 @@ These hidden tests are the good ones, because you need to solve the problems eff
 &lt;/p&gt;
 
 
-&lt;figure id=&quot;org89c476e&quot;&gt;
+&lt;figure id=&quot;org8148bbe&quot;&gt;
 &lt;img src=&quot;/images/biocode-lb.png&quot; alt=&quot;biocode-lb.png&quot; width=&quot;70%&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;Leaderboard as of third day challenge (I'm at #8)&lt;/figcaption&gt;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: lisp</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/tags/lisp/rss.xml" /><id>https://idlip.in/tags/lisp/rss.xml</id><updated>2026-10-06T00:00:00Z</updated><author><name>Dilip | Zororg</name></author><generator>Denden</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Denden: Emacs Lisp SSG based on org-publish</title><link rel="alternate" type="text/html" href="https://idlip.in/log/denden/" /><id>https://idlip.in/log/denden/</id><published>2026-10-02T00:00:00Z</published><updated>2026-10-06T00:00:00Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="lisp" label="lisp" scheme="https://idlip.in/tags/"></category><category term="denden" label="denden" scheme="https://idlip.in/tags/"></category><summary>Denden is yet another SSG based on org-publish and utilizing complete Elisp ecosystem. This site is built using that. Its not a package per-say, just an helper and building blocks on top of org mode's native ox-publish and org-element for AST.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: lisp</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/tags/lisp/rss.xml" /><id>https://idlip.in/tags/lisp/rss.xml</id><updated>2026-10-06T15:00:55Z</updated><author><name>Dilip | Zororg</name></author><generator>Denden</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Denden: Emacs Lisp SSG based on org-publish</title><link rel="alternate" type="text/html" href="https://idlip.in/log/denden/" /><id>https://idlip.in/log/denden/</id><published>2026-10-02T12:00:11Z</published><updated>2026-10-06T15:00:55Z</updated><category term="emacs" label="emacs" scheme="https://idlip.in/tags/"></category><category term="orgmode" label="orgmode" scheme="https://idlip.in/tags/"></category><category term="lisp" label="lisp" scheme="https://idlip.in/tags/"></category><category term="denden" label="denden" scheme="https://idlip.in/tags/"></category><summary>Denden is yet another SSG based on org-publish and utilizing complete Elisp ecosystem. This site is built using that. Its not a package per-say, just an helper and building blocks on top of org mode's native ox-publish and org-element for AST.
 
 This site used to run on Hugo using same theme called hakimacs, with content in Org mode rendered through go-org, and it worked fine for months. But I hated looking how ugly go-template looked and lot of regexp to do something, although it was fast, it was not human (emacs user) friendly to read at all. When I wrote in org mode, I always liked why not elisp somewhere to hack and do stuff. Org is a rich ecosystem and it needs way more hackable place to configure, not hugo to regexp parse everything.</summary><content type="html">&lt;p&gt;
 &lt;a href=&quot;https://github.com/idlip/denden&quot;&gt;Denden&lt;/a&gt; is yet another SSG based on org-publish and utilizing complete Elisp ecosystem. This site is
@@ -7,7 +7,7 @@ built using that. Its not a package per-say, just an helper and building blocks 
 native &lt;a href=&quot;https://orgmode.org/manual/Publishing.html&quot;&gt;ox-publish&lt;/a&gt; and &lt;a href=&quot;https://orgmode.org/worg/dev/org-element-api.html&quot;&gt;org-element&lt;/a&gt; for AST.
 &lt;/p&gt;
 &lt;div id=&quot;outline-container-why-i-even-started-this&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;why-i-even-started-this&quot;&gt;Why I even started this&lt;a class=&quot;heading-anchor&quot; href=&quot;#why-i-even-started-this&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;why-i-even-started-this&quot;&gt;Why I even started this&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-why-i-even-started-this&quot;&gt;
 &lt;p&gt;
 This site used to run on &lt;a href=&quot;https://gohugo.io&quot;&gt;Hugo&lt;/a&gt; using same theme called &lt;a href=&quot;https://github.com/idlip/hakimacs&quot;&gt;hakimacs&lt;/a&gt;, with content in Org mode rendered through go-org, and it worked fine for months. But I hated looking how ugly &lt;a href=&quot;https://gohugo.io/templates/introduction/&quot;&gt;go-template&lt;/a&gt; looked and lot of regexp to do something, although it was fast, it was not human (emacs user) friendly to read at all. When I wrote in org mode, I always liked why not elisp somewhere to hack and do stuff. Org is a rich ecosystem and it needs way more hackable place to configure, not hugo to regexp parse everything.
@@ -23,7 +23,7 @@ That annoyance is the entire reason denden exists.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-what-denden-actually-is-and-isn-t&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;what-denden-actually-is-and-isn-t&quot;&gt;What denden actually is, and isn't&lt;a class=&quot;heading-anchor&quot; href=&quot;#what-denden-actually-is-and-isn-t&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;what-denden-actually-is-and-isn-t&quot;&gt;What denden actually is, and isn't&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-what-denden-actually-is-and-isn-t&quot;&gt;
 &lt;p&gt;
 &lt;code&gt;denden&lt;/code&gt; is not a package, its more like a tool, helpers and building block on top of org-publish. It
@@ -49,7 +49,7 @@ Nobody's stopping you, there's no true &quot;denden way&quot; to acheive it.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-templates-are-just-lists-the-sexp-html-bit&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;templates-are-just-lists-the-sexp-html-bit&quot;&gt;Templates are just lists, the sexp-HTML bit&lt;a class=&quot;heading-anchor&quot; href=&quot;#templates-are-just-lists-the-sexp-html-bit&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;templates-are-just-lists-the-sexp-html-bit&quot;&gt;Templates are just lists, the sexp-HTML bit&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-templates-are-just-lists-the-sexp-html-bit&quot;&gt;
 &lt;p&gt;
 This is the part I like the most, a denden template is not a template language at all, it's a plain Emacs Lisp list, shaped like this.
@@ -107,7 +107,7 @@ That's a whole working nav bar, &lt;code&gt;menu-items&lt;/code&gt; is just a li
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-how-my-own-site-is-built-with-it&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;how-my-own-site-is-built-with-it&quot;&gt;How my own site is built with it&lt;a class=&quot;heading-anchor&quot; href=&quot;#how-my-own-site-is-built-with-it&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;how-my-own-site-is-built-with-it&quot;&gt;How my own site is built with it&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-how-my-own-site-is-built-with-it&quot;&gt;
 &lt;p&gt;
 My site's own Elisp lives in exactly three files, and I think that's a feature, not something I need to apologize for.
@@ -143,7 +143,7 @@ Everything you're reading right now, the  &lt;button type=&quot;button&quot; cla
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-one-more-cool-bit-even-the-og-card-images-are-sexp&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;one-more-cool-bit-even-the-og-card-images-are-sexp&quot;&gt;One more cool bit, even the OG card images are sexp&lt;a class=&quot;heading-anchor&quot; href=&quot;#one-more-cool-bit-even-the-og-card-images-are-sexp&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;one-more-cool-bit-even-the-og-card-images-are-sexp&quot;&gt;One more cool bit, even the OG card images are sexp&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-one-more-cool-bit-even-the-og-card-images-are-sexp&quot;&gt;
 &lt;p&gt;
 OG cards, the preview image you see when a link gets shared on social media, are usually generated with some headless browser screenshot setup or an image library. In denden it's the exact same &lt;code&gt;(TAG ATTRIBUTE-PLIST . CHILDREN)&lt;/code&gt; trick, just aimed at &lt;code&gt;&amp;lt;svg&amp;gt;&lt;/code&gt; instead of &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt;, from my own &lt;code&gt;site.el&lt;/code&gt;.
@@ -172,7 +172,7 @@ Same &lt;code&gt;denden-serialize-node&lt;/code&gt; (&lt;a href=&quot;https://gi
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-it-s-also-properly-fast&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;it-s-also-properly-fast&quot;&gt;It's also properly fast&lt;a class=&quot;heading-anchor&quot; href=&quot;#it-s-also-properly-fast&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;it-s-also-properly-fast&quot;&gt;It's also properly fast&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-it-s-also-properly-fast&quot;&gt;
 &lt;p&gt;
 I was bracing for a slow first build, since Emacs isn't exactly famous for being a speed train. It wasn't. A full build of this entire site, every post, every feed, every OG card image, finishes in a couple of seconds. I build it from the terminal like this.
@@ -193,7 +193,7 @@ incremental cache, and it's done before switch two windows. There's also an asyn
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-owning-the-whole-thing&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;owning-the-whole-thing&quot;&gt;Owning the whole thing&lt;a class=&quot;heading-anchor&quot; href=&quot;#owning-the-whole-thing&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;owning-the-whole-thing&quot;&gt;Owning the whole thing&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-owning-the-whole-thing&quot;&gt;
 &lt;p&gt;
 The thing I like most isn't the speed, it's that I own every line of this. I'm an Emacs user, I already spend my &lt;a href=&quot;/log/may-i-recommend/&quot;&gt;May I Recommend EWM&lt;/a&gt; tweaking my config, and now my blog engine runs in the same language, the same editor, the same muscle memory. If I want a new feature, I don't wait for a plugin, I don't learn a templating DSL, I just write a function next to the ones already there and call it. That's a genuinely different feeling from configuring a static site generator, it's closer to how your Emacs config itself grows over the years, one small function at a time, shaped around what you personally want.
@@ -205,7 +205,7 @@ If any of this sounds interesting and you're also an Emacs plus Org mode person,
 &lt;/p&gt;
 
 
-&lt;figure id=&quot;org24a5101&quot;&gt;
+&lt;figure id=&quot;org1febd35&quot;&gt;
 &lt;img src=&quot;https://raw.githubusercontent.com/idlip/denden/refs/heads/master/example/screenshot.png&quot; alt=&quot;screenshot.png&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
 
 &lt;figcaption&gt;Snap of a example bearblog like site built with denden&lt;/figcaption&gt;
@@ -213,7 +213,7 @@ If any of this sounds interesting and you're also an Emacs plus Org mode person,
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-about-the-name&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;about-the-name&quot;&gt;About the name&lt;a class=&quot;heading-anchor&quot; href=&quot;#about-the-name&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;about-the-name&quot;&gt;About the name&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-about-the-name&quot;&gt;
 &lt;p&gt;
 A &lt;code&gt;denden mushi&lt;/code&gt; is the snail-shaped transponder phone from One Piece, the way everyone in that world

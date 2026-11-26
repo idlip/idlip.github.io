@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: psychology</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/tags/psychology/rss.xml" /><id>https://idlip.in/tags/psychology/rss.xml</id><updated>2026-11-24T00:00:00Z</updated><author><name>Dilip | Zororg</name></author><generator>Denden</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>Resonance: The Echo</title><link rel="alternate" type="text/html" href="https://idlip.in/log/time-resonance/" /><id>https://idlip.in/log/time-resonance/</id><published>2024-03-10T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="psychology" label="psychology" scheme="https://idlip.in/tags/"></category><category term="philosophy" label="philosophy" scheme="https://idlip.in/tags/"></category><summary>Am at such a career building stage, and learning lot of new things everyday. Every day I wanted to blog and write something, and even now at the time of writing, I'm enjoying to put up and convey something as a post in my editor, emacs. The point, is &quot;I have to just start&quot;.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dilip's Log: psychology</title><subtitle>Dilip's Log</subtitle><link rel="alternate" type="text/html" href="https://idlip.in/" /><link rel="self" type="application/atom+xml" href="https://idlip.in/tags/psychology/rss.xml" /><id>https://idlip.in/tags/psychology/rss.xml</id><updated>2026-11-26T16:30:00Z</updated><author><name>Dilip | Zororg</name></author><generator>Denden</generator><rights>Copyright © 2023-2026, Dilip | Zororg; All rights reserved.</rights><entry><title>When the hands know, the mind is free</title><link rel="alternate" type="text/html" href="https://idlip.in/pose/#2026-11-26" /><id>https://idlip.in/pose/#2026-11-26</id><published>2026-11-26T16:30:00Z</published><updated>2026-11-26T16:30:00Z</updated><category term="habit" label="habit" scheme="https://idlip.in/tags/"></category><category term="psychology" label="psychology" scheme="https://idlip.in/tags/"></category><summary>My hands open reddit without asking me first. That is muscle memory, and it never asked whether Power of Habit was worth learning. The same hands can learn to open the agenda, capture a note, or start the day's work before the mind has finished making excuses.
+
+Muscle memory does not replace focus, it frees it. A driver who no longer thinks about the gears can watch the road. When the routine runs on its own, focus chimes in for the part that actually needs thinking, and the work starts taking care of itself. As Bruce Lee is often quoted:</summary><content type="html">&lt;p&gt;
+My hands open reddit without asking me first. That is &lt;a href=&quot;https://en.wikipedia.org/wiki/Muscle_memory&quot;&gt;muscle memory&lt;/a&gt;, and it never asked whether &lt;a href=&quot;/log/power-of-habit/&quot;&gt;Power of Habit&lt;/a&gt; was worth learning. The same hands can learn to open the agenda, capture a note, or start the day's work before the mind has finished making excuses.
+&lt;/p&gt;
+
+&lt;p&gt;
+Muscle memory does not replace focus, it frees it. A driver who no longer thinks about the gears can watch the road. When the routine runs on its own, focus chimes in for the part that actually needs thinking, and the work starts taking care of itself. As &lt;a href=&quot;https://www.thirdthinker.com/post/quote-i-fear-not-the-man-who-has-practiced-10000-kicks-once-brucelee&quot;&gt;Bruce Lee&lt;/a&gt; is often quoted:
+&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;
+I fear not the man who has practiced 10,000 kicks once, but the man who has practiced one kick 10,000 times.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;Bruce Lee&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+So the real question is not how to stay focused, but what I am training my hands to do while I am not looking. Get into the &lt;a href=&quot;https://en.wikipedia.org/wiki/Flow_(psychology)&quot;&gt;flow&lt;/a&gt;, not void.
+&lt;/p&gt;</content></entry><entry><title>Resonance: The Echo</title><link rel="alternate" type="text/html" href="https://idlip.in/log/time-resonance/" /><id>https://idlip.in/log/time-resonance/</id><published>2024-03-10T16:30:00Z</published><updated>2026-11-24T17:08:54Z</updated><category term="psychology" label="psychology" scheme="https://idlip.in/tags/"></category><category term="philosophy" label="philosophy" scheme="https://idlip.in/tags/"></category><summary>Am at such a career building stage, and learning lot of new things everyday. Every day I wanted to blog and write something, and even now at the time of writing, I'm enjoying to put up and convey something as a post in my editor, emacs. The point, is &quot;I have to just start&quot;.
 
 The sound All these days, some of the thoughts have been echoing inside me, recursively bombarding with same realization and finally coming to the same point. I would like to note down some of the points that are amusing and as a record that exists to realize.</summary><content type="html">&lt;p&gt;
 Am at such a career building stage, and learning lot of new things everyday. Every day I wanted to blog and write something, and  even now at the time of writing, I'm enjoying to put up and convey something as a post in my editor, emacs. The point, is &quot;I have to just start&quot;.
@@ -10,7 +31,7 @@ Am at such a career building stage, and learning lot of new things everyday. Eve
 All these days, some of the thoughts have been echoing inside me, recursively bombarding with same realization and finally coming to the same point. I would like to note down some of the points that are amusing and as a record that exists to realize.
 &lt;/p&gt;
 &lt;div id=&quot;outline-container-whatever-task-it-is-just-start&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;whatever-task-it-is-just-start&quot;&gt;Whatever task it is, &quot;Just start&quot;&lt;a class=&quot;heading-anchor&quot; href=&quot;#whatever-task-it-is-just-start&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;whatever-task-it-is-just-start&quot;&gt;Whatever task it is, &quot;Just start&quot;&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-whatever-task-it-is-just-start&quot;&gt;
 &lt;p&gt;
 I realized that just starting anything is not only half done, but its a perfection. Issues and complication start when I don't start and exaggerate thinking about it.
@@ -18,7 +39,7 @@ I realized that just starting anything is not only half done, but its a perfecti
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-don-t-follow-the-system-let-it-just-work&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;don-t-follow-the-system-let-it-just-work&quot;&gt;Don't follow the system, Let it just work&lt;a class=&quot;heading-anchor&quot; href=&quot;#don-t-follow-the-system-let-it-just-work&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;don-t-follow-the-system-let-it-just-work&quot;&gt;Don't follow the system, Let it just work&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-don-t-follow-the-system-let-it-just-work&quot;&gt;
 &lt;p&gt;
 Cool trendy, shiny tools and concepts bloom up every morning, cause its how the world is hastening up. But chasing something new, is a huge mistake and leave us nowhere out in the blue. Simply trying to adapt to shiny trends will lead to new issues and new challenges. That is good in some sense, and should be welcome. But we have to know the priorities.
@@ -34,7 +55,7 @@ Since I'm fond of org-mode, it might be reasonable in my case. So I think sticki
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-nothing-in-life-makes-sense-after-a-period-of-its-time&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;nothing-in-life-makes-sense-after-a-period-of-its-time&quot;&gt;Nothing in life makes sense, after a period of its time&lt;a class=&quot;heading-anchor&quot; href=&quot;#nothing-in-life-makes-sense-after-a-period-of-its-time&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;nothing-in-life-makes-sense-after-a-period-of-its-time&quot;&gt;Nothing in life makes sense, after a period of its time&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-nothing-in-life-makes-sense-after-a-period-of-its-time&quot;&gt;
 &lt;p&gt;
 Every matter and material has some time in our life, past and post that, its useless and alien to us. For whatever we fight, and chase during that time, is a laughing material for the future you.
@@ -46,7 +67,7 @@ I believe that, we need to sit down and think properly of what's going on with u
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-silence-and-no-is-the-best-answer-to-many&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;silence-and-no-is-the-best-answer-to-many&quot;&gt;Silence, and No is the best answer to many&lt;a class=&quot;heading-anchor&quot; href=&quot;#silence-and-no-is-the-best-answer-to-many&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;silence-and-no-is-the-best-answer-to-many&quot;&gt;Silence, and No is the best answer to many&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-silence-and-no-is-the-best-answer-to-many&quot;&gt;
 &lt;p&gt;
 Many times, life deviates with noise and nodding &quot;yes&quot; to questions. Some seconds of silence and &quot;No&quot; would elevate life's progress and improve the betterment of life for many.
@@ -54,7 +75,7 @@ Many times, life deviates with noise and nodding &quot;yes&quot; to questions. S
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-don-t-be-a-judge&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;don-t-be-a-judge&quot;&gt;Don't be a judge&lt;a class=&quot;heading-anchor&quot; href=&quot;#don-t-be-a-judge&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;don-t-be-a-judge&quot;&gt;Don't be a judge&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-don-t-be-a-judge&quot;&gt;
 &lt;p&gt;
 Judging does come with a price, at the end we may lose our own support. As I said, silence and simplicity voyages the person to bright life.
@@ -64,7 +85,7 @@ Judging does come with a price, at the end we may lose our own support. As I sai
 Disclaimer: No need to think too much, I'm not a philosopher. &lt;i&gt;Please take it with a pinch of salt&lt;/i&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</content></entry><entry><title>Imposter Syndrome : Formula for Success</title><link rel="alternate" type="text/html" href="https://idlip.in/log/imposter-syndrome/" /><id>https://idlip.in/log/imposter-syndrome/</id><published>2023-03-24T00:00:00Z</published><updated>2026-11-24T00:00:00Z</updated><category term="psychology" label="psychology" scheme="https://idlip.in/tags/"></category><summary>The matter is, is these sound true or happening at some moment, let me condition it as &quot;Imposted Syndrome&quot;.
+</content></entry><entry><title>Imposter Syndrome : Formula for Success</title><link rel="alternate" type="text/html" href="https://idlip.in/log/imposter-syndrome/" /><id>https://idlip.in/log/imposter-syndrome/</id><published>2023-03-24T16:30:00Z</published><updated>2026-11-24T17:08:54Z</updated><category term="psychology" label="psychology" scheme="https://idlip.in/tags/"></category><summary>The matter is, is these sound true or happening at some moment, let me condition it as &quot;Imposted Syndrome&quot;.
 
 You might remember the word &quot;Imposter&quot; from the most popular mobile game during lockdown, Among us (site), yeah as the name suggests it means one who deceives.</summary><content type="html">&lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;Have you ever felt a fear of losing or doubt your own ability?&lt;/li&gt;
@@ -97,7 +118,7 @@ when they experience success.
 I myself have felt this, when I was starting out journey to learn new course (say programming language), I felt it was oceanic knowledge where I only had a boat.
 &lt;/p&gt;
 &lt;div id=&quot;outline-container-ways-to-stop-imposter-syndrome&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;ways-to-stop-imposter-syndrome&quot;&gt;Ways to stop Imposter Syndrome&lt;a class=&quot;heading-anchor&quot; href=&quot;#ways-to-stop-imposter-syndrome&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;ways-to-stop-imposter-syndrome&quot;&gt;Ways to stop Imposter Syndrome&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-ways-to-stop-imposter-syndrome&quot;&gt;
 &lt;blockquote&gt;
 &lt;p&gt;
@@ -107,7 +128,7 @@ I myself have felt this, when I was starting out journey to learn new course (sa
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-trust-the-process&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;trust-the-process&quot;&gt;Trust the Process&lt;a class=&quot;heading-anchor&quot; href=&quot;#trust-the-process&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;trust-the-process&quot;&gt;Trust the Process&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-trust-the-process&quot;&gt;
 &lt;p&gt;
 Reflect on your actions, see the world praising you. Instead of listening to the negative feeling from your head, listen to the feedback from others.
@@ -125,7 +146,7 @@ If you doubt yourself, shouldn't you also doubt your judgment of yourself?
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-look-for-evidence&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;look-for-evidence&quot;&gt;Look for Evidence&lt;a class=&quot;heading-anchor&quot; href=&quot;#look-for-evidence&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;look-for-evidence&quot;&gt;Look for Evidence&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-look-for-evidence&quot;&gt;
 &lt;p&gt;
 Fine you feel it that way, see if you can find evidence and measures. Think of some example where you have made some positive impact on others, how much change have you brought them.
@@ -133,7 +154,7 @@ Fine you feel it that way, see if you can find evidence and measures. Think of s
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-remember-the-journey&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;remember-the-journey&quot;&gt;Remember the Journey&lt;a class=&quot;heading-anchor&quot; href=&quot;#remember-the-journey&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;remember-the-journey&quot;&gt;Remember the Journey&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-remember-the-journey&quot;&gt;
 &lt;p&gt;
 Look back at the steps you have taken, how was the process of learning from scratch, rock-bottom.
@@ -145,7 +166,7 @@ Look back at the steps you have taken, how was the process of learning from scra
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-turn-the-tables&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;turn-the-tables&quot;&gt;Turn the Tables&lt;a class=&quot;heading-anchor&quot; href=&quot;#turn-the-tables&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;turn-the-tables&quot;&gt;Turn the Tables&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-turn-the-tables&quot;&gt;
 &lt;p&gt;
 Make it a strenth, refrain from doubts. Those with imposter syndrome are more likely to say &quot;I don't know&quot; when they don't know. This is an advantage. Overconfident people assume they have all the answers, even when they don't.
@@ -157,7 +178,7 @@ Humility, uncertainty, and self-doubt are part of the learning process. The key 
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-suggested-reads&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;suggested-reads&quot;&gt;Suggested Reads&lt;a class=&quot;heading-anchor&quot; href=&quot;#suggested-reads&quot; aria-label=&quot;Link to this section&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;suggested-reads&quot;&gt;Suggested Reads&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-suggested-reads&quot;&gt;
 &lt;p&gt;
 If you want to explore more on this concepts :
