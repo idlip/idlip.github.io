@@ -782,9 +782,55 @@
     & summary {
       padding-block: 0.4em;
     }
+    /* The heading row: heading, then tags pushed to the far end, all centred on one line.
+       A flex summary loses the browser's marker, so it draws the same triangle itself. */
+    & :is(summary, article:not(:has(> details))) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      column-gap: 0.5em;
+    }
+    & summary {
+      list-style: none;
+      &::-webkit-details-marker {
+        display: none;
+      }
+      &::before {
+        content: "▸";
+      }
+    }
+    & details[open] > summary::before {
+      content: "▾";
+    }
     & time {
       color: var(--text-faint);
       font-variant-numeric: tabular-nums;
+    }
+    /* Date at 0.8 of the title; tags at 0.7. */
+    & h3 time {
+      font-size: 0.8em;
+    }
+    /* Tags sit at the far end of the heading row, wrapping onto a row of their own. */
+    & .tags {
+      margin-inline-start: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3em;
+      font-size: calc(1.1em * 0.7);
+    }
+    /* A solid chip in the link colour, its text in the page colour (the link pair, swapped). */
+    & .tags a {
+      display: inline-flex;
+      align-items: center;
+      min-block-size: 24px;
+      padding-inline: 0.45em;
+      border-radius: var(--radius);
+      background: var(--link);
+      color: var(--background);
+      text-decoration: none;
+    }
+    & .tags a:is(:hover, :focus-visible) {
+      text-decoration: underline;
     }
     /* A solid chip in the weekday colour; bold at heading size counts as large text (3:1). */
     & .day {
@@ -793,6 +839,7 @@
       background: var(--day-color);
       color: var(--background);
       font-weight: bold;
+      font-size: 0.9em;
     }
     & [data-day="1"] {
       --day-color: var(--day-1);

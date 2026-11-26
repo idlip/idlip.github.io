@@ -791,8 +791,7 @@ For my love and curiosity towards astronomy and mythology.")
 (defun site--pose-entry (headline)
   "Return the Pose entry of HEADLINE, a top-level heading, before export.
 The plist has :custom-id, :title, :date, :tags, :clock (hour and
-minute, when the heading's timestamp has them), :line (the heading's
-line in the file), :body-text, and for a dated entry :calendar-date,
+minute, when the heading's timestamp has them), :body-text, and for a dated entry :calendar-date,
 :weekday, :day and :day-title."
   (let* ((title-objects (org-element-parse-secondary-string
                          (org-element-property :raw-value headline)
@@ -818,7 +817,6 @@ line in the file), :body-text, and for a dated entry :calendar-date,
            :clock (and timestamp (org-element-property :hour-start timestamp)
                        (list (org-element-property :hour-start timestamp)
                              (org-element-property :minute-start timestamp)))
-           :line (line-number-at-pos (org-element-begin headline))
            :body-text (if (and begin end) (buffer-substring-no-properties begin end) ""))
      (and calendar-date
           ;; `calendar-day-of-week' counts from Sunday = 0; ISO counts Monday = 1 to Sunday = 7.
@@ -830,41 +828,19 @@ line in the file), :body-text, and for a dated entry :calendar-date,
                   :day-title (format "%s · %s · %s" (calendar-day-name calendar-date)
                                      (plist-get planet :hindi) (plist-get planet :meaning))))))))
 
-(defun site--line-commit-times (file)
-  "Return a hash table from each line number of FILE to its commit time.
-The time is that of the commit that last changed the line, from one
-git blame.  Lines not committed yet are left out.  Return nil when
-FILE is not in git or `denden-lastmod-from-git' is nil."
-  (and denden-lastmod-from-git
-       (condition-case nil
-           (let ((default-directory (file-name-directory file))
-                 (times (make-hash-table))
-                 (line nil))
-             (dolist (text (process-lines "git" "blame" "--line-porcelain" "--"
-                                          (file-name-nondirectory file)))
-               (cond
-                ((string-match (rx bos (group (= 40 hex)) " " (+ digit) " " (group (+ digit)))
-                               text)
-                 (setq line (and (not (string-match-p (rx bos (+ "0") eos) (match-string 1 text)))
-                                 (string-to-number (match-string 2 text)))))
-                ((and line (string-prefix-p "committer-time " text))
-                 (puthash line (seconds-to-time
-                                (string-to-number (substring text (length "committer-time "))))
-                          times))))
-             times)
-         (error nil))))
-
-(defun site--pose-entry-time (entry commit-times)
+(defun site--pose-entry-time (entry)
   "Return the full time of the dated Pose ENTRY.
-The heading's own time wins; then the commit time of its line in
-COMMIT-TIMES, when on the same day; then `denden-default-time'."
+It is the time written in the heading's timestamp, or else
+`denden-default-time' on its date.  Git does not count here: several
+entries often go out in one commit, and editing a heading changes its
+last commit."
   (let ((clock (plist-get entry :clock)))
     (denden-resolve-time
      (date-to-time (if clock
                        (format "%s %02d:%02d" (plist-get entry :date) (car clock) (cadr clock))
                      (plist-get entry :date)))
      clock
-     (and commit-times (gethash (plist-get entry :line) commit-times)))))
+     nil)))
 
 (defun site-pose-entries (site page pages)
   "Return the entries of the Pose PAGE of SITE, newest first.
@@ -884,7 +860,6 @@ result is kept in PAGE for the rest of the build."
                          #'site--pose-entry nil nil 'headline)))
             (html (denden-export-org-strings
                    site (mapcar (lambda (entry) (plist-get entry :body-text)) entries) pages page))
-            (commit-times (site--line-commit-times (denden-page-source page)))
             (seen (make-hash-table :test #'equal)))
        ;; Newest first; entries of one day keep their file order.
        (sort (cl-mapcar
@@ -897,10 +872,14 @@ result is kept in PAGE for the rest of the build."
                                         (if (or (null date) (> count 1))
                                             (format "%s-%d" (or date "entry") count)
                                           date))
-                                :time (and date (site--pose-entry-time entry commit-times))
+                                :time (and date (site--pose-entry-time entry))
                                 :html body
-                                :search-text (downcase (concat (plist-get entry :title) " "
-                                                               (denden-html-plain-text body)))))))
+                                :search-text (downcase (string-join
+                                                        (append (list (plist-get entry :title))
+                                                                (mapcar (lambda (tag) (concat "#" tag))
+                                                                        (plist-get entry :tags))
+                                                                (list (denden-html-plain-text body)))
+                                                        " "))))))
               entries html)
              :key (lambda (entry) (or (plist-get entry :date) "")) :reverse t)))))
 
@@ -963,6 +942,14 @@ Each record links to the entry's own anchor on the Pose page of SITE."
 It is computed for the first page of a build and reused while the
 page list is the same object, so a new build always recomputes it.")
 
+
+(defun site--with-pose-entries (site pages taxonomy)
+  "Return PAGES of SITE, plus the dated Pose entries when TAXONOMY is tags.
+Tag pages, tag counts and tag feeds read this, so a tag lists Log
+posts and Pose entries together."
+  (if (equal taxonomy "tags")
+      (append pages (site--pose-feed-pages site pages))
+    pages))
 (defun site--read-file (file)
   "Return the text of FILE, relative to the site's root folder."
   (with-temp-buffer
@@ -989,7 +976,7 @@ page list is the same object, so a new build always recomputes it.")
         (tags (mapcar (lambda (entry)
                         (list :name (car entry) :count (cdr entry)
                               :url (format "/tags/%s/" (downcase (car entry)))))
-                      (denden-term-counts pages "tags"))))
+                      (denden-term-counts (site--with-pose-entries site pages "tags") "tags"))))
     (list 'raw-html nil
           (format "<script>window.__posts=%s;window.__tags=%s;window.__nav=%s;window.__paletteIcons=%s;</script>"
                   (json-serialize (vconcat posts)) (json-serialize (vconcat tags))
@@ -1382,17 +1369,21 @@ META is its meta plist, read by the layout."
                                   (denden-pages-in-section pages (site--meta page :section)))
                   :tag-icons site-tag-icons)))
 
-(defun site-render-terms (_site page pages)
-  "Return the main part of the PAGE that lists every term of a taxonomy of PAGES."
+(defun site-render-terms (site page pages)
+  "Return the main part of the PAGE of SITE that lists every term of a taxonomy.
+PAGES are all pages; Pose entries count for tags."
   (let ((taxonomy (site--meta page :taxonomy)))
     (theme-terms-list :title (denden-page-title page)
-                      :term-counts (denden-term-counts pages taxonomy)
+                      :term-counts (denden-term-counts (site--with-pose-entries site pages taxonomy)
+                                                       taxonomy)
                       :base-url (format "/%s/" taxonomy))))
 
-(defun site-render-term (_site page pages)
-  "Return the main part of the PAGE that lists the pages of PAGES with one term."
+(defun site-render-term (site page pages)
+  "Return the main part of the PAGE of SITE that lists the pages with one term.
+PAGES are all pages; for a tag, Pose entries with it are listed too."
   (let* ((taxonomy (site--meta page :taxonomy))
-         (term-pages (denden-pages-with-term pages taxonomy (site--meta page :term))))
+         (term-pages (denden-pages-with-term (site--with-pose-entries site pages taxonomy)
+                                             taxonomy (site--meta page :term))))
     (theme-post-listing
      :title (concat "#" (site--meta page :term))
      :term-header (theme-term-header :count (length term-pages)
@@ -1447,7 +1438,8 @@ They are rendered from PAGES through the site's page shell."
                                            :section section))
                      (denden-sections pages))
              (mapcan (lambda (taxonomy)
-                       (let ((counts (denden-term-counts pages taxonomy)))
+                       (let ((counts (denden-term-counts (site--with-pose-entries site pages taxonomy)
+                                                         taxonomy)))
                          (and counts
                               (cons (site--listing-page (concat taxonomy "/") (capitalize taxonomy) "terms"
                                                         :taxonomy taxonomy)
@@ -1487,10 +1479,14 @@ feed.xml, so readers find them under any usual name."
                             (format "%s: Pose" site-title))))
      (mapcan (lambda (taxonomy)
                (mapcar (lambda (entry)
-                         (site--feed site (denden-pages-with-term pages taxonomy (car entry))
+                         (site--feed site (denden-pages-with-term
+                                           (site--with-pose-entries site pages taxonomy)
+                                           taxonomy (car entry))
                                      (format "%s/%s/rss.xml" taxonomy (downcase (car entry)))
                                      (format "%s: %s" site-title (car entry))))
-                       (denden-term-counts (site--regular-pages pages) taxonomy)))
+                       (denden-term-counts (site--with-pose-entries
+                                            site (site--regular-pages pages) taxonomy)
+                                           taxonomy)))
              '("tags" "refs")))))
 
 ;;;; Other outputs

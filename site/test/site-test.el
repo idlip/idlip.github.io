@@ -158,21 +158,24 @@
       (should (string-search "content=\"summary\"" (site-test--file url files))))))
 
 (ert-deftest site-test-pose-entry-time ()
-  "A Pose entry's time: its own clock, a same-day commit, else 22:00."
-  (let ((denden-default-time "22:00")
-        (commits (make-hash-table)))
-    (puthash 5 (date-to-time "2026-03-02 18:40") commits)
-    (puthash 9 (date-to-time "2026-03-03 00:20") commits)
-    (should (equal (format-time-string "%F %H:%M"
-                                       (site--pose-entry-time '(:date "2026-03-02" :line 5) commits))
-                   "2026-03-02 18:40"))
-    (should (equal (format-time-string "%F %H:%M"
-                                       (site--pose-entry-time '(:date "2026-03-02" :line 9) commits))
+  "A Pose entry's time is its heading's clock, else the default time."
+  (let ((denden-default-time "22:00"))
+    (should (equal (format-time-string "%F %H:%M" (site--pose-entry-time '(:date "2026-03-02")))
                    "2026-03-02 22:00"))
     (should (equal (format-time-string "%F %H:%M"
-                                       (site--pose-entry-time '(:date "2026-03-02" :clock (7 5) :line 5)
-                                                              commits))
+                                       (site--pose-entry-time '(:date "2026-03-02" :clock (7 5))))
                    "2026-03-02 07:05"))))
+
+(ert-deftest site-test-pose-tags ()
+  "Pose entry tags show as chips and share /tags/ with Log posts."
+  (site-test--with-site
+    (should (string-search "<span class=\"tags\"><a href=\"/tags/life/\">#life</a></span>"
+                           (site-test--file "pose/" files)))
+    (should (string-search "<a href=\"/pose/#2026-03-02\">First note</a>"
+                           (site-test--file "tags/life/" files)))
+    (should (string-search "#life" (site-test--file "tags/" files)))
+    (should (string-search "pose/#2026-03-02" (site-test--file "tags/life/rss.xml" files)))
+    (should (string-search "\"name\":\"life\"" (site-test--file "" files)))))
 
 (provide 'site-test)
 ;;; site-test.el ends here

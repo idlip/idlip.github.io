@@ -371,7 +371,9 @@ and POST-NAVIGATION; all but POST-HEADER and BODY-HTML may be nil."
   `(article nil (header nil (h1 nil ,title)) (raw-html nil ,body-html)))
 
 (defun theme--pose-entry (entry &optional open)
-  "Return one Pose ENTRY: \"date day :: title\" and its body, OPEN or folded."
+  "Return one Pose ENTRY: \"date day :: title\", its tags, its body.
+The body is folded unless OPEN is non-nil.  Each tag links to its
+page under /tags/, which lists Log posts and Pose entries together."
   (let* ((date (plist-get entry :date))
          (heading (apply #'theme--heading-at 'h3 (plist-get entry :id)
                          (append (and date
@@ -380,11 +382,19 @@ and POST-NAVIGATION; all but POST-HEADER and BODY-HTML may be nil."
                                                    ,(plist-get entry :day))
                                             " :: "))
                                  (list (plist-get entry :title)))))
+         (tags (plist-get entry :tags))
+         (summary (list heading
+                        (and tags
+                             `(span (:class "tags")
+                                    ,@(mapcar (lambda (tag)
+                                                `(a (:href ,(format "/tags/%s/" (downcase tag)))
+                                                    ,(concat "#" tag)))
+                                              tags)))))
          (body (plist-get entry :html)))
     `(article (:data-filter-text ,(plist-get entry :search-text) :data-day ,(plist-get entry :weekday))
-              ,(if (string-empty-p (string-trim body))
-                   heading
-                 `(details (:open ,open) (summary nil ,heading) (raw-html nil ,body))))))
+              ,@(if (string-empty-p (string-trim body))
+                    summary
+                  `((details (:open ,open) (summary nil ,@summary) (raw-html nil ,body)))))))
 
 (cl-defun theme-pose-page (&key title intro-html weeks)
   "Return the Pose page: TITLE, INTRO-HTML, a filter and one section per WEEKS."
