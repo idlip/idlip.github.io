@@ -193,3 +193,15 @@ I fear not the man who has practiced 10,000 kicks once, but the man who has prac
   + Bruce Lee
 
 So the real question is not how to stay focused, but what I am training my hands to do while I am not looking. Get into the [[https://en.wikipedia.org/wiki/Flow_(psychology)][flow]], not void.
+
+* [2026-11-27 Fri] Curiosity starts it, habit keeps it :habit:research:
+Today was mostly work again, but the good kind. Something new and exciting started, and I kept digging without needing any push. Curiosity was both the cue and the reward, so the research ran on its own.
+
+But excitement has a short shelf life. The new thing stops being new, and then the digging stops too, unless it has become a habit by then. A fixed hour of reading and noting, every day, long after the thrill has gone.
+
+Richard Hamming puts it well in [[https://www.cs.virginia.edu/~robins/YouAndYourResearch.html][You and Your Research]]:
+
+#+begin_quote
+Given two people with exactly the same ability, the one person who manages day in and day out to get in one more hour of thinking will be tremendously more productive over a lifetime.
+#+end_quote
+  + [[https://www.cs.virginia.edu/~robins/YouAndYourResearch.html][Richard Hamming]]
