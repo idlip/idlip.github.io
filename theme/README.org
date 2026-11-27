@@ -63,7 +63,7 @@ instead of adding a page-specific rule.
 | list controls       | filter =input[data-filter]= + view radios            | =theme-list-filter=                          |
 | heading with # link | =h2[id]= + =a.heading-anchor=                          | =theme--heading=, =denden-headline=            |
 | pager               | =nav.pager= with =rel= prev/next                       | =theme-post-navigation=                      |
-| callout             | =div.callout[role=note][data-callout]=               | =denden-special-block=                       |
+| quote card          | =blockquote=, =div.note= / =.tip= / =.warn=          | Org =#+begin_quote=, =#+begin_note= and so on |
 | grid block          | =div.grid=                                           | Org =#+begin_grid=                           |
 | TOC                 | =details.toc=                                        | =site--toc-node=                             |
 | comment             | =form.comment=                                       | =theme-comment=                              |

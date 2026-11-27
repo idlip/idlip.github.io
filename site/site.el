@@ -220,8 +220,8 @@ tag, a whole host, or one dot-separated part of a host.")
 
 (defconst site-contrast-floor
   '(("base05" . 7) ("base0D" . 4.5)
-    ("base0C" . 3) ("base08" . 3) ("base09" . 3) ("base0B" . 3) ("base0E" . 3))
-  "Least contrast on base00: text 7, links 4.5, accent and headings 3.")
+    ("base0C" . 3) ("base08" . 3) ("base09" . 3) ("base0A" . 3) ("base0B" . 3) ("base0E" . 3))
+  "Least contrast on base00: text 7, links 4.5, accent, headings and callouts 3.")
 
 (defun site--relative-luminance (hex)
   "The WCAG relative luminance of HEX, a \"#rrggbb\" colour."
@@ -791,8 +791,8 @@ For my love and curiosity towards astronomy and mythology.")
 (defun site--pose-entry (headline)
   "Return the Pose entry of HEADLINE, a top-level heading, before export.
 The plist has :custom-id, :title, :date, :tags, :clock (hour and
-minute, when the heading's timestamp has them), :body-text, and for a dated entry :calendar-date,
-:weekday, :day and :day-title."
+minute, when the heading's timestamp has them), :body-text, and for
+a dated entry :calendar-date, :weekday, :day and :day-title."
   (let* ((title-objects (org-element-parse-secondary-string
                          (org-element-property :raw-value headline)
                          (org-element-restriction 'headline)))
