@@ -13,6 +13,8 @@
     --link-hover: var(--base0C);
     --accent: var(--base0C);
     --red: var(--base08);
+    --orange: var(--base09);
+    --yellow: var(--base0A);
     --selection: var(--base02);
     --h1-color: var(--base0E);
     --h2-color: var(--base09);
@@ -276,7 +278,7 @@
     content: "✥ ";
   }
 
-  :where(p, ul, ol, dl, blockquote, pre, table, figure) {
+  :where(p, ul, ol, dl, blockquote, .note, .tip, .warn, pre, table, figure) {
     margin-block: 0 1em;
   }
   :where(p) {
@@ -288,21 +290,21 @@
   :where(li:has(> input[type="checkbox"])) {
     list-style: none;
   }
-  /* A quote is something to stop and read: a raised card, an accent bar, a large mark. */
-  :where(blockquote) {
+  /* A quote or a callout is something to stop and read: a raised card, an accent bar, a large mark. */
+  :where(blockquote, .note, .tip, .warn) {
     position: relative;
     margin-inline: 0;
     padding: 1em 1em 1em 2.6em;
     background: var(--surface);
-    border-inline-start: 4px solid var(--accent);
+    border-inline-start: 4px solid var(--callout-color, var(--accent));
     border-radius: 0 var(--radius) var(--radius) 0;
     font-size: 1.05em;
   }
   /* The card's padding is the only gap; the last paragraph's margin would double it. */
-  :where(blockquote > :last-child) {
+  :where(blockquote, .note, .tip, .warn) > :where(:last-child) {
     margin-block-end: 0;
   }
-  :where(blockquote)::before {
+  :where(blockquote, .note, .tip, .warn)::before {
     content: "󱀢" / "";
     position: absolute;
     inset-block-start: 0.85em;
@@ -310,7 +312,26 @@
     font-family: "nerd-icons";
     font-size: 1.4em;
     line-height: 1;
-    color: var(--accent);
+    color: var(--callout-color, var(--accent));
+  }
+  /* The alt text after "/" is what a screen reader announces. */
+  :where(.note)::before {
+    content: "" / "Note";
+  }
+  :where(.tip)::before {
+    content: "󰌶" / "Tip";
+  }
+  :where(.warn)::before {
+    content: "󰀪" / "Warning";
+  }
+  :where(.note) {
+    --callout-color: var(--link);
+  }
+  :where(.tip) {
+    --callout-color: var(--yellow);
+  }
+  :where(.warn) {
+    --callout-color: var(--orange);
   }
   /* The one-item list written right after a quote ("+ Name") is its attribution. */
   :where(blockquote + ul:has(> li:only-child)) {
@@ -756,22 +777,6 @@
     }
   }
 
-  [role="note"] {
-    margin-block: 0 1em;
-    padding: 0.75em 1em;
-    background: var(--surface);
-    border-inline-start: 3px solid var(--accent);
-    &[data-callout="warn"] {
-      border-color: var(--red);
-    }
-    & > :first-child {
-      font-weight: bold;
-    }
-    & > :last-child {
-      margin-block-end: 0;
-    }
-  }
-
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(10rem, 100%), 1fr));
@@ -1105,7 +1110,6 @@
       .list,
       details.toc,
       form.comment,
-      [role="note"] > :first-child,
       th,
       #palette-dialog
     ) {
